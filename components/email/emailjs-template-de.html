@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktanfrage - smiit Analytics</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #0A1128;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9fafb;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .header {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .greeting {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #0A1128;
+        }
+        .message-box {
+            background-color: #F4F4F5;
+            border-left: 4px solid #F703EB;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 30px;
+        }
+        .message-box p {
+            margin: 0;
+            white-space: pre-wrap;
+            color: #333333;
+        }
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .details-table th {
+            text-align: left;
+            padding: 12px 0;
+            color: #666666;
+            font-weight: 500;
+            font-size: 14px;
+            border-bottom: 1px solid #eeeeee;
+            width: 35%;
+        }
+        .details-table td {
+            padding: 12px 0;
+            font-weight: 600;
+            border-bottom: 1px solid #eeeeee;
+            color: #0A1128;
+        }
+        .footer {
+            background-color: #f9fafb;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+            border-top: 1px solid #eeeeee;
+        }
+        .accent {
+            color: #F703EB;
+            text-decoration: none;
+        }
+        .accent:hover {
+            text-decoration: underline;
+        }
+        .divider {
+            height: 1px;
+            background-color: #eeeeee;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>smiit Analytics</h1>
+        </div>
+        <div class="content">
+            
+            <div class="greeting">Hallo {{first_name}} {{last_name}},</div>
+            
+            <p>Vielen Dank für Ihre Nachricht. Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich bei Ihnen melden.</p>
+            
+            <p style="margin-top: 30px;">
+                Viele Grüße,<br>
+                <strong>Ihr smiit Team</strong>
+            </p>
+
+            <div class="divider"></div>
+
+            <div style="font-size: 12px; color: #999999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
+                Zusammenfassung Ihrer Anfrage
+            </div>
+            
+            <table class="details-table">
+                <tr>
+                    <th>Name</th>
+                    <td>{{first_name}} {{last_name}}</td>
+                </tr>
+                <tr>
+                    <th>E-Mail</th>
+                    <td><a href="mailto:{{from_email}}" class="accent">{{from_email}}</a></td>
+                </tr>
+                <tr>
+                    <th>Telefon</th>
+                    <td>{{phone}}</td>
+                </tr>
+                <tr>
+                    <th>Interesse</th>
+                    <td>{{interest}}</td>
+                </tr>
+            </table>
+
+            <div style="font-size: 14px; color: #666666; margin-bottom: 10px;">Ihre Nachricht:</div>
+            <div class="message-box">
+                <p>{{message}}</p>
+            </div>
+
+        </div>
+        <div class="footer">
+            smiit GmbH • Reiherweg 96 • 89584 Ehingen • Deutschland<br>
+            <a href="https://www.smiit-analytics.com" class="accent">www.smiit-analytics.com</a>
+        </div>
+    </div>
+</body>
+</html>

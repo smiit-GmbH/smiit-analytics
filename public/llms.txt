@@ -1,0 +1,35 @@
+# smiit Analytics
+
+> smiit Analytics is a data analytics platform by smiit GmbH (Ehingen, Baden-Württemberg, Germany). It consolidates a company's business data into one complete data model and delivers ready-made dashboards, 250+ pre-built analyses and AI-assisted analytics — for a one-time price, with full ownership and no vendor lock-in. The first supported source system is bexio.
+
+Website: https://www.smiit-analytics.com
+Languages: German (default at /de/), English (at /en/)
+Contact: kontakt@smiit.de · +49 160 4073198
+Vendor: smiit GmbH, Reiherweg 96, 89584 Ehingen, Germany
+Founders / Managing directors: Sebastian Grab, Noah Neßlauer
+
+## Pages
+
+- [Home (DE)](https://www.smiit-analytics.com/de/): Product overview — features, advantages, pricing, customer reviews, rollout process and FAQ.
+- [Home (EN)](https://www.smiit-analytics.com/en/): Same overview in English.
+- [Contact (DE)](https://www.smiit-analytics.com/de/contact/): Email, phone, contact form and online appointment scheduling.
+- [Contact (EN)](https://www.smiit-analytics.com/en/contact/): Same in English.
+
+## Legal
+
+- [Terms of Service (DE)](https://www.smiit-analytics.com/de/terms/) · [(EN)](https://www.smiit-analytics.com/en/terms/)
+- [Data Processing Agreement (DE)](https://www.smiit-analytics.com/de/dpa/) · [(EN)](https://www.smiit-analytics.com/en/dpa/)
+- [Privacy policy (DE)](https://www.smiit-analytics.com/de/privacy/) · [(EN)](https://www.smiit-analytics.com/en/privacy/)
+- [Legal notice (DE)](https://www.smiit-analytics.com/de/legal-notice/) · [(EN)](https://www.smiit-analytics.com/en/legal-notice/)
+
+## What smiit Analytics does
+
+- Complete data model: all data from the connected source system integrated into one structured model
+- Dashboarding: 250+ pre-built analyses across sales, accounting, orders and customers
+- AI-ready foundation: the data model doubles as the infrastructure for add-ons and AI assistance
+- Full ownership: one-time price, no recurring licence fees, no vendor lock-in
+- Free 30-day trial before purchase
+
+## Company
+
+smiit GmbH builds custom software, data platforms and workflow automation for small and mid-sized enterprises. The main company website is https://www.smiit.de.

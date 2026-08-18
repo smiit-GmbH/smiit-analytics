@@ -1,0 +1,28 @@
+{
+  "name": "smiit Analytics",
+  "short_name": "smiit Analytics",
+  "description": "Datenanalyse-Plattform mit KI — Dashboards, Auswertungen und ein vollständiges Datenmodell für Ihr Unternehmen.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "de-DE",
+  "dir": "ltr",
+  "background_color": "#ffffff",
+  "theme_color": "#0B162D",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

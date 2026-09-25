@@ -1,188 +1,129 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  --background: oklch(0.9628 0.0066 106.52);
-  --foreground: oklch(0.15 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0 0);
-  --primary: oklch(0.45 0.3 280);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.35 0.25 240);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.92 0 0);
-  --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.55 0.35 280);
-  --accent-foreground: oklch(0.98 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.95 0 0);
-  --ring: oklch(0.45 0.3 280);
-  --chart-1: oklch(0.6 0.3 280);
-  --chart-2: oklch(0.5 0.25 240);
-  --chart-3: oklch(0.7 0.2 200);
-  --chart-4: oklch(0.55 0.28 320);
-  --chart-5: oklch(0.65 0.25 260);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.15 0 0);
-  --sidebar-primary: oklch(0.45 0.3 280);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.92 0 0);
-  --sidebar-accent-foreground: oklch(0.15 0 0);
-  --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.45 0.3 280);
-}
-
-.dark {
-  --background: oklch(0.12 0 0);
-  --foreground: oklch(0.95 0 0);
-  --card: oklch(0.15 0 0);
-  --card-foreground: oklch(0.95 0 0);
-  --popover: oklch(0.15 0 0);
-  --popover-foreground: oklch(0.95 0 0);
-  --primary: oklch(0.65 0.3 280);
-  --primary-foreground: oklch(0.12 0 0);
-  --secondary: oklch(0.55 0.25 240);
-  --secondary-foreground: oklch(0.12 0 0);
-  --accent: oklch(0.75 0.35 280);
-  --accent-foreground: oklch(0.12 0 0);
-  --muted: oklch(0.25 0 0);
-  --muted-foreground: oklch(0.7 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.95 0 0);
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.2 0 0);
-  --ring: oklch(0.65 0.3 280);
-  --chart-1: oklch(0.7 0.3 280);
-  --chart-2: oklch(0.6 0.25 240);
-  --chart-3: oklch(0.8 0.2 200);
-  --chart-4: oklch(0.65 0.28 320);
-  --chart-5: oklch(0.75 0.25 260);
-  --sidebar: oklch(0.15 0 0);
-  --sidebar-foreground: oklch(0.95 0 0);
-  --sidebar-primary: oklch(0.65 0.3 280);
-  --sidebar-primary-foreground: oklch(0.95 0 0);
-  --sidebar-accent: oklch(0.25 0 0);
-  --sidebar-accent-foreground: oklch(0.95 0 0);
-  --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.65 0.3 280);
-}
-
+/* ── smiit brand tokens ──
+   Derived from www.smiit.de (Sept 2026). Tailwind v4 turns every token below
+   into utilities: bg-navy, text-brand, rounded-card, shadow-card, py-section, … */
 @theme {
-  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, monospace;
-  --font-serif: var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  /* Colours */
+  --color-navy: #0b162d;          /* theme colour, dark sections */
+  --color-navy-800: #14213d;
+  --color-navy-700: #22304f;
+  --color-brand: #21569c;         /* primary action blue */
+  --color-brand-hover: #1a457d;
+  --color-brand-soft: #e6edf6;    /* tint for icon tiles, highlights */
+  --color-brand-light: #8fb4e6;   /* brand blue on navy (6.9:1) */
+  --color-magenta: #f703eb;       /* accent — decorative only, never body text */
+  --color-magenta-soft: #fde6fc;
+  --color-star: #f5a623;          /* rating stars */
+  --color-cream: #f3f3ee;         /* page background */
+  --color-sand: #f2f0e9;          /* inset tiles, logo wells */
+  --color-ink: #0b0b0b;           /* body text */
+  --color-ink-muted: #5b5b5b;     /* secondary text, 5.6:1 on cream */
+  --color-line: #dedede;
+  --color-success: #1f7a4d;
+  --color-danger: #b42318;
+
+  /* Radii */
+  --radius-control: 0.75rem;      /* buttons, inputs (rounded-xl on smiit.de) */
+  --radius-tile: 1rem;
+  --radius-card: 1.75rem;         /* large content cards */
+
+  /* Shadows */
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 18px 40px rgba(0, 0, 0, 0.1);
+  --shadow-cta: 0 14px 28px rgba(33, 86, 156, 0.2);
+  --shadow-frame: 0 30px 60px -20px rgba(11, 22, 45, 0.28), 0 0 0 1px rgba(11, 22, 45, 0.06);
+
+  /* Layout */
+  --container-page: 72rem;        /* max-w-page */
+  --spacing-section: 6rem;        /* py-section (desktop) */
+  --spacing-section-sm: 4rem;     /* py-section-sm (mobile) */
 }
 
+/* Font families are set by next/font on <html> (app/layout.tsx). */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-cream font-sans text-ink antialiased;
   }
-
   a,
-  button,
-  [role="button"] {
+  button {
     -webkit-tap-highlight-color: transparent;
   }
-
-  a:focus-visible,
-  button:focus-visible,
-  [role="button"]:focus-visible {
-    @apply outline-none ring-1 ring-black/20 dark:ring-white/25;
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand;
+  }
+  ::selection {
+    @apply bg-brand text-white;
   }
 }
 
-/* ── Scroll-reveal animation (Lenis-compatible) ──
-   Paired with the useRevealOnScroll hook: the hook adds `.revealed` once the
-   element enters the viewport. The delay classes are applied dynamically as
-   `reveal-delay-${idx + 1}`, so all four must stay even if a static search
-   for them turns up nothing. */
-.reveal-fade-up {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.reveal-fade-up.revealed {
-  opacity: 1;
-  transform: translateY(0);
+/* Animated dashed connectors in the automation flow graphic. */
+@keyframes flow-x {
+  to { background-position: 12px 0; }
+}
+@keyframes flow-y {
+  to { background-position: 0 12px; }
+}
+.flow-line-x {
+  background-image: linear-gradient(90deg, currentColor 50%, transparent 50%);
+  background-size: 12px 2px;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  animation: flow-x 0.8s linear infinite;
+}
+.flow-line-y {
+  background-image: linear-gradient(180deg, currentColor 50%, transparent 50%);
+  background-size: 2px 12px;
+  background-repeat: repeat-y;
+  animation: flow-y 0.8s linear infinite;
 }
 
-/* Stagger delays for children */
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-
-/* Editorial section eyebrow */
-.section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  color: #21569c;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
+/* Glowing dot that runs along a flow connector once while it fills. */
+@keyframes travel-x {
+  0% { left: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
 }
-.section-eyebrow::before {
-  content: "";
-  display: inline-block;
-  width: 1.75rem;
-  height: 1px;
-  background: linear-gradient(to right, transparent, #21569c);
+@keyframes travel-x-rev {
+  0% { left: 100%; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { left: 0; opacity: 0; }
 }
-
-/* Heading highlight word */
-.section-highlight {
-  color: #21569c;
+@keyframes travel-y {
+  0% { top: 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+@keyframes travel-y-rev {
+  0% { top: 100%; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { top: 0; opacity: 0; }
 }

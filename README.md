@@ -1,139 +1,122 @@
-<div align="center">
+# smiit Analytics – Produkt-Website
 
-# smiit Analytics — Landing Page
+Eigenständige Produkt-Website für **smiit Analytics**, das SaaS-Tool für Auswertungen mit bexio. Ein Produkt der [smiit GmbH](https://www.smiit.de).
 
-### Marketing site for **smiit Analytics**, the AI-powered data analytics platform by smiit GmbH.
-
-[![Website](https://img.shields.io/badge/Live%20Website-smiit--analytics.com-21569c?style=for-the-badge)](https://www.smiit-analytics.com)
-[![Next.js](https://img.shields.io/badge/Framework-Next.js%2016-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/Built%20with-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-
-</div>
+- **Stack:** Next.js 16 (App Router, statischer Export), TypeScript, Tailwind CSS v4
+- **Sprache:** Deutsch (Schweiz); Struktur für weitere Sprachen vorbereitet
+- **Stand:** Alle Medien, Preise, Kundenstimmen und Rechtstexte sind Platzhalter in `[ECKIGEN_KLAMMERN]`
 
 ---
 
-## About
-
-smiit Analytics consolidates a company's business data into one complete data model and delivers ready-made dashboards, 250+ pre-built analyses and AI-assisted analytics — for a one-time price, with full ownership and no vendor lock-in. The first supported source system is bexio.
-
-This repository contains the **public landing page** for the product. It is a statically exported Next.js site, bilingual (German / English), deployed to GitHub Pages.
-
-The product itself lives outside this repository.
-
----
-
-## Site structure
-
-Every page exists under both `/de/` and `/en/`. The root `/` redirects to `/de/`.
-
-| Route | Purpose |
-|---|---|
-| `/[lang]/` | Landing page — hero, features, advantages, pricing, reviews, process, FAQ |
-| `/[lang]/contact/` | Contact form, contact details and Calendly appointment booking |
-| `/[lang]/terms/` | Terms of service (AGB) |
-| `/[lang]/dpa/` | Data processing agreement (AVV, Art. 28 GDPR) |
-| `/[lang]/privacy/` | Privacy policy |
-| `/[lang]/legal-notice/` | Legal notice (Impressum) |
-
-`app/sitemap.ts` is the single place where this list is maintained — add a route there when you add a page.
-
----
-
-## Tech stack
-
-| Layer | Technology |
-|---|---|
-| Framework | Next.js 16 (App Router, `output: "export"`) |
-| Language | TypeScript |
-| Styling | Tailwind CSS v4 (`app/globals.css`) |
-| UI primitives | shadcn/ui on Radix (`components/ui`) |
-| Animation | Framer Motion, Lenis (smooth scroll) |
-| Forms | EmailJS (contact form, no backend) |
-| Analytics | Google Analytics 4 + Google Ads, consent-gated (Consent Mode v2) |
-| Hosting | GitHub Pages via GitHub Actions |
-
----
-
-## Project structure
-
-```txt
-.
-├── app/
-│   ├── (redirect)/            # "/" → "/de/" redirect shell
-│   ├── [lang]/                # All localized routes
-│   ├── globals.css            # Tailwind v4 entry + design tokens
-│   ├── not-found.tsx          # 404 page
-│   ├── robots.ts              # robots.txt (static export)
-│   └── sitemap.ts             # sitemap.xml — route list lives here
-├── components/
-│   ├── analytics/             # Consent banner, GA/Ads scripts, conversion tracking
-│   ├── pages/
-│   │   ├── landing/           # Landing page sections
-│   │   ├── contact/           # Contact page sections
-│   │   ├── legal/             # Shared hero + section renderer for legal pages
-│   │   └── shared/            # FAQ section
-│   ├── ui/                    # shadcn/ui primitives (only the ones in use)
-│   ├── header.tsx
-│   └── footer.tsx
-├── hooks/                     # useRevealOnScroll
-├── lib/
-│   ├── dictionary.ts          # DE/EN copy for landing + contact
-│   ├── seo.ts                 # SITE_URL, page metadata + JSON-LD builders
-│   ├── gtag.ts                # Consent + GA/Ads helpers
-│   └── utils.ts               # cn()
-├── public/                    # Static assets, llms.txt, web manifest
-├── .archiv/                   # Snapshot of the previous smiit.de website — reference only, not built
-└── .github/workflows/         # Build & deploy to GitHub Pages
-```
-
-> `.archiv/` is git-ignored and excluded from the TypeScript build. It is kept as a reference for content and components taken from the previous site.
-
----
-
-## Getting started
+## Schnellstart
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in the EmailJS and Calendly values
-npm run dev                  # http://localhost:3000
+npm run dev          # http://localhost:3000
 ```
 
-| Script | Description |
+| Befehl | Zweck |
 |---|---|
-| `npm run dev` | Start the dev server |
-| `npm run build` | Static export to `out/` |
-| `npm run start` | Serve a production build |
-| `npm run typecheck` | `tsc --noEmit` |
+| `npm run dev` | Entwicklungsserver |
+| `npm run build` | Statischer Export nach `out/` |
+| `npm run typecheck` | TypeScript prüfen |
+| `npm run brand` | Favicons, zugeschnittene Logos und OG-Platzhalter aus `public/brand/` neu erzeugen |
+
+Interne Vorschau des Designsystems: **`/styleguide`** (nicht verlinkt, `noindex`, in robots.txt gesperrt).
 
 ---
 
-## Configuration
+## Wo ändere ich was?
 
-### Environment variables
-
-All variables are `NEXT_PUBLIC_*` — this is a static site with no server runtime, so they are inlined at build time. See `.env.example`. In CI they are provided as GitHub repository secrets (see `.github/workflows/deploy.yml`).
-
-| Variable | Used for |
+| Was | Datei |
 |---|---|
-| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | Contact form delivery |
-| `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_DE` / `_EN` | Contact form template per language |
-| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | EmailJS auth |
-| `NEXT_PUBLIC_CALENDLY_URL_DE` / `_EN` / `NEXT_PUBLIC_CALENDLY_URL` | Appointment booking (`#book` anchor) |
+| **Alle Texte** (inkl. FAQ, Preise, Kundenstimmen, Alt-Texte) | [`content/de.ts`](content/de.ts) |
+| **Links** (`[LINK_SIGNUP]`, `[LINK_LOGIN]`, `[LINK_BOOKING]`, Marketplace, LinkedIn …) | [`config/links.ts`](config/links.ts) |
+| **Domain** (`[DOMAIN]`, für Canonical, Sitemap, OG, strukturierte Daten) | [`config/site.ts`](config/site.ts) |
+| **Medien-Register** (Dateinamen, Formate) | [`config/media.ts`](config/media.ts), Doku in [`MEDIA.md`](MEDIA.md) |
+| **Analytics** (vorbereitet, deaktiviert) | [`config/analytics.ts`](config/analytics.ts) |
+| **Design-Tokens** (Farben, Radien, Schatten, Abstände) | [`app/globals.css`](app/globals.css) (`@theme`) |
 
-### Site URL
+In Überschriften markiert `*Wort*` eine farbige Hervorhebung, z. B. `"Ihre bexio-Daten. *In 5 Minuten* verständlich."`.
 
-The canonical origin is defined **once** in [lib/seo.ts](lib/seo.ts) as `SITE_URL`. `app/sitemap.ts` and `app/robots.ts` import it from there. Change it in that one place when the domain changes.
+### Medien austauschen
+
+Datei mit dem in [`MEDIA.md`](MEDIA.md) genannten Namen nach `public/media/` legen, dann neu bauen. Die graue Platzhalter-Box verschwindet automatisch.
+
+### Neue Sprache hinzufügen
+
+1. `content/de.ts` kopieren (z. B. `content/fr.ts`) und übersetzen. Die Struktur muss identisch bleiben (Typ `SiteContent`).
+2. In `content/index.ts` unter `locales` und `dictionaries` eintragen.
+3. Routing ergänzen (z. B. `app/[locale]/…`) und `getContent(locale)` verwenden.
+
+---
+
+## Projektstruktur
+
+```txt
+app/
+  layout.tsx            Root-Layout: Schriften, Header, Footer, Metadaten, Organization-JSON-LD
+  page.tsx              Startseite (14 Abschnitte) + SoftwareApplication- und FAQPage-JSON-LD
+  impressum/            [IMPRESSUM_TEXT]
+  datenschutz/          [DATENSCHUTZ_TEXT]
+  not-found.tsx         404-Seite
+  styleguide/           Interne Designsystem-Vorschau
+  sitemap.ts, robots.ts, manifest.ts
+  icon.png, apple-icon.png, favicon.ico    aus dem smiit-Icon erzeugt
+  globals.css           Tailwind v4 + smiit Design-Tokens
+components/
+  ds/                   Designsystem: Button, Container/Section, Card, Badge, BrowserFrame,
+                        Media/VideoPlayer/DemoVideo, Tabs, Accordion, Modal
+  sections/             Die Abschnitte der Startseite
+  site/                 Header (sticky, Burger-Menü), Footer, Logo
+  analytics/            Consent-Banner (Platzhalter), Klick-Tracking – nur aktiv, wenn eingeschaltet
+config/                 site, links, media, analytics
+content/                de.ts (alle Texte), index.ts (Sprach-Registry)
+lib/                    seo.ts (Metadaten, JSON-LD), rich.tsx (*Hervorhebung*), track.ts, utils.ts
+public/brand/           smiit-Logo und -Icon (lokal, keine Hotlinks)
+public/media/           Produktmedien (siehe MEDIA.md)
+public/og/              Open-Graph-Bild
+scripts/                build-brand-assets.mjs
+```
+
+---
+
+## Designsystem (abgeleitet von smiit.de)
+
+- **Farben:** Navy `#0B162D` (Theme, dunkle Flächen), Blau `#21569C` (Aktionen), Magenta `#F703EB` (nur als Akzent), Creme `#F3F3EE` (Hintergrund), Sand `#F2F0E9`, Sterne `#F5A623`
+- **Schriften:** Playfair Display (Überschriften), Geist (Text), Geist Mono (Labels)
+- **Formen:** Buttons `rounded-xl`, grosse Karten 1,75 rem Radius mit weichem Schatten, Überzeile in Grossbuchstaben mit feiner Linie
+
+Utilities entstehen direkt aus den Tokens: `bg-navy`, `text-brand`, `rounded-card`, `shadow-card`, `py-section`, `max-w-page` …
+
+---
+
+## Tracking
+
+Alle CTAs tragen `data-track="<id>"` (z. B. `hero_signup`, `pricing_paket-2_signup`, `final_booking`). Analytics ist **vorbereitet, aber deaktiviert**:
+
+1. `config/analytics.ts` → `enabled: true`, Anbieter und ID eintragen
+2. Anbieter-Skript in `components/analytics/index.tsx` einbinden (erst nach Zustimmung laden)
+3. Bei Cookies: `requiresConsent: true` lassen → Consent-Banner erscheint; Text `[CONSENT_TEXT]` in `content/de.ts`
+
+`lib/track.ts` sendet Klicks an `window.dataLayer`. Das lässt sich an den gewählten Anbieter anpassen.
 
 ---
 
 ## Deployment
 
-Pushing to `main` triggers [.github/workflows/deploy.yml](.github/workflows/deploy.yml), which runs `npm ci`, builds the static export to `out/` and publishes it to GitHub Pages.
+Die Seite wird statisch exportiert (`output: "export"` in `next.config.mjs`). `npm run build` erzeugt den Ordner `out/`, den jeder Static-Host ausliefern kann.
 
-Because the site is exported statically (`output: "export"`, `trailingSlash: true`), there is no server runtime: no API routes, no middleware, no image optimization.
+**Vor dem Livegang:** `[DOMAIN]` in `config/site.ts` setzen. Solange der Platzhalter drin ist, zeigen Canonical und Sitemap auf `domain-platzhalter.invalid`.
+
+### GitHub Pages (eingerichtet)
+
+Workflow: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). **Aktuell nur manuell startbar** (Actions → «Deploy to GitHub Pages» → *Run workflow*), damit keine Platzhalter-Version versehentlich live geht. Automatisches Deployment bei Push: Trigger `push` im Workflow wieder ergänzen.
+
+### Vercel
+
+Projekt importieren, Framework «Next.js», keine weiteren Einstellungen nötig. Optional `output: "export"` und `images.unoptimized` in `next.config.mjs` entfernen. Dann liefert Vercel die Bilder automatisch responsiv und in optimierten Formaten aus.
 
 ---
 
-## License
-
-© smiit GmbH. All rights reserved.
+© smiit GmbH. Alle Rechte vorbehalten.

@@ -1,8 +1,10 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy to GitHub Pages
 
+# Manual trigger only while the site still contains placeholders.
+# To deploy on every push again, add:
+#   push:
+#     branches: [ "main" ]
 on:
-  push:
-    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -14,18 +16,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Env secrets need to be set in GitHub Repository
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_EMAILJS_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID }}
-      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_DE: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_DE }}
-      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_EN: ${{ secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_EN }}
-      NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY }}
-      NEXT_PUBLIC_CALENDLY_URL_DE: ${{ secrets.NEXT_PUBLIC_CALENDLY_URL_DE }}
-      NEXT_PUBLIC_CALENDLY_URL_EN: ${{ secrets.NEXT_PUBLIC_CALENDLY_URL_EN }}
-      NEXT_PUBLIC_CALENDLY_URL: ${{ secrets.NEXT_PUBLIC_CALENDLY_URL }}
       NEXT_TELEMETRY_DISABLED: 1
       CI: true
     steps:
@@ -35,20 +29,17 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: 22
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build (produces /out)
-        run: npm run build
+      - name: Typecheck
+        run: npm run typecheck
 
-      - name: Sanity check
-        run: |
-          echo "Repo root:" && ls -la
-          echo ".next:" && ls -la .next || true
-          echo "out:" && ls -la out || true
+      - name: Build (static export to /out)
+        run: npm run build
 
       - name: Add .nojekyll (allow _next assets)
         run: touch out/.nojekyll

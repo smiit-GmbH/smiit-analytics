@@ -1,43 +1,49 @@
 import type { Metadata } from "next"
-import { ArrowRight } from "lucide-react"
-import { Container } from "@/components/ds"
+import { Home } from "lucide-react"
 import { CtaLink } from "@/components/cta-link"
 import { getContent } from "@/content"
-import { plain, rich } from "@/lib/rich"
 
 const t = getContent().notFound
 
 export const metadata: Metadata = {
-  title: plain(t.title),
+  title: t.title,
   robots: { index: false, follow: true },
 }
 
+/**
+ * 404 page in the style of www.smiit.de/notfound: full-bleed illustration
+ * (desktop + portrait variant) with rounded bottom, soft light-to-dark wash,
+ * large faint "404", short message and one way back.
+ * Static export writes this as 404.html, which the host serves for every unknown URL.
+ */
 export default function NotFound() {
   return (
-    <section aria-labelledby="nf-title" className="relative overflow-hidden py-24 md:py-32">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 h-[30rem] w-[50rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(33,86,156,0.12),transparent)]"
-      />
-      <Container className="relative max-w-2xl text-center">
-        <p className="font-serif text-[6rem] leading-none text-magenta/40 md:text-[8rem]" aria-hidden="true">
-          404
-        </p>
-        <p className="mt-4 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-brand">{t.eyebrow}</p>
-        <h1 id="nf-title" className="mt-4 font-serif text-[2.4rem] leading-tight tracking-tight md:text-[3rem]">
-          {rich(t.title)}
-        </h1>
-        <p className="mt-5 text-lg leading-relaxed text-ink-muted">{t.text}</p>
-        <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-          <CtaLink href="/" track="404_home" size="lg">
-            {t.cta}
-            <ArrowRight aria-hidden="true" />
-          </CtaLink>
-          <CtaLink href="/#faq" track="404_faq" variant="secondary" size="lg">
-            {t.secondary}
-          </CtaLink>
+    <section
+      aria-labelledby="nf-title"
+      // Fills the screen below the header; anchored at the bottom so the figures stay below the text.
+      className="relative flex h-[calc(100svh-4.5rem)] min-h-[620px] max-h-[980px] flex-col overflow-hidden rounded-b-card bg-[url('/brand/not_found_mobile.webp')] bg-cover bg-bottom bg-no-repeat md:bg-[url('/brand/not_found.webp')]"
+    >
+      <span role="img" aria-label={t.imageAlt} />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/45 via-white/25 to-black/35" />
+      <div className="relative z-10 flex flex-1 items-start justify-center px-4 pt-10 md:pt-14">
+        <div className="mx-auto max-w-md text-center font-serif">
+          <p aria-hidden="true" className="text-[100px] font-bold leading-none text-brand/20 md:text-[150px]">
+            404
+          </p>
+          <h1 id="nf-title" className="mt-6 text-3xl text-ink drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)] md:mt-8 md:text-4xl">
+            {t.title}
+          </h1>
+          <p className="mt-4 text-lg text-ink/85 drop-shadow-[0_1px_2px_rgba(255,255,255,0.45)] md:mx-auto md:max-w-[30ch] md:text-xl">
+            {t.text}
+          </p>
+          <div className="mt-8 flex justify-center font-sans">
+            <CtaLink href="/" track="404_home" size="lg" className="w-full sm:w-auto">
+              <Home aria-hidden="true" />
+              {t.cta}
+            </CtaLink>
+          </div>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

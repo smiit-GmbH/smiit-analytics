@@ -81,6 +81,16 @@ export function Footer() {
                 {t.datenschutz}
               </a>
             </li>
+            <li>
+              <a href={LINKS.nutzungsbedingungen} className={linkClass}>
+                {t.nutzungsbedingungen}
+              </a>
+            </li>
+            <li>
+              <a href={LINKS.avv} className={linkClass}>
+                {t.avv}
+              </a>
+            </li>
           </ul>
         </nav>
       </Container>

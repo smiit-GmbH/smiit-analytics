@@ -19,7 +19,7 @@ Die technische Liste steht in [`config/media.ts`](config/media.ts). Die Alt-Text
 
 - **Loop-Videos** laufen stumm und automatisch, sobald sie sichtbar werden. Das Ende soll nahtlos in den Anfang übergehen.
 - Bei «Bewegung reduzieren» im Betriebssystem wird nur das Posterbild angezeigt. Das Poster muss also für sich allein verständlich sein.
-- **Screenshots** erscheinen in einem Browser-Rahmen (Adresszeile «app.smiit-analytics»). Liefern Sie deshalb **nur den App-Inhalt ohne Browser-Rahmen**.
+- **Screenshots** erscheinen in einem Browser-Rahmen (Adresszeile «app.smiit-analytics.com»). Liefern Sie deshalb **nur den App-Inhalt ohne Browser-Rahmen**.
 - Es werden ausschliesslich **Beispieldaten** gezeigt: keine echten Kundennamen, Beträge oder Personen.
 
 ---
@@ -41,14 +41,13 @@ Pro Video werden drei Dateien benötigt: `<datei>.webm`, `<datei>.mp4` und `<dat
 
 | ID | Datei | Format | Abschnitt | Inhalt |
 |---|---|---|---|---|
-| `IMG_STEP_1` | `img_step_1.webp` | 4:3, 1200×900 | «So einfach geht's» – Schritt 1 | Verbindungsdialog zu bexio (Schritt «bexio verbinden»). |
-| `IMG_STEP_2` | `img_step_2.webp` | 4:3, 1200×900 | Schritt 2 | Übersicht der Standardberichte direkt nach der Verbindung. |
-| `IMG_STEP_3` | `img_step_3.webp` | 4:3, 1200×900 | Schritt 3 | Bericht im Bearbeitungsmodus (Drag & Drop oder KI-Eingabe sichtbar). |
-| `IMG_MULTI_COMPANY` | `img_multi_company.webp` | 4:3, 1200×900 | Versprechen 2 – Box für Treuhandbüros | Firmenauswahl mit mehreren verbundenen bexio-Firmen (fiktive Firmennamen). |
-| `IMG_REMINDER_EMAIL` | `img_reminder_email.webp` | 4:5, 960×1200 | Versprechen 3b – Automatisierungen | Beispiel einer automatischen Zahlungserinnerung, wie sie beim Kunden ankommt (E-Mail-Ansicht). |
-| `IMG_PERSONA_GESCHAEFTSFUEHRUNG` | `img_persona_geschaeftsfuehrung.webp` | 3:2, 1200×800 | «Für wen?» | Geschäftsführung eines KMU (z. B. Handwerksbetrieb) mit Laptop oder Tablet. |
-| `IMG_PERSONA_TREUHAND` | `img_persona_treuhand.webp` | 3:2, 1200×800 | «Für wen?» | Treuhandbüro, Arbeitsplatz mit mehreren Mandanten auf dem Bildschirm. |
-| `IMG_PERSONA_TEAMLEITUNG` | `img_persona_teamleitung.webp` | 3:2, 1200×800 | «Für wen?» | Teamleitung bespricht Kennzahlen im Team. |
+| `IMG_STEP_1` | `img_step_1.webp` | 4:3, 1200×900 | «So einfach geht's» – Schritt 1 | Dialog «Datenquelle verbinden» mit bexio-Eintrag, nachgebaut nach einem Screenshot aus dem Tool (ohne Entwickler-Option «mit PAT verbinden»). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_2` | `img_step_2.webp` | 4:3, 1200×900 | Schritt 2 | Vier Berichtspakete (Standard, Sales, Finanzen, Management) mit Mini-Diagramm und «Bereit»-Status. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_3` | `img_step_3.webp` | 4:3, 1200×900 | Schritt 3 | Bericht im Bearbeitungsmodus (Drag & Drop oder KI-Eingabe sichtbar). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_MULTI_COMPANY` | `img_multi_company.webp` | 4:3, 1200×900 | Versprechen 2 – Box für Treuhandbüros | Treuhandbüro mit einem Login: Workspace-Umschalter mit allen Mandanten (fiktive Namen), daneben der Bericht des gewählten Mandanten. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), angelehnt an den Workspace-Umschalter im Tool; kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_GESCHAEFTSFUEHRUNG` | `img_persona_geschaeftsfuehrung.webp` | 3:2, 1200×800 | «Für wen?» | Geschäftsführung: Smartphone mit Kennzahlen + automatische Hinweise. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_TREUHAND` | `img_persona_treuhand.webp` | 3:2, 1200×800 | «Für wen?» | Treuhand: aufgefächerte Berichte mehrerer Mandanten mit «Exportieren». **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_TEAMLEITUNG` | `img_persona_teamleitung.webp` | 3:2, 1200×800 | «Für wen?» | Teamleitung: Bereichsansicht mit Auslastung und Stunden je Person. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
 
 ## Kundenlogos
 

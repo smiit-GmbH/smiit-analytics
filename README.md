@@ -59,6 +59,8 @@ app/
   page.tsx              Startseite (14 Abschnitte) + SoftwareApplication- und FAQPage-JSON-LD
   impressum/            [IMPRESSUM_TEXT]
   datenschutz/          [DATENSCHUTZ_TEXT]
+  nutzungsbedingungen/  [NUTZUNGSBEDINGUNGEN_TEXT]
+  avv/                  [AVV_TEXT]
   not-found.tsx         404-Seite
   styleguide/           Interne Designsystem-Vorschau
   sitemap.ts, robots.ts, manifest.ts

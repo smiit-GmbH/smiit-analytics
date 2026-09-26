@@ -39,7 +39,6 @@ export const MEDIA = {
 
   VIDEO_AI_CHAT: { kind: "video", file: "/media/video_ai_chat", ratio: "16 / 10", spec: "16:10 · 20–25 s · Loop" },
 
-  IMG_REMINDER_EMAIL: { kind: "image", file: "/media/img_reminder_email.webp", ratio: "4 / 5", spec: "4:5 · 960×1200" },
 
   IMG_PERSONA_GESCHAEFTSFUEHRUNG: { kind: "image", file: "/media/img_persona_geschaeftsfuehrung.webp", ratio: "3 / 2", spec: "3:2 · 1200×800" },
   IMG_PERSONA_TREUHAND: { kind: "image", file: "/media/img_persona_treuhand.webp", ratio: "3 / 2", spec: "3:2 · 1200×800" },

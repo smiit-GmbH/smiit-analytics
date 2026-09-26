@@ -24,7 +24,7 @@ type BrowserFrameProps = {
  * Optional numbered markers highlight UI elements; they are listed again
  * as an ordered list for screen readers.
  */
-export function BrowserFrame({ children, url = "app.smiit-analytics", markers = [], className }: BrowserFrameProps) {
+export function BrowserFrame({ children, url = "app.smiit-analytics.com", markers = [], className }: BrowserFrameProps) {
   return (
     <figure className={cn("overflow-hidden rounded-tile bg-white shadow-frame", className)}>
       <div className="flex items-center gap-3 border-b border-line bg-[#f7f7f4] px-4 py-2.5" aria-hidden="true">

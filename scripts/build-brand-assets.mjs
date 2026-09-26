@@ -22,6 +22,8 @@ async function tile(size) {
 
 writeFileSync("app/icon.png", await tile(512))
 writeFileSync("app/apple-icon.png", await tile(180))
+// App icon for the site logo (rendered at 32px, 3× for sharp retina display).
+await sharp(await tile(96)).webp({ quality: 95 }).toFile("public/brand/app-icon.webp")
 
 // favicon.ico with embedded PNGs (16, 32, 48)
 const sizes = [16, 32, 48]

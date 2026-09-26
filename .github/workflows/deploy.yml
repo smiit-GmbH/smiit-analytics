@@ -1,9 +1,7 @@
 name: Deploy to GitHub Pages
 
-# Manual trigger only while the site still contains placeholders.
-# To deploy on every push again, add:
-#   push:
-#     branches: [ "main" ]
+push:
+  branches: [ "main" ]
 on:
   workflow_dispatch:
 

@@ -12,7 +12,8 @@ export function LegalPage({ title, body }: { title: string; body: string }) {
           <ArrowLeft className="size-4" aria-hidden="true" />
           {c.legal.back}
         </a>
-        <h1 className="mt-6 font-serif text-[2.4rem] leading-tight tracking-tight md:text-[3rem]">{title}</h1>
+        {/* Long German compounds (e.g. Auftragsverarbeitungsvertrag) must break on phones. */}
+        <h1 lang="de-CH" className="mt-6 hyphens-auto font-serif text-[2rem] leading-tight tracking-tight [overflow-wrap:anywhere] sm:text-[2.4rem] md:text-[3rem]">{title}</h1>
         <div className="mt-10 space-y-5 rounded-card bg-white p-7 leading-relaxed shadow-card sm:p-10">
           {body.split(/\n{2,}/).map((para, i) => (
             <p key={i} className="whitespace-pre-line">

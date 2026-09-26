@@ -3,7 +3,7 @@
  * (without protocol, e.g. "www.example.ch") before going live — canonical
  * URLs, sitemap, robots.txt, Open Graph and structured data derive from it.
  */
-export const DOMAIN = "[DOMAIN]"
+export const DOMAIN = "www.smiit-analytics.com"
 
 const domainIsPlaceholder = DOMAIN.startsWith("[")
 
@@ -26,6 +26,6 @@ export const COMPANY = {
   name: "smiit GmbH",
   website: "https://www.smiit.de",
   email: "kontakt@smiit.de",
-  linkedin: "https://www.linkedin.com/company/smiit-gmbh/",
+  linkedin: "https://de.linkedin.com/company/smiit-gmbh",
   logo: "/brand/logo_black.webp",
 } as const

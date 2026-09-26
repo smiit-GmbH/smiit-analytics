@@ -23,7 +23,7 @@ export const de = {
     close: "Schliessen",
     externalHint: "(öffnet in neuem Tab)",
     homeLabel: "smiit Analytics – zur Startseite",
-    productName: "Analytics",
+    productName: "smiit Analytics",
   },
 
   nav: {
@@ -45,19 +45,18 @@ export const de = {
     title: "Ihre bexio-Daten. *In 5 Minuten* verständlich.",
     subtitle:
       "Verbinden Sie bexio und sehen Sie sofort, wie Ihr Unternehmen dasteht. Gestalten Sie Berichte selbst und überlassen Sie Fragen und Routinearbeit der KI.",
-    promises: ["Verbinden & sofort sehen", "Selbst gestalten", "Automatisch & intelligent", "Für KMU & Treuhänder"],
     ctaPrimary: "30 Tage kostenlos testen",
     ctaSecondary: "2-Min-Demo ansehen",
-    rating: {
-      value: "5,0",
-      label: "auf dem bexio Marketplace",
-      srLabel: "von 5 Sternen – Bewertungen ansehen (öffnet in neuem Tab)",
-    },
     demoTitle: "smiit Analytics in 2 Minuten",
   },
 
   trust: {
     title: "Diese Unternehmen arbeiten mit smiit Analytics",
+    rating: {
+      value: "5,0",
+      label: "auf dem bexio Marketplace",
+      srLabel: "von 5 Sternen – Bewertungen ansehen (öffnet in neuem Tab)",
+    },
   },
 
   problem: {
@@ -189,8 +188,6 @@ export const de = {
       branchB: { label: "Ja", kind: "Aktion", title: "2. Erinnerung mit Frist", icon: "mailWarning" },
       notify: { kind: "Info", title: "Info an Sie", icon: "bell" },
     },
-    emailCaption: "So sieht die Erinnerung beim Kunden aus.",
-    examplesTitle: "Weitere Beispiele",
     examples: [
       {
         icon: "mail",
@@ -207,7 +204,16 @@ export const de = {
         title: "Hinweis bei Auffälligkeiten",
         text: "Eine Nachricht, sobald eine Kennzahl einen Wert über- oder unterschreitet, den Sie festlegen.",
       },
+      {
+        icon: "clock",
+        title: "Stundenrapport-Zusammenfassung",
+        text: "Ihre Mitarbeitenden erhalten regelmässig eine Übersicht ihrer erfassten Stunden.",
+      },
     ],
+    custom: {
+      title: "Nicht an Vorlagen gebunden",
+      text: "Richten Sie beliebige Automatisierungen ein. Beschreiben Sie der KI in eigenen Worten, was passieren soll – sie erstellt die Automatisierung für Sie.",
+    },
   },
 
   audiences: {
@@ -377,6 +383,8 @@ export const de = {
     linkedin: "LinkedIn",
     impressum: "Impressum",
     datenschutz: "Datenschutz",
+    nutzungsbedingungen: "Nutzungsbedingungen",
+    avv: "AVV",
     copyright: "smiit GmbH. Alle Rechte vorbehalten.",
   },
 
@@ -391,15 +399,26 @@ export const de = {
       description: "Datenschutzerklärung von smiit Analytics.",
       body: "[DATENSCHUTZ_TEXT]",
     },
+    nutzungsbedingungen: {
+      title: "Nutzungsbedingungen",
+      description: "Nutzungsbedingungen von smiit Analytics.",
+      body: "[NUTZUNGSBEDINGUNGEN_TEXT]",
+    },
+    avv: {
+      // \u00AD = weiche Trennstelle: bricht auf dem Handy als «Auftrags-/verarbeitungs-/vertrag» um
+      title: "Auftrags\u00ADverarbeitungs\u00ADvertrag (AVV)",
+      description: "Auftragsverarbeitungsvertrag (AVV) für smiit Analytics.",
+      body: "[AVV_TEXT]",
+    },
     back: "Zurück zur Startseite",
   },
 
   notFound: {
-    eyebrow: "Fehler 404",
-    title: "Diese Seite *gibt es nicht.*",
-    text: "Vielleicht hat sich die Adresse geändert. Auf der Startseite finden Sie alles Wichtige.",
+    title: "Seite nicht gefunden",
+    text: "Die von Ihnen gesuchte Seite existiert leider nicht.",
     cta: "Zur Startseite",
-    secondary: "Häufige Fragen",
+    /** Beschreibung der Illustration (Bild aus smiit.de). */
+    imageAlt: "Zwei Personen sitzen auf Würfeln und arbeiten am Laptop",
   },
 
   consent: {
@@ -420,14 +439,13 @@ export const de = {
     LOGO_4: "[LOGO_4_FIRMENNAME]",
     LOGO_5: "[LOGO_5_FIRMENNAME]",
     IMG_STEP_1: "bexio-Verbindung in smiit Analytics herstellen",
-    IMG_STEP_2: "Übersicht der Standardberichte nach der Verbindung",
+    IMG_STEP_2: "Berichtsübersicht mit den Paketen Standard, Sales, Finanzen und Management, alle bereit",
     IMG_STEP_3: "Bericht wird per Drag & Drop angepasst",
     VIDEO_DRAGDROP: "Eine Kennzahl wird per Drag & Drop in einen Bericht gezogen",
-    IMG_MULTI_COMPANY: "Firmenauswahl mit mehreren verbundenen bexio-Firmen",
+    IMG_MULTI_COMPANY: "Ein Login für das Treuhandbüro: Workspace-Liste mit allen Mandanten, ein Klick öffnet den Bericht des gewählten Mandanten",
     VIDEO_AI_CHAT: "Frage an die KI und die Antwort als Diagramm",
-    IMG_REMINDER_EMAIL: "Beispiel einer automatischen Zahlungserinnerung per E-Mail",
-    IMG_PERSONA_GESCHAEFTSFUEHRUNG: "Geschäftsführung eines KMU prüft Kennzahlen am Laptop",
-    IMG_PERSONA_TREUHAND: "Treuhandbüro mit Auswertungen mehrerer Mandanten am Bildschirm",
-    IMG_PERSONA_TEAMLEITUNG: "Teamleitung bespricht Kennzahlen im Team",
+    IMG_PERSONA_GESCHAEFTSFUEHRUNG: "Smartphone mit Umsatz und offenen Rechnungen, daneben automatische Hinweise wie Wochenüberblick und Zahlungseingang",
+    IMG_PERSONA_TREUHAND: "Berichte mehrerer Mandanten übereinander, der vorderste mit Exportieren-Button",
+    IMG_PERSONA_TEAMLEITUNG: "Bereichsansicht mit Team-Auslastung und Stunden je Person",
   },
 }

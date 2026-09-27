@@ -3,8 +3,8 @@
 Eigenständige Produkt-Website für **smiit Analytics**, das SaaS-Tool für Auswertungen mit bexio. Ein Produkt der [smiit GmbH](https://www.smiit.de).
 
 - **Stack:** Next.js 16 (App Router, statischer Export), TypeScript, Tailwind CSS v4
-- **Sprache:** Deutsch (Schweiz); Struktur für weitere Sprachen vorbereitet
-- **Stand:** Alle Medien, Preise, Kundenstimmen und Rechtstexte sind Platzhalter in `[ECKIGEN_KLAMMERN]`
+- **Sprachen:** Deutsch, Englisch, Französisch, Italienisch – jede Seite unter `/<lang>/…`
+- **Stand:** Kundenlogos, Kundenstimmen, Videos und Rechtstexte sind Platzhalter in `[ECKIGEN_KLAMMERN]`
 
 ---
 
@@ -12,17 +12,30 @@ Eigenständige Produkt-Website für **smiit Analytics**, das SaaS-Tool für Ausw
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000
+npm run dev          # http://localhost:3000 → leitet nach /de/ (bzw. Browsersprache) weiter
 ```
 
 | Befehl | Zweck |
 |---|---|
 | `npm run dev` | Entwicklungsserver |
 | `npm run build` | Statischer Export nach `out/` |
-| `npm run typecheck` | TypeScript prüfen |
+| `npm run typecheck` | TypeScript prüfen (prüft auch, dass alle Sprachen vollständig sind) |
 | `npm run brand` | Favicons, zugeschnittene Logos und OG-Platzhalter aus `public/brand/` neu erzeugen |
+| `npm run media:illustrations` | Illustrationen (Schritte, Treuhand, Personas) für alle Sprachen neu erzeugen |
 
-Interne Vorschau des Designsystems: **`/styleguide`** (nicht verlinkt, `noindex`, in robots.txt gesperrt).
+Interne Vorschau des Designsystems: **`/de/styleguide/`** (nicht verlinkt, `noindex`, in robots.txt gesperrt).
+
+---
+
+## Sprachen & Routing
+
+- Alle Routen sind englisch und liegen unter dem Sprachsegment: `/de/`, `/fr/privacy/`, `/it/legal-notice/`, `/en/terms/`, `/de/dpa/`.
+- `/` hat keinen eigenen Inhalt: ein Skript leitet auf die erste unterstützte Browsersprache weiter, sonst (und ohne JavaScript) auf `/de/`.
+- Jede Seite hat `hreflang`-Alternativen für alle Sprachen plus `x-default` (Deutsch); die Sitemap listet jede Route in jeder Sprache.
+- Der Sprachumschalter (Header, mobiles Menü) besteht aus echten Links und behält Seite und Abschnitt (`#pricing`) bei.
+- Die 404-Seite (`app/global-not-found.tsx`) gilt für alle unbekannten URLs und erkennt die Sprache aus dem Pfad (`/fr/…` → Französisch).
+
+**Neue Sprache hinzufügen:** in `lib/dictionary.ts` unter `locales` eintragen und ein Objekt mit derselben Struktur wie `de` ergänzen (TypeScript meldet jeden fehlenden Text), in `lib/i18n.ts` `HTML_LANG`/`OG_LOCALE` und in `lib/links.ts` die Marketplace-Sprache ergänzen, dann `npm run media:illustrations`.
 
 ---
 
@@ -30,24 +43,20 @@ Interne Vorschau des Designsystems: **`/styleguide`** (nicht verlinkt, `noindex`
 
 | Was | Datei |
 |---|---|
-| **Alle Texte** (inkl. FAQ, Preise, Kundenstimmen, Alt-Texte) | [`content/de.ts`](content/de.ts) |
-| **Links** (`[LINK_SIGNUP]`, `[LINK_LOGIN]`, `[LINK_BOOKING]`, Marketplace, LinkedIn …) | [`config/links.ts`](config/links.ts) |
-| **Domain** (`[DOMAIN]`, für Canonical, Sitemap, OG, strukturierte Daten) | [`config/site.ts`](config/site.ts) |
-| **Medien-Register** (Dateinamen, Formate) | [`config/media.ts`](config/media.ts), Doku in [`MEDIA.md`](MEDIA.md) |
-| **Analytics** (vorbereitet, deaktiviert) | [`config/analytics.ts`](config/analytics.ts) |
+| **Alle Texte in allen Sprachen** (inkl. FAQ, Demo-Dashboards, Bildtexte, Alt-Texte, Zahlenformat) | [`lib/dictionary.ts`](lib/dictionary.ts) |
+| **Preise** (CHF pro Monat und bexio-Firma, weitere Nutzer) | [`lib/pricing.ts`](lib/pricing.ts) |
+| **Links** (App, `[LINK_BOOKING]`, Marketplace, LinkedIn …) | [`lib/links.ts`](lib/links.ts) |
+| **Seiten, Abschnitts-Anker, Navigation** | [`lib/routes.ts`](lib/routes.ts) |
+| **Domain** (Canonical, Sitemap, OG, strukturierte Daten) | [`lib/site.ts`](lib/site.ts) |
+| **Medien-Register** (Dateinamen, Formate, sprachabhängig ja/nein) | [`lib/media.ts`](lib/media.ts), Doku in [`MEDIA.md`](MEDIA.md) |
+| **Beispieldaten der Demo-Dashboards** (nur Zahlen; Beschriftungen im Dictionary) | [`lib/demo/`](lib/demo) |
+| **Analytics** (vorbereitet, deaktiviert) | [`lib/analytics.ts`](lib/analytics.ts) |
 | **Design-Tokens** (Farben, Radien, Schatten, Abstände) | [`app/globals.css`](app/globals.css) (`@theme`) |
 
-In Überschriften markiert `*Wort*` eine farbige Hervorhebung, z. B. `"Ihre bexio-Daten. *In 5 Minuten* verständlich."`.
-
-### Medien austauschen
-
-Datei mit dem in [`MEDIA.md`](MEDIA.md) genannten Namen nach `public/media/` legen, dann neu bauen. Die graue Platzhalter-Box verschwindet automatisch.
-
-### Neue Sprache hinzufügen
-
-1. `content/de.ts` kopieren (z. B. `content/fr.ts`) und übersetzen. Die Struktur muss identisch bleiben (Typ `SiteContent`).
-2. In `content/index.ts` unter `locales` und `dictionaries` eintragen.
-3. Routing ergänzen (z. B. `app/[locale]/…`) und `getContent(locale)` verwenden.
+Konventionen im Dictionary:
+- `*Wort*` in Überschriften = farbige Hervorhebung, z. B. `"Ihre bexio-Daten. *In 5 Minuten* verständlich."`
+- `{name}` = Wert, den der Code einsetzt (Preis, Prozent, …)
+- `[PLATZHALTER]` = noch unbekannter Fakt – nicht durch Schätzungen ersetzen
 
 ---
 
@@ -55,31 +64,42 @@ Datei mit dem in [`MEDIA.md`](MEDIA.md) genannten Namen nach `public/media/` leg
 
 ```txt
 app/
-  layout.tsx            Root-Layout: Schriften, Header, Footer, Metadaten, Organization-JSON-LD
-  page.tsx              Startseite (14 Abschnitte) + SoftwareApplication- und FAQPage-JSON-LD
-  impressum/            [IMPRESSUM_TEXT]
-  datenschutz/          [DATENSCHUTZ_TEXT]
-  nutzungsbedingungen/  [NUTZUNGSBEDINGUNGEN_TEXT]
-  avv/                  [AVV_TEXT]
-  not-found.tsx         404-Seite
-  styleguide/           Interne Designsystem-Vorschau
-  sitemap.ts, robots.ts, manifest.ts
-  icon.png, apple-icon.png, favicon.ico    aus dem smiit-Icon erzeugt
-  globals.css           Tailwind v4 + smiit Design-Tokens
+  [lang]/
+    layout.tsx            Root-Layout je Sprache: <html lang>, Schriften, Header, Footer, Metadaten, JSON-LD
+    page.tsx              Startseite
+    legal-notice/         Impressum      privacy/  Datenschutz
+    terms/                Nutzungsbedingungen   dpa/  Auftragsverarbeitungsvertrag (AVV)
+    styleguide/           Interne Designsystem-Vorschau (noindex)
+  (redirect)/             "/" → Weiterleitung zur Browsersprache
+  global-not-found.tsx    404-Seite für alle Sprachen
+  sitemap.ts, robots.ts, manifest.ts, globals.css, icon.png, apple-icon.png, favicon.ico
 components/
-  ds/                   Designsystem: Button, Container/Section, Card, Badge, BrowserFrame,
-                        Media/VideoPlayer/DemoVideo, Tabs, Accordion, Modal
-  sections/             Die Abschnitte der Startseite
-  site/                 Header (sticky, Burger-Menü), Footer, Logo
-  analytics/            Consent-Banner (Platzhalter), Klick-Tracking – nur aktiv, wenn eingeschaltet
-config/                 site, links, media, analytics
-content/                de.ts (alle Texte), index.ts (Sprach-Registry)
-lib/                    seo.ts (Metadaten, JSON-LD), rich.tsx (*Hervorhebung*), track.ts, utils.ts
-public/brand/           smiit-Logo und -Icon (lokal, keine Hotlinks)
-public/media/           Produktmedien (siehe MEDIA.md)
-public/og/              Open-Graph-Bild
-scripts/                build-brand-assets.mjs
+  pages/
+    landing-page.tsx      Setzt die Startseite aus den Abschnitten zusammen
+    landing/              Abschnitte der Startseite (erhalten { lang, dict })
+      dashboards/         Interaktive Demo-Dashboards (SVG) + dashboard-kit
+    legal/                Rechtsseiten-Vorlage
+    not-found/            404-Ansicht (Client, Sprache aus dem Pfad)
+  ui/                     Designsystem: Button, Section, Card, Badge, BrowserFrame, Media, Tabs, Accordion, Modal
+  seo/                    JSON-LD
+  analytics/              Consent-Banner (Platzhalter), Klick-Tracking – nur aktiv, wenn eingeschaltet
+  header.tsx, footer.tsx, language-switcher.tsx, logo.tsx, cta-link.tsx, icons.tsx
+lib/
+  dictionary.ts           Alle Texte, alle Sprachen (Typ `Dictionary` = Struktur von `de`)
+  dictionary-slices.ts    Textausschnitte für Client-Komponenten (Header, Footer)
+  i18n.ts                 Sprachen, <html lang>, OG-Locale
+  routes.ts               Seiten, Pfade, Anker, Navigation
+  seo.ts                  Metadaten (Canonical, hreflang, OG), JSON-LD
+  format.ts               Zahlen-/Datumsformat je Sprache
+  pricing.ts, links.ts, site.ts, media.ts, analytics.ts, fonts.ts, rich.tsx, track.ts, utils.ts
+  demo/                   Beispieldaten der Dashboards
+public/brand/             smiit-Logo und -Icon (lokal, keine Hotlinks)
+public/media/<lang>/      Sprachabhängige Illustrationen (generiert); übrige Medien direkt in public/media/
+public/og/                Open-Graph-Bild
+scripts/                  build-brand-assets.mjs, build-illustrations.mjs
 ```
+
+Client-Komponenten bekommen nur die Texte, die sie brauchen (z. B. `pickHeaderDict`), nie das ganze Dictionary.
 
 ---
 
@@ -95,11 +115,11 @@ Utilities entstehen direkt aus den Tokens: `bg-navy`, `text-brand`, `rounded-car
 
 ## Tracking
 
-Alle CTAs tragen `data-track="<id>"` (z. B. `hero_signup`, `pricing_paket-2_signup`, `final_booking`). Analytics ist **vorbereitet, aber deaktiviert**:
+Alle CTAs tragen `data-track="<id>"` (z. B. `hero_signup`, `pricing_yearly_signup`, `language_fr`, `final_booking`). Analytics ist **vorbereitet, aber deaktiviert**:
 
-1. `config/analytics.ts` → `enabled: true`, Anbieter und ID eintragen
+1. `lib/analytics.ts` → `enabled: true`, Anbieter und ID eintragen
 2. Anbieter-Skript in `components/analytics/index.tsx` einbinden (erst nach Zustimmung laden)
-3. Bei Cookies: `requiresConsent: true` lassen → Consent-Banner erscheint; Text `[CONSENT_TEXT]` in `content/de.ts`
+3. Bei Cookies: `requiresConsent: true` lassen → Consent-Banner erscheint; Text `[CONSENT_TEXT]` in `lib/dictionary.ts`
 
 `lib/track.ts` sendet Klicks an `window.dataLayer`. Das lässt sich an den gewählten Anbieter anpassen.
 
@@ -107,13 +127,11 @@ Alle CTAs tragen `data-track="<id>"` (z. B. `hero_signup`, `pricing_paket-2_sign
 
 ## Deployment
 
-Die Seite wird statisch exportiert (`output: "export"` in `next.config.mjs`). `npm run build` erzeugt den Ordner `out/`, den jeder Static-Host ausliefern kann.
-
-**Vor dem Livegang:** `[DOMAIN]` in `config/site.ts` setzen. Solange der Platzhalter drin ist, zeigen Canonical und Sitemap auf `domain-platzhalter.invalid`.
+Die Seite wird statisch exportiert (`output: "export"` in `next.config.mjs`). `npm run build` erzeugt den Ordner `out/`, den jeder Static-Host ausliefern kann. Der Host muss für unbekannte Pfade `404.html` ausliefern (GitHub Pages, Netlify, Vercel und Cloudflare Pages tun das automatisch).
 
 ### GitHub Pages (eingerichtet)
 
-Workflow: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). **Aktuell nur manuell startbar** (Actions → «Deploy to GitHub Pages» → *Run workflow*), damit keine Platzhalter-Version versehentlich live geht. Automatisches Deployment bei Push: Trigger `push` im Workflow wieder ergänzen.
+Workflow: [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
 
 ### Vercel
 

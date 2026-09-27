@@ -1,16 +1,23 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/components/ds"
-import { LINKS } from "@/config/links"
-import type { SiteContent } from "@/content"
+import { Button } from "@/components/ui"
+import type { Dictionary } from "@/lib/dictionary"
 import { readConsent, writeConsent, type Consent } from "@/lib/track"
 
 /**
  * Placeholder consent banner. Only rendered when analytics is enabled and
- * requires consent (see config/analytics.ts). Text: [CONSENT_TEXT] in content.
+ * requires consent (see lib/analytics.ts). Text: [CONSENT_TEXT] in lib/dictionary.ts.
  */
-export function ConsentBanner({ t, onDecision }: { t: SiteContent["consent"]; onDecision?: (c: Consent) => void }) {
+export function ConsentBanner({
+  t,
+  privacyHref,
+  onDecision,
+}: {
+  t: Dictionary["consent"]
+  privacyHref: string
+  onDecision?: (c: Consent) => void
+}) {
   const [visible, setVisible] = React.useState(false)
 
   React.useEffect(() => {
@@ -33,7 +40,7 @@ export function ConsentBanner({ t, onDecision }: { t: SiteContent["consent"]; on
     >
       <p className="text-sm leading-relaxed text-ink">
         {t.text}{" "}
-        <a href={LINKS.datenschutz} className="text-brand underline underline-offset-4">
+        <a href={privacyHref} className="text-brand underline underline-offset-4">
           {t.more}
         </a>
       </p>

@@ -4,7 +4,9 @@ Alle Bilder und Videos der Website sind Platzhalter. Solange eine Datei fehlt, z
 
 **Austauschen:** Datei mit dem **exakt gleichen Namen** nach `public/media/` legen, dann `npm run build` ausführen. Sie ersetzt den Platzhalter automatisch. Code muss nicht angepasst werden.
 
-Die technische Liste steht in [`config/media.ts`](config/media.ts). Die Alt-Texte stehen in [`content/de.ts`](content/de.ts) unter `media`.
+**Sprachabhängige Medien** (in [`lib/media.ts`](lib/media.ts) mit `localized: true` markiert, aktuell alle Illustrationen) liegen einmal pro Sprache in `public/media/de/`, `public/media/en/`, `public/media/fr/` und `public/media/it/` – jeweils unter demselben Dateinamen. Soll ein Video pro Sprache geliefert werden (z. B. `VIDEO_DEMO_FULL` mit Ton), dort ebenfalls `localized: true` setzen und die Dateien in die vier Ordner legen.
+
+Die technische Liste steht in [`lib/media.ts`](lib/media.ts). Die Alt-Texte stehen in [`lib/dictionary.ts`](lib/dictionary.ts) unter `media`, für jede Sprache.
 
 ---
 
@@ -37,29 +39,31 @@ Pro Video werden drei Dateien benötigt: `<datei>.webm`, `<datei>.mp4` und `<dat
 
 ## Screenshots und Bilder
 
-> Die Standardberichte im Abschnitt «Verbinden & sofort sehen» (Verkauf, Bilanz, Arbeitszeiten, Projekte, Cashflow) brauchen **keine Screenshots**: Sie sind interaktive Dashboards im Code mit fiktiven Beispieldaten (`content/demo/*.ts`, `components/demo/*`).
+> Die Standardberichte im Abschnitt «Verbinden & sofort sehen» (Verkauf, Bilanz, Arbeitszeiten, Projekte, Cashflow) brauchen **keine Screenshots**: Sie sind interaktive Dashboards im Code mit fiktiven Beispieldaten (Zahlen in `lib/demo/*.ts`, Beschriftungen in `lib/dictionary.ts` unter `demo`, Komponenten in `components/pages/landing/dashboards/`).
+
+Alle Einträge dieser Tabelle sind **sprachabhängig** (`public/media/<lang>/<datei>`). Die Bildtexte stehen in `lib/dictionary.ts` unter `illustrations`.
 
 | ID | Datei | Format | Abschnitt | Inhalt |
 |---|---|---|---|---|
-| `IMG_STEP_1` | `img_step_1.webp` | 4:3, 1200×900 | «So einfach geht's» – Schritt 1 | Dialog «Datenquelle verbinden» mit bexio-Eintrag, nachgebaut nach einem Screenshot aus dem Tool (ohne Entwickler-Option «mit PAT verbinden»). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_STEP_2` | `img_step_2.webp` | 4:3, 1200×900 | Schritt 2 | Vier Berichtspakete (Standard, Sales, Finanzen, Management) mit Mini-Diagramm und «Bereit»-Status. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_STEP_3` | `img_step_3.webp` | 4:3, 1200×900 | Schritt 3 | Bericht im Bearbeitungsmodus (Drag & Drop oder KI-Eingabe sichtbar). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_MULTI_COMPANY` | `img_multi_company.webp` | 4:3, 1200×900 | Versprechen 2 – Box für Treuhandbüros | Treuhandbüro mit einem Login: Workspace-Umschalter mit allen Mandanten (fiktive Namen), daneben der Bericht des gewählten Mandanten. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), angelehnt an den Workspace-Umschalter im Tool; kann durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_PERSONA_GESCHAEFTSFUEHRUNG` | `img_persona_geschaeftsfuehrung.webp` | 3:2, 1200×800 | «Für wen?» | Geschäftsführung: Smartphone mit Kennzahlen + automatische Hinweise. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
-| `IMG_PERSONA_TREUHAND` | `img_persona_treuhand.webp` | 3:2, 1200×800 | «Für wen?» | Treuhand: aufgefächerte Berichte mehrerer Mandanten mit «Exportieren». **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
-| `IMG_PERSONA_TEAMLEITUNG` | `img_persona_teamleitung.webp` | 3:2, 1200×800 | «Für wen?» | Teamleitung: Bereichsansicht mit Auslastung und Stunden je Person. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_1` | `img_step_1.webp` | 4:3, 1200×900 | «So einfach geht's» – Schritt 1 | Dialog «Datenquelle verbinden» mit bexio-Eintrag, nachgebaut nach einem Screenshot aus dem Tool (ohne Entwickler-Option «mit PAT verbinden»). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_2` | `img_step_2.webp` | 4:3, 1200×900 | Schritt 2 | Vier Berichtspakete (Standard, Sales, Finanzen, Management) mit Mini-Diagramm und «Bereit»-Status. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_3` | `img_step_3.webp` | 4:3, 1200×900 | Schritt 3 | Bericht im Bearbeitungsmodus (Drag & Drop oder KI-Eingabe sichtbar). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_MULTI_COMPANY` | `img_multi_company.webp` | 4:3, 1200×900 | Versprechen 2 – Box für Treuhandbüros | Treuhandbüro mit einem Login: Workspace-Umschalter mit allen Mandanten (fiktive Namen), daneben der Bericht des gewählten Mandanten. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), angelehnt an den Workspace-Umschalter im Tool; kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_MANAGEMENT` | `img_persona_management.webp` | 3:2, 1200×800 | «Für wen?» | Geschäftsführung: Smartphone mit Kennzahlen + automatische Hinweise. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_TRUSTEE` | `img_persona_trustee.webp` | 3:2, 1200×800 | «Für wen?» | Treuhand: aufgefächerte Berichte mehrerer Mandanten mit «Exportieren». **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_TEAM_LEAD` | `img_persona_team_lead.webp` | 3:2, 1200×800 | «Für wen?» | Teamleitung: Bereichsansicht mit Auslastung und Stunden je Person. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
 
 ## Kundenlogos
 
 Das Seitenverhältnis 3:1 wird im Format *contain* dargestellt (das Logo wird nicht beschnitten). Die Logos erscheinen in Graustufen und beim Überfahren mit der Maus in Farbe. **Nur mit schriftlicher Freigabe der Kunden verwenden.**
 
-| ID | Datei | Format | Alt-Text in `content/de.ts` |
+| ID | Datei | Format | Alt-Text in `lib/dictionary.ts` (je Sprache) |
 |---|---|---|---|
 | `LOGO_1` … `LOGO_5` | `logo_1.webp` … `logo_5.webp` | 3:1, z. B. 600×200, transparenter Hintergrund | `[LOGO_1_FIRMENNAME]` … `[LOGO_5_FIRMENNAME]` durch den Firmennamen ersetzen |
 
 ## Kundenstimmen (optional)
 
-Foto zum Testimonial: Datei (1:1, 200×200, WebP) nach `public/media/` legen und in `content/de.ts` unter `testimonials.items[n].image` den Pfad eintragen, z. B. `"/media/testimonial_1.webp"`. Ohne Foto werden Initialen angezeigt.
+Foto zum Testimonial: Datei (1:1, 200×200, WebP) nach `public/media/` legen und in `lib/dictionary.ts` unter `home.testimonials.items[n].image` den Pfad eintragen (in jeder Sprache), z. B. `"/media/testimonial_1.webp"`. Ohne Foto werden Initialen angezeigt.
 
 ## Social-Media-Vorschau (Open Graph)
 
@@ -69,4 +73,16 @@ Foto zum Testimonial: Datei (1:1, 200×200, WebP) nach `public/media/` legen und
 
 ## Marke (bereits vorhanden)
 
-Die Dateien liegen in `public/brand/`: `logo_black.webp`, `logo_white.webp`, `icon_transparent.png` (Originale von smiit.de) sowie zugeschnittene Varianten `*_trim.webp`. Favicons (`app/icon.png`, `app/apple-icon.png`, `app/favicon.ico`) werden aus dem Icon erzeugt: `npm run brand`.
+Die smiit-Logos liegen in `public/brand/`: `logo_black.webp`, `logo_white.webp` (Originale von smiit.de) sowie zugeschnittene Varianten `*_trim.webp` (`npm run brand`).
+
+Das **smiit-Analytics-Icon** ist die Originaldatei, unverändert übernommen:
+
+| Datei | Verwendung |
+|---|---|
+| `public/brand/app-icon.webp` | Logo in Header und Footer (512×512 WebP) |
+| `app/favicon.ico` | Favicon |
+| `app/icon.png` | Icon 512×512 (Browser, Manifest) |
+| `app/apple-icon.png` | Apple Touch Icon 180×180 |
+| `public/icon-192.png` | Manifest-Icon 192×192 |
+
+Zum Austauschen die Dateien gleichen Namens ersetzen.

@@ -1,4 +1,4 @@
-import { ANALYTICS } from "@/config/analytics"
+import { ANALYTICS } from "@/lib/analytics"
 
 declare global {
   interface Window {

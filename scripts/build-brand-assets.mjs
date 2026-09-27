@@ -1,7 +1,7 @@
-// Derives trimmed logos and favicons from the originals in /public/brand.
+// Derives the trimmed smiit logos (and a placeholder OG image) from the originals in /public/brand.
 // Run once after replacing a brand file: `node scripts/build-brand-assets.mjs`
 import sharp from "sharp"
-import { existsSync, mkdirSync, writeFileSync } from "node:fs"
+import { existsSync, mkdirSync } from "node:fs"
 
 const NAVY = "#0b162d"
 
@@ -9,36 +9,9 @@ for (const tone of ["black", "white"]) {
   await sharp(`public/brand/logo_${tone}.webp`).trim().webp({ quality: 95 }).toFile(`public/brand/logo_${tone}_trim.webp`)
 }
 
-// Icon on a navy rounded tile — the transparent icon has a white bar that vanishes on light tabs.
-async function tile(size) {
-  const r = Math.round(size * 0.22)
-  const pad = Math.round(size * 0.2)
-  const mask = Buffer.from(`<svg width="${size}" height="${size}"><rect width="${size}" height="${size}" rx="${r}" fill="${NAVY}"/></svg>`)
-  const icon = await sharp("public/brand/icon_transparent.png")
-    .resize(size - pad * 2, size - pad * 2, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .toBuffer()
-  return sharp(mask).composite([{ input: icon, gravity: "center" }]).png().toBuffer()
-}
+// App icon and favicons are the original smiit Analytics files (not generated):
+//   public/brand/app-icon.webp, public/icon-192.png, app/icon.png, app/apple-icon.png, app/favicon.ico
 
-writeFileSync("app/icon.png", await tile(512))
-writeFileSync("app/apple-icon.png", await tile(180))
-// App icon for the site logo (rendered at 32px, 3× for sharp retina display).
-await sharp(await tile(96)).webp({ quality: 95 }).toFile("public/brand/app-icon.webp")
-
-// favicon.ico with embedded PNGs (16, 32, 48)
-const sizes = [16, 32, 48]
-const pngs = await Promise.all(sizes.map(tile))
-const header = Buffer.alloc(6)
-header.writeUInt16LE(0, 0); header.writeUInt16LE(1, 2); header.writeUInt16LE(sizes.length, 4)
-let offset = 6 + 16 * sizes.length
-const entries = sizes.map((s, i) => {
-  const e = Buffer.alloc(16)
-  e.writeUInt8(s, 0); e.writeUInt8(s, 1); e.writeUInt16LE(1, 4); e.writeUInt16LE(32, 6)
-  e.writeUInt32LE(pngs[i].length, 8); e.writeUInt32LE(offset, 12)
-  offset += pngs[i].length
-  return e
-})
-writeFileSync("app/favicon.ico", Buffer.concat([header, ...entries, ...pngs]))
 console.log("brand assets written")
 
 // Placeholder Open Graph image (1200×630). Replace public/og/og-image.png with the final design;

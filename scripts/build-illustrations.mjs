@@ -1,16 +1,22 @@
 // Renders the site illustrations (4:3, 1200×900) from SVG mockups in the style
-// of the demo dashboards: "So einfach geht's" (IMG_STEP_1..3) and the Treuhand
-// workspace switcher (IMG_MULTI_COMPANY), and the "Für wen?" personas
-// (IMG_PERSONA_*, 3:2, 1200×800).
+// of the demo dashboards: the three steps (IMG_STEP_1..3), the trustee
+// workspace switcher (IMG_MULTI_COMPANY) and the audience personas
+// (IMG_PERSONA_*, 3:2, 1200×800) – once per language, into public/media/<lang>/.
+// Texts come from lib/dictionary.ts (`illustrations`), numbers from lib/format.ts.
 // Run: `npm run media:illustrations` – replace the WebP files with real screenshots any time.
 import sharp from "sharp"
-import { readFileSync } from "node:fs"
+import { mkdirSync, readFileSync } from "node:fs"
+import { getDictionary, locales } from "../lib/dictionary.ts"
+import { createFormatter } from "../lib/format.ts"
+
+/** Texts (`L`), dashboard labels (`D`) and formatter (`F`) of the language being rendered. */
+let L, D, F
 
 const W = 1200
 const H = 900
 const FONT = "Segoe UI, Helvetica Neue, Arial, sans-serif"
 
-// Palette shared with components/demo/dashboard-kit.tsx
+// Palette shared with components/pages/landing/dashboards/dashboard-kit.tsx
 const C = {
   canvas: "#eef1f6",
   card: "#ffffff",
@@ -55,7 +61,7 @@ const svg = (body, w = W, h = H) => `<svg xmlns="http://www.w3.org/2000/svg" wid
   ${body}
 </svg>`
 
-/* ── Step 1: connect bexio (after the tool's "Datenquelle verbinden" dialog) ── */
+/* ── Step 1: connect bexio (after the tool's "connect data source" dialog) ── */
 function step1() {
   const cx = W / 2
   // Faint app skeleton behind the dialog, as in the product screenshot.
@@ -78,15 +84,15 @@ function step1() {
     <rect x="${cx - 66}" y="168" width="132" height="132" rx="30" fill="#eceef3"/>
     <image href="${icon}" x="${cx - 44}" y="190" width="88" height="88"/>
 
-    ${text(cx, 386, "Datenquelle verbinden", { size: 50, weight: 700, anchor: "middle" })}
-    ${text(cx, 448, "Verbinden Sie eine Datenquelle mit diesem Workspace,", { size: 30, color: C.muted, anchor: "middle" })}
-    ${text(cx, 490, "um Ihren ersten Bericht zu erstellen.", { size: 30, color: C.muted, anchor: "middle" })}
+    ${text(cx, 386, L.connect.title, { size: 50, weight: 700, anchor: "middle" })}
+    ${text(cx, 448, L.connect.text[0], { size: 30, color: C.muted, anchor: "middle" })}
+    ${text(cx, 490, L.connect.text[1], { size: 30, color: C.muted, anchor: "middle" })}
 
     <rect x="210" y="560" width="780" height="140" rx="22" fill="#f5f7fb" stroke="#d6dce8" stroke-width="2"/>
     <circle cx="292" cy="630" r="46" fill="#1d2b29"/>
     ${text(292, 643, "bx", { size: 36, weight: 800, color: "#8fd14f", anchor: "middle" })}
     ${text(366, 620, "bexio", { size: 38, weight: 700 })}
-    ${text(366, 666, "Binden Sie Ihre bexio Firma an.", { size: 29, color: C.muted })}
+    ${text(366, 666, L.connect.bexio, { size: 29, color: C.muted })}
     <path d="M936,608 l22,22 l-22,22" fill="none" stroke="${C.title}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
     ${cursor(860, 640)}
   `)
@@ -137,12 +143,7 @@ function miniChart(kind, x, y) {
 
 function step2() {
   // Four report packages in a 2×2 grid; mini charts drawn at 270×120 and scaled up.
-  const cards = [
-    { title: "Standard", kind: "line" },
-    { title: "Sales", kind: "bars" },
-    { title: "Finanzen", kind: "waterfall" },
-    { title: "Management", kind: "kpis" },
-  ]
+  const cards = ["line", "bars", "waterfall", "kpis"].map((kind, i) => ({ title: L.packages.names[i], kind }))
   const cw = 515
   const ch = 370
   const gap = 30
@@ -157,7 +158,7 @@ function step2() {
         <g transform="translate(${x + 38} ${y + 100}) scale(1.5)">${miniChart(card.kind, 0, 0)}</g>
         <rect x="${x + 38}" y="${y + 302}" width="140" height="44" rx="22" fill="${C.okSoft}"/>
         <circle cx="${x + 63}" cy="${y + 324}" r="13" fill="${C.ok}"/>${check(x + 63, y + 324, 0.6)}
-        ${text(x + 86, y + 335, "Bereit", { size: 27, weight: 700, color: C.ok })}`
+        ${text(x + 86, y + 335, L.packages.ready, { size: 27, weight: 700, color: C.ok })}`
     })
     .join("")
 
@@ -167,10 +168,10 @@ function step2() {
 /* ── Step 3: customise by drag & drop / AI ───────────────────────────── */
 function step3() {
   const items = [
-    { label: "Kennzahl", icon: `<text x="0" y="0" font-family="${FONT}" font-size="26" font-weight="800" fill="${C.series}" text-anchor="middle" dy="9">123</text>` },
-    { label: "Linie", icon: `<polyline points="-18,10 -6,-2 4,4 18,-12" fill="none" stroke="${C.series}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>` },
-    { label: "Balken", icon: `<rect x="-17" y="-2" width="9" height="16" rx="2" fill="${C.series}"/><rect x="-4" y="-14" width="9" height="28" rx="2" fill="${C.series}"/><rect x="9" y="-7" width="9" height="21" rx="2" fill="${C.series}"/>`, dragging: true },
-    { label: "Tabelle", icon: `<rect x="-17" y="-14" width="34" height="28" rx="4" fill="none" stroke="${C.series}" stroke-width="4"/><path d="M-17,-3 h34 M-17,6 h34 M-4,-14 v28" stroke="${C.series}" stroke-width="3"/>` },
+    { label: L.editor.items[0], icon: `<text x="0" y="0" font-family="${FONT}" font-size="26" font-weight="800" fill="${C.series}" text-anchor="middle" dy="9">123</text>` },
+    { label: L.editor.items[1], icon: `<polyline points="-18,10 -6,-2 4,4 18,-12" fill="none" stroke="${C.series}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>` },
+    { label: L.editor.items[2], icon: `<rect x="-17" y="-2" width="9" height="16" rx="2" fill="${C.series}"/><rect x="-4" y="-14" width="9" height="28" rx="2" fill="${C.series}"/><rect x="9" y="-7" width="9" height="21" rx="2" fill="${C.series}"/>`, dragging: true },
+    { label: L.editor.items[3], icon: `<rect x="-17" y="-14" width="34" height="28" rx="4" fill="none" stroke="${C.series}" stroke-width="4"/><path d="M-17,-3 h34 M-17,6 h34 M-4,-14 v28" stroke="${C.series}" stroke-width="3"/>` },
   ]
   const list = items
     .map((it, i) => {
@@ -193,15 +194,15 @@ function step3() {
   // No page title: panels + AI bar (696px) centred vertically → shift up by 58.
   return svg(`<g transform="translate(0 -58)">
     <rect x="40" y="160" width="290" height="560" rx="24" fill="#fff" stroke="${C.border}" stroke-width="2"/>
-    ${text(64, 214, "Elemente", { size: 30, weight: 700 })}
+    ${text(64, 214, L.editor.elements, { size: 30, weight: 700 })}
     ${list}
 
     <rect x="360" y="160" width="800" height="560" rx="24" fill="#fff" stroke="${C.border}" stroke-width="2"/>
-    ${kpi(384, "Umsatz", "CHF 675.5 Tsd.")}
-    ${kpi(754, "Rechnungen", "942")}
+    ${kpi(384, L.editor.revenue, F.chfCompact(675500))}
+    ${kpi(754, L.editor.invoices, F.num(942))}
     <polyline points="${line}" fill="none" stroke="${C.light}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
     <rect x="384" y="500" width="752" height="196" rx="18" fill="#f1f5fd" stroke="${C.brand}" stroke-width="4" stroke-dasharray="16 10"/>
-    ${text(760, 612, "Hier ablegen", { size: 30, weight: 600, color: C.brand, anchor: "middle" })}
+    ${text(760, 612, L.editor.drop, { size: 30, weight: 600, color: C.brand, anchor: "middle" })}
 
     <g transform="rotate(-4 610 470)" filter="url(#shadow)">
       <rect x="470" y="400" width="300" height="170" rx="18" fill="#fff" stroke="${C.border}" stroke-width="2"/>
@@ -211,7 +212,7 @@ function step3() {
 
     <rect x="40" y="752" width="1120" height="104" rx="26" fill="#fff" stroke="${C.border}" stroke-width="2" filter="url(#shadow)"/>
     <path d="M96,780 l6,16 l16,6 l-16,6 l-6,16 l-6,-16 l-16,-6 l16,-6 z" fill="${C.brand}"/>
-    ${text(144, 816, "Zeig mir den Umsatz pro Quartal", { size: 32, color: C.title })}
+    ${text(144, 816, L.editor.prompt, { size: 32, color: C.title })}
     <circle cx="1100" cy="804" r="32" fill="${C.navy}"/>
     <path d="M1088,804 h24 m-10,-11 l11,11 l-11,11" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>`)
@@ -260,22 +261,22 @@ function multiCompany() {
     <rect x="66" y="160" width="64" height="64" rx="14" fill="${C.brand}"/>
     ${text(98, 202, "TK", { size: 26, weight: 800, color: "#fff", anchor: "middle" })}
     ${text(150, 193, "Treuhand Keller AG", { size: 30, weight: 700 })}
-    ${text(150, 222, "Ihr Account", { size: 22, color: C.muted })}
+    ${text(150, 222, L.workspaces.account, { size: 22, color: C.muted })}
     <rect x="514" y="166" width="54" height="54" rx="12" fill="#fff" stroke="${C.border}" stroke-width="2"/>
     <path d="M530,198 l11,-11 l11,11" fill="none" stroke="${C.title}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
     <line x1="60" y1="252" x2="580" y2="252" stroke="${C.border}" stroke-width="2"/>
-    ${text(66, 296, "Mandanten", { size: 24, weight: 600, color: C.muted })}
+    ${text(66, 296, L.workspaces.clients, { size: 24, weight: 600, color: C.muted })}
     ${rows}
     <path d="M88,${rowY(5) + 34} h24 M100,${rowY(5) + 22} v24" stroke="${C.muted}" stroke-width="3.5" stroke-linecap="round"/>
-    ${text(154, rowY(5) + 45, "Workspace erstellen", { size: 28, color: C.muted })}
+    ${text(154, rowY(5) + 45, L.workspaces.create, { size: 28, color: C.muted })}
     ${cursor(420, activeY + 4)}
 
     <!-- the selected client's report, right next to it -->
     <rect x="630" y="134" width="530" height="730" rx="24" fill="#fff" stroke="${C.border}" stroke-width="2"/>
     ${text(662, 196, "Seeland Elektro AG", { size: 32, weight: 700 })}
-    ${text(662, 234, "Verkauf", { size: 24, color: C.muted })}
-    ${kpi(662, "Umsatz", "CHF 412 Tsd.")}
-    ${kpi(904, "Rechnungen", "518")}
+    ${text(662, 234, L.workspaces.report, { size: 24, color: C.muted })}
+    ${kpi(662, L.workspaces.revenue, F.chfCompact(412000))}
+    ${kpi(904, L.workspaces.invoices, F.num(518))}
     <polyline points="${line}" fill="none" stroke="${C.light}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
     <line x1="662" y1="634" x2="1128" y2="634" stroke="${C.border}" stroke-width="2"/>
     ${bars}
@@ -286,7 +287,7 @@ function multiCompany() {
   `)
 }
 
-/* ── "Für wen?" personas (3:2, 1200×800) ─────────────────────────────── */
+/* ── audience personas (3:2, 1200×800) ───────────────────────────────── */
 const PW = 1200
 const PH = 800
 
@@ -302,6 +303,7 @@ const glyph = {
 
 /** Owner: phone with the key numbers + automatic notifications. */
 function personaOwner() {
+  const change = F.signed(11.8, (v) => F.pct(v))
   const spark = [48, 52, 61, 45, 50, 59, 64, 59, 67, 57, 50, 62].map((v, i) => `${200 + i * 28},${680 - (v - 40) * 3}`).join(" ")
   const note = (y, g, bg, title, sub) => `<rect x="620" y="${y}" width="520" height="150" rx="26" fill="#fff" stroke="${C.border}" stroke-width="2" filter="url(#shadow)"/>
     ${iconTile(650, y + 39, g, bg)}
@@ -312,21 +314,21 @@ function personaOwner() {
     <rect x="150" y="40" width="400" height="720" rx="60" fill="${C.title}"/>
     <rect x="166" y="56" width="368" height="688" rx="46" fill="#fff"/>
     <rect x="300" y="72" width="100" height="22" rx="11" fill="${C.title}"/>
-    ${text(196, 150, "Übersicht", { size: 36, weight: 700 })}
+    ${text(196, 150, L.owner.overview, { size: 36, weight: 700 })}
     <rect x="190" y="180" width="320" height="140" rx="22" fill="#f3f5fa"/>
-    ${text(214, 222, "Umsatz Monat", { size: 25, weight: 600, color: C.muted })}
-    ${text(214, 272, "CHF 62.3 Tsd.", { size: 40, weight: 700 })}
-    ${text(214, 306, "+11.8 % vs. Vorjahr", { size: 23, weight: 700, color: C.ok })}
+    ${text(214, 222, L.owner.revenueMonth, { size: 25, weight: 600, color: C.muted })}
+    ${text(214, 272, F.chfCompact(62300), { size: 40, weight: 700 })}
+    ${text(214, 306, L.owner.vsPrev.replace("{change}", change), { size: 23, weight: 700, color: C.ok })}
     <rect x="190" y="340" width="320" height="130" rx="22" fill="#f3f5fa"/>
-    ${text(214, 382, "Offene Rechnungen", { size: 25, weight: 600, color: C.muted })}
-    ${text(214, 432, "CHF 76.8 Tsd.", { size: 40, weight: 700 })}
-    ${text(196, 524, "Umsatz 12 Monate", { size: 25, weight: 600, color: C.muted })}
+    ${text(214, 382, L.owner.openInvoices, { size: 25, weight: 600, color: C.muted })}
+    ${text(214, 432, F.chfCompact(76800), { size: 40, weight: 700 })}
+    ${text(196, 524, L.owner.revenueYear, { size: 25, weight: 600, color: C.muted })}
     <polyline points="${spark}" fill="none" stroke="${C.light}" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
     <circle cx="${200 + 11 * 28}" cy="${680 - 22 * 3}" r="9" fill="${C.series}" stroke="#fff" stroke-width="3"/>
 
-    ${note(130, glyph.bell, "#e8ecf5", "Wochenüberblick", "Umsatz +11.8 % vs. Vorjahr")}
-    ${note(325, glyph.paid, C.okSoft, "Zahlung eingegangen", "Müller Holzbau · CHF 7’200")}
-    ${note(520, glyph.chart, "#e8ecf5", "Monatsbericht bereit", "Automatisch erstellt")}
+    ${note(130, glyph.bell, "#e8ecf5", L.owner.weekly, L.owner.weeklyText.replace("{change}", change))}
+    ${note(325, glyph.paid, C.okSoft, L.owner.paid, `Müller Holzbau · ${F.chf(7200)}`)}
+    ${note(520, glyph.chart, "#e8ecf5", L.owner.monthly, L.owner.monthlyText)}
   `,
     PW,
     PH,
@@ -343,11 +345,11 @@ function personaTrustee() {
       ${
         front
           ? `<rect x="${x + 32}" y="${y + 128}" width="256" height="120" rx="18" fill="#f3f5fa"/>
-             ${text(x + 54, y + 170, "Umsatz", { size: 24, weight: 600, color: C.muted })}
-             ${text(x + 54, y + 220, "CHF 412 Tsd.", { size: 36, weight: 700 })}
+             ${text(x + 54, y + 170, L.trustee.revenue, { size: 24, weight: 600, color: C.muted })}
+             ${text(x + 54, y + 220, F.chfCompact(412000), { size: 36, weight: 700 })}
              <rect x="${x + 312}" y="${y + 128}" width="256" height="120" rx="18" fill="#f3f5fa"/>
-             ${text(x + 334, y + 170, "Offen", { size: 24, weight: 600, color: C.muted })}
-             ${text(x + 334, y + 220, "CHF 38 Tsd.", { size: 36, weight: 700 })}
+             ${text(x + 334, y + 170, L.trustee.open, { size: 24, weight: 600, color: C.muted })}
+             ${text(x + 334, y + 220, F.chfCompact(38000), { size: 36, weight: 700 })}
              ${[70, 102, 84, 126, 110, 142, 118]
                .map((v, i) => `<path d="M${x + 44 + i * 60},${y + 470} V${y + 476 - v} q0,-7 7,-7 h24 q7,0 7,7 V${y + 470} z" fill="${C.series}"/>`)
                .join("")}`
@@ -362,7 +364,7 @@ function personaTrustee() {
     <g transform="rotate(2 630 370)">
       <rect x="720" y="610" width="260" height="76" rx="18" fill="${C.brand}" filter="url(#shadow)"/>
       <g transform="translate(762 648)">${glyph.download}</g>
-      ${text(792, 659, "Exportieren", { size: 30, weight: 700, color: "#fff" })}
+      ${text(792, 659, L.trustee.export, { size: 30, weight: 700, color: "#fff" })}
     </g>
   `,
     PW,
@@ -372,6 +374,7 @@ function personaTrustee() {
 
 /** Team lead: own area at a glance – utilisation and hours per person. */
 function personaTeamLead() {
+  const hours = (n) => `${F.num(n)} ${D.worktime.unit}`
   const team = [
     ["Anna", 1962],
     ["Marco", 1874],
@@ -391,19 +394,19 @@ function personaTeamLead() {
   return svg(
     `
     <rect x="60" y="60" width="1080" height="680" rx="30" fill="#fff" stroke="${C.border}" stroke-width="2" filter="url(#shadow)"/>
-    ${text(110, 140, "Mein Bereich", { size: 44, weight: 700 })}
-    ${text(110, 186, "Montage · letzte 12 Monate", { size: 27, color: C.muted })}
+    ${text(110, 140, L.teamLead.title, { size: 44, weight: 700 })}
+    ${text(110, 186, L.teamLead.subtitle, { size: 27, color: C.muted })}
 
     <rect x="110" y="240" width="380" height="440" rx="24" fill="#f3f5fa"/>
-    ${text(146, 300, "Auslastung", { size: 30, weight: 600, color: C.muted })}
-    ${text(146, 400, "77 %", { size: 96, weight: 800, color: C.navy })}
+    ${text(146, 300, L.teamLead.utilization, { size: 30, weight: 600, color: C.muted })}
+    ${text(146, 400, F.pct(77, 0), { size: 96, weight: 800, color: C.navy })}
     <rect x="146" y="450" width="308" height="24" rx="12" fill="${C.track}"/>
     <rect x="146" y="450" width="${308 * 0.77}" height="24" rx="12" fill="${C.series}"/>
-    ${text(146, 540, "Verrechenbar", { size: 26, color: C.muted })}
-    ${text(146, 584, "6’813 Std.", { size: 38, weight: 700 })}
-    ${text(146, 640, "von 8’834 Std.", { size: 26, color: C.muted })}
+    ${text(146, 540, L.teamLead.billable, { size: 26, color: C.muted })}
+    ${text(146, 584, hours(6813), { size: 38, weight: 700 })}
+    ${text(146, 640, L.teamLead.of.replace("{total}", hours(8834)), { size: 26, color: C.muted })}
 
-    ${text(560, 222, "Stunden je Person", { size: 30, weight: 600, color: C.muted })}
+    ${text(560, 222, L.teamLead.perPerson, { size: 30, weight: 600, color: C.muted })}
     ${bars}
   `,
     PW,
@@ -411,16 +414,25 @@ function personaTeamLead() {
   )
 }
 
-const out = [
-  ["public/media/img_step_1.webp", step1()],
-  ["public/media/img_step_2.webp", step2()],
-  ["public/media/img_step_3.webp", step3()],
-  ["public/media/img_multi_company.webp", multiCompany()],
-  ["public/media/img_persona_geschaeftsfuehrung.webp", personaOwner()],
-  ["public/media/img_persona_treuhand.webp", personaTrustee()],
-  ["public/media/img_persona_teamleitung.webp", personaTeamLead()],
-]
-for (const [file, markup] of out) {
-  await sharp(Buffer.from(markup)).webp({ quality: 90 }).toFile(file)
-  console.log("written", file)
+const images = {
+  "img_step_1.webp": step1,
+  "img_step_2.webp": step2,
+  "img_step_3.webp": step3,
+  "img_multi_company.webp": multiCompany,
+  "img_persona_management.webp": personaOwner,
+  "img_persona_trustee.webp": personaTrustee,
+  "img_persona_team_lead.webp": personaTeamLead,
+}
+
+for (const lang of locales) {
+  const dict = getDictionary(lang)
+  L = dict.illustrations
+  D = dict.demo
+  F = createFormatter(dict.format)
+  const dir = `public/media/${lang}`
+  mkdirSync(dir, { recursive: true })
+  for (const [file, render] of Object.entries(images)) {
+    await sharp(Buffer.from(render())).webp({ quality: 90 }).toFile(`${dir}/${file}`)
+    console.log("written", `${dir}/${file}`)
+  }
 }

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Highlight } from "@/components/ds/layout"
+import { Highlight } from "@/components/ui/layout"
 
 const MARK = /\*([^*]+)\*/g
 

@@ -26,7 +26,7 @@ export function Logo({ href, label, productName, tone = "dark", priority, classN
         priority={priority}
         className={cn("size-8 rounded-[0.55rem]", tone === "light" && "ring-1 ring-white/40")}
       />
-      <span className={cn("text-[1.08rem] font-bold tracking-tight", tone === "light" ? "text-white" : "text-ink")}>
+      <span className={cn("text-[1.08rem] font-semibold tracking-tight", tone === "light" ? "text-white" : "text-ink")}>
         {productName}
       </span>
     </Link>

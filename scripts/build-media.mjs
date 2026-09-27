@@ -1,9 +1,10 @@
-// Renders the site illustrations (4:3, 1200×900) from SVG mockups in the style
-// of the demo dashboards: the three steps (IMG_STEP_1..3), the trustee
-// workspace switcher (IMG_MULTI_COMPANY) and the audience personas
-// (IMG_PERSONA_*, 3:2, 1200×800) – once per language, into public/media/<lang>/.
-// Texts come from lib/dictionary.ts (`illustrations`), numbers from lib/format.ts.
-// Run: `npm run media:illustrations` – replace the WebP files with real screenshots any time.
+// Generates the localized images of the site, once per language:
+// - illustrations in the style of the demo dashboards → public/media/<lang>/
+//   (steps IMG_STEP_1..3, trustee workspaces IMG_MULTI_COMPANY, personas IMG_PERSONA_*)
+// - Open Graph / social preview image (1200×630) → public/og/<lang>.png
+// Texts come from lib/dictionary.ts, numbers from lib/format.ts.
+// Run after changing those texts: `npm run media`. Any file can be replaced by a
+// real screenshot or design of the same name.
 import sharp from "sharp"
 import { mkdirSync, readFileSync } from "node:fs"
 import { getDictionary, locales } from "../lib/dictionary.ts"
@@ -424,6 +425,62 @@ const images = {
   "img_persona_team_lead.webp": personaTeamLead,
 }
 
+/* ── Open Graph image (1200×630) ─────────────────────────────────────── */
+
+/**
+ * Wraps the headline into lines of at most `max` characters. A word is a list of
+ * segments, so punctuation right after a *highlight* stays attached ("minutes,").
+ */
+function wrapHeadline(title, max) {
+  const words = []
+  let glue = false
+  for (const part of title.split(/(\*[^*]+\*)/)) {
+    if (!part) continue
+    const hl = part.startsWith("*")
+    const text = part.replace(/\*/g, "")
+    text.split(" ").forEach((w, i) => {
+      if (!w) return
+      if (i === 0 && glue && !/^\s/.test(text)) words.at(-1).push({ w, hl })
+      else words.push([{ w, hl }])
+    })
+    glue = !/\s$/.test(text)
+  }
+  const width = (word) => word.reduce((n, seg) => n + seg.w.length, 0)
+  const lines = [[]]
+  for (const word of words) {
+    const line = lines.at(-1)
+    const len = line.reduce((n, x) => n + width(x) + 1, 0)
+    if (line.length && len + width(word) > max) lines.push([word])
+    else line.push(word)
+  }
+  return lines
+}
+
+function ogImage(dict) {
+  const OW = 1200
+  const OH = 630
+  const lines = wrapHeadline(dict.home.hero.title, 26)
+  const size = lines.length > 3 ? 58 : 66
+  const top = 300 - ((lines.length - 1) * size * 1.12) / 2
+  const headline = lines
+    .map(
+      (line, i) =>
+        `<text x="80" y="${top + i * size * 1.12}" font-family="Georgia, 'Times New Roman', serif" font-size="${size}" fill="#ffffff" xml:space="preserve">${line
+          .map((word) => word.map((x) => `<tspan fill="${x.hl ? "#8fb4e6" : "#ffffff"}">${esc(x.w)}</tspan>`).join(""))
+          .join(" ")}</text>`,
+    )
+    .join("")
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${OW}" height="${OH}" viewBox="0 0 ${OW} ${OH}">
+    <defs><radialGradient id="glow" cx="0.85" cy="0.1" r="0.7"><stop offset="0" stop-color="#21569c" stop-opacity="0.55"/><stop offset="1" stop-color="#0b162d" stop-opacity="0"/></radialGradient></defs>
+    <rect width="${OW}" height="${OH}" fill="#0b162d"/>
+    <rect width="${OW}" height="${OH}" fill="url(#glow)"/>
+    <image href="${icon}" x="80" y="70" width="72" height="72"/>
+    ${text(172, 119, "smiit Analytics", { size: 36, weight: 700, color: "#ffffff" })}
+    ${headline}
+    ${text(80, 560, dict.meta.appCategory, { size: 28, color: "#b8c3d9" })}
+  </svg>`
+}
+
 for (const lang of locales) {
   const dict = getDictionary(lang)
   L = dict.illustrations
@@ -435,4 +492,7 @@ for (const lang of locales) {
     await sharp(Buffer.from(render())).webp({ quality: 90 }).toFile(`${dir}/${file}`)
     console.log("written", `${dir}/${file}`)
   }
+  mkdirSync("public/og", { recursive: true })
+  await sharp(Buffer.from(ogImage(dict))).png().toFile(`public/og/${lang}.png`)
+  console.log("written", `public/og/${lang}.png`)
 }

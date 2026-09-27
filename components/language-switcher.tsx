@@ -4,7 +4,7 @@ import * as React from "react"
 import { usePathname } from "next/navigation"
 import { Check, ChevronDown, Globe } from "lucide-react"
 import type { Dictionary } from "@/lib/dictionary"
-import { HTML_LANG, locales, type Locale } from "@/lib/i18n"
+import { HTML_LANG, LANGUAGE_STORAGE_KEY, locales, type Locale } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 type Props = {
@@ -24,9 +24,14 @@ function pathFor(pathname: string, target: Locale, homeOnly?: boolean) {
   return `/${target}/${rest}`
 }
 
-/** Keeps the section anchor when switching language on a long page. */
-const keepHash = (e: React.MouseEvent<HTMLAnchorElement>) => {
+/** Keeps the section anchor and remembers the choice for the next visit of "/". */
+const onPick = (code: Locale) => (e: React.MouseEvent<HTMLAnchorElement>) => {
   if (window.location.hash) e.currentTarget.hash = window.location.hash
+  try {
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, code)
+  } catch {
+    /* storage blocked – the browser language is used instead */
+  }
 }
 
 /**
@@ -77,7 +82,7 @@ export function LanguageSwitcher({ lang, t, variant = "menu", homeOnly, classNam
                 hrefLang={l.code}
                 lang={HTML_LANG[l.code]}
                 aria-current={l.current ? "true" : undefined}
-                onClick={keepHash}
+                onClick={onPick(l.code)}
                 data-track={`language_${l.code}`}
                 className={cn(
                   "inline-flex min-h-11 items-center rounded-control px-3 text-sm font-medium",
@@ -128,7 +133,7 @@ export function LanguageSwitcher({ lang, t, variant = "menu", homeOnly, classNam
               hrefLang={l.code}
               lang={HTML_LANG[l.code]}
               aria-current={l.current ? "true" : undefined}
-              onClick={keepHash}
+              onClick={onPick(l.code)}
               data-track={`language_${l.code}`}
               className={cn(
                 "flex items-center justify-between gap-3 rounded-[0.6rem] px-3 py-2 text-sm",

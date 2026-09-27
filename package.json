@@ -2,14 +2,13 @@
   "name": "smiit-analytics-website",
   "version": "0.1.0",
   "private": true,
-  "description": "Produkt-Website für smiit Analytics – Auswertungen für bexio, ein Produkt der smiit GmbH.",
+  "description": "Product website of smiit Analytics – reporting for bexio, a product of smiit GmbH.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "brand": "node scripts/build-brand-assets.mjs",
-    "media:illustrations": "node scripts/build-illustrations.mjs"
+    "media": "node scripts/build-media.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "1.2.2",

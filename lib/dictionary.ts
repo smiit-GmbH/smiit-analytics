@@ -22,7 +22,7 @@ const de = {
   meta: {
     title: "smiit Analytics – Ihre bexio-Daten in 5 Minuten verständlich",
     description:
-      "bexio in rund 5 Minuten verbinden und sofort Berichte zu Verkauf, Bilanz und Cashflow sehen. Per Drag & Drop anpassen, mit KI fragen. 30 Tage kostenlos testen.",
+      "bexio in 5 Minuten verbinden und sofort Berichte zu Verkauf, Bilanz und Cashflow sehen. Per Drag & Drop anpassen, KI fragen. 30 Tage gratis testen.",
     ogImageAlt: "smiit Analytics – Auswertungen für bexio",
     appCategory: "Business-Analytics für bexio",
     home: "Startseite",
@@ -588,12 +588,25 @@ const de = {
 
   legal: {
     back: "Zurück zur Startseite",
-    /** `nav` = short label in the footer. `title` may contain ­ (soft hyphen) for long words. */
+    /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
+      /** Company facts (address, register, VAT ID …) are in lib/site.ts (COMPANY). */
       nav: "Impressum",
       title: "Impressum",
-      description: "Impressum von smiit Analytics, einem Produkt der smiit GmbH.",
-      body: "[IMPRESSUM_TEXT]",
+      description: "Impressum von smiit Analytics, einem Produkt der smiit GmbH: Anschrift, Geschäftsführung, Handelsregister und Kontakt.",
+      subtitle: "Angaben gemäss § 5 DDG",
+      contact: "Kontakt",
+      phone: "Telefon",
+      email: "E-Mail",
+      representedBy: "Vertreten durch",
+      managingDirectors: "Geschäftsführer",
+      register: "Handelsregister",
+      registerCourt: "Amtsgericht Ulm",
+      vatId: "Umsatzsteuer-ID",
+      responsible: "Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)",
+      dispute: "Streitschlichtung",
+      disputeText: "Wir sind nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen und nehmen daran nicht teil.",
+      country: "Deutschland",
     },
     privacy: {
       nav: "Datenschutz",
@@ -621,6 +634,14 @@ const de = {
     text: "Die von Ihnen gesuchte Seite existiert leider nicht.",
     cta: "Zur Startseite",
     imageAlt: "Zwei Personen sitzen auf Würfeln und arbeiten am Laptop",
+  },
+
+  error: {
+    /** Shown when a page fails to render (app/[lang]/error.tsx). */
+    title: "Etwas ist schiefgelaufen",
+    text: "Beim Laden dieser Seite ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+    retry: "Erneut versuchen",
+    home: "Zur Startseite",
   },
 
   consent: {
@@ -722,7 +743,7 @@ const en: Dictionary = {
   meta: {
     title: "smiit Analytics – Make sense of your bexio data in 5 minutes",
     description:
-      "Connect bexio in around 5 minutes and instantly see reports on sales, balance sheet and cash flow. Customise with drag and drop, ask the AI. Try it free for 30 days.",
+      "Connect bexio in 5 minutes and instantly see reports on sales, balance sheet and cash flow. Customise by drag and drop, ask the AI. Free 30-day trial.",
     ogImageAlt: "smiit Analytics – Reporting for bexio",
     appCategory: "Business analytics for bexio",
     home: "Home",
@@ -1286,12 +1307,24 @@ const en: Dictionary = {
 
   legal: {
     back: "Back to home page",
-    /** `nav` = short label in the footer. `title` may contain ­ (soft hyphen) for long words. */
+    /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
       nav: "Legal notice",
       title: "Legal notice",
-      description: "Legal notice of smiit Analytics, a product of smiit GmbH.",
-      body: "[IMPRESSUM_TEXT]",
+      description: "Legal notice of smiit Analytics, a product of smiit GmbH: address, management, commercial register and contact.",
+      subtitle: "Information pursuant to Section 5 of the German Digital Services Act (DDG)",
+      contact: "Contact",
+      phone: "Phone",
+      email: "Email",
+      representedBy: "Represented by",
+      managingDirectors: "Managing directors",
+      register: "Commercial register",
+      registerCourt: "Local Court (Amtsgericht) Ulm",
+      vatId: "VAT ID",
+      responsible: "Responsible for content (Section 18(2) MStV)",
+      dispute: "Dispute resolution",
+      disputeText: "We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board and do not participate in them.",
+      country: "Germany",
     },
     privacy: {
       nav: "Privacy",
@@ -1318,6 +1351,13 @@ const en: Dictionary = {
     text: "Sorry, the page you are looking for does not exist.",
     cta: "Go to home page",
     imageAlt: "Two people sitting on cubes and working on a laptop",
+  },
+
+  error: {
+    title: "Something went wrong",
+    text: "An error occurred while loading this page. Please try again.",
+    retry: "Try again",
+    home: "Go to homepage",
   },
 
   consent: {
@@ -1417,7 +1457,7 @@ const fr: Dictionary = {
   meta: {
     title: "smiit Analytics – Vos données bexio, claires en 5 minutes",
     description:
-      "Connectez bexio en 5 minutes environ et consultez aussitôt des rapports sur les ventes, le bilan et le cash-flow. Personnalisez par glisser-déposer, interrogez l'IA. Essai gratuit de 30 jours.",
+      "Connectez bexio en 5 minutes et voyez aussitôt vos rapports de ventes, bilan et cash-flow. Personnalisez-les, interrogez l'IA. Essai gratuit de 30 jours.",
     ogImageAlt: "smiit Analytics – analyses pour bexio",
     appCategory: "Business analytics pour bexio",
     home: "Accueil",
@@ -1973,8 +2013,20 @@ const fr: Dictionary = {
     legalNotice: {
       nav: "Mentions légales",
       title: "Mentions légales",
-      description: "Mentions légales de smiit Analytics, un produit de smiit GmbH.",
-      body: "[IMPRESSUM_TEXT]",
+      description: "Mentions légales de smiit Analytics, un produit de smiit GmbH\u00A0: adresse, direction, registre du commerce et contact.",
+      subtitle: "Informations selon le § 5 de la loi allemande sur les services numériques (DDG)",
+      contact: "Contact",
+      phone: "Téléphone",
+      email: "E-mail",
+      representedBy: "Représentée par",
+      managingDirectors: "Gérants",
+      register: "Registre du commerce",
+      registerCourt: "Tribunal d'instance (Amtsgericht) d'Ulm",
+      vatId: "Numéro de TVA",
+      responsible: "Responsable du contenu (§ 18, al. 2 MStV)",
+      dispute: "Règlement des litiges",
+      disputeText: "Nous ne sommes pas tenus de participer à une procédure de règlement des litiges devant un organe de conciliation pour les consommateurs et n'y participons pas.",
+      country: "Allemagne",
     },
     privacy: {
       nav: "Protection des données",
@@ -2001,6 +2053,13 @@ const fr: Dictionary = {
     text: "La page que vous recherchez n'existe malheureusement pas.",
     cta: "Vers l'accueil",
     imageAlt: "Deux personnes assises sur des cubes travaillent sur un ordinateur portable",
+  },
+
+  error: {
+    title: "Une erreur s'est produite",
+    text: "Une erreur est survenue lors du chargement de cette page. Veuillez réessayer.",
+    retry: "Réessayer",
+    home: "Retour à l'accueil",
   },
 
   consent: {
@@ -2092,7 +2151,7 @@ const it: Dictionary = {
   meta: {
     title: "smiit Analytics – Capire i Suoi dati bexio in 5 minuti",
     description:
-      "Colleghi bexio in circa 5 minuti e veda subito report su vendite, bilancio e flusso di cassa. Li adatti con il drag & drop, faccia domande all'IA. Prova gratuita di 30 giorni.",
+      "Colleghi bexio in 5 minuti e veda subito report su vendite, bilancio e flusso di cassa. Li personalizzi e chieda all'IA. Prova gratuita di 30 giorni.",
     ogImageAlt: "smiit Analytics – Analisi per bexio",
     appCategory: "Business analytics per bexio",
     home: "Pagina iniziale",
@@ -2646,10 +2705,22 @@ const it: Dictionary = {
   legal: {
     back: "Torna alla pagina iniziale",
     legalNotice: {
-      nav: "Colophon",
-      title: "Colophon",
-      description: "Colophon di smiit Analytics, un prodotto di smiit GmbH.",
-      body: "[IMPRESSUM_TEXT]",
+      nav: "Note legali",
+      title: "Note legali",
+      description: "Note legali di smiit Analytics, un prodotto di smiit GmbH: indirizzo, direzione, registro di commercio e contatti.",
+      subtitle: "Informazioni ai sensi del § 5 della legge tedesca sui servizi digitali (DDG)",
+      contact: "Contatto",
+      phone: "Telefono",
+      email: "E-mail",
+      representedBy: "Rappresentata da",
+      managingDirectors: "Amministratori",
+      register: "Registro di commercio",
+      registerCourt: "Tribunale locale (Amtsgericht) di Ulma",
+      vatId: "Partita IVA",
+      responsible: "Responsabile dei contenuti (§ 18 cpv. 2 MStV)",
+      dispute: "Risoluzione delle controversie",
+      disputeText: "Non siamo tenuti a partecipare a procedure di risoluzione delle controversie dinanzi a un organo di conciliazione per i consumatori e non vi partecipiamo.",
+      country: "Germania",
     },
     privacy: {
       nav: "Protezione dei dati",
@@ -2676,6 +2747,13 @@ const it: Dictionary = {
     text: "Purtroppo la pagina che cerca non esiste.",
     cta: "Alla pagina iniziale",
     imageAlt: "Due persone sedute su dei cubi lavorano al laptop",
+  },
+
+  error: {
+    title: "Qualcosa è andato storto",
+    text: "Si è verificato un errore durante il caricamento di questa pagina. La preghiamo di riprovare.",
+    retry: "Riprova",
+    home: "Torna alla pagina iniziale",
   },
 
   consent: {

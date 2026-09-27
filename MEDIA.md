@@ -45,13 +45,13 @@ Alle Einträge dieser Tabelle sind **sprachabhängig** (`public/media/<lang>/<da
 
 | ID | Datei | Format | Abschnitt | Inhalt |
 |---|---|---|---|---|
-| `IMG_STEP_1` | `img_step_1.webp` | 4:3, 1200×900 | «So einfach geht's» – Schritt 1 | Dialog «Datenquelle verbinden» mit bexio-Eintrag, nachgebaut nach einem Screenshot aus dem Tool (ohne Entwickler-Option «mit PAT verbinden»). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_STEP_2` | `img_step_2.webp` | 4:3, 1200×900 | Schritt 2 | Vier Berichtspakete (Standard, Sales, Finanzen, Management) mit Mini-Diagramm und «Bereit»-Status. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_STEP_3` | `img_step_3.webp` | 4:3, 1200×900 | Schritt 3 | Bericht im Bearbeitungsmodus (Drag & Drop oder KI-Eingabe sichtbar). **Vorhanden:** generierte Illustration (`npm run media:illustrations`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_MULTI_COMPANY` | `img_multi_company.webp` | 4:3, 1200×900 | Versprechen 2 – Box für Treuhandbüros | Treuhandbüro mit einem Login: Workspace-Umschalter mit allen Mandanten (fiktive Namen), daneben der Bericht des gewählten Mandanten. **Vorhanden:** generierte Illustration (`npm run media:illustrations`), angelehnt an den Workspace-Umschalter im Tool; kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
-| `IMG_PERSONA_MANAGEMENT` | `img_persona_management.webp` | 3:2, 1200×800 | «Für wen?» | Geschäftsführung: Smartphone mit Kennzahlen + automatische Hinweise. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
-| `IMG_PERSONA_TRUSTEE` | `img_persona_trustee.webp` | 3:2, 1200×800 | «Für wen?» | Treuhand: aufgefächerte Berichte mehrerer Mandanten mit «Exportieren». **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
-| `IMG_PERSONA_TEAM_LEAD` | `img_persona_team_lead.webp` | 3:2, 1200×800 | «Für wen?» | Teamleitung: Bereichsansicht mit Auslastung und Stunden je Person. **Vorhanden:** generierte Illustration (`npm run media:illustrations`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_1` | `img_step_1.webp` | 4:3, 1200×900 | «So einfach geht's» – Schritt 1 | Dialog «Datenquelle verbinden» mit bexio-Eintrag, nachgebaut nach einem Screenshot aus dem Tool (ohne Entwickler-Option «mit PAT verbinden»). **Vorhanden:** generierte Illustration (`npm run media`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_2` | `img_step_2.webp` | 4:3, 1200×900 | Schritt 2 | Vier Berichtspakete (Standard, Sales, Finanzen, Management) mit Mini-Diagramm und «Bereit»-Status. **Vorhanden:** generierte Illustration (`npm run media`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_STEP_3` | `img_step_3.webp` | 4:3, 1200×900 | Schritt 3 | Bericht im Bearbeitungsmodus (Drag & Drop oder KI-Eingabe sichtbar). **Vorhanden:** generierte Illustration (`npm run media`), kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_MULTI_COMPANY` | `img_multi_company.webp` | 4:3, 1200×900 | Versprechen 2 – Box für Treuhandbüros | Treuhandbüro mit einem Login: Workspace-Umschalter mit allen Mandanten (fiktive Namen), daneben der Bericht des gewählten Mandanten. **Vorhanden:** generierte Illustration (`npm run media`), angelehnt an den Workspace-Umschalter im Tool; kann je Sprache durch einen echten Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_MANAGEMENT` | `img_persona_management.webp` | 3:2, 1200×800 | «Für wen?» | Geschäftsführung: Smartphone mit Kennzahlen + automatische Hinweise. **Vorhanden:** generierte Illustration (`npm run media`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_TRUSTEE` | `img_persona_trustee.webp` | 3:2, 1200×800 | «Für wen?» | Treuhand: aufgefächerte Berichte mehrerer Mandanten mit «Exportieren». **Vorhanden:** generierte Illustration (`npm run media`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
+| `IMG_PERSONA_TEAM_LEAD` | `img_persona_team_lead.webp` | 3:2, 1200×800 | «Für wen?» | Teamleitung: Bereichsansicht mit Auslastung und Stunden je Person. **Vorhanden:** generierte Illustration (`npm run media`); kann je Sprache durch ein Foto oder einen Screenshot gleichen Namens ersetzt werden. |
 
 ## Kundenlogos
 
@@ -69,11 +69,11 @@ Foto zum Testimonial: Datei (1:1, 200×200, WebP) nach `public/media/` legen und
 
 | ID | Datei | Format | Inhalt |
 |---|---|---|---|
-| `OG_IMAGE` | `public/og/og-image.png` | 1200×630, PNG oder JPG | Vorschaubild für LinkedIn, WhatsApp, Slack usw. Aktuell ein generierter Navy-Platzhalter mit Headline. Datei gleichen Namens ersetzen, fertig. |
+| `OG_IMAGE` | `public/og/de.png`, `en.png`, `fr.png`, `it.png` | 1200×630, PNG | Vorschaubild für LinkedIn, WhatsApp, Slack usw. je Sprache, generiert mit `npm run media` (Icon, Slogan, Kategorie). Durch ein finales Design gleichen Namens ersetzen. |
 
 ## Marke (bereits vorhanden)
 
-Die smiit-Logos liegen in `public/brand/`: `logo_black.webp`, `logo_white.webp` (Originale von smiit.de) sowie zugeschnittene Varianten `*_trim.webp` (`npm run brand`).
+Das smiit-Logo `public/brand/logo_black.webp` (Original von smiit.de) wird in den strukturierten Daten (Organization) verwendet.
 
 Das **smiit-Analytics-Icon** ist die Originaldatei, unverändert übernommen:
 

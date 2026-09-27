@@ -5,13 +5,14 @@ import "../globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Analytics } from "@/components/analytics"
+import { LocaleProvider } from "@/components/locale-provider"
 import { JsonLd } from "@/components/seo/json-ld"
 import { fontVariables } from "@/lib/fonts"
 import { getDictionary } from "@/lib/dictionary"
 import { pickFooterDict, pickHeaderDict } from "@/lib/dictionary-slices"
 import { HTML_LANG, isLocale, locales } from "@/lib/i18n"
 import { routePath } from "@/lib/routes"
-import { buildOrganizationJsonLd, buildPageMetadata } from "@/lib/seo"
+import { buildOrganizationJsonLd, buildPageMetadata, buildWebSiteJsonLd } from "@/lib/seo"
 import { SITE, SITE_URL } from "@/lib/site"
 
 type LayoutProps = {
@@ -59,11 +60,12 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         </a>
         <Header lang={lang} dict={pickHeaderDict(dict)} />
         <main id="main" tabIndex={-1} className="outline-none">
-          {children}
+          <LocaleProvider value={{ lang, error: dict.error }}>{children}</LocaleProvider>
         </main>
         <Footer lang={lang} dict={pickFooterDict(dict)} />
         <Analytics t={dict.consent} privacyHref={routePath(lang, "privacy")} />
         <JsonLd data={buildOrganizationJsonLd()} />
+        <JsonLd data={buildWebSiteJsonLd(lang)} />
       </body>
     </html>
   )

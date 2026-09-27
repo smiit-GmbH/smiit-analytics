@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { getDictionary } from "@/lib/dictionary"
-import { defaultLocale, locales } from "@/lib/i18n"
+import { LANGUAGE_STORAGE_KEY, defaultLocale, locales } from "@/lib/i18n"
 import { routePath } from "@/lib/routes"
 import { alternates } from "@/lib/seo"
 import { SITE_URL } from "@/lib/site"
@@ -11,16 +11,17 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: meta.title,
   description: meta.description,
-  alternates: alternates(defaultLocale, "home"),
+  alternates: { languages: alternates(defaultLocale, "home")?.languages },
   robots: { index: false, follow: true },
 }
 
 /*
  * "/" has no content of its own (static export, no server-side redirect).
- * The script picks the first supported browser language, otherwise the
- * default; without JavaScript the meta refresh goes to the default.
+ * The script uses the language the visitor last picked in the language
+ * switcher, else the first supported browser language, else the default (de).
+ * Without JavaScript the meta refresh goes to the default.
  */
-const redirect = `(function(){var s=${JSON.stringify(locales)};var l=(navigator.languages||[navigator.language||""]).map(function(x){return String(x).slice(0,2).toLowerCase()}).filter(function(x){return s.indexOf(x)>-1})[0]||${JSON.stringify(defaultLocale)};location.replace("/"+l+"/"+location.hash)})()`
+const redirect = `(function(){var s=${JSON.stringify(locales)};var p;try{p=localStorage.getItem(${JSON.stringify(LANGUAGE_STORAGE_KEY)})}catch(e){}var c=[p].concat(navigator.languages||[navigator.language||""]).map(function(x){return String(x||"").slice(0,2).toLowerCase()});var l=c.filter(function(x){return s.indexOf(x)>-1})[0]||${JSON.stringify(defaultLocale)};location.replace("/"+l+"/"+location.search+location.hash)})()`
 
 export default function RootRedirect() {
   return (

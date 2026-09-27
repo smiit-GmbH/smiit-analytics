@@ -11,12 +11,11 @@ export const ROUTES = {
   privacy: "privacy",
   terms: "terms",
   dpa: "dpa",
-  styleguide: "styleguide",
 } as const
 
 export type Route = keyof typeof ROUTES
 
-/** Public pages for the sitemap (styleguide is internal and not indexed). */
+/** Pages in the sitemap. */
 export const PUBLIC_ROUTES: { route: Route; priority: number; changeFrequency: "monthly" | "yearly" }[] = [
   { route: "home", priority: 1, changeFrequency: "monthly" },
   { route: "legalNotice", priority: 0.2, changeFrequency: "yearly" },

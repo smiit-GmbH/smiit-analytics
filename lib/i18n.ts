@@ -12,6 +12,9 @@ export function localeFromPath(pathname: string | null | undefined): Locale {
   return isLocale(segment) ? segment : defaultLocale
 }
 
+/** localStorage key of the language picked in the switcher – preferred by the "/" redirect. */
+export const LANGUAGE_STORAGE_KEY = "smiit-analytics-lang"
+
 /** `<html lang>` – Swiss variants where the site follows Swiss conventions. */
 export const HTML_LANG: Record<Locale, string> = {
   de: "de-CH",

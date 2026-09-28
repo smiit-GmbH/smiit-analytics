@@ -29,6 +29,8 @@ import {
   useToday,
   useWidth,
   useDemo,
+  leaveUnlessTouch,
+  useTouchDismiss,
 } from "./dashboard-kit"
 
 /*
@@ -69,6 +71,7 @@ function FlowChart({ height }: { height: number }) {
   const months = monthLabels(useToday(), f)
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const H = height
   const n = months.length
   const m = { l: 52, r: 14, t: 6, b: 20 }
@@ -99,7 +102,8 @@ function FlowChart({ height }: { height: number }) {
           aria-label={`${T.flows.title}. ${t.keyboardHint}.`}
           className={cn(svgFocus, "touch-pan-y")}
           onPointerMove={onMove}
-          onPointerLeave={() => setActive(null)}
+          onPointerDown={onMove}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {allTicks.map((t) => (
@@ -150,6 +154,7 @@ function Waterfall({ height }: { height: number }) {
   const months = monthLabels(useToday(), f)
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const H = height
   // Running total per month, then a final "Gesamt" bar from zero.
   const steps = D.net.reduce<{ from: number; to: number }[]>((acc, v) => {
@@ -183,7 +188,7 @@ function Waterfall({ height }: { height: number }) {
           role="img"
           aria-label={`${T.waterfall.title}. ${t.keyboardHint}.`}
           className={svgFocus}
-          onPointerLeave={() => setActive(null)}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {ticks.map((t) => (
@@ -244,6 +249,7 @@ function BankBars({ height }: { height: number }) {
   const T = t.cashflow
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const items = D.banks.map((b) => ({ ...b, name: t.banks[b.key] }))
   const H = height
   const n = items.length
@@ -270,7 +276,7 @@ function BankBars({ height }: { height: number }) {
           role="img"
           aria-label={`${T.banks.title}. ${t.keyboardHint}.`}
           className={svgFocus}
-          onPointerLeave={() => setActive(null)}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {ticks.map((t) => (

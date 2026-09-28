@@ -1,9 +1,12 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-/** Centered page-width wrapper with the standard 20px / 32px gutters. */
+/**
+ * Centered page-width wrapper. Gutters grow with the device (16 → 40px);
+ * the content width grows from 1280px to 1472px on wide screens (≥ 1800px).
+ */
 export function Container({ className, ...props }: React.ComponentProps<"div">) {
-  return <div className={cn("mx-auto w-full max-w-page px-5 md:px-8", className)} {...props} />
+  return <div className={cn("mx-auto w-full max-w-page px-4 sm:px-6 lg:px-8 xl:px-10 3xl:max-w-page-wide", className)} {...props} />
 }
 
 type Tone = "cream" | "white" | "sand" | "navy"
@@ -45,7 +48,7 @@ export function Section({
   const headingId = id ? `${id}-title` : undefined
   const dark = tone === "navy"
   const header = (eyebrow || title || intro) && (
-    <header className={cn("mb-10 md:mb-14 max-w-3xl", align === "center" && "mx-auto text-center")}>
+    <header className={cn("mb-9 md:mb-12 max-w-3xl", align === "center" && "mx-auto text-center")}>
       {eyebrow && (
         <p
           className={cn(
@@ -59,13 +62,13 @@ export function Section({
       {title && (
         <h2
           id={headingId}
-          className="font-serif text-[2.1rem] leading-[1.08] tracking-tight text-balance sm:text-[2.6rem] md:text-[3.1rem]"
+          className="font-serif text-heading tracking-tight text-balance"
         >
           {title}
         </h2>
       )}
       {intro && (
-        <p className={cn("mt-5 text-base leading-relaxed md:text-lg", dark ? "text-white/75" : "text-ink-muted")}>
+        <p className={cn("mt-4 text-lead", dark ? "text-white/75" : "text-ink-muted")}>
           {intro}
         </p>
       )}

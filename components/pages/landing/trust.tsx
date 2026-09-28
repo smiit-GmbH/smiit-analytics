@@ -1,5 +1,6 @@
 import { Container, Media } from "@/components/ui"
 import { Stars } from "@/components/stars"
+import { cn } from "@/lib/utils"
 import { marketplaceReviews } from "@/lib/links"
 import type { SectionProps } from "./types"
 
@@ -28,9 +29,10 @@ export function Trust({ lang, dict }: SectionProps) {
             </span>
           </a>
         </div>
-        <ul className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 md:gap-6">
-          {LOGOS.map((id) => (
-            <li key={id} className="overflow-hidden rounded-tile grayscale transition hover:grayscale-0">
+        {/* Phones and small tablets: 4 logos (2×2 / 4 in a row), all 5 from 768px – always symmetric. */}
+        <ul className="mt-7 grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-5 md:gap-6">
+          {LOGOS.map((id, i) => (
+            <li key={id} className={cn("overflow-hidden rounded-tile grayscale transition hover:grayscale-0", i === 4 && "max-md:hidden")}>
               <Media lang={lang} id={id} alt={dict.media[id]} fit="contain" sizes="200px" />
             </li>
           ))}

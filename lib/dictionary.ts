@@ -56,6 +56,24 @@ const de = {
 
   nav: {
     label: "Hauptnavigation",
+    /** Chapter progress rail on the home page (desktop). */
+    chapters: {
+      /** Very short names, shown next to the rail (keys: SECTIONS in lib/routes.ts). */
+      label: "Kapitel",
+      items: {
+        problem: "Problem",
+        howItWorks: "So geht's",
+        features: "Berichte",
+        customize: "Gestalten",
+        ai: "KI",
+        automations: "Automatik",
+        audiences: "Für wen",
+        testimonials: "Kunden",
+        pricing: "Preise",
+        security: "Sicherheit",
+        faq: "FAQ",
+      },
+    },
     /** Keyed by section id on the home page; order and anchors: lib/routes.ts. */
     items: {
       features: "Funktionen",
@@ -94,9 +112,9 @@ const de = {
       title: "Die Zahlen sind da. *Der Überblick fehlt.*",
       pains: [
         {
-          icon: "sheet",
-          title: "Manuelle Excel-Exporte",
-          text: "Daten aus bexio exportieren, in Excel kopieren, Formeln prüfen. Jeden Monat von vorn.",
+          icon: "code",
+          title: "Fehlende Automatisierungen",
+          text: "Erinnerungen, Berichte und Auswertungen laufen von Hand – oder müssen mit teurem Programmieraufwand eigens entwickelt werden.",
         },
         {
           icon: "clock",
@@ -345,12 +363,15 @@ const de = {
     faq: {
       eyebrow: "FAQ",
       title: "Häufige *Fragen*",
-      /** Keyed by id; the anchor is `faq-<id>` (e.g. /de/#faq-mcp). Rendered in this order. */
+      /**
+       * Keyed by id; the anchor is `faq-<id>` (e.g. /de/#faq-mcp). Rendered in this order.
+       * `[[privacy|label]]` / `[[terms|label]]` in an answer becomes a link to that page.
+       */
       items: {
         setup: {
           question: "Wie lange dauert die Einrichtung?",
           answer:
-            "Rund 5 Minuten. Sie erstellen ein Konto, verbinden bexio und sehen danach sofort Ihre Standardberichte.",
+            "Das hängt von der Datenmenge in Ihrem bexio ab. Meist sind es rund 5 Minuten: Sie erstellen ein Konto, verbinden bexio und sehen danach Ihre Standardberichte. Bei grösseren Firmen mit vielen Buchungen kann der erste Datenabgleich auch länger dauern.",
         },
         skills: {
           question: "Brauche ich IT-Kenntnisse?",
@@ -359,7 +380,8 @@ const de = {
         },
         trial: {
           question: "Was passiert nach den 30 Tagen Test?",
-          answer: "Sie entscheiden, ob Sie ein Paket wählen. [TESTENDE_ABLAUF]",
+          answer:
+            "Nach 30 Tagen endet der Test einfach – ein Abo entsteht dabei nicht, und es wird nichts automatisch abgerechnet. Möchten Sie smiit Analytics weiter nutzen, wählen Sie aktiv ein Paket. Ohne Paket endet der Zugriff. Keine automatische Verlängerung, keine versteckten Haken.",
         },
         mcp: {
           question: "Was ist MCP?",
@@ -369,11 +391,12 @@ const de = {
         data: {
           question: "Wer sieht meine Daten?",
           answer:
-            "Sie bestimmen, wer in Ihrer Organisation Zugriff erhält. [DATENZUGRIFF_DETAILS] Mehr dazu in der Datenschutzerklärung.",
+            "Nur Sie und die Personen, die Sie aktiv berechtigen. Auch wir bei smiit Analytics sehen Ihre Daten nicht. Einzige Ausnahme: Bei einer Support-Anfrage können wir einen zeitlich begrenzten Zugriff anfragen – und auch diesen müssen Sie aktiv bestätigen. Mehr dazu in der [[privacy|Datenschutzerklärung]].",
         },
         cancellation: {
           question: "Wie kann ich kündigen?",
-          answer: "[KUENDIGUNG_BEDINGUNGEN]",
+          answer:
+            "Sie können jederzeit zum Ende der bereits bezahlten Laufzeit kündigen. Beim Monatsabo gilt das für jeden Monatszeitraum: Haben Sie das Abo am 10. abgeschlossen, können Sie jeweils bis zum 9. kündigen. Beim Jahresabo gilt dasselbe, nur jährlich. Details finden Sie in den [[terms|Nutzungsbedingungen]].",
         },
         companies: {
           question: "Kann ich mehrere bexio-Firmen verbinden?",
@@ -587,7 +610,6 @@ const de = {
   },
 
   legal: {
-    back: "Zurück zur Startseite",
     /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
       /** Company facts (address, register, VAT ID …) are in lib/site.ts (COMPANY). */
@@ -775,6 +797,22 @@ const en: Dictionary = {
 
   nav: {
     label: "Main navigation",
+    chapters: {
+      label: "Chapters",
+      items: {
+        problem: "Problem",
+        howItWorks: "Steps",
+        features: "Reports",
+        customize: "Customise",
+        ai: "AI",
+        automations: "Automation",
+        audiences: "Audience",
+        testimonials: "Customers",
+        pricing: "Pricing",
+        security: "Security",
+        faq: "FAQ",
+      },
+    },
     /** Keyed by section id on the home page; order and anchors: lib/routes.ts. */
     items: {
       features: "Features",
@@ -813,9 +851,9 @@ const en: Dictionary = {
       title: "The numbers are there. *The overview is not.*",
       pains: [
         {
-          icon: "sheet",
-          title: "Manual Excel exports",
-          text: "Export data from bexio, copy it into Excel, check the formulas. Every month, all over again.",
+          icon: "code",
+          title: "Missing automations",
+          text: "Reminders, reports and analyses are done by hand – or have to be custom-built with costly development work.",
         },
         {
           icon: "clock",
@@ -1069,7 +1107,7 @@ const en: Dictionary = {
         setup: {
           question: "How long does setup take?",
           answer:
-            "Around 5 minutes. You create an account, connect bexio and then immediately see your standard reports.",
+            "It depends on the amount of data in your bexio account. It usually takes around 5 minutes: you create an account, connect bexio and then see your standard reports. For larger companies with many records, the first data sync can take longer.",
         },
         skills: {
           question: "Do I need IT skills?",
@@ -1078,7 +1116,8 @@ const en: Dictionary = {
         },
         trial: {
           question: "What happens after the 30-day trial?",
-          answer: "You decide whether to choose a plan. [TESTENDE_ABLAUF]",
+          answer:
+            "After 30 days the trial simply ends – it does not turn into a subscription and nothing is charged automatically. If you want to keep using smiit Analytics, you actively choose a plan. Without a plan, your access ends. No automatic renewal, no hidden catches.",
         },
         mcp: {
           question: "What is MCP?",
@@ -1088,11 +1127,12 @@ const en: Dictionary = {
         data: {
           question: "Who can see my data?",
           answer:
-            "You decide who in your organisation gets access. [DATENZUGRIFF_DETAILS] More on this in the privacy policy.",
+            "Only you and the people you actively authorise. Not even we at smiit Analytics can see your data. The only exception: for a support request we may ask for time-limited access – which you also have to actively approve. More in our [[privacy|privacy policy]].",
         },
         cancellation: {
           question: "How can I cancel?",
-          answer: "[KUENDIGUNG_BEDINGUNGEN]",
+          answer:
+            "You can cancel at any time, effective at the end of the period you have already paid for. With the monthly plan this applies to each monthly period: if you subscribed on the 10th, you can cancel up to the 9th. The yearly plan works the same way, just per year. Details in the [[terms|terms of use]].",
         },
         companies: {
           question: "Can I connect several bexio companies?",
@@ -1306,7 +1346,6 @@ const en: Dictionary = {
   },
 
   legal: {
-    back: "Back to home page",
     /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
       nav: "Legal notice",
@@ -1488,6 +1527,22 @@ const fr: Dictionary = {
 
   nav: {
     label: "Navigation principale",
+    chapters: {
+      label: "Chapitres",
+      items: {
+        problem: "Problème",
+        howItWorks: "Démarrage",
+        features: "Rapports",
+        customize: "Sur mesure",
+        ai: "IA",
+        automations: "Routines",
+        audiences: "Pour qui",
+        testimonials: "Clients",
+        pricing: "Prix",
+        security: "Sécurité",
+        faq: "FAQ",
+      },
+    },
     items: {
       features: "Fonctions",
       ai: "IA",
@@ -1525,9 +1580,9 @@ const fr: Dictionary = {
       title: "Les chiffres sont là. *La vue d'ensemble manque.*",
       pains: [
         {
-          icon: "sheet",
-          title: "Exports Excel manuels",
-          text: "Exporter les données de bexio, les copier dans Excel, vérifier les formules. Et tout recommencer chaque mois.",
+          icon: "code",
+          title: "Automatisations manquantes",
+          text: "Relances, rapports et analyses se font à la main – ou doivent être développés sur mesure, avec des coûts de programmation élevés.",
         },
         {
           icon: "clock",
@@ -1775,7 +1830,7 @@ const fr: Dictionary = {
         setup: {
           question: "Combien de temps prend la mise en place ?",
           answer:
-            "Environ 5 minutes. Vous créez un compte, connectez bexio et voyez aussitôt vos rapports standard.",
+            "Cela dépend du volume de données dans votre bexio. En général, comptez environ 5\u00A0minutes\u00A0: vous créez un compte, connectez bexio et voyez ensuite vos rapports standard. Pour les grandes entreprises avec de nombreuses écritures, la première synchronisation peut prendre plus de temps.",
         },
         skills: {
           question: "Ai-je besoin de connaissances informatiques ?",
@@ -1784,7 +1839,8 @@ const fr: Dictionary = {
         },
         trial: {
           question: "Que se passe-t-il après les 30 jours d'essai ?",
-          answer: "Vous décidez si vous choisissez un forfait. [TESTENDE_ABLAUF]",
+          answer:
+            "Après 30\u00A0jours, l'essai prend simplement fin – il ne se transforme pas en abonnement et rien n'est facturé automatiquement. Pour continuer à utiliser smiit Analytics, vous choisissez activement une formule. Sans formule, l'accès prend fin. Pas de renouvellement automatique, pas de piège caché.",
         },
         mcp: {
           question: "Qu'est-ce que MCP ?",
@@ -1794,11 +1850,12 @@ const fr: Dictionary = {
         data: {
           question: "Qui voit mes données ?",
           answer:
-            "Vous déterminez qui a accès au sein de votre organisation. [DATENZUGRIFF_DETAILS] Plus d'informations dans la déclaration de protection des données.",
+            "Uniquement vous et les personnes que vous autorisez activement. Même nous, chez smiit Analytics, ne voyons pas vos données. Seule exception\u00A0: lors d'une demande d'assistance, nous pouvons solliciter un accès limité dans le temps – que vous devez également accepter activement. Plus d'informations dans la [[privacy|déclaration de protection des données]].",
         },
         cancellation: {
           question: "Comment puis-je résilier ?",
-          answer: "[KUENDIGUNG_BEDINGUNGEN]",
+          answer:
+            "Vous pouvez résilier à tout moment pour la fin de la période déjà payée. Avec l'abonnement mensuel, cela vaut pour chaque période mensuelle\u00A0: si vous vous êtes abonné le 10, vous pouvez résilier jusqu'au 9. L'abonnement annuel fonctionne de la même manière, par année. Détails dans les [[terms|conditions d'utilisation]].",
         },
         companies: {
           question: "Puis-je connecter plusieurs entreprises bexio ?",
@@ -2009,7 +2066,6 @@ const fr: Dictionary = {
   },
 
   legal: {
-    back: "Retour à l'accueil",
     legalNotice: {
       nav: "Mentions légales",
       title: "Mentions légales",
@@ -2182,6 +2238,22 @@ const it: Dictionary = {
 
   nav: {
     label: "Navigazione principale",
+    chapters: {
+      label: "Capitoli",
+      items: {
+        problem: "Problema",
+        howItWorks: "Avvio",
+        features: "Report",
+        customize: "Su misura",
+        ai: "IA",
+        automations: "Routine",
+        audiences: "Per chi",
+        testimonials: "Clienti",
+        pricing: "Prezzi",
+        security: "Sicurezza",
+        faq: "FAQ",
+      },
+    },
     items: {
       features: "Funzioni",
       ai: "IA",
@@ -2219,9 +2291,9 @@ const it: Dictionary = {
       title: "I numeri ci sono. *Manca la visione d'insieme.*",
       pains: [
         {
-          icon: "sheet",
-          title: "Esportazioni manuali in Excel",
-          text: "Esportare i dati da bexio, copiarli in Excel, controllare le formule. Ogni mese da capo.",
+          icon: "code",
+          title: "Automazioni mancanti",
+          text: "Solleciti, report e analisi si fanno a mano – oppure vanno sviluppati su misura, con costi di programmazione elevati.",
         },
         {
           icon: "clock",
@@ -2469,7 +2541,7 @@ const it: Dictionary = {
         setup: {
           question: "Quanto dura la configurazione?",
           answer:
-            "Circa 5 minuti. Crea un account, collega bexio e vede subito i Suoi report standard.",
+            "Dipende dalla quantità di dati nel Suo bexio. Di solito bastano circa 5 minuti: crea un account, collega bexio e vede subito i Suoi report standard. Per aziende più grandi con molte registrazioni, la prima sincronizzazione può richiedere più tempo.",
         },
         skills: {
           question: "Servono conoscenze informatiche?",
@@ -2478,7 +2550,8 @@ const it: Dictionary = {
         },
         trial: {
           question: "Cosa succede dopo i 30 giorni di prova?",
-          answer: "Decide Lei se scegliere un pacchetto. [TESTENDE_ABLAUF]",
+          answer:
+            "Dopo 30 giorni la prova termina semplicemente – non si trasforma in un abbonamento e non viene addebitato nulla automaticamente. Se desidera continuare a usare smiit Analytics, sceglie attivamente un pacchetto. Senza pacchetto l'accesso termina. Nessun rinnovo automatico, nessuna sorpresa nascosta.",
         },
         mcp: {
           question: "Che cos'è MCP?",
@@ -2488,11 +2561,12 @@ const it: Dictionary = {
         data: {
           question: "Chi vede i miei dati?",
           answer:
-            "Decide Lei chi ottiene l'accesso nella Sua organizzazione. [DATENZUGRIFF_DETAILS] Maggiori informazioni nell'informativa sulla protezione dei dati.",
+            "Solo Lei e le persone che autorizza attivamente. Nemmeno noi di smiit Analytics vediamo i Suoi dati. Unica eccezione: in caso di richiesta di supporto possiamo chiedere un accesso limitato nel tempo – che anche Lei deve accettare attivamente. Maggiori informazioni nell'[[privacy|informativa sulla protezione dei dati]].",
         },
         cancellation: {
           question: "Come posso disdire?",
-          answer: "[KUENDIGUNG_BEDINGUNGEN]",
+          answer:
+            "Può disdire in qualsiasi momento per la fine del periodo già pagato. Con l'abbonamento mensile ciò vale per ogni periodo mensile: se si è abbonato il 10, può disdire fino al 9. L'abbonamento annuale funziona allo stesso modo, su base annua. Dettagli nelle [[terms|condizioni d'uso]].",
         },
         companies: {
           question: "Posso collegare più aziende bexio?",
@@ -2703,7 +2777,6 @@ const it: Dictionary = {
   },
 
   legal: {
-    back: "Torna alla pagina iniziale",
     legalNotice: {
       nav: "Note legali",
       title: "Note legali",

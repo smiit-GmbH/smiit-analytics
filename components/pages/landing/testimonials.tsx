@@ -27,7 +27,7 @@ export function TestimonialCard({ item }: { item: Testimonial }) {
         <span aria-hidden="true" className="font-serif text-[3rem] leading-none text-magenta/40">
           “
         </span>
-        <blockquote className="mt-1 flex-1 font-serif text-[1.2rem] leading-snug tracking-tight">{item.quote}</blockquote>
+        <blockquote className="mt-1 flex-1 font-serif text-[1.125rem] leading-snug tracking-tight">{item.quote}</blockquote>
         <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
           {item.image ? (
             <Image src={item.image} alt="" width={44} height={44} className="size-11 rounded-full object-cover" />
@@ -36,7 +36,7 @@ export function TestimonialCard({ item }: { item: Testimonial }) {
               {initials(item.name)}
             </span>
           )}
-          <span className="text-sm">
+          <span className="min-w-0 text-sm [overflow-wrap:anywhere]">
             <span className="block font-medium text-ink">{item.name}</span>
             <span className="block text-ink-muted">
               {item.role}, {item.company}

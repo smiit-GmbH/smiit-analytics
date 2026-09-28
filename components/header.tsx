@@ -57,23 +57,7 @@ export function Header({ lang, dict, languageHomeOnly }: HeaderProps) {
       <Container className="flex h-16 items-center gap-6 md:h-18">
         <Logo href={routePath(lang)} label={common.homeLabel} productName={common.productName} priority />
 
-        <nav aria-label={t.label} className="ml-auto hidden lg:block">
-          <ul className="flex items-center gap-1">
-            {items.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="rounded-control px-3 py-2 text-sm font-medium text-ink/80 transition-colors hover:bg-black/5 hover:text-ink"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="ml-auto flex items-center gap-2 lg:ml-2">
-          <LanguageSwitcher lang={lang} t={dict.language} homeOnly={languageHomeOnly} className="hidden sm:block" />
+        <div className="ml-auto flex items-center gap-2">
           <a
             href={LINKS.login}
             data-track="header_login"
@@ -84,10 +68,11 @@ export function Header({ lang, dict, languageHomeOnly }: HeaderProps) {
           <CtaLink externalHint={common.externalHint} href={LINKS.signup} track="header_signup" size="sm" className="hidden sm:inline-flex">
             {t.cta}
           </CtaLink>
+          <LanguageSwitcher lang={lang} t={dict.language} homeOnly={languageHomeOnly} className="hidden sm:block" />
           <button
             ref={toggleRef}
             type="button"
-            className="-mr-2 flex size-11 cursor-pointer items-center justify-center rounded-control text-ink hover:bg-black/5 lg:hidden"
+            className="-mr-2 flex size-11 cursor-pointer items-center justify-center rounded-control text-ink hover:bg-black/5 xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -98,7 +83,7 @@ export function Header({ lang, dict, languageHomeOnly }: HeaderProps) {
         </div>
       </Container>
 
-      <div id="mobile-menu" hidden={!open} className="border-t border-line bg-cream lg:hidden">
+      <div id="mobile-menu" hidden={!open} className="border-t border-line bg-cream xl:hidden">
         <Container className="py-4">
           <nav aria-label={t.label}>
             <ul className="flex flex-col">

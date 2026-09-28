@@ -21,7 +21,7 @@ export function Automations({ dict }: SectionProps) {
                 <Icon name={ex.icon} />
               </IconTile>
               <div>
-                <CardTitle className="text-[1.2rem]">{ex.title}</CardTitle>
+                <CardTitle>{ex.title}</CardTitle>
                 <CardText className="mt-1.5">{ex.text}</CardText>
               </div>
             </Card>
@@ -34,7 +34,7 @@ export function Automations({ dict }: SectionProps) {
           <Sparkles className="size-5" />
         </span>
         <div>
-          <h3 className="font-serif text-[1.2rem] leading-tight tracking-tight">{t.custom.title}</h3>
+          <h3 className="font-serif text-title tracking-tight">{t.custom.title}</h3>
           <p className="mt-1.5 text-[0.95rem] leading-relaxed text-ink-muted">{t.custom.text}</p>
         </div>
       </div>

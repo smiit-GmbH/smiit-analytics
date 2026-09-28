@@ -1,12 +1,12 @@
 import type { Metadata } from "next"
 import type React from "react"
-import { ArrowLeft } from "lucide-react"
+import Image from "next/image"
 import { Container } from "@/components/ui"
 import { JsonLd } from "@/components/seo/json-ld"
 import type { Dictionary } from "@/lib/dictionary"
 import { getDictionary } from "@/lib/dictionary"
 import { HTML_LANG, type Locale } from "@/lib/i18n"
-import { routePath, type LEGAL_ROUTES } from "@/lib/routes"
+import type { LEGAL_ROUTES } from "@/lib/routes"
 import { buildBreadcrumbJsonLd, buildPageMetadata } from "@/lib/seo"
 import { COMPANY } from "@/lib/site"
 
@@ -15,14 +15,19 @@ type LegalRoute = (typeof LEGAL_ROUTES)[number]
 type TextRoute = Exclude<LegalRoute, "legalNotice">
 
 /** `<title>` without soft hyphens (they only help line breaks in the h1). */
-const stripShy = (s: string) => s.replace(/­/g, "")
+const stripShy = (s: string) => s.replace(/\u00AD/g, "")
 
 export function legalPageMetadata(lang: Locale, route: LegalRoute): Metadata {
   const t = getDictionary(lang).legal[route]
   return buildPageMetadata({ lang, route, title: stripShy(t.title), description: t.description })
 }
 
-/** Shared frame of the legal pages: back link, title, white card, breadcrumb JSON-LD. */
+/**
+ * Shared frame of the legal pages, as on www.smiit.de: full-width illustration
+ * with a rounded bottom edge, a light wash from the left and a fine grain,
+ * title (and optional subtitle) bottom left; below it a white card that
+ * overlaps the image slightly. Plus breadcrumb JSON-LD.
+ */
 function LegalShell({
   lang,
   dict,
@@ -38,21 +43,38 @@ function LegalShell({
 }) {
   const title = dict.legal[route].title
   return (
-    <article className="py-section-sm md:py-section">
-      <Container className="max-w-3xl">
-        <a href={routePath(lang)} className="inline-flex items-center gap-2 rounded-md text-sm font-medium text-brand hover:underline">
-          <ArrowLeft className="size-4" aria-hidden="true" />
-          {dict.legal.back}
-        </a>
-        {/* Long compounds (e.g. Auftragsverarbeitungsvertrag) must break on phones. */}
-        <h1
-          lang={HTML_LANG[lang]}
-          className="mt-6 hyphens-auto font-serif text-[2rem] leading-tight tracking-tight [overflow-wrap:anywhere] sm:text-[2.4rem] md:text-[3rem]"
-        >
-          {title}
-        </h1>
-        {subtitle && <p className="mt-3 text-ink-muted md:text-lg">{subtitle}</p>}
-        <div className="mt-10 rounded-card bg-white p-7 leading-relaxed shadow-card sm:p-10">{children}</div>
+    <article>
+      <header className="relative isolate h-[42vh] max-h-[560px] min-h-[300px] overflow-hidden rounded-b-card sm:h-[48vh] md:h-[46vh] lg:h-[50vh]">
+        <Image
+          src="/brand/legal.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[15%_35%] sm:object-[22%_35%] md:object-[40%_35%]"
+        />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/70 via-white/15 to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/[0.12] via-black/[0.04] to-transparent" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-black/10 opacity-[0.18] mix-blend-soft-light"
+          style={{ backgroundImage: "url(/brand/grain.webp)", backgroundRepeat: "repeat", backgroundSize: "150px 150px" }}
+        />
+        <Container className="relative flex h-full items-end pb-12 sm:pb-14 md:pb-16 lg:pb-20">
+          <div>
+            {/* Long compounds (e.g. Auftragsverarbeitungsvertrag) must break on phones. */}
+            <h1 lang={HTML_LANG[lang]} className="hyphens-auto font-serif text-heading-lg tracking-tight text-ink [overflow-wrap:anywhere]">
+              {title}
+            </h1>
+            {subtitle && <p className="mt-3 max-w-[60ch] text-lead text-ink/75">{subtitle}</p>}
+          </div>
+        </Container>
+      </header>
+
+      <Container className="relative pb-section-sm md:pb-section">
+        <div className="relative -mt-6 rounded-card border border-black/10 bg-white p-6 leading-relaxed shadow-xl ring-1 ring-black/5 sm:-mt-8 sm:p-8 md:-mt-10 md:p-10 lg:-mt-12">
+          {children}
+        </div>
       </Container>
       <JsonLd data={buildBreadcrumbJsonLd(lang, [{ name: title, route }])} />
     </article>
@@ -102,7 +124,7 @@ export function LegalNotice({ lang, dict }: { lang: Locale; dict: Dictionary }) 
     <LegalShell lang={lang} dict={dict} route="legalNotice" subtitle={t.subtitle}>
       <div className="grid gap-x-10 gap-y-9 md:grid-cols-2">
         <div>
-          <p className="font-serif text-2xl tracking-tight">{COMPANY.name}</p>
+          <p className="font-serif text-title-lg tracking-tight">{COMPANY.name}</p>
           <address className="mt-3 text-[0.95rem] not-italic leading-relaxed text-ink">{postal}</address>
         </div>
         <Block title={t.contact}>

@@ -17,11 +17,11 @@ export function Hero({ lang, dict }: SectionProps) {
         <div>
           <h1
             id="hero-title"
-            className="font-serif text-[2.6rem] leading-[1.03] tracking-tight text-balance sm:text-[3.25rem] lg:text-[3.8rem]"
+            className="font-serif text-display tracking-tight text-balance"
           >
             {rich(t.title)}
           </h1>
-          <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">{t.subtitle}</p>
+          <p className="mt-5 max-w-lg text-lead text-ink-muted">{t.subtitle}</p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <CtaLink externalHint={dict.common.externalHint} href={LINKS.signup} track="hero_signup" size="lg">

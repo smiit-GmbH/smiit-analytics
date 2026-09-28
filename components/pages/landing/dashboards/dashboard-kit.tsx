@@ -147,6 +147,29 @@ export function barPath(x: number, y: number, w: number, h: number) {
   return `M${x},${y} H${x + w - r} Q${x + w},${y} ${x + w},${y + r} V${y + h - r} Q${x + w},${y + h} ${x + w - r},${y + h} H${x} Z`
 }
 
+/*
+ * Touch: a tap fires pointerleave right after pointerup, which would close the
+ * tooltip at once. On touch screens the tooltip therefore stays open after a tap
+ * and closes with a tap anywhere outside the chart.
+ */
+
+/** pointerleave handler that ignores touch input. */
+export const leaveUnlessTouch = (setActive: (i: number | null) => void) => (e: React.PointerEvent) => {
+  if (e.pointerType !== "touch") setActive(null)
+}
+
+/** Closes an open tooltip when the user taps outside the chart. */
+export function useTouchDismiss(ref: React.RefObject<HTMLElement | null>, active: number | null, setActive: (i: number | null) => void) {
+  React.useEffect(() => {
+    if (active === null) return
+    const onDown = (e: PointerEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setActive(null)
+    }
+    document.addEventListener("pointerdown", onDown)
+    return () => document.removeEventListener("pointerdown", onDown)
+  }, [ref, active, setActive])
+}
+
 /** Arrow-key navigation shared by all charts (plain function, no hooks). */
 export function keyNav(count: number, active: number | null, setActive: (i: number | null) => void) {
   return {
@@ -269,6 +292,7 @@ export function LineChart({
   const tick = tickFormat ?? f.compact
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const H = height
   const m = { l: 48, r: 18, t: 6, b: 20 }
   const n = labels.length
@@ -295,7 +319,8 @@ export function LineChart({
           aria-label={label}
           className={cn(svgFocus, "touch-pan-y")}
           onPointerMove={onMove}
-          onPointerLeave={() => setActive(null)}
+          onPointerDown={onMove}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {ticks.map((t) => (
@@ -378,6 +403,7 @@ export function Columns({
   const { f } = useDemo()
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const H = height
   const n = items.length
   // Straight labels wrap onto two lines when a band is too narrow (≈5.4px per character at 10px).
@@ -404,7 +430,7 @@ export function Columns({
           role="img"
           aria-label={label}
           className={svgFocus}
-          onPointerLeave={() => setActive(null)}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {ticks.map((t) => (
@@ -478,6 +504,7 @@ export function HBars({
   const tick = tickFormat ?? f.compact
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const H = height
   const n = items.length
   const m = { l: labelWidth, r: 18, t: 2, b: 20 }
@@ -497,7 +524,7 @@ export function HBars({
           role="img"
           aria-label={label}
           className={svgFocus}
-          onPointerLeave={() => setActive(null)}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {ticks.map((t) => (

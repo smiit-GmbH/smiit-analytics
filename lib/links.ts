@@ -14,8 +14,8 @@ export const LINKS = {
   signup: APP_URL,
   /** App login. */
   login: APP_URL,
-  /** Demo booking (e.g. Calendly). */
-  booking: "[LINK_BOOKING]",
+  /** Demo booking ("Demo buchen"): meeting with smiit. */
+  booking: "https://nesslauer.smiit.de/meet",
 
   company: "https://www.smiit.de",
   linkedin: "https://de.linkedin.com/company/smiit-gmbh",

@@ -75,6 +75,8 @@ Foto zum Testimonial: Datei (1:1, 200×200, WebP) nach `public/media/` legen und
 
 Das smiit-Logo `public/brand/logo_black.webp` (Original von smiit.de) wird in den strukturierten Daten (Organization) verwendet.
 
+Die Rechtsseiten (Impressum, Datenschutz, Nutzungsbedingungen, AVV) verwenden wie smiit.de die Illustration `public/brand/legal.webp` und die Körnung `public/brand/grain.webp` (beide Originale von smiit.de, unverändert).
+
 Das **smiit-Analytics-Icon** ist die Originaldatei, unverändert übernommen:
 
 | Datei | Verwendung |

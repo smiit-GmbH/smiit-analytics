@@ -20,7 +20,7 @@ export function Customize({ lang, dict }: SectionProps) {
                 <Icon name={p.icon} />
               </IconTile>
               <div>
-                <h3 className="font-serif text-[1.3rem] leading-tight tracking-tight">{p.title}</h3>
+                <h3 className="font-serif text-title tracking-tight">{p.title}</h3>
                 <p className="mt-1.5 text-[0.95rem] leading-relaxed text-ink-muted">{p.text}</p>
               </div>
             </li>
@@ -33,7 +33,7 @@ export function Customize({ lang, dict }: SectionProps) {
           <IconTile className="bg-white">
             <Building2 />
           </IconTile>
-          <h3 className="font-serif text-[1.75rem] leading-tight tracking-tight text-balance md:text-[2.1rem]">
+          <h3 className="font-serif text-title-lg tracking-tight text-balance">
             {rich(t.trustee.title)}
           </h3>
           <p className="mt-4 leading-relaxed text-ink-muted">{t.trustee.text}</p>

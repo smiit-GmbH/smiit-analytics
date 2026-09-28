@@ -4,7 +4,9 @@
   "private": true,
   "description": "Product website of smiit Analytics – reporting for bexio, a product of smiit GmbH.",
   "scripts": {
+    "predev": "node scripts/build-media.mjs --variants",
     "dev": "next dev",
+    "prebuild": "node scripts/build-media.mjs --variants",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",

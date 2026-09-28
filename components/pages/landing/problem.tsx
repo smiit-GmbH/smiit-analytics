@@ -26,7 +26,7 @@ export function Problem({ dict }: SectionProps) {
         <span aria-hidden="true" className="flex size-10 items-center justify-center rounded-full bg-brand text-white">
           <ArrowDown className="size-5" />
         </span>
-        <p className="max-w-3xl font-serif text-2xl leading-snug tracking-tight text-balance md:text-[2rem]">{t.solution}</p>
+        <p className="max-w-3xl font-serif text-title-lg leading-snug tracking-tight text-balance">{t.solution}</p>
       </div>
     </Section>
   )

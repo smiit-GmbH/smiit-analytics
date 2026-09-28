@@ -23,6 +23,8 @@ import {
   useToday,
   useWidth,
   useDemo,
+  leaveUnlessTouch,
+  useTouchDismiss,
 } from "./dashboard-kit"
 
 /*
@@ -72,6 +74,7 @@ function Gantt({ height }: { height: number }) {
   const T = t.projects
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const today = useToday()
   // Window and bars are shifted from the authored dates to today.
   const start = shiftISO(TIMELINE.start, today)
@@ -105,7 +108,7 @@ function Gantt({ height }: { height: number }) {
           role="img"
           aria-label={`${T.gantt.title}. ${t.keyboardHint}.`}
           className={svgFocus}
-          onPointerLeave={() => setActive(null)}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {ticks.map((d, k) => {
@@ -209,6 +212,7 @@ function BudgetScatter({ height }: { height: number }) {
   const T = t.projects
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const H = height
   const projects = useProjects()
   const n = projects.length
@@ -247,7 +251,8 @@ function BudgetScatter({ height }: { height: number }) {
           aria-label={`${T.scatter.title}. ${t.keyboardHint}.`}
           className={svgFocus}
           onPointerMove={onMove}
-          onPointerLeave={() => setActive(null)}
+          onPointerDown={onMove}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {ticks.map((t) => (
@@ -307,6 +312,7 @@ function UtilizationBars({ height }: { height: number }) {
   const T = t.projects
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const items = [...useProjects()].sort((a, b) => ratio(b) - ratio(a))
   const H = height
   const n = items.length
@@ -331,7 +337,7 @@ function UtilizationBars({ height }: { height: number }) {
           role="img"
           aria-label={`${T.utilization.title}. ${t.keyboardHint}.`}
           className={svgFocus}
-          onPointerLeave={() => setActive(null)}
+          onPointerLeave={leaveUnlessTouch(setActive)}
           {...keyNav(n, active, setActive)}
         >
           {[0, 50, 100].map((t) => (

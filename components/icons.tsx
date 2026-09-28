@@ -4,10 +4,10 @@ import {
   CalendarDays,
   Database,
   Clock,
+  Code,
   Download,
   EyeOff,
   FileClock,
-  FileSpreadsheet,
   GitBranch,
   KeyRound,
   LayoutDashboard,
@@ -19,10 +19,10 @@ import {
   type LucideIcon,
 } from "lucide-react"
 
-/** Icon names used in content/*.ts, mapped to components. */
+/** Icon names used in lib/dictionary.ts, mapped to components. */
 export const ICONS: Record<string, LucideIcon> = {
-  sheet: FileSpreadsheet,
   clock: Clock,
+  code: Code,
   eyeOff: EyeOff,
   layout: LayoutDashboard,
   download: Download,

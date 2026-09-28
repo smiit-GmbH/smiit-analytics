@@ -1,9 +1,8 @@
 "use client"
 
 import * as React from "react"
-import Image from "next/image"
 import { cn } from "@/lib/utils"
-import { MEDIA, mediaPath, type MediaId } from "@/lib/media"
+import { MEDIA, mediaPath, mediaSrcSet, type MediaId } from "@/lib/media"
 
 /*
  * Asset slots. The labelled placeholder box always sits underneath the media.
@@ -31,6 +30,8 @@ export function PlaceholderBox({ id, spec, className }: { id: string; spec?: str
 type MediaImageProps = {
   id: string
   src: string
+  /** Responsive candidates; the browser picks one based on `sizes`. */
+  srcSet?: string
   ratio: string
   spec?: string
   alt: string
@@ -40,7 +41,7 @@ type MediaImageProps = {
   className?: string
 }
 
-export function MediaImage({ id, src, ratio, spec, alt, fit = "cover", sizes, priority, className }: MediaImageProps) {
+export function MediaImage({ id, src, srcSet, ratio, spec, alt, fit = "cover", sizes, priority, className }: MediaImageProps) {
   const ref = React.useRef<HTMLImageElement>(null)
   const [loaded, setLoaded] = React.useState(false)
 
@@ -53,17 +54,21 @@ export function MediaImage({ id, src, ratio, spec, alt, fit = "cover", sizes, pr
   return (
     <div className={cn("relative w-full overflow-hidden", className)} style={{ aspectRatio: ratio }}>
       {!loaded && <PlaceholderBox id={id} spec={spec} />}
-      <Image
+      {/* Plain <img>: the static export has no image optimizer, so srcset comes from lib/media.ts. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         ref={ref}
         src={src}
+        srcSet={srcSet}
+        sizes={srcSet ? (sizes ?? "(min-width: 1024px) 50vw, 100vw") : undefined}
         alt={alt}
-        fill
-        sizes={sizes ?? "(min-width: 1024px) 50vw, 100vw"}
-        priority={priority}
-        // next/image also fires onLoad for already-complete *failed* images, so check for real pixels.
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : undefined}
+        decoding="async"
+        // Also fires for already-complete *failed* images in some browsers, so check for real pixels.
         onLoad={(e) => e.currentTarget.naturalWidth > 0 && setLoaded(true)}
         className={cn(
-          "transition-opacity duration-500",
+          "absolute inset-0 size-full transition-opacity duration-500",
           fit === "cover" ? "object-cover" : "object-contain",
           loaded ? "opacity-100" : "opacity-0",
         )}
@@ -229,5 +234,5 @@ export function Media({ id, lang, alt, ...rest }: MediaProps) {
   if (entry.kind === "video") {
     return <VideoPlayer id={id} src={src} ratio={entry.ratio} spec={entry.spec} alt={alt} className={rest.className} />
   }
-  return <MediaImage id={id} src={src} ratio={entry.ratio} spec={entry.spec} alt={alt} {...rest} />
+  return <MediaImage id={id} src={src} srcSet={mediaSrcSet(id, lang)} ratio={entry.ratio} spec={entry.spec} alt={alt} {...rest} />
 }

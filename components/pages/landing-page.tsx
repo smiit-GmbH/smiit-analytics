@@ -1,5 +1,6 @@
 import { JsonLd } from "@/components/seo/json-ld"
 import { Ai } from "@/components/pages/landing/ai"
+import { ChapterRail } from "@/components/pages/landing/chapter-rail"
 import { Audiences } from "@/components/pages/landing/audiences"
 import { Automations } from "@/components/pages/landing/automations"
 import { Customize } from "@/components/pages/landing/customize"
@@ -14,6 +15,7 @@ import { Steps } from "@/components/pages/landing/steps"
 import { Testimonials } from "@/components/pages/landing/testimonials"
 import { Trust } from "@/components/pages/landing/trust"
 import type { SectionProps } from "@/components/pages/landing/types"
+import { CHAPTER_SECTIONS, SECTIONS } from "@/lib/routes"
 import { buildFaqJsonLd, buildSoftwareApplicationJsonLd } from "@/lib/seo"
 
 /** The smiit Analytics landing page, section by section. */
@@ -35,6 +37,11 @@ export function LandingPage({ lang, dict }: SectionProps) {
       <Security {...props} />
       <Faq {...props} />
       <FinalCta {...props} />
+
+      <ChapterRail
+        label={dict.nav.chapters.label}
+        chapters={CHAPTER_SECTIONS.map((s) => ({ id: SECTIONS[s], label: dict.nav.chapters.items[s] }))}
+      />
 
       <JsonLd data={buildSoftwareApplicationJsonLd(lang)} />
       <JsonLd data={buildFaqJsonLd(lang)} />

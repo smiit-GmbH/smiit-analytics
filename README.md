@@ -43,7 +43,7 @@ npm run dev          # http://localhost:3000 → redirects to the browser langua
 | **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary.ts`](lib/dictionary.ts) |
 | **Company details** (legal notice, footer, structured data) | [`lib/site.ts`](lib/site.ts) (`COMPANY`) |
 | **Prices** (CHF per month and bexio company, additional users) | [`lib/pricing.ts`](lib/pricing.ts) |
-| **Links** (app, `[LINK_BOOKING]`, bexio Marketplace, LinkedIn …) | [`lib/links.ts`](lib/links.ts) |
+| **Links** (app, demo booking, bexio Marketplace, LinkedIn …) | [`lib/links.ts`](lib/links.ts) |
 | **Pages, section anchors, navigation** | [`lib/routes.ts`](lib/routes.ts) |
 | **Domain** (canonical URLs, sitemap, Open Graph, structured data) | [`lib/site.ts`](lib/site.ts) |
 | **Media slots** (file names, formats, per language or shared) | [`lib/media.ts`](lib/media.ts), documented in [`MEDIA.md`](MEDIA.md) |

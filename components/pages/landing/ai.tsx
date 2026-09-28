@@ -20,7 +20,7 @@ export function Ai({ lang, dict }: SectionProps) {
                 <Sparkles className="size-5" />
               </span>
               <div>
-                <h3 className="font-serif text-[1.3rem] leading-tight tracking-tight">{cap.title}</h3>
+                <h3 className="font-serif text-title tracking-tight">{cap.title}</h3>
                 <p className="mt-1.5 text-[0.95rem] leading-relaxed text-white/75">{cap.text}</p>
               </div>
             </li>
@@ -34,7 +34,7 @@ export function Ai({ lang, dict }: SectionProps) {
       <Card tone="navy" className="mt-12 grid gap-8 md:mt-16 md:grid-cols-[1.3fr_1fr] md:items-center md:p-10">
         <div>
           <Badge variant="onDark">{t.mcp.badge}</Badge>
-          <h3 className="mt-4 font-serif text-[1.75rem] leading-tight tracking-tight text-balance md:text-[2rem]">
+          <h3 className="mt-4 font-serif text-title-lg tracking-tight text-balance">
             {t.mcp.title}
           </h3>
           <p className="mt-4 leading-relaxed text-white/75">{t.mcp.text}</p>

@@ -45,7 +45,10 @@ export const SECTIONS = {
   faq: "faq",
 } as const
 
-/** Main navigation: sections in this order, labels in `nav.items`. */
+/** Chapter rail: every section of the home page, in page order (labels: `nav.chapters.items`). */
+export const CHAPTER_SECTIONS = Object.keys(SECTIONS) as (keyof typeof SECTIONS)[]
+
+/** Main navigation (mobile menu, footer): sections in this order, labels in `nav.items`. */
 export const NAV_SECTIONS = ["features", "ai", "automations", "pricing", "faq"] as const satisfies readonly (keyof Dictionary["nav"]["items"] &
   keyof typeof SECTIONS)[]
 

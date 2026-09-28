@@ -24,6 +24,8 @@ import {
   useToday,
   useWidth,
   useDemo,
+  leaveUnlessTouch,
+  useTouchDismiss,
 } from "./dashboard-kit"
 
 /*
@@ -63,6 +65,7 @@ function ServiceDonut({ height }: { height: number }) {
   const { hours } = useHours()
   const [ref, w] = useWidth<HTMLDivElement>()
   const [active, setActive] = React.useState<number | null>(null)
+  useTouchDismiss(ref, active, setActive)
   const items = D.services.map((s) => ({ ...s, name: T.services.names[s.key] }))
   const total = items.reduce((s, i) => s + i.value, 0)
   // Ring scales with the card so the legend always has room for full names.
@@ -81,7 +84,7 @@ function ServiceDonut({ height }: { height: number }) {
   })
 
   return (
-    <div ref={ref} className="relative flex items-center gap-5" style={{ height }} onPointerLeave={() => setActive(null)}>
+    <div ref={ref} className="relative flex items-center gap-5" style={{ height }} onPointerLeave={leaveUnlessTouch(setActive)}>
       <svg
         width={size}
         height={size}

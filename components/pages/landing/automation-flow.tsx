@@ -310,7 +310,7 @@ export function AutomationFlow({ flow }: { flow: Flow }) {
       </div>
 
       {/* Mobile & tablet: top to bottom */}
-      <div aria-hidden="true" className="mx-auto flex max-w-md flex-col lg:hidden">
+      <div aria-hidden="true" className="mx-auto flex max-w-md flex-col md:max-w-xl lg:hidden">
         <Node data={flow.trigger} status={s.trigger} />
         <Line dir="v" filled={phase >= 2} />
         <Node data={flow.fetch} status={s.fetch} />

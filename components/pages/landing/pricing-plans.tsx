@@ -83,7 +83,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
         <div className="flex flex-col gap-8 rounded-card bg-cream p-6 ring-2 ring-brand sm:p-8">
           <div>
             <div className="flex flex-wrap items-center gap-3">
-              <h3 className="font-serif text-[1.75rem] leading-tight tracking-tight">{t.plan.name}</h3>
+              <h3 className="font-serif text-title-lg tracking-tight">{t.plan.name}</h3>
               <Badge variant="brand">{t.plan.badge}</Badge>
             </div>
             <p className="mt-1.5 text-[0.95rem] text-ink-muted">{t.plan.description}</p>
@@ -93,7 +93,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
             <div aria-live="polite">
               <div className="flex items-end gap-2">
                 <span className="pb-1.5 text-base font-medium text-ink-muted">CHF</span>
-                <span className="font-serif text-[3.75rem] leading-none tracking-tight tabular-nums">{price}</span>
+                <span className="font-serif text-[3rem] leading-none sm:text-[3.25rem] tracking-tight tabular-nums">{price}</span>
                 {/* Unit and billing note stacked, sharing one left edge */}
                 <span className="flex flex-col pb-1.5 text-sm leading-snug text-ink-muted">
                   <span>{t.unit}</span>
@@ -140,7 +140,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
             <Gift className="size-3.5" aria-hidden="true" />
             {t.trial.badge}
           </Badge>
-          <h3 className="relative mt-5 font-serif text-[2rem] leading-tight tracking-tight">{t.trial.title}</h3>
+          <h3 className="relative mt-5 font-serif text-title-lg tracking-tight">{t.trial.title}</h3>
           <p className="relative mt-3 leading-relaxed text-white/75">{t.trial.text}</p>
           <ul className="relative mb-6 mt-6 space-y-3">
             {t.trial.features.map((f) => (

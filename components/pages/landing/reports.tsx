@@ -32,13 +32,13 @@ export function Reports({ dict }: SectionProps) {
         <Tabs defaultValue={tabs[0]}>
           {/* Tabs left, CTA right; wraps below the tabs on narrow screens */}
           <div className="flex flex-wrap items-center justify-between gap-4">
-            <TabsList aria-label={t.tabsLabel} className="flex w-full flex-wrap sm:inline-flex sm:w-auto sm:flex-nowrap">
+            <TabsList aria-label={t.tabsLabel} className="w-full sm:w-auto">
               {tabs.map((tab) => (
                 <TabsTrigger
                   key={tab}
                   value={tab}
                   data-track={`reports_tab_${tab}`}
-                  className="flex-1 basis-[30%] justify-center px-2 sm:flex-none sm:basis-auto sm:px-4"
+                  className="px-3.5 sm:px-4"
                 >
                   {t.tabs[tab]}
                 </TabsTrigger>

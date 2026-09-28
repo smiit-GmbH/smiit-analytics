@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui"
 import { faqAnchor } from "@/lib/routes"
+import { withLinks } from "@/lib/rich"
 
 /**
  * FAQ accordion. Opens the matching question when the URL hash points at it
@@ -10,7 +11,8 @@ import { faqAnchor } from "@/lib/routes"
  */
 type FaqItem = { id: string; question: string; answer: string }
 
-export function FaqList({ items }: { items: FaqItem[] }) {
+/** `hrefs`: targets of `[[key|label]]` links in the answers (e.g. privacy, terms). */
+export function FaqList({ items, hrefs }: { items: FaqItem[]; hrefs: Record<string, string> }) {
   const [open, setOpen] = React.useState<string>("")
 
   React.useEffect(() => {
@@ -34,7 +36,7 @@ export function FaqList({ items }: { items: FaqItem[] }) {
       {items.map((item) => (
         <AccordionItem key={item.id} value={faqAnchor(item.id)} id={faqAnchor(item.id)} className="scroll-mt-24">
           <AccordionTrigger data-track={`faq_${item.id}`}>{item.question}</AccordionTrigger>
-          <AccordionContent>{item.answer}</AccordionContent>
+          <AccordionContent>{withLinks(item.answer, hrefs, "font-medium text-brand underline underline-offset-4 hover:no-underline")}</AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>

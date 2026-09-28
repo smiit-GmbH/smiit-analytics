@@ -2,13 +2,18 @@
 // - illustrations in the style of the demo dashboards → public/media/<lang>/
 //   (steps IMG_STEP_1..3, trustee workspaces IMG_MULTI_COMPANY, personas IMG_PERSONA_*)
 // - Open Graph / social preview image (1200×630) → public/og/<lang>.png
+// - smaller copies (<name>-<w>w.webp) of every image slot with `widths` in lib/media.ts
 // Texts come from lib/dictionary.ts, numbers from lib/format.ts.
 // Run after changing those texts: `npm run media`. Any file can be replaced by a
 // real screenshot or design of the same name.
+//
+// `--variants` only refreshes the smaller copies (runs before every dev/build, fast:
+// copies newer than their source are skipped).
 import sharp from "sharp"
-import { mkdirSync, readFileSync } from "node:fs"
+import { existsSync, mkdirSync, readFileSync, statSync } from "node:fs"
 import { getDictionary, locales } from "../lib/dictionary.ts"
 import { createFormatter } from "../lib/format.ts"
+import { MEDIA, variantPath } from "../lib/media.ts"
 
 /** Texts (`L`), dashboard labels (`D`) and formatter (`F`) of the language being rendered. */
 let L, D, F
@@ -481,6 +486,33 @@ function ogImage(dict) {
   </svg>`
 }
 
+/* ── responsive copies ───────────────────────────────────────────────── */
+
+/** Creates the smaller copies of every image slot that has `widths` (skips up-to-date ones). */
+async function buildVariants() {
+  let count = 0
+  for (const entry of Object.values(MEDIA)) {
+    if (entry.kind !== "image" || !entry.widths) continue
+    const files = entry.localized ? locales.map((l) => entry.file.replace(/^\/media\//, `/media/${l}/`)) : [entry.file]
+    for (const file of files) {
+      const source = `public${file}`
+      if (!existsSync(source)) continue
+      for (const width of entry.widths) {
+        const target = `public${variantPath(file, width)}`
+        if (existsSync(target) && statSync(target).mtimeMs >= statSync(source).mtimeMs) continue
+        await sharp(source).resize({ width, withoutEnlargement: true }).webp({ quality: 82 }).toFile(target)
+        count++
+      }
+    }
+  }
+  console.log(`responsive copies: ${count} written`)
+}
+
+if (process.argv.includes("--variants")) {
+  await buildVariants()
+  process.exit(0)
+}
+
 for (const lang of locales) {
   const dict = getDictionary(lang)
   L = dict.illustrations
@@ -496,3 +528,5 @@ for (const lang of locales) {
   await sharp(Buffer.from(ogImage(dict))).png().toFile(`public/og/${lang}.png`)
   console.log("written", `public/og/${lang}.png`)
 }
+
+await buildVariants()

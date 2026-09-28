@@ -22,10 +22,10 @@ export default function ErrorPage({ error, reset }: { error: Error & { digest?: 
     <section aria-labelledby="error-title" className="py-section-sm md:py-section">
       <Container className="max-w-xl text-center">
         <meta name="robots" content="noindex" />
-        <h1 id="error-title" className="font-serif text-[2rem] leading-tight tracking-tight md:text-[2.6rem]">
+        <h1 id="error-title" className="font-serif text-heading-lg tracking-tight">
           {t.title}
         </h1>
-        <p className="mt-4 text-lg leading-relaxed text-ink-muted">{t.text}</p>
+        <p className="mt-4 text-lead text-ink-muted">{t.text}</p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
           <Button size="lg" onClick={reset} track="error_retry">
             <RotateCw aria-hidden="true" />

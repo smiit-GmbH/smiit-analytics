@@ -23,6 +23,9 @@ yarn-error.log*
 .env
 .env*.local
 
+# responsive image copies (generated before dev/build, see lib/media.ts)
+/public/media/**/*-*w.webp
+
 # scratch
 todos.txt
 styles.md

@@ -7,9 +7,9 @@ import type { Dictionary } from "./de.ts"
 
 export const en: Dictionary = {
   meta: {
-    title: "smiit Analytics – Make sense of your bexio data in 5 minutes",
+    title: "bexio Reporting & Dashboards in 5 Minutes | smiit Analytics",
     description:
-      "Connect bexio in 5 minutes and instantly see reports on sales, balance sheet and cash flow. Customise by drag and drop, ask the AI. Free 30-day trial.",
+      "Reporting for bexio: connected in 5 minutes, then sales, balance sheet, cash flow and liquidity in one dashboard. AI analysis included. Free 30-day trial.",
     ogImageAlt: "smiit Analytics – Reporting for bexio",
     appCategory: "Business analytics for bexio",
     home: "Home",
@@ -92,7 +92,7 @@ export const en: Dictionary = {
 
     problem: {
       eyebrow: "The problem",
-      title: "The numbers are there. *The overview is not.*",
+      title: "The numbers are in bexio. *The overview is not.*",
       pains: [
         {
           icon: "code",
@@ -114,8 +114,8 @@ export const en: Dictionary = {
     },
 
     steps: {
-      eyebrow: "How it works",
-      title: "Three steps *to a clear overview*",
+      eyebrow: "Connect bexio in 5 minutes",
+      title: "Three steps *to bexio reporting*",
       items: [
         {
           title: "Connect bexio",
@@ -136,8 +136,8 @@ export const en: Dictionary = {
     },
 
     reports: {
-      eyebrow: "Connect & see instantly",
-      title: "Ready-made reports. *From day one.*",
+      eyebrow: "Standard reports for bexio",
+      title: "Ready-made bexio reports. *From day one.*",
       intro: "Once connected, your key reports are ready. There is nothing to set up.",
       tabsLabel: "Choose report area",
       /** Every tab shows the interactive demo dashboard of the same key (texts: `demo`). */
@@ -151,8 +151,8 @@ export const en: Dictionary = {
     },
 
     customize: {
-      eyebrow: "Design your own",
-      title: "Your reports. *Exactly the way you want them.*",
+      eyebrow: "Dashboard editor",
+      title: "Your dashboard. *Exactly the way you want it.*",
       intro: "Simply drag KPIs and charts to where you want them. No coding, no Excel.",
       points: [
         {
@@ -178,8 +178,8 @@ export const en: Dictionary = {
     },
 
     ai: {
-      eyebrow: "Automatic & intelligent",
-      title: "Ask your numbers. *The AI answers.*",
+      eyebrow: "AI analysis for bexio",
+      title: "Ask your bexio numbers. *The AI answers.*",
       intro:
         "Ask questions in plain language, such as “Which customers generated the most revenue this year?”. The AI answers directly from your bexio data.",
       capabilities: [
@@ -196,7 +196,7 @@ export const en: Dictionary = {
     },
 
     automations: {
-      eyebrow: "Automations",
+      eyebrow: "Automations for bexio",
       title: "Routine work? *Takes care of itself.*",
       intro: "Define once what should happen. smiit Analytics checks your bexio data and acts for you.",
       /** Animated example flow (trigger → data → condition → two branches → info). */
@@ -241,7 +241,7 @@ export const en: Dictionary = {
     },
 
     audiences: {
-      eyebrow: "Who is it for?",
+      eyebrow: "For SMEs and fiduciaries",
       title: "Made for people, *not for IT departments.*",
       items: [
         {
@@ -343,7 +343,7 @@ export const en: Dictionary = {
 
     faq: {
       eyebrow: "FAQ",
-      title: "Frequently asked *questions*",
+      title: "Frequently asked questions *about smiit Analytics*",
       /** Keyed by id; the anchor is `faq-<id>` (e.g. /de/#faq-mcp). Rendered in this order. */
       items: {
         setup: {

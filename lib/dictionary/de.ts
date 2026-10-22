@@ -7,9 +7,9 @@
 
 export const de = {
   meta: {
-    title: "smiit Analytics – Ihre bexio-Daten in 5 Minuten verständlich",
+    title: "bexio Reporting & Dashboards in 5 Minuten | smiit Analytics",
     description:
-      "bexio in 5 Minuten verbinden und sofort Berichte zu Verkauf, Bilanz und Cashflow sehen. Per Drag & Drop anpassen, KI fragen. 30 Tage gratis testen.",
+      "Reporting für bexio: in 5 Minuten verbunden, sofort Umsatz, Bilanz, Cashflow und Liquidität im Dashboard. KI-Analysen inklusive. 30 Tage gratis testen.",
     ogImageAlt: "smiit Analytics – Auswertungen für bexio",
     appCategory: "Business-Analytics für bexio",
     home: "Startseite",
@@ -96,7 +96,7 @@ export const de = {
 
     problem: {
       eyebrow: "Das Problem",
-      title: "Die Zahlen sind da. *Der Überblick fehlt.*",
+      title: "Die Zahlen sind in bexio. *Der Überblick fehlt.*",
       pains: [
         {
           icon: "code",
@@ -118,8 +118,8 @@ export const de = {
     },
 
     steps: {
-      eyebrow: "So einfach geht's",
-      title: "In drei Schritten *zum Überblick*",
+      eyebrow: "bexio in 5 Minuten verbinden",
+      title: "In drei Schritten *zum bexio-Reporting*",
       items: [
         {
           title: "bexio verbinden",
@@ -140,8 +140,8 @@ export const de = {
     },
 
     reports: {
-      eyebrow: "Verbinden & sofort sehen",
-      title: "Fertige Berichte. *Ab dem ersten Tag.*",
+      eyebrow: "Standardberichte für bexio",
+      title: "Fertige bexio-Berichte. *Ab dem ersten Tag.*",
       intro: "Nach der Verbindung stehen Ihre wichtigsten Auswertungen bereit. Sie müssen nichts einrichten.",
       tabsLabel: "Berichtsbereich wählen",
       /** Every tab shows the interactive demo dashboard of the same key (texts: `demo`). */
@@ -155,8 +155,8 @@ export const de = {
     },
 
     customize: {
-      eyebrow: "Selbst gestalten",
-      title: "Ihre Berichte. *Ganz nach Ihren Wünschen.*",
+      eyebrow: "Dashboard-Editor",
+      title: "Ihr Dashboard. *Ganz nach Ihren Wünschen.*",
       intro: "Ziehen Sie Kennzahlen und Diagramme einfach an die richtige Stelle. Ohne Programmieren, ohne Excel.",
       points: [
         {
@@ -182,8 +182,8 @@ export const de = {
     },
 
     ai: {
-      eyebrow: "Automatisch & intelligent",
-      title: "Fragen Sie Ihre Zahlen. *Die KI antwortet.*",
+      eyebrow: "KI-Analyse für bexio",
+      title: "Fragen Sie Ihre bexio-Zahlen. *Die KI antwortet.*",
       intro:
         "Stellen Sie Fragen in ganz normaler Sprache, etwa «Welche Kunden haben dieses Jahr am meisten Umsatz gebracht?». Die KI antwortet direkt aus Ihren bexio-Daten.",
       capabilities: [
@@ -200,7 +200,7 @@ export const de = {
     },
 
     automations: {
-      eyebrow: "Automatisierungen",
+      eyebrow: "Automatisierungen für bexio",
       title: "Routinearbeit? *Erledigt sich selbst.*",
       intro: "Legen Sie einmal fest, was passieren soll. smiit Analytics prüft Ihre bexio-Daten und handelt für Sie.",
       /** Animated example flow (trigger → data → condition → two branches → info). */
@@ -245,7 +245,7 @@ export const de = {
     },
 
     audiences: {
-      eyebrow: "Für wen?",
+      eyebrow: "Für KMU und Treuhänder",
       title: "Gemacht für Menschen, *nicht für IT-Abteilungen.*",
       items: [
         {
@@ -347,7 +347,7 @@ export const de = {
 
     faq: {
       eyebrow: "FAQ",
-      title: "Häufige *Fragen*",
+      title: "Häufige Fragen *zu smiit Analytics*",
       /**
        * Keyed by id; the anchor is `faq-<id>` (e.g. /de/#faq-mcp). Rendered in this order.
        * `[[privacy|label]]` / `[[terms|label]]` in an answer becomes a link to that page.

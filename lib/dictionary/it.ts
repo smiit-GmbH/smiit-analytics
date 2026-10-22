@@ -7,9 +7,9 @@ import type { Dictionary } from "./de.ts"
 
 export const it: Dictionary = {
   meta: {
-    title: "smiit Analytics – Capire i Suoi dati bexio in 5 minuti",
+    title: "Reporting bexio e dashboard in 5 minuti | smiit Analytics",
     description:
-      "Colleghi bexio in 5 minuti e veda subito report su vendite, bilancio e flusso di cassa. Li personalizzi e chieda all'IA. Prova gratuita di 30 giorni.",
+      "Reporting per bexio: collegato in 5 minuti, poi vendite, bilancio, flusso di cassa e liquidità in un dashboard. Analisi IA incluse. 30 giorni gratis.",
     ogImageAlt: "smiit Analytics – Analisi per bexio",
     appCategory: "Business analytics per bexio",
     home: "Pagina iniziale",
@@ -90,7 +90,7 @@ export const it: Dictionary = {
 
     problem: {
       eyebrow: "Il problema",
-      title: "I numeri ci sono. *Manca la visione d'insieme.*",
+      title: "I numeri sono in bexio. *Manca la visione d'insieme.*",
       pains: [
         {
           icon: "code",
@@ -113,8 +113,8 @@ export const it: Dictionary = {
     },
 
     steps: {
-      eyebrow: "Semplicissimo",
-      title: "In tre passi *alla visione d'insieme*",
+      eyebrow: "Colleghi bexio in 5 minuti",
+      title: "In tre passi *al reporting bexio*",
       items: [
         {
           title: "Collegare bexio",
@@ -135,8 +135,8 @@ export const it: Dictionary = {
     },
 
     reports: {
-      eyebrow: "Colleghi e veda subito",
-      title: "Report pronti. *Dal primo giorno.*",
+      eyebrow: "Report standard per bexio",
+      title: "Report bexio pronti. *Dal primo giorno.*",
       intro: "Dopo il collegamento, le Sue analisi più importanti sono pronte. Non deve configurare nulla.",
       tabsLabel: "Scegliere l'ambito del report",
       tabs: {
@@ -149,8 +149,8 @@ export const it: Dictionary = {
     },
 
     customize: {
-      eyebrow: "Personalizzare",
-      title: "I Suoi report. *Esattamente come li desidera.*",
+      eyebrow: "Editor di dashboard",
+      title: "Il Suo dashboard. *Esattamente come lo desidera.*",
       intro: "Trascini indicatori e grafici semplicemente al posto giusto. Senza programmare, senza Excel.",
       points: [
         {
@@ -176,8 +176,8 @@ export const it: Dictionary = {
     },
 
     ai: {
-      eyebrow: "Automatico e intelligente",
-      title: "Interroghi i Suoi numeri. *L'IA risponde.*",
+      eyebrow: "Analisi IA per bexio",
+      title: "Interroghi i Suoi numeri bexio. *L'IA risponde.*",
       intro:
         "Ponga domande in linguaggio del tutto normale, ad esempio «Quali clienti hanno generato più fatturato quest'anno?». L'IA risponde direttamente dai Suoi dati bexio.",
       capabilities: [
@@ -194,7 +194,7 @@ export const it: Dictionary = {
     },
 
     automations: {
-      eyebrow: "Automazioni",
+      eyebrow: "Automazioni per bexio",
       title: "Lavoro di routine? *Si sbriga da solo.*",
       intro: "Stabilisca una volta cosa deve succedere. smiit Analytics controlla i Suoi dati bexio e agisce per Lei.",
       flow: {
@@ -238,7 +238,7 @@ export const it: Dictionary = {
     },
 
     audiences: {
-      eyebrow: "Per chi?",
+      eyebrow: "Per PMI e fiduciarie",
       title: "Pensato per le persone, *non per i reparti IT.*",
       items: [
         {
@@ -337,7 +337,7 @@ export const it: Dictionary = {
 
     faq: {
       eyebrow: "FAQ",
-      title: "Domande *frequenti*",
+      title: "Domande frequenti *su smiit Analytics*",
       items: {
         setup: {
           question: "Quanto dura la configurazione?",

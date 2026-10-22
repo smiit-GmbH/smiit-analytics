@@ -163,7 +163,13 @@ export function VideoPlayer({ id, src, ratio, spec, alt, className }: VideoPlaye
   const showMedia = playing || posterOk
 
   return (
-    <div ref={boxRef} role="img" aria-label={alt} className={cn("relative w-full overflow-hidden", className)} style={{ aspectRatio: ratio }}>
+    <div
+      ref={boxRef}
+      role="img"
+      aria-label={alt}
+      className={cn("relative w-full overflow-hidden", className)}
+      style={{ aspectRatio: ratio }}
+    >
       {!showMedia && <PlaceholderBox id={id} spec={spec} />}
       {reduced ? (
         posterOk && (
@@ -198,7 +204,9 @@ export function DemoVideo({ id, src, ratio, spec, title }: { id: string; src: st
   const posterOk = usePosterLoaded(poster)
   return (
     <div className="relative w-full bg-navy" style={{ aspectRatio: ratio }}>
-      {!ready && !posterOk && <PlaceholderBox id={id} spec={spec} className="bg-none bg-navy-800 text-white/70 [&>span:first-child]:text-white" />}
+      {!ready && !posterOk && (
+        <PlaceholderBox id={id} spec={spec} className="bg-navy-800 bg-none text-white/70 [&>span:first-child]:text-white" />
+      )}
       <video
         className={cn("absolute inset-0 size-full", !ready && !posterOk && "opacity-0")}
         controls

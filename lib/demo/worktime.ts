@@ -48,4 +48,3 @@ export const WORKTIME = {
     { key: "smallJobs", value: 656 },
   ] as { key: ProjectKey; value: number }[],
 }
-

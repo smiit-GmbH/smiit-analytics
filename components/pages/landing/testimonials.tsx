@@ -32,7 +32,10 @@ export function TestimonialCard({ item }: { item: Testimonial }) {
           {item.image ? (
             <Image src={item.image} alt="" width={44} height={44} className="size-11 rounded-full object-cover" />
           ) : (
-            <span aria-hidden="true" className="flex size-11 items-center justify-center rounded-full bg-sand font-mono text-xs font-semibold text-navy">
+            <span
+              aria-hidden="true"
+              className="flex size-11 items-center justify-center rounded-full bg-sand font-mono text-xs font-semibold text-navy"
+            >
               {initials(item.name)}
             </span>
           )}

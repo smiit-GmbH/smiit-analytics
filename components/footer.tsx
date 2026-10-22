@@ -20,7 +20,13 @@ export function Footer({ lang, dict }: { lang: Locale; dict: FooterDict }) {
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/75">{t.tagline}</p>
           <p className="mt-5 text-sm text-white/75">
             {t.productOf}{" "}
-            <a href={LINKS.company} target="_blank" rel="noopener" data-track="footer_company" className="font-medium text-white underline-offset-4 hover:underline">
+            <a
+              href={LINKS.company}
+              target="_blank"
+              rel="noopener"
+              data-track="footer_company"
+              className="font-medium text-white underline-offset-4 hover:underline"
+            >
               {t.company}
               <span className="sr-only"> {common.externalHint}</span>
             </a>
@@ -28,7 +34,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: FooterDict }) {
         </div>
 
         <nav aria-label={t.productTitle}>
-          <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">{t.productTitle}</h2>
+          <h2 className="mb-4 text-xs font-semibold tracking-[0.18em] text-white/60 uppercase">{t.productTitle}</h2>
           <ul className="space-y-2.5">
             {NAV_SECTIONS.map((s) => (
               <li key={s}>
@@ -46,7 +52,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: FooterDict }) {
         </nav>
 
         <div>
-          <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">{t.contactTitle}</h2>
+          <h2 className="mb-4 text-xs font-semibold tracking-[0.18em] text-white/60 uppercase">{t.contactTitle}</h2>
           <ul className="space-y-2.5">
             <li>
               <a href={LINKS.email} data-track="footer_email" className={`${linkClass} inline-flex items-center gap-2`}>
@@ -71,7 +77,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: FooterDict }) {
         </div>
 
         <nav aria-label={t.legalTitle}>
-          <h2 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">{t.legalTitle}</h2>
+          <h2 className="mb-4 text-xs font-semibold tracking-[0.18em] text-white/60 uppercase">{t.legalTitle}</h2>
           <ul className="space-y-2.5">
             {LEGAL_ROUTES.map((route) => (
               <li key={route}>

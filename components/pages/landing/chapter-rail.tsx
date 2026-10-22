@@ -92,7 +92,9 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
       const doc = document.documentElement
       const page = Math.min(1, Math.max(0, window.scrollY / Math.max(1, doc.scrollHeight - vh)))
       setState((s) =>
-        Math.abs(s.progress - progress) < 0.001 && s.visible === visible && Math.abs(s.page - page) < 0.001 ? s : { progress, visible, page },
+        Math.abs(s.progress - progress) < 0.001 && s.visible === visible && Math.abs(s.page - page) < 0.001
+          ? s
+          : { progress, visible, page },
       )
 
       // Clips are written straight to the DOM in this frame (no React round trip),
@@ -142,7 +144,7 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
       <nav
         aria-label={label}
         className={cn(
-          "group/rail fixed left-4 top-1/2 z-30 hidden -translate-y-1/2 transition-opacity motion-reduce:transition-none xl:block min-[1440px]:left-5 3xl:left-8",
+          "group/rail fixed top-1/2 left-4 z-30 hidden -translate-y-1/2 transition-opacity motion-reduce:transition-none min-[1440px]:left-5 xl:block 3xl:left-8",
           state.visible ? "opacity-100 duration-500" : "pointer-events-none opacity-0 duration-150",
         )}
       >
@@ -155,7 +157,7 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
           ref={darkRef}
           aria-hidden="true"
           inert
-          className="pointer-events-none absolute left-0 top-0 [clip-path:inset(50%_50%)]"
+          className="pointer-events-none absolute top-0 left-0 [clip-path:inset(50%_50%)]"
           style={{ height: `calc(${at(n - 1)} + 12px)` }}
         >
           <RailLayer {...layer} dark />
@@ -180,10 +182,14 @@ function RailLayer({ chapters, progress, current, fill, dark }: LayerProps) {
   return (
     <>
       {/* Track and fill, centred on the dots */}
-      <span aria-hidden="true" className={cn("absolute left-[5px] top-1.5 w-px", dark ? "bg-white/20" : "bg-ink/10")} style={{ height: at(n - 1) }} />
       <span
         aria-hidden="true"
-        className={cn("absolute left-[5px] top-1.5 w-px origin-top", dark ? "bg-brand-light" : "bg-brand")}
+        className={cn("absolute top-1.5 left-[5px] w-px", dark ? "bg-white/20" : "bg-ink/10")}
+        style={{ height: at(n - 1) }}
+      />
+      <span
+        aria-hidden="true"
+        className={cn("absolute top-1.5 left-[5px] w-px origin-top", dark ? "bg-brand-light" : "bg-brand")}
         style={{ height: at(n - 1), transform: `scaleY(${fill})` }}
       />
       {chapters.map((c, i) => {
@@ -216,9 +222,9 @@ function RailLayer({ chapters, progress, current, fill, dark }: LayerProps) {
               />
               <span
                 className={cn(
-                  "-my-1 whitespace-nowrap rounded-full px-2 py-0.5 text-[0.72rem] leading-tight transition-opacity duration-500 motion-reduce:transition-none",
+                  "-my-1 rounded-full px-2 py-0.5 text-[0.72rem] leading-tight whitespace-nowrap transition-opacity duration-500 motion-reduce:transition-none",
                   // Below 1440px: names only on hover / focus, on a pill above the content.
-                  "opacity-0 shadow-sm ring-1 group-hover/rail:opacity-100 group-focus-within/rail:opacity-100",
+                  "opacity-0 shadow-sm ring-1 group-focus-within/rail:opacity-100 group-hover/rail:opacity-100",
                   dark ? "bg-navy-800/95 ring-white/10" : "bg-cream/95 ring-black/5",
                   // From 1440px: every chapter named; the current one stands out, the others stay quiet.
                   "min-[1440px]:bg-transparent min-[1440px]:opacity-100 min-[1440px]:shadow-none min-[1440px]:ring-0",

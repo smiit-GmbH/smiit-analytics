@@ -4,19 +4,7 @@ import * as React from "react"
 import { ChevronDown } from "lucide-react"
 import { BALANCE as D, BANK_ACCOUNTS, type AccountGroup } from "@/lib/demo/balance"
 import { cn } from "@/lib/utils"
-import {
-  AXIS_TEXT,
-  Card,
-  DashboardShell,
-  HBars,
-  KpiTile,
-  SERIES,
-  TITLE,
-  TipRow,
-  shiftISO,
-  useToday,
-  useDemo,
-} from "./dashboard-kit"
+import { AXIS_TEXT, Card, DashboardShell, HBars, KpiTile, SERIES, TITLE, TipRow, shiftISO, useToday, useDemo } from "./dashboard-kit"
 
 /*
  * Interactive demo of the smiit Analytics balance sheet report ("Bilanz"),
@@ -70,13 +58,10 @@ function BalanceTree({ groups, column, defaultOpen }: { groups: AccountGroup[]; 
                       aria-hidden="true"
                     />
                     {T.groups[g.key]}
-                    <span className="sr-only">
-                      {" "}
-                      – {isOpen ? T.collapse : T.expand}
-                    </span>
+                    <span className="sr-only"> – {isOpen ? T.collapse : T.expand}</span>
                   </button>
                 </th>
-                <td className="whitespace-nowrap py-1 pl-3 text-right font-medium tabular-nums" style={{ color: TITLE }}>
+                <td className="py-1 pl-3 text-right font-medium whitespace-nowrap tabular-nums" style={{ color: TITLE }}>
                   {f.chf2(sumGroup(g))}
                 </td>
               </tr>
@@ -84,7 +69,7 @@ function BalanceTree({ groups, column, defaultOpen }: { groups: AccountGroup[]; 
                 g.accounts.map((a) => (
                   <tr key={a.key} className="border-b border-line/70 hover:bg-[#f8f9fb]">
                     <td className="py-1 pl-5 text-ink">{T.accounts[a.key]}</td>
-                    <td className="whitespace-nowrap py-1 pl-3 text-right tabular-nums text-ink">{f.chf2(a.value)}</td>
+                    <td className="py-1 pl-3 text-right whitespace-nowrap text-ink tabular-nums">{f.chf2(a.value)}</td>
                   </tr>
                 ))}
             </React.Fragment>
@@ -96,7 +81,7 @@ function BalanceTree({ groups, column, defaultOpen }: { groups: AccountGroup[]; 
           <th scope="row" className="pt-1.5 text-left font-semibold" style={{ color: TITLE }}>
             {T.total}
           </th>
-          <td className="whitespace-nowrap pt-1.5 pl-3 text-right font-semibold tabular-nums" style={{ color: TITLE }}>
+          <td className="pt-1.5 pl-3 text-right font-semibold whitespace-nowrap tabular-nums" style={{ color: TITLE }}>
             {f.chf2(sumAll(groups))}
           </td>
         </tr>
@@ -123,10 +108,10 @@ function BankTable() {
       <tbody>
         {BANK_ACCOUNTS.map((b) => (
           <tr key={b.key} className="border-b border-line/70 last:border-0 hover:bg-[#f8f9fb]">
-            <td className="py-1 tabular-nums text-ink">{f.date(shiftISO(b.lastMovement, today))}</td>
+            <td className="py-1 text-ink tabular-nums">{f.date(shiftISO(b.lastMovement, today))}</td>
             <td className="py-1 text-ink">{t.banks[b.key]}</td>
-            <td className="whitespace-nowrap py-1 text-right tabular-nums text-ink">{f.chf2(b.value)}</td>
-            <td className="py-1 text-right tabular-nums text-ink">{b.movements}</td>
+            <td className="py-1 text-right whitespace-nowrap text-ink tabular-nums">{f.chf2(b.value)}</td>
+            <td className="py-1 text-right text-ink tabular-nums">{b.movements}</td>
           </tr>
         ))}
       </tbody>

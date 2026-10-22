@@ -111,7 +111,14 @@ export function Header({ lang, dict, languageHomeOnly }: HeaderProps) {
             <CtaLink externalHint={common.externalHint} href={LINKS.signup} track="mobile_menu_signup" size="md" className="w-full">
               {t.cta}
             </CtaLink>
-            <CtaLink externalHint={common.externalHint} href={LINKS.login} track="mobile_menu_login" variant="secondary" size="md" className="w-full">
+            <CtaLink
+              externalHint={common.externalHint}
+              href={LINKS.login}
+              track="mobile_menu_login"
+              variant="secondary"
+              size="md"
+              className="w-full"
+            >
               {t.login}
             </CtaLink>
           </div>

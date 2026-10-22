@@ -84,7 +84,7 @@ export function ModalContent({ title, hideTitle, size = "md", closeLabel = "Schl
             type="button"
             onClick={() => setOpen(false)}
             className={cn(
-              "absolute right-3 top-3 z-10 flex size-10 cursor-pointer items-center justify-center rounded-full transition-colors",
+              "absolute top-3 right-3 z-10 flex size-10 cursor-pointer items-center justify-center rounded-full transition-colors",
               "outline-none focus-visible:ring-2 focus-visible:ring-brand",
               size === "video" ? "bg-white/90 text-navy hover:bg-white" : "text-ink hover:bg-black/5",
             )}

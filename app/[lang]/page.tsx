@@ -11,7 +11,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!isLocale(lang)) return {}
   const { meta } = getDictionary(lang)
   // Absolute title: the home page is not "<title> – smiit Analytics".
-  return { ...buildPageMetadata({ lang, route: "home", title: meta.title, description: meta.description }), title: { absolute: meta.title } }
+  return {
+    ...buildPageMetadata({ lang, route: "home", title: meta.title, description: meta.description }),
+    title: { absolute: meta.title },
+  }
 }
 
 export default async function HomePage({ params }: PageProps) {

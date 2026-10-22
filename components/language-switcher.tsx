@@ -124,7 +124,7 @@ export function LanguageSwitcher({ lang, t, variant = "menu", homeOnly, classNam
       <ul
         id={listId}
         hidden={!open}
-        className="absolute right-0 top-full z-50 mt-2 w-44 rounded-card bg-white p-1.5 shadow-frame ring-1 ring-black/5"
+        className="absolute top-full right-0 z-50 mt-2 w-44 rounded-card bg-white p-1.5 shadow-frame ring-1 ring-black/5"
       >
         {links.map((l) => (
           <li key={l.code}>

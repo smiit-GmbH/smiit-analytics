@@ -80,7 +80,13 @@ function FlowChart({ height }: { height: number }) {
   const band = iw / n
   const bw = Math.min(16, band * 0.4)
   const { top, ticks } = niceScale(Math.max(...D.inflows, ...D.outflows), 3)
-  const allTicks = [...ticks.slice(1).map((t) => -t).reverse(), ...ticks]
+  const allTicks = [
+    ...ticks
+      .slice(1)
+      .map((t) => -t)
+      .reverse(),
+    ...ticks,
+  ]
   const y = (v: number) => m.t + ih / 2 - (v / top) * (ih / 2)
   const base = y(0)
   const cx = (i: number) => m.l + band * i + band / 2
@@ -210,7 +216,14 @@ function Waterfall({ height }: { height: number }) {
                 {i < n - 2 && <line x1={cx(i) + bw / 2} x2={cx(i + 1) - bw / 2} y1={y(b.to)} y2={y(b.to)} stroke="#c3c9d4" />}
                 <rect x={cx(i) - bw / 2} y={y0} width={bw} height={hgt} rx={2} fill={color(b.kind, active === i)} />
                 {(last || i % every === 0) && (
-                  <text x={cx(i)} y={H - 4} textAnchor="middle" fontSize={10} fontWeight={last ? 600 : 400} fill={last || active === i ? TITLE : AXIS_TEXT}>
+                  <text
+                    x={cx(i)}
+                    y={H - 4}
+                    textAnchor="middle"
+                    fontSize={10}
+                    fontWeight={last ? 600 : 400}
+                    fill={last || active === i ? TITLE : AXIS_TEXT}
+                  >
                     {last ? b.label : b.label.split(" ")[0]}
                   </text>
                 )}

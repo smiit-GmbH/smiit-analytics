@@ -9,11 +9,7 @@ export function Pricing({ dict }: SectionProps) {
   const t = dict.home.pricing
   return (
     <Section id={SECTIONS.pricing} tone="white" eyebrow={t.eyebrow} title={rich(t.title)} intro={t.intro} align="center">
-      <PricingPlans
-        t={t}
-        signupHref={LINKS.signup}
-        externalHint={dict.common.externalHint}
-      />
+      <PricingPlans t={t} signupHref={LINKS.signup} externalHint={dict.common.externalHint} />
     </Section>
   )
 }

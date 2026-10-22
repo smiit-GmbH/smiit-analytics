@@ -12,13 +12,10 @@ export function Hero({ lang, dict }: SectionProps) {
   const demo = MEDIA.VIDEO_DEMO_FULL
 
   return (
-    <section aria-labelledby="hero-title" className="pb-16 pt-10 md:pb-24 md:pt-16">
+    <section aria-labelledby="hero-title" className="pt-10 pb-16 md:pt-16 md:pb-24">
       <Container className="grid items-center gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-14">
         <div>
-          <h1
-            id="hero-title"
-            className="font-serif text-display tracking-tight text-balance"
-          >
+          <h1 id="hero-title" className="font-serif text-display tracking-tight text-balance">
             {rich(t.title)}
           </h1>
           <p className="mt-5 max-w-lg text-lead text-ink-muted">{t.subtitle}</p>
@@ -36,7 +33,13 @@ export function Hero({ lang, dict }: SectionProps) {
                 </Button>
               </ModalTrigger>
               <ModalContent title={t.demoTitle} hideTitle size="video" closeLabel={dict.common.close}>
-                <DemoVideo id="VIDEO_DEMO_FULL" src={mediaPath("VIDEO_DEMO_FULL", lang)} ratio={demo.ratio} spec={demo.spec} title={t.demoTitle} />
+                <DemoVideo
+                  id="VIDEO_DEMO_FULL"
+                  src={mediaPath("VIDEO_DEMO_FULL", lang)}
+                  ratio={demo.ratio}
+                  spec={demo.spec}
+                  title={t.demoTitle}
+                />
               </ModalContent>
             </Modal>
           </div>

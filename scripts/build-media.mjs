@@ -73,9 +73,14 @@ function step1() {
   // Faint app skeleton behind the dialog, as in the product screenshot.
   const skeleton = [
     [60, 40, 1080, 56],
-    [60, 130, 250, 150], [330, 130, 250, 150], [600, 130, 250, 150], [870, 130, 270, 150],
-    [60, 310, 520, 280], [600, 310, 540, 280],
-    [60, 620, 520, 240], [600, 620, 540, 240],
+    [60, 130, 250, 150],
+    [330, 130, 250, 150],
+    [600, 130, 250, 150],
+    [870, 130, 270, 150],
+    [60, 310, 520, 280],
+    [600, 310, 540, 280],
+    [60, 620, 520, 240],
+    [600, 620, 540, 240],
   ]
     .map(([x, y, w, h]) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="16" fill="#e7eaf0"/>`)
     .join("")
@@ -135,12 +140,17 @@ function miniChart(kind, x, y) {
         .join("")
     case "kpis": {
       const tiles = [0, 1, 2]
-        .map((i) => `<rect x="${x + i * 92}" y="${y}" width="82" height="52" rx="8" fill="#f1f3f8"/>
+        .map(
+          (i) => `<rect x="${x + i * 92}" y="${y}" width="82" height="52" rx="8" fill="#f1f3f8"/>
           <rect x="${x + i * 92 + 10}" y="${y + 11}" width="38" height="7" rx="3.5" fill="${C.pale}"/>
-          <rect x="${x + i * 92 + 10}" y="${y + 28}" width="${[54, 44, 60][i]}" height="12" rx="4" fill="${C.navy}"/>`)
+          <rect x="${x + i * 92 + 10}" y="${y + 28}" width="${[54, 44, 60][i]}" height="12" rx="4" fill="${C.navy}"/>`,
+        )
         .join("")
       const spark = [34, 28, 38, 30, 42, 36, 48, 44, 54].map((v, i) => `${x + i * 33},${y + 122 - v}`).join(" ")
-      return tiles + `<polyline points="${spark}" fill="none" stroke="${C.light}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>`
+      return (
+        tiles +
+        `<polyline points="${spark}" fill="none" stroke="${C.light}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>`
+      )
     }
     default:
       return ""
@@ -174,10 +184,23 @@ function step2() {
 /* ── Step 3: customise by drag & drop / AI ───────────────────────────── */
 function step3() {
   const items = [
-    { label: L.editor.items[0], icon: `<text x="0" y="0" font-family="${FONT}" font-size="26" font-weight="800" fill="${C.series}" text-anchor="middle" dy="9">123</text>` },
-    { label: L.editor.items[1], icon: `<polyline points="-18,10 -6,-2 4,4 18,-12" fill="none" stroke="${C.series}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>` },
-    { label: L.editor.items[2], icon: `<rect x="-17" y="-2" width="9" height="16" rx="2" fill="${C.series}"/><rect x="-4" y="-14" width="9" height="28" rx="2" fill="${C.series}"/><rect x="9" y="-7" width="9" height="21" rx="2" fill="${C.series}"/>`, dragging: true },
-    { label: L.editor.items[3], icon: `<rect x="-17" y="-14" width="34" height="28" rx="4" fill="none" stroke="${C.series}" stroke-width="4"/><path d="M-17,-3 h34 M-17,6 h34 M-4,-14 v28" stroke="${C.series}" stroke-width="3"/>` },
+    {
+      label: L.editor.items[0],
+      icon: `<text x="0" y="0" font-family="${FONT}" font-size="26" font-weight="800" fill="${C.series}" text-anchor="middle" dy="9">123</text>`,
+    },
+    {
+      label: L.editor.items[1],
+      icon: `<polyline points="-18,10 -6,-2 4,4 18,-12" fill="none" stroke="${C.series}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    },
+    {
+      label: L.editor.items[2],
+      icon: `<rect x="-17" y="-2" width="9" height="16" rx="2" fill="${C.series}"/><rect x="-4" y="-14" width="9" height="28" rx="2" fill="${C.series}"/><rect x="9" y="-7" width="9" height="21" rx="2" fill="${C.series}"/>`,
+      dragging: true,
+    },
+    {
+      label: L.editor.items[3],
+      icon: `<rect x="-17" y="-14" width="34" height="28" rx="4" fill="none" stroke="${C.series}" stroke-width="4"/><path d="M-17,-3 h34 M-17,6 h34 M-4,-14 v28" stroke="${C.series}" stroke-width="3"/>`,
+    },
   ]
   const list = items
     .map((it, i) => {
@@ -191,7 +214,11 @@ function step3() {
     })
     .join("")
 
-  const kpi = (x, label, value) => `<rect x="${x}" y="190" width="350" height="116" rx="18" fill="#fff" stroke="${C.border}" stroke-width="2"/>
+  const kpi = (
+    x,
+    label,
+    value,
+  ) => `<rect x="${x}" y="190" width="350" height="116" rx="18" fill="#fff" stroke="${C.border}" stroke-width="2"/>
     ${text(x + 26, 234, label, { size: 24, weight: 600, color: C.muted })}
     ${text(x + 26, 282, value, { size: 38, weight: 700 })}`
 
@@ -250,7 +277,11 @@ function multiCompany() {
     .map((v, i) => `<path d="M${684 + i * 62},${838} V${842 - v} q0,-7 7,-7 h22 q7,0 7,7 V${838} z" fill="${C.series}"/>`)
     .join("")
   const line = [58, 50, 72, 44, 60, 76, 70, 92, 84].map((v, i) => `${684 + i * 55},${590 - v * 1.3}`).join(" ")
-  const kpi = (x, label, value) => `<rect x="${x}" y="276" width="220" height="112" rx="16" fill="#fff" stroke="${C.border}" stroke-width="2"/>
+  const kpi = (
+    x,
+    label,
+    value,
+  ) => `<rect x="${x}" y="276" width="220" height="112" rx="16" fill="#fff" stroke="${C.border}" stroke-width="2"/>
     ${text(x + 22, 316, label, { size: 23, weight: 600, color: C.muted })}
     ${text(x + 22, 362, value, { size: 30, weight: 700 })}`
 
@@ -311,7 +342,13 @@ const glyph = {
 function personaOwner() {
   const change = F.signed(11.8, (v) => F.pct(v))
   const spark = [48, 52, 61, 45, 50, 59, 64, 59, 67, 57, 50, 62].map((v, i) => `${200 + i * 28},${680 - (v - 40) * 3}`).join(" ")
-  const note = (y, g, bg, title, sub) => `<rect x="620" y="${y}" width="520" height="150" rx="26" fill="#fff" stroke="${C.border}" stroke-width="2" filter="url(#shadow)"/>
+  const note = (
+    y,
+    g,
+    bg,
+    title,
+    sub,
+  ) => `<rect x="620" y="${y}" width="520" height="150" rx="26" fill="#fff" stroke="${C.border}" stroke-width="2" filter="url(#shadow)"/>
     ${iconTile(650, y + 39, g, bg)}
     ${text(746, y + 66, title, { size: 32, weight: 700 })}
     ${text(746, y + 108, sub, { size: 27, color: C.muted })}`
@@ -343,7 +380,14 @@ function personaOwner() {
 
 /** Trustee: fanned reports of several clients, front one ready to export. */
 function personaTrustee() {
-  const card = (x, y, rot, short, name, front) => `<g transform="rotate(${rot} ${x + 300} ${y + 260})" ${front ? 'filter="url(#shadow)"' : ""}>
+  const card = (
+    x,
+    y,
+    rot,
+    short,
+    name,
+    front,
+  ) => `<g transform="rotate(${rot} ${x + 300} ${y + 260})" ${front ? 'filter="url(#shadow)"' : ""}>
       <rect x="${x}" y="${y}" width="600" height="520" rx="28" fill="#fff" stroke="${C.border}" stroke-width="2"/>
       <rect x="${x + 32}" y="${y + 32}" width="64" height="64" rx="14" fill="${front ? C.navy : "#e8ecf4"}"/>
       ${text(x + 64, y + 74, short, { size: 26, weight: 800, color: front ? "#fff" : C.navy, anchor: "middle" })}
@@ -357,9 +401,16 @@ function personaTrustee() {
              ${text(x + 334, y + 170, L.trustee.open, { size: 24, weight: 600, color: C.muted })}
              ${text(x + 334, y + 220, F.chfCompact(38000), { size: 36, weight: 700 })}
              ${[70, 102, 84, 126, 110, 142, 118]
-               .map((v, i) => `<path d="M${x + 44 + i * 60},${y + 470} V${y + 476 - v} q0,-7 7,-7 h24 q7,0 7,7 V${y + 470} z" fill="${C.series}"/>`)
+               .map(
+                 (v, i) =>
+                   `<path d="M${x + 44 + i * 60},${y + 470} V${y + 476 - v} q0,-7 7,-7 h24 q7,0 7,7 V${y + 470} z" fill="${C.series}"/>`,
+               )
                .join("")}`
-          : [0, 1, 2].map((k) => `<rect x="${x + 32}" y="${y + 140 + k * 46}" width="${[420, 340, 380][k]}" height="20" rx="10" fill="${C.track}"/>`).join("")
+          : [0, 1, 2]
+              .map(
+                (k) => `<rect x="${x + 32}" y="${y + 140 + k * 46}" width="${[420, 340, 380][k]}" height="20" rx="10" fill="${C.track}"/>`,
+              )
+              .join("")
       }
     </g>`
   return svg(
@@ -525,7 +576,9 @@ for (const lang of locales) {
     console.log("written", `${dir}/${file}`)
   }
   mkdirSync("public/og", { recursive: true })
-  await sharp(Buffer.from(ogImage(dict))).png().toFile(`public/og/${lang}.png`)
+  await sharp(Buffer.from(ogImage(dict)))
+    .png()
+    .toFile(`public/og/${lang}.png`)
   console.log("written", `public/og/${lang}.png`)
 }
 

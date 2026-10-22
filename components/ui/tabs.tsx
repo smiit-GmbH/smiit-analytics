@@ -89,7 +89,7 @@ export function TabsContent({ className, ...props }: React.ComponentProps<typeof
   return (
     <TabsPrimitive.Content
       className={cn(
-        "mt-8 outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4 rounded-tile",
+        "mt-8 rounded-tile outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-4",
         "data-[state=active]:animate-in data-[state=active]:fade-in-0 motion-reduce:animate-none",
         className,
       )}

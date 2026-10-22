@@ -76,4 +76,3 @@ export const BALANCE = {
   equityGroup: "equity" as GroupKey,
   liquid,
 }
-

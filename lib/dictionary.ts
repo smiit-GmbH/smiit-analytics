@@ -127,8 +127,7 @@ const de = {
           text: "Wie läuft der Umsatz? Wer hat noch nicht bezahlt? Die Antwort steckt irgendwo in bexio.",
         },
       ],
-      solution:
-        "smiit Analytics holt Ihre Daten direkt aus bexio und macht daraus verständliche Berichte. Automatisch und ohne Excel.",
+      solution: "smiit Analytics holt Ihre Daten direkt aus bexio und macht daraus verständliche Berichte. Automatisch und ohne Excel.",
     },
 
     steps: {
@@ -216,8 +215,7 @@ const de = {
     automations: {
       eyebrow: "Automatisierungen",
       title: "Routinearbeit? *Erledigt sich selbst.*",
-      intro:
-        "Legen Sie einmal fest, was passieren soll. smiit Analytics prüft Ihre bexio-Daten und handelt für Sie.",
+      intro: "Legen Sie einmal fest, was passieren soll. smiit Analytics prüft Ihre bexio-Daten und handelt für Sie.",
       /** Animated example flow (trigger → data → condition → two branches → info). */
       flow: {
         label: "Beispiel-Ablauf",
@@ -627,7 +625,8 @@ const de = {
       vatId: "Umsatzsteuer-ID",
       responsible: "Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)",
       dispute: "Streitschlichtung",
-      disputeText: "Wir sind nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen und nehmen daran nicht teil.",
+      disputeText:
+        "Wir sind nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen und nehmen daran nicht teil.",
       country: "Deutschland",
     },
     privacy: {
@@ -866,8 +865,7 @@ const en: Dictionary = {
           text: "How are sales going? Who hasn't paid yet? The answer is buried somewhere in bexio.",
         },
       ],
-      solution:
-        "smiit Analytics pulls your data directly from bexio and turns it into clear reports. Automatically and without Excel.",
+      solution: "smiit Analytics pulls your data directly from bexio and turns it into clear reports. Automatically and without Excel.",
     },
 
     steps: {
@@ -955,8 +953,7 @@ const en: Dictionary = {
     automations: {
       eyebrow: "Automations",
       title: "Routine work? *Takes care of itself.*",
-      intro:
-        "Define once what should happen. smiit Analytics checks your bexio data and acts for you.",
+      intro: "Define once what should happen. smiit Analytics checks your bexio data and acts for you.",
       /** Animated example flow (trigger → data → condition → two branches → info). */
       flow: {
         label: "Example flow",
@@ -1362,7 +1359,8 @@ const en: Dictionary = {
       vatId: "VAT ID",
       responsible: "Responsible for content (Section 18(2) MStV)",
       dispute: "Dispute resolution",
-      disputeText: "We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board and do not participate in them.",
+      disputeText:
+        "We are not obliged to participate in dispute resolution proceedings before a consumer arbitration board and do not participate in them.",
       country: "Germany",
     },
     privacy: {
@@ -1480,8 +1478,7 @@ const en: Dictionary = {
     IMG_STEP_2: "Report overview with the Standard, Sales, Finance and Management packages, all ready",
     IMG_STEP_3: "A report being customised with drag and drop",
     VIDEO_DRAGDROP: "A KPI is dragged into a report",
-    IMG_MULTI_COMPANY:
-      "One login for the fiduciary firm: workspace list with all clients, one click opens the selected client's report",
+    IMG_MULTI_COMPANY: "One login for the fiduciary firm: workspace list with all clients, one click opens the selected client's report",
     VIDEO_AI_CHAT: "A question to the AI and the answer as a chart",
     IMG_PERSONA_MANAGEMENT:
       "Smartphone showing revenue and open invoices, alongside automatic notifications such as the weekly summary and payment received",
@@ -1683,8 +1680,7 @@ const fr: Dictionary = {
     automations: {
       eyebrow: "Automatisations",
       title: "Les tâches répétitives ? *Elles se font toutes seules.*",
-      intro:
-        "Définissez une fois ce qui doit se passer. smiit Analytics vérifie vos données bexio et agit pour vous.",
+      intro: "Définissez une fois ce qui doit se passer. smiit Analytics vérifie vos données bexio et agit pour vous.",
       flow: {
         label: "Exemple de déroulement",
         live: "Fonctionne automatiquement",
@@ -2069,7 +2065,8 @@ const fr: Dictionary = {
     legalNotice: {
       nav: "Mentions légales",
       title: "Mentions légales",
-      description: "Mentions légales de smiit Analytics, un produit de smiit GmbH\u00A0: adresse, direction, registre du commerce et contact.",
+      description:
+        "Mentions légales de smiit Analytics, un produit de smiit GmbH\u00A0: adresse, direction, registre du commerce et contact.",
       subtitle: "Informations selon le § 5 de la loi allemande sur les services numériques (DDG)",
       contact: "Contact",
       phone: "Téléphone",
@@ -2081,7 +2078,8 @@ const fr: Dictionary = {
       vatId: "Numéro de TVA",
       responsible: "Responsable du contenu (§ 18, al. 2 MStV)",
       dispute: "Règlement des litiges",
-      disputeText: "Nous ne sommes pas tenus de participer à une procédure de règlement des litiges devant un organe de conciliation pour les consommateurs et n'y participons pas.",
+      disputeText:
+        "Nous ne sommes pas tenus de participer à une procédure de règlement des litiges devant un organe de conciliation pour les consommateurs et n'y participons pas.",
       country: "Allemagne",
     },
     privacy: {
@@ -2394,8 +2392,7 @@ const it: Dictionary = {
     automations: {
       eyebrow: "Automazioni",
       title: "Lavoro di routine? *Si sbriga da solo.*",
-      intro:
-        "Stabilisca una volta cosa deve succedere. smiit Analytics controlla i Suoi dati bexio e agisce per Lei.",
+      intro: "Stabilisca una volta cosa deve succedere. smiit Analytics controlla i Suoi dati bexio e agisce per Lei.",
       flow: {
         label: "Flusso d'esempio",
         live: "Funziona in automatico",
@@ -2759,7 +2756,13 @@ const it: Dictionary = {
         daysUnit: "giorni",
       },
       flows: { title: "Entrate e uscite per mese", inflows: "Entrate", outflows: "Uscite", net: "Variazione netta" },
-      waterfall: { title: "Andamento della liquidità per mese", up: "Aumento", down: "Diminuzione", total: "Totale", cumulative: "cumulato" },
+      waterfall: {
+        title: "Andamento della liquidità per mese",
+        up: "Aumento",
+        down: "Diminuzione",
+        total: "Totale",
+        cumulative: "cumulato",
+      },
       banks: { title: "Variazione netta per conto bancario" },
       overdue: { title: "Crediti scaduti per cliente", share: "dei crediti scaduti" },
     },
@@ -2792,7 +2795,8 @@ const it: Dictionary = {
       vatId: "Partita IVA",
       responsible: "Responsabile dei contenuti (§ 18 cpv. 2 MStV)",
       dispute: "Risoluzione delle controversie",
-      disputeText: "Non siamo tenuti a partecipare a procedure di risoluzione delle controversie dinanzi a un organo di conciliazione per i consumatori e non vi partecipiamo.",
+      disputeText:
+        "Non siamo tenuti a partecipare a procedure di risoluzione delle controversie dinanzi a un organo di conciliazione per i consumatori e non vi partecipiamo.",
       country: "Germania",
     },
     privacy: {

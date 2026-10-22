@@ -13,7 +13,10 @@ export function Problem({ dict }: SectionProps) {
         {t.pains.map((p) => (
           <li key={p.title}>
             <Card className="h-full">
-              <div aria-hidden="true" className="mb-5 flex size-11 items-center justify-center rounded-control bg-sand text-ink-muted [&_svg]:size-5">
+              <div
+                aria-hidden="true"
+                className="mb-5 flex size-11 items-center justify-center rounded-control bg-sand text-ink-muted [&_svg]:size-5"
+              >
                 <Icon name={p.icon} />
               </div>
               <CardTitle>{p.title}</CardTitle>

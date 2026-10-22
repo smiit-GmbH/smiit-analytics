@@ -51,7 +51,7 @@ function Row({ label, value, strong }: { label: string; value: string; strong?: 
   return (
     <div className="flex justify-between gap-4 py-0.5">
       <span className="text-ink-muted">{label}</span>
-      <span className={cn("tabular-nums text-ink", strong && "font-semibold")}>{value}</span>
+      <span className={cn("text-ink tabular-nums", strong && "font-semibold")}>{value}</span>
     </div>
   )
 }
@@ -95,7 +95,11 @@ function Gantt({ height }: { height: number }) {
 
   // Month boundaries inside the (shifted) window; each label sits centred in its month.
   const ticks: Date[] = []
-  for (let d = new Date(start.getFullYear(), start.getMonth() + (start.getDate() === 1 ? 0 : 1), 1); d < end; d = new Date(d.getFullYear(), d.getMonth() + 1, 1))
+  for (
+    let d = new Date(start.getFullYear(), start.getMonth() + (start.getDate() === 1 ? 0 : 1), 1);
+    d < end;
+    d = new Date(d.getFullYear(), d.getMonth() + 1, 1)
+  )
     ticks.push(d)
   const every = iw / 12 < 30 ? 3 : 1
 

@@ -15,12 +15,12 @@ npm install
 npm run dev          # http://localhost:3000 → redirects to the browser language (fallback /de/)
 ```
 
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Development server |
-| `npm run build` | Static export to `out/` |
-| `npm run typecheck` | TypeScript check – also fails if a language is missing a text |
-| `npm run media` | Regenerates the localized illustrations and social preview images (see below) |
+| Command             | Purpose                                                                       |
+| ------------------- | ----------------------------------------------------------------------------- |
+| `npm run dev`       | Development server                                                            |
+| `npm run build`     | Static export to `out/`                                                       |
+| `npm run typecheck` | TypeScript check – also fails if a language is missing a text                 |
+| `npm run media`     | Regenerates the localized illustrations and social preview images (see below) |
 
 ---
 
@@ -38,20 +38,21 @@ npm run dev          # http://localhost:3000 → redirects to the browser langua
 
 ## Where to change what
 
-| What | File |
-|---|---|
-| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary.ts`](lib/dictionary.ts) |
-| **Company details** (legal notice, footer, structured data) | [`lib/site.ts`](lib/site.ts) (`COMPANY`) |
-| **Prices** (CHF per month and bexio company, additional users) | [`lib/pricing.ts`](lib/pricing.ts) |
-| **Links** (app, demo booking, bexio Marketplace, LinkedIn …) | [`lib/links.ts`](lib/links.ts) |
-| **Pages, section anchors, navigation** | [`lib/routes.ts`](lib/routes.ts) |
-| **Domain** (canonical URLs, sitemap, Open Graph, structured data) | [`lib/site.ts`](lib/site.ts) |
-| **Media slots** (file names, formats, per language or shared) | [`lib/media.ts`](lib/media.ts), documented in [`MEDIA.md`](MEDIA.md) |
-| **Demo dashboard data** (numbers only; labels are in the dictionary) | [`lib/demo/`](lib/demo) |
-| **Analytics** (prepared, disabled) | [`lib/analytics.ts`](lib/analytics.ts) |
-| **Design tokens** (colours, radii, shadows, spacing) | [`app/globals.css`](app/globals.css) (`@theme`) |
+| What                                                                                               | File                                                                 |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary.ts`](lib/dictionary.ts)                             |
+| **Company details** (legal notice, footer, structured data)                                        | [`lib/site.ts`](lib/site.ts) (`COMPANY`)                             |
+| **Prices** (CHF per month and bexio company, additional users)                                     | [`lib/pricing.ts`](lib/pricing.ts)                                   |
+| **Links** (app, demo booking, bexio Marketplace, LinkedIn …)                                       | [`lib/links.ts`](lib/links.ts)                                       |
+| **Pages, section anchors, navigation**                                                             | [`lib/routes.ts`](lib/routes.ts)                                     |
+| **Domain** (canonical URLs, sitemap, Open Graph, structured data)                                  | [`lib/site.ts`](lib/site.ts)                                         |
+| **Media slots** (file names, formats, per language or shared)                                      | [`lib/media.ts`](lib/media.ts), documented in [`MEDIA.md`](MEDIA.md) |
+| **Demo dashboard data** (numbers only; labels are in the dictionary)                               | [`lib/demo/`](lib/demo)                                              |
+| **Analytics** (prepared, disabled)                                                                 | [`lib/analytics.ts`](lib/analytics.ts)                               |
+| **Design tokens** (colours, radii, shadows, spacing)                                               | [`app/globals.css`](app/globals.css) (`@theme`)                      |
 
 Dictionary conventions:
+
 - `*word*` in headlines renders as a brand-coloured highlight.
 - `{name}` is a value filled in by the code (price, percentage, …).
 - `[PLACEHOLDER]` marks a fact that is still unknown – never replace it with a guess.
@@ -144,7 +145,7 @@ Every CTA carries `data-track="<id>"` (e.g. `hero_signup`, `pricing_yearly_signu
 
 The site is exported statically (`output: "export"` in `next.config.mjs`). `npm run build` creates `out/`, which any static host can serve. The host must answer unknown paths with `404.html` (GitHub Pages, Netlify, Vercel and Cloudflare Pages do this automatically).
 
-- **GitHub Pages:** [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) deploys on every push to `main` (and manually via *Run workflow*).
+- **GitHub Pages:** [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) deploys on every push to `main` (and manually via _Run workflow_).
 - **Vercel:** import the project with the “Next.js” framework preset. Optionally remove `output: "export"` and `images.unoptimized` to get responsive, optimized images.
 
 ---

@@ -29,10 +29,7 @@ export function IconTile({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       aria-hidden="true"
-      className={cn(
-        "mb-5 flex size-11 items-center justify-center rounded-control bg-brand-soft text-brand [&_svg]:size-5",
-        className,
-      )}
+      className={cn("mb-5 flex size-11 items-center justify-center rounded-control bg-brand-soft text-brand [&_svg]:size-5", className)}
       {...props}
     />
   )

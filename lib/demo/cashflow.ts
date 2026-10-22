@@ -38,4 +38,3 @@ export const CASHFLOW = {
     { name: "Bergmann Consulting", value: 2600 },
   ],
 }
-

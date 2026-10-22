@@ -34,9 +34,7 @@ export function Ai({ lang, dict }: SectionProps) {
       <Card tone="navy" className="mt-12 grid gap-8 md:mt-16 md:grid-cols-[1.3fr_1fr] md:items-center md:p-10">
         <div>
           <Badge variant="onDark">{t.mcp.badge}</Badge>
-          <h3 className="mt-4 font-serif text-title-lg tracking-tight text-balance">
-            {t.mcp.title}
-          </h3>
+          <h3 className="mt-4 font-serif text-title-lg tracking-tight text-balance">{t.mcp.title}</h3>
           <p className="mt-4 leading-relaxed text-white/75">{t.mcp.text}</p>
           <a
             href={`#${faqAnchor("mcp")}`}

@@ -34,12 +34,7 @@ export function Reports({ dict }: SectionProps) {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <TabsList aria-label={t.tabsLabel} className="w-full sm:w-auto">
               {tabs.map((tab) => (
-                <TabsTrigger
-                  key={tab}
-                  value={tab}
-                  data-track={`reports_tab_${tab}`}
-                  className="px-3.5 sm:px-4"
-                >
+                <TabsTrigger key={tab} value={tab} data-track={`reports_tab_${tab}`} className="px-3.5 sm:px-4">
                   {t.tabs[tab]}
                 </TabsTrigger>
               ))}

@@ -51,4 +51,3 @@ export const SALES = {
     { key: "over90", value: 2600 },
   ] as { key: BucketKey; value: number }[],
 }
-

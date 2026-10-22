@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # npm: one grouped PR per week for minor/patch updates, majors separately.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
+    ignore:
+      # 1.x drops the brand icons; the footer uses Linkedin.
+      - dependency-name: lucide-react
+        update-types: [version-update:semver-major]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly

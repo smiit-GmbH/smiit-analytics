@@ -15,12 +15,17 @@ npm install
 npm run dev          # http://localhost:3000 → redirects to the browser language (fallback /de/)
 ```
 
-| Command             | Purpose                                                                       |
-| ------------------- | ----------------------------------------------------------------------------- |
-| `npm run dev`       | Development server                                                            |
-| `npm run build`     | Static export to `out/`                                                       |
-| `npm run typecheck` | TypeScript check – also fails if a language is missing a text                 |
-| `npm run media`     | Regenerates the localized illustrations and social preview images (see below) |
+| Command             | Purpose                                                                          |
+| ------------------- | -------------------------------------------------------------------------------- |
+| `npm run dev`       | Development server                                                               |
+| `npm run build`     | Static export to `out/`                                                          |
+| `npm run typecheck` | TypeScript check – also fails if a language is missing a text                    |
+| `npm test`          | Unit tests (Vitest) – incl. placeholders and highlights kept in every language   |
+| `npm run lint`      | ESLint (Next.js, TypeScript, React Compiler rules); `lint:fix` fixes what it can |
+| `npm run format`    | Formats everything with Prettier; CI runs `format:check`                         |
+| `npm run media`     | Regenerates the localized illustrations and social preview images (see below)    |
+
+Node 22 (see `.nvmrc`). Every pull request runs lint, format check, typecheck, tests and the build ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)).
 
 ---
 
@@ -145,7 +150,7 @@ Every CTA carries `data-track="<id>"` (e.g. `hero_signup`, `pricing_yearly_signu
 
 The site is exported statically (`output: "export"` in `next.config.mjs`). `npm run build` creates `out/`, which any static host can serve. The host must answer unknown paths with `404.html` (GitHub Pages, Netlify, Vercel and Cloudflare Pages do this automatically).
 
-- **GitHub Pages:** [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) deploys on every push to `main` (and manually via _Run workflow_).
+- **GitHub Pages:** [`.github/workflows/ci.yml`](.github/workflows/ci.yml) deploys on every push to `main` (and manually via _Run workflow_), once all checks and the build have passed. Dependabot ([`.github/dependabot.yml`](.github/dependabot.yml)) opens weekly update PRs.
 - **Vercel:** import the project with the “Next.js” framework preset. Optionally remove `output: "export"` and `images.unoptimized` to get responsive, optimized images.
 
 ---

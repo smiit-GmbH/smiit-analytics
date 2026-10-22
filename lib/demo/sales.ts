@@ -6,12 +6,11 @@
  */
 
 import type { Dictionary } from "@/lib/dictionary"
+import { sum } from "./math"
 
 type Texts = Dictionary["demo"]["sales"]
 export type ProductKey = keyof Texts["products"]["names"]
 export type BucketKey = keyof Texts["receivables"]["buckets"]
-
-const sum = (a: number[]) => a.reduce((s, v) => s + v, 0)
 
 const REVENUE = [48200, 52600, 61400, 44800, 50300, 58900, 63700, 59200, 66800, 57400, 49900, 62300]
 const REVENUE_PREV = [43100, 47800, 55200, 41900, 45600, 52300, 57100, 54800, 58900, 53600, 46200, 55700]
@@ -35,7 +34,7 @@ export const SALES = {
     { key: "materials", value: 88600 },
     { key: "training", value: 41200 },
     { key: "support", value: 33700 },
-  ] as { key: ProductKey; value: number }[],
+  ] satisfies { key: ProductKey; value: number }[],
   /** Kennzahlen der letzten 12 Monate. Ø Rechnungswert = Umsatz / Rechnungen. */
   kpis: {
     revenue: sum(REVENUE),
@@ -49,5 +48,5 @@ export const SALES = {
     { key: "d31to60", value: 9800 },
     { key: "d61to90", value: 4300 },
     { key: "over90", value: 2600 },
-  ] as { key: BucketKey; value: number }[],
+  ] satisfies { key: BucketKey; value: number }[],
 }

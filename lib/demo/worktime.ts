@@ -9,11 +9,10 @@
  */
 
 import type { Dictionary } from "@/lib/dictionary"
+import { sum } from "./math"
 import type { ProjectKey } from "./projects"
 
 export type ServiceKey = keyof Dictionary["demo"]["worktime"]["services"]["names"]
-
-const sum = (a: number[]) => a.reduce((s, v) => s + v, 0)
 
 const HOURS = [742, 768, 781, 612, 736, 758, 790, 744, 781, 752, 648, 722]
 const BILLABLE = [571, 598, 612, 452, 559, 589, 621, 577, 609, 583, 486, 556]
@@ -31,7 +30,7 @@ export const WORKTIME = {
     { key: "administration", value: 2021, slot: 1 },
     { key: "planning", value: 1943, slot: 2 },
     { key: "consulting", value: 452, slot: 3 },
-  ] as { key: ServiceKey; value: number; slot: number }[],
+  ] satisfies { key: ServiceKey; value: number; slot: number }[],
   employees: [
     { name: "Anna Keller", value: 1962 },
     { name: "Marco Frei", value: 1874 },
@@ -46,5 +45,5 @@ export const WORKTIME = {
     { key: "maintenance", value: 1320 },
     { key: "officeRhein", value: 1012 },
     { key: "smallJobs", value: 656 },
-  ] as { key: ProjectKey; value: number }[],
+  ] satisfies { key: ProjectKey; value: number }[],
 }

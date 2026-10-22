@@ -2,35 +2,40 @@
 
 import * as React from "react"
 import { CASHFLOW as D } from "@/lib/demo/cashflow"
-import { cn } from "@/lib/utils"
+import { sumBy } from "@/lib/demo/math"
 import {
   AXIS_TEXT,
+  CONNECTOR,
   Card,
+  ChartFrame,
   Columns,
   DashboardShell,
   GRID,
-  KpiTile,
-  LineLegend,
+  HOVER_BG,
+  KpiRow,
   LIGHT,
+  LIGHT_HOVER,
+  LineLegend,
   PREV,
   RED,
   RED_HOVER,
   SERIES,
   SERIES_HOVER,
+  SwatchLegend,
   TITLE,
   TipRow,
-  Tooltip,
+  TipTitle,
+  ZERO_LINE,
+  barLeftPath,
+  barPath,
+  columnDownPath,
   columnPath,
   fitLabel,
-  keyNav,
   monthLabels,
   niceScale,
-  svgFocus,
-  useToday,
-  useWidth,
+  useChart,
   useDemo,
-  leaveUnlessTouch,
-  useTouchDismiss,
+  useToday,
 } from "./dashboard-kit"
 
 /*
@@ -38,30 +43,13 @@ import {
  * built in the page instead of a screenshot. Shared pieces live in ./dashboard-kit.
  *
  * Polarity is encoded the same way everywhere: money in / increase = slate,
- * money out / decrease = red; the net line is dark navy, totals light slate. One y-axis per chart – inflows above zero, outflows
- * below – instead of the product's second scale.
+ * money out / decrease = red; the net line is dark navy, totals light slate.
+ * One y-axis per chart – inflows above zero, outflows below – instead of the
+ * product's second scale.
  */
 
 const NET = PREV // dark navy line, as in the product
 const TOTAL = LIGHT
-const ZERO = "#9aa3b5"
-
-/** Column hanging down from the baseline, 4px rounded data end at the bottom. */
-function columnDownPath(x: number, yEnd: number, w: number, base: number) {
-  const r = Math.min(4, w / 2, yEnd - base)
-  return `M${x},${base} V${yEnd - r} Q${x},${yEnd} ${x + r},${yEnd} H${x + w - r} Q${x + w},${yEnd} ${x + w},${yEnd - r} V${base} Z`
-}
-
-/** Horizontal bar growing left from zero, 4px rounded data end on the left. */
-function barLeftPath(x0: number, y: number, w: number, h: number) {
-  const r = Math.min(4, h / 2, w)
-  const x = x0 - w
-  return `M${x0},${y} H${x + r} Q${x},${y} ${x},${y + r} V${y + h - r} Q${x},${y + h} ${x + r},${y + h} H${x0} Z`
-}
-
-function Swatch({ color }: { color: string }) {
-  return <span aria-hidden="true" className="block size-2 rounded-[2px]" style={{ background: color }} />
-}
 
 /* ── inflows / outflows / net ────────────────────────────────────────── */
 
@@ -69,9 +57,8 @@ function FlowChart({ height }: { height: number }) {
   const { t, f } = useDemo()
   const T = t.cashflow
   const months = monthLabels(useToday(), f)
-  const [ref, w] = useWidth<HTMLDivElement>()
-  const [active, setActive] = React.useState<number | null>(null)
-  useTouchDismiss(ref, active, setActive)
+  const chart = useChart()
+  const { width: w, active, setActive } = chart
   const H = height
   const n = months.length
   const m = { l: 52, r: 14, t: 6, b: 20 }
@@ -80,10 +67,11 @@ function FlowChart({ height }: { height: number }) {
   const band = iw / n
   const bw = Math.min(16, band * 0.4)
   const { top, ticks } = niceScale(Math.max(...D.inflows, ...D.outflows), 3)
+  // Mirrored axis: the same steps below zero for the outflows.
   const allTicks = [
     ...ticks
       .slice(1)
-      .map((t) => -t)
+      .map((v) => -v)
       .reverse(),
     ...ticks,
   ]
@@ -99,78 +87,82 @@ function FlowChart({ height }: { height: number }) {
   }
 
   return (
-    <div ref={ref} className="relative" style={{ height: H }}>
-      {w > 0 && (
-        <svg
-          width={w}
-          height={H}
-          role="img"
-          aria-label={`${T.flows.title}. ${t.keyboardHint}.`}
-          className={cn(svgFocus, "touch-pan-y")}
-          onPointerMove={onMove}
-          onPointerDown={onMove}
-          onPointerLeave={leaveUnlessTouch(setActive)}
-          {...keyNav(n, active, setActive)}
-        >
-          {allTicks.map((t) => (
-            <g key={t}>
-              <line x1={m.l} x2={w - m.r} y1={y(t)} y2={y(t)} stroke={t === 0 ? ZERO : GRID} />
-              <text x={m.l - 8} y={y(t)} dy="0.32em" textAnchor="end" fontSize={10} fill={AXIS_TEXT}>
-                {f.compact(t)}
-              </text>
-            </g>
-          ))}
-          {months.map((mo, i) =>
-            i % every === 0 ? (
-              <text key={mo} x={cx(i)} y={H - 4} textAnchor="middle" fontSize={10} fill={AXIS_TEXT}>
-                {mo}
-              </text>
-            ) : null,
-          )}
-          {active !== null && <rect x={m.l + band * active} y={m.t} width={band} height={ih} fill="#f3f4f7" />}
-          {months.map((mo, i) => (
-            <g key={mo}>
-              <path d={columnPath(cx(i) - bw / 2, y(D.inflows[i]), bw, base)} fill={active === i ? SERIES_HOVER : SERIES} />
-              <path d={columnDownPath(cx(i) - bw / 2, y(-D.outflows[i]), bw, base)} fill={active === i ? RED_HOVER : RED} />
-            </g>
-          ))}
-          <path d={netLine} fill="none" stroke={NET} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
-          {D.net.map((v, i) => (
-            <circle key={i} cx={cx(i)} cy={y(v)} r={active === i ? 4.5 : 3} fill={NET} stroke="#fff" strokeWidth={active === i ? 2 : 1.5} />
-          ))}
-        </svg>
+    <ChartFrame
+      chart={chart}
+      title={T.flows.title}
+      count={n}
+      height={H}
+      onPointerMove={onMove}
+      svgClassName="touch-pan-y"
+      tooltip={(i) => ({
+        x: cx(i) + band / 2,
+        y: m.t + ih / 2,
+        content: (
+          <>
+            <TipTitle>{months[i]}</TipTitle>
+            <TipRow color={SERIES} value={f.chf(D.inflows[i])} label={T.flows.inflows} />
+            <TipRow color={RED} value={f.chf(D.outflows[i])} label={T.flows.outflows} />
+            <TipRow color={NET} value={f.signed(D.net[i], f.chf)} label={T.flows.net} />
+          </>
+        ),
+      })}
+    >
+      {allTicks.map((v) => (
+        <g key={v}>
+          <line x1={m.l} x2={w - m.r} y1={y(v)} y2={y(v)} stroke={v === 0 ? ZERO_LINE : GRID} />
+          <text x={m.l - 8} y={y(v)} dy="0.32em" textAnchor="end" fontSize={10} fill={AXIS_TEXT}>
+            {f.compact(v)}
+          </text>
+        </g>
+      ))}
+      {months.map((mo, i) =>
+        i % every === 0 ? (
+          <text key={mo} x={cx(i)} y={H - 4} textAnchor="middle" fontSize={10} fill={AXIS_TEXT}>
+            {mo}
+          </text>
+        ) : null,
       )}
-      {active !== null && w > 0 && (
-        <Tooltip x={cx(active) + band / 2} y={m.t + ih / 2} width={w}>
-          <p className="mb-1 font-medium text-ink">{months[active]}</p>
-          <TipRow color={SERIES} value={f.chf(D.inflows[active])} label={T.flows.inflows} />
-          <TipRow color={RED} value={f.chf(D.outflows[active])} label={T.flows.outflows} />
-          <TipRow color={NET} value={f.signed(D.net[active], f.chf)} label={T.flows.net} />
-        </Tooltip>
-      )}
-    </div>
+      {active !== null && <rect x={m.l + band * active} y={m.t} width={band} height={ih} fill={HOVER_BG} />}
+      {months.map((mo, i) => (
+        <g key={mo}>
+          <path d={columnPath(cx(i) - bw / 2, y(D.inflows[i]), bw, base)} fill={active === i ? SERIES_HOVER : SERIES} />
+          <path d={columnDownPath(cx(i) - bw / 2, y(-D.outflows[i]), bw, base)} fill={active === i ? RED_HOVER : RED} />
+        </g>
+      ))}
+      <path d={netLine} fill="none" stroke={NET} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+      {D.net.map((v, i) => (
+        <circle key={i} cx={cx(i)} cy={y(v)} r={active === i ? 4.5 : 3} fill={NET} stroke="#fff" strokeWidth={active === i ? 2 : 1.5} />
+      ))}
+    </ChartFrame>
   )
 }
 
 /* ── waterfall ───────────────────────────────────────────────────────── */
 
+type StepKind = "up" | "down" | "total"
+
+const STEP_COLOR: Record<StepKind, { base: string; hover: string }> = {
+  up: { base: SERIES, hover: SERIES_HOVER },
+  down: { base: RED, hover: RED_HOVER },
+  total: { base: TOTAL, hover: LIGHT_HOVER },
+}
+
 function Waterfall({ height }: { height: number }) {
   const { t, f } = useDemo()
   const T = t.cashflow
   const months = monthLabels(useToday(), f)
-  const [ref, w] = useWidth<HTMLDivElement>()
-  const [active, setActive] = React.useState<number | null>(null)
-  useTouchDismiss(ref, active, setActive)
+  const chart = useChart()
+  const { width: w, active, setActive } = chart
   const H = height
   // Running total per month, then a final "Gesamt" bar from zero.
   const steps = D.net.reduce<{ from: number; to: number }[]>((acc, v) => {
     const from = acc.at(-1)?.to ?? 0
     return [...acc, { from, to: from + v }]
   }, [])
-  const total = steps.at(-1)!.to
-  const bars = [
+  const total = steps.at(-1)?.to ?? 0
+  const bars: { label: string; from: number; to: number; kind: StepKind }[] = [
     ...steps.map((s, i) => ({ label: months[i], ...s, kind: s.to >= s.from ? ("up" as const) : ("down" as const) })),
-    { label: T.waterfall.total, from: 0, to: total, kind: "total" as const },
+    { label: T.waterfall.total, from: 0, to: total, kind: "total" },
   ]
   const n = bars.length
   const m = { l: 52, r: 18, t: 6, b: 20 }
@@ -182,76 +174,81 @@ function Waterfall({ height }: { height: number }) {
   const y = (v: number) => m.t + ih - (v / top) * ih
   const cx = (i: number) => m.l + band * i + band / 2
   const every = band < 26 ? 3 : band < 40 ? 2 : 1
-  const color = (k: "up" | "down" | "total", hover: boolean) =>
-    k === "up" ? (hover ? SERIES_HOVER : SERIES) : k === "down" ? (hover ? RED_HOVER : RED) : hover ? "#6878a3" : TOTAL
+
+  const tip = (b: (typeof bars)[number]) =>
+    b.kind === "total" ? (
+      <TipRow color={TOTAL} value={f.signed(total, f.chf)} label={T.flows.net} />
+    ) : (
+      <>
+        <TipRow
+          color={STEP_COLOR[b.kind].base}
+          value={f.signed(b.to - b.from, f.chf)}
+          label={b.kind === "up" ? T.waterfall.up : T.waterfall.down}
+        />
+        <p className="mt-1 text-ink-muted">
+          <span className="font-semibold text-ink">{f.signed(b.to, f.chf)}</span> {T.waterfall.cumulative}
+        </p>
+      </>
+    )
 
   return (
-    <div ref={ref} className="relative" style={{ height: H }}>
-      {w > 0 && (
-        <svg
-          width={w}
-          height={H}
-          role="img"
-          aria-label={`${T.waterfall.title}. ${t.keyboardHint}.`}
-          className={svgFocus}
-          onPointerLeave={leaveUnlessTouch(setActive)}
-          {...keyNav(n, active, setActive)}
-        >
-          {ticks.map((t) => (
-            <g key={t}>
-              <line x1={m.l} x2={w - m.r} y1={y(t)} y2={y(t)} stroke={GRID} />
-              <text x={m.l - 8} y={y(t)} dy="0.32em" textAnchor="end" fontSize={10} fill={AXIS_TEXT}>
-                {f.compact(t)}
+    <ChartFrame
+      chart={chart}
+      title={T.waterfall.title}
+      count={n}
+      height={H}
+      tooltip={(i) => ({
+        x: cx(i),
+        y: y(Math.max(bars[i].from, bars[i].to)),
+        content: (
+          <>
+            <TipTitle>{bars[i].label}</TipTitle>
+            {tip(bars[i])}
+          </>
+        ),
+      })}
+    >
+      {ticks.map((v) => (
+        <g key={v}>
+          <line x1={m.l} x2={w - m.r} y1={y(v)} y2={y(v)} stroke={GRID} />
+          <text x={m.l - 8} y={y(v)} dy="0.32em" textAnchor="end" fontSize={10} fill={AXIS_TEXT}>
+            {f.compact(v)}
+          </text>
+        </g>
+      ))}
+      {bars.map((b, i) => {
+        const y0 = y(Math.max(b.from, b.to))
+        const hgt = Math.max(1, Math.abs(y(b.from) - y(b.to)))
+        const last = i === n - 1
+        return (
+          <g key={b.label} onPointerEnter={() => setActive(i)}>
+            <rect x={m.l + band * i} y={m.t} width={band} height={ih + m.b} fill="transparent" />
+            {/* connector to the next bar at the running total */}
+            {i < n - 2 && <line x1={cx(i) + bw / 2} x2={cx(i + 1) - bw / 2} y1={y(b.to)} y2={y(b.to)} stroke={CONNECTOR} />}
+            <rect
+              x={cx(i) - bw / 2}
+              y={y0}
+              width={bw}
+              height={hgt}
+              rx={2}
+              fill={active === i ? STEP_COLOR[b.kind].hover : STEP_COLOR[b.kind].base}
+            />
+            {(last || i % every === 0) && (
+              <text
+                x={cx(i)}
+                y={H - 4}
+                textAnchor="middle"
+                fontSize={10}
+                fontWeight={last ? 600 : 400}
+                fill={last || active === i ? TITLE : AXIS_TEXT}
+              >
+                {last ? b.label : b.label.split(" ")[0]}
               </text>
-            </g>
-          ))}
-          {bars.map((b, i) => {
-            const y0 = y(Math.max(b.from, b.to))
-            const hgt = Math.max(1, Math.abs(y(b.from) - y(b.to)))
-            const last = i === n - 1
-            return (
-              <g key={b.label} onPointerEnter={() => setActive(i)}>
-                <rect x={m.l + band * i} y={m.t} width={band} height={ih + m.b} fill="transparent" />
-                {/* connector to the next bar at the running total */}
-                {i < n - 2 && <line x1={cx(i) + bw / 2} x2={cx(i + 1) - bw / 2} y1={y(b.to)} y2={y(b.to)} stroke="#c3c9d4" />}
-                <rect x={cx(i) - bw / 2} y={y0} width={bw} height={hgt} rx={2} fill={color(b.kind, active === i)} />
-                {(last || i % every === 0) && (
-                  <text
-                    x={cx(i)}
-                    y={H - 4}
-                    textAnchor="middle"
-                    fontSize={10}
-                    fontWeight={last ? 600 : 400}
-                    fill={last || active === i ? TITLE : AXIS_TEXT}
-                  >
-                    {last ? b.label : b.label.split(" ")[0]}
-                  </text>
-                )}
-              </g>
-            )
-          })}
-        </svg>
-      )}
-      {active !== null && w > 0 && (
-        <Tooltip x={cx(active)} y={y(Math.max(bars[active].from, bars[active].to))} width={w}>
-          <p className="mb-1 font-medium text-ink">{bars[active].label}</p>
-          {bars[active].kind === "total" ? (
-            <TipRow color={TOTAL} value={f.signed(total, f.chf)} label={T.flows.net} />
-          ) : (
-            <>
-              <TipRow
-                color={bars[active].kind === "up" ? SERIES : RED}
-                value={f.signed(bars[active].to - bars[active].from, f.chf)}
-                label={bars[active].kind === "up" ? T.waterfall.up : T.waterfall.down}
-              />
-              <p className="mt-1 text-ink-muted">
-                <span className="font-semibold text-ink">{f.signed(bars[active].to, f.chf)}</span> {T.waterfall.cumulative}
-              </p>
-            </>
-          )}
-        </Tooltip>
-      )}
-    </div>
+            )}
+          </g>
+        )
+      })}
+    </ChartFrame>
   )
 }
 
@@ -260,9 +257,8 @@ function Waterfall({ height }: { height: number }) {
 function BankBars({ height }: { height: number }) {
   const { t, f } = useDemo()
   const T = t.cashflow
-  const [ref, w] = useWidth<HTMLDivElement>()
-  const [active, setActive] = React.useState<number | null>(null)
-  useTouchDismiss(ref, active, setActive)
+  const chart = useChart()
+  const { width: w, active, setActive } = chart
   const items = D.banks.map((b) => ({ ...b, name: t.banks[b.key] }))
   const H = height
   const n = items.length
@@ -279,57 +275,51 @@ function BankBars({ height }: { height: number }) {
   for (let v = lo; v <= hi + step / 2; v += step) ticks.push(v)
   const x = (v: number) => m.l + ((v - lo) / (hi - lo)) * iw
   const zero = x(0)
+  const cy = (i: number) => m.t + row * i + row / 2
 
   return (
-    <div ref={ref} className="relative" style={{ height: H }}>
-      {w > 0 && (
-        <svg
-          width={w}
-          height={H}
-          role="img"
-          aria-label={`${T.banks.title}. ${t.keyboardHint}.`}
-          className={svgFocus}
-          onPointerLeave={leaveUnlessTouch(setActive)}
-          {...keyNav(n, active, setActive)}
-        >
-          {ticks.map((t) => (
-            <g key={t}>
-              <line x1={x(t)} x2={x(t)} y1={m.t} y2={m.t + ih} stroke={t === 0 ? ZERO : GRID} />
-              <text x={x(t)} y={H - 4} textAnchor="middle" fontSize={10} fill={AXIS_TEXT}>
-                {f.compact(t)}
-              </text>
-            </g>
-          ))}
-          {items.map((it, i) => {
-            const cy = m.t + row * i + row / 2
-            const len = Math.abs(x(it.value) - zero)
-            const hover = active === i
-            return (
-              <g key={it.name} onPointerEnter={() => setActive(i)}>
-                <rect x={0} y={m.t + row * i} width={w} height={row} fill="transparent" />
-                <text x={m.l - 10} y={cy} dy="0.32em" textAnchor="end" fontSize={10} fill={hover ? TITLE : AXIS_TEXT}>
-                  {fitLabel(it.name, m.l - 14)}
-                </text>
-                {it.value >= 0 ? (
-                  <path
-                    d={`M${zero},${cy - bh / 2} H${zero + len - Math.min(4, len)} Q${zero + len},${cy - bh / 2} ${zero + len},${cy - bh / 2 + Math.min(4, bh / 2)} V${cy + bh / 2 - Math.min(4, bh / 2)} Q${zero + len},${cy + bh / 2} ${zero + len - Math.min(4, len)},${cy + bh / 2} H${zero} Z`}
-                    fill={hover ? SERIES_HOVER : SERIES}
-                  />
-                ) : (
-                  <path d={barLeftPath(zero, cy - bh / 2, len, bh)} fill={hover ? RED_HOVER : RED} />
-                )}
-              </g>
-            )
-          })}
-        </svg>
-      )}
-      {active !== null && w > 0 && (
-        <Tooltip x={x(items[active].value)} y={m.t + row * active + row / 2} width={w}>
-          <p className="mb-1 font-medium text-ink">{items[active].name}</p>
-          <TipRow color={items[active].value >= 0 ? SERIES : RED} value={f.signed(items[active].value, f.chf)} label={T.flows.net} />
-        </Tooltip>
-      )}
-    </div>
+    <ChartFrame
+      chart={chart}
+      title={T.banks.title}
+      count={n}
+      height={H}
+      tooltip={(i) => ({
+        x: x(items[i].value),
+        y: cy(i),
+        content: (
+          <>
+            <TipTitle>{items[i].name}</TipTitle>
+            <TipRow color={items[i].value >= 0 ? SERIES : RED} value={f.signed(items[i].value, f.chf)} label={T.flows.net} />
+          </>
+        ),
+      })}
+    >
+      {ticks.map((v) => (
+        <g key={v}>
+          <line x1={x(v)} x2={x(v)} y1={m.t} y2={m.t + ih} stroke={v === 0 ? ZERO_LINE : GRID} />
+          <text x={x(v)} y={H - 4} textAnchor="middle" fontSize={10} fill={AXIS_TEXT}>
+            {f.compact(v)}
+          </text>
+        </g>
+      ))}
+      {items.map((it, i) => {
+        const len = Math.abs(x(it.value) - zero)
+        const hover = active === i
+        return (
+          <g key={it.name} onPointerEnter={() => setActive(i)}>
+            <rect x={0} y={m.t + row * i} width={w} height={row} fill="transparent" />
+            <text x={m.l - 10} y={cy(i)} dy="0.32em" textAnchor="end" fontSize={10} fill={hover ? TITLE : AXIS_TEXT}>
+              {fitLabel(it.name, m.l - 14)}
+            </text>
+            {it.value >= 0 ? (
+              <path d={barPath(zero, cy(i) - bh / 2, len, bh)} fill={hover ? SERIES_HOVER : SERIES} />
+            ) : (
+              <path d={barLeftPath(zero, cy(i) - bh / 2, len, bh)} fill={hover ? RED_HOVER : RED} />
+            )}
+          </g>
+        )
+      })}
+    </ChartFrame>
   )
 }
 
@@ -339,21 +329,18 @@ export function CashflowDashboard() {
   const { t, f } = useDemo()
   const T = t.cashflow
   const net = D.inflowTotal - D.outflowTotal
-  const overdueTotal = D.overdue.reduce((s, c) => s + c.value, 0)
-  const kpis = [
-    { label: T.kpis.inflows, value: f.chfCompact(D.inflowTotal) },
-    { label: T.kpis.outflows, value: f.chfCompact(D.outflowTotal) },
-    { label: T.kpis.net, value: f.signed(net, f.chfCompact) },
-    { label: T.kpis.days, value: `${f.num(D.daysToPayment, 1)} ${T.kpis.daysUnit}` },
-  ]
+  const overdueTotal = sumBy(D.overdue, (c) => c.value)
 
   return (
     <DashboardShell title={T.title}>
-      <div className="mb-3 grid grid-cols-2 gap-3 sm:mb-4 sm:gap-4 lg:grid-cols-4">
-        {kpis.map((k) => (
-          <KpiTile key={k.label} {...k} />
-        ))}
-      </div>
+      <KpiRow
+        items={[
+          { label: T.kpis.inflows, value: f.chfCompact(D.inflowTotal) },
+          { label: T.kpis.outflows, value: f.chfCompact(D.outflowTotal) },
+          { label: T.kpis.net, value: f.signed(net, f.chfCompact) },
+          { label: T.kpis.days, value: `${f.num(D.daysToPayment, 1)} ${T.kpis.daysUnit}` },
+        ]}
+      />
 
       <div className="grid gap-3 sm:gap-4 lg:grid-cols-3">
         <Card
@@ -361,14 +348,8 @@ export function CashflowDashboard() {
           className="lg:col-span-2"
           legend={
             <>
-              <span className="inline-flex items-center gap-1.5">
-                <Swatch color={SERIES} />
-                {T.flows.inflows}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Swatch color={RED} />
-                {T.flows.outflows}
-              </span>
+              <SwatchLegend color={SERIES}>{T.flows.inflows}</SwatchLegend>
+              <SwatchLegend color={RED}>{T.flows.outflows}</SwatchLegend>
               <LineLegend color={NET}>{T.flows.net}</LineLegend>
             </>
           }
@@ -381,18 +362,9 @@ export function CashflowDashboard() {
           className="hidden md:block"
           legend={
             <>
-              <span className="inline-flex items-center gap-1.5">
-                <Swatch color={SERIES} />
-                {T.waterfall.up}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Swatch color={RED} />
-                {T.waterfall.down}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Swatch color={TOTAL} />
-                {T.waterfall.total}
-              </span>
+              <SwatchLegend color={SERIES}>{T.waterfall.up}</SwatchLegend>
+              <SwatchLegend color={RED}>{T.waterfall.down}</SwatchLegend>
+              <SwatchLegend color={TOTAL}>{T.waterfall.total}</SwatchLegend>
             </>
           }
         >
@@ -407,12 +379,12 @@ export function CashflowDashboard() {
         <Card title={T.overdue.title}>
           <Columns
             items={D.overdue}
-            label={`${T.overdue.title}. ${t.keyboardHint}.`}
+            title={T.overdue.title}
             height={160}
             angled
             tooltip={(it) => (
               <>
-                <p className="mb-1 font-medium text-ink">{it.name}</p>
+                <TipTitle>{it.name}</TipTitle>
                 <TipRow color={SERIES} value={f.chf(it.value)} label={`${f.pct((it.value / overdueTotal) * 100)} ${T.overdue.share}`} />
               </>
             )}

@@ -8,6 +8,7 @@
  */
 
 import type { Dictionary } from "@/lib/dictionary"
+import { sumBy } from "./math"
 
 type Texts = Dictionary["demo"]
 export type BankKey = keyof Texts["banks"]
@@ -25,7 +26,18 @@ export const BANK_ACCOUNTS: { key: BankKey; value: number; lastMovement: string;
   { key: "eur", value: 3520, lastMovement: "2026-09-12", movements: 9 },
 ]
 
-const liquid = CASH + BANK_ACCOUNTS.reduce((s, b) => s + b.value, 0)
+const liquid = CASH + sumBy(BANK_ACCOUNTS, (b) => b.value)
+
+/** Equity: its own constant so the dashboard can compute the equity ratio without a lookup. */
+const EQUITY = {
+  key: "equity",
+  accounts: [
+    { key: "shareCapital", value: 100000 },
+    { key: "legalReserve", value: 20000 },
+    { key: "retained", value: 214180 },
+    { key: "profit", value: 88250 },
+  ],
+} satisfies AccountGroup
 
 export const BALANCE = {
   assets: [
@@ -63,16 +75,8 @@ export const BALANCE = {
         { key: "provisions", value: 30000 },
       ],
     },
-    {
-      key: "equity",
-      accounts: [
-        { key: "shareCapital", value: 100000 },
-        { key: "legalReserve", value: 20000 },
-        { key: "retained", value: 214180 },
-        { key: "profit", value: 88250 },
-      ],
-    },
+    EQUITY,
   ] satisfies AccountGroup[],
-  equityGroup: "equity" as GroupKey,
+  equity: EQUITY,
   liquid,
 }

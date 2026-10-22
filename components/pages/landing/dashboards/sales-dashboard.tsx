@@ -1,6 +1,7 @@
 "use client"
 
 import { SALES as D } from "@/lib/demo/sales"
+import { sumBy } from "@/lib/demo/math"
 import { fill } from "@/lib/text"
 import { cn } from "@/lib/utils"
 import {
@@ -8,13 +9,15 @@ import {
   Columns,
   DashboardShell,
   HBars,
-  KpiTile,
+  KpiRow,
   LineChart,
+  LineLegend,
   LIGHT,
-  LineKey,
   PREV,
   SERIES,
+  SwatchLegend,
   TipRow,
+  TipTitle,
   monthLabels,
   useToday,
   useDemo,
@@ -24,6 +27,9 @@ import {
  * Interactive demo of the smiit Analytics sales report ("Verkauf"), built in
  * the page instead of a screenshot. Shared pieces live in ./dashboard-kit.
  */
+
+/** Customers shown in the concentration summary ("Top 3: 62 % of revenue"). */
+const TOP_N = 3
 
 /* ── revenue line chart ──────────────────────────────────────────────── */
 
@@ -38,7 +44,7 @@ function RevenueChart() {
         { name: T.revenueChart.current, values: D.current, color: LIGHT, dots: true },
         { name: T.revenueChart.previous, values: D.previous, color: PREV, dashed: true },
       ]}
-      label={`${T.revenueChart.title}. ${t.keyboardHint}.`}
+      title={T.revenueChart.title}
       format={f.chf}
       footer={(i) => {
         const up = D.current[i] >= D.previous[i]
@@ -60,26 +66,23 @@ export function SalesDashboard() {
   const T = t.sales
   const receivables = D.receivables.map((b) => ({ name: T.receivables.buckets[b.key], value: b.value }))
   const products = D.products.map((p) => ({ name: T.products.names[p.key], value: p.value }))
-  const openTotal = D.receivables.reduce((s, b) => s + b.value, 0)
+  const openTotal = sumBy(D.receivables, (b) => b.value)
   // Top customers sorted desc; share and cumulative share relative to total revenue.
   const customers = [...D.customers].sort((a, b) => b.value - a.value)
   const cumulative = customers.reduce<number[]>((acc, c) => [...acc, (acc.at(-1) ?? 0) + (c.value / D.total) * 100], [])
-  const topN = 3
+  const share = (value: number, total: number, label: string) => `${f.pct((value / total) * 100)} ${label}`
   const K = D.kpis
-  const kpis = [
-    { label: T.kpis.revenue, value: f.chfCompact(K.revenue) },
-    { label: T.kpis.invoices, value: f.num(K.invoices) },
-    { label: T.kpis.avgInvoice, value: f.chf2(K.revenue / K.invoices) },
-    { label: T.kpis.newCustomers, value: f.chfCompact(K.newCustomers) },
-  ]
 
   return (
     <DashboardShell title={T.title}>
-      <div className="mb-3 grid grid-cols-2 gap-3 sm:mb-4 sm:gap-4 lg:grid-cols-4">
-        {kpis.map((k) => (
-          <KpiTile key={k.label} {...k} />
-        ))}
-      </div>
+      <KpiRow
+        items={[
+          { label: T.kpis.revenue, value: f.chfCompact(K.revenue) },
+          { label: T.kpis.invoices, value: f.num(K.invoices) },
+          { label: T.kpis.avgInvoice, value: f.chf2(K.revenue / K.invoices) },
+          { label: T.kpis.newCustomers, value: f.chfCompact(K.newCustomers) },
+        ]}
+      />
 
       <div className="grid gap-3 sm:gap-4 lg:grid-cols-3">
         <Card
@@ -87,14 +90,10 @@ export function SalesDashboard() {
           className="lg:col-span-2"
           legend={
             <>
-              <span className="inline-flex items-center gap-1.5">
-                <LineKey color={LIGHT} />
-                {T.revenueChart.current}
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <LineKey color={PREV} dashed />
+              <LineLegend color={LIGHT}>{T.revenueChart.current}</LineLegend>
+              <LineLegend color={PREV} dashed>
                 {T.revenueChart.previous}
-              </span>
+              </LineLegend>
             </>
           }
         >
@@ -106,23 +105,20 @@ export function SalesDashboard() {
           className="hidden md:block"
           legend={
             <>
-              <span className="inline-flex items-center gap-1.5">
-                <span aria-hidden="true" className="block size-2 rounded-[2px]" style={{ background: SERIES }} />
-                {T.concentration.legend}
-              </span>
-              <span className="ml-auto">{fill(T.concentration.summary, { n: topN, share: f.pct(cumulative[topN - 1], 0) })}</span>
+              <SwatchLegend color={SERIES}>{T.concentration.legend}</SwatchLegend>
+              <span className="ml-auto">{fill(T.concentration.summary, { n: TOP_N, share: f.pct(cumulative[TOP_N - 1], 0) })}</span>
             </>
           }
         >
           <Columns
             items={customers}
-            label={`${T.concentration.title}. ${t.keyboardHint}.`}
+            title={T.concentration.title}
             height={170}
             angled
             tooltip={(it, i) => (
               <>
-                <p className="mb-1 font-medium text-ink">{it.name}</p>
-                <TipRow color={SERIES} value={f.chf(it.value)} label={`${f.pct((it.value / D.total) * 100)} ${T.concentration.share}`} />
+                <TipTitle>{it.name}</TipTitle>
+                <TipRow color={SERIES} value={f.chf(it.value)} label={share(it.value, D.total, T.concentration.share)} />
                 <p className="mt-1 text-ink-muted">
                   <span className="font-semibold text-ink">{f.pct(cumulative[i])}</span> {T.concentration.cumulative}
                 </p>
@@ -136,12 +132,12 @@ export function SalesDashboard() {
         <Card title={T.receivables.title}>
           <Columns
             items={receivables}
-            label={`${T.receivables.title}. ${t.keyboardHint}.`}
+            title={T.receivables.title}
             height={160}
             tooltip={(it) => (
               <>
-                <p className="mb-1 font-medium text-ink">{it.name}</p>
-                <TipRow color={SERIES} value={f.chf(it.value)} label={`${f.pct((it.value / openTotal) * 100)} ${T.receivables.share}`} />
+                <TipTitle>{it.name}</TipTitle>
+                <TipRow color={SERIES} value={f.chf(it.value)} label={share(it.value, openTotal, T.receivables.share)} />
               </>
             )}
           />
@@ -151,11 +147,11 @@ export function SalesDashboard() {
           <HBars
             items={products}
             height={160}
-            label={`${T.products.title}. ${t.keyboardHint}.`}
+            title={T.products.title}
             tooltip={(it) => (
               <>
-                <p className="mb-1 font-medium text-ink">{it.name}</p>
-                <TipRow color={SERIES} value={f.chf(it.value)} label={`${f.pct((it.value / D.total) * 100)} ${T.products.share}`} />
+                <TipTitle>{it.name}</TipTitle>
+                <TipRow color={SERIES} value={f.chf(it.value)} label={share(it.value, D.total, T.products.share)} />
               </>
             )}
           />

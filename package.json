@@ -2,6 +2,7 @@
   "name": "smiit-analytics-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "Product website of smiit Analytics – reporting for bexio, a product of smiit GmbH.",
   "scripts": {
     "predev": "node scripts/build-media.mjs --variants",
@@ -13,27 +14,30 @@
     "media": "node scripts/build-media.mjs"
   },
   "dependencies": {
-    "@radix-ui/react-accordion": "1.2.2",
-    "@radix-ui/react-slot": "1.1.1",
-    "@radix-ui/react-tabs": "1.1.2",
+    "@radix-ui/react-accordion": "^1.3.1",
+    "@radix-ui/react-slot": "^1.5.0",
+    "@radix-ui/react-tabs": "^1.2.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.454.0",
-    "next": "16.0.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
-    "tailwind-merge": "^2.5.5"
+    "lucide-react": "^0.577.0",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.9",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "baseline-browser-mapping": "^2.11.25",
-    "postcss": "^8.5",
-    "sharp": "^0.35.4",
-    "tailwindcss": "^4.1.9",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "baseline-browser-mapping": "^2.11.30",
+    "postcss": "^8.5.31",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3",
     "tw-animate-css": "1.3.3",
-    "typescript": "^5"
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

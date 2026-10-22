@@ -173,13 +173,18 @@ export function useTouchDismiss(ref: React.RefObject<HTMLElement | null>, active
   }, [ref, active, setActive])
 }
 
-/** Arrow-key navigation shared by all charts (plain function, no hooks). */
+/** Arrow-key navigation shared by all charts (plain function, no hooks). Escape closes the tooltip. */
 export function keyNav(count: number, active: number | null, setActive: (i: number | null) => void) {
   return {
     tabIndex: 0,
     onFocus: () => active === null && setActive(0),
     onBlur: () => setActive(null),
     onKeyDown: (e: React.KeyboardEvent) => {
+      if (e.key === "Escape" && active !== null) {
+        e.preventDefault()
+        setActive(null)
+        return
+      }
       if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"].includes(e.key)) return
       e.preventDefault()
       const back = e.key === "ArrowLeft" || e.key === "ArrowUp"
@@ -197,10 +202,26 @@ export function fitLabel(label: string, width: number) {
 
 export const svgFocus = "block rounded outline-none focus-visible:ring-2 focus-visible:ring-brand"
 
+/**
+ * Screen readers cannot see the tooltip – charts are `role="img"`. Every
+ * tooltip therefore hands its text to the live region of the DashboardShell,
+ * which reads it out while the visitor moves through the chart with the keys.
+ */
+const AnnounceContext = React.createContext<(text: string) => void>(() => {})
+
 export function Tooltip({ x, y, width, children }: { x: number; y: number; width: number; children: React.ReactNode }) {
   const flip = x > width - 170 // flip to the left near the right edge
+  const ref = React.useRef<HTMLDivElement>(null)
+  const announce = React.useContext(AnnounceContext)
+  // No dependency list: the content changes with every data point. Same text = no update.
+  React.useEffect(() => {
+    const text = ref.current?.innerText.replace(/\s+/g, " ").trim()
+    if (text) announce(text)
+  })
   return (
     <div
+      ref={ref}
+      aria-hidden="true"
       className="pointer-events-none absolute z-10 min-w-36 rounded-md bg-white px-3 py-2 text-xs whitespace-nowrap shadow-card ring-1 ring-black/10"
       style={{ left: x, top: y, transform: `translate(${flip ? "calc(-100% - 12px)" : "12px"}, -50%)` }}
     >
@@ -600,40 +621,47 @@ export function HBars({
 export function DashboardShell({ title, children }: { title: string; children: React.ReactNode }) {
   const { t, f } = useDemo()
   const now = useClientValue<string | null>(() => f.dateTime(new Date()), null)
+  const [announcement, setAnnouncement] = React.useState("")
   return (
-    <div className="bg-[#f8f9fb] p-3 text-left sm:p-4">
-      <div className="mb-3 flex items-center justify-between gap-3 sm:mb-4">
-        <h3 className="text-lg font-semibold tracking-tight" style={{ color: TITLE }}>
-          {title}
-        </h3>
-        <span
-          className={cn(
-            "inline-flex items-center gap-1.5 rounded-full border border-[#e5e7eb] bg-white px-2.5 py-1 text-[0.68rem] tabular-nums transition-opacity duration-300",
-            now ? "opacity-100" : "opacity-0",
-          )}
-          style={{ color: AXIS_TEXT }}
-        >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-            className="size-3"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+    <AnnounceContext.Provider value={setAnnouncement}>
+      <div className="bg-[#f8f9fb] p-3 text-left sm:p-4">
+        {/* Always mounted, so screen readers pick up every change (see Tooltip). */}
+        <p aria-live="polite" className="sr-only">
+          {announcement}
+        </p>
+        <div className="mb-3 flex items-center justify-between gap-3 sm:mb-4">
+          <h3 className="text-lg font-semibold tracking-tight" style={{ color: TITLE }}>
+            {title}
+          </h3>
+          <span
+            className={cn(
+              "inline-flex items-center gap-1.5 rounded-full border border-[#e5e7eb] bg-white px-2.5 py-1 text-[0.68rem] tabular-nums transition-opacity duration-300",
+              now ? "opacity-100" : "opacity-0",
+            )}
+            style={{ color: AXIS_TEXT }}
           >
-            <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
-            <path d="M3 3v5h5" />
-            <path d="M12 7v5l3 2" />
-          </svg>
-          {now ?? f.date(REFERENCE_DATE)}
-        </span>
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              className="size-3"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+              <path d="M3 3v5h5" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+            {now ?? f.date(REFERENCE_DATE)}
+          </span>
+        </div>
+        {children}
+        <p className="mt-2 text-right text-[0.65rem]" style={{ color: AXIS_TEXT }}>
+          {t.note}
+        </p>
       </div>
-      {children}
-      <p className="mt-2 text-right text-[0.65rem]" style={{ color: AXIS_TEXT }}>
-        {t.note}
-      </p>
-    </div>
+    </AnnounceContext.Provider>
   )
 }

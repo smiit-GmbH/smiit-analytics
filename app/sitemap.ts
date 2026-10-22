@@ -5,9 +5,12 @@ import { SITE_URL } from "@/lib/site"
 
 export const dynamic = "force-static"
 
-/** Every public route in every language, each with its hreflang alternates. */
+/**
+ * Every public route in every language, each with its hreflang alternates.
+ * No `lastModified`: the build date would change on every deploy without the
+ * content changing, and search engines learn to ignore an unreliable lastmod.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
   return PUBLIC_ROUTES.flatMap(({ route, priority, changeFrequency }) => {
     const languages = {
       ...Object.fromEntries(locales.map((l) => [l, `${SITE_URL}${routePath(l, route)}`])),
@@ -15,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     return locales.map((lang) => ({
       url: `${SITE_URL}${routePath(lang, route)}`,
-      lastModified,
       changeFrequency,
       priority,
       alternates: { languages },

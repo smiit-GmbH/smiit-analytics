@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui"
 import { CtaLink } from "@/components/cta-link"
 import type { Dictionary } from "@/lib/dictionary"
 import { PRICING, type Billing } from "@/lib/pricing"
+import { fill } from "@/lib/text"
 import { cn } from "@/lib/utils"
 
 type Pricing = Dictionary["home"]["pricing"]
@@ -70,7 +71,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
                     active ? "bg-white/15 text-white" : "bg-success/10 text-success",
                   )}
                 >
-                  {t.savingsBadge.replace("{percent}", String(percent))}
+                  {fill(t.savingsBadge, { percent })}
                 </span>
               )}
             </label>
@@ -150,9 +151,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
               </li>
             ))}
           </ul>
-          <p className="relative mt-auto border-t border-white/10 pt-5 text-sm text-white/70">
-            {t.trial.after.replace("{price}", String(price))}
-          </p>
+          <p className="relative mt-auto border-t border-white/10 pt-5 text-sm text-white/70">{fill(t.trial.after, { price })}</p>
           <CtaLink
             href={signupHref}
             track="pricing_trial_signup"

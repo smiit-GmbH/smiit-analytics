@@ -1,6 +1,7 @@
 "use client"
 
 import { SALES as D } from "@/lib/demo/sales"
+import { fill } from "@/lib/text"
 import { cn } from "@/lib/utils"
 import {
   Card,
@@ -109,9 +110,7 @@ export function SalesDashboard() {
                 <span aria-hidden="true" className="block size-2 rounded-[2px]" style={{ background: SERIES }} />
                 {T.concentration.legend}
               </span>
-              <span className="ml-auto">
-                {T.concentration.summary.replace("{n}", String(topN)).replace("{share}", f.pct(cumulative[topN - 1], 0))}
-              </span>
+              <span className="ml-auto">{fill(T.concentration.summary, { n: topN, share: f.pct(cumulative[topN - 1], 0) })}</span>
             </>
           }
         >

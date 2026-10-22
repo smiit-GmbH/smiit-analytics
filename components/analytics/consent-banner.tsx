@@ -8,7 +8,7 @@ import { useClientValue } from "@/lib/use-client-value"
 
 /**
  * Placeholder consent banner. Only rendered when analytics is enabled and
- * requires consent (see lib/analytics.ts). Text: [CONSENT_TEXT] in lib/dictionary.ts.
+ * requires consent (see lib/analytics.ts). Text: [CONSENT_TEXT] in lib/dictionary/.
  */
 export function ConsentBanner({
   t,

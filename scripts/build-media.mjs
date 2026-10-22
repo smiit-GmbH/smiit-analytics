@@ -3,7 +3,7 @@
 //   (steps IMG_STEP_1..3, trustee workspaces IMG_MULTI_COMPANY, personas IMG_PERSONA_*)
 // - Open Graph / social preview image (1200×630) → public/og/<lang>.png
 // - smaller copies (<name>-<w>w.webp) of every image slot with `widths` in lib/media.ts
-// Texts come from lib/dictionary.ts, numbers from lib/format.ts.
+// Texts come from lib/dictionary/, numbers from lib/format.ts.
 // Run after changing those texts: `npm run media`. Any file can be replaced by a
 // real screenshot or design of the same name.
 //
@@ -11,7 +11,7 @@
 // copies newer than their source are skipped).
 import sharp from "sharp"
 import { existsSync, mkdirSync, readFileSync, statSync } from "node:fs"
-import { getDictionary, locales } from "../lib/dictionary.ts"
+import { getDictionary, locales } from "../lib/dictionary/index.ts"
 import { createFormatter } from "../lib/format.ts"
 import { MEDIA, variantPath } from "../lib/media.ts"
 

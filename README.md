@@ -37,7 +37,7 @@ Node 22 (see `.nvmrc`). Every pull request runs lint, format check, typecheck, t
 - `app/global-not-found.tsx` is the 404 page for every unknown URL; it reads the language from the path (`/fr/…` → French).
 - `app/[lang]/error.tsx` is shown, in the page's language, if a page fails while rendering.
 
-**Adding a language:** add it to `locales` in `lib/dictionary.ts` and add an object with the same shape as `de` (TypeScript reports every missing text). Then extend `HTML_LANG` / `OG_LOCALE` in `lib/i18n.ts` and `MARKETPLACE_LOCALE` in `lib/links.ts`, and run `npm run media`.
+**Adding a language:** copy `lib/dictionary/en.ts` to `lib/dictionary/<code>.ts`, translate it and register it in `locales` and `dictionaries` in `lib/dictionary/index.ts` (TypeScript reports every missing text, `npm test` every lost placeholder). Then extend `HTML_LANG` / `OG_LOCALE` in `lib/i18n.ts` and `MARKETPLACE_LOCALE` in `lib/links.ts`, and run `npm run media`.
 
 ---
 
@@ -45,7 +45,7 @@ Node 22 (see `.nvmrc`). Every pull request runs lint, format check, typecheck, t
 
 | What                                                                                               | File                                                                 |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary.ts`](lib/dictionary.ts)                             |
+| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary/`](lib/dictionary) (one file per language)          |
 | **Company details** (legal notice, footer, structured data)                                        | [`lib/site.ts`](lib/site.ts) (`COMPANY`)                             |
 | **Prices** (CHF per month and bexio company, additional users)                                     | [`lib/pricing.ts`](lib/pricing.ts)                                   |
 | **Links** (app, demo booking, bexio Marketplace, LinkedIn …)                                       | [`lib/links.ts`](lib/links.ts)                                       |
@@ -89,12 +89,15 @@ components/
   analytics/              Consent banner (placeholder), click tracking – only active when enabled
   header.tsx, footer.tsx, language-switcher.tsx, locale-provider.tsx, logo.tsx, cta-link.tsx, icons.tsx
 lib/
-  dictionary.ts           All texts, all languages (type `Dictionary` = shape of `de`)
+  dictionary/             All texts: de.ts (source, defines the `Dictionary` type), en.ts, fr.ts, it.ts, index.ts
   dictionary-slices.ts    Text excerpts for client components (header, footer, 404)
   i18n.ts                 Locales, <html lang>, Open Graph locale
   routes.ts               Pages, paths, anchors, navigation
   seo.ts                  Metadata (canonical, hreflang, Open Graph) and JSON-LD
   format.ts               Number/date format per language
+  text.ts                 fill() for {placeholders}
+  locale-params.ts        Validated [lang] param of pages and layouts
+  use-client-value.ts, use-reduced-motion.ts   Browser-only values without hydration mismatches
   site.ts, pricing.ts, links.ts, media.ts, analytics.ts, fonts.ts, rich.tsx, track.ts, utils.ts
   demo/                   Demo dashboard data
 public/
@@ -140,7 +143,7 @@ Every CTA carries `data-track="<id>"` (e.g. `hero_signup`, `pricing_yearly_signu
 
 1. `lib/analytics.ts` → `enabled: true`, set provider and ID
 2. Add the provider script in `components/analytics/index.tsx` (load it only after consent)
-3. With cookies keep `requiresConsent: true` → the consent banner appears; its text is `[CONSENT_TEXT]` in `lib/dictionary.ts`
+3. With cookies keep `requiresConsent: true` → the consent banner appears; its text is `[CONSENT_TEXT]` in `lib/dictionary/`
 
 `lib/track.ts` pushes clicks to `window.dataLayer`; adapt it to the chosen provider.
 

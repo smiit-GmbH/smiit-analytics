@@ -5,7 +5,7 @@
  *
  * Videos expect three files: <file>.webm, <file>.mp4 and <file>-poster.webp.
  * Images expect one file: <file> (WebP, or PNG/SVG if you change the name here).
- * Alt texts are content and live in lib/dictionary.ts under `media`.
+ * Alt texts are content and live in lib/dictionary/ under `media`.
  *
  * `localized: true` → one file per language: /media/<lang>/<file> (e.g. images
  * with UI text). Everything else is shared by all languages.

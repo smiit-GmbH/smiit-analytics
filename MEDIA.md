@@ -6,7 +6,7 @@ Alle Bilder und Videos der Website sind Platzhalter. Solange eine Datei fehlt, z
 
 **Sprachabhängige Medien** (in [`lib/media.ts`](lib/media.ts) mit `localized: true` markiert, aktuell alle Illustrationen) liegen einmal pro Sprache in `public/media/de/`, `public/media/en/`, `public/media/fr/` und `public/media/it/` – jeweils unter demselben Dateinamen. Soll ein Video pro Sprache geliefert werden (z. B. `VIDEO_DEMO_FULL` mit Ton), dort ebenfalls `localized: true` setzen und die Dateien in die vier Ordner legen.
 
-Die technische Liste steht in [`lib/media.ts`](lib/media.ts). Die Alt-Texte stehen in [`lib/dictionary.ts`](lib/dictionary.ts) unter `media`, für jede Sprache.
+Die technische Liste steht in [`lib/media.ts`](lib/media.ts). Die Alt-Texte stehen in [`lib/dictionary/`](lib/dictionary) unter `media`, für jede Sprache.
 
 ---
 
@@ -39,9 +39,9 @@ Pro Video werden drei Dateien benötigt: `<datei>.webm`, `<datei>.mp4` und `<dat
 
 ## Screenshots und Bilder
 
-> Die Standardberichte im Abschnitt «Verbinden & sofort sehen» (Verkauf, Bilanz, Arbeitszeiten, Projekte, Cashflow) brauchen **keine Screenshots**: Sie sind interaktive Dashboards im Code mit fiktiven Beispieldaten (Zahlen in `lib/demo/*.ts`, Beschriftungen in `lib/dictionary.ts` unter `demo`, Komponenten in `components/pages/landing/dashboards/`).
+> Die Standardberichte im Abschnitt «Verbinden & sofort sehen» (Verkauf, Bilanz, Arbeitszeiten, Projekte, Cashflow) brauchen **keine Screenshots**: Sie sind interaktive Dashboards im Code mit fiktiven Beispieldaten (Zahlen in `lib/demo/*.ts`, Beschriftungen in `lib/dictionary/<sprache>.ts` unter `demo`, Komponenten in `components/pages/landing/dashboards/`).
 
-Alle Einträge dieser Tabelle sind **sprachabhängig** (`public/media/<lang>/<datei>`). Die Bildtexte stehen in `lib/dictionary.ts` unter `illustrations`.
+Alle Einträge dieser Tabelle sind **sprachabhängig** (`public/media/<lang>/<datei>`). Die Bildtexte stehen in `lib/dictionary/<sprache>.ts` unter `illustrations`.
 
 | ID                       | Datei                         | Format        | Abschnitt                             | Inhalt                                                                                                                                                                                                                                                                                                                      |
 | ------------------------ | ----------------------------- | ------------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,13 +57,13 @@ Alle Einträge dieser Tabelle sind **sprachabhängig** (`public/media/<lang>/<da
 
 Das Seitenverhältnis 3:1 wird im Format _contain_ dargestellt (das Logo wird nicht beschnitten). Die Logos erscheinen in Graustufen und beim Überfahren mit der Maus in Farbe. **Nur mit schriftlicher Freigabe der Kunden verwenden.**
 
-| ID                  | Datei                         | Format                                        | Alt-Text in `lib/dictionary.ts` (je Sprache)                                 |
+| ID                  | Datei                         | Format                                        | Alt-Text in `lib/dictionary/<sprache>.ts` (je Sprache)                       |
 | ------------------- | ----------------------------- | --------------------------------------------- | ---------------------------------------------------------------------------- |
 | `LOGO_1` … `LOGO_5` | `logo_1.webp` … `logo_5.webp` | 3:1, z. B. 600×200, transparenter Hintergrund | `[LOGO_1_FIRMENNAME]` … `[LOGO_5_FIRMENNAME]` durch den Firmennamen ersetzen |
 
 ## Kundenstimmen (optional)
 
-Foto zum Testimonial: Datei (1:1, 200×200, WebP) nach `public/media/` legen und in `lib/dictionary.ts` unter `home.testimonials.items[n].image` den Pfad eintragen (in jeder Sprache), z. B. `"/media/testimonial_1.webp"`. Ohne Foto werden Initialen angezeigt.
+Foto zum Testimonial: Datei (1:1, 200×200, WebP) nach `public/media/` legen und in `lib/dictionary/<sprache>.ts` unter `home.testimonials.items[n].image` den Pfad eintragen (in jeder Sprache), z. B. `"/media/testimonial_1.webp"`. Ohne Foto werden Initialen angezeigt.
 
 ## Social-Media-Vorschau (Open Graph)
 

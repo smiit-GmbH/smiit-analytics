@@ -1,14 +1,12 @@
 import { LegalPage, legalPageMetadata } from "@/components/pages/legal/legal-page"
 import { getDictionary } from "@/lib/dictionary"
-import type { Locale } from "@/lib/i18n"
+import { resolveLocale, type LocaleParams } from "@/lib/locale-params"
 
-type PageProps = { params: Promise<{ lang: string }> }
-
-export async function generateMetadata({ params }: PageProps) {
-  return legalPageMetadata((await params).lang as Locale, "privacy")
+export async function generateMetadata({ params }: LocaleParams) {
+  return legalPageMetadata(await resolveLocale(params), "privacy")
 }
 
-export default async function PrivacyPage({ params }: PageProps) {
-  const lang = (await params).lang as Locale
+export default async function PrivacyPage({ params }: LocaleParams) {
+  const lang = await resolveLocale(params)
   return <LegalPage lang={lang} dict={getDictionary(lang)} route="privacy" />
 }

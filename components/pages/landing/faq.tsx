@@ -36,7 +36,9 @@ export function FaqList({ items, hrefs }: { items: FaqItem[]; hrefs: Record<stri
       {items.map((item) => (
         <AccordionItem key={item.id} value={faqAnchor(item.id)} id={faqAnchor(item.id)} className="scroll-mt-24">
           <AccordionTrigger data-track={`faq_${item.id}`}>{item.question}</AccordionTrigger>
-          <AccordionContent>{withLinks(item.answer, hrefs, "font-medium text-brand underline underline-offset-4 hover:no-underline")}</AccordionContent>
+          <AccordionContent>
+            {withLinks(item.answer, hrefs, "font-medium text-brand underline underline-offset-4 hover:no-underline")}
+          </AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>

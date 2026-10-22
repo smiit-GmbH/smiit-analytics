@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { VariantProps } from "class-variance-authority"
-import { Button, buttonVariants } from "@/components/ui"
+import { Button, type buttonVariants } from "@/components/ui"
 import { isExternal } from "@/lib/links"
 
 export type CtaLinkProps = VariantProps<typeof buttonVariants> & {

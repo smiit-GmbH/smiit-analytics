@@ -19,7 +19,7 @@ import {
   type LucideIcon,
 } from "lucide-react"
 
-/** Icon names used in lib/dictionary.ts, mapped to components. */
+/** Icon names used in lib/dictionary/, mapped to components. */
 export const ICONS: Record<string, LucideIcon> = {
   clock: Clock,
   code: Code,

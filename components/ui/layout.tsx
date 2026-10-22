@@ -48,30 +48,18 @@ export function Section({
   const headingId = id ? `${id}-title` : undefined
   const dark = tone === "navy"
   const header = (eyebrow || title || intro) && (
-    <header className={cn("mb-9 md:mb-12 max-w-3xl", align === "center" && "mx-auto text-center")}>
+    <header className={cn("mb-9 max-w-3xl md:mb-12", align === "center" && "mx-auto text-center")}>
       {eyebrow && (
-        <p
-          className={cn(
-            "mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.22em]",
-            dark ? "text-white/80" : "text-brand",
-          )}
-        >
+        <p className={cn("mb-4 text-[0.7rem] font-semibold tracking-[0.22em] uppercase", dark ? "text-white/80" : "text-brand")}>
           {eyebrow}
         </p>
       )}
       {title && (
-        <h2
-          id={headingId}
-          className="font-serif text-heading tracking-tight text-balance"
-        >
+        <h2 id={headingId} className="font-serif text-heading tracking-tight text-balance">
           {title}
         </h2>
       )}
-      {intro && (
-        <p className={cn("mt-4 text-lead", dark ? "text-white/75" : "text-ink-muted")}>
-          {intro}
-        </p>
-      )}
+      {intro && <p className={cn("mt-4 text-lead", dark ? "text-white/75" : "text-ink-muted")}>{intro}</p>}
     </header>
   )
   return (

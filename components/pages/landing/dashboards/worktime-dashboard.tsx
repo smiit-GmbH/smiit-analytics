@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { sum } from "@/lib/demo/math"
 import { WORKTIME as D } from "@/lib/demo/worktime"
 import { cn } from "@/lib/utils"
 import {
@@ -8,24 +9,26 @@ import {
   Card,
   DashboardShell,
   HBars,
-  KpiTile,
+  KpiRow,
   LIGHT,
   LineChart,
   LineLegend,
   PALE,
   PREV,
   SERIES,
+  Swatch,
   TITLE,
   TipRow,
+  TipTitle,
   Tooltip,
   keyNav,
+  leaveUnlessTouch,
   monthLabels,
   svgFocus,
+  useChart,
+  useChartLabel,
   useToday,
-  useWidth,
   useDemo,
-  leaveUnlessTouch,
-  useTouchDismiss,
 } from "./dashboard-kit"
 
 /*
@@ -63,11 +66,11 @@ function ServiceDonut({ height }: { height: number }) {
   const { t, f } = useDemo()
   const T = t.worktime
   const { hours } = useHours()
-  const [ref, w] = useWidth<HTMLDivElement>()
-  const [active, setActive] = React.useState<number | null>(null)
-  useTouchDismiss(ref, active, setActive)
+  // Not a ChartFrame: the ring has a fixed size and shares its row with the legend.
+  const { ref, width: w, active, setActive } = useChart()
+  const label = useChartLabel(T.services.title)
   const items = D.services.map((s) => ({ ...s, name: T.services.names[s.key] }))
-  const total = items.reduce((s, i) => s + i.value, 0)
+  const total = sum(items.map((i) => i.value))
   // Ring scales with the card so the legend always has room for full names.
   const size = w > 0 ? Math.round(Math.min(height, 148, Math.max(96, w * 0.48))) : 148
   const R = size / 2 - 4
@@ -75,13 +78,12 @@ function ServiceDonut({ height }: { height: number }) {
   const c = size / 2
 
   // Angles clockwise from 12 o'clock.
-  let acc = -Math.PI / 2
-  const slices = items.map((it) => {
-    const a0 = acc
-    const a1 = acc + (it.value / total) * Math.PI * 2
-    acc = a1
-    return { ...it, a0, a1, mid: (a0 + a1) / 2 }
-  })
+  const slices = items.reduce<((typeof items)[number] & { a0: number; a1: number; mid: number })[]>((out, it) => {
+    const a0 = out.at(-1)?.a1 ?? -Math.PI / 2
+    const a1 = a0 + (it.value / total) * Math.PI * 2
+    out.push({ ...it, a0, a1, mid: (a0 + a1) / 2 })
+    return out
+  }, [])
 
   return (
     <div ref={ref} className="relative flex items-center gap-5" style={{ height }} onPointerLeave={leaveUnlessTouch(setActive)}>
@@ -89,7 +91,7 @@ function ServiceDonut({ height }: { height: number }) {
         width={size}
         height={size}
         role="img"
-        aria-label={`${T.services.title}. ${t.keyboardHint}.`}
+        aria-label={label}
         className={cn(svgFocus, "shrink-0 rounded-full")}
         {...keyNav(items.length, active, setActive)}
       >
@@ -117,22 +119,26 @@ function ServiceDonut({ height }: { height: number }) {
           <li
             key={s.name}
             onPointerEnter={() => setActive(i)}
-            className={cn("flex items-start gap-2 rounded px-1 py-0.5 transition-colors", active === i && "bg-[#f3f4f7]")}
+            className={cn("flex items-start gap-2 rounded px-1 py-0.5 transition-colors", active === i && "bg-(--demo-hover)")}
           >
-            <span aria-hidden="true" className="mt-1 block size-2.5 shrink-0 rounded-[2px]" style={{ background: SERVICE_COLORS[s.slot] }} />
+            <Swatch color={SERVICE_COLORS[s.slot]} className="mt-1 size-2.5" />
             <span className="min-w-0 leading-tight">
               <span className="block" style={{ color: active === i ? TITLE : AXIS_TEXT }}>
                 {s.name}
               </span>
-              <span className="block font-semibold tabular-nums text-ink">{f.pct((s.value / total) * 100)}</span>
+              <span className="block font-semibold text-ink tabular-nums">{f.pct((s.value / total) * 100)}</span>
             </span>
           </li>
         ))}
       </ul>
 
       {active !== null && w > 0 && (
-        <Tooltip x={c + (R * 0.8) * Math.cos(slices[active].mid)} y={c + (R * 0.8) * Math.sin(slices[active].mid) + (height - size) / 2} width={w}>
-          <p className="mb-1 font-medium text-ink">{slices[active].name}</p>
+        <Tooltip
+          x={c + R * 0.8 * Math.cos(slices[active].mid)}
+          y={c + R * 0.8 * Math.sin(slices[active].mid) + (height - size) / 2}
+          width={w}
+        >
+          <TipTitle>{slices[active].name}</TipTitle>
           <TipRow
             color={SERVICE_COLORS[slices[active].slot]}
             value={hours(slices[active].value)}
@@ -151,26 +157,26 @@ export function WorktimeDashboard() {
   const T = t.worktime
   const { hours, signedHours } = useHours()
   const months = monthLabels(useToday(), f)
-  const kpis = [
-    { label: T.kpis.hours, value: hours(D.total) },
-    { label: T.kpis.billable, value: hours(D.billableTotal) },
-    { label: T.kpis.utilization, value: f.pct((D.billableTotal / D.total) * 100) },
-    { label: T.kpis.overtime, value: signedHours(D.total - D.target) },
-  ]
-  const shareTip = (share: string) => (it: { name: string; value: number }) => (
-    <>
-      <p className="mb-1 font-medium text-ink">{it.name}</p>
-      <TipRow color={SERIES} value={hours(it.value)} label={`${f.pct((it.value / D.total) * 100)} ${share}`} />
-    </>
-  )
+  const shareTip = (share: string) =>
+    function ShareTip(it: { name: string; value: number }) {
+      return (
+        <>
+          <TipTitle>{it.name}</TipTitle>
+          <TipRow color={SERIES} value={hours(it.value)} label={`${f.pct((it.value / D.total) * 100)} ${share}`} />
+        </>
+      )
+    }
 
   return (
     <DashboardShell title={T.title}>
-      <div className="mb-3 grid grid-cols-2 gap-3 sm:mb-4 sm:gap-4 lg:grid-cols-4">
-        {kpis.map((k) => (
-          <KpiTile key={k.label} {...k} />
-        ))}
-      </div>
+      <KpiRow
+        items={[
+          { label: T.kpis.hours, value: hours(D.total) },
+          { label: T.kpis.billable, value: hours(D.billableTotal) },
+          { label: T.kpis.utilization, value: f.pct((D.billableTotal / D.total) * 100) },
+          { label: T.kpis.overtime, value: signedHours(D.total - D.target) },
+        ]}
+      />
 
       <div className="grid gap-3 sm:gap-4 lg:grid-cols-3">
         <Card
@@ -189,7 +195,7 @@ export function WorktimeDashboard() {
               { name: T.monthly.hours, values: D.hours, color: LIGHT, dots: true },
               { name: T.monthly.billable, values: D.billable, color: PREV, dots: true },
             ]}
-            label={`${T.monthly.title}. ${t.keyboardHint}.`}
+            title={T.monthly.title}
             format={hours}
             tickFormat={(n) => f.num(n)}
           />
@@ -207,7 +213,7 @@ export function WorktimeDashboard() {
             height={160}
             labelWidth={104}
             tickFormat={(n) => f.num(n)}
-            label={`${T.employees.title}. ${t.keyboardHint}.`}
+            title={T.employees.title}
             tooltip={shareTip(T.employees.share)}
           />
         </Card>
@@ -217,7 +223,7 @@ export function WorktimeDashboard() {
             height={160}
             labelWidth={140}
             tickFormat={(n) => f.num(n)}
-            label={`${T.projects.title}. ${t.keyboardHint}.`}
+            title={T.projects.title}
             tooltip={shareTip(T.projects.share)}
           />
         </Card>

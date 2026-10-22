@@ -6,28 +6,28 @@
    into utilities: bg-navy, text-brand, rounded-card, shadow-card, py-section, … */
 @theme {
   /* Colours */
-  --color-navy: #0b162d;          /* theme colour, dark sections */
+  --color-navy: #0b162d; /* theme colour, dark sections */
   --color-navy-800: #14213d;
   --color-navy-700: #22304f;
-  --color-brand: #21569c;         /* primary action blue */
+  --color-brand: #21569c; /* primary action blue */
   --color-brand-hover: #1a457d;
-  --color-brand-soft: #e6edf6;    /* tint for icon tiles, highlights */
-  --color-brand-light: #8fb4e6;   /* brand blue on navy (6.9:1) */
-  --color-magenta: #f703eb;       /* accent — decorative only, never body text */
+  --color-brand-soft: #e6edf6; /* tint for icon tiles, highlights */
+  --color-brand-light: #8fb4e6; /* brand blue on navy (6.9:1) */
+  --color-magenta: #f703eb; /* accent — decorative only, never body text */
   --color-magenta-soft: #fde6fc;
-  --color-star: #f5a623;          /* rating stars */
-  --color-cream: #f3f3ee;         /* page background */
-  --color-sand: #f2f0e9;          /* inset tiles, logo wells */
-  --color-ink: #0b0b0b;           /* body text */
-  --color-ink-muted: #5b5b5b;     /* secondary text, 5.6:1 on cream */
+  --color-star: #f5a623; /* rating stars */
+  --color-cream: #f3f3ee; /* page background */
+  --color-sand: #f2f0e9; /* inset tiles, logo wells */
+  --color-ink: #0b0b0b; /* body text */
+  --color-ink-muted: #5b5b5b; /* secondary text, 5.6:1 on cream */
   --color-line: #dedede;
   --color-success: #1f7a4d;
   --color-danger: #b42318;
 
   /* Radii */
-  --radius-control: 0.75rem;      /* buttons, inputs (rounded-xl on smiit.de) */
+  --radius-control: 0.75rem; /* buttons, inputs (rounded-xl on smiit.de) */
   --radius-tile: 1rem;
-  --radius-card: 1.75rem;         /* large content cards */
+  --radius-card: 1.75rem; /* large content cards */
 
   /* Shadows */
   --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.06);
@@ -36,28 +36,28 @@
   --shadow-frame: 0 30px 60px -20px rgba(11, 22, 45, 0.28), 0 0 0 1px rgba(11, 22, 45, 0.06);
 
   /* Layout */
-  --container-page: 80rem;        /* max-w-page (1280px); max-w-page-wide (1472px) from 1800px screens */
+  --container-page: 80rem; /* max-w-page (1280px); max-w-page-wide (1472px) from 1800px screens */
   --container-page-wide: 92rem;
-  --spacing-section: 5.5rem;      /* py-section (desktop) */
-  --spacing-section-sm: 3.5rem;   /* py-section-sm (mobile) */
+  --spacing-section: 5.5rem; /* py-section (desktop) */
+  --spacing-section-sm: 3.5rem; /* py-section-sm (mobile) */
 
   /* Fluid type scale: min (phone) → max (≈1440px), linear in between.
      Utilities: text-display, text-heading-lg, text-heading, text-title-lg, text-title, text-lead */
-  --text-display: clamp(2.125rem, 1.4rem + 1.9vw, 3.1rem);        /* hero h1: 34 → 50px */
+  --text-display: clamp(2.125rem, 1.4rem + 1.9vw, 3.1rem); /* hero h1: 34 → 50px */
   --text-display--line-height: 1.05;
-  --text-heading-lg: clamp(1.9rem, 1.35rem + 1.5vw, 2.6rem);      /* page h1, closing CTA: 30 → 42px */
+  --text-heading-lg: clamp(1.9rem, 1.35rem + 1.5vw, 2.6rem); /* page h1, closing CTA: 30 → 42px */
   --text-heading-lg--line-height: 1.1;
-  --text-heading: clamp(1.75rem, 1.3rem + 1.3vw, 2.4rem);         /* section h2: 28 → 38px */
+  --text-heading: clamp(1.75rem, 1.3rem + 1.3vw, 2.4rem); /* section h2: 28 → 38px */
   --text-heading--line-height: 1.1;
-  --text-title-lg: clamp(1.375rem, 1.15rem + 0.6vw, 1.75rem);     /* large card titles: 22 → 28px */
+  --text-title-lg: clamp(1.375rem, 1.15rem + 0.6vw, 1.75rem); /* large card titles: 22 → 28px */
   --text-title-lg--line-height: 1.2;
-  --text-title: clamp(1.125rem, 1.05rem + 0.25vw, 1.25rem);       /* card / item titles: 18 → 20px */
+  --text-title: clamp(1.125rem, 1.05rem + 0.25vw, 1.25rem); /* card / item titles: 18 → 20px */
   --text-title--line-height: 1.25;
-  --text-lead: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);            /* intros, hero subtitle: 16 → 18px */
+  --text-lead: clamp(1rem, 0.95rem + 0.2vw, 1.125rem); /* intros, hero subtitle: 16 → 18px */
   --text-lead--line-height: 1.6;
 
   /* Extra breakpoint for wide desktop screens */
-  --breakpoint-3xl: 112.5rem;     /* 1800px */
+  --breakpoint-3xl: 112.5rem; /* 1800px */
 }
 
 /* Font families are set by next/font on <html> (app/layout.tsx). */
@@ -68,9 +68,15 @@
 }
 
 @layer base {
+  /* No `scroll-behavior: smooth` – Lenis (components/smooth-scroll.tsx) smooths scrolling and would fight it. */
   html {
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    /* The scrollbar keeps its space while a modal locks scrolling – no layout jump. */
+    scrollbar-gutter: stable;
+  }
+  /* An open modal (components/ui/modal.tsx) stops the page behind it from scrolling. */
+  html:has(dialog:modal) {
+    overflow: hidden;
   }
   body {
     @apply bg-cream font-sans text-ink antialiased;
@@ -88,9 +94,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *,
   *::before,
   *::after {
@@ -102,10 +105,14 @@
 
 /* Animated dashed connectors in the automation flow graphic. */
 @keyframes flow-x {
-  to { background-position: 12px 0; }
+  to {
+    background-position: 12px 0;
+  }
 }
 @keyframes flow-y {
-  to { background-position: 0 12px; }
+  to {
+    background-position: 0 12px;
+  }
 }
 .flow-line-x {
   background-image: linear-gradient(90deg, currentColor 50%, transparent 50%);
@@ -123,26 +130,66 @@
 
 /* Glowing dot that runs along a flow connector once while it fills. */
 @keyframes travel-x {
-  0% { left: 0; opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { left: 100%; opacity: 0; }
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
 }
 @keyframes travel-x-rev {
-  0% { left: 100%; opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { left: 0; opacity: 0; }
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 0;
+    opacity: 0;
+  }
 }
 @keyframes travel-y {
-  0% { top: 0; opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
 @keyframes travel-y-rev {
-  0% { top: 100%; opacity: 0; }
-  15% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { top: 0; opacity: 0; }
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 0;
+  }
 }

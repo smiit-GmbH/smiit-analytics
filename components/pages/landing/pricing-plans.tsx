@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui"
 import { CtaLink } from "@/components/cta-link"
 import type { Dictionary } from "@/lib/dictionary"
 import { PRICING, type Billing } from "@/lib/pricing"
+import { fill } from "@/lib/text"
 import { cn } from "@/lib/utils"
 
 type Pricing = Dictionary["home"]["pricing"]
@@ -70,7 +71,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
                     active ? "bg-white/15 text-white" : "bg-success/10 text-success",
                   )}
                 >
-                  {t.savingsBadge.replace("{percent}", String(percent))}
+                  {fill(t.savingsBadge, { percent })}
                 </span>
               )}
             </label>
@@ -93,7 +94,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
             <div aria-live="polite">
               <div className="flex items-end gap-2">
                 <span className="pb-1.5 text-base font-medium text-ink-muted">CHF</span>
-                <span className="font-serif text-[3rem] leading-none sm:text-[3.25rem] tracking-tight tabular-nums">{price}</span>
+                <span className="font-serif text-[3rem] leading-none tracking-tight tabular-nums sm:text-[3.25rem]">{price}</span>
                 {/* Unit and billing note stacked, sharing one left edge */}
                 <span className="flex flex-col pb-1.5 text-sm leading-snug text-ink-muted">
                   <span>{t.unit}</span>
@@ -115,14 +116,12 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
 
           {/* Price breakdown – pinned to the bottom so both cards end flush */}
           <div className="mt-auto rounded-tile bg-white p-5 shadow-card sm:p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">{t.breakdown.title}</p>
+            <p className="text-xs font-semibold tracking-[0.18em] text-ink-muted uppercase">{t.breakdown.title}</p>
             <dl className="mt-3 divide-y divide-line">
               {rows.map((row) => (
                 <div key={row.label} className="flex items-center justify-between gap-4 py-3 text-[0.95rem]">
                   <dt className="text-ink">{row.label}</dt>
-                  <dd className={cn("shrink-0 font-medium tabular-nums", row.highlight ? "text-success" : "text-ink")}>
-                    {row.value}
-                  </dd>
+                  <dd className={cn("shrink-0 font-medium tabular-nums", row.highlight ? "text-success" : "text-ink")}>{row.value}</dd>
                 </div>
               ))}
             </dl>
@@ -134,7 +133,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
         <div className="relative flex flex-col overflow-hidden rounded-card bg-navy p-6 text-white sm:p-8">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -right-24 -top-24 size-72 rounded-full bg-[radial-gradient(closest-side,rgba(143,180,230,0.28),transparent)]"
+            className="pointer-events-none absolute -top-24 -right-24 size-72 rounded-full bg-[radial-gradient(closest-side,rgba(143,180,230,0.28),transparent)]"
           />
           <Badge variant="onDark" className="relative self-start">
             <Gift className="size-3.5" aria-hidden="true" />
@@ -142,7 +141,7 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
           </Badge>
           <h3 className="relative mt-5 font-serif text-title-lg tracking-tight">{t.trial.title}</h3>
           <p className="relative mt-3 leading-relaxed text-white/75">{t.trial.text}</p>
-          <ul className="relative mb-6 mt-6 space-y-3">
+          <ul className="relative mt-6 mb-6 space-y-3">
             {t.trial.features.map((f) => (
               <li key={f} className="flex items-center gap-3 text-[0.95rem]">
                 <span aria-hidden="true" className="flex size-6 items-center justify-center rounded-full bg-white/10 text-brand-light">
@@ -152,10 +151,14 @@ export function PricingPlans({ t, signupHref, externalHint }: Props) {
               </li>
             ))}
           </ul>
-          <p className="relative mt-auto border-t border-white/10 pt-5 text-sm text-white/70">
-            {t.trial.after.replace("{price}", String(price))}
-          </p>
-          <CtaLink href={signupHref} track="pricing_trial_signup" externalHint={externalHint} variant="light" className="relative mt-5 w-full">
+          <p className="relative mt-auto border-t border-white/10 pt-5 text-sm text-white/70">{fill(t.trial.after, { price })}</p>
+          <CtaLink
+            href={signupHref}
+            track="pricing_trial_signup"
+            externalHint={externalHint}
+            variant="light"
+            className="relative mt-5 w-full"
+          >
             {t.trial.cta}
             <ArrowRight aria-hidden="true" />
           </CtaLink>

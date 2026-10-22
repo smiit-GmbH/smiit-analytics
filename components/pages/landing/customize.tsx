@@ -33,9 +33,7 @@ export function Customize({ lang, dict }: SectionProps) {
           <IconTile className="bg-white">
             <Building2 />
           </IconTile>
-          <h3 className="font-serif text-title-lg tracking-tight text-balance">
-            {rich(t.trustee.title)}
-          </h3>
+          <h3 className="font-serif text-title-lg tracking-tight text-balance">{rich(t.trustee.title)}</h3>
           <p className="mt-4 leading-relaxed text-ink-muted">{t.trustee.text}</p>
         </div>
         <div className="overflow-hidden rounded-tile shadow-card">

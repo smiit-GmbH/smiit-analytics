@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils"
  * later analytics integration can bind to it without touching markup.
  */
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-control font-medium transition-all duration-300 cursor-pointer disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-cream",
+  "inline-flex cursor-pointer items-center justify-center gap-2 rounded-control font-medium whitespace-nowrap transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-cream disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
@@ -21,7 +21,7 @@ const buttonVariants = cva(
         /** For use on navy backgrounds. */
         light: "bg-white text-navy hover:bg-cream",
         "outline-light": "border border-white/40 text-white hover:bg-white hover:text-navy",
-        link: "text-brand underline-offset-4 hover:text-brand-hover hover:underline px-0",
+        link: "px-0 text-brand underline-offset-4 hover:text-brand-hover hover:underline",
       },
       size: {
         sm: "h-9 px-4 text-sm",
@@ -44,13 +44,7 @@ type ButtonProps = React.ComponentProps<"button"> &
 
 function Button({ className, variant, size, asChild = false, track, ...props }: ButtonProps) {
   const Comp = asChild ? Slot : "button"
-  return (
-    <Comp
-      data-track={track}
-      className={cn(buttonVariants({ variant, size }), className)}
-      {...props}
-    />
-  )
+  return <Comp data-track={track} className={cn(buttonVariants({ variant, size }), className)} {...props} />
 }
 
 export { Button, buttonVariants }

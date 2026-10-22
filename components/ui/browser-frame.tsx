@@ -56,7 +56,7 @@ export function BrowserFrame({ children, url = "app.smiit-analytics.com", marker
                 {i + 1}
               </span>
             </span>
-            <span className="hidden whitespace-nowrap rounded-lg bg-navy px-2.5 py-1 text-xs font-medium text-white shadow-card sm:inline">
+            <span className="hidden rounded-lg bg-navy px-2.5 py-1 text-xs font-medium whitespace-nowrap text-white shadow-card sm:inline">
               {m.label}
             </span>
           </div>

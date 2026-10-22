@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { Check, ChevronDown, Globe } from "lucide-react"
 import type { Dictionary } from "@/lib/dictionary"
 import { HTML_LANG, LANGUAGE_STORAGE_KEY, locales, type Locale } from "@/lib/i18n"
+import { fill } from "@/lib/text"
 import { cn } from "@/lib/utils"
 
 type Props = {
@@ -117,14 +118,14 @@ export function LanguageSwitcher({ lang, t, variant = "menu", homeOnly, classNam
         <Globe className="size-4" aria-hidden="true" />
         <span aria-hidden="true">{lang.toUpperCase()}</span>
         <span className="sr-only">
-          {t.label}. {t.current.replace("{language}", t.names[lang])}
+          {t.label}. {fill(t.current, { language: t.names[lang] })}
         </span>
         <ChevronDown className={cn("size-3.5 opacity-60 transition-transform", open && "rotate-180")} aria-hidden="true" />
       </button>
       <ul
         id={listId}
         hidden={!open}
-        className="absolute right-0 top-full z-50 mt-2 w-44 rounded-card bg-white p-1.5 shadow-frame ring-1 ring-black/5"
+        className="absolute top-full right-0 z-50 mt-2 w-44 rounded-card bg-white p-1.5 shadow-frame ring-1 ring-black/5"
       >
         {links.map((l) => (
           <li key={l.code}>

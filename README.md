@@ -15,12 +15,17 @@ npm install
 npm run dev          # http://localhost:3000 → redirects to the browser language (fallback /de/)
 ```
 
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Development server |
-| `npm run build` | Static export to `out/` |
-| `npm run typecheck` | TypeScript check – also fails if a language is missing a text |
-| `npm run media` | Regenerates the localized illustrations and social preview images (see below) |
+| Command             | Purpose                                                                          |
+| ------------------- | -------------------------------------------------------------------------------- |
+| `npm run dev`       | Development server                                                               |
+| `npm run build`     | Static export to `out/`                                                          |
+| `npm run typecheck` | TypeScript check – also fails if a language is missing a text                    |
+| `npm test`          | Unit tests (Vitest) – incl. placeholders and highlights kept in every language   |
+| `npm run lint`      | ESLint (Next.js, TypeScript, React Compiler rules); `lint:fix` fixes what it can |
+| `npm run format`    | Formats everything with Prettier; CI runs `format:check`                         |
+| `npm run media`     | Regenerates the localized illustrations and social preview images (see below)    |
+
+Node 22 (see `.nvmrc`). Every pull request runs lint, format check, typecheck, tests and the build ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)).
 
 ---
 
@@ -32,26 +37,27 @@ npm run dev          # http://localhost:3000 → redirects to the browser langua
 - `app/global-not-found.tsx` is the 404 page for every unknown URL; it reads the language from the path (`/fr/…` → French).
 - `app/[lang]/error.tsx` is shown, in the page's language, if a page fails while rendering.
 
-**Adding a language:** add it to `locales` in `lib/dictionary.ts` and add an object with the same shape as `de` (TypeScript reports every missing text). Then extend `HTML_LANG` / `OG_LOCALE` in `lib/i18n.ts` and `MARKETPLACE_LOCALE` in `lib/links.ts`, and run `npm run media`.
+**Adding a language:** copy `lib/dictionary/en.ts` to `lib/dictionary/<code>.ts`, translate it and register it in `locales` and `dictionaries` in `lib/dictionary/index.ts` (TypeScript reports every missing text, `npm test` every lost placeholder). Then extend `HTML_LANG` / `OG_LOCALE` in `lib/i18n.ts` and `MARKETPLACE_LOCALE` in `lib/links.ts`, and run `npm run media`.
 
 ---
 
 ## Where to change what
 
-| What | File |
-|---|---|
-| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary.ts`](lib/dictionary.ts) |
-| **Company details** (legal notice, footer, structured data) | [`lib/site.ts`](lib/site.ts) (`COMPANY`) |
-| **Prices** (CHF per month and bexio company, additional users) | [`lib/pricing.ts`](lib/pricing.ts) |
-| **Links** (app, demo booking, bexio Marketplace, LinkedIn …) | [`lib/links.ts`](lib/links.ts) |
-| **Pages, section anchors, navigation** | [`lib/routes.ts`](lib/routes.ts) |
-| **Domain** (canonical URLs, sitemap, Open Graph, structured data) | [`lib/site.ts`](lib/site.ts) |
-| **Media slots** (file names, formats, per language or shared) | [`lib/media.ts`](lib/media.ts), documented in [`MEDIA.md`](MEDIA.md) |
-| **Demo dashboard data** (numbers only; labels are in the dictionary) | [`lib/demo/`](lib/demo) |
-| **Analytics** (prepared, disabled) | [`lib/analytics.ts`](lib/analytics.ts) |
-| **Design tokens** (colours, radii, shadows, spacing) | [`app/globals.css`](app/globals.css) (`@theme`) |
+| What                                                                                               | File                                                                 |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary/`](lib/dictionary) (one file per language)          |
+| **Company details** (legal notice, footer, structured data)                                        | [`lib/site.ts`](lib/site.ts) (`COMPANY`)                             |
+| **Prices** (CHF per month and bexio company, additional users)                                     | [`lib/pricing.ts`](lib/pricing.ts)                                   |
+| **Links** (app, demo booking, bexio Marketplace, LinkedIn …)                                       | [`lib/links.ts`](lib/links.ts)                                       |
+| **Pages, section anchors, navigation**                                                             | [`lib/routes.ts`](lib/routes.ts)                                     |
+| **Domain** (canonical URLs, sitemap, Open Graph, structured data)                                  | [`lib/site.ts`](lib/site.ts)                                         |
+| **Media slots** (file names, formats, per language or shared)                                      | [`lib/media.ts`](lib/media.ts), documented in [`MEDIA.md`](MEDIA.md) |
+| **Demo dashboard data** (numbers only; labels are in the dictionary)                               | [`lib/demo/`](lib/demo)                                              |
+| **Analytics** (prepared, disabled)                                                                 | [`lib/analytics.ts`](lib/analytics.ts)                               |
+| **Design tokens** (colours, radii, shadows, spacing)                                               | [`app/globals.css`](app/globals.css) (`@theme`)                      |
 
 Dictionary conventions:
+
 - `*word*` in headlines renders as a brand-coloured highlight.
 - `{name}` is a value filled in by the code (price, percentage, …).
 - `[PLACEHOLDER]` marks a fact that is still unknown – never replace it with a guess.
@@ -83,12 +89,15 @@ components/
   analytics/              Consent banner (placeholder), click tracking – only active when enabled
   header.tsx, footer.tsx, language-switcher.tsx, locale-provider.tsx, logo.tsx, cta-link.tsx, icons.tsx
 lib/
-  dictionary.ts           All texts, all languages (type `Dictionary` = shape of `de`)
+  dictionary/             All texts: de.ts (source, defines the `Dictionary` type), en.ts, fr.ts, it.ts, index.ts
   dictionary-slices.ts    Text excerpts for client components (header, footer, 404)
   i18n.ts                 Locales, <html lang>, Open Graph locale
   routes.ts               Pages, paths, anchors, navigation
   seo.ts                  Metadata (canonical, hreflang, Open Graph) and JSON-LD
   format.ts               Number/date format per language
+  text.ts                 fill() for {placeholders}
+  locale-params.ts        Validated [lang] param of pages and layouts
+  use-client-value.ts, use-reduced-motion.ts   Browser-only values without hydration mismatches
   site.ts, pricing.ts, links.ts, media.ts, analytics.ts, fonts.ts, rich.tsx, track.ts, utils.ts
   demo/                   Demo dashboard data
 public/
@@ -134,7 +143,7 @@ Every CTA carries `data-track="<id>"` (e.g. `hero_signup`, `pricing_yearly_signu
 
 1. `lib/analytics.ts` → `enabled: true`, set provider and ID
 2. Add the provider script in `components/analytics/index.tsx` (load it only after consent)
-3. With cookies keep `requiresConsent: true` → the consent banner appears; its text is `[CONSENT_TEXT]` in `lib/dictionary.ts`
+3. With cookies keep `requiresConsent: true` → the consent banner appears; its text is `[CONSENT_TEXT]` in `lib/dictionary/`
 
 `lib/track.ts` pushes clicks to `window.dataLayer`; adapt it to the chosen provider.
 
@@ -144,7 +153,7 @@ Every CTA carries `data-track="<id>"` (e.g. `hero_signup`, `pricing_yearly_signu
 
 The site is exported statically (`output: "export"` in `next.config.mjs`). `npm run build` creates `out/`, which any static host can serve. The host must answer unknown paths with `404.html` (GitHub Pages, Netlify, Vercel and Cloudflare Pages do this automatically).
 
-- **GitHub Pages:** [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) deploys on every push to `main` (and manually via *Run workflow*).
+- **GitHub Pages:** [`.github/workflows/ci.yml`](.github/workflows/ci.yml) deploys on every push to `main` (and manually via _Run workflow_), once all checks and the build have passed. Dependabot ([`.github/dependabot.yml`](.github/dependabot.yml)) opens weekly update PRs.
 - **Vercel:** import the project with the “Next.js” framework preset. Optionally remove `output: "export"` and `images.unoptimized` to get responsive, optimized images.
 
 ---

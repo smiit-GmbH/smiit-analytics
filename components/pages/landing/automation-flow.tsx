@@ -4,6 +4,7 @@ import * as React from "react"
 import { Check } from "lucide-react"
 import { Icon } from "@/components/icons"
 import type { Dictionary } from "@/lib/dictionary"
+import { useReducedMotion } from "@/lib/use-reduced-motion"
 import { cn } from "@/lib/utils"
 
 /*
@@ -30,15 +31,7 @@ function useFlowPhase(ref: React.RefObject<HTMLElement | null>) {
   const [phase, setPhase] = React.useState(0)
   const [branch, setBranch] = React.useState<Branch>("a")
   const [visible, setVisible] = React.useState(false)
-  const [reduced, setReduced] = React.useState(false)
-
-  React.useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
-    const update = () => setReduced(mq.matches)
-    update()
-    mq.addEventListener("change", update)
-    return () => mq.removeEventListener("change", update)
-  }, [])
+  const reduced = useReducedMotion()
 
   React.useEffect(() => {
     const el = ref.current
@@ -133,8 +126,11 @@ function Line({ dir, filled }: { dir: "h" | "v"; filled: boolean }) {
 
 /* ── Fork / merge between one node and the two branch nodes ────────── */
 
+type Side = "left" | "right" | "top" | "bottom"
+
 type SegDef = {
-  style: React.CSSProperties
+  /** Position inside the junction box: only the four inset sides. */
+  style: Partial<Record<Side, number | string>>
   axis: "x" | "y"
   from: "start" | "end"
   branch: Branch | null
@@ -161,7 +157,8 @@ const MERGE: SegDef[] = [
   { style: { left: "50%", right: 0, top: "50%" }, axis: "x", from: "start", branch: null, order: 2 },
 ]
 
-const SWAP: Record<string, string> = { left: "top", right: "bottom", top: "left", bottom: "right" }
+/** Vertical junctions reuse the horizontal layout with the axes swapped. */
+const SWAP: Record<Side, Side> = { left: "top", right: "bottom", top: "left", bottom: "right" }
 
 function Junction({
   kind,
@@ -180,22 +177,11 @@ function Junction({
   return (
     <div className={cn("relative shrink-0", dir === "h" ? "w-8 self-stretch" : "h-8")}>
       {defs.map((d, i) => {
-        const style =
-          dir === "h"
-            ? d.style
-            : Object.fromEntries(Object.entries(d.style).map(([k, v]) => [SWAP[k], v]))
+        const style = dir === "h" ? d.style : Object.fromEntries((Object.keys(d.style) as Side[]).map((k) => [SWAP[k], d.style[k]]))
         const axis = dir === "h" ? d.axis : d.axis === "x" ? "y" : "x"
         const onPath = d.branch === null || d.branch === branch
         return (
-          <Seg
-            key={i}
-            style={style}
-            axis={axis}
-            from={d.from}
-            filled={active && onPath}
-            dim={decided && !onPath}
-            delay={d.order * 170}
-          />
+          <Seg key={i} style={style} axis={axis} from={d.from} filled={active && onPath} dim={decided && !onPath} delay={d.order * 170} />
         )
       })}
     </div>
@@ -207,11 +193,10 @@ function Junction({
 type NodeData = { kind: string; title: string; icon: string; label?: string }
 
 function StatusIcon({ status }: { status: Status }) {
-  if (status === "run")
-    return <span className="block size-4 shrink-0 animate-spin rounded-full border-2 border-brand/20 border-t-brand" />
+  if (status === "run") return <span className="block size-4 shrink-0 animate-spin rounded-full border-2 border-brand/20 border-t-brand" />
   if (status === "done")
     return (
-      <span className="flex size-4 shrink-0 items-center justify-center rounded-full bg-success text-white animate-in zoom-in-50 duration-300">
+      <span className="flex size-4 shrink-0 animate-in items-center justify-center rounded-full bg-success text-white duration-300 zoom-in-50">
         <Check className="size-2.5" strokeWidth={3.5} />
       </span>
     )
@@ -231,7 +216,7 @@ function Node({ data, status }: { data: NodeData; status: Status }) {
       {data.label && (
         <span
           className={cn(
-            "absolute -top-2.5 left-3 rounded-full border bg-white px-2 py-px text-[0.62rem] font-semibold uppercase tracking-wider transition-colors duration-500",
+            "absolute -top-2.5 left-3 rounded-full border bg-white px-2 py-px text-[0.62rem] font-semibold tracking-wider uppercase transition-colors duration-500",
             lit ? "border-brand/40 text-brand" : "border-line text-ink-muted",
           )}
         >
@@ -250,10 +235,10 @@ function Node({ data, status }: { data: NodeData; status: Status }) {
       </span>
       <span className="min-w-0 flex-1">
         <span className="flex items-center justify-between gap-2">
-          <span className="truncate text-[0.6rem] font-semibold uppercase tracking-[0.14em] text-ink-muted">{data.kind}</span>
+          <span className="truncate text-[0.6rem] font-semibold tracking-[0.14em] text-ink-muted uppercase">{data.kind}</span>
           <StatusIcon status={status} />
         </span>
-        <span className="mt-0.5 block text-[0.8rem] font-medium leading-snug text-ink">{data.title}</span>
+        <span className="mt-0.5 block text-[0.8rem] leading-snug font-medium text-ink">{data.title}</span>
       </span>
     </div>
   )
@@ -281,8 +266,11 @@ export function AutomationFlow({ flow }: { flow: Flow }) {
   return (
     <div ref={ref} className="rounded-card bg-white p-5 shadow-card sm:p-8">
       <div className="mb-6 flex items-center justify-between gap-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">{flow.label}</p>
-        <span className="inline-flex items-center gap-2 rounded-full bg-sand px-3 py-1 text-xs font-medium text-ink-muted" aria-hidden="true">
+        <p className="text-xs font-semibold tracking-[0.18em] text-ink-muted uppercase">{flow.label}</p>
+        <span
+          className="inline-flex items-center gap-2 rounded-full bg-sand px-3 py-1 text-xs font-medium text-ink-muted"
+          aria-hidden="true"
+        >
           <span className="relative flex size-2">
             <span className="absolute inset-0 animate-ping rounded-full bg-success/60 motion-reduce:animate-none" />
             <span className="relative size-2 rounded-full bg-success" />

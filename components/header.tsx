@@ -6,6 +6,7 @@ import { Container } from "@/components/ui"
 import { CtaLink } from "@/components/cta-link"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { Logo } from "@/components/logo"
+import { useScrollListener } from "@/components/smooth-scroll"
 import type { HeaderDict } from "@/lib/dictionary-slices"
 import type { Locale } from "@/lib/i18n"
 import { LINKS } from "@/lib/links"
@@ -27,12 +28,7 @@ export function Header({ lang, dict, languageHomeOnly }: HeaderProps) {
   const toggleRef = React.useRef<HTMLButtonElement>(null)
   const items = NAV_SECTIONS.map((s) => ({ href: routePath(lang, "home", SECTIONS[s]), label: t.items[s] }))
 
-  React.useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8)
-    onScroll()
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+  useScrollListener(React.useCallback(() => setScrolled(window.scrollY > 8), []))
 
   // Esc closes the mobile menu and returns focus to the toggle.
   React.useEffect(() => {
@@ -111,7 +107,14 @@ export function Header({ lang, dict, languageHomeOnly }: HeaderProps) {
             <CtaLink externalHint={common.externalHint} href={LINKS.signup} track="mobile_menu_signup" size="md" className="w-full">
               {t.cta}
             </CtaLink>
-            <CtaLink externalHint={common.externalHint} href={LINKS.login} track="mobile_menu_login" variant="secondary" size="md" className="w-full">
+            <CtaLink
+              externalHint={common.externalHint}
+              href={LINKS.login}
+              track="mobile_menu_login"
+              variant="secondary"
+              size="md"
+              className="w-full"
+            >
               {t.login}
             </CtaLink>
           </div>

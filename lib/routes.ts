@@ -49,8 +49,13 @@ export const SECTIONS = {
 export const CHAPTER_SECTIONS = Object.keys(SECTIONS) as (keyof typeof SECTIONS)[]
 
 /** Main navigation (mobile menu, footer): sections in this order, labels in `nav.items`. */
-export const NAV_SECTIONS = ["features", "ai", "automations", "pricing", "faq"] as const satisfies readonly (keyof Dictionary["nav"]["items"] &
-  keyof typeof SECTIONS)[]
+export const NAV_SECTIONS = [
+  "features",
+  "ai",
+  "automations",
+  "pricing",
+  "faq",
+] as const satisfies readonly (keyof Dictionary["nav"]["items"] & keyof typeof SECTIONS)[]
 
 /** Anchor of a FAQ question: "faq-mcp". */
 export const faqAnchor = (id: string) => `faq-${id}`

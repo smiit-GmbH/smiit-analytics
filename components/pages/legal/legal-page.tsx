@@ -53,8 +53,14 @@ function LegalShell({
           sizes="100vw"
           className="object-cover object-[15%_35%] sm:object-[22%_35%] md:object-[40%_35%]"
         />
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/70 via-white/15 to-transparent" />
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/[0.12] via-black/[0.04] to-transparent" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/70 via-white/15 to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/[0.12] via-black/[0.04] to-transparent"
+        />
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-black/10 opacity-[0.18] mix-blend-soft-light"
@@ -63,7 +69,7 @@ function LegalShell({
         <Container className="relative flex h-full items-end pb-12 sm:pb-14 md:pb-16 lg:pb-20">
           <div>
             {/* Long compounds (e.g. Auftragsverarbeitungsvertrag) must break on phones. */}
-            <h1 lang={HTML_LANG[lang]} className="hyphens-auto font-serif text-heading-lg tracking-tight text-ink [overflow-wrap:anywhere]">
+            <h1 lang={HTML_LANG[lang]} className="font-serif text-heading-lg tracking-tight [overflow-wrap:anywhere] hyphens-auto text-ink">
               {title}
             </h1>
             {subtitle && <p className="mt-3 max-w-[60ch] text-lead text-ink/75">{subtitle}</p>}
@@ -99,7 +105,7 @@ export function LegalPage({ lang, dict, route }: { lang: Locale; dict: Dictionar
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-ink-muted">{title}</h2>
+      <h2 className="text-xs font-semibold tracking-[0.18em] text-ink-muted uppercase">{title}</h2>
       <div className="mt-3 text-[0.95rem] leading-relaxed text-ink">{children}</div>
     </div>
   )
@@ -125,7 +131,7 @@ export function LegalNotice({ lang, dict }: { lang: Locale; dict: Dictionary }) 
       <div className="grid gap-x-10 gap-y-9 md:grid-cols-2">
         <div>
           <p className="font-serif text-title-lg tracking-tight">{COMPANY.name}</p>
-          <address className="mt-3 text-[0.95rem] not-italic leading-relaxed text-ink">{postal}</address>
+          <address className="mt-3 text-[0.95rem] leading-relaxed text-ink not-italic">{postal}</address>
         </div>
         <Block title={t.contact}>
           <address className="space-y-1 not-italic">

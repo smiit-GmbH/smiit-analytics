@@ -12,7 +12,10 @@ export function Steps({ lang, dict }: SectionProps) {
         {t.items.map((step, i) => {
           const media = step.media as MediaId
           return (
-            <li key={step.title} className="flex flex-col md:max-lg:grid md:max-lg:grid-cols-[1.1fr_1fr] md:max-lg:items-center md:max-lg:gap-8">
+            <li
+              key={step.title}
+              className="flex flex-col md:max-lg:grid md:max-lg:grid-cols-[1.1fr_1fr] md:max-lg:items-center md:max-lg:gap-8"
+            >
               <div className="overflow-hidden rounded-tile bg-sand ring-1 ring-black/5">
                 <Media lang={lang} id={media} alt={dict.media[media]} sizes="(min-width: 1024px) 33vw, (min-width: 768px) 45vw, 100vw" />
               </div>

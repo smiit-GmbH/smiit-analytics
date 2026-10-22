@@ -5,7 +5,7 @@
  *
  * Videos expect three files: <file>.webm, <file>.mp4 and <file>-poster.webp.
  * Images expect one file: <file> (WebP, or PNG/SVG if you change the name here).
- * Alt texts are content and live in lib/dictionary.ts under `media`.
+ * Alt texts are content and live in lib/dictionary/ under `media`.
  *
  * `localized: true` → one file per language: /media/<lang>/<file> (e.g. images
  * with UI text). Everything else is shared by all languages.
@@ -42,18 +42,74 @@ export const MEDIA = {
   LOGO_4: { kind: "image", file: "/media/logo_4.webp", ratio: "3 / 1", spec: "3:1 · transparent" },
   LOGO_5: { kind: "image", file: "/media/logo_5.webp", ratio: "3 / 1", spec: "3:1 · transparent" },
 
-  IMG_STEP_1: { kind: "image", file: "/media/img_step_1.webp", ratio: "4 / 3", spec: "4:3 · 1200×900", localized: true, width: 1200, widths: [480, 800] },
-  IMG_STEP_2: { kind: "image", file: "/media/img_step_2.webp", ratio: "4 / 3", spec: "4:3 · 1200×900", localized: true, width: 1200, widths: [480, 800] },
-  IMG_STEP_3: { kind: "image", file: "/media/img_step_3.webp", ratio: "4 / 3", spec: "4:3 · 1200×900", localized: true, width: 1200, widths: [480, 800] },
+  IMG_STEP_1: {
+    kind: "image",
+    file: "/media/img_step_1.webp",
+    ratio: "4 / 3",
+    spec: "4:3 · 1200×900",
+    localized: true,
+    width: 1200,
+    widths: [480, 800],
+  },
+  IMG_STEP_2: {
+    kind: "image",
+    file: "/media/img_step_2.webp",
+    ratio: "4 / 3",
+    spec: "4:3 · 1200×900",
+    localized: true,
+    width: 1200,
+    widths: [480, 800],
+  },
+  IMG_STEP_3: {
+    kind: "image",
+    file: "/media/img_step_3.webp",
+    ratio: "4 / 3",
+    spec: "4:3 · 1200×900",
+    localized: true,
+    width: 1200,
+    widths: [480, 800],
+  },
 
   VIDEO_DRAGDROP: { kind: "video", file: "/media/video_dragdrop", ratio: "16 / 10", spec: "16:10 · 15–20 s · Loop" },
-  IMG_MULTI_COMPANY: { kind: "image", file: "/media/img_multi_company.webp", ratio: "4 / 3", spec: "4:3 · 1200×900", localized: true, width: 1200, widths: [480, 800] },
+  IMG_MULTI_COMPANY: {
+    kind: "image",
+    file: "/media/img_multi_company.webp",
+    ratio: "4 / 3",
+    spec: "4:3 · 1200×900",
+    localized: true,
+    width: 1200,
+    widths: [480, 800],
+  },
 
   VIDEO_AI_CHAT: { kind: "video", file: "/media/video_ai_chat", ratio: "16 / 10", spec: "16:10 · 20–25 s · Loop" },
 
-  IMG_PERSONA_MANAGEMENT: { kind: "image", file: "/media/img_persona_management.webp", ratio: "3 / 2", spec: "3:2 · 1200×800", localized: true, width: 1200, widths: [480, 800] },
-  IMG_PERSONA_TRUSTEE: { kind: "image", file: "/media/img_persona_trustee.webp", ratio: "3 / 2", spec: "3:2 · 1200×800", localized: true, width: 1200, widths: [480, 800] },
-  IMG_PERSONA_TEAM_LEAD: { kind: "image", file: "/media/img_persona_team_lead.webp", ratio: "3 / 2", spec: "3:2 · 1200×800", localized: true, width: 1200, widths: [480, 800] },
+  IMG_PERSONA_MANAGEMENT: {
+    kind: "image",
+    file: "/media/img_persona_management.webp",
+    ratio: "3 / 2",
+    spec: "3:2 · 1200×800",
+    localized: true,
+    width: 1200,
+    widths: [480, 800],
+  },
+  IMG_PERSONA_TRUSTEE: {
+    kind: "image",
+    file: "/media/img_persona_trustee.webp",
+    ratio: "3 / 2",
+    spec: "3:2 · 1200×800",
+    localized: true,
+    width: 1200,
+    widths: [480, 800],
+  },
+  IMG_PERSONA_TEAM_LEAD: {
+    kind: "image",
+    file: "/media/img_persona_team_lead.webp",
+    ratio: "3 / 2",
+    spec: "3:2 · 1200×800",
+    localized: true,
+    width: 1200,
+    widths: [480, 800],
+  },
 } as const satisfies Record<string, MediaEntry>
 
 export type MediaId = keyof typeof MEDIA

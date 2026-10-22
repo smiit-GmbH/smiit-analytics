@@ -9,8 +9,7 @@
  */
 
 import type { BankKey } from "./balance"
-
-const sum = (a: number[]) => a.reduce((s, v) => s + v, 0)
+import { sum } from "./math"
 
 const INFLOWS = [51200, 47900, 55300, 58800, 42600, 49100, 57400, 61800, 58300, 63900, 55800, 50700]
 const OUTFLOWS = [44800, 46300, 49900, 61200, 45800, 43700, 50100, 54900, 52600, 57200, 60400, 44100]
@@ -28,7 +27,7 @@ export const CASHFLOW = {
     { key: "savings", value: 10000 },
     { key: "postal", value: -1290 },
     { key: "eur", value: 640 },
-  ] as { key: BankKey; value: number }[],
+  ] satisfies { key: BankKey; value: number }[],
   overdue: [
     { name: "Alpenblick Treuhand AG", value: 9850 },
     { name: "Müller Holzbau GmbH", value: 7200 },
@@ -38,4 +37,3 @@ export const CASHFLOW = {
     { name: "Bergmann Consulting", value: 2600 },
   ],
 }
-

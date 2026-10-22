@@ -11,7 +11,7 @@ export const APP_URL = "https://app.smiit-analytics.com"
 
 export const LINKS = {
   /** Registration / free trial ("30 Tage kostenlos testen", "Kostenlos testen", …). */
-  signup: APP_URL,
+  signup: `${APP_URL}/register`,
   /** App login. */
   login: APP_URL,
   /** Demo booking ("Demo buchen"): meeting with smiit. */

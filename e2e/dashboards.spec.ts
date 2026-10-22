@@ -11,6 +11,20 @@ test.beforeEach(async ({ page }) => {
 const tabs = (page: Page) => page.locator('#features [role="tab"]')
 const panel = (page: Page) => page.locator('#features [role="tabpanel"][data-state="active"]')
 
+test("dashboards load only near the viewport, without moving the page", async ({ page }) => {
+  const slot = panel(page).locator("[aria-busy]")
+  // Initially only the placeholder: no chart code has run.
+  await expect(slot).toHaveAttribute("aria-busy", "true")
+  await expect(panel(page).locator("h3")).toHaveCount(0)
+  const placeholderHeight = (await slot.boundingBox())!.height
+
+  await page.evaluate(() => document.getElementById("features")!.scrollIntoView({ behavior: "instant" }))
+  await expect(panel(page).locator("h3")).toBeVisible()
+  await expect(slot).toHaveAttribute("aria-busy", "false")
+  // The placeholder reserves the dashboard's exact height (lazy-dashboard.tsx), so nothing below jumps.
+  expect(Math.abs((await slot.boundingBox())!.height - placeholderHeight)).toBeLessThanOrEqual(2)
+})
+
 test("charts are keyboard-explorable and read out to screen readers", async ({ page, isMobile }) => {
   test.skip(isMobile, "keyboard use is a desktop concern; phones hide some charts")
   for (let i = 0; i < (await tabs(page).count()); i++) {

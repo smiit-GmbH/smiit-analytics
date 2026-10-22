@@ -210,7 +210,8 @@ function Node({ data, status }: { data: NodeData; status: Status }) {
       className={cn(
         "relative flex min-w-0 flex-1 items-center gap-2.5 rounded-tile border bg-white p-3 transition-all duration-500",
         status === "run" ? "border-brand/50 shadow-[0_0_0_4px_rgba(33,86,156,0.12)]" : "border-line",
-        status === "skip" && "border-dashed opacity-45",
+        // Skipped branch: dashed and faded, but its text keeps full contrast (WCAG 1.4.3) – no opacity on the whole node.
+        status === "skip" && "border-dashed",
       )}
     >
       {data.label && (
@@ -227,6 +228,7 @@ function Node({ data, status }: { data: NodeData; status: Status }) {
         className={cn(
           "flex size-8 shrink-0 items-center justify-center rounded-[0.55rem] transition-colors duration-500 [&_svg]:size-4",
           lit ? "bg-brand text-white" : "bg-sand text-ink-muted",
+          status === "skip" && "opacity-45",
           // Branch nodes sit side by side on phones — drop the icon there to give the text room.
           data.label && "max-sm:hidden",
         )}
@@ -238,7 +240,9 @@ function Node({ data, status }: { data: NodeData; status: Status }) {
           <span className="truncate text-[0.6rem] font-semibold tracking-[0.14em] text-ink-muted uppercase">{data.kind}</span>
           <StatusIcon status={status} />
         </span>
-        <span className="mt-0.5 block text-[0.8rem] leading-snug font-medium text-ink">{data.title}</span>
+        <span className={cn("mt-0.5 block text-[0.8rem] leading-snug font-medium", status === "skip" ? "text-ink-muted" : "text-ink")}>
+          {data.title}
+        </span>
       </span>
     </div>
   )

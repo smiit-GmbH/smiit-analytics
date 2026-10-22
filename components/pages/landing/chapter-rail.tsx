@@ -122,9 +122,14 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
     measure()
     window.addEventListener("scroll", schedule, { passive: true })
     window.addEventListener("resize", schedule)
+    // Content that changes height without scrolling (FAQ answer, tab switch, late
+    // image) moves the sections – measure again so the rail is never stale.
+    const ro = new ResizeObserver(schedule)
+    ro.observe(document.body)
     return () => {
       window.removeEventListener("scroll", schedule)
       window.removeEventListener("resize", schedule)
+      ro.disconnect()
       cancelAnimationFrame(frame)
     }
   }, [chapters, n])

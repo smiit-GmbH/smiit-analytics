@@ -126,8 +126,11 @@ function Line({ dir, filled }: { dir: "h" | "v"; filled: boolean }) {
 
 /* ── Fork / merge between one node and the two branch nodes ────────── */
 
+type Side = "left" | "right" | "top" | "bottom"
+
 type SegDef = {
-  style: React.CSSProperties
+  /** Position inside the junction box: only the four inset sides. */
+  style: Partial<Record<Side, number | string>>
   axis: "x" | "y"
   from: "start" | "end"
   branch: Branch | null
@@ -154,7 +157,8 @@ const MERGE: SegDef[] = [
   { style: { left: "50%", right: 0, top: "50%" }, axis: "x", from: "start", branch: null, order: 2 },
 ]
 
-const SWAP: Record<string, string> = { left: "top", right: "bottom", top: "left", bottom: "right" }
+/** Vertical junctions reuse the horizontal layout with the axes swapped. */
+const SWAP: Record<Side, Side> = { left: "top", right: "bottom", top: "left", bottom: "right" }
 
 function Junction({
   kind,
@@ -173,7 +177,7 @@ function Junction({
   return (
     <div className={cn("relative shrink-0", dir === "h" ? "w-8 self-stretch" : "h-8")}>
       {defs.map((d, i) => {
-        const style = dir === "h" ? d.style : Object.fromEntries(Object.entries(d.style).map(([k, v]) => [SWAP[k], v]))
+        const style = dir === "h" ? d.style : Object.fromEntries((Object.keys(d.style) as Side[]).map((k) => [SWAP[k], d.style[k]]))
         const axis = dir === "h" ? d.axis : d.axis === "x" ? "y" : "x"
         const onPath = d.branch === null || d.branch === branch
         return (

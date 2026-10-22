@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { X } from "lucide-react"
+import { useLenis } from "@/components/smooth-scroll"
 import { cn } from "@/lib/utils"
 
 /**
@@ -60,6 +61,7 @@ type ModalContentProps = {
 export function ModalContent({ title, hideTitle, size = "md", closeLabel = "Schliessen", className, children }: ModalContentProps) {
   const { open, setOpen, titleId } = useModal()
   const ref = React.useRef<HTMLDialogElement>(null)
+  const lenis = useLenis()
 
   React.useEffect(() => {
     const dialog = ref.current
@@ -68,9 +70,18 @@ export function ModalContent({ title, hideTitle, size = "md", closeLabel = "Schl
     if (!open && dialog.open) dialog.close()
   }, [open])
 
+  // Smooth scrolling pauses while open, so the page behind stays put (CSS locks native scrolling).
+  React.useEffect(() => {
+    if (!open || !lenis) return
+    lenis.stop()
+    return () => lenis.start()
+  }, [open, lenis])
+
   return (
     <dialog
       ref={ref}
+      // A stopped Lenis swallows wheel events – except inside this element, so long content still scrolls.
+      data-lenis-prevent
       aria-labelledby={titleId}
       onClose={() => setOpen(false)}
       // The dialog has no padding and the content wrapper fills it, so only a

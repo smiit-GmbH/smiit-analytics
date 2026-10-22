@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { Analytics } from "@/components/analytics"
 import { LocaleProvider } from "@/components/locale-provider"
 import { JsonLd } from "@/components/seo/json-ld"
+import { ScrollToTop, SmoothScrollProvider } from "@/components/smooth-scroll"
 import { fontVariables } from "@/lib/fonts"
 import { getDictionary } from "@/lib/dictionary"
 import { pickFooterDict, pickHeaderDict } from "@/lib/dictionary-slices"
@@ -53,11 +54,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
         >
           {dict.common.skipLink}
         </a>
-        <Header lang={lang} dict={pickHeaderDict(dict)} />
-        <main id="main" tabIndex={-1} className="outline-none">
-          <LocaleProvider value={{ lang, error: dict.error }}>{children}</LocaleProvider>
-        </main>
-        <Footer lang={lang} dict={pickFooterDict(dict)} />
+        <SmoothScrollProvider>
+          <ScrollToTop />
+          <Header lang={lang} dict={pickHeaderDict(dict)} />
+          <main id="main" tabIndex={-1} className="outline-none">
+            <LocaleProvider value={{ lang, error: dict.error }}>{children}</LocaleProvider>
+          </main>
+          <Footer lang={lang} dict={pickFooterDict(dict)} />
+        </SmoothScrollProvider>
         <Analytics t={dict.consent} privacyHref={routePath(lang, "privacy")} />
         <JsonLd data={buildOrganizationJsonLd()} />
         <JsonLd data={buildWebSiteJsonLd(lang)} />

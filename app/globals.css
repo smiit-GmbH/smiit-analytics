@@ -68,8 +68,8 @@
 }
 
 @layer base {
+  /* No `scroll-behavior: smooth` – Lenis (components/smooth-scroll.tsx) smooths scrolling and would fight it. */
   html {
-    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     /* The scrollbar keeps its space while a modal locks scrolling – no layout jump. */
     scrollbar-gutter: stable;
@@ -94,9 +94,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
   *,
   *::before,
   *::after {

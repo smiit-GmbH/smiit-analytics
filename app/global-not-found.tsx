@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 import "./globals.css"
 import { NotFoundView, type NotFoundTexts } from "@/components/pages/not-found/not-found-view"
+import { SmoothScrollProvider } from "@/components/smooth-scroll"
 import { getDictionary } from "@/lib/dictionary"
 import { pickFooterDict, pickHeaderDict } from "@/lib/dictionary-slices"
 import { fontVariables } from "@/lib/fonts"
@@ -31,7 +32,9 @@ export default function NotFound() {
   return (
     <html lang={HTML_LANG[defaultLocale]} className={fontVariables}>
       <body>
-        <NotFoundView texts={texts} />
+        <SmoothScrollProvider>
+          <NotFoundView texts={texts} />
+        </SmoothScrollProvider>
       </body>
     </html>
   )

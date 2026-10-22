@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useLenis } from "@/components/smooth-scroll"
 import { cn } from "@/lib/utils"
 
 type Chapter = { id: string; label: string }
@@ -60,6 +61,7 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
   const [state, setState] = React.useState({ progress: 0, visible: false, page: 0 })
   const listRef = React.useRef<HTMLOListElement>(null)
   const darkRef = React.useRef<HTMLOListElement>(null)
+  const lenis = useLenis()
   const n = chapters.length
 
   React.useEffect(() => {
@@ -119,20 +121,27 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
     const schedule = () => {
       if (!frame) frame = requestAnimationFrame(measure)
     }
+    // Lenis reports scrolling inside its own animation frame – measure right away.
+    const onLenisScroll = () => {
+      cancelAnimationFrame(frame)
+      measure()
+    }
     measure()
-    window.addEventListener("scroll", schedule, { passive: true })
+    if (lenis) lenis.on("scroll", onLenisScroll)
+    else window.addEventListener("scroll", schedule, { passive: true })
     window.addEventListener("resize", schedule)
     // Content that changes height without scrolling (FAQ answer, tab switch, late
     // image) moves the sections – measure again so the rail is never stale.
     const ro = new ResizeObserver(schedule)
     ro.observe(document.body)
     return () => {
-      window.removeEventListener("scroll", schedule)
+      if (lenis) lenis.off("scroll", onLenisScroll)
+      else window.removeEventListener("scroll", schedule)
       window.removeEventListener("resize", schedule)
       ro.disconnect()
       cancelAnimationFrame(frame)
     }
-  }, [chapters, n])
+  }, [chapters, n, lenis])
 
   const current = Math.min(n - 1, Math.floor(state.progress + 0.001))
   const fill = n > 1 ? state.progress / (n - 1) : 0

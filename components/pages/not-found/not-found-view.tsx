@@ -10,6 +10,7 @@ import type { Dictionary } from "@/lib/dictionary"
 import type { FooterDict, HeaderDict } from "@/lib/dictionary-slices"
 import { HTML_LANG, defaultLocale, localeFromPath, type Locale } from "@/lib/i18n"
 import { routePath } from "@/lib/routes"
+import { useClientValue } from "@/lib/use-client-value"
 
 export type NotFoundTexts = Record<Locale, { header: HeaderDict; footer: FooterDict; notFound: Dictionary["notFound"] }>
 
@@ -24,13 +25,11 @@ export type NotFoundTexts = Record<Locale, { header: HeaderDict; footer: FooterD
  */
 export function NotFoundView({ texts }: { texts: NotFoundTexts }) {
   const pathname = usePathname()
-  const [lang, setLang] = React.useState<Locale>(defaultLocale)
+  const lang = useClientValue<Locale>(() => localeFromPath(pathname), defaultLocale)
 
   React.useEffect(() => {
-    const detected = localeFromPath(pathname)
-    setLang(detected)
-    document.documentElement.lang = HTML_LANG[detected]
-  }, [pathname])
+    document.documentElement.lang = HTML_LANG[lang]
+  }, [lang])
 
   const { header, footer, notFound: t } = texts[lang]
 
@@ -42,13 +41,16 @@ export function NotFoundView({ texts }: { texts: NotFoundTexts }) {
         <section
           aria-labelledby="nf-title"
           // Fills the screen below the header; anchored at the bottom so the figures stay below the text.
-          className="relative flex h-[calc(100svh-4.5rem)] min-h-[620px] max-h-[980px] flex-col overflow-hidden rounded-b-card bg-[url('/brand/not_found_mobile.webp')] bg-cover bg-bottom bg-no-repeat md:bg-[url('/brand/not_found.webp')]"
+          className="relative flex h-[calc(100svh-4.5rem)] max-h-[980px] min-h-[620px] flex-col overflow-hidden rounded-b-card bg-[url('/brand/not_found_mobile.webp')] bg-cover bg-bottom bg-no-repeat md:bg-[url('/brand/not_found.webp')]"
         >
           <span role="img" aria-label={t.imageAlt} />
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/45 via-white/25 to-black/35" />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/45 via-white/25 to-black/35"
+          />
           <div className="relative z-10 flex flex-1 items-start justify-center px-4 pt-10 md:pt-14">
             <div className="mx-auto max-w-md text-center font-serif">
-              <p aria-hidden="true" className="text-[100px] font-bold leading-none text-brand/20 md:text-[150px]">
+              <p aria-hidden="true" className="text-[100px] leading-none font-bold text-brand/20 md:text-[150px]">
                 404
               </p>
               <h1 id="nf-title" className="mt-6 text-3xl text-ink drop-shadow-[0_1px_2px_rgba(255,255,255,0.4)] md:mt-8 md:text-4xl">
@@ -58,7 +60,13 @@ export function NotFoundView({ texts }: { texts: NotFoundTexts }) {
                 {t.text}
               </p>
               <div className="mt-8 flex justify-center font-sans">
-                <CtaLink href={routePath(lang)} track="404_home" size="lg" externalHint={header.common.externalHint} className="w-full sm:w-auto">
+                <CtaLink
+                  href={routePath(lang)}
+                  track="404_home"
+                  size="lg"
+                  externalHint={header.common.externalHint}
+                  className="w-full sm:w-auto"
+                >
                   <Home aria-hidden="true" />
                   {t.cta}
                 </CtaLink>

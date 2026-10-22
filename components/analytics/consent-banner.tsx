@@ -4,6 +4,7 @@ import * as React from "react"
 import { Button } from "@/components/ui"
 import type { Dictionary } from "@/lib/dictionary"
 import { readConsent, writeConsent, type Consent } from "@/lib/track"
+import { useClientValue } from "@/lib/use-client-value"
 
 /**
  * Placeholder consent banner. Only rendered when analytics is enabled and
@@ -18,17 +19,15 @@ export function ConsentBanner({
   privacyHref: string
   onDecision?: (c: Consent) => void
 }) {
-  const [visible, setVisible] = React.useState(false)
+  // Hidden in the static HTML; shown after hydration if no decision is stored yet.
+  const undecided = useClientValue(() => readConsent() === null, false)
+  const [decided, setDecided] = React.useState(false)
 
-  React.useEffect(() => {
-    setVisible(readConsent() === null)
-  }, [])
-
-  if (!visible) return null
+  if (!undecided || decided) return null
 
   const decide = (c: Consent) => {
     writeConsent(c)
-    setVisible(false)
+    setDecided(true)
     onDecision?.(c)
   }
 

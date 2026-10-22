@@ -4,6 +4,7 @@ import * as React from "react"
 import { DEMO_CLOCK } from "@/lib/demo/clock"
 import type { Dictionary } from "@/lib/dictionary"
 import { createFormatter, type FormatConfig, type Formatter } from "@/lib/format"
+import { useClientValue } from "@/lib/use-client-value"
 import { cn } from "@/lib/utils"
 
 /*
@@ -77,13 +78,15 @@ function parseISO(iso: string) {
 
 export const REFERENCE_DATE = parseISO(DEMO_CLOCK.reference)
 
+/** Local midnight of today, as a timestamp (a primitive, so `useClientValue` can compare it). */
+function todayTimestamp() {
+  const now = new Date()
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime()
+}
+
 export function useToday(): Date {
-  const [today, setToday] = React.useState(REFERENCE_DATE)
-  React.useEffect(() => {
-    const now = new Date()
-    setToday(new Date(now.getFullYear(), now.getMonth(), now.getDate()))
-  }, [])
-  return today
+  const timestamp = useClientValue(todayTimestamp, REFERENCE_DATE.getTime())
+  return React.useMemo(() => new Date(timestamp), [timestamp])
 }
 
 /** Authored ISO date moved by the same number of days as today is from the reference. */
@@ -198,7 +201,7 @@ export function Tooltip({ x, y, width, children }: { x: number; y: number; width
   const flip = x > width - 170 // flip to the left near the right edge
   return (
     <div
-      className="pointer-events-none absolute z-10 min-w-36 whitespace-nowrap rounded-md bg-white px-3 py-2 text-xs shadow-card ring-1 ring-black/10"
+      className="pointer-events-none absolute z-10 min-w-36 rounded-md bg-white px-3 py-2 text-xs whitespace-nowrap shadow-card ring-1 ring-black/10"
       style={{ left: x, top: y, transform: `translate(${flip ? "calc(-100% - 12px)" : "12px"}, -50%)` }}
     >
       {children}
@@ -211,7 +214,11 @@ export function LineKey({ color, dashed }: { color: string; dashed?: boolean }) 
     <span
       aria-hidden="true"
       className="block h-0.5 w-3.5 shrink-0 rounded-full"
-      style={dashed ? { backgroundImage: `linear-gradient(90deg, ${color} 60%, transparent 60%)`, backgroundSize: "5px 2px" } : { background: color }}
+      style={
+        dashed
+          ? { backgroundImage: `linear-gradient(90deg, ${color} 60%, transparent 60%)`, backgroundSize: "5px 2px" }
+          : { background: color }
+      }
     />
   )
 }
@@ -220,19 +227,33 @@ export function TipRow({ color, dashed, value, label }: { color?: string; dashed
   return (
     <div className="flex items-center gap-2 py-0.5">
       {color && <LineKey color={color} dashed={dashed} />}
-      <span className="font-semibold tabular-nums text-ink">{value}</span>
+      <span className="font-semibold text-ink tabular-nums">{value}</span>
       <span className="text-ink-muted">{label}</span>
     </div>
   )
 }
 
-export function Card({ title, legend, className, children }: { title: string; legend?: React.ReactNode; className?: string; children: React.ReactNode }) {
+export function Card({
+  title,
+  legend,
+  className,
+  children,
+}: {
+  title: string
+  legend?: React.ReactNode
+  className?: string
+  children: React.ReactNode
+}) {
   return (
-    <section className={cn("min-w-0 rounded-lg border border-[#e5e7eb] bg-white px-4 pb-3 pt-3.5", className)}>
+    <section className={cn("min-w-0 rounded-lg border border-[#e5e7eb] bg-white px-4 pt-3.5 pb-3", className)}>
       <h4 className="text-[0.82rem] font-semibold" style={{ color: TITLE }}>
         {title}
       </h4>
-      {legend && <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[0.68rem]" style={{ color: AXIS_TEXT }}>{legend}</div>}
+      {legend && (
+        <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-[0.68rem]" style={{ color: AXIS_TEXT }}>
+          {legend}
+        </div>
+      )}
       <div className="mt-2">{children}</div>
     </section>
   )
@@ -244,10 +265,10 @@ export function Card({ title, legend, className, children }: { title: string; le
 export function KpiTile({ label, value }: { label: string; value: string }) {
   return (
     <div className="min-w-0 rounded-lg border border-[#e5e7eb] bg-white px-4 py-3">
-      <p className="text-[0.78rem] font-semibold leading-snug" style={{ color: TITLE }}>
+      <p className="text-[0.78rem] leading-snug font-semibold" style={{ color: TITLE }}>
         {label}
       </p>
-      <p className="mt-2 whitespace-nowrap text-[1.1rem] font-semibold leading-tight tracking-tight text-ink sm:text-[1.3rem]">{value}</p>
+      <p className="mt-2 text-[1.1rem] leading-tight font-semibold tracking-tight whitespace-nowrap text-ink sm:text-[1.3rem]">{value}</p>
     </div>
   )
 }
@@ -352,9 +373,19 @@ export function LineChart({
               />
               {s.dots &&
                 s.values.map((v, i) => (
-                  <circle key={i} cx={x(i)} cy={y(v)} r={active === i ? 4.5 : 2.5} fill={s.color} stroke="#fff" strokeWidth={active === i ? 2 : 1} />
+                  <circle
+                    key={i}
+                    cx={x(i)}
+                    cy={y(v)}
+                    r={active === i ? 4.5 : 2.5}
+                    fill={s.color}
+                    stroke="#fff"
+                    strokeWidth={active === i ? 2 : 1}
+                  />
                 ))}
-              {!s.dots && active !== null && <circle cx={x(active)} cy={y(s.values[active])} r={4.5} fill={s.color} stroke="#fff" strokeWidth={2} />}
+              {!s.dots && active !== null && (
+                <circle cx={x(active)} cy={y(s.values[active])} r={4.5} fill={s.color} stroke="#fff" strokeWidth={2} />
+              )}
             </g>
           ))}
         </svg>
@@ -384,8 +415,6 @@ export function LineLegend({ color, dashed, children }: { color: string; dashed?
 
 /* ── column chart ────────────────────────────────────────────────────── */
 
-
-
 export function Columns({
   items,
   label,
@@ -408,7 +437,9 @@ export function Columns({
   const n = items.length
   // Straight labels wrap onto two lines when a band is too narrow (≈5.4px per character at 10px).
   const band0 = Math.max(0, w - 54) / n
-  const lines = items.map((it) => (!angled && it.name.length * 5.4 > band0 - 4 && it.name.includes(" ") ? it.name.split(/ (.+)/).slice(0, 2) : [it.name]))
+  const lines = items.map((it) =>
+    !angled && it.name.length * 5.4 > band0 - 4 && it.name.includes(" ") ? it.name.split(/ (.+)/).slice(0, 2) : [it.name],
+  )
   const twoLines = lines.some((l) => l.length > 1)
   const m = { l: 48, r: 6, t: 6, b: angled ? 54 : twoLines ? 30 : 20 }
   const iw = Math.max(0, w - m.l - m.r)
@@ -568,8 +599,7 @@ export function HBars({
  */
 export function DashboardShell({ title, children }: { title: string; children: React.ReactNode }) {
   const { t, f } = useDemo()
-  const [now, setNow] = React.useState<string | null>(null)
-  React.useEffect(() => setNow(f.dateTime(new Date())), [f])
+  const now = useClientValue<string | null>(() => f.dateTime(new Date()), null)
   return (
     <div className="bg-[#f8f9fb] p-3 text-left sm:p-4">
       <div className="mb-3 flex items-center justify-between gap-3 sm:mb-4">
@@ -583,7 +613,16 @@ export function DashboardShell({ title, children }: { title: string; children: R
           )}
           style={{ color: AXIS_TEXT }}
         >
-          <svg aria-hidden="true" viewBox="0 0 24 24" className="size-3" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            className="size-3"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
             <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
             <path d="M3 3v5h5" />
             <path d="M12 7v5l3 2" />

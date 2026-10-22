@@ -1,11 +1,9 @@
-// next.config.mjs
 /** @type {import('next').NextConfig} */
-const basePath = ''
-
-export default {
-  output: 'export',
+const nextConfig = {
+  // Static export to out/ – no server, any static host can serve it.
+  output: "export",
   images: { unoptimized: true },
-  basePath,
-  assetPrefix: basePath,
   trailingSlash: true,
 }
+
+export default nextConfig

@@ -75,13 +75,12 @@ function ServiceDonut({ height }: { height: number }) {
   const c = size / 2
 
   // Angles clockwise from 12 o'clock.
-  let acc = -Math.PI / 2
-  const slices = items.map((it) => {
-    const a0 = acc
-    const a1 = acc + (it.value / total) * Math.PI * 2
-    acc = a1
-    return { ...it, a0, a1, mid: (a0 + a1) / 2 }
-  })
+  const slices = items.reduce<((typeof items)[number] & { a0: number; a1: number; mid: number })[]>((out, it) => {
+    const a0 = out.at(-1)?.a1 ?? -Math.PI / 2
+    const a1 = a0 + (it.value / total) * Math.PI * 2
+    out.push({ ...it, a0, a1, mid: (a0 + a1) / 2 })
+    return out
+  }, [])
 
   return (
     <div ref={ref} className="relative flex items-center gap-5" style={{ height }} onPointerLeave={leaveUnlessTouch(setActive)}>
@@ -119,19 +118,27 @@ function ServiceDonut({ height }: { height: number }) {
             onPointerEnter={() => setActive(i)}
             className={cn("flex items-start gap-2 rounded px-1 py-0.5 transition-colors", active === i && "bg-[#f3f4f7]")}
           >
-            <span aria-hidden="true" className="mt-1 block size-2.5 shrink-0 rounded-[2px]" style={{ background: SERVICE_COLORS[s.slot] }} />
+            <span
+              aria-hidden="true"
+              className="mt-1 block size-2.5 shrink-0 rounded-[2px]"
+              style={{ background: SERVICE_COLORS[s.slot] }}
+            />
             <span className="min-w-0 leading-tight">
               <span className="block" style={{ color: active === i ? TITLE : AXIS_TEXT }}>
                 {s.name}
               </span>
-              <span className="block font-semibold tabular-nums text-ink">{f.pct((s.value / total) * 100)}</span>
+              <span className="block font-semibold text-ink tabular-nums">{f.pct((s.value / total) * 100)}</span>
             </span>
           </li>
         ))}
       </ul>
 
       {active !== null && w > 0 && (
-        <Tooltip x={c + (R * 0.8) * Math.cos(slices[active].mid)} y={c + (R * 0.8) * Math.sin(slices[active].mid) + (height - size) / 2} width={w}>
+        <Tooltip
+          x={c + R * 0.8 * Math.cos(slices[active].mid)}
+          y={c + R * 0.8 * Math.sin(slices[active].mid) + (height - size) / 2}
+          width={w}
+        >
           <p className="mb-1 font-medium text-ink">{slices[active].name}</p>
           <TipRow
             color={SERVICE_COLORS[slices[active].slot]}
@@ -157,12 +164,15 @@ export function WorktimeDashboard() {
     { label: T.kpis.utilization, value: f.pct((D.billableTotal / D.total) * 100) },
     { label: T.kpis.overtime, value: signedHours(D.total - D.target) },
   ]
-  const shareTip = (share: string) => (it: { name: string; value: number }) => (
-    <>
-      <p className="mb-1 font-medium text-ink">{it.name}</p>
-      <TipRow color={SERIES} value={hours(it.value)} label={`${f.pct((it.value / D.total) * 100)} ${share}`} />
-    </>
-  )
+  const shareTip = (share: string) =>
+    function ShareTip(it: { name: string; value: number }) {
+      return (
+        <>
+          <p className="mb-1 font-medium text-ink">{it.name}</p>
+          <TipRow color={SERIES} value={hours(it.value)} label={`${f.pct((it.value / D.total) * 100)} ${share}`} />
+        </>
+      )
+    }
 
   return (
     <DashboardShell title={T.title}>

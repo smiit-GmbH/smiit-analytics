@@ -1,14 +1,11 @@
 "use client"
 
-import * as React from "react"
 import { SALES as D } from "@/lib/demo/sales"
 import { cn } from "@/lib/utils"
 import {
-  AXIS_TEXT,
   Card,
   Columns,
   DashboardShell,
-  GRID,
   HBars,
   KpiTile,
   LineChart,
@@ -16,17 +13,9 @@ import {
   LineKey,
   PREV,
   SERIES,
-  SERIES_HOVER,
-  TITLE,
   TipRow,
-  Tooltip,
-  columnPath,
-  keyNav,
   monthLabels,
-  niceScale,
-  svgFocus,
   useToday,
-  useWidth,
   useDemo,
 } from "./dashboard-kit"
 
@@ -120,7 +109,9 @@ export function SalesDashboard() {
                 <span aria-hidden="true" className="block size-2 rounded-[2px]" style={{ background: SERIES }} />
                 {T.concentration.legend}
               </span>
-              <span className="ml-auto">{T.concentration.summary.replace("{n}", String(topN)).replace("{share}", f.pct(cumulative[topN - 1], 0))}</span>
+              <span className="ml-auto">
+                {T.concentration.summary.replace("{n}", String(topN)).replace("{share}", f.pct(cumulative[topN - 1], 0))}
+              </span>
             </>
           }
         >

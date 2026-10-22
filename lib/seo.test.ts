@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest"
 import { locales } from "@/lib/i18n"
 import { PRICING } from "@/lib/pricing"
-import { alternates, buildBreadcrumbJsonLd, buildFaqJsonLd, buildPageMetadata, faqItems } from "@/lib/seo"
+import { alternates, buildBreadcrumbJsonLd, buildFaqJsonLd, buildPageMetadata, buildSoftwareApplicationJsonLd, faqItems } from "@/lib/seo"
 import { SITE_URL } from "@/lib/site"
 
 describe("alternates", () => {
@@ -51,5 +51,19 @@ describe("buildBreadcrumbJsonLd", () => {
     const ld = buildBreadcrumbJsonLd("de", [{ name: "Daten­schutz", route: "privacy" }])
     expect(ld.itemListElement.map((i) => i.position)).toEqual([1, 2])
     expect(ld.itemListElement[1]).toMatchObject({ name: "Datenschutz", item: `${SITE_URL}/de/privacy/` })
+  })
+})
+
+describe("buildSoftwareApplicationJsonLd", () => {
+  it("prices both plans per month and bills them monthly or yearly", () => {
+    const offers = buildSoftwareApplicationJsonLd("de").offers
+    expect(offers.map((o) => [o.price, o.priceSpecification.billingDuration])).toEqual([
+      [PRICING.company.monthly, "P1M"],
+      [PRICING.company.yearly, "P1Y"],
+    ])
+    for (const o of offers) {
+      expect(o.priceSpecification.referenceQuantity).toEqual({ "@type": "QuantitativeValue", value: 1, unitCode: "MON" })
+      expect(o.url).toBe(`${SITE_URL}/de/#pricing`)
+    }
   })
 })

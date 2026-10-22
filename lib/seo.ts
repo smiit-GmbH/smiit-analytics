@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import { getDictionary } from "@/lib/dictionary"
 import { HTML_LANG, OG_LOCALE, locales, defaultLocale, type Locale } from "@/lib/i18n"
 import { marketplaceReviews } from "@/lib/links"
-import { PRICING } from "@/lib/pricing"
+import { PRICING, type Billing } from "@/lib/pricing"
 import { plain } from "@/lib/rich"
-import { routePath, type Route } from "@/lib/routes"
+import { SECTIONS, routePath, type Route } from "@/lib/routes"
 import { COMPANY, SITE, SITE_URL } from "@/lib/site"
 import { fill } from "@/lib/text"
 
@@ -93,6 +93,9 @@ export function buildWebSiteJsonLd(lang: Locale) {
   }
 }
 
+/** How often each plan is billed (ISO 8601 duration). */
+const BILLING_DURATION: Record<Billing, string> = { monthly: "P1M", yearly: "P1Y" }
+
 export function buildSoftwareApplicationJsonLd(lang: Locale) {
   const dict = getDictionary(lang)
   const t = dict.home.pricing
@@ -109,9 +112,11 @@ export function buildSoftwareApplicationJsonLd(lang: Locale) {
     image: `${SITE_URL}${ogImagePath(lang)}`,
     publisher: { "@id": ORG_ID },
     sameAs: [marketplaceReviews(lang)],
-    offers: (Object.keys(PRICING.company) as (keyof typeof PRICING.company)[]).map((billing) => ({
+    // The price is per month and bexio company in both plans; only how often it is billed differs.
+    offers: (Object.keys(PRICING.company) as Billing[]).map((billing) => ({
       "@type": "Offer",
       name: `${SITE.name} – ${t.billing[billing].label}`,
+      url: `${SITE_URL}${routePath(lang, "home", SECTIONS.pricing)}`,
       price: PRICING.company[billing],
       priceCurrency: "CHF",
       priceSpecification: {
@@ -119,7 +124,8 @@ export function buildSoftwareApplicationJsonLd(lang: Locale) {
         price: PRICING.company[billing],
         priceCurrency: "CHF",
         unitText: t.unit,
-        billingDuration: "P1M",
+        referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+        billingDuration: BILLING_DURATION[billing],
       },
     })),
   }

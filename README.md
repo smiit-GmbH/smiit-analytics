@@ -15,17 +15,35 @@ npm install
 npm run dev          # http://localhost:3000 → redirects to the browser language (fallback /de/)
 ```
 
-| Command             | Purpose                                                                          |
-| ------------------- | -------------------------------------------------------------------------------- |
-| `npm run dev`       | Development server                                                               |
-| `npm run build`     | Static export to `out/`                                                          |
-| `npm run typecheck` | TypeScript check – also fails if a language is missing a text                    |
-| `npm test`          | Unit tests (Vitest) – incl. placeholders and highlights kept in every language   |
-| `npm run lint`      | ESLint (Next.js, TypeScript, React Compiler rules); `lint:fix` fixes what it can |
-| `npm run format`    | Formats everything with Prettier; CI runs `format:check`                         |
-| `npm run media`     | Regenerates the localized illustrations and social preview images (see below)    |
+| Command                   | Purpose                                                                          |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| `npm run dev`             | Development server                                                               |
+| `npm run build`           | Static export to `out/`                                                          |
+| `npm run typecheck`       | TypeScript check – also fails if a language is missing a text                    |
+| `npm test`                | Unit tests (Vitest) – incl. placeholders and highlights kept in every language   |
+| `npm run lint`            | ESLint (Next.js, TypeScript, React Compiler rules); `lint:fix` fixes what it can |
+| `npm run format`          | Formats everything with Prettier; CI runs `format:check`                         |
+| `npm run test:e2e`        | Playwright end-to-end tests against `out/` (run `npm run build` first)           |
+| `npm run test:e2e:docker` | Same tests in the Linux CI image (Docker); updates the dashboard screenshots     |
+| `npm run media`           | Regenerates the localized illustrations and social preview images (see below)    |
 
-Node 22 (see `.nvmrc`). Every pull request runs lint, format check, typecheck, tests and the build ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)).
+Node 22 (see `.nvmrc`). Every pull request runs lint, format check, typecheck, unit tests, the build, the end-to-end tests and Lighthouse ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)); `main` is only deployed when all of them pass.
+
+### End-to-end tests
+
+[`e2e/`](e2e) runs against the static export, served like GitHub Pages ([`e2e/serve.mjs`](e2e/serve.mjs)), on a desktop and a phone profile:
+
+- every page in every language: no JavaScript or console errors, `<html lang>`, one `<h1>`, canonical URL, **axe** (WCAG 2.1 AA)
+- `/` forwards to the visitor's language, unknown URLs get the localized 404
+- demo modal, mobile menu, language switcher, FAQ deep links, chapter rail, report tabs
+- the demo charts work with the keyboard and are read out to screen readers
+- **screenshots** of all demo dashboards (clock frozen at the demo reference date)
+
+Screenshots are rendered on Linux, as in CI; on Windows and macOS that test is skipped. After an intended visual change run `npm run build && npm run test:e2e:docker` and commit the updated files in `e2e/__screenshots__/`.
+
+### Lighthouse
+
+[`lighthouserc.json`](lighthouserc.json) checks the German and French home page and a legal page (median of three runs): accessibility and SEO must be 100, best practices at least 90, performance at least 70. Performance is measured on a throttled mid-range phone: the home pages currently score about 80 (mostly blocking time while the page and the demo dashboards hydrate), the legal pages about 90 – the threshold catches regressions, 90 on the home page is the target. Run it locally with `npx @lhci/cli autorun` after a build.
 
 ---
 
@@ -123,7 +141,7 @@ Client components only receive the texts they need (e.g. `pickHeaderDict`), neve
 - `sitemap.xml` lists every page in every language with its alternates; `robots.txt` allows everything.
 - Structured data: `Organization` (smiit GmbH with address, VAT ID), `WebSite`, `SoftwareApplication` with offers, `FAQPage`, `BreadcrumbList` on the legal pages.
 - One `<h1>` per page, `<html lang>` per language, alt texts for all media.
-- Lighthouse: SEO 100, accessibility 100 on the home and legal pages.
+- Lighthouse: SEO 100, accessibility 100 on the home and legal pages – enforced in CI (see [Lighthouse](#lighthouse)).
 
 ---
 

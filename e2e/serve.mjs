@@ -1,11 +1,13 @@
 // Serves the static export (out/) like GitHub Pages: directories answer with
-// their index.html, unknown paths with 404.html and status 404.
+// their index.html, unknown paths with 404.html and status 404, and text
+// files are gzip-compressed (so Lighthouse measures realistic transfer sizes).
 // Usage: node e2e/serve.mjs [port]   (default 4173)
 import { createReadStream } from "node:fs"
 import { stat } from "node:fs/promises"
 import { createServer } from "node:http"
 import { extname, join, normalize } from "node:path"
 import { fileURLToPath } from "node:url"
+import { createGzip } from "node:zlib"
 
 const root = fileURLToPath(new URL("../out/", import.meta.url))
 const port = Number(process.argv[2] ?? 4173)
@@ -48,6 +50,11 @@ createServer(async (req, res) => {
   const file = await resolve(new URL(req.url ?? "/", "http://localhost").pathname)
   const status = file ? 200 : 404
   const body = file ?? join(root, "404.html")
-  res.writeHead(status, { "content-type": TYPES[extname(body)] ?? "application/octet-stream" })
-  createReadStream(body).pipe(res)
+  const type = TYPES[extname(body)] ?? "application/octet-stream"
+  const compressible = type.startsWith("text/") || /json|xml|svg/.test(type)
+  const gzip = compressible && (req.headers["accept-encoding"] ?? "").includes("gzip")
+  res.writeHead(status, { "content-type": type, ...(gzip ? { "content-encoding": "gzip", vary: "accept-encoding" } : {}) })
+  const stream = createReadStream(body)
+  if (gzip) stream.pipe(createGzip()).pipe(res)
+  else stream.pipe(res)
 }).listen(port, () => console.log(`Serving out/ on http://localhost:${port}`))

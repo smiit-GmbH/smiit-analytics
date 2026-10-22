@@ -79,15 +79,95 @@ jobs:
       - name: Add .nojekyll (serve the _next folder)
         run: touch out/.nojekyll
 
+      # The export for the e2e and Lighthouse jobs.
+      - name: Upload export
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: out
+          include-hidden-files: true
+          retention-days: 3
+
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
+  e2e:
+    name: End-to-end tests (Playwright, axe, screenshots)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    # Same image as `npm run test:e2e:docker`, so screenshots match the baselines.
+    # Keep the tag equal to the @playwright/test version in package.json.
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble
+      options: --ipc=host
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - run: npm ci
+
+      - name: Playwright version matches the container
+        run: |
+          v=$(node -p "require('@playwright/test/package.json').version")
+          test "$v" = "1.64.1" || { echo "::error::@playwright/test is $v – update the container tag in ci.yml"; exit 1; }
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: out
+
+      - name: Run tests
+        run: npx playwright test
+
+      - name: Upload report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: |
+            playwright-report
+            test-results
+          retention-days: 7
+
+  lighthouse:
+    name: Lighthouse (performance, a11y, best practices, SEO)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: out
+
+      - name: Lighthouse CI (budgets in lighthouserc.json)
+        run: npx --yes @lhci/cli@0.15.1 autorun
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse
+          path: .lighthouseci
+          retention-days: 7
+
   deploy:
     name: Deploy to GitHub Pages
-    needs: [check, build]
+    needs: [check, build, e2e, lighthouse]
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10

@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import * as TabsPrimitive from "@radix-ui/react-tabs"
+import { prefersReducedMotion } from "@/lib/use-reduced-motion"
 import { cn } from "@/lib/utils"
 
 /**
@@ -15,8 +16,17 @@ export const Tabs = TabsPrimitive.Root
  * horizontally without a visible scrollbar; a soft fade at the cut-off edge
  * shows that there is more.
  */
-export function TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.List>) {
+export function TabsList({ className, ref: forwardedRef, ...props }: React.ComponentProps<typeof TabsPrimitive.List>) {
   const ref = React.useRef<HTMLDivElement>(null)
+  // The bar measures itself through `ref`; a ref passed by the consumer gets the same element.
+  const setRef = React.useCallback(
+    (el: HTMLDivElement | null) => {
+      ref.current = el
+      if (typeof forwardedRef === "function") return forwardedRef(el)
+      if (forwardedRef) forwardedRef.current = el
+    },
+    [forwardedRef],
+  )
   const [fade, setFade] = React.useState({ start: false, end: false })
 
   React.useEffect(() => {
@@ -47,7 +57,7 @@ export function TabsList({ className, ...props }: React.ComponentProps<typeof Ta
 
   return (
     <TabsPrimitive.List
-      ref={ref}
+      ref={setRef}
       className={cn(
         "inline-flex max-w-full snap-x scroll-px-1 gap-1 overflow-x-auto overscroll-x-contain rounded-control bg-white p-1 shadow-card ring-1 ring-black/5",
         "[scrollbar-width:none] [&::-webkit-scrollbar]:hidden",
@@ -59,9 +69,21 @@ export function TabsList({ className, ...props }: React.ComponentProps<typeof Ta
   )
 }
 
-/** Keeps the selected tab fully visible in a scrolling tab bar. */
-const reveal = (e: React.SyntheticEvent<HTMLButtonElement>) =>
-  e.currentTarget.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" })
+/**
+ * Keeps the focused tab fully visible in a scrolling tab bar. Scrolls only the
+ * bar itself – scrollIntoView() would also move the page vertically.
+ */
+const reveal = (e: React.SyntheticEvent<HTMLButtonElement>) => {
+  const tab = e.currentTarget.getBoundingClientRect()
+  const list = e.currentTarget.parentElement
+  if (!list) return
+  const rect = list.getBoundingClientRect()
+  const pad = 4 // the bar's p-1, so the tab does not touch the edge
+  const left = rect.left + pad
+  const right = rect.right - pad
+  const delta = tab.left < left ? tab.left - left : tab.right > right ? tab.right - right : 0
+  if (delta) list.scrollBy({ left: delta, behavior: prefersReducedMotion() ? "auto" : "smooth" })
+}
 
 export function TabsTrigger({ className, onClick, onFocus, ...props }: React.ComponentProps<typeof TabsPrimitive.Trigger>) {
   return (
@@ -72,6 +94,7 @@ export function TabsTrigger({ className, onClick, onFocus, ...props }: React.Com
         "outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-inset",
         className,
       )}
+      {...props}
       onClick={(e) => {
         reveal(e)
         onClick?.(e)
@@ -80,7 +103,6 @@ export function TabsTrigger({ className, onClick, onFocus, ...props }: React.Com
         reveal(e)
         onFocus?.(e)
       }}
-      {...props}
     />
   )
 }

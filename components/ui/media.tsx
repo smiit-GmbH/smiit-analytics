@@ -3,6 +3,7 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 import { MEDIA, mediaPath, mediaSrcSet, type MediaId } from "@/lib/media"
+import { useReducedMotion } from "@/lib/use-reduced-motion"
 
 /*
  * Asset slots. The labelled placeholder box always sits underneath the media.
@@ -77,27 +78,21 @@ export function MediaImage({ id, src, srcSet, ratio, spec, alt, fit = "cover", s
   )
 }
 
-function usePrefersReducedMotion() {
-  const [reduced, setReduced] = React.useState(false)
-  React.useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
-    const update = () => setReduced(mq.matches)
-    update()
-    mq.addEventListener("change", update)
-    return () => mq.removeEventListener("change", update)
-  }, [])
-  return reduced
-}
-
+/** True once this exact poster has loaded – a new `poster` (e.g. other language) starts over. */
 function usePosterLoaded(poster: string, enabled = true) {
-  const [ok, setOk] = React.useState(false)
+  const [loaded, setLoaded] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (!enabled) return
+    let current = true
     const img = new window.Image()
-    img.onload = () => setOk(true)
+    img.onload = () => current && setLoaded(poster)
     img.src = poster
+    return () => {
+      current = false
+      img.onload = null
+    }
   }, [poster, enabled])
-  return ok
+  return loaded === poster
 }
 
 type VideoPlayerProps = {
@@ -119,7 +114,7 @@ export function VideoPlayer({ id, src, ratio, spec, alt, className }: VideoPlaye
   const ref = React.useRef<HTMLVideoElement>(null)
   const [activated, setActivated] = React.useState(false)
   const [playing, setPlaying] = React.useState(false)
-  const reduced = usePrefersReducedMotion()
+  const reduced = useReducedMotion()
   const poster = `${src}-poster.webp`
   const [near, setNear] = React.useState(false)
   const posterOk = usePosterLoaded(poster, near)

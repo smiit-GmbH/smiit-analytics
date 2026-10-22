@@ -71,6 +71,12 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    /* The scrollbar keeps its space while a modal locks scrolling – no layout jump. */
+    scrollbar-gutter: stable;
+  }
+  /* An open modal (components/ui/modal.tsx) stops the page behind it from scrolling. */
+  html:has(dialog:modal) {
+    overflow: hidden;
   }
   body {
     @apply bg-cream font-sans text-ink antialiased;

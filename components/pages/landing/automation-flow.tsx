@@ -4,6 +4,7 @@ import * as React from "react"
 import { Check } from "lucide-react"
 import { Icon } from "@/components/icons"
 import type { Dictionary } from "@/lib/dictionary"
+import { useReducedMotion } from "@/lib/use-reduced-motion"
 import { cn } from "@/lib/utils"
 
 /*
@@ -30,15 +31,7 @@ function useFlowPhase(ref: React.RefObject<HTMLElement | null>) {
   const [phase, setPhase] = React.useState(0)
   const [branch, setBranch] = React.useState<Branch>("a")
   const [visible, setVisible] = React.useState(false)
-  const [reduced, setReduced] = React.useState(false)
-
-  React.useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
-    const update = () => setReduced(mq.matches)
-    update()
-    mq.addEventListener("change", update)
-    return () => mq.removeEventListener("change", update)
-  }, [])
+  const reduced = useReducedMotion()
 
   React.useEffect(() => {
     const el = ref.current

@@ -25,16 +25,26 @@ export function Modal({ children }: { children: React.ReactNode }) {
   return <ModalContext.Provider value={{ open, setOpen, titleId }}>{children}</ModalContext.Provider>
 }
 
-export function ModalTrigger({ asChild, ...props }: React.ComponentProps<"button"> & { asChild?: boolean }) {
+type ButtonLikeProps = React.ComponentProps<"button"> & { asChild?: boolean }
+
+/** Runs the consumer's onClick first; it can call preventDefault() to keep the modal as it is. */
+const compose =
+  (own: () => void, theirs?: React.MouseEventHandler<HTMLButtonElement>): React.MouseEventHandler<HTMLButtonElement> =>
+  (e) => {
+    theirs?.(e)
+    if (!e.defaultPrevented) own()
+  }
+
+export function ModalTrigger({ asChild, onClick, ...props }: ButtonLikeProps) {
   const { open, setOpen } = useModal()
   const Comp = asChild ? Slot : "button"
-  return <Comp aria-haspopup="dialog" aria-expanded={open} onClick={() => setOpen(true)} {...props} />
+  return <Comp aria-haspopup="dialog" aria-expanded={open} {...props} onClick={compose(() => setOpen(true), onClick)} />
 }
 
-export function ModalClose({ asChild, ...props }: React.ComponentProps<"button"> & { asChild?: boolean }) {
+export function ModalClose({ asChild, onClick, ...props }: ButtonLikeProps) {
   const { setOpen } = useModal()
   const Comp = asChild ? Slot : "button"
-  return <Comp onClick={() => setOpen(false)} {...props} />
+  return <Comp {...props} onClick={compose(() => setOpen(false), onClick)} />
 }
 
 type ModalContentProps = {
@@ -63,23 +73,26 @@ export function ModalContent({ title, hideTitle, size = "md", closeLabel = "Schl
       ref={ref}
       aria-labelledby={titleId}
       onClose={() => setOpen(false)}
-      // A click on the backdrop lands on the <dialog> element itself.
+      // The dialog has no padding and the content wrapper fills it, so only a
+      // click on the backdrop lands on the <dialog> element itself.
       onClick={(e) => e.target === e.currentTarget && setOpen(false)}
       className={cn(
-        "m-auto w-[calc(100%-2rem)] rounded-card bg-white text-ink shadow-frame outline-none backdrop:bg-navy/80 backdrop:backdrop-blur-sm",
+        "m-auto w-[calc(100%-2rem)] rounded-card bg-white p-0 text-ink shadow-frame outline-none backdrop:bg-navy/80 backdrop:backdrop-blur-sm",
         "open:animate-in open:fade-in-0 open:zoom-in-95 motion-reduce:animate-none",
-        size === "md" && "max-w-lg p-7",
-        size === "lg" && "max-w-3xl p-7",
-        size === "video" && "max-w-5xl overflow-hidden bg-navy p-0",
+        size === "md" && "max-w-lg",
+        size === "lg" && "max-w-3xl",
+        size === "video" && "max-w-5xl overflow-hidden bg-navy",
         className,
       )}
     >
       {open && (
         <>
-          <h2 id={titleId} className={cn("font-serif text-2xl tracking-tight", hideTitle && "sr-only")}>
-            {title}
-          </h2>
-          {children}
+          <div className={cn(size !== "video" && "p-7")}>
+            <h2 id={titleId} className={cn("font-serif text-2xl tracking-tight", hideTitle && "sr-only")}>
+              {title}
+            </h2>
+            {children}
+          </div>
           <button
             type="button"
             onClick={() => setOpen(false)}

@@ -66,13 +66,13 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
     let frame = 0
     const measure = () => {
       frame = 0
-      const els = chapters.map((c) => document.getElementById(c.id))
-      if (els.some((el) => !el)) return
+      const els = chapters.map((c) => document.getElementById(c.id)).filter((el) => el !== null)
+      if (els.length !== n) return
       const vh = window.innerHeight
       // Reading line: a third down the viewport.
       const line = vh * 0.35
-      const tops = els.map((el) => el!.getBoundingClientRect().top)
-      const end = els[n - 1]!.getBoundingClientRect().bottom
+      const tops = els.map((el) => el.getBoundingClientRect().top)
+      const end = els[n - 1].getBoundingClientRect().bottom
       const bounds = [...tops, end]
       let progress = 0
       if (line >= end) progress = n - 1
@@ -143,6 +143,8 @@ export function ChapterRail({ chapters, label }: { chapters: Chapter[]; label: s
       {/* Desktop: chapter rail at the left edge */}
       <nav
         aria-label={label}
+        // Hidden rail: out of the tab order and the accessibility tree, not just transparent.
+        inert={!state.visible}
         className={cn(
           "group/rail fixed top-1/2 left-4 z-30 hidden -translate-y-1/2 transition-opacity motion-reduce:transition-none min-[1440px]:left-5 xl:block 3xl:left-8",
           state.visible ? "opacity-100 duration-500" : "pointer-events-none opacity-0 duration-150",

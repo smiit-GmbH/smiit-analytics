@@ -16,8 +16,8 @@ export default defineConfig([
     },
   },
   {
-    // Node build scripts report progress on the console.
-    files: ["scripts/**"],
+    // Node scripts (media build, test server) report progress on the console.
+    files: ["scripts/**", "e2e/**/*.mjs"],
     rules: { "no-console": "off" },
   },
   globalIgnores([".next/**", "out/**", ".archiv/**", "next-env.d.ts"]),

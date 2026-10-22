@@ -1,4 +1,4 @@
-import { ArrowRight, PlayCircle } from "lucide-react"
+import { ArrowRight, CirclePlay } from "lucide-react"
 import { BrowserFrame, Button, Container, DemoVideo, Media, Modal, ModalContent, ModalTrigger } from "@/components/ui"
 import { CtaLink } from "@/components/cta-link"
 import { LINKS } from "@/lib/links"
@@ -28,7 +28,7 @@ export function Hero({ lang, dict }: SectionProps) {
             <Modal>
               <ModalTrigger asChild>
                 <Button variant="secondary" size="lg" track="hero_demo">
-                  <PlayCircle aria-hidden="true" />
+                  <CirclePlay aria-hidden="true" />
                   {t.ctaSecondary}
                 </Button>
               </ModalTrigger>

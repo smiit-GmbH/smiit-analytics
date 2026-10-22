@@ -1,4 +1,4 @@
-import { Building2 } from "lucide-react"
+import { BuildingComplex } from "lucide-react"
 import { BrowserFrame, Card, IconTile, Media, Section } from "@/components/ui"
 import { Icon } from "@/components/icons"
 import { SECTIONS } from "@/lib/routes"
@@ -31,7 +31,7 @@ export function Customize({ lang, dict }: SectionProps) {
       <Card tone="sand" className="mt-12 grid items-center gap-8 p-6 sm:p-8 md:mt-16 md:grid-cols-2 md:p-10">
         <div>
           <IconTile className="bg-white">
-            <Building2 />
+            <BuildingComplex />
           </IconTile>
           <h3 className="font-serif text-title-lg tracking-tight text-balance">{rich(t.trustee.title)}</h3>
           <p className="mt-4 leading-relaxed text-ink-muted">{t.trustee.text}</p>

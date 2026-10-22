@@ -1,31 +1,22 @@
 import { ArrowRight } from "lucide-react"
 import { BrowserFrame, Section, Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui"
 import { CtaLink } from "@/components/cta-link"
-import { BalanceDashboard } from "@/components/pages/landing/dashboards/balance-dashboard"
-import { CashflowDashboard } from "@/components/pages/landing/dashboards/cashflow-dashboard"
-import { DemoProvider } from "@/components/pages/landing/dashboards/dashboard-kit"
-import { ProjectsDashboard } from "@/components/pages/landing/dashboards/projects-dashboard"
-import { SalesDashboard } from "@/components/pages/landing/dashboards/sales-dashboard"
-import { WorktimeDashboard } from "@/components/pages/landing/dashboards/worktime-dashboard"
+import { DemoProvider } from "@/components/pages/landing/dashboards/demo-context"
+import { LazyDashboard, type DashboardName } from "@/components/pages/landing/dashboards/lazy-dashboard"
 import { LINKS } from "@/lib/links"
 import { rich } from "@/lib/rich"
 import { SECTIONS } from "@/lib/routes"
 import type { SectionProps } from "./types"
 
-/** Every report tab is a live demo dashboard (fictional data in lib/demo, texts in `demo`). */
-const DEMOS = {
-  sales: SalesDashboard,
-  balance: BalanceDashboard,
-  worktime: WorktimeDashboard,
-  projects: ProjectsDashboard,
-  cashflow: CashflowDashboard,
-} as const
-
-type Tab = keyof typeof DEMOS
+/**
+ * Every report tab is a live demo dashboard (fictional data in lib/demo, texts
+ * in `demo`), loaded when the section comes near the viewport (LazyDashboard).
+ */
+const TABS = ["sales", "balance", "worktime", "projects", "cashflow"] as const satisfies readonly DashboardName[]
 
 export function Reports({ dict }: SectionProps) {
   const t = dict.home.reports
-  const tabs = Object.keys(DEMOS) as Tab[]
+  const tabs = TABS
   return (
     <Section id={SECTIONS.features} tone="cream" eyebrow={t.eyebrow} title={rich(t.title)} intro={t.intro}>
       <DemoProvider t={dict.demo} format={dict.format}>
@@ -44,16 +35,13 @@ export function Reports({ dict }: SectionProps) {
               <ArrowRight aria-hidden="true" />
             </CtaLink>
           </div>
-          {tabs.map((tab) => {
-            const Demo = DEMOS[tab]
-            return (
-              <TabsContent key={tab} value={tab}>
-                <BrowserFrame>
-                  <Demo />
-                </BrowserFrame>
-              </TabsContent>
-            )
-          })}
+          {tabs.map((tab) => (
+            <TabsContent key={tab} value={tab}>
+              <BrowserFrame>
+                <LazyDashboard name={tab} />
+              </BrowserFrame>
+            </TabsContent>
+          ))}
         </Tabs>
       </DemoProvider>
     </Section>

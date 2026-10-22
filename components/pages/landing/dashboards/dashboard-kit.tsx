@@ -2,10 +2,12 @@
 
 import * as React from "react"
 import { DEMO_CLOCK } from "@/lib/demo/clock"
-import type { Dictionary } from "@/lib/dictionary"
-import { createFormatter, type FormatConfig, type Formatter } from "@/lib/format"
+import type { Formatter } from "@/lib/format"
 import { useClientValue } from "@/lib/use-client-value"
 import { cn } from "@/lib/utils"
+import { DEMO_CANVAS, useDemo } from "./demo-context"
+
+export { DemoProvider, useDemo } from "./demo-context"
 
 /*
  * Shared building blocks for the interactive demo dashboards (sales, balance, …),
@@ -43,7 +45,7 @@ export const CONNECTOR = "#c3c9d4" // waterfall steps
 export const REFERENCE = "#b9c1d0" // diagonal "invoiced = budget"
 export const AXIS_TEXT = "#6b7280"
 export const TITLE = "#1f2937"
-const CANVAS = "#f8f9fb"
+const CANVAS = DEMO_CANVAS
 const BORDER = "#e5e7eb"
 export const HOVER_BG = "#f3f4f7" // hovered band, row or legend entry
 
@@ -52,29 +54,6 @@ export const HOVER_BG = "#f3f4f7" // hovered band, row or legend entry
  * classes inside it can use them (`bg-(--demo-hover)`) without a second copy.
  */
 const SHELL_VARS = { "--demo-canvas": CANVAS, "--demo-border": BORDER, "--demo-hover": HOVER_BG } as React.CSSProperties
-
-/* ── language: texts + number format ─────────────────────────────────── */
-
-type DemoContextValue = {
-  /** Dashboard texts (`demo` in the dictionary). */
-  t: Dictionary["demo"]
-  /** Number/date formatter of the current language. */
-  f: Formatter
-}
-
-const DemoContext = React.createContext<DemoContextValue | null>(null)
-
-/** Provides texts and number format to every dashboard below it. */
-export function DemoProvider({ t, format, children }: { t: Dictionary["demo"]; format: FormatConfig; children: React.ReactNode }) {
-  const value = React.useMemo(() => ({ t, f: createFormatter(format) }), [t, format])
-  return <DemoContext.Provider value={value}>{children}</DemoContext.Provider>
-}
-
-export function useDemo(): DemoContextValue {
-  const value = React.useContext(DemoContext)
-  if (!value) throw new Error("Demo dashboards must be rendered inside <DemoProvider>.")
-  return value
-}
 
 /* ── demo clock ──────────────────────────────────────────────────────── */
 

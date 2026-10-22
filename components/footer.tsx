@@ -1,4 +1,5 @@
-import { Linkedin, Mail } from "lucide-react"
+import { Mail } from "lucide-react"
+import { LinkedinIcon } from "@/components/icons"
 import { Container } from "@/components/ui"
 import { Logo } from "@/components/logo"
 import type { FooterDict } from "@/lib/dictionary-slices"
@@ -68,7 +69,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: FooterDict }) {
                 data-track="footer_linkedin"
                 className={`${linkClass} inline-flex items-center gap-2`}
               >
-                <Linkedin className="size-4" aria-hidden="true" />
+                <LinkedinIcon className="size-4" />
                 {t.linkedin}
                 <span className="sr-only"> {common.externalHint}</span>
               </a>

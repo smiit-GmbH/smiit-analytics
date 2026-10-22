@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Home, RotateCw } from "lucide-react"
+import { House, RotateCw } from "lucide-react"
 import { Button, Container } from "@/components/ui"
 import { CtaLink } from "@/components/cta-link"
 import { useLocale } from "@/components/locale-provider"
@@ -32,7 +32,7 @@ export default function ErrorPage({ error, reset }: { error: Error & { digest?: 
             {t.retry}
           </Button>
           <CtaLink href={routePath(lang)} track="error_home" variant="secondary" size="lg" externalHint="">
-            <Home aria-hidden="true" />
+            <House aria-hidden="true" />
             {t.home}
           </CtaLink>
         </div>

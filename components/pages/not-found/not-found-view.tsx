@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { usePathname } from "next/navigation"
-import { Home } from "lucide-react"
+import { House } from "lucide-react"
 import { CtaLink } from "@/components/cta-link"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
@@ -67,7 +67,7 @@ export function NotFoundView({ texts }: { texts: NotFoundTexts }) {
                   externalHint={header.common.externalHint}
                   className="w-full sm:w-auto"
                 >
-                  <Home aria-hidden="true" />
+                  <House aria-hidden="true" />
                   {t.cta}
                 </CtaLink>
               </div>

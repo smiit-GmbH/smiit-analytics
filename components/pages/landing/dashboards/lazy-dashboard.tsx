@@ -33,11 +33,14 @@ const PRELOAD_MARGIN = "600px"
  * Skeleton with the exact height of the first tab's dashboard (sales) at each
  * breakpoint, so nothing below moves when it arrives. Checked by an e2e test
  * (e2e/dashboards.spec.ts) – update the heights there if the dashboard layout changes.
+ * Shown both before the section is near and while a chunk loads; tests wait for
+ * `data-dashboard-placeholder` to disappear.
  */
 function Placeholder() {
   return (
     <div
       aria-hidden="true"
+      data-dashboard-placeholder=""
       className="h-[753px] overflow-hidden p-3 sm:h-[768px] sm:p-4 md:h-[1034px] lg:h-[674px]"
       style={{ background: DEMO_CANVAS }}
     >
@@ -82,9 +85,5 @@ export function LazyDashboard({ name }: { name: DashboardName }) {
   }, [near])
 
   const Dashboard = DASHBOARDS[name]
-  return (
-    <div ref={ref} aria-busy={!near}>
-      {near ? <Dashboard /> : <Placeholder />}
-    </div>
-  )
+  return <div ref={ref}>{near ? <Dashboard /> : <Placeholder />}</div>
 }

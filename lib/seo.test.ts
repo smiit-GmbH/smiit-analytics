@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest"
+import { getDictionary } from "@/lib/dictionary"
 import { locales } from "@/lib/i18n"
 import { PRICING } from "@/lib/pricing"
 import { alternates, buildBreadcrumbJsonLd, buildFaqJsonLd, buildPageMetadata, buildSoftwareApplicationJsonLd, faqItems } from "@/lib/seo"
@@ -65,5 +66,22 @@ describe("buildSoftwareApplicationJsonLd", () => {
       expect(o.priceSpecification.referenceQuantity).toEqual({ "@type": "QuantitativeValue", value: 1, unitCode: "MON" })
       expect(o.url).toBe(`${SITE_URL}/de/#pricing`)
     }
+  })
+})
+
+describe.each(locales)("search snippet (%s)", (lang) => {
+  const { meta } = getDictionary(lang)
+
+  it("keeps the title within what Google shows (≤ 60 characters)", () => {
+    expect(meta.title.length).toBeLessThanOrEqual(60)
+  })
+
+  it("keeps the description within what Google shows (≤ 160 characters)", () => {
+    expect(meta.description.length).toBeLessThanOrEqual(160)
+  })
+
+  it("names bexio in title and description – the term people search for", () => {
+    expect(meta.title).toMatch(/bexio/)
+    expect(meta.description).toMatch(/bexio/)
   })
 })

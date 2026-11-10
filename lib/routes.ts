@@ -45,8 +45,16 @@ export const SECTIONS = {
   faq: "faq",
 } as const
 
-/** Chapter rail: every section of the home page, in page order (labels: `nav.chapters.items`). */
-export const CHAPTER_SECTIONS = Object.keys(SECTIONS) as (keyof typeof SECTIONS)[]
+/**
+ * Customer logos (Trust, below the hero) and customer quotes (Testimonials) stay in the code but are hidden until
+ * there is real content. `true` shows both again, including the "testimonials" chapter.
+ */
+export const SHOW_SOCIAL_PROOF = false
+
+/** Chapter rail: every visible section of the home page, in page order (labels: `nav.chapters.items`). */
+export const CHAPTER_SECTIONS = (Object.keys(SECTIONS) as (keyof typeof SECTIONS)[]).filter(
+  (s) => SHOW_SOCIAL_PROOF || s !== "testimonials",
+)
 
 /** Main navigation (mobile menu, footer): sections in this order, labels in `nav.items`. */
 export const NAV_SECTIONS = [

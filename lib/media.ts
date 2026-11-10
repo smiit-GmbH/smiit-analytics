@@ -33,8 +33,8 @@ export type MediaEntry = {
 }
 
 export const MEDIA = {
-  VIDEO_HERO: { kind: "video", file: "/media/video_hero", ratio: "16 / 9", spec: "16:9 · 15–20 s · Loop" },
-  VIDEO_DEMO_FULL: { kind: "video", file: "/media/video_demo_full", ratio: "16 / 9", spec: "16:9 · ca. 2 min · mit Ton" },
+  VIDEO_HERO: { kind: "video", file: "/media/video_hero", ratio: "2560 / 1376", spec: "2560×1376 · 15–20 s · Loop" },
+  VIDEO_DEMO_FULL: { kind: "video", file: "/media/video_demo_full", ratio: "16 / 9", spec: "16:9 · ca. 2,5 min · mit Ton" },
 
   LOGO_1: { kind: "image", file: "/media/logo_1.webp", ratio: "3 / 1", spec: "3:1 · transparent" },
   LOGO_2: { kind: "image", file: "/media/logo_2.webp", ratio: "3 / 1", spec: "3:1 · transparent" },
@@ -70,7 +70,10 @@ export const MEDIA = {
     widths: [480, 800],
   },
 
-  VIDEO_DRAGDROP: { kind: "video", file: "/media/video_dragdrop", ratio: "16 / 10", spec: "16:10 · 15–20 s · Loop" },
+  // The three tabs of the customize section ("Ihr Dashboard ganz nach Ihren Wünschen"), in tab order.
+  VIDEO_DRAGDROP: { kind: "video", file: "/media/video_dragdrop", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop" },
+  VIDEO_EXPORT: { kind: "video", file: "/media/video_export", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop" },
+  VIDEO_TEAM: { kind: "video", file: "/media/video_team", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop" },
   IMG_MULTI_COMPANY: {
     kind: "image",
     file: "/media/img_multi_company.webp",
@@ -81,7 +84,8 @@ export const MEDIA = {
     widths: [480, 800],
   },
 
-  VIDEO_AI_CHAT: { kind: "video", file: "/media/video_ai_chat", ratio: "16 / 10", spec: "16:10 · 20–25 s · Loop" },
+  // Reuses the hero clip (its second half is a question to the AI and the answer); the browser loads it only once.
+  VIDEO_AI_CHAT: { kind: "video", file: "/media/video_hero", ratio: "2560 / 1376", spec: "2560×1376 · 15–20 s · Loop" },
 
   IMG_PERSONA_MANAGEMENT: {
     kind: "image",
@@ -113,6 +117,9 @@ export const MEDIA = {
 } as const satisfies Record<string, MediaEntry>
 
 export type MediaId = keyof typeof MEDIA
+
+/** Languages the full demo video (VIDEO_DEMO_FULL, spoken German) exists in; elsewhere the hero has no demo button. */
+export const DEMO_VIDEO_LANGS: readonly string[] = ["de"]
 
 /** Public path of a media file in a language ("/media/fr/img_step_1.webp" for localized slots). */
 export function mediaPath(id: MediaId, lang: string) {

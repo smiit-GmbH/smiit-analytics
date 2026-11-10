@@ -158,11 +158,12 @@ export const de = {
       eyebrow: "Dashboard-Editor",
       title: "Ihr Dashboard. *Ganz nach Ihren Wünschen.*",
       intro: "Ziehen Sie Kennzahlen und Diagramme einfach an die richtige Stelle. Ohne Programmieren, ohne Excel.",
+      tabsLabel: "Funktion wählen",
       points: [
         {
           icon: "layout",
           title: "Eigene Berichte erstellen",
-          text: "Stellen Sie Kennzahlen und Analysen so zusammen, wie Sie sie brauchen – per Drag & Drop.",
+          text: "Stellen Sie Kennzahlen und Analysen so zusammen, wie Sie sie brauchen – per Drag & Drop oder KI.",
         },
         {
           icon: "download",
@@ -338,9 +339,21 @@ export const de = {
       eyebrow: "Sicherheit & Datenschutz",
       title: "Transparent, *wo Ihre Daten liegen.*",
       items: [
-        { icon: "server", title: "Hosting", text: "[HOSTING_STANDORT]" },
-        { icon: "shield", title: "Datenschutz", text: "[DATENSCHUTZ_DSG_DSGVO]" },
-        { icon: "key", title: "Zugriff auf bexio", text: "[BEXIO_ZUGRIFFSART]" },
+        {
+          icon: "server",
+          title: "Hosting",
+          text: "Ihre bexio-Daten und Berichte speichern wir ausschliesslich in der Schweiz, auf Servern von Microsoft Azure in Zürich, Sicherungskopien in Genf. Die KI-Funktion ist optional: Erst wenn Sie sie einschalten, verarbeitet OpenAI Ihre Anfragen in den USA.",
+        },
+        {
+          icon: "shield",
+          title: "Datenschutz",
+          text: "Ihre Geschäftsdaten sehen nur Sie und die Personen, die Sie berechtigen. Auch unsere Mitarbeitenden sehen sie nicht – das erzwingen die Zugriffsregeln der Datenbank. Wir verkaufen Ihre Daten nicht und geben nur weiter, was für Betrieb und Abrechnung nötig ist.",
+        },
+        {
+          icon: "key",
+          title: "Zugriff auf bexio",
+          text: "Sie verbinden bexio über die offizielle Schnittstelle (OAuth 2.0 / OpenID Connect) und geben den Zugriff direkt bei bexio frei – Ihr bexio-Passwort erfahren wir nie. Für eine Support-Anfrage können Sie uns befristet Einblick geben, jederzeit widerrufbar.",
+        },
       ],
       privacyLink: "Zur Datenschutzerklärung",
     },
@@ -595,6 +608,10 @@ export const de = {
   },
 
   legal: {
+    /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
+    contents: "Inhalt",
+    /** Shown above those texts in every language but German – they exist in German only. */
+    germanOnly: "Dieses Dokument liegt nur auf Deutsch vor. Massgeblich ist die deutsche Fassung.",
     /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
       /** Company facts (address, register, VAT ID …) are in lib/site.ts (COMPANY). */
@@ -620,20 +637,17 @@ export const de = {
       nav: "Datenschutz",
       title: "Datenschutzerklärung",
       description: "Datenschutzerklärung von smiit Analytics.",
-      body: "[DATENSCHUTZ_TEXT]",
     },
     terms: {
       nav: "Nutzungsbedingungen",
       title: "Nutzungsbedingungen",
       description: "Nutzungsbedingungen von smiit Analytics.",
-      body: "[NUTZUNGSBEDINGUNGEN_TEXT]",
     },
     dpa: {
       nav: "AVV",
       // Breaks on phones as «Auftrags-/verarbeitungs-/vertrag».
       title: "Auftrags­verarbeitungs­vertrag (AVV)",
       description: "Auftragsverarbeitungsvertrag (AVV) für smiit Analytics.",
-      body: "[AVV_TEXT]",
     },
   },
 
@@ -732,10 +746,12 @@ export const de = {
     IMG_STEP_1: "bexio-Verbindung in smiit Analytics herstellen",
     IMG_STEP_2: "Berichtsübersicht mit den Paketen Standard, Sales, Finanzen und Management, alle bereit",
     IMG_STEP_3: "Bericht wird per Drag & Drop angepasst",
-    VIDEO_DRAGDROP: "Eine Kennzahl wird per Drag & Drop in einen Bericht gezogen",
+    VIDEO_DRAGDROP: "Ein Bericht wird per Drag & Drop und mit der KI zusammengestellt",
+    VIDEO_EXPORT: "Ein Bericht wird exportiert und geteilt",
+    VIDEO_TEAM: "Teammitglieder werden eingeladen und mehrere bexio-Firmen verbunden",
     IMG_MULTI_COMPANY:
       "Ein Login für das Treuhandbüro: Workspace-Liste mit allen Mandanten, ein Klick öffnet den Bericht des gewählten Mandanten",
-    VIDEO_AI_CHAT: "Frage an die KI und die Antwort als Diagramm",
+    VIDEO_AI_CHAT: "Frage an die KI zum Umsatz und ihre Antwort direkt im Dashboard",
     IMG_PERSONA_MANAGEMENT:
       "Smartphone mit Umsatz und offenen Rechnungen, daneben automatische Hinweise wie Wochenüberblick und Zahlungseingang",
     IMG_PERSONA_TRUSTEE: "Berichte mehrerer Mandanten übereinander, der vorderste mit Exportieren-Button",

@@ -1,0 +1,684 @@
+===============================================================================
+DATENSCHUTZERKLÄRUNG FÜR smiit ANALYTICS
+Informationen nach Artikel 13 und 14 DSGVO
+===============================================================================
+
+Fassung 1.0 — Stand: 01.11.2026
+
+1. VERANTWORTLICHER
+
+Verantwortlicher im Sinne der DSGVO ist:
+
+  smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Deutschland
+
+  Telefon:  +49 160 4073198
+  E-Mail:   kontakt@smiit.de
+  Registergericht: Amtsgericht Ulm, HRB 741965
+  Vertreten durch: Sebastian Grab, Noah Neßlauer
+
+
+2. ANSPRECHPARTNER FÜR DEN DATENSCHUTZ
+
+Einen Datenschutzbeauftragten im Sinne der Artikel 37 ff. DSGVO haben wir nicht
+bestellt.
+
+Ihre Ansprechperson für alle Fragen zum Datenschutz ist:
+
+  Noah Neßlauer
+  Geschäftsführer der smiit GmbH
+  Reiherweg 96, 89584 Ehingen, Deutschland
+  E-Mail: noah.nesslauer@smiit.de
+
+3. ZWEI GETRENNTE ROLLEN — BITTE BEACHTEN
+
+Diese Datenschutzerklärung betrifft ausschließlich die Verarbeitungen, für die
+wir selbst Verantwortlicher sind. Das sind im Wesentlichen der Betrieb unserer
+Website, die Registrierung und Verwaltung von Nutzerkonten sowie die
+Vertragsabwicklung mit unseren Kunden.
+
+Davon zu unterscheiden sind die betriebswirtschaftlichen Daten, die unsere
+Kunden aus ihrem bexio-Konto in smiit Analytics auswerten. Für diese Daten ist
+allein der jeweilige Kunde Verantwortlicher; wir verarbeiten sie
+ausschließlich in dessen Auftrag auf Grundlage eines
+Auftragsverarbeitungsvertrages nach Artikel 28 DSGVO.
+
+Sind Sie Mitarbeiterin, Mitarbeiter oder Geschäftskontakt eines unserer Kunden
+und möchten wissen, welche Daten über Sie in smiit Analytics ausgewertet
+werden, wenden Sie sich bitte an Ihren Arbeitgeber beziehungsweise an das
+Unternehmen, mit dem Sie in Geschäftsbeziehung stehen. Wir dürfen Ihnen darüber
+keine Auskunft erteilen und leiten Ihre Anfrage an den jeweiligen
+Verantwortlichen weiter.
+
+
+4. VERARBEITUNGEN IM EINZELNEN
+
+4.1 AUFRUF DER WEBSITE UND DER ANWENDUNG (SERVER-PROTOKOLLE)
+
+WEBSITE. Unsere Website www.smiit-analytics.com wird über den Dienst GitHub
+Pages der GitHub, Inc. bereitgestellt. Die Website setzt keine Cookies, bindet
+keine Inhalte von Drittanbietern ein und verwendet keine Analyse- oder
+Tracking-Dienste. Beim Aufruf protokolliert GitHub die IP-Adresse der
+Besucherinnen und Besucher und speichert sie zu Sicherheitszwecken.
+
+  Daten:          IP-Adresse, Datum und Uhrzeit des Zugriffs, abgerufene
+                  Adresse sowie die technischen Angaben, die Ihr Browser beim
+                  Aufruf übermittelt
+  Zweck:          Auslieferung der Website, Sicherheit des Dienstes
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe f DSGVO
+  Berechtigtes
+  Interesse:      sichere und zuverlässige Bereitstellung unserer Website
+  Empfänger:      GitHub (siehe Ziffer 5)
+  Speicherdauer:  nach den Bestimmungen von GitHub; wir selbst erhalten und
+                  speichern diese Daten nicht
+
+ANWENDUNG. Beim Aufruf unserer Anwendung werden technisch erforderliche Daten
+verarbeitet. Die Anfragen erreichen unsere Anwendung über das Netzwerk
+Azure Front Door von Microsoft, das sie mit einer Firewall für
+Webanwendungen auf Angriffe prüft und an unseren Webserver weiterleitet.
+
+  Daten:          vollständige IP-Adresse, Datum und Uhrzeit des Zugriffs,
+                  abgerufene Adresse (ohne Zugangs- und Sicherheitsmerkmale,
+                  die vor der Protokollierung entfernt werden), Statuscode,
+                  übertragene Datenmenge, verweisende Seite, Browser- und
+                  Betriebssystemkennung, Antwortzeit
+  Zweck:          Auslieferung der Anwendung, Gewährleistung der
+                  Betriebssicherheit, Erkennung und Abwehr von Angriffen
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe f DSGVO
+  Berechtigtes
+  Interesse:      sicherer und störungsfreier Betrieb unserer Systeme
+  Speicherdauer:  30 Tage, anschließend automatische Löschung
+
+Zur Überwachung von Fehlern und Leistung der Anwendung erfassen wir zudem
+technische Betriebsdaten (Telemetrie) mit dem Dienst Application Insights
+von Microsoft. IP-Adressen werden dabei nicht gespeichert. Die Telemetrie wird
+ebenfalls nach 30 Tagen gelöscht.
+
+
+4.2 COOKIES
+
+Wir setzen ausschließlich technisch notwendige Cookies ein. Wir verwenden
+keine Analyse-, Tracking- oder Werbe-Cookies, binden keine externen
+Schriftarten ein und setzen keine Dienste zur Reichweitenmessung ein. Aus diesem
+Grund benötigen wir keine Einwilligung für den Einsatz von Cookies und zeigen
+Ihnen kein Einwilligungsbanner.
+
+Im Einzelnen setzen wir:
+
+  a) Sitzungscookies
+     Zweck:          Aufrechterhaltung der Anmeldung
+     Speicherdauer:  Zugriffscookie 15 Minuten; Cookie zur Erneuerung der
+                     Anmeldung höchstens 7 Tage; beide werden mit der
+                     Abmeldung gelöscht
+
+  b) Cookie zum Schutz vor websiteübergreifender Anfragefälschung
+     Zweck:          Sicherheit der Anwendung
+     Speicherdauer:  wie das Cookie zur Erneuerung der Anmeldung, höchstens
+                     7 Tage
+
+  c) Cookie für vertraute Geräte
+     Zweck:          Wiedererkennung eines Geräts, damit die
+                     Zwei-Faktor-Authentifizierung nicht bei jeder Anmeldung
+                     erneut abgefragt wird
+     Speicherdauer:  30 Tage
+
+  d) Cookie zur Absicherung des Anmeldevorgangs bei Microsoft oder bexio
+     Zweck:          Schutz des Autorisierungsvorgangs vor Manipulation
+     Speicherdauer:  wenige Minuten, nur während des Anmeldevorgangs
+
+  e) Cookie für den Administrationsbereich (nur für Plattform-Administratoren
+     von smiit)
+     Zweck:          Nachweis der Zwei-Faktor-Authentifizierung für den
+                     Zugang zum Administrationsbereich
+     Speicherdauer:  höchstens 4 Stunden; endet mit der Abmeldung
+
+  Rechtsgrundlage: § 25 Absatz 2 Nummer 2 TDDDG sowie Artikel 6 Absatz 1
+                   Buchstabe b und f DSGVO
+
+
+4.3 REGISTRIERUNG UND NUTZERKONTO
+
+  Daten:          Vor- und Nachname, dienstliche E-Mail-Adresse, Passwort
+                  (ausschließlich als Hashwert gespeichert), Firma,
+                  Spracheinstellung, Zeitzone, Zahlenformat, Farbschema,
+                  Rolle im Arbeitsbereich sowie freiwillig ein Profilbild
+  Zweck:          Einrichtung und Verwaltung des Nutzerkontos, Erfüllung des
+                  Nutzungsvertrages
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b DSGVO
+  Speicherdauer:  solange Ihr Nutzerkonto besteht; Sie können es jederzeit
+                  in der Anwendung unter Profil › Konto löschen (siehe
+                  Ziffer 7)
+
+Zusätzlich dokumentieren wir, zu welchem Zeitpunkt und in welcher Fassung Sie
+die Nutzungsbedingungen, diese Datenschutzerklärung und den
+Auftragsverarbeitungsvertrag akzeptiert haben.
+
+  Zweck:          Nachweis des Vertragsschlusses und der Annahme
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe c DSGVO in Verbindung mit
+                  Artikel 28 Absatz 9 DSGVO sowie Artikel 6 Absatz 1
+                  Buchstabe f DSGVO
+  Speicherdauer:  als Nachweis auch über die Löschung des Nutzerkontos
+                  hinaus; nach der Löschung des Kontos ohne Ihren Namen
+
+
+4.4 ANMELDUNG ÜBER MICROSOFT ODER bexio
+
+Sie können sich wahlweise über ein Microsoft-Konto oder ein bexio-Konto
+anmelden. Wählen Sie diese Möglichkeit, werden Sie zum jeweiligen Anbieter
+weitergeleitet und melden sich dort an.
+
+  Daten:          Name, E-Mail-Adresse und eine Kennung des Kontos, die uns der
+                  jeweilige Anbieter nach Ihrer Anmeldung übermittelt
+  Zweck:          Anmeldung ohne gesondertes Passwort
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b DSGVO
+  Speicherdauer:  für die Dauer des Nutzungsverhältnisses
+
+Ihr Passwort für das Microsoft- oder bexio-Konto erhalten wir zu keinem
+Zeitpunkt. Für die Verarbeitung bei diesen Anbietern sind diese jeweils selbst
+verantwortlich.
+
+
+4.5 SITZUNGEN UND ZWEI-FAKTOR-AUTHENTIFIZIERUNG
+
+Die Zwei-Faktor-Authentifizierung ist für alle Nutzer verpflichtend: Bei der
+Anmeldung senden wir Ihnen einen Einmalcode per E-Mail, sofern Sie das
+verwendete Gerät nicht als vertrauenswürdig gespeichert haben.
+
+  Daten:          Einmalcodes für den zweiten Faktor, Kennung vertrauter
+                  Geräte, angemeldete Sitzungen mit IP-Adresse und
+                  Browserkennung, Zeitpunkte erfolgreicher und
+                  fehlgeschlagener Anmeldungen
+  Zweck:          Schutz Ihres Kontos vor unbefugtem Zugriff, Anzeige Ihrer
+                  aktiven Sitzungen und vertrauten Geräte
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b und f DSGVO
+  Speicherdauer:  vertraute Geräte 30 Tage; beendete Sitzungen 30 Tage nach
+                  ihrem Ende; im Übrigen solange Ihr Nutzerkonto besteht
+
+
+4.6 SYSTEMNACHRICHTEN UND BENACHRICHTIGUNGEN
+
+Wir versenden E-Mails mit Einmalcodes (Registrierung, Anmeldung und
+Bestätigung sicherheitsrelevanter Aktionen), zum Zurücksetzen des Passworts,
+zu Einladungen in einen Arbeitsbereich und zur Mitteilung, dass Sie einem
+Arbeitsbereich hinzugefügt wurden, zur Bestätigung und als Sicherheitshinweis
+beim Verknüpfen einer Anmeldemethode (Microsoft oder bexio) sowie Hinweise,
+wenn eine bexio-Verbindung erneuert werden muss. Daneben zeigen wir Ihnen
+Benachrichtigungen innerhalb der Anwendung an.
+
+  Daten:          Name, E-Mail-Adresse, Inhalt der Nachricht
+  Zweck:          Durchführung des Nutzungsverhältnisses
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b DSGVO
+  Empfänger:      Microsoft (Azure Communication Services) als
+                  Auftragsverarbeiter; Datenhaltung in der Schweiz
+  Speicherdauer:  Versandprotokolle 30 Tage; Benachrichtigungen in der
+                  Anwendung 30 Tage nach dem Lesen, ungelesene 90 Tage
+
+
+4.7 EINLADUNGEN IN EINEN ARBEITSBEREICH
+
+Lädt ein Kunde eine Person in seinen Arbeitsbereich ein, verarbeiten wir deren
+E-Mail-Adresse, um die Einladung zu versenden.
+
+  Daten:          E-Mail-Adresse der eingeladenen Person, Zeitpunkt und Status
+                  der Einladung
+  Zweck:          Versand und Verwaltung der Einladung
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe f DSGVO
+  Berechtigtes
+  Interesse:      Ermöglichung der gemeinsamen Nutzung der Anwendung im
+                  Unternehmen des Kunden
+  Herkunft der
+  Daten:          Die E-Mail-Adresse erhalten wir von dem Kunden, der die
+                  Einladung ausspricht (Information nach Artikel 14 DSGVO).
+  Speicherdauer:  bis zur Annahme, zur Ablehnung oder zum Widerruf der
+                  Einladung; Einladungen haben kein automatisches Ablaufdatum
+
+
+4.8 PROTOKOLLIERUNG UND NUTZUNGSSTATISTIK
+
+Wir protokollieren sicherheitsrelevante und datenverändernde Vorgänge innerhalb
+der Anwendung (Audit-Protokoll), etwa Anmeldungen, Änderungen an
+Mitgliedschaften und Einstellungen sowie sämtliche Handlungen unserer
+Plattform-Administratoren.
+
+  Daten:          Benutzerkennung, Zeitpunkt, Art des Vorgangs, betroffenes
+                  Objekt
+  Zweck:          Nachvollziehbarkeit von Änderungen, Aufklärung von
+                  Sicherheitsvorfällen, Erfüllung unserer Rechenschaftspflicht
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe c DSGVO in Verbindung mit
+                  Artikel 5 Absatz 2 und Artikel 32 DSGVO sowie Artikel 6
+                  Absatz 1 Buchstabe f DSGVO
+  Speicherdauer:  1 Jahr
+
+Wir werten die Nutzung der Anwendung außerdem aus, um Nutzungsstatistiken zu
+erstellen, die Anwendung zu verbessern und weiterzuentwickeln sowie unsere
+Kapazitäten zu planen.
+
+  Daten:          Name, E-Mail-Adresse, Benutzerkennung, zugehöriger Kunde
+                  und Arbeitsbereich, Art und Zeitpunkt der genutzten
+                  Funktionen (etwa Seiten- und Berichtsaufrufe, KI-Anfragen
+                  und deren Kosten, Datenaktualisierungen)
+  Zweck:          Nutzungsstatistiken, Verbesserung und Weiterentwicklung der
+                  Anwendung, Kapazitätsplanung
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe f DSGVO
+  Berechtigtes
+  Interesse:      bedarfsgerechte Weiterentwicklung und wirtschaftlicher
+                  Betrieb unseres Dienstes
+  Speicherdauer:  einzelne Nutzungsereignisse 90 Tage, danach zu
+                  Tagesstatistiken zusammengefasst; personenbezogene
+                  Tagesstatistiken nach 13 Monaten zu Summen ohne
+                  Personenbezug zusammengefasst; Angaben zur KI-Nutzung je
+                  Anfrage 1 Jahr, danach nur noch als Monatssummen. Beim
+                  Löschen des Kontos wird der Personenbezug sofort entfernt.
+
+Unsere Plattform-Administratoren sehen in diesen Statistiken ausschließlich
+Summen je Arbeitsbereich und Tag, keine Namen. Personenbezogene Details sehen
+nur die Inhaber und Administratoren des jeweiligen Arbeitsbereichs, sofern der
+Arbeitsbereich dies nicht abgeschaltet hat.
+
+Wir verkaufen diese Daten nicht und geben sie nicht an Dritte weiter. Eine
+Verarbeitung durch unsere Auftragsverarbeiter (Ziffer 5) erfolgt
+ausschließlich in unserem Auftrag und nach unseren Weisungen.
+
+Die Daten, die unsere Kunden über die bexio-Anbindung in die Anwendung laden
+oder in der Anwendung selbst erfassen, verarbeiten wir hingegen nicht zu
+eigenen Zwecken, sondern ausschließlich im Auftrag des jeweiligen Kunden
+(siehe Ziffer 3).
+
+Soweit wir diese Auswertungen für einzelne Arbeitsbereiche bereitstellen,
+handeln wir insoweit als Auftragsverarbeiter unseres Kunden.
+
+
+4.9 KI-GESTÜTZTE ANALYSEFUNKTION
+
+Die Anwendung enthält eine Analysefunktion auf Basis eines großen
+Sprachmodells. Sie können Fragen zu Ihren Daten in natürlicher Sprache
+stellen. Sie werden in der Anwendung darauf hingewiesen, dass die Antworten von
+einem KI-System erzeugt werden.
+
+Die Funktion ist standardmäßig ausgeschaltet. Nur eine Inhaberin oder ein
+Inhaber des Arbeitsbereichs kann sie einschalten, und zwar erst nach
+Bestätigung eines Hinweises, welche Daten an den Anbieter des Sprachmodells
+übermittelt werden. Solange sie ausgeschaltet ist, findet keine Übermittlung
+statt.
+
+  Daten:          Ihre Fragestellung, der Gesprächsverlauf, eine Beschreibung
+                  der verfügbaren Datenstruktur sowie die Ergebnisse der
+                  hierzu erzeugten Datenbankabfragen (Kennzahlen und
+                  begrenzte Auszüge von Datenzeilen)
+  Zweck:          Beantwortung Ihrer Frage
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b DSGVO; soweit Daten aus dem
+                  bexio-Konto des Kunden betroffen sind, verarbeiten wir sie
+                  im Auftrag des Kunden (siehe unten)
+  Empfänger:      OpenAI als Auftragsverarbeiter (siehe Ziffer 5)
+  Verarbeitungs-
+  ort:            Vertragspartner in Irland, Verarbeitung in den
+                  Vereinigten Staaten von Amerika (siehe Ziffer 6)
+  Speicherdauer:  Gesprächsverläufe werden bei uns 90 Tage nach der letzten
+                  Aktivität automatisch gelöscht; zur Speicherdauer beim
+                  Modellanbieter siehe Ziffer 5
+
+PSEUDONYMISIERUNG. Vor der Übermittlung ersetzen wir Namen und E-Mail-Adressen
+von Personen durch Platzhalter (etwa "Person-XXXXX"); Freitexte wie
+Buchungs- und Positionstexte werden nicht übermittelt. Die Inhaberin oder der
+Inhaber des Arbeitsbereichs kann diese Einschränkungen stufenweise aufheben,
+jeweils nach Bestätigung eines gesonderten Hinweises:
+
+  a) "Namen": Namen von Kontakten (Kunden, Lieferanten und deren
+     Ansprechpartner) werden im Klartext übermittelt;
+  b) "Namen + Texte": zusätzlich Freitexte;
+  c) "Alles": keine Pseudonymisierung, auch nicht für Beschäftigte,
+     bexio-Benutzer, Mitglieder des Arbeitsbereichs und E-Mail-Adressen.
+
+Firmennamen werden nicht pseudonymisiert. Personaldaten (Beschäftigte,
+Abwesenheiten, Ferien- und Zeitsalden) erreichen das Sprachmodell nur, wenn
+die Inhaberin oder der Inhaber sie gesondert freigegeben hat.
+
+Die übermittelten Inhalte werden NICHT zum Training von Sprachmodellen
+verwendet. Der Modellanbieter speichert die Anfragen nicht zur späteren
+Wiederverwendung. Die Verarbeitung findet in den Vereinigten Staaten von
+Amerika statt; die Voraussetzungen dieser Übermittlung sind unter Ziffer 6
+beschrieben.
+
+Soweit die verarbeiteten Inhalte Daten aus dem bexio-Konto unseres Kunden
+betreffen, handeln wir als Auftragsverarbeiter dieses Kunden; verantwortlich
+ist insoweit der Kunde (siehe Ziffer 3).
+
+
+4.10 KONTAKTAUFNAHME UND SUPPORT
+
+  Daten:          Name, E-Mail-Adresse, Inhalt Ihrer Anfrage sowie alle weiteren
+                  Angaben, die Sie uns freiwillig mitteilen
+  Zweck:          Bearbeitung Ihrer Anfrage
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b DSGVO bei
+                  vertragsbezogenen Anfragen, im Übrigen Artikel 6 Absatz 1
+                  Buchstabe f DSGVO
+  Speicherdauer:  bis zur abschließenden Bearbeitung, anschließend bis zum
+                  Ablauf gesetzlicher Aufbewahrungsfristen
+
+FEEDBACK IN DER ANWENDUNG. Sie können uns aus der Anwendung heraus Feedback
+senden, auf Wunsch mit einem Bildschirmfoto oder — bei der Bewertung einer
+KI-Antwort — mit einer Kopie des betreffenden Gesprächs. Wir übernehmen das
+Feedback zur Bearbeitung in unser Aufgabenverwaltungssystem Azure DevOps von
+Microsoft.
+
+  Daten:          Inhalt des Feedbacks, Bildschirmfoto, Gesprächskopie
+                  (pseudonymisiert), Benutzerkennung, Zeitpunkt
+  Zweck:          Fehlerbehebung und Verbesserung der Anwendung
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe f DSGVO
+  Berechtigtes
+  Interesse:      Verbesserung unseres Dienstes
+  Empfänger:      Microsoft (Azure DevOps) als Auftragsverarbeiter
+  Speicherdauer:  Bildschirmfotos und Gesprächskopien 90 Tage; die
+                  Feedback-Nachricht selbst 365 Tage
+
+
+4.11 PLATTFORMBETRIEB UND SUPPORT-ZUGANG
+
+Zum sicheren Betrieb der Anwendung führen unsere Plattform-Administratoren ein
+Nutzerverzeichnis.
+
+  Daten:          E-Mail-Adresse, Name, Kontostatus (bestätigt, gesperrt,
+                  gelöscht), Sprache, Art der Anmeldung, Zeitpunkt der
+                  letzten Aktivität sowie die Arbeitsbereiche, in denen Sie
+                  Mitglied sind, mit Ihrer Rolle
+  Zweck:          Beantwortung von Support-Anfragen, Sperrung missbräuchlich
+                  genutzter Konten, Löschung von Konten auf Wunsch
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b und f DSGVO
+  Speicherdauer:  solange Ihr Nutzerkonto besteht
+
+Jeder Aufruf eines Kontos und jede Aktion daran wird mit dem Namen des
+Administrators im Audit-Protokoll festgehalten (Ziffer 4.8).
+
+Unsere Plattform-Administratoren sehen weder Berichte noch Gespräche mit der
+KI-gestützten Analysefunktion noch die aus bexio übernommenen Geschäftsdaten.
+Dies ist technisch durch die Zugriffsregeln der Datenbank erzwungen. Benötigt
+der Support Einblick in einen Arbeitsbereich, stellt der Administrator eine
+Anfrage mit Grund und Dauer von höchstens 30 Tagen. Erst wenn eine Inhaberin
+oder ein Inhaber des Arbeitsbereichs zustimmt, entsteht ein befristeter
+Zugang. Er ist in der Mitgliederliste sichtbar, jederzeit widerrufbar und wird
+vollständig protokolliert. Eine Anmeldung "als Nutzer" gibt es nicht.
+
+
+4.12 VERTRAGSABWICKLUNG UND ABRECHNUNG
+
+Das kostenpflichtige Abonnement schließen unsere Kunden in der Anwendung mit
+uns ab. Den jeweils fälligen Betrag berechnen wir und übermitteln ihn an die
+bexio AG, die über den bexio Marketplace die Rechnung stellt und die Zahlung
+einzieht; sie handelt dabei als eigener Verantwortlicher. Da unsere Kunden
+zugleich Kunden der bexio AG sind, liegen ihr deren Firmen-, Rechnungs- und
+Zahlungsdaten bereits vor. Während der kostenlosen Testphase übermitteln wir
+der bexio AG keine Angaben.
+
+Für die Abrechnung übermitteln wir der bexio AG ausschließlich:
+
+  a) das bexio-Konto, das mit smiit Analytics verbunden ist, und damit die
+     Information, dass der Kunde smiit Analytics nutzt;
+  b) den abgeschlossenen Tarif (Monats- oder Jahresabonnement);
+  c) den Rechnungsbetrag und den Abrechnungstermin (monatlich bzw. jährlich);
+  d) die für den Rechnungsbetrag maßgebliche Anzahl der angebundenen
+     Datensätze und der Nutzer sowie die berechneten Tage je Datensatz und
+     Nutzer für die Aufschlüsselung auf der Rechnung;
+  e) die Kündigung des Abonnements.
+
+Diese Angaben übermitteln wir mit jeder Abrechnung (monatlich, im
+Jahrestarif zusätzlich zu Beginn jeder Jahreslaufzeit), eine Kündigung
+unverzüglich. So werden Änderungen — etwa ein hinzugekommener Nutzer — in der
+nächsten Rechnung berücksichtigt. Namen oder E-Mail-Adressen einzelner Nutzer
+übermitteln wir dabei nicht.
+
+  Daten:          Kennung des verbundenen bexio-Kontos, Firmenangaben des
+                  Kunden, gebuchter Tarif, Status des Abonnements,
+                  Rechnungsbetrag und Abrechnungstermin, Anzahl der
+                  angebundenen Datensätze und Nutzer mit den berechneten Tagen
+  Zweck:          Abwicklung des Vertrages, Abrechnung über den bexio
+                  Marketplace, Buchhaltung
+  Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b und c DSGVO
+  Empfänger:      bexio AG (siehe Ziffer 5)
+  Speicherdauer:  bis zum Ablauf der handels- und steuerrechtlichen
+                  Aufbewahrungsfristen von bis zu zehn Jahren
+
+Zahlungsdaten wie Bank- oder Kreditkartenangaben erhalten wir im Regelfall
+nicht, da die Zahlung über die bexio AG abgewickelt wird. Nur ausnahmsweise
+und nur mit ausdrücklicher Zustimmung des Kunden — etwa bei einer im
+Einzelfall vereinbarten direkten Abrechnung — verarbeiten wir Zahlungsdaten
+selbst, und zwar ausschließlich zur Abwicklung dieser Zahlungen.
+
+
+5. EMPFÄNGER PERSONENBEZOGENER DATEN
+
+Wir geben personenbezogene Daten nur weiter, soweit dies zur Erbringung
+unserer Leistungen erforderlich ist oder wir gesetzlich dazu verpflichtet sind.
+
+Als Auftragsverarbeiter setzen wir ein:
+
+  a) Microsoft Ireland Operations Limited
+     One Microsoft Place, South County Business Park, Leopardstown,
+     Dublin 18, Irland
+     Leistung:   Betrieb unserer Anwendung und unserer Datenbank (Microsoft
+                 Azure), Versand von E-Mails (Azure Communication Services),
+                 Auslieferung und Schutz der Anwendung (Azure Front Door),
+                 Betriebsüberwachung (Application Insights) sowie
+                 Bearbeitung von Feedback (Azure DevOps)
+     Standort:   Schweiz — Region "Switzerland North" (Zürich); die
+                 Sicherungskopien der Datenbank werden zusätzlich in der
+                 Region "Switzerland West" (Genf) gespeichert. E-Mails werden
+                 mit Datenhaltung in der Schweiz versandt. Azure Front Door
+                 nimmt Anfragen an den weltweiten Standorten von Microsoft
+                 entgegen, die dem Nutzer jeweils am nächsten liegen.
+                 Feedback (Azure DevOps) wird ebenfalls in der Region
+                 "Switzerland North" (Zürich) gespeichert.
+
+  b) OpenAI Ireland Limited
+     1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
+     Dublin 1, D01 YC43, Irland
+     Leistung:   Verarbeitung der Anfragen an die KI-gestützte
+                 Analysefunktion (Ziffer 4.9)
+     Grundlage:  OpenAI Data Processing Addendum in der jeweils geltenden
+                 Fassung (derzeit v.010126), abrufbar unter
+                 https://openai.com/policies/data-processing-addendum/
+     Standort:   Vertragspartner mit Sitz in Irland; die Verarbeitung erfolgt
+                 durch die OpenAI OpCo, LLC, 1455 3rd Street, San Francisco,
+                 CA 94158, USA, in den Vereinigten Staaten von Amerika (siehe
+                 Ziffer 6). Weitere von OpenAI eingesetzte
+                 Unterauftragsverarbeiter: https://platform.openai.com/subprocessors
+     Speicher-
+     dauer:      Wir übermitteln die Anfragen so, dass OpenAI keine
+                 Anfrage- oder Antwortdaten zur späteren Wiederverwendung
+                 speichert. OpenAI bewahrt Protokolle zur Erkennung von
+                 Missbrauch, die Anfragen und Antworten enthalten können, bis
+                 zu 30 Tage auf, sofern nicht eine längere Aufbewahrung
+                 gesetzlich vorgeschrieben ist.
+
+Mit allen Auftragsverarbeitern haben wir Verträge nach Artikel 28 DSGVO
+geschlossen.
+
+Als eigenständig Verantwortliche erhalten Daten:
+
+  c) bexio AG
+     Alte Jonastrasse 24, 8640 Rapperswil, Schweiz
+     Leistung:   Betrieb des bexio Marketplace, Abrechnung und
+                 Zahlungsabwicklung der Abonnements (siehe Ziffer 4.12)
+     Standort:   Schweiz (Angemessenheitsbeschluss der Europäischen
+                 Kommission, siehe Ziffer 6)
+
+  d) GitHub, Inc.
+     88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA
+     Leistung:   Bereitstellung unserer Website über GitHub Pages; GitHub
+                 protokolliert die IP-Adressen der Besucher zu
+                 Sicherheitszwecken in eigener Verantwortung (siehe Ziffer
+                 4.1); Einzelheiten in der Datenschutzerklärung von GitHub
+                 unter https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement
+     Standort:   Vereinigte Staaten von Amerika (siehe Ziffer 6)
+
+Darüber hinaus können Daten an Steuerberater, Wirtschaftsprüfer, Rechtsanwälte
+sowie an Behörden und Gerichte übermittelt werden, soweit dies gesetzlich
+vorgeschrieben oder zur Rechtsverfolgung erforderlich ist.
+
+
+6. ÜBERMITTLUNG IN DRITTLÄNDER
+
+Unsere Anwendung und unsere Datenbank betreiben wir in Rechenzentren von
+Microsoft in der Schweiz. Die Schweiz ist aus Sicht der DSGVO ein Drittland,
+für das die Europäische Kommission einen Angemessenheitsbeschluss erlassen hat
+(Artikel 45 DSGVO). Zusätzliche Garantien wie Standardvertragsklauseln sind
+für die Verarbeitung in der Schweiz daher nicht erforderlich. Dasselbe gilt
+für den Versand von E-Mails und für den Austausch der Abrechnungsdaten mit der
+bexio AG (Ziffer 4.12).
+
+Soweit Microsoft im Rahmen von Azure Front Door oder Azure DevOps Daten
+außerhalb der Schweiz und des Europäischen Wirtschaftsraums verarbeitet,
+stützt sich dies auf die Standardvertragsklauseln der Europäischen Kommission
+(Artikel 46 Absatz 2 Buchstabe c DSGVO), die Bestandteil der
+Datenschutzbestimmungen von Microsoft sind, sowie auf die Zertifizierung der
+Microsoft Corporation unter dem EU-US Data Privacy Framework (Artikel 45
+DSGVO).
+
+Beim Aufruf unserer Website verarbeitet GitHub, Inc. Ihre IP-Adresse in den
+Vereinigten Staaten von Amerika (Ziffer 4.1). GitHub ist unter dem EU-US Data
+Privacy Framework zertifiziert; die Übermittlung stützt sich auf den
+Angemessenheitsbeschluss der Europäischen Kommission hierzu (Artikel 45
+DSGVO). Für Personen in der Schweiz gilt entsprechend das Swiss-U.S. Data
+Privacy Framework, das die Schweiz für zertifizierte Unternehmen als
+angemessen anerkannt hat.
+
+Bei der KI-gestützten Analysefunktion (Ziffer 4.9) übermitteln wir die Inhalte
+einer Anfrage an unseren Auftragsverarbeiter OpenAI Ireland Limited mit Sitz in
+Irland, also innerhalb der Europäischen Union. OpenAI Ireland Limited lässt die
+Anfragen durch die OpenAI OpCo, LLC in den Vereinigten Staaten von Amerika
+verarbeiten. Diese Weiterübermittlung nimmt OpenAI auf Grundlage von
+Verträgen mit den Standardvertragsklauseln der Europäischen Kommission
+(Artikel 46 Absatz 2 Buchstabe c DSGVO, Durchführungsbeschluss (EU)
+2021/914) vor, soweit kein Angemessenheitsbeschluss nach Artikel 45 DSGVO
+besteht (Ziffer 4.1 des OpenAI Data Processing Addendum). Eine
+Zertifizierung von OpenAI unter dem EU-US Data Privacy Framework nehmen wir
+nicht in Anspruch.
+
+Die Übermittlung in die USA findet nur statt, wenn die KI-gestützte
+Analysefunktion im jeweiligen Arbeitsbereich eingeschaltet ist und genutzt
+wird. Namen und E-Mail-Adressen von Personen werden dabei standardmäßig
+pseudonymisiert (Ziffer 4.9). Die übermittelten Inhalte werden nicht zum
+Training von Modellen verwendet.
+
+Für unsere Kundinnen und Kunden in der Schweiz gilt: Da unsere Anwendung und
+unsere Datenbank in der Schweiz betrieben werden, findet insoweit keine
+Bekanntgabe ins Ausland statt. Die Bekanntgabe an OpenAI Ireland Limited im
+Rahmen der KI-gestützten Analysefunktion ist zulässig, weil Irland in Anhang 1
+der Datenschutzverordnung als Staat mit angemessenem Datenschutz aufgeführt
+ist (Artikel 16 Absatz 1 revDSG). Für die Weiterübermittlung in die USA gilt
+das im vorstehenden Absatz Gesagte; das OpenAI Data Processing Addendum
+erfasst ausdrücklich auch Daten, die dem schweizerischen Datenschutzrecht
+unterliegen.
+
+
+7. SPEICHERDAUER
+
+Wir speichern personenbezogene Daten nur so lange, wie es für die jeweiligen
+Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen es verlangen. Die
+konkreten Fristen sind bei den einzelnen Verarbeitungen unter Ziffer 4
+angegeben.
+
+Nach Beendigung des Vertragsverhältnisses halten wir die Daten unserer Kunden
+für 30 Kalendertage zum Zweck des Exports vor und löschen sie anschließend.
+Löscht ein Kunde während der Vertragslaufzeit einen Datensatz oder seinen
+Arbeitsbereich, werden die zugehörigen Daten innerhalb von vier Stunden
+gelöscht. Sicherungskopien werden im Rahmen des regulären Sicherungszyklus
+von 35 Tagen überschrieben; bis dahin sind die Daten für eine weitere
+Verarbeitung gesperrt.
+
+Löschen Sie Ihr Nutzerkonto, werden Ihre personenbezogenen Daten gelöscht.
+Einträge in unseren Protokollen werden dabei so verändert, dass ein
+Personenbezug nicht mehr hergestellt werden kann.
+
+
+8. IHRE RECHTE
+
+Sie haben uns gegenüber folgende Rechte:
+
+  a) Auskunft über die Sie betreffenden Daten (Artikel 15 DSGVO)
+  b) Berichtigung unrichtiger Daten (Artikel 16 DSGVO)
+  c) Löschung (Artikel 17 DSGVO)
+  d) Einschränkung der Verarbeitung (Artikel 18 DSGVO)
+  e) Datenübertragbarkeit (Artikel 20 DSGVO)
+  f) Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft
+     (Artikel 7 Absatz 3 DSGVO)
+
+WIDERSPRUCHSRECHT NACH ARTIKEL 21 DSGVO
+
+Soweit wir Daten auf Grundlage eines berechtigten Interesses nach Artikel 6
+Absatz 1 Buchstabe f DSGVO verarbeiten, haben Sie das Recht, aus Gründen, die
+sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese
+Verarbeitung einzulegen. Wir verarbeiten die Daten dann nicht mehr, es sei
+denn, wir können zwingende schutzwürdige Gründe nachweisen, die Ihre
+Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der
+Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
+
+Zur Ausübung Ihrer Rechte genügt eine Nachricht an die unter Ziffer 1
+genannten Kontaktdaten. Einen Teil Ihrer Rechte können Sie zudem selbst in der
+Anwendung ausüben: Unter Profil können Sie Ihre Angaben berichtigen und Ihre
+Daten als Datei exportieren (Auskunft und Datenübertragbarkeit); unter
+Profil › Konto können Sie Ihr Nutzerkonto löschen.
+
+Bitte beachten Sie Ziffer 3: Betrifft Ihre Anfrage Daten, die wir im Auftrag
+eines unserer Kunden verarbeiten, müssen Sie sich an diesen Kunden wenden. Wir
+leiten Ihre Anfrage in diesem Fall unverzüglich weiter.
+
+
+9. BESCHWERDERECHT
+
+Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die
+Verarbeitung Ihrer personenbezogenen Daten zu beschweren.
+
+Die für uns zuständige Aufsichtsbehörde ist:
+
+  Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit
+  Baden-Württemberg
+  Lautenschlagerstraße 20, 70173 Stuttgart
+
+Personen in der Schweiz können sich zusätzlich wenden an:
+
+  Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter
+  (EDÖB)
+  Feldeggweg 1, 3003 Bern, Schweiz
+
+
+10. KEINE AUTOMATISIERTE ENTSCHEIDUNGSFINDUNG
+
+Wir setzen keine automatisierte Entscheidungsfindung einschließlich Profiling
+im Sinne des Artikels 22 DSGVO ein.
+
+Die unter Ziffer 4.9 beschriebene KI-gestützte Analysefunktion erstellt
+Auswertungen auf Anforderung eines Nutzers. Sie trifft keine Entscheidungen
+und gibt keine Empfehlungen zu einzelnen Personen ab. Ergebnisse sind stets
+durch den Nutzer zu bewerten.
+
+
+11. HINWEISE FÜR PERSONEN IN DER SCHWEIZ
+
+Unterliegt die Verarbeitung dem schweizerischen Bundesgesetz über den
+Datenschutz (revDSG), gelten die vorstehenden Angaben entsprechend. Die
+Verweise auf die DSGVO sind dann als Verweise auf die entsprechenden
+Bestimmungen des revDSG zu lesen, insbesondere auf die Artikel 19 bis 25
+revDSG.
+
+
+12. PFLICHT ZUR BEREITSTELLUNG
+
+Die Bereitstellung Ihrer personenbezogenen Daten ist weder gesetzlich noch
+vertraglich vorgeschrieben. Ohne die zur Einrichtung eines Nutzerkontos
+erforderlichen Angaben können wir Ihnen die Anwendung jedoch nicht
+bereitstellen.
+
+
+13. ÄNDERUNGEN DIESER DATENSCHUTZERKLÄRUNG
+
+Wir passen diese Datenschutzerklärung an, wenn sich die Rechtslage, unsere
+Verarbeitungen oder der Funktionsumfang der Anwendung ändern. Die jeweils
+aktuelle Fassung ist unter https://www.smiit-analytics.com/de/privacy/
+abrufbar. Bei wesentlichen Änderungen informieren wir unsere Kunden gesondert.
+
+
+===============================================================================
+ENDE DER DATENSCHUTZERKLÄRUNG
+===============================================================================

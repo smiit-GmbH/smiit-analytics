@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import { ArrowRight, Bot, Database, Plug, Sparkles } from "lucide-react"
-import { Badge, BrowserFrame, Card, Media, Section } from "@/components/ui"
+import { Badge, Card, Media, Section } from "@/components/ui"
 import { SECTIONS, faqAnchor } from "@/lib/routes"
 import { rich } from "@/lib/rich"
 import type { SectionProps } from "./types"
@@ -26,9 +26,10 @@ export function Ai({ lang, dict }: SectionProps) {
             </li>
           ))}
         </ul>
-        <BrowserFrame>
+        {/* Like the hero: a full app-window recording, so no BrowserFrame chrome on top of the app's own header. */}
+        <div className="overflow-hidden rounded-tile shadow-frame">
           <Media lang={lang} id="VIDEO_AI_CHAT" alt={dict.media.VIDEO_AI_CHAT} />
-        </BrowserFrame>
+        </div>
       </div>
 
       <Card tone="navy" className="mt-12 grid gap-8 md:mt-16 md:grid-cols-[1.3fr_1fr] md:items-center md:p-10">

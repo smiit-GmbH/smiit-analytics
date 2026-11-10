@@ -152,11 +152,12 @@ export const fr: Dictionary = {
       eyebrow: "Éditeur de tableaux de bord",
       title: "Votre tableau de bord. *Exactement comme vous le souhaitez.*",
       intro: "Placez simplement indicateurs et graphiques au bon endroit. Sans programmation, sans Excel.",
+      tabsLabel: "Choisir une fonction",
       points: [
         {
           icon: "layout",
           title: "Créer vos propres rapports",
-          text: "Assemblez les indicateurs et analyses dont vous avez besoin – par glisser-déposer.",
+          text: "Assemblez les indicateurs et analyses dont vous avez besoin – par glisser-déposer ou avec l'IA.",
         },
         {
           icon: "download",
@@ -328,9 +329,21 @@ export const fr: Dictionary = {
       eyebrow: "Sécurité et protection des données",
       title: "Transparence *sur l'emplacement de vos données.*",
       items: [
-        { icon: "server", title: "Hébergement", text: "[HOSTING_STANDORT]" },
-        { icon: "shield", title: "Protection des données", text: "[DATENSCHUTZ_DSG_DSGVO]" },
-        { icon: "key", title: "Accès à bexio", text: "[BEXIO_ZUGRIFFSART]" },
+        {
+          icon: "server",
+          title: "Hébergement",
+          text: "Nous stockons vos données bexio et vos rapports exclusivement en Suisse, sur des serveurs Microsoft Azure à Zurich, avec des sauvegardes à Genève. La fonction d'IA est facultative : ce n'est qu'une fois activée qu'OpenAI traite vos demandes aux États-Unis.",
+        },
+        {
+          icon: "shield",
+          title: "Protection des données",
+          text: "Seuls vous et les personnes que vous autorisez voient vos données commerciales. Nos collaborateurs ne les voient pas non plus – les règles d'accès de la base de données l'imposent. Nous ne vendons pas vos données et ne transmettons que ce qui est nécessaire à l'exploitation et à la facturation.",
+        },
+        {
+          icon: "key",
+          title: "Accès à bexio",
+          text: "Vous connectez bexio via son interface officielle (OAuth 2.0 / OpenID Connect) et autorisez l'accès directement dans bexio – nous ne connaissons jamais votre mot de passe bexio. Pour une demande de support, vous pouvez nous accorder un accès temporaire, révocable à tout moment.",
+        },
       ],
       privacyLink: "Vers la déclaration de protection des données",
     },
@@ -578,6 +591,10 @@ export const fr: Dictionary = {
   },
 
   legal: {
+    /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
+    contents: "Sommaire",
+    /** Shown above those texts in every language but German – they exist in German only. */
+    germanOnly: "Ce document n'existe qu'en allemand. Seule la version allemande fait foi.",
     legalNotice: {
       nav: "Mentions légales",
       title: "Mentions légales",
@@ -602,19 +619,16 @@ export const fr: Dictionary = {
       nav: "Protection des données",
       title: "Déclaration de protection des données",
       description: "Déclaration de protection des données de smiit Analytics.",
-      body: "[DATENSCHUTZ_TEXT]",
     },
     terms: {
       nav: "Conditions d'utilisation",
       title: "Conditions d'utilisation",
       description: "Conditions d'utilisation de smiit Analytics.",
-      body: "[NUTZUNGSBEDINGUNGEN_TEXT]",
     },
     dpa: {
       nav: "Sous-traitance",
       title: "Contrat de sous-traitance des données",
       description: "Contrat de sous-traitance des données pour smiit Analytics.",
-      body: "[AVV_TEXT]",
     },
   },
 
@@ -704,10 +718,12 @@ export const fr: Dictionary = {
     IMG_STEP_1: "Établir la connexion bexio dans smiit Analytics",
     IMG_STEP_2: "Aperçu des rapports avec les forfaits Standard, Ventes, Finances et Direction, tous prêts",
     IMG_STEP_3: "Rapport personnalisé par glisser-déposer",
-    VIDEO_DRAGDROP: "Un indicateur est glissé-déposé dans un rapport",
+    VIDEO_DRAGDROP: "Un rapport est composé par glisser-déposer et avec l'IA",
+    VIDEO_EXPORT: "Un rapport est exporté et partagé",
+    VIDEO_TEAM: "Des membres de l'équipe sont invités et plusieurs entreprises bexio connectées",
     IMG_MULTI_COMPANY:
       "Un seul login pour la fiduciaire : liste des workspaces avec tous les mandants, un clic ouvre le rapport du mandant choisi",
-    VIDEO_AI_CHAT: "Question à l'IA et réponse sous forme de graphique",
+    VIDEO_AI_CHAT: "Question à l'IA sur le chiffre d'affaires et sa réponse directement dans le tableau de bord",
     IMG_PERSONA_MANAGEMENT:
       "Smartphone avec chiffre d'affaires et factures ouvertes, à côté des notifications automatiques comme l'aperçu hebdomadaire et le paiement reçu",
     IMG_PERSONA_TRUSTEE: "Rapports de plusieurs mandants superposés, celui du premier plan avec un bouton Exporter",

@@ -1,0 +1,800 @@
+===============================================================================
+NUTZUNGSBEDINGUNGEN FÜR smiit ANALYTICS
+Allgemeine Geschäftsbedingungen für die Überlassung von Software als Service
+===============================================================================
+
+Fassung 1.0 — Stand: 01.11.2026
+
+§ 1 GELTUNGSBEREICH UND VERTRAGSPARTNER
+
+(1) Diese Nutzungsbedingungen gelten für alle Verträge über die Nutzung der
+    Software-as-a-Service-Anwendung "smiit Analytics" (nachfolgend "Anwendung")
+    zwischen
+
+      smiit GmbH
+      Reiherweg 96
+      89584 Ehingen
+      Registergericht: Amtsgericht Ulm, HRB 741965
+      Vertreten durch: Sebastian Grab, Noah Neßlauer
+      USt-IdNr.: DE357299821
+
+    (nachfolgend "Anbieter" oder "smiit") und dem Kunden.
+
+    Kunde ist das Unternehmen, das den Vertrag mit dem Anbieter schließt. In
+    der Anwendung wird der Kunde als "Tenant" bezeichnet; beide Begriffe sind
+    in diesen Nutzungsbedingungen gleichbedeutend.
+
+(2) Die Anwendung richtet sich ausschließlich an Unternehmer im Sinne des
+    § 14 BGB, an juristische Personen des öffentlichen Rechts und öffentlich-
+    rechtliche Sondervermögen sowie an Unternehmen mit Sitz in der Schweiz, die
+    den Vertrag zu geschäftlichen Zwecken schließen. Ein Vertragsschluss mit
+    Verbrauchern erfolgt nicht.
+
+(3) Abweichende, entgegenstehende oder ergänzende Geschäftsbedingungen des
+    Kunden werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt
+    ihrer Geltung ausdrücklich in Textform zu. Dies gilt auch dann, wenn der
+    Anbieter in Kenntnis solcher Bedingungen die Leistung vorbehaltlos erbringt.
+
+(4) Ergänzend gelten der Auftragsverarbeitungsvertrag (Anlage zum Vertrag,
+    abrufbar unter https://www.smiit-analytics.com/de/dpa/) und die
+    Datenschutzerklärung des Anbieters (abrufbar unter
+    https://www.smiit-analytics.com/de/privacy/). Die jeweils aktuelle
+    Fassung dieser Nutzungsbedingungen ist unter
+    https://www.smiit-analytics.com/de/terms/ abrufbar. Bei Widersprüchen
+    zwischen diesen Nutzungsbedingungen und dem Auftragsverarbeitungsvertrag
+    geht in datenschutzrechtlichen Fragen der Auftragsverarbeitungsvertrag
+    vor.
+
+
+§ 2 VERTRAGSGEGENSTAND UND LEISTUNGSBESCHREIBUNG
+
+(1) Der Anbieter stellt dem Kunden die Anwendung für die Dauer des Vertrages
+    über das Internet zur Nutzung bereit. Die Anwendung dient der Auswertung
+    betriebswirtschaftlicher Daten, die der Kunde aus seinem bexio-Konto
+    übermittelt.
+
+(2) Der Leistungsumfang umfasst im Wesentlichen:
+
+    a) die Anbindung eines oder mehrerer bexio-Konten des Kunden über die
+       offizielle bexio-Schnittstelle nach vorheriger Autorisierung durch den
+       Kunden; jede angebundene bexio-Firma bildet in der Anwendung einen
+       "Datensatz";
+    b) den wiederkehrenden Abruf und die Speicherung der freigegebenen Daten in
+       einer mandantengetrennten Datenhaltung des Anbieters;
+    c) die Aufbereitung dieser Daten zu Kennzahlen, Dimensionen und Fakten;
+    d) die Erstellung, Speicherung und Freigabe von Berichten und Dashboards;
+    e) eine KI-gestützte Analysefunktion nach Maßgabe von § 6;
+    f) die Verwaltung von Nutzerkonten, Rollen und Freigaben.
+
+(3) Die Anwendung wird als Standardsoftware bereitgestellt. Ein Anspruch auf
+    bestimmte Funktionen, auf die Umsetzung individueller Anforderungen oder
+    auf die dauerhafte Verfügbarkeit einzelner Funktionen besteht nicht, soweit
+    nicht ausdrücklich etwas anderes vereinbart ist. Der Anbieter ist
+    berechtigt, die Anwendung weiterzuentwickeln und anzupassen; § 19 bleibt
+    unberührt.
+
+(4) Der Anbieter schuldet die Bereitstellung der Anwendung am Übergabepunkt.
+    Übergabepunkt ist der Ausgang des vom Anbieter genutzten Rechenzentrums.
+    Die Internetverbindung des Kunden sowie dessen Endgeräte und Software sind
+    nicht Vertragsgegenstand.
+
+(5) Die Anwendung erfordert eine aktuelle Version eines gängigen Webbrowsers.
+    Der Anbieter unterstützt die jeweils aktuelle und die vorangegangene
+    Hauptversion der Browser Chrome, Edge, Firefox und Safari.
+
+
+§ 3 VERTRAGSSCHLUSS, REGISTRIERUNG, TESTPHASE
+
+(1) Der Anbieter vertreibt die Anwendung über den bexio Marketplace, der von
+    der bexio AG betrieben wird (nachfolgend "Marketplace"), sowie im
+    Direktvertrieb.
+
+    Der Vertrag über die Nutzung der Anwendung kommt unabhängig vom
+    Vertriebsweg ausschließlich zwischen dem Kunden und dem Anbieter zustande,
+    und zwar mit Abschluss der Registrierung in der Anwendung, bei der der
+    Kunde diese Nutzungsbedingungen und den Auftragsverarbeitungsvertrag
+    annimmt. Ein kostenpflichtiges Abonnement schließt der Kunde ebenfalls in
+    der Anwendung mit dem Anbieter ab.
+
+(1a) Rechnungsstellung und Zahlungseinzug für das Abonnement nimmt die
+    bexio AG für den Anbieter vor (§ 11 Absatz 8). Die Bedingungen des
+    Marketplace gelten nur für Rechnungsstellung, Zahlung und Mahnwesen; im
+    Übrigen regeln diese Nutzungsbedingungen das Vertragsverhältnis
+    abschließend.
+
+(2) Der Kunde hat bei der Registrierung wahrheitsgemäße und vollständige
+    Angaben zu machen und diese bei Änderungen unverzüglich zu aktualisieren.
+    Die bei der Registrierung angegebene E-Mail-Adresse ist zu bestätigen.
+
+(3) Mit der Registrierung bestätigt der Kunde die Kenntnisnahme und Geltung
+    dieser Nutzungsbedingungen sowie den Abschluss des
+    Auftragsverarbeitungsvertrages. Der Anbieter dokumentiert Zeitpunkt und
+    Fassung der jeweils akzeptierten Dokumente.
+
+(4) Der Anbieter stellt eine unentgeltliche Testphase zur Verfügung. Es gilt:
+
+    a) Die Testphase beträgt 30 Tage ab Freischaltung.
+    b) Während der Testphase kann der Vertrag von beiden Seiten jederzeit ohne
+       Einhaltung einer Frist gekündigt werden.
+    c) Der Anbieter kann den Funktionsumfang in der Testphase beschränken.
+    d) Während der Testphase entstehen keine Kosten, und der Anbieter
+       übermittelt keine Angaben an die bexio AG.
+    e) Nach Ablauf der Testphase kann der Kunde die Anwendung nur weiter
+       nutzen, wenn er in der Anwendung ein kostenpflichtiges Abonnement
+       abschließt. Eine automatische Umwandlung in ein kostenpflichtiges
+       Abonnement findet nicht statt. Schließt der Kunde kein Abonnement ab,
+       wird der Zugang mit Ablauf der Testphase gesperrt; für die Daten des
+       Kunden gilt § 14 entsprechend.
+    f) Für die Testphase ist die Gewährleistung ausgeschlossen; die Haftung des
+       Anbieters richtet sich nach § 16 Absatz 6.
+
+
+§ 4 WORKSPACE, NUTZERKONTEN UND ROLLEN
+
+(1) Die Nutzung erfolgt innerhalb eines dem Kunden (Tenant) zugeordneten
+    Arbeitsbereichs ("Workspace"). Der Kunde benennt mindestens eine Person als Inhaber
+    ("Owner") des Workspace.
+
+(2) Die Anwendung kennt die Rollen "Owner", "Admin" und "Member" mit
+    abgestuften Berechtigungen. Der Kunde ist allein dafür verantwortlich,
+    welchen Personen er Zugang gewährt und welche Rolle er ihnen zuweist. Er
+    stellt sicher, dass Berechtigungen dem Grundsatz der Erforderlichkeit
+    entsprechen und bei Ausscheiden von Personen unverzüglich entzogen werden.
+
+(3) Nutzerkonten sind personenbezogen. Die Weitergabe von Zugangsdaten an
+    Dritte sowie die gemeinsame Nutzung eines Kontos durch mehrere Personen
+    sind unzulässig. Der Kunde hat seine Nutzer entsprechend zu verpflichten.
+
+(4) Der Kunde hat Zugangsdaten geheim zu halten und vor dem Zugriff Dritter zu
+    schützen. Besteht der Verdacht einer unbefugten Kenntniserlangung, hat der
+    Kunde den Anbieter unverzüglich zu informieren und die betroffenen
+    Zugangsdaten zu ändern.
+
+(5) Die Anmeldung erfordert für alle Nutzer eine Zwei-Faktor-Authentifizierung
+    mit einem per E-Mail versandten Einmalcode. Ein Nutzer kann ein Gerät für
+    30 Tage als vertrauenswürdig speichern; auf diesem Gerät entfällt der
+    Einmalcode für diesen Zeitraum.
+
+(6) Einladungen zu einem Workspace erfolgen per E-Mail an die vom Kunden
+    angegebene Adresse. Der Kunde stellt sicher, dass die eingegebenen Adressen
+    zutreffend sind. Der Anbieter weist darauf hin, dass Einladungslinks bis zu
+    ihrer Annahme oder ihrem Widerruf durch den Kunden gültig bleiben; der Kunde
+    hat nicht mehr benötigte Einladungen zu widerrufen.
+
+
+§ 5 ANBINDUNG AN bexio
+
+(1) Die Anbindung an bexio erfolgt ausschließlich auf Veranlassung des Kunden
+    durch Erteilung einer Autorisierung über das bexio-Autorisierungsverfahren.
+
+(1a) Die Autorisierung wird einheitlich für den gesamten von der Anwendung
+    genutzten Umfang erteilt. Eine Auswahl einzelner Datenbereiche ist nicht
+    vorgesehen; der Kunde kann die Anbindung nur insgesamt erteilen oder
+    insgesamt unterlassen. Welche Datenbereiche dies umfasst, ergibt sich aus
+    Anlage 1 Ziffer 5.2 des Auftragsverarbeitungsvertrages. Ob einzelne
+    Bereiche tatsächlich abgerufen werden können, hängt zusätzlich davon ab,
+    welche Module und Berechtigungen im bexio-Konto des Kunden bestehen.
+
+(2) bexio ist kein Unterauftragsverarbeiter des Anbieters, sondern ein vom
+    Kunden eingesetzter Dienst in dessen eigenem Verantwortungsbereich. Das
+    Vertragsverhältnis des Kunden zu bexio bleibt von diesem Vertrag unberührt.
+
+(3) Der Anbieter ruft aus dem bexio-Konto des Kunden ausschließlich lesend Daten
+    ab. Ein schreibender Zugriff auf das bexio-Konto findet nicht statt.
+
+(4) Der Anbieter schuldet nicht die Verfügbarkeit, Vollständigkeit oder
+    Richtigkeit der von bexio bereitgestellten Daten und Schnittstellen. Ändert,
+    beschränkt oder stellt bexio seine Schnittstelle ein, kann dies den
+    Funktionsumfang der Anwendung beeinträchtigen. Der Anbieter wird den Kunden
+    hierüber unverzüglich informieren und sich um eine Anpassung bemühen.
+    Entfällt eine Funktion aus diesem Grund dauerhaft und erheblich, steht dem
+    Kunden ein Sonderkündigungsrecht nach § 13 Absatz 6 zu.
+
+(5) Der Kunde ist verpflichtet, die Autorisierung aufrechtzuerhalten, soweit er
+    die Anwendung nutzen will. Läuft die Autorisierung ab oder wird sie
+    widerrufen, unterbleibt der Datenabruf; der Anbieter informiert den Kunden
+    per E-Mail über einen erforderlichen erneuten Verbindungsaufbau. Die
+    bereits gespeicherten Daten bleiben in diesem Fall erhalten und werden
+    nicht weiter aktualisiert; eine Löschung erfolgt allein aus diesem Grund
+    nicht.
+
+(6) Löscht der Kunde in der Anwendung einen Datensatz oder seinen gesamten
+    Workspace, löscht der Anbieter die zugehörigen Daten innerhalb von vier
+    Stunden automatisiert. Will der Kunde gespeicherte Daten entfernen lassen,
+    ohne den Vertrag zu beenden, hat er den betreffenden Datensatz zu löschen;
+    der bloße Widerruf der bexio-Autorisierung genügt hierfür nicht. Für
+    Sicherungskopien gilt § 14 Absatz 3 Satz 2 entsprechend.
+
+
+§ 6 KI-GESTÜTZTE ANALYSEFUNKTIONEN
+
+(1) Die Anwendung enthält eine Analysefunktion, die auf einem großen
+    Sprachmodell beruht ("KI-Analyst"). Nutzer können in natürlicher Sprache
+    Fragen zu ihren Daten stellen; das Sprachmodell erzeugt hierzu
+    Datenbankabfragen, wertet deren Ergebnisse aus und formuliert eine Antwort.
+
+(2) Der Anbieter weist ausdrücklich darauf hin, dass es sich um ein KI-System
+    handelt und die Antworten von einem Sprachmodell erzeugt werden. Dieser
+    Hinweis wird dem Nutzer auch innerhalb der Anwendung angezeigt
+    (Transparenzpflicht nach Artikel 50 der Verordnung (EU) 2024/1689 — KI-VO).
+
+(3) Zur Beantwortung einer Frage werden dem Sprachmodell die Fragestellung, ein
+    Beschreibungsmodell der verfügbaren Datenstruktur sowie die Ergebnisse der
+    erzeugten Abfragen (Kennzahlen und begrenzte Auszüge von Datenzeilen)
+    übermittelt. Namen und E-Mail-Adressen von Personen werden dabei
+    standardmäßig pseudonymisiert und Freitexte nicht übermittelt;
+    Personaldaten werden nur nach gesonderter Freigabe übermittelt. Der Kunde
+    kann die Pseudonymisierung über die Stufen "Namen", "Namen + Texte" und
+    "Alles" schrittweise aufheben. Einzelheiten regelt der
+    Auftragsverarbeitungsvertrag.
+
+(4) Als Sprachmodell setzt der Anbieter Modelle der OpenAI ein. Die
+    Verarbeitung durch den Modellanbieter findet in den Vereinigten Staaten
+    von Amerika statt. Die Übermittlung erfolgt auf
+    Grundlage der im Auftragsverarbeitungsvertrag bezeichneten
+    Übermittlungsmechanismen nach Kapitel V DSGVO und Artikel 16 revDSG. Eine
+    Nutzung der übermittelten Daten zum Training von Modellen des Anbieters
+    oder der Modellanbieter findet nicht statt.
+
+(5) Der KI-Analyst ist standardmäßig ausgeschaltet. Er wird für den gesamten
+    Workspace durch einen Owner eingeschaltet, nachdem dieser einen Hinweis zu
+    den übermittelten Daten bestätigt hat; die Freigabe von Personaldaten und
+    jede Aufhebung der Pseudonymisierung erfordern jeweils eine gesonderte
+    Bestätigung. Der Kunde kann die Funktion jederzeit wieder ausschalten.
+    Solange sie ausgeschaltet ist, findet keine Übermittlung an den
+    Modellanbieter statt.
+
+(6) Sprachmodelle können unzutreffende, unvollständige oder irreführende
+    Ergebnisse erzeugen. Der Anbieter übernimmt keine Gewähr für die
+    inhaltliche Richtigkeit, Vollständigkeit oder Eignung der durch den
+    KI-Analysten erzeugten Auswertungen. Der Kunde ist verpflichtet, Ergebnisse
+    vor ihrer Verwendung — insbesondere vor wirtschaftlichen, rechtlichen oder
+    personellen Entscheidungen — eigenständig auf Plausibilität zu prüfen.
+
+(7) Der KI-Analyst trifft keine automatisierten Entscheidungen im Sinne des
+    Artikels 22 DSGVO. Der Kunde verpflichtet sich, die Anwendung nicht als
+    alleinige Grundlage für Entscheidungen einzusetzen, die gegenüber
+    natürlichen Personen rechtliche Wirkung entfalten oder diese in ähnlicher
+    Weise erheblich beeinträchtigen, insbesondere nicht für Entscheidungen über
+    Einstellung, Beförderung, Vergütung oder Beendigung von
+    Beschäftigungsverhältnissen.
+
+(8) Der Anbieter kann das eingesetzte Sprachmodell und dessen Anbieter wechseln.
+    Handelt es sich dabei um einen Wechsel des Unterauftragsverarbeiters,
+    richtet sich das Verfahren nach dem Auftragsverarbeitungsvertrag.
+
+
+§ 7 NUTZUNGSRECHTE
+
+(1) Der Anbieter räumt dem Kunden für die Dauer des Vertrages das nicht
+    ausschließliche, nicht unterlizenzierbare und nicht übertragbare Recht ein,
+    die Anwendung im vertraglich vereinbarten Umfang über das Internet zu
+    nutzen.
+
+(2) Eine Überlassung der Software an den Kunden findet nicht statt. Der Kunde
+    erhält keinen Anspruch auf Herausgabe des Programmcodes.
+
+(3) Der Kunde darf die Anwendung nur für eigene betriebliche Zwecke nutzen. Die
+    Nutzung für Dritte, insbesondere im Wege des Rechenzentrumsbetriebs, der
+    Weitervermietung oder der entgeltlichen Auswertung fremder Datenbestände,
+    bedarf der vorherigen Zustimmung des Anbieters in Textform. Die Auswertung
+    von Daten verbundener Unternehmen im Sinne der §§ 15 ff. AktG ist gestattet.
+
+(4) Dem Kunden ist es untersagt, die Anwendung zurückzuentwickeln, zu
+    dekompilieren oder zu disassemblieren, soweit dies nicht gesetzlich zwingend
+    gestattet ist, Sicherungsmechanismen zu umgehen oder die Anwendung
+    automatisiert in einer Weise abzufragen, die über die vorgesehene Nutzung
+    hinausgeht.
+
+(5) Alle Rechte an der Anwendung, ihrer Struktur, ihrem Datenmodell und ihrer
+    Gestaltung verbleiben beim Anbieter. Sämtliche Rechte an den vom Kunden
+    eingebrachten Daten verbleiben beim Kunden.
+
+(6) Die über die bexio-Anbindung abgerufenen Daten sowie alle Inhalte, die der
+    Kunde und seine Nutzer in der Anwendung erfassen (zusammen "Kundendaten"),
+    verarbeitet der Anbieter ausschließlich zur Erbringung seiner Leistungen
+    und nicht zu eigenen Zwecken.
+
+    Davon ausgenommen sind die Konto- und Nutzungsdaten der Nutzer
+    (insbesondere Name, E-Mail-Adresse sowie Art und Zeitpunkt der genutzten
+    Funktionen). Diese verarbeitet der Anbieter als eigener Verantwortlicher
+    auch für Nutzungsstatistiken, zur Kapazitätsplanung und zur Verbesserung
+    der Anwendung; Einzelheiten regelt die Datenschutzerklärung. Ein Verkauf
+    dieser Daten oder eine sonstige Weitergabe an Dritte findet nicht statt.
+
+
+§ 8 PFLICHTEN UND OBLIEGENHEITEN DES KUNDEN
+
+(1) Der Kunde ist für die Rechtmäßigkeit der von ihm eingebrachten und über die
+    bexio-Anbindung übermittelten Daten verantwortlich. Er stellt sicher, dass
+    er berechtigt ist, diese Daten durch den Anbieter verarbeiten zu lassen.
+
+(2) Der Kunde nimmt zur Kenntnis, dass die Anwendung wegen des einheitlichen
+    Anbindungsumfangs nach § 5 Absatz 1a auch die folgenden Daten verarbeitet,
+    soweit sein bexio-Konto sie enthält, und dass er diese Kategorien nicht
+    einzeln abwählen kann:
+
+    a) Beschäftigtendaten einschließlich Abwesenheiten, Zeit- und Feriensalden
+       sowie erfasster Arbeitszeiten;
+    b) Angaben, die auf Gesundheitsdaten schließen lassen können, soweit
+       Abwesenheitsgründe in bexio entsprechend erfasst sind;
+    c) interne Kostensätze und Verrechnungssätze mit Bezug zu einzelnen
+       Beschäftigten.
+
+(3) Der Kunde ist als datenschutzrechtlich Verantwortlicher verpflichtet, vor
+    Erteilung der Autorisierung zu prüfen, ob für alle von Absatz 2 erfassten
+    Datenkategorien eine Rechtsgrundlage besteht, und die erforderlichen
+    Maßnahmen zu ergreifen. Hierzu gehören insbesondere:
+
+    a) die Information der betroffenen Personen nach Artikel 13 und 14 DSGVO;
+    b) die Beteiligung einer bestehenden Arbeitnehmervertretung, soweit die
+       Auswertung von Arbeitszeit- oder Leistungsdaten der Mitbestimmung
+       unterliegt (in Deutschland insbesondere § 87 Absatz 1 Nummer 6 BetrVG);
+    c) die Prüfung, ob eine Datenschutz-Folgenabschätzung nach Artikel 35 DSGVO
+       durchzuführen ist.
+
+    Der Anbieter schuldet insoweit keine rechtliche Beratung.
+
+(4) Der Kunde hat die Anwendung nicht zu nutzen, um rechtswidrige Inhalte zu
+    verarbeiten oder gegen geltendes Recht zu verstoßen.
+
+(5) Der Kunde stellt den Anbieter von Ansprüchen Dritter frei, die auf einer
+    schuldhaft rechtswidrigen Nutzung der Anwendung durch den Kunden oder ihm
+    zurechenbare Nutzer beruhen, einschließlich angemessener Kosten der
+    Rechtsverteidigung. Der Anbieter wird den Kunden über die Inanspruchnahme
+    unverzüglich informieren und ihm Gelegenheit zur Stellungnahme geben.
+
+(6) Der Kunde hat Mängel unverzüglich in Textform anzuzeigen und dabei die
+    Umstände ihres Auftretens so genau wie möglich zu beschreiben.
+
+(7) Der Kunde ist für die Sicherung derjenigen Daten verantwortlich, die er
+    außerhalb der Anwendung weiterverwenden will. Die Anwendung stellt hierfür
+    folgende Exportfunktionen bereit: den Export der Daten einzelner
+    Berichtselemente und der Ergebnisse des KI-Analysten als CSV-Datei sowie
+    den Export der eigenen Kontodaten eines Nutzers. Ein Gesamtexport eines
+    Workspace oder eines Datensatzes ist nicht vorgesehen; die Ursprungsdaten
+    verbleiben im bexio-Konto des Kunden.
+
+
+§ 9 NUTZUNGSGRENZEN
+
+(1) Die Anwendung ist in ihrem Umfang grundsätzlich nicht mengenmäßig
+    beschränkt. Insbesondere sind nicht begrenzt:
+
+    a) die Anzahl der angebundenen Datensätze — die Vergütung bemisst sich je
+       Datensatz (§ 11 Absatz 1);
+    b) die Anzahl der Nutzerkonten — die Vergütung bemisst sich je Nutzer über
+       den ersten hinaus (§ 11 Absatz 2);
+    c) der Umfang der ausgewerteten Datenbestände;
+    d) die Häufigkeit der Datenaktualisierung.
+
+(2) Abweichend hiervon ist die Nutzung des KI-Analysten (§ 6) auf ein
+    monatliches Budget begrenzt. Das Budget ist in der Vergütung nach § 11
+    enthalten und wird nicht gesondert berechnet; eine Möglichkeit, es gegen
+    Entgelt zu erweitern, besteht derzeit nicht.
+
+    Das Budget beträgt 5 US-Dollar an Modellkosten je Workspace und
+    Kalendermonat und wird unabhängig davon verbraucht, welcher Nutzer die
+    Anfrage stellt. Es erneuert sich zu Beginn jedes Kalendermonats, bemessen
+    nach der in den Einstellungen des Workspace hinterlegten Zeitzone; nicht
+    verbrauchte Anteile verfallen und werden nicht vergütet. Der Anbieter kann
+    das Budget für einzelne Workspaces abweichend festlegen. Ist das Budget ausgeschöpft, steht der KI-Analyst bis zum Beginn
+    des Folgemonats nicht zur Verfügung; die übrigen Funktionen der Anwendung
+    bleiben uneingeschränkt nutzbar.
+
+    Den Umfang des Budgets sowie den aktuellen Verbrauch stellt der Anbieter in
+    der Anwendung dar. Da es sich um eine unentgeltliche Zusatzfunktion
+    handelt, kann der Anbieter den Umfang anpassen; § 2 Absatz 3 gilt
+    entsprechend.
+
+(3) Der Anbieter behält sich die Anpassung des Vertrages für den Fall vor, dass
+    die Nutzung eines einzelnen Kunden einen unverhältnismäßigen Aufwand
+    verursacht. Ein solcher Fall liegt vor, wenn die dem Kunden zurechenbaren
+    Kosten für Rechenzentrums-, Datenbank- und Modellleistungen in drei
+    aufeinanderfolgenden Kalendermonaten die für denselben Zeitraum vereinbarte
+    Nettovergütung übersteigen.
+
+(4) Tritt der Fall des Absatzes 3 ein, wird der Anbieter den Kunden hierauf in
+    Textform hinweisen, die zurechenbaren Kosten darlegen und ihm ein Angebot
+    zur Anpassung des Vertrages unterbreiten. Kommt eine Einigung innerhalb von
+    30 Kalendertagen nach Zugang des Hinweises nicht zustande, ist der Anbieter
+    berechtigt, den Vertrag nach § 13 Absatz 5 Buchstabe a zum Ende des
+    folgenden Kalendermonats zu beenden. Bereits gezahlte Vergütungen werden
+    für den Zeitraum nach Wirksamwerden der Kündigung zeitanteilig erstattet.
+
+(5) Der Anbieter ist berechtigt, Anfragen zu drosseln oder vorübergehend
+    abzuweisen, soweit dies zur Abwehr einer Überlastung oder eines Missbrauchs
+    erforderlich ist.
+
+
+§ 10 VERFÜGBARKEIT, WARTUNG UND SUPPORT
+
+(1) Der Anbieter erbringt die Bereitstellung der Anwendung mit wirtschaftlich
+    angemessenen Bemühungen. Eine bestimmte Verfügbarkeitsquote wird nicht
+    zugesagt und nicht geschuldet.
+
+(2) Der Anbieter ist berechtigt, die Anwendung für Wartungsarbeiten
+    vorübergehend außer Betrieb zu nehmen. Geplante Wartungsarbeiten mit
+    voraussichtlich erheblicher Auswirkung kündigt der Anbieter nach Möglichkeit
+    mindestens 48 Stunden im Voraus per E-Mail oder innerhalb der Anwendung an
+    und führt sie nach Möglichkeit außerhalb der üblichen Geschäftszeiten durch.
+
+(3) Unaufschiebbare Maßnahmen zur Abwehr von Sicherheitsrisiken oder zur Wahrung
+    der Betriebssicherheit darf der Anbieter jederzeit und ohne Vorankündigung
+    durchführen.
+
+(4) Zeiten, in denen die Anwendung aus Gründen nicht erreichbar ist, die der
+    Anbieter nicht zu vertreten hat — insbesondere höhere Gewalt, Störungen des
+    Internets, Ausfälle von Vorleistungsanbietern oder Störungen bei bexio —
+    begründen keine Ansprüche des Kunden.
+
+(5) Der Anbieter leistet Support per E-Mail an kontakt@smiit.de
+    während der üblichen Geschäftszeiten. Reaktionszeiten werden nicht zugesagt,
+    soweit nicht gesondert vereinbart.
+
+
+§ 11 VERGÜTUNG UND ABRECHNUNG
+
+(1) DATENSATZGEBÜHR. Die Vergütung bemisst sich nach der Anzahl der
+    angebundenen Datensätze. Ein Datensatz ist eine mit der Anwendung
+    verbundene bexio-Firma. Je Datensatz und Kalendermonat:
+
+        Monatstarif (§ 13 Absatz 1 Buchstabe a):   59,00 CHF
+        Jahrestarif (§ 13 Absatz 1 Buchstabe b):   49,00 CHF
+
+(2) NUTZERGEBÜHR. Der erste Nutzer je Tenant ist in der Datensatzgebühr
+    enthalten. Für jeden weiteren Nutzer beträgt die Vergütung 8,00 CHF je
+    Kalendermonat, in beiden Tarifvarianten gleichermaßen. Ein Nutzer wird je
+    Tenant nur einmal abgerechnet, unabhängig davon, auf wie viele Datensätze
+    desselben Tenants er Zugriff hat.
+
+(3) TAGESGENAUE BERECHNUNG. Datensätze und Nutzer werden für jeden
+    Kalendertag berechnet, an dem sie angebunden beziehungsweise eingerichtet
+    waren; ein Kalendertag zählt, wenn der Datensatz oder Nutzer an diesem Tag
+    bestanden hat. Der Betrag je Datensatz oder Nutzer ergibt sich aus dem
+    Monatspreis nach Absatz 1 oder 2, multipliziert mit der Anzahl dieser
+    Tage und geteilt durch die Anzahl der Tage des Kalendermonats. Dies gilt
+    auch für den ersten Monat ab Abschluss des Abonnements. Der Gesamtbetrag
+    einer Rechnung wird kaufmännisch auf 0,01 CHF gerundet.
+
+(4) PREISVORSCHAU. Die Anwendung zeigt dem Kunden beim Abschluss des
+    Abonnements den voraussichtlichen Monatsbetrag auf Grundlage der
+    aktuellen Anzahl von Datensätzen und Nutzern an. Fügt der Kunde
+    Datensätze oder Nutzer hinzu oder entfernt er sie, zeigt die Anwendung vor
+    der Änderung deren Auswirkung auf den Betrag des laufenden und der
+    folgenden Monate an. Die Vorschau ist unverbindlich; maßgeblich ist die
+    Berechnung nach Absatz 3.
+
+(5) Die Nutzung des KI-Analysten (§ 6) ist im Rahmen des nach § 9 Absatz 2
+    enthaltenen Budgets ohne gesonderte Vergütung möglich.
+
+(6) Alle Preise verstehen sich netto zuzüglich der jeweils geltenden
+    gesetzlichen Umsatz- bzw. Mehrwertsteuer.
+
+(7) ABRECHNUNGSZEITPUNKT.
+
+    a) Im Monatstarif wird die Vergütung nachträglich zum Ende jedes
+       Kalendermonats abgerechnet.
+    b) Im Jahrestarif wird die Datensatzgebühr für die bei Beginn der
+       Jahreslaufzeit angebundenen Datensätze für zwölf Monate im Voraus
+       abgerechnet. Bindet der Kunde während der Jahreslaufzeit weitere
+       Datensätze an, werden diese zum Jahrestarif tagesgenau bis zum Ende der
+       laufenden Jahreslaufzeit berechnet und mit der nächsten
+       Monatsabrechnung in Rechnung gestellt; mit der Verlängerung werden alle
+       Datensätze gemeinsam für zwölf Monate abgerechnet. Entfernt der Kunde
+       während der Jahreslaufzeit Datensätze, wird die bereits abgerechnete
+       Datensatzgebühr nicht erstattet; die Datensätze entfallen mit der
+       nächsten Verlängerung.
+    c) Die Nutzergebühr wird in beiden Tarifvarianten nachträglich zum Ende
+       jedes Kalendermonats nach Absatz 3 abgerechnet.
+
+(8) RECHNUNGSSTELLUNG ÜBER bexio. Der Anbieter ermittelt den jeweils
+    fälligen Betrag und übermittelt ihn der bexio AG als Betreiberin des
+    Marketplace. Die bexio AG stellt dem Kunden die Rechnung und zieht die
+    Vergütung für den Anbieter ein; Zahlungen leistet der Kunde mit
+    befreiender Wirkung ausschließlich an die bexio AG. Für Zahlungsmodalitäten,
+    Fälligkeit und Mahnwesen gelten ergänzend die Bedingungen des Marketplace.
+
+    Die Rechnung weist die Datensatz- und Nutzergebühren getrennt aus,
+    einschließlich der berechneten Tage je Datensatz und Nutzer. Dieselbe
+    Aufschlüsselung stellt der Anbieter dem Kunden in der Anwendung bereit.
+    Einwendungen gegen die Berechnung richtet der Kunde an den Anbieter.
+
+    Zur Abrechnung übermittelt der Anbieter der bexio AG das mit der Anwendung
+    verbundene bexio-Konto des Kunden, den gebuchten Tarif, den
+    Rechnungsbetrag mit Abrechnungstermin, die Anzahl der angebundenen
+    Datensätze und der Nutzer mit den berechneten Tagen sowie eine Kündigung
+    des Abonnements; Namen oder E-Mail-Adressen einzelner Nutzer werden nicht
+    übermittelt. Diese Angaben übermittelt der Anbieter mit jeder Abrechnung,
+    eine Kündigung unverzüglich. Während der Testphase (§ 3 Absatz 4) findet
+    keine Übermittlung statt.
+
+(9) Teilt die bexio AG dem Anbieter mit, dass eine Rechnung trotz Mahnung
+    offen bleibt, ist der Anbieter berechtigt, den Zugang zur Anwendung bis
+    zum Ausgleich der Rechnung zu sperren. Der Anbieter kündigt die Sperre
+    vorher in Textform an.
+
+
+§ 12 PREISANPASSUNG
+
+(1) Der Anbieter ist berechtigt, die Preise mit Wirkung für die Zukunft
+    anzupassen, frühestens jedoch zwölf Monate nach Vertragsbeginn und
+    anschließend höchstens einmal je Zwölfmonatszeitraum.
+
+(2) Eine Preisanpassung setzt eine Veränderung der Kosten des Anbieters für die
+    Leistungserbringung voraus, insbesondere der Kosten für
+    Rechenzentrumsleistungen, Modellanbieter, Lizenzen, Personal oder gesetzlich
+    veranlasste Abgaben. Kostensenkungen sind dabei mit Kostensteigerungen zu
+    verrechnen. Eine Erhöhung darf nicht dazu dienen, über die Deckung
+    gestiegener Kosten hinaus den Gewinn zu erhöhen.
+
+(3) Der Anbieter teilt die Anpassung dem Kunden mindestens acht Wochen vor ihrem
+    Wirksamwerden in Textform mit und weist dabei auf das Sonderkündigungsrecht
+    nach Absatz 4 hin.
+
+(4) Übersteigt die Erhöhung fünf Prozent der bisherigen Vergütung, kann der
+    Kunde den Vertrag bis zum Wirksamwerden der Anpassung zu diesem Zeitpunkt in
+    Textform kündigen. Macht der Kunde von diesem Recht keinen Gebrauch, gilt
+    die Anpassung als vereinbart.
+
+
+§ 13 LAUFZEIT UND KÜNDIGUNG
+
+(1) Der Anbieter bietet das Abonnement in zwei Tarifvarianten an:
+
+    a) MONATSTARIF: unbestimmte Laufzeit, Abrechnung monatlich nachträglich
+       (§ 11 Absatz 7 Buchstabe a). Der Kunde kann zum Ende jedes
+       Kalendermonats kündigen.
+    b) JAHRESTARIF: Laufzeit von zwölf Monaten ab Abschluss, zu einem
+       gegenüber dem Monatstarif ermäßigten Preis (§ 11 Absatz 1 und 7
+       Buchstabe b). Die Laufzeit verlängert sich jeweils um weitere zwölf
+       Monate, wenn der Kunde nicht bis zum letzten Tag der laufenden
+       Jahreslaufzeit kündigt.
+
+    Ein Wechsel vom Monatstarif in den Jahrestarif ist jederzeit möglich und
+    wird zum Beginn des folgenden Kalendermonats wirksam. Ein Wechsel vom
+    Jahrestarif in den Monatstarif wird zum Ende der laufenden
+    Jahreslaufzeit wirksam.
+
+    Der Anbieter kann das Abonnement nur nach den Absätzen 4 und 5 sowie nach
+    § 19 Absatz 3 beenden.
+
+(2) Der Kunde kündigt über die hierfür vorgesehene Kündigungsfunktion in der
+    Anwendung. Dies gilt auch für die Sonderkündigungsrechte nach diesen
+    Nutzungsbedingungen und nach dem Auftragsverarbeitungsvertrag; diese kann
+    der Kunde alternativ in Textform gegenüber dem Anbieter erklären. Der
+    Anbieter teilt die Kündigung unverzüglich der bexio AG mit (§ 11
+    Absatz 8).
+
+(3) Nach einer Kündigung behält der Kunde bis zum Ende des Zeitraums, zu dem
+    die Kündigung wirksam wird, Zugang zur Anwendung; mit dessen Ablauf endet
+    der Vertrag über die Nutzung der Anwendung. Datensätze und Nutzer werden
+    bis zu diesem Zeitpunkt nach § 11 abgerechnet.
+
+(4) Das Recht beider Vertragsparteien zur außerordentlichen Kündigung aus
+    wichtigem Grund nach § 314 BGB bleibt unberührt. Ein wichtiger Grund für
+    den Anbieter liegt insbesondere vor, wenn der Kunde
+
+    a) schwerwiegend oder wiederholt gegen § 7 Absatz 3 oder 4 oder gegen § 8
+       Absatz 4 verstößt;
+    b) die Anwendung in einer Weise nutzt, die deren Betrieb oder die Nutzung
+       durch andere Kunden erheblich beeinträchtigt, und dies nach Abmahnung
+       fortsetzt.
+
+(5) Über die außerordentliche Kündigung hinaus ist der Anbieter aus den
+    folgenden, abschließend benannten sachlichen Gründen berechtigt, die
+    Beendigung des Abonnements herbeizuführen:
+
+    a) bei Vorliegen eines Falles nach § 9 Absatz 3 (unverhältnismäßiger
+       Aufwand) nach erfolglosem Ablauf der Frist des § 9 Absatz 4, mit einer
+       Frist von einem Monat zum Monatsende;
+    b) bei vollständiger Einstellung des Dienstes smiit Analytics, mit einer
+       Frist von drei Monaten zum Monatsende;
+    c) wenn dem Anbieter die Leistungserbringung aus rechtlichen oder
+       tatsächlichen Gründen dauerhaft unmöglich oder unzumutbar wird,
+       insbesondere weil eine für den Betrieb wesentliche Vorleistung —
+       namentlich die bexio-Schnittstelle — dauerhaft entfällt, mit einer Frist
+       von einem Monat zum Monatsende.
+
+    Der Anbieter erklärt die Beendigung gegenüber dem Kunden in Textform und
+    teilt sie zugleich der bexio AG mit. Für den Zeitraum nach Wirksamwerden
+    der Beendigung bereits gezahlte Vergütungen werden dem Kunden
+    zeitanteilig erstattet. Eine darüber hinausgehende ordentliche Kündigung
+    des Anbieters während einer laufenden Jahreslaufzeit ist ausgeschlossen.
+
+(6) Der Kunde ist zur Kündigung mit einer Frist von einem Monat zum Monatsende
+    berechtigt, wenn eine wesentliche Funktion der Anwendung aus den in § 5
+    Absatz 4 genannten Gründen dauerhaft und erheblich entfällt. Die
+    Sonderkündigungsrechte nach § 12 Absatz 4, § 19 Absatz 3 und § 20 Absatz 4
+    bleiben unberührt.
+
+
+§ 14 FOLGEN DER VERTRAGSBEENDIGUNG
+
+(1) Mit Wirksamwerden der Kündigung endet das Nutzungsrecht des Kunden. Der
+    Zugang zur Anwendung wird deaktiviert.
+
+(2) Der Anbieter hält die Daten des Kunden nach Vertragsende für einen Zeitraum
+    von 30 Kalendertagen zum Zweck des Exports vor. Der Kunde erhält für diesen
+    Zeitraum auf Anforderung einen auf die Exportfunktionen nach § 8 Absatz 7
+    beschränkten Zugang.
+
+(3) Nach Ablauf der Frist nach Absatz 2 löscht der Anbieter sämtliche
+    Kundendaten. Sicherungskopien werden im Rahmen des regulären
+    Sicherungszyklus von 35 Tagen überschrieben; bis dahin bleiben die Daten gesperrt und
+    werden nicht verarbeitet. Einzelheiten und Ausnahmen aufgrund gesetzlicher
+    Aufbewahrungspflichten regelt der Auftragsverarbeitungsvertrag.
+
+(4) Auf Verlangen des Kunden, das vor Ablauf der Frist nach Absatz 2 in Textform
+    zu stellen ist, bestätigt der Anbieter die Löschung in Textform.
+
+(5) Der Anbieter ist nicht verpflichtet, Daten über die Frist nach Absatz 2
+    hinaus vorzuhalten. Der Kunde ist für den rechtzeitigen Export
+    verantwortlich.
+
+
+§ 15 GEWÄHRLEISTUNG
+
+(1) Auf die Überlassung der Anwendung findet Mietrecht Anwendung (§§ 535 ff.
+    BGB). Die verschuldensunabhängige Haftung des Anbieters für Mängel, die
+    bereits bei Vertragsschluss vorhanden waren, nach § 536a Absatz 1
+    Alternative 1 BGB ist ausgeschlossen.
+
+(2) Der Anbieter gewährleistet, dass die Anwendung während der Vertragslaufzeit
+    im Wesentlichen der Leistungsbeschreibung nach § 2 entspricht.
+
+(3) Unerhebliche Abweichungen von der geschuldeten Beschaffenheit sowie
+    Beeinträchtigungen, die auf Umständen nach § 10 Absatz 4 beruhen, stellen
+    keinen Mangel dar.
+
+(4) Der Kunde hat dem Anbieter Gelegenheit zur Mangelbeseitigung innerhalb
+    angemessener Frist zu geben. Eine Minderung durch Selbstvornahme ist
+    ausgeschlossen; Minderungsansprüche sind gegenüber dem Anbieter geltend zu
+    machen.
+
+(5) Ansprüche wegen Mängeln verjähren in zwölf Monaten ab dem gesetzlichen
+    Verjährungsbeginn. Dies gilt nicht für Ansprüche nach § 16 Absatz 1 und 2
+    sowie für Ansprüche wegen arglistig verschwiegener Mängel.
+
+
+§ 16 HAFTUNG
+
+(1) Der Anbieter haftet unbeschränkt für Schäden aus der Verletzung des Lebens,
+    des Körpers oder der Gesundheit, die auf einer Pflichtverletzung des
+    Anbieters oder eines seiner gesetzlichen Vertreter oder Erfüllungsgehilfen
+    beruhen, sowie für Schäden, die auf Vorsatz oder grober Fahrlässigkeit
+    beruhen.
+
+(2) Ebenfalls unbeschränkt haftet der Anbieter im Rahmen einer übernommenen
+    Garantie sowie nach dem Produkthaftungsgesetz.
+
+(3) Bei leicht fahrlässiger Verletzung einer wesentlichen Vertragspflicht haftet
+    der Anbieter der Höhe nach begrenzt auf den vertragstypischen,
+    vorhersehbaren Schaden. Wesentliche Vertragspflichten sind solche Pflichten,
+    deren Erfüllung die ordnungsgemäße Durchführung des Vertrages überhaupt erst
+    ermöglicht und auf deren Einhaltung der Kunde regelmäßig vertrauen darf.
+
+(4) Die Haftung nach Absatz 3 ist insgesamt begrenzt auf die Höhe der für die
+    Nutzung der Anwendung in den zwölf Monaten vor dem schadensbegründenden
+    Ereignis geschuldeten Nettovergütung.
+
+(5) Im Übrigen ist die Haftung des Anbieters ausgeschlossen.
+
+(6) Für die unentgeltliche Testphase nach § 3 Absatz 4 haftet der Anbieter nur
+    für Vorsatz und grobe Fahrlässigkeit sowie nach Absatz 1 und 2.
+
+(7) Für den Verlust von Daten haftet der Anbieter nach Maßgabe der vorstehenden
+    Absätze nur in Höhe des Aufwands, der bei ordnungsgemäßer und regelmäßiger
+    Datensicherung durch den Kunden zur Wiederherstellung erforderlich gewesen
+    wäre.
+
+(8) Die vorstehenden Haftungsbeschränkungen gelten auch zugunsten der
+    gesetzlichen Vertreter, Mitarbeitenden und Erfüllungsgehilfen des Anbieters.
+
+(9) Eine Änderung der Beweislast zum Nachteil des Kunden ist mit den
+    vorstehenden Regelungen nicht verbunden.
+
+(10) Die Haftung nach Artikel 82 DSGVO bleibt von den vorstehenden Regelungen
+     unberührt.
+
+
+§ 17 VERTRAULICHKEIT
+
+(1) Die Vertragsparteien verpflichten sich, alle ihnen im Rahmen des
+    Vertragsverhältnisses bekannt werdenden vertraulichen Informationen der
+    jeweils anderen Partei geheim zu halten und nur zur Durchführung dieses
+    Vertrages zu verwenden.
+
+(2) Vertrauliche Informationen sind insbesondere die Daten des Kunden,
+    Preiskonditionen, technische Informationen über die Anwendung sowie
+    sämtliche als vertraulich gekennzeichneten Informationen.
+
+(3) Die Verpflichtung gilt nicht für Informationen, die öffentlich bekannt sind,
+    ohne Verletzung dieser Pflicht öffentlich bekannt werden, der empfangenden
+    Partei bereits bekannt waren oder aufgrund gesetzlicher Verpflichtung oder
+    behördlicher Anordnung offenzulegen sind.
+
+(4) Die Verpflichtung besteht für die Dauer von drei Jahren nach Beendigung des
+    Vertrages fort. Datenschutzrechtliche Verpflichtungen bleiben unbefristet
+    bestehen.
+
+(5) Der Anbieter darf den Kunden nur mit dessen vorheriger Zustimmung in
+    Textform als Referenzkunden benennen.
+
+
+§ 18 DATENSCHUTZ
+
+(1) Soweit der Anbieter im Auftrag des Kunden personenbezogene Daten verarbeitet,
+    schließen die Parteien den als Anlage beigefügten
+    Auftragsverarbeitungsvertrag nach Artikel 28 DSGVO. Dieser ist wesentlicher
+    Bestandteil des Vertrages.
+
+(2) Soweit der Anbieter personenbezogene Daten zu eigenen Zwecken verarbeitet —
+    insbesondere im Rahmen der Vertragsanbahnung, der Vertragsabwicklung und des
+    Betriebs der Nutzerkonten — ist er selbst Verantwortlicher. Einzelheiten
+    regelt die Datenschutzerklärung des Anbieters.
+
+(3) Der Kunde ist verpflichtet, die betroffenen Personen in seinem
+    Verantwortungsbereich über die Verarbeitung durch den Anbieter zu
+    informieren.
+
+
+§ 19 ÄNDERUNGEN DIESER NUTZUNGSBEDINGUNGEN
+
+(1) Der Anbieter ist berechtigt, diese Nutzungsbedingungen mit Wirkung für die
+    Zukunft zu ändern, soweit die Änderung erforderlich ist, um sie an eine
+    geänderte Rechtslage, an eine geänderte höchstrichterliche Rechtsprechung
+    oder an eine Änderung des Funktionsumfangs anzupassen, und der Kunde
+    hierdurch nicht unangemessen benachteiligt wird.
+
+(2) Änderungen teilt der Anbieter dem Kunden mindestens sechs Wochen vor ihrem
+    Wirksamwerden in Textform mit. Die Mitteilung enthält die geänderten
+    Bestimmungen, den Zeitpunkt des Wirksamwerdens sowie einen Hinweis auf das
+    Widerspruchsrecht und dessen Folgen.
+
+(3) Widerspricht der Kunde nicht innerhalb von sechs Wochen nach Zugang der
+    Mitteilung in Textform, gelten die Änderungen als angenommen. Widerspricht
+    er fristgerecht, wird der Vertrag zu den bisherigen Bedingungen fortgesetzt;
+    der Anbieter ist in diesem Fall berechtigt, den Vertrag zum Wirksamwerden
+    der Änderung, frühestens jedoch zum Ende einer laufenden Jahreslaufzeit, zu
+    kündigen.
+
+(4) Änderungen, die den Vertragsgegenstand oder die Vergütung betreffen, können
+    nicht nach dieser Vorschrift vorgenommen werden; hierfür gilt § 12
+    beziehungsweise eine gesonderte Vereinbarung.
+
+
+§ 20 SCHLUSSBESTIMMUNGEN
+
+(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des
+    UN-Kaufrechts.
+
+(2) Für Kunden mit Sitz in der Schweiz gilt: Die Wahl deutschen Rechts lässt
+    zwingende Bestimmungen des schweizerischen Rechts unberührt, soweit diese
+    nach schweizerischem internationalen Privatrecht Anwendung finden.
+    Datenschutzrechtlich gelten ergänzend die Bestimmungen des
+    Auftragsverarbeitungsvertrages zum schweizerischen Datenschutzgesetz.
+
+(3) Ausschließlicher Gerichtsstand für alle Streitigkeiten aus und im
+    Zusammenhang mit diesem Vertrag ist Ehingen,
+    sofern der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder
+    öffentlich-rechtliches Sondervermögen ist oder keinen allgemeinen
+    Gerichtsstand in Deutschland hat. Der Anbieter ist außerdem berechtigt, am
+    allgemeinen Gerichtsstand des Kunden zu klagen.
+
+(4) Der Kunde darf Rechte und Pflichten aus diesem Vertrag nur mit vorheriger
+    Zustimmung des Anbieters in Textform auf Dritte übertragen. Der Anbieter ist
+    berechtigt, den Vertrag im Rahmen einer Gesamtrechtsnachfolge oder einer
+    Veräußerung des Geschäftsbereichs zu übertragen; der Kunde kann in diesem
+    Fall innerhalb von vier Wochen nach Mitteilung in Textform kündigen.
+
+(5) Änderungen und Ergänzungen dieses Vertrages bedürfen der Textform. Dies gilt
+    auch für die Änderung dieses Textformerfordernisses.
+
+(6) Sollte eine Bestimmung dieses Vertrages unwirksam sein oder werden, bleibt
+    die Wirksamkeit der übrigen Bestimmungen unberührt.
+
+
+===============================================================================
+ENDE DER NUTZUNGSBEDINGUNGEN
+===============================================================================

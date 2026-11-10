@@ -1,0 +1,1065 @@
+===============================================================================
+VERTRAG ÜBER DIE AUFTRAGSVERARBEITUNG
+nach Artikel 28 der Verordnung (EU) 2016/679 (DSGVO)
+für die Nutzung von smiit Analytics
+===============================================================================
+
+Fassung 1.0 — Stand: 01.11.2026
+
+VERTRAGSPARTEIEN
+
+Dieser Vertrag gilt zwischen
+
+  dem Kunden, der den Hauptvertrag über die Nutzung von smiit Analytics
+  geschlossen hat und dem der betreffende Arbeitsbereich zugeordnet ist —
+  das ist das Unternehmen, das bei der Einrichtung des Arbeitsbereichs als
+  Vertragspartner angegeben wurde; die zugehörigen Angaben sind in der
+  Anwendung unter den Einstellungen des Arbeitsbereichs hinterlegt und
+  abrufbar
+
+  — nachfolgend "Verantwortlicher" oder "Kunde" —
+
+und
+
+  smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Deutschland
+  Registergericht: Amtsgericht Ulm, HRB 741965
+  Vertreten durch: Sebastian Grab, Noah Neßlauer
+  USt-IdNr.: DE357299821
+
+  — nachfolgend "Auftragsverarbeiter" oder "Anbieter" —
+
+  — gemeinsam die "Parteien" —
+
+Einer individuellen Ausfertigung oder einer handschriftlichen Unterzeichnung
+bedarf dieser Vertrag nicht; zum Zustandekommen siehe § 1 Absatz 1 bis 3.
+
+
+PRÄAMBEL
+
+Der Auftragsverarbeiter erbringt für den Verantwortlichen Leistungen nach
+Maßgabe der Nutzungsbedingungen für smiit Analytics (Hauptvertrag). Dabei
+verarbeitet er personenbezogene Daten im Auftrag des Verantwortlichen. Dieser
+Vertrag konkretisiert die datenschutzrechtlichen Rechte und Pflichten der
+Parteien nach Artikel 28 DSGVO. Er gilt für alle Tätigkeiten, die mit dem
+Hauptvertrag zusammenhängen und bei denen Beschäftigte des
+Auftragsverarbeiters oder von ihm beauftragte Dritte mit personenbezogenen
+Daten des Verantwortlichen in Berührung kommen.
+
+Der Auftragsverarbeiter erbringt seine Leistung als standardisierten Dienst
+für eine Vielzahl von Kunden unter einheitlichen technischen und
+organisatorischen Bedingungen. Dieser Vertrag ist dementsprechend als
+einheitliches Dokument ausgestaltet und gilt inhaltsgleich für alle Kunden.
+Artikel 28 Absatz 9 DSGVO lässt den Abschluss in einem elektronischen Format
+ausdrücklich zu; eine handschriftliche Unterzeichnung ist nicht erforderlich.
+
+
+§ 1 ZUSTANDEKOMMEN, GEGENSTAND, DAUER UND ANWENDUNGSBEREICH
+
+(1) Dieser Vertrag kommt dadurch zustande, dass der Verantwortliche ihn im
+    Rahmen der Einrichtung seines Arbeitsbereichs oder zu einem späteren
+    Zeitpunkt in der Anwendung ausdrücklich annimmt. Die Annahme erfolgt in
+    elektronischer Form im Sinne des Artikels 28 Absatz 9 Satz 2 DSGVO. Einer
+    handschriftlichen Unterzeichnung bedarf es nicht.
+
+(2) Die Annahme erklärt eine Person, die zur Vertretung des Verantwortlichen
+    berechtigt ist. Mit der Annahme versichert die handelnde Person, zum
+    Abschluss dieses Vertrages für den Verantwortlichen bevollmächtigt zu
+    sein.
+
+(3) Der Auftragsverarbeiter dokumentiert für jeden Verantwortlichen den
+    Zeitpunkt der Annahme und die angenommene Fassung dieses Vertrages. Jede
+    Fassung wird unter einer dauerhaft abrufbaren Adresse bereitgehalten; die
+    jeweils aktuelle Fassung ist unter https://www.smiit-analytics.com/de/dpa/
+    einsehbar. Der Verantwortliche kann die von ihm angenommene Fassung
+    jederzeit in der Anwendung abrufen und als Datei speichern.
+
+(4) Gegenstand, Art und Zweck der Verarbeitung, die Art der personenbezogenen
+    Daten sowie die Kategorien betroffener Personen ergeben sich aus Anlage 1
+    zu diesem Vertrag.
+
+(5) Die Dauer dieses Vertrages entspricht der Laufzeit des Hauptvertrages. Die
+    Pflichten aus § 12 (Löschung und Rückgabe) sowie aus § 4 Absatz 1
+    (Vertraulichkeit) bestehen über das Vertragsende hinaus fort.
+
+(6) Dieser Vertrag gilt für Verarbeitungen, die dem räumlichen und sachlichen
+    Anwendungsbereich der DSGVO unterliegen. Für Verarbeitungen, die dem
+    schweizerischen Bundesgesetz über den Datenschutz (revDSG) unterliegen,
+    gilt ergänzend § 15.
+
+(7) Soweit der Anbieter personenbezogene Daten zu eigenen Zwecken verarbeitet,
+    ist er insoweit selbst Verantwortlicher; dieser Vertrag findet darauf
+    keine Anwendung. Dies betrifft
+    a) Bestandsdaten des Kunden zur Vertragsabwicklung und Abrechnung sowie
+    b) die Konto- und Nutzungsdaten der Nutzer der Anwendung (insbesondere
+       Name, E-Mail-Adresse, Anmeldedaten sowie Art und Zeitpunkt der
+       genutzten Funktionen), die der Anbieter zum Betrieb der Nutzerkonten,
+       für Nutzungsstatistiken und zur Verbesserung der Anwendung verarbeitet.
+    Ein Verkauf dieser Daten oder eine sonstige Weitergabe an Dritte findet
+    nicht statt. Einzelheiten regelt die Datenschutzerklärung des Anbieters.
+
+
+§ 2 WEISUNGSRECHT DES VERANTWORTLICHEN
+
+(1) Der Auftragsverarbeiter verarbeitet personenbezogene Daten ausschließlich
+    auf dokumentierte Weisung des Verantwortlichen. Dies gilt auch für die
+    Übermittlung personenbezogener Daten an ein Drittland oder eine
+    internationale Organisation, sofern er nicht durch das Recht der Union oder
+    der Mitgliedstaaten, dem er unterliegt, hierzu verpflichtet ist. In einem
+    solchen Fall teilt der Auftragsverarbeiter dem Verantwortlichen diese
+    rechtlichen Anforderungen vor der Verarbeitung mit, sofern das betreffende
+    Recht eine solche Mitteilung nicht wegen eines wichtigen öffentlichen
+    Interesses verbietet.
+
+(2) Die Weisungen sind abschließend in diesem Vertrag einschließlich seiner
+    Anlagen und im Hauptvertrag festgelegt. Einzelweisungen, die hiervon
+    abweichen, bedürfen der Textform.
+
+(3) Weisungen erteilt der Verantwortliche durch die von ihm benannten
+    weisungsberechtigten Personen. Der Auftragsverarbeiter benennt einen
+    Ansprechpartner für Weisungen. Die Benennung erfolgt in Anlage 4.
+
+(4) Die Konfiguration der Anwendung durch den Verantwortlichen innerhalb der
+    dafür vorgesehenen Funktionen gilt als Weisung. Dies betrifft insbesondere
+    die Erteilung und den Widerruf der bexio-Autorisierung, die Vergabe von
+    Rollen und Berechtigungen, das Anlegen von Freigaben sowie die Aktivierung
+    oder Deaktivierung der KI-gestützten Analysefunktion.
+
+(5) Ist der Auftragsverarbeiter der Auffassung, dass eine Weisung gegen
+    datenschutzrechtliche Vorschriften verstößt, hat er den Verantwortlichen
+    unverzüglich darauf hinzuweisen. Er ist berechtigt, die Durchführung der
+    betreffenden Weisung auszusetzen, bis der Verantwortliche sie bestätigt
+    oder ändert.
+
+
+§ 3 VERANTWORTLICHKEIT DES VERANTWORTLICHEN
+
+(1) Der Verantwortliche ist für die Rechtmäßigkeit der Verarbeitung sowie für
+    die Wahrung der Rechte der betroffenen Personen allein verantwortlich.
+
+(2) Der Verantwortliche ist insbesondere dafür verantwortlich,
+
+    a) dass für die Verarbeitung eine Rechtsgrundlage besteht, einschließlich
+       einer Rechtsgrundlage nach Artikel 9 Absatz 2 DSGVO, soweit besondere
+       Kategorien personenbezogener Daten verarbeitet werden;
+    b) die betroffenen Personen nach den Artikeln 13 und 14 DSGVO zu
+       informieren;
+    c) zu prüfen, ob eine Datenschutz-Folgenabschätzung nach Artikel 35 DSGVO
+       durchzuführen ist, und diese gegebenenfalls durchzuführen;
+    d) eine bestehende Arbeitnehmervertretung zu beteiligen, soweit dies nach
+       nationalem Recht erforderlich ist, insbesondere bei der Auswertung von
+       Arbeitszeit- und Leistungsdaten (in Deutschland namentlich nach
+       § 87 Absatz 1 Nummer 6 BetrVG).
+
+(3) Die Autorisierung der bexio-Schnittstelle erfolgt einheitlich für den
+    gesamten in Anlage 1 Ziffer 5.2 beschriebenen Umfang. Eine Auswahl
+    einzelner Datenbereiche ist nicht vorgesehen: Der Verantwortliche kann die
+    Anbindung nur insgesamt erteilen oder insgesamt unterlassen. Ob innerhalb
+    dieses Umfangs einzelne Datenbereiche tatsächlich abgerufen werden können,
+    richtet sich zusätzlich danach, welche Module und Berechtigungen im
+    bexio-Konto des Verantwortlichen bestehen; nicht verfügbare Bereiche bleiben
+    ungenutzt.
+
+(4) Der Verantwortliche ist ausdrücklich darauf hingewiesen worden, dass die
+    Anbindung damit auch die Personaldaten nach Anlage 1 Ziffer 5.2
+    Buchstabe h umfasst, einschließlich der Abwesenheitsgründe, die
+    Rückschlüsse auf Gesundheitsdaten im Sinne des Artikels 9 Absatz 1 DSGVO
+    zulassen können. Will der Verantwortliche diese Verarbeitung vermeiden,
+    kann er die Anbindung nicht erteilen und die Anwendung nicht nutzen.
+
+(5) Der Verantwortliche erteilt mit der Autorisierung die Weisung, die Daten im
+    gesamten Umfang nach Anlage 1 Ziffer 5.2 zu verarbeiten. Er hat vor
+    Erteilung zu prüfen, ob hierfür für alle betroffenen Datenkategorien eine
+    Rechtsgrundlage besteht.
+
+
+§ 4 ALLGEMEINE PFLICHTEN DES AUFTRAGSVERARBEITERS
+
+(1) Der Auftragsverarbeiter gewährleistet, dass sich die zur Verarbeitung der
+    personenbezogenen Daten befugten Personen zur Vertraulichkeit verpflichtet
+    haben oder einer angemessenen gesetzlichen Verschwiegenheitspflicht
+    unterliegen. Die Verpflichtung besteht auch nach Beendigung der Tätigkeit
+    fort.
+
+(2) Der Auftragsverarbeiter setzt zur Verarbeitung nur Personen ein, die zuvor
+    mit den einschlägigen datenschutzrechtlichen Bestimmungen vertraut gemacht
+    wurden.
+
+(3) Der Auftragsverarbeiter verarbeitet die personenbezogenen Daten
+    ausschließlich innerhalb des Anwendungsbereichs dieses Vertrages und
+    ausschließlich zu den in Anlage 1 genannten Zwecken. Eine Verarbeitung zu
+    eigenen Zwecken, insbesondere zum Training von Modellen der künstlichen
+    Intelligenz, findet nicht statt.
+
+(4) Der Auftragsverarbeiter setzt die technischen und organisatorischen
+    Maßnahmen nach § 5 um und hält sie während der Vertragslaufzeit aufrecht.
+
+(5) Der Auftragsverarbeiter unterrichtet den Verantwortlichen unverzüglich,
+    wenn eine Aufsichtsbehörde beim Auftragsverarbeiter Maßnahmen ergreift, die
+    die Verarbeitung im Auftrag betreffen.
+
+(6) Der Auftragsverarbeiter hat keinen Datenschutzbeauftragten im Sinne der
+    Artikel 37 ff. DSGVO bestellt. Ansprechpartner für Datenschutzfragen ist
+    die in Anlage 4 Ziffer 3 benannte Person. Der Auftragsverarbeiter teilt dem
+    Verantwortlichen eine spätere Bestellung eines Datenschutzbeauftragten
+    unter Angabe von Namen und Kontaktdaten mit.
+
+(7) Der Auftragsverarbeiter führt ein Verzeichnis aller Kategorien von im
+    Auftrag durchgeführten Verarbeitungstätigkeiten nach Artikel 30 Absatz 2
+    DSGVO.
+
+
+§ 5 TECHNISCHE UND ORGANISATORISCHE MASSNAHMEN
+
+(1) Der Auftragsverarbeiter trifft die nach Artikel 32 DSGVO erforderlichen
+    technischen und organisatorischen Maßnahmen. Der zum Zeitpunkt des
+    Vertragsschlusses umgesetzte Stand ergibt sich aus Anlage 2.
+
+(2) Die Maßnahmen unterliegen dem technischen Fortschritt. Der
+    Auftragsverarbeiter ist berechtigt, sie anzupassen, sofern das nach
+    Artikel 32 DSGVO geschuldete Schutzniveau nicht unterschritten wird.
+    Wesentliche Änderungen sind zu dokumentieren.
+
+(3) Der Auftragsverarbeiter verfügt über ein Verfahren zur regelmäßigen
+    Überprüfung, Bewertung und Evaluierung der Wirksamkeit der Maßnahmen
+    (Artikel 32 Absatz 1 Buchstabe d DSGVO). Die Überprüfung erfolgt
+    anlassbezogen sowie bei wesentlichen Änderungen der Verarbeitung oder der
+    eingesetzten Technik.
+
+
+§ 6 UNTERAUFTRAGSVERARBEITER
+
+(1) Der Verantwortliche erteilt dem Auftragsverarbeiter die allgemeine
+    Genehmigung, weitere Auftragsverarbeiter (Unterauftragsverarbeiter)
+    hinzuzuziehen. Die zum Zeitpunkt des Vertragsschlusses eingesetzten
+    Unterauftragsverarbeiter ergeben sich aus Anlage 3 und gelten als
+    genehmigt.
+
+(2) Der Auftragsverarbeiter informiert den Verantwortlichen mindestens
+    30 Kalendertage vor der beabsichtigten Beauftragung eines neuen
+    Unterauftragsverarbeiters oder der Ersetzung eines bestehenden in Textform
+    unter Angabe von Name, Anschrift, Leistung und Verarbeitungsort.
+
+(3) Der Verantwortliche kann der Änderung innerhalb von 30 Kalendertagen nach
+    Zugang der Information aus wichtigem datenschutzrechtlichem Grund in
+    Textform widersprechen. Der Widerspruch ist zu begründen.
+
+(4) Im Fall eines begründeten Widerspruchs werden die Parteien eine
+    einvernehmliche Lösung suchen. Kommt eine Einigung nicht innerhalb von
+    30 Kalendertagen zustande und kann der Auftragsverarbeiter die Leistung
+    ohne den betreffenden Unterauftragsverarbeiter nicht zu zumutbaren
+    Bedingungen erbringen, ist jede Partei berechtigt, den Hauptvertrag mit
+    einer Frist von einem Monat zum Monatsende zu kündigen. Bereits gezahlte
+    Vergütungen werden zeitanteilig erstattet.
+
+(5) Der Auftragsverarbeiter verpflichtet den Unterauftragsverarbeiter
+    vertraglich auf Datenschutzpflichten, die denen dieses Vertrages
+    entsprechen, insbesondere auf hinreichende Garantien nach Artikel 28
+    Absatz 4 DSGVO.
+
+(6) Der Auftragsverarbeiter haftet gegenüber dem Verantwortlichen dafür, dass
+    der Unterauftragsverarbeiter seine Datenschutzpflichten einhält.
+
+(7) Nicht als Unterauftragsverarbeitung im Sinne dieser Vorschrift gelten
+    Nebenleistungen, die der Auftragsverarbeiter zur Unterstützung seiner
+    Geschäftstätigkeit in Anspruch nimmt und bei denen ein Zugriff auf
+    personenbezogene Daten des Verantwortlichen nicht bestimmungsgemäß erfolgt,
+    etwa Telekommunikationsleistungen, Postdienste, Reinigung oder Wartung.
+    Auch die vom Verantwortlichen selbst eingesetzte Anwendung bexio ist kein
+    Unterauftragsverarbeiter des Auftragsverarbeiters.
+
+
+§ 7 ORT DER VERARBEITUNG, ÜBERMITTLUNGEN IM VERHÄLTNIS ZUR SCHWEIZ UND IN
+    DRITTLÄNDER
+
+(1) Die Verarbeitung findet in Rechenzentren in der Schweiz statt, soweit in
+    Anlage 3 nichts anderes angegeben ist. Für die Schweiz besteht ein
+    Angemessenheitsbeschluss der Europäischen Kommission nach Artikel 45
+    DSGVO; zusätzliche Garantien sind für Verantwortliche mit Sitz in der
+    Europäischen Union oder im Europäischen Wirtschaftsraum daher nicht
+    erforderlich.
+
+(2) Abweichend von Absatz 1 werden die Inhalte der KI-gestützten
+    Analysefunktion (Anlage 1) an den in Anlage 3 genannten
+    Unterauftragsverarbeiter OpenAI Ireland Limited mit Sitz in Irland
+    übermittelt. Dieser lässt sie durch die OpenAI OpCo, LLC in den
+    Vereinigten Staaten von Amerika verarbeiten. Der Verantwortliche weist den
+    Auftragsverarbeiter hiermit an, diese Übermittlung vorzunehmen, soweit die
+    KI-gestützte Analysefunktion in seinem Arbeitsbereich aktiviert ist
+    (§ 2 Absatz 4).
+
+    Grundlage ist das OpenAI Data Processing Addendum in der jeweils
+    geltenden Fassung (derzeit v.010126). Danach verarbeitet OpenAI Ireland
+    Limited Daten, die dem Datenschutzrecht des EWR oder der Schweiz
+    unterliegen, nach Maßgabe dieses Addendums und übermittelt sie an
+    verbundene Unternehmen oder Dritte außerhalb des EWR und der Schweiz auf
+    Grundlage von Verträgen mit den Standardvertragsklauseln nach dem
+    Durchführungsbeschluss (EU) 2021/914 oder eines Angemessenheitsbeschlusses
+    nach Artikel 45 DSGVO (Ziffer 4.1 des Addendums). Eine Zertifizierung
+    unter dem EU-US Data Privacy Framework wird nicht in Anspruch genommen.
+
+    Der Auftragsverarbeiter hat die Übermittlung vor ihrer Aufnahme auf das
+    Schutzniveau im Empfängerland geprüft und dokumentiert und stellt dem
+    Verantwortlichen diese Dokumentation auf Anfrage zur Verfügung. Der
+    Modellanbieter verwendet die übermittelten Inhalte nicht zum Training von
+    Modellen. Die KI-gestützte Analysefunktion ist standardmäßig
+    ausgeschaltet; solange sie ausgeschaltet ist, findet keine Übermittlung an
+    den Modellanbieter statt. Namen und E-Mail-Adressen von Personen werden
+    vor der Übermittlung pseudonymisiert, soweit der Verantwortliche dies nicht
+    nach Anlage 1 Ziffer 9 aufgehoben hat.
+
+(3) Für Verantwortliche mit Sitz in der Schweiz gilt ergänzend und
+    klarstellend:
+
+    a) Die Verarbeitungsumgebung des Auftragsverarbeiters befindet sich in
+       der Schweiz (Anlage 3 Ziffer 1). Der Abruf der Daten aus dem
+       bexio-Konto des Verantwortlichen, ihre Speicherung, die Sicherungskopien
+       und der Versand von Systemnachrichten sind daher keine Bekanntgabe ins
+       Ausland im Sinne des Artikels 16 revDSG.
+
+    b) Die Bekanntgabe an OpenAI Ireland Limited nach Absatz 2 ist zulässig,
+       weil Irland in Anhang 1 DSV als Staat mit angemessenem Datenschutz
+       aufgeführt ist (Artikel 16 Absatz 1 revDSG). Für die Weiterübermittlung
+       in die USA gilt Absatz 2 Unterabsatz 2; das OpenAI Data Processing
+       Addendum erfasst ausdrücklich auch Daten, die dem schweizerischen
+       Datenschutzrecht unterliegen.
+
+    c) Soweit Microsoft im Rahmen der in Anlage 3 Ziffer 1 genannten Dienste
+       Azure Front Door oder Azure DevOps Daten außerhalb der Schweiz
+       verarbeitet, gelten die in Anlage 3 Ziffer 1 genannten
+       Übermittlungsmechanismen entsprechend.
+
+    d) Entfällt einer der in Absatz 1, Absatz 2 oder Buchstabe b genannten
+       Angemessenheitsbeschlüsse oder wird er ausgesetzt oder eingeschränkt,
+       informiert der Auftragsverarbeiter den Verantwortlichen unverzüglich und
+       stellt auf einen zulässigen Übermittlungsmechanismus um.
+
+(4) Eine Verlagerung der Verarbeitung in ein Drittland, für das kein
+    Angemessenheitsbeschluss besteht, ist nur zulässig, wenn die
+    Voraussetzungen des Kapitels V der DSGVO erfüllt sind, insbesondere durch
+    geeignete Garantien nach Artikel 46 DSGVO, und im Verhältnis zur Schweiz
+    zusätzlich die Voraussetzungen des Artikels 16 Absatz 2 revDSG. Der
+    Auftragsverarbeiter informiert den Verantwortlichen über eine solche
+    Verlagerung nach Maßgabe des § 6 Absatz 2 und weist den jeweiligen
+    Übermittlungsmechanismus nach.
+
+(5) Der Auftragsverarbeiter dokumentiert für jeden in einem Drittland
+    ansässigen Unterauftragsverarbeiter den Übermittlungsmechanismus in
+    Anlage 3.
+
+
+§ 8 UNTERSTÜTZUNG BEI DEN RECHTEN BETROFFENER PERSONEN
+
+(1) Der Auftragsverarbeiter unterstützt den Verantwortlichen mit geeigneten
+    technischen und organisatorischen Maßnahmen dabei, seiner Pflicht zur
+    Beantwortung von Anträgen betroffener Personen nach Kapitel III der DSGVO
+    nachzukommen.
+
+(2) Wendet sich eine betroffene Person unmittelbar an den Auftragsverarbeiter,
+    leitet dieser das Anliegen unverzüglich an den Verantwortlichen weiter und
+    beantwortet es nicht selbst.
+
+(3) Der Auftragsverarbeiter berichtigt, löscht oder schränkt die Verarbeitung
+    personenbezogener Daten nur auf Weisung des Verantwortlichen ein. Soweit
+    der Verantwortliche dies über die Funktionen der Anwendung selbst vornehmen
+    kann, erfolgt die Unterstützung durch die Bereitstellung dieser Funktionen.
+
+(4) Für Unterstützungsleistungen, die über die Bereitstellung der Funktionen
+    der Anwendung hinausgehen und die nicht auf einem Umstand beruhen, den der
+    Auftragsverarbeiter zu vertreten hat, kann dieser eine angemessene
+    Vergütung nach seinen jeweils gültigen Sätzen verlangen. Er weist den
+    Verantwortlichen vor Erbringung auf die Vergütungspflicht hin.
+
+
+§ 9 MELDUNG VON VERLETZUNGEN DES SCHUTZES PERSONENBEZOGENER DATEN
+
+(1) Der Auftragsverarbeiter meldet dem Verantwortlichen jede ihm bekannt
+    gewordene Verletzung des Schutzes personenbezogener Daten unverzüglich
+    nach Kenntniserlangung (Artikel 33 Absatz 2 DSGVO). Dies gilt auch für
+    Verletzungen bei einem Unterauftragsverarbeiter, sobald dieser sie dem
+    Auftragsverarbeiter gemeldet hat.
+
+(2) Die Meldung erfolgt in Textform an die in Anlage 4 Ziffer 2 bezeichneten
+    Adressen und enthält, soweit verfügbar, die in Artikel 33 Absatz 3
+    DSGVO genannten Angaben. Stehen nicht alle Angaben sofort zur Verfügung,
+    erfolgt eine erste Meldung mit den verfügbaren Informationen; weitere
+    Informationen werden unverzüglich nachgereicht.
+
+(3) Der Auftragsverarbeiter unterstützt den Verantwortlichen bei der Erfüllung
+    seiner Pflichten nach den Artikeln 33 und 34 DSGVO und trifft unverzüglich
+    die erforderlichen Maßnahmen zur Sicherung der Daten und zur Minderung
+    nachteiliger Folgen.
+
+(4) Meldungen an die Aufsichtsbehörde oder an betroffene Personen nimmt
+    ausschließlich der Verantwortliche vor.
+
+
+§ 10 UNTERSTÜTZUNG BEI DATENSCHUTZ-FOLGENABSCHÄTZUNG UND VORABKONSULTATION
+
+Der Auftragsverarbeiter unterstützt den Verantwortlichen unter
+Berücksichtigung der Art der Verarbeitung und der ihm zur Verfügung stehenden
+Informationen bei einer Datenschutz-Folgenabschätzung nach Artikel 35 DSGVO
+sowie bei einer Vorabkonsultation nach Artikel 36 DSGVO. § 8 Absatz 4 gilt
+entsprechend.
+
+
+§ 11 NACHWEISE UND KONTROLLRECHTE
+
+(1) Der Auftragsverarbeiter stellt dem Verantwortlichen alle erforderlichen
+    Informationen zum Nachweis der Einhaltung der Pflichten aus Artikel 28
+    DSGVO zur Verfügung.
+
+(2) Der Nachweis wird durch diesen Vertrag nebst Anlagen geführt, insbesondere
+    durch Anlage 2 (technische und organisatorische Maßnahmen) und Anlage 3
+    (Unterauftragsverarbeiter). Diese Unterlagen werden dem Verantwortlichen
+    mit Vertragsschluss zur Verfügung gestellt; einer gesonderten Anforderung
+    bedarf es nicht.
+
+    Darüber hinausgehende Informationen stellt der Auftragsverarbeiter auf
+    Anfrage in Textform zur Verfügung, soweit sie nach Artikel 28 Absatz 3
+    Buchstabe h DSGVO zum Nachweis erforderlich sind. Eine Verpflichtung,
+    Zertifizierungen, Testate oder Prüfberichte einzuholen oder
+    aufrechtzuerhalten, besteht nicht; eine Zertifizierung nach Artikel 42
+    DSGVO ist freiwillig (Artikel 42 Absatz 3 DSGVO).
+
+(3) Genügen die Nachweise nach Absatz 2 im Einzelfall nicht, kann der
+    Verantwortliche oder ein von ihm beauftragter, zur Verschwiegenheit
+    verpflichteter Prüfer, der kein Wettbewerber des Auftragsverarbeiters sein
+    darf, eine Überprüfung durchführen.
+
+    Die Überprüfung erfolgt in FERNZUGRIFF (Remote-Audit), namentlich durch
+    Videokonferenz, Bildschirmübertragung, Vorführung von Konfigurationen und
+    Berechtigungen sowie Einsicht in Unterlagen. Der Auftragsverarbeiter
+    erbringt die Verarbeitung vollständig in einer Cloud-Umgebung und betreibt
+    kein eigenes Rechenzentrum und keine eigenen Serverräume; eine
+    Inaugenscheinnahme von Verarbeitungsanlagen an seinem Geschäftssitz ist
+    daher nicht möglich und für die Prüfung der Maßnahmen nach Anlage 2 nicht
+    erforderlich.
+
+    Eine Überprüfung in den Geschäftsräumen des Auftragsverarbeiters findet
+    nur statt, soweit sich der Prüfungsgegenstand im Fernzugriff nachweislich
+    nicht klären lässt, und beschränkt auf diesen Gegenstand.
+
+    Die physische Infrastruktur wird vom Unterauftragsverarbeiter nach Anlage 3
+    Ziffer 1 betrieben. Ein Zutritt zu dessen Rechenzentren kann vom
+    Auftragsverarbeiter nicht gewährt werden; der Nachweis der dortigen
+    Maßnahmen erfolgt über die Zertifizierungen dieses
+    Unterauftragsverarbeiters.
+
+    Jede Überprüfung ist mit einer Vorankündigungsfrist von mindestens
+    14 Kalendertagen während der üblichen Geschäftszeiten und ohne Störung des
+    Betriebsablaufs durchzuführen und auf höchstens eine Überprüfung je
+    Kalenderjahr beschränkt. Bei einer festgestellten Verletzung des Schutzes
+    personenbezogener Daten entfällt die Beschränkung auf eine Überprüfung je
+    Kalenderjahr.
+
+(4) Der Auftragsverarbeiter kann für den Aufwand einer Überprüfung nach
+    Absatz 3 eine angemessene Vergütung verlangen, sofern die Überprüfung nicht
+    durch einen vom Auftragsverarbeiter zu vertretenden Umstand veranlasst ist.
+
+(5) Die Kontrollrechte der zuständigen Aufsichtsbehörden bleiben unberührt.
+
+
+§ 12 LÖSCHUNG UND RÜCKGABE
+
+(1) Nach Beendigung des Hauptvertrages hält der Auftragsverarbeiter die
+    personenbezogenen Daten für einen Zeitraum von 30 Kalendertagen zum Zweck
+    des Exports durch den Verantwortlichen vor.
+
+(2) Nach Ablauf der Frist nach Absatz 1 löscht der Auftragsverarbeiter
+    sämtliche personenbezogenen Daten des Verantwortlichen. Bestehende
+    Sicherungskopien werden im Rahmen des regulären Sicherungszyklus
+    überschrieben; bis dahin sind die Daten für eine Verarbeitung gesperrt. Der
+    reguläre Sicherungszyklus beträgt 35 Tage.
+
+(3) Der Verantwortliche kann bis zum Ablauf der Frist nach Absatz 1 in Textform
+    die Rückgabe der Daten in einem strukturierten, gängigen und
+    maschinenlesbaren Format verlangen.
+
+(4) Dokumentationen, die dem Nachweis der auftrags- und ordnungsgemäßen
+    Datenverarbeitung dienen, sowie Daten, die gesetzlichen
+    Aufbewahrungspflichten unterliegen, darf der Auftragsverarbeiter über das
+    Vertragsende hinaus entsprechend den jeweiligen Aufbewahrungsfristen
+    aufbewahren. Diese Daten werden für die Dauer der Aufbewahrung in der
+    Verarbeitung eingeschränkt.
+
+(5) Der Auftragsverarbeiter bestätigt die Löschung auf Verlangen in Textform.
+
+(6) Während der Laufzeit des Hauptvertrages gilt:
+
+    a) Löscht der Verantwortliche in der Anwendung einen Datensatz (eine
+       angebundene bexio-Firma) oder seinen gesamten Arbeitsbereich, löscht
+       der Auftragsverarbeiter die zugehörigen personenbezogenen Daten
+       innerhalb von vier Stunden automatisiert. Die Löschung gilt als
+       Weisung im Sinne des § 2 Absatz 4.
+    b) Läuft die bexio-Autorisierung ab, schlägt sie fehl oder wird sie
+       widerrufen, unterbleibt lediglich der weitere Datenabruf. Die bereits
+       gespeicherten Daten bleiben bis zu ihrer Löschung nach Buchstabe a
+       oder nach Absatz 2 erhalten.
+    c) Für Sicherungskopien gilt Absatz 2 Satz 2 entsprechend.
+
+
+§ 13 WEITERE VERPFLICHTUNGEN
+
+(1) Der Auftragsverarbeiter wird den Verantwortlichen unverzüglich informieren,
+    wenn ihm Umstände bekannt werden, die die ordnungsgemäße Erfüllung dieses
+    Vertrages gefährden.
+
+(2) Der Auftragsverarbeiter gewährleistet die Trennung der Daten
+    unterschiedlicher Verantwortlicher (Mandantentrennung) durch die in
+    Anlage 2 beschriebenen Maßnahmen.
+
+
+§ 14 HAFTUNG
+
+(1) Für die Haftung der Parteien im Außenverhältnis gilt Artikel 82 DSGVO.
+
+(2) Im Innenverhältnis gilt die Haftungsregelung des Hauptvertrages, soweit
+    Artikel 82 DSGVO dem nicht entgegensteht.
+
+(3) Der Auftragsverarbeiter haftet nicht für Schäden, die darauf beruhen, dass
+    der Verantwortliche seinen Pflichten aus § 3 nicht nachgekommen ist.
+
+
+§ 15 ERGÄNZENDE BESTIMMUNGEN FÜR DIE SCHWEIZ
+
+(1) Soweit die Verarbeitung dem schweizerischen Bundesgesetz über den
+    Datenschutz vom 25. September 2020 (revDSG) unterliegt, gelten die
+    Bestimmungen dieses Vertrages mit folgenden Maßgaben entsprechend:
+
+    a) Der Begriff "Verantwortlicher" entspricht dem Begriff
+       "Verantwortlicher" nach Artikel 5 Buchstabe j revDSG, der Begriff
+       "Auftragsverarbeiter" dem Begriff "Auftragsbearbeiter" nach Artikel 5
+       Buchstabe k revDSG.
+    b) Der Begriff "personenbezogene Daten" umfasst auch Personendaten im Sinne
+       des Artikels 5 Buchstabe a revDSG, einschließlich Daten juristischer
+       Personen, soweit das revDSG diese schützt.
+    c) Der Begriff "besondere Kategorien personenbezogener Daten" umfasst auch
+       besonders schützenswerte Personendaten im Sinne des Artikels 5
+       Buchstabe c revDSG.
+
+(2) Die Auftragsbearbeitung erfolgt nach Artikel 9 revDSG. Der
+    Auftragsverarbeiter bearbeitet die Personendaten nur so, wie der
+    Verantwortliche es selbst tun dürfte.
+
+(3) Der Beizug von Unterauftragsbearbeitern erfolgt nach § 6 dieses Vertrages;
+    die dort geregelte allgemeine Genehmigung gilt als vorgängige Genehmigung
+    im Sinne des Artikels 9 Absatz 3 revDSG.
+
+(4) Meldungen von Verletzungen der Datensicherheit an den Eidgenössischen
+    Datenschutz- und Öffentlichkeitsbeauftragten nach Artikel 24 revDSG nimmt
+    der Verantwortliche vor. § 9 gilt entsprechend mit der Maßgabe, dass der
+    Auftragsverarbeiter den Verantwortlichen so rechtzeitig informiert, dass
+    dieser seine Meldepflicht erfüllen kann.
+
+(5) Eine Bekanntgabe von Personendaten ins Ausland erfolgt nur unter den
+    Voraussetzungen der Artikel 16 und 17 revDSG. Für das Verhältnis zwischen
+    der Schweiz und der Verarbeitungsumgebung des Auftragsverarbeiters gilt
+    § 7 Absatz 3: Da die Verarbeitungsumgebung in der Schweiz liegt, findet
+    insoweit keine Bekanntgabe ins Ausland statt. Für die Bekanntgabe an den
+    Modellanbieter in den USA gilt § 7 Absatz 3 Buchstabe b, für Bekanntgaben
+    in andere Staaten § 7 Absatz 3 Buchstabe c und Absatz 4.
+
+
+§ 16 SCHLUSSBESTIMMUNGEN
+
+(1) Dieser Vertrag geht bei Widersprüchen in datenschutzrechtlichen Fragen dem
+    Hauptvertrag vor.
+
+(2) Änderungen und Ergänzungen dieses Vertrages bedürfen der Textform. Dies
+    gilt auch für die Änderung dieses Textformerfordernisses. Die Anpassung der
+    Anlagen 2 und 3 nach Maßgabe der §§ 5 Absatz 2 und 6 Absatz 2 bleibt
+    hiervon unberührt.
+
+(3) Sollte eine Bestimmung dieses Vertrages unwirksam sein oder werden, bleibt
+    die Wirksamkeit der übrigen Bestimmungen unberührt. Die Parteien werden die
+    unwirksame Bestimmung durch eine wirksame ersetzen, die dem
+    wirtschaftlichen Zweck am nächsten kommt.
+
+(4) Es gilt das Recht der Bundesrepublik Deutschland. Zwingende Bestimmungen
+    des revDSG bleiben unberührt.
+
+(5) Dieser Vertrag gilt inhaltsgleich für alle Kunden des
+    Auftragsverarbeiters. Haben die Parteien im Einzelfall eine abweichende
+    Vereinbarung zur Auftragsverarbeitung in Textform getroffen, geht diese
+    den Bestimmungen dieses Vertrages vor.
+
+(6) Der Auftragsverarbeiter kann diesen Vertrag ändern, soweit die Änderung
+    erforderlich ist, um ihn an eine geänderte Rechtslage, an Vorgaben oder
+    Entscheidungen einer Aufsichtsbehörde oder an eine Änderung des
+    Funktionsumfangs der Anwendung anzupassen, und der Verantwortliche
+    hierdurch nicht unangemessen benachteiligt wird. Für das Verfahren gilt
+    die Änderungsregelung des Hauptvertrages entsprechend. Die Anpassung der
+    Anlagen 2 und 3 nach Maßgabe der §§ 5 Absatz 2 und 6 Absatz 2 richtet sich
+    ausschließlich nach den dort genannten Vorschriften.
+
+
+
+
+===============================================================================
+ANLAGE 1 — GEGENSTAND, ART UND ZWECK DER VERARBEITUNG
+===============================================================================
+
+1. GEGENSTAND DER VERARBEITUNG
+
+Bereitstellung und Betrieb der Software-as-a-Service-Anwendung smiit Analytics
+zur betriebswirtschaftlichen Auswertung von Daten, die der Verantwortliche aus
+seinem bexio-Konto freigibt.
+
+
+2. ART DER VERARBEITUNG
+
+  - Abruf der freigegebenen Daten über die bexio-Schnittstelle (nur lesend)
+  - Speicherung in einer mandantengetrennten Datenhaltung
+  - Strukturierung, Aufbereitung und Verknüpfung zu einem Auswertungsmodell
+  - Abfrage und Darstellung in Berichten, Dashboards und Exporten
+  - Auswertung über eine KI-gestützte Analysefunktion, sofern vom
+    Verantwortlichen aktiviert
+  - Protokollierung von Zugriffen und sicherheitsrelevanten Ereignissen
+  - Löschung nach Maßgabe von § 12 dieses Vertrages
+
+
+3. ZWECK DER VERARBEITUNG
+
+Erbringung der im Hauptvertrag vereinbarten Leistungen, insbesondere die
+Bereitstellung betriebswirtschaftlicher Auswertungen für den Verantwortlichen.
+Die Daten aus der bexio-Anbindung sowie alle Inhalte, die der Verantwortliche
+und seine Nutzer in der Anwendung erfassen, verarbeitet der
+Auftragsverarbeiter nicht zu eigenen Zwecken. Für die Konto- und
+Nutzungsdaten der Nutzer gilt § 1 Absatz 7.
+
+
+4. KATEGORIEN BETROFFENER PERSONEN
+
+  a) Nutzer der Anwendung (Beschäftigte und Beauftragte des Verantwortlichen)
+  b) Beschäftigte des Verantwortlichen, deren Daten aus bexio ausgewertet
+     werden
+  c) Kunden des Verantwortlichen sowie deren Ansprechpartner
+  d) Lieferanten des Verantwortlichen sowie deren Ansprechpartner
+  e) sonstige in bexio erfasste Geschäftskontakte des Verantwortlichen
+
+
+5. ARTEN DER PERSONENBEZOGENEN DATEN
+
+5.1 Daten der Nutzer der Anwendung
+
+  - Inhalte von Anfragen an die KI-gestützte Analysefunktion
+  - Protokolle über Zugriffe auf und Änderungen an Kundendaten
+
+Die Konto- und Nutzungsdaten der Nutzer (Name, E-Mail-Adresse, Passwort als
+Hashwert, Rolle, Sprach- und Zeitzoneneinstellung, Angaben zur
+Zwei-Faktor-Authentifizierung und zu vertrauten Geräten, Anmeldeprotokolle
+sowie Angaben zur Nutzung der Funktionen) verarbeitet der Auftragsverarbeiter
+als eigener Verantwortlicher; sie sind nicht Gegenstand dieses Vertrages
+(§ 1 Absatz 7).
+
+5.2 Daten aus der bexio-Anbindung
+
+Die bexio-Autorisierung wird einheitlich für den gesamten nachfolgend
+beschriebenen Umfang erteilt; eine Auswahl einzelner Datenbereiche durch den
+Verantwortlichen ist nicht vorgesehen (§ 3 Absatz 3). Tatsächlich abgerufen
+werden diejenigen dieser Kategorien, die im bexio-Konto des Verantwortlichen
+nach dessen Modulen und Berechtigungen verfügbar sind.
+
+  a) Kontaktdaten
+     Name, Anrede, Titel, Anschrift, Kommunikationsdaten, Sprache, Land,
+     Zuordnung zu Kontaktgruppen und Branchen
+
+  b) Belegdaten
+     Rechnungen, Angebote, Aufträge, Lieferscheine, Positionen, Zahlungen,
+     Mahnungen, Abonnements sowie die jeweils zugeordneten Personen
+
+  c) Einkaufsdaten
+     Lieferantenrechnungen, Spesen, Zahlungsausgänge, Bestellungen und die
+     jeweils zugeordneten Personen
+
+  d) Buchhaltungsdaten
+     Kontenplan, Journalbuchungen, Steuersätze, Geschäfts- und Kalenderjahre,
+     Mehrwertsteuerperioden
+
+  e) Bankdaten
+     Bankkonten einschließlich IBAN, Zahlungen einschließlich Empfänger- und
+     Absenderangaben
+
+  f) Artikel- und Lagerdaten
+     Artikelstammdaten, Preise, Bestände, Lagerorte
+
+  g) Projekt- und Zeitdaten
+     Projekte, Meilensteine, Arbeitspakete sowie ERFASSTE ARBEITSZEITEN JE
+     PERSON einschließlich Verrechenbarkeit, Tätigkeit und Projektzuordnung
+
+  h) Personaldaten (Bereich "Payroll")
+     Stammdaten der Beschäftigten einschließlich Anschrift, Ferien- und
+     Stundensalden zu Stichtagen sowie ABWESENHEITEN EINSCHLIESSLICH DES IN
+     bexio ERFASSTEN ABWESENHEITSGRUNDES
+
+  i) Sonstige Daten
+     bexio-Benutzer, Firmenprofil, Notizen und Aufgaben aus der
+     Kundenverwaltung (Freitextinhalte), Nachschlagewerte
+
+  j) Vom Verantwortlichen in der Anwendung selbst
+     hinterlegte Daten
+     interne Kostensätze und Verrechnungssätze je Person oder Leistung,
+     Budgets, Sollarbeitszeiten, Kennzahlendefinitionen
+
+
+6. BESONDERE KATEGORIEN PERSONENBEZOGENER DATEN (ARTIKEL 9 DSGVO)
+
+Die Anbindung umfasst den Datenbereich "Payroll" und damit die
+Abwesenheitsgründe nach Ziffer 5.2 Buchstabe h. Diese können — je nachdem, wie
+der Verantwortliche sie in bexio erfasst — Rückschlüsse auf den
+Gesundheitszustand einzelner Beschäftigter zulassen und damit Gesundheitsdaten
+im Sinne des Artikels 9 Absatz 1 DSGVO darstellen.
+
+Da eine Auswahl einzelner Datenbereiche nicht vorgesehen ist (§ 3 Absatz 3),
+lässt sich diese Verarbeitung bei Nutzung der Anwendung nicht abwählen. Sie
+unterbleibt nur dann, wenn der Verantwortliche die bexio-Autorisierung
+insgesamt nicht erteilt oder wenn sein bexio-Konto über den Bereich "Payroll"
+nicht verfügt.
+
+Der Auftragsverarbeiter verarbeitet diese Daten ausschließlich im Rahmen der
+allgemeinen Auswertungsfunktionen; eine gesonderte Auswertung nach
+Gesundheitsmerkmalen findet nicht statt. Für das Vorliegen einer
+Rechtsgrundlage nach Artikel 9 Absatz 2 DSGVO ist der Verantwortliche
+zuständig (§ 3 Absatz 2 Buchstabe a).
+
+
+7. DATEN MIT BEZUG ZU ARBEITSLEISTUNG UND ARBEITSVERHALTEN
+
+Die Datenkategorien nach Ziffer 5.2 Buchstabe g und h sowie Buchstabe j
+ermöglichen Auswertungen zur Arbeitszeit, zur Auslastung und zur
+Verrechenbarkeit einzelner Beschäftigter. Der Verantwortliche ist darauf
+hingewiesen worden, dass hieraus Mitbestimmungsrechte einer
+Arbeitnehmervertretung folgen können (§ 3 Absatz 2 Buchstabe d).
+
+
+8. DAUER DER VERARBEITUNG
+
+Für die Dauer des Hauptvertrages zuzüglich der Fristen nach § 12 dieses
+Vertrages. Innerhalb der Vertragslaufzeit gelten folgende automatisierte
+Löschfristen:
+
+  - Gesprächsverläufe der KI-gestützten Analysefunktion: 90 Tage nach der
+    letzten Aktivität
+  - unveränderte Rohdaten aus der bexio-Schnittstelle (Datenminimierung): nach
+    30 Tagen; die daraus aufbereiteten Auswertungsdaten bleiben für die Dauer
+    der Anbindung erhalten
+  - Protokolle der Synchronisierungsläufe: nach 90 Tagen
+
+
+9. KI-GESTÜTZTE ANALYSEFUNKTION: FREIGABESTUFEN
+
+Die KI-gestützte Analysefunktion ist standardmäßig ausgeschaltet. Nur eine
+Person mit der Rolle "Owner" kann sie einschalten, und zwar nach Bestätigung
+eines Hinweises zu den übermittelten Daten; diese Bestätigung wird mit
+Zeitpunkt, Person und Fassung des Hinweises dokumentiert und gilt als Weisung
+nach § 2 Absatz 4.
+
+In der Grundeinstellung ("Standard") werden Namen und E-Mail-Adressen von
+Personen vor der Übermittlung an den Modellanbieter durch Platzhalter ersetzt,
+und Freitexte werden nicht übermittelt; Firmennamen werden nicht
+pseudonymisiert. Der Verantwortliche kann diese Einschränkungen stufenweise
+aufheben, jeweils mit gesonderter Bestätigung:
+
+  a) "Namen": Namen von Kontakten (Kunden, Lieferanten und deren
+     Ansprechpartner) im Klartext;
+  b) "Namen + Texte": zusätzlich Freitexte (Buchungs-, Positions- und
+     Zeiterfassungstexte, Belegtitel, Kommentare);
+  c) "Alles": keine Pseudonymisierung, auch nicht für Beschäftigte,
+     bexio-Benutzer, Mitglieder des Arbeitsbereichs und E-Mail-Adressen.
+
+Personaldaten nach Ziffer 5.2 Buchstabe h werden nur übermittelt, wenn der
+Verantwortliche sie gesondert freigegeben hat. Das Ausschalten der Funktion
+setzt alle Freigaben zurück.
+
+
+===============================================================================
+ANLAGE 2 — TECHNISCHE UND ORGANISATORISCHE MASSNAHMEN (ARTIKEL 32 DSGVO)
+===============================================================================
+
+Stand: 01.11.2026
+
+
+1. VERTRAULICHKEIT
+
+1.1 Zutrittskontrolle
+    Der Betrieb erfolgt ausschließlich in Rechenzentren des
+    Unterauftragsverarbeiters Microsoft (Microsoft Azure). Eigene
+    Rechenzentren oder eigene Serverräume werden nicht betrieben. Die
+    physischen Sicherungsmaßnahmen ergeben sich aus den Zertifizierungen des
+    Unterauftragsverarbeiters (Anlage 3).
+
+1.2 Zugangskontrolle
+    - Anmeldung ausschließlich über persönliche Benutzerkonten
+    - Passwörter mit einer Mindestlänge von zehn Zeichen
+    - Speicherung von Passwörtern ausschließlich als Argon2-Hashwert
+    - verpflichtende Zwei-Faktor-Authentifizierung für alle Nutzer per
+      E-Mail-Einmalcode (Gültigkeit 10 Minuten, höchstens fünf
+      Eingabeversuche); vertraute Geräte für höchstens 30 Tage
+    - kurzlebige Zugriffstoken (15 Minuten); Sitzungen enden spätestens nach
+      7 Tagen nach der Anmeldung, unabhängig von der Aktivität; Übersicht der
+      aktiven Sitzungen und Abmeldung auf allen Geräten durch den Nutzer
+    - automatische Kontosperre nach fünf Fehlversuchen für 15 Minuten
+    - Pflicht zur Bestätigung der E-Mail-Adresse vor der ersten Nutzung
+    - Sitzungscookies ausschließlich mit den Attributen "Secure", "HttpOnly"
+      und "__Host"-Präfix
+    - Schutz gegen automatisierte Anmeldeversuche durch Ratenbegrenzung auf
+      Ebene des vorgeschalteten Webservers
+    - gesperrte Konten antworten wie bei falschem Passwort, sodass die Existenz
+      eines Kontos nicht ermittelt werden kann
+
+1.3 Zugriffskontrolle
+    - rollenbasiertes Berechtigungskonzept mit den Rollen Owner, Admin und
+      Member
+    - Mandantentrennung auf Ebene der Datenbank durch zeilenbasierte
+      Sicherheitsrichtlinien (Row Level Security) mit erzwungener Anwendung
+      (FORCE ROW LEVEL SECURITY)
+    - die Anwendung verbindet sich zur Datenbank ausschließlich mit
+      Datenbankrollen ohne Superuser-Rechte, sodass die Sicherheitsrichtlinien
+      nicht umgangen werden können
+    - getrennte Datenbankrollen nach Aufgabe: eine Rolle für den
+      Anwendungsbetrieb, eine ausschließlich lesende Rolle für die
+      Auswertungsschicht, eine ausschließlich lesende Rolle für die
+      KI-gestützte Analysefunktion
+    - die KI-gestützte Analysefunktion hat ausschließlich Lesezugriff auf das
+      Auswertungsschema; ein Zugriff auf Rohdaten, Zugangsdaten oder
+      Systemtabellen ist technisch ausgeschlossen
+    - Prüfung jeder von der KI erzeugten Datenbankabfrage durch einen
+      vorgeschalteten Abfragefilter
+    - Begrenzung der Ausführungszeit und der Ergebnismenge von Abfragen
+    - Plattform-Administratoren des Auftragsverarbeiters haben keinen Zugriff
+      auf Berichte, Gesprächsverläufe der KI-gestützten Analysefunktion oder
+      Daten aus der bexio-Anbindung; dies ist durch die Zugriffsregeln der
+      Datenbank technisch erzwungen
+    - Zugriff des Supports auf einen Arbeitsbereich nur nach Zustimmung einer
+      Person mit der Rolle "Owner", befristet auf höchstens 30 Tage, jederzeit
+      widerrufbar und in der Mitgliederliste sichtbar; keine Anmeldung "als
+      Nutzer"
+    - Zugang zum Administrationsbereich nur mit Zwei-Faktor-Nachweis, der
+      höchstens vier Stunden gültig ist
+    - Protokollierung jeder Handlung der Plattform-Administratoren im
+      Audit-Protokoll
+
+1.4 Trennungskontrolle
+    - logische Mandantentrennung aller Datenbestände anhand einer eindeutigen
+      Workspace-Kennung
+    - Durchsetzung der Trennung auf Datenbankebene, nicht allein in der
+      Anwendungslogik
+    - automatisierte Tests zum Nachweis der Mandantentrennung
+
+1.5 Pseudonymisierung und Verschlüsselung
+    - Übertragung ausschließlich über TLS (HTTPS); unverschlüsselte Zugriffe
+      werden umgeleitet
+    - Verschlüsselung der Daten im Ruhezustand durch die
+      Plattformverschlüsselung des Unterauftragsverarbeiters
+    - Verschlüsselung der bexio-Zugangstoken im Ruhezustand mit einem
+      gesonderten Schlüssel
+    - Pseudonymisierung von Namen und E-Mail-Adressen vor der Übermittlung an
+      den Modellanbieter (Anlage 1 Ziffer 9)
+    - Entfernung von Zugangs- und Sicherheitsmerkmalen aus den Adressen in den
+      Server-Protokollen; Löschung der Server-Protokolle nach 30 Tagen
+    - keine Speicherung von IP-Adressen in der Telemetrie (Application
+      Insights)
+
+
+2. INTEGRITÄT
+
+2.1 Eingabekontrolle
+    - revisionssichere, ausschließlich anfügende Protokollierung
+      sicherheitsrelevanter und datenverändernder Vorgänge mit Zeitstempel und
+      Benutzerkennung
+
+2.2 Weitergabekontrolle
+    - keine Datenträgerweitergabe
+    - Weitergabe an Unterauftragsverarbeiter ausschließlich über verschlüsselte
+      Verbindungen
+    - restriktive Inhaltssicherheitsrichtlinie (Content Security Policy) zur
+      Verhinderung des Abflusses von Inhalten über eingebettete Ressourcen
+    - Neutralisierung von Formelzellen beim Datenexport zur Verhinderung von
+      Formelinjektionen
+
+
+3. VERFÜGBARKEIT UND BELASTBARKEIT
+
+    - automatisierte Sicherung der Datenbank durch den
+      Unterauftragsverarbeiter mit einer Aufbewahrungsdauer von
+      35 Tagen und der Möglichkeit der
+      Wiederherstellung auf einen Zeitpunkt
+    - georedundante Speicherung der Sicherungskopien in einer zweiten
+      Schweizer Azure-Region (Switzerland West)
+    - Löschschutz auf Datenbank und Schlüsselverwaltung gegen versehentliches
+      Löschen
+    - Überwachung der Betriebsbereitschaft über Statusendpunkte
+    - Begrenzung gleichzeitiger Datenbankverbindungen zum Schutz vor
+      Überlastung
+    - Ratenbegrenzung sicherheitskritischer und ressourcenintensiver
+      Funktionen
+    - Wiederaufnahme unterbrochener Verarbeitungsläufe ohne Datenverlust
+
+
+4. VERFAHREN ZUR REGELMÄSSIGEN ÜBERPRÜFUNG
+
+4.1 Überprüfung
+    - regelmäßige Sicherheitsüberprüfungen des Quellcodes und der
+      Systemarchitektur mit dokumentierten Ergebnissen
+    - automatisierte Prüfung eingesetzter Fremdbibliotheken auf bekannte
+      Schwachstellen im Erstellungsprozess
+    - Festlegung der Basis-Abbilder der Container über kryptografische
+      Prüfsummen
+    - automatisierte Tests als Nachweis der Wirksamkeit der Mandantentrennung
+      und der Zugriffsbeschränkungen
+
+4.2 Auftragskontrolle
+    - schriftliche Vereinbarungen mit allen Unterauftragsverarbeitern
+    - Verpflichtung aller Beschäftigten auf Vertraulichkeit
+    - dokumentiertes Verfahren zur Meldung von Verletzungen des Schutzes
+      personenbezogener Daten
+
+4.3 Datenschutzfreundliche Voreinstellungen
+    - die KI-gestützte Analysefunktion ist standardmäßig ausgeschaltet und
+      wird nur durch einen Owner eingeschaltet; Namen und E-Mail-Adressen
+      werden standardmäßig pseudonymisiert, Personaldaten nur nach gesonderter
+      Freigabe übermittelt (Anlage 1 Ziffer 9)
+    - die bexio-Anbindung erfolgt ausschließlich lesend; ein schreibender
+      Zugriff auf das bexio-Konto ist technisch nicht vorgesehen
+    - der Verantwortliche kann die bexio-Autorisierung jederzeit widerrufen;
+      der Datenabruf unterbleibt daraufhin
+    - der Verantwortliche kann einzelne Datensätze oder seinen gesamten
+      Arbeitsbereich selbst löschen; die Daten werden innerhalb von vier
+      Stunden automatisiert gelöscht
+    - automatisierte Löschung der Gesprächsverläufe der KI-gestützten
+      Analysefunktion 90 Tage nach der letzten Aktivität
+
+    Hinweis: Eine Auswahl einzelner bexio-Datenbereiche durch den
+    Verantwortlichen ist derzeit nicht vorgesehen (§ 3 Absatz 3).
+
+
+===============================================================================
+ANLAGE 3 — UNTERAUFTRAGSVERARBEITER
+===============================================================================
+
+Stand: 01.11.2026
+
+
+1. Microsoft Ireland Operations Limited
+   One Microsoft Place, South County Business Park, Leopardstown,
+   Dublin 18, Irland
+   Leistung:        Betrieb der Anwendung und der Datenbank (Microsoft Azure),
+                    Versand von Systemnachrichten per E-Mail (Azure
+                    Communication Services), Auslieferung und Schutz der
+                    Anwendung (Azure Front Door mit Firewall für
+                    Webanwendungen), Betriebsüberwachung (Application
+                    Insights, Log Analytics), Bearbeitung von Nutzer-Feedback
+                    (Azure DevOps)
+   Verarbeitete
+   Daten:           sämtliche in Anlage 1 genannten Daten
+   Verarbeitungsort: Schweiz — Azure-Region "Switzerland North" (Zürich);
+                    georedundante Sicherungskopien der Datenbank in der Region
+                    "Switzerland West" (Genf); E-Mail-Versand mit Datenhaltung
+                    in der Schweiz. Azure Front Door nimmt Anfragen an den
+                    weltweiten Standorten von Microsoft entgegen. Azure DevOps:
+                    ebenfalls Region "Switzerland North" (Zürich).
+   Drittlandbezug:  Schweiz (Angemessenheitsbeschluss der Europäischen
+                    Kommission nach Artikel 45 DSGVO); für Azure Front Door
+                    auch Standorte außerhalb der Schweiz und des EWR
+   Übermittlungs-
+   mechanismus:     Schweiz: Angemessenheitsbeschluss; im Übrigen
+                    Standardvertragsklauseln im Data Protection Addendum von
+                    Microsoft sowie Zertifizierung der Microsoft Corporation
+                    unter dem EU-US Data Privacy Framework
+
+
+2. OpenAI Ireland Limited
+   1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
+   Dublin 1, D01 YC43, Irland
+   Weiterer Unterauftragsverarbeiter: OpenAI OpCo, LLC, 1455 3rd Street,
+   San Francisco, CA 94158, USA; weitere von OpenAI eingesetzte
+   Unterauftragsverarbeiter unter https://platform.openai.com/subprocessors
+   Vertrags-
+   grundlage:       OpenAI Data Processing Addendum in der jeweils geltenden
+                    Fassung (derzeit v.010126),
+                    https://openai.com/policies/data-processing-addendum/
+   Leistung:        Verarbeitung von Anfragen der KI-gestützten
+                    Analysefunktion (Modelle von OpenAI)
+   Verarbeitete
+   Daten:           Fragestellung des Nutzers, Gesprächsverlauf, Beschreibung
+                    der Datenstruktur sowie Ergebnisse der erzeugten Abfragen
+                    (Kennzahlen und begrenzte Auszüge von Datenzeilen). Namen
+                    und E-Mail-Adressen von Personen werden pseudonymisiert,
+                    Freitexte und Personaldaten nicht übermittelt, soweit der
+                    Verantwortliche dies nicht nach Anlage 1 Ziffer 9
+                    freigegeben hat.
+   Verarbeitungsort: Vertragspartner in Irland; Verarbeitung durch die OpenAI
+                    OpCo, LLC in den Vereinigten Staaten von Amerika
+   Drittlandbezug:  ja, Weiterübermittlung in die USA durch OpenAI
+                    (§ 7 Absatz 2)
+   Übermittlungs-
+   mechanismus:     Standardvertragsklauseln nach dem Durchführungsbeschluss
+                    (EU) 2021/914, die OpenAI Ireland Limited mit den
+                    Empfängern außerhalb des EWR und der Schweiz vereinbart
+                    hat (Ziffer 4.1 des Addendums); gilt auch für Daten, die
+                    dem schweizerischen Datenschutzrecht unterliegen. Das EU-US
+                    Data Privacy Framework wird nicht in Anspruch genommen.
+   Besonderheiten:  OpenAI verarbeitet die Daten nur zur Erbringung der
+                    Dienste (Ziffer 1.2 des Addendums); Daten aus der API
+                    werden nach den Angaben von OpenAI nicht zum Training von
+                    Modellen verwendet. Die Anfragen werden so übermittelt,
+                    dass OpenAI keine Anfrage- oder Antwortdaten zur späteren
+                    Wiederverwendung speichert. Protokolle zur Erkennung von
+                    Missbrauch, die Anfragen und Antworten enthalten können,
+                    bewahrt OpenAI bis zu 30 Tage auf.
+
+
+HINWEIS: bexio AG ist kein Unterauftragsverarbeiter des Auftragsverarbeiters.
+bexio wird vom Verantwortlichen selbst eingesetzt; die Datenweitergabe an den
+Auftragsverarbeiter erfolgt auf Veranlassung und nach Autorisierung durch den
+Verantwortlichen.
+
+
+===============================================================================
+ANLAGE 4 — ANSPRECHPARTNER
+===============================================================================
+
+Da dieser Vertrag inhaltsgleich für alle Kunden gilt, werden die
+Ansprechpartner nicht im Vertragstext benannt, sondern über die Anwendung
+bestimmt und gepflegt. Damit bleiben sie ohne Vertragsänderung aktuell.
+
+
+1. WEISUNGSBERECHTIGTE PERSONEN DES VERANTWORTLICHEN
+
+Weisungsberechtigt sind die Personen, denen der Verantwortliche in seinem
+Arbeitsbereich die Rolle "Owner" oder "Admin" zugewiesen hat. Der
+Verantwortliche hält diese Zuordnung aktuell und entzieht die Rolle
+unverzüglich, wenn eine Person nicht mehr weisungsberechtigt sein soll.
+
+
+2. KONTAKTADRESSE DES VERANTWORTLICHEN FÜR MELDUNGEN NACH § 9
+
+Meldungen nach § 9 richtet der Auftragsverarbeiter an die E-Mail-Adressen
+aller Personen, die im Arbeitsbereich des Verantwortlichen die Rolle "Owner"
+innehaben. Der Verantwortliche stellt sicher, dass mindestens eine Person mit
+dieser Rolle Meldungen entgegennehmen und weiterleiten kann.
+
+
+3. ANSPRECHPARTNER DES AUFTRAGSVERARBEITERS FÜR DATENSCHUTZFRAGEN
+
+  Noah Neßlauer
+  Geschäftsführer der smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Deutschland
+  E-Mail: noah.nesslauer@smiit.de
+
+  Diese Person ist Ansprechpartner für Datenschutzfragen, nicht
+  Datenschutzbeauftragter im Sinne der Artikel 37 ff. DSGVO (§ 4 Absatz 6).
+
+Der Auftragsverarbeiter teilt eine Änderung dieser Angaben in Textform oder
+durch Aktualisierung der in der Anwendung hinterlegten Fassung mit; eine
+Vertragsänderung ist hierfür nicht erforderlich.
+
+
+===============================================================================
+ENDE DES AUFTRAGSVERARBEITUNGSVERTRAGES
+===============================================================================

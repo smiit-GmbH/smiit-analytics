@@ -2,6 +2,13 @@ import { expect, test } from "./fixtures"
 
 /* Behaviour of the shared UI: demo modal, navigation, language switcher, FAQ, chapter rail. */
 
+test("the demo button exists only where the demo video does (German)", async ({ page }) => {
+  for (const lang of ["en", "fr", "it"]) {
+    await page.goto(`/${lang}/`)
+    await expect(page.locator('[aria-haspopup="dialog"]')).toHaveCount(0)
+  }
+})
+
 test("demo video modal: opens, locks the page, closes on backdrop and Escape", async ({ page }) => {
   await page.goto("/de/")
   const trigger = page.locator('[aria-haspopup="dialog"]').first()

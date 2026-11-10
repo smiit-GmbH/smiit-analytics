@@ -61,18 +61,19 @@ Screenshots are rendered on Linux, as in CI; on Windows and macOS that test is s
 
 ## Where to change what
 
-| What                                                                                               | File                                                                 |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary/`](lib/dictionary) (one file per language)          |
-| **Company details** (legal notice, footer, structured data)                                        | [`lib/site.ts`](lib/site.ts) (`COMPANY`)                             |
-| **Prices** (CHF per month and bexio company, additional users)                                     | [`lib/pricing.ts`](lib/pricing.ts)                                   |
-| **Links** (app, demo booking, bexio Marketplace, LinkedIn …)                                       | [`lib/links.ts`](lib/links.ts)                                       |
-| **Pages, section anchors, navigation**                                                             | [`lib/routes.ts`](lib/routes.ts)                                     |
-| **Domain** (canonical URLs, sitemap, Open Graph, structured data)                                  | [`lib/site.ts`](lib/site.ts)                                         |
-| **Media slots** (file names, formats, per language or shared)                                      | [`lib/media.ts`](lib/media.ts), documented in [`MEDIA.md`](MEDIA.md) |
-| **Demo dashboard data** (numbers only; labels are in the dictionary)                               | [`lib/demo/`](lib/demo)                                              |
-| **Analytics** (prepared, disabled)                                                                 | [`lib/analytics.ts`](lib/analytics.ts)                               |
-| **Design tokens** (colours, radii, shadows, spacing)                                               | [`app/globals.css`](app/globals.css) (`@theme`)                      |
+| What                                                                                               | File                                                                                                                          |
+| -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **All texts in all languages** (incl. FAQ, demo dashboards, image texts, alt texts, number format) | [`lib/dictionary/`](lib/dictionary) (one file per language)                                                                   |
+| **Company details** (legal notice, footer, structured data)                                        | [`lib/site.ts`](lib/site.ts) (`COMPANY`)                                                                                      |
+| **Privacy policy, terms, DPA** (German only, plain text as from the lawyer)                        | [`content/legal/`](content/legal) (`privacy.txt`, `terms.txt`, `dpa.txt`), parsed by [`lib/legal-text.ts`](lib/legal-text.ts) |
+| **Prices** (CHF per month and bexio company, additional users)                                     | [`lib/pricing.ts`](lib/pricing.ts)                                                                                            |
+| **Links** (app, demo booking, bexio Marketplace, LinkedIn …)                                       | [`lib/links.ts`](lib/links.ts)                                                                                                |
+| **Pages, section anchors, navigation**                                                             | [`lib/routes.ts`](lib/routes.ts)                                                                                              |
+| **Domain** (canonical URLs, sitemap, Open Graph, structured data)                                  | [`lib/site.ts`](lib/site.ts)                                                                                                  |
+| **Media slots** (file names, formats, per language or shared)                                      | [`lib/media.ts`](lib/media.ts), documented in [`MEDIA.md`](MEDIA.md)                                                          |
+| **Demo dashboard data** (numbers only; labels are in the dictionary)                               | [`lib/demo/`](lib/demo)                                                                                                       |
+| **Analytics** (prepared, disabled)                                                                 | [`lib/analytics.ts`](lib/analytics.ts)                                                                                        |
+| **Design tokens** (colours, radii, shadows, spacing)                                               | [`app/globals.css`](app/globals.css) (`@theme`)                                                                               |
 
 Dictionary conventions:
 
@@ -100,7 +101,7 @@ components/
     landing-page.tsx      Composes the home page from its sections
     landing/              Home page sections (receive { lang, dict })
       dashboards/         Interactive demo dashboards (SVG) + dashboard-kit
-    legal/                Legal pages (legal notice, text pages)
+    legal/                Legal pages (legal notice; privacy, terms, DPA from content/legal/*.txt)
     not-found/            404 view (client, language from the path)
   ui/                     Design system: Button, Section, Card, Badge, BrowserFrame, Media, Tabs, Accordion, Modal
   seo/                    JSON-LD

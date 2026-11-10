@@ -15,7 +15,7 @@ import { Steps } from "@/components/pages/landing/steps"
 import { Testimonials } from "@/components/pages/landing/testimonials"
 import { Trust } from "@/components/pages/landing/trust"
 import type { SectionProps } from "@/components/pages/landing/types"
-import { CHAPTER_SECTIONS, SECTIONS } from "@/lib/routes"
+import { CHAPTER_SECTIONS, SECTIONS, SHOW_SOCIAL_PROOF } from "@/lib/routes"
 import { buildFaqJsonLd, buildSoftwareApplicationJsonLd } from "@/lib/seo"
 
 /** The smiit Analytics landing page, section by section. */
@@ -24,7 +24,7 @@ export function LandingPage({ lang, dict }: SectionProps) {
   return (
     <>
       <Hero {...props} />
-      <Trust {...props} />
+      {SHOW_SOCIAL_PROOF && <Trust {...props} />}
       <Problem {...props} />
       <Steps {...props} />
       <Reports {...props} />
@@ -32,7 +32,7 @@ export function LandingPage({ lang, dict }: SectionProps) {
       <Ai {...props} />
       <Automations {...props} />
       <Audiences {...props} />
-      <Testimonials {...props} />
+      {SHOW_SOCIAL_PROOF && <Testimonials {...props} />}
       <Pricing {...props} />
       <Security {...props} />
       <Faq {...props} />

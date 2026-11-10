@@ -152,11 +152,12 @@ export const it: Dictionary = {
       eyebrow: "Editor di dashboard",
       title: "Il Suo dashboard. *Esattamente come lo desidera.*",
       intro: "Trascini indicatori e grafici semplicemente al posto giusto. Senza programmare, senza Excel.",
+      tabsLabel: "Scegliere una funzione",
       points: [
         {
           icon: "layout",
           title: "Creare report propri",
-          text: "Componga indicatori e analisi come Le servono – con il drag & drop.",
+          text: "Componga indicatori e analisi come Le servono – con il drag & drop o con l'IA.",
         },
         {
           icon: "download",
@@ -328,9 +329,21 @@ export const it: Dictionary = {
       eyebrow: "Sicurezza e protezione dei dati",
       title: "Trasparenza *su dove si trovano i Suoi dati.*",
       items: [
-        { icon: "server", title: "Hosting", text: "[HOSTING_STANDORT]" },
-        { icon: "shield", title: "Protezione dei dati", text: "[DATENSCHUTZ_DSG_DSGVO]" },
-        { icon: "key", title: "Accesso a bexio", text: "[BEXIO_ZUGRIFFSART]" },
+        {
+          icon: "server",
+          title: "Hosting",
+          text: "Salviamo i vostri dati bexio e i vostri report esclusivamente in Svizzera, su server Microsoft Azure a Zurigo, con copie di backup a Ginevra. La funzione di IA è facoltativa: solo quando la attivate, OpenAI elabora le vostre richieste negli Stati Uniti.",
+        },
+        {
+          icon: "shield",
+          title: "Protezione dei dati",
+          text: "I vostri dati aziendali li vedete solo voi e le persone che autorizzate. Nemmeno i nostri collaboratori li vedono – lo impongono le regole di accesso del database. Non vendiamo i vostri dati e trasmettiamo solo ciò che è necessario per il funzionamento e la fatturazione.",
+        },
+        {
+          icon: "key",
+          title: "Accesso a bexio",
+          text: "Collegate bexio tramite la sua interfaccia ufficiale (OAuth 2.0 / OpenID Connect) e autorizzate l'accesso direttamente in bexio – non conosciamo mai la vostra password bexio. Per una richiesta di supporto potete concederci un accesso temporaneo, revocabile in qualsiasi momento.",
+        },
       ],
       privacyLink: "All'informativa sulla protezione dei dati",
     },
@@ -584,6 +597,10 @@ export const it: Dictionary = {
   },
 
   legal: {
+    /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
+    contents: "Indice",
+    /** Shown above those texts in every language but German – they exist in German only. */
+    germanOnly: "Questo documento è disponibile solo in tedesco. Fa fede la versione tedesca.",
     legalNotice: {
       nav: "Note legali",
       title: "Note legali",
@@ -607,19 +624,16 @@ export const it: Dictionary = {
       nav: "Protezione dei dati",
       title: "Informativa sulla protezione dei dati",
       description: "Informativa sulla protezione dei dati di smiit Analytics.",
-      body: "[DATENSCHUTZ_TEXT]",
     },
     terms: {
       nav: "Condizioni d'uso",
       title: "Condizioni d'uso",
       description: "Condizioni d'uso di smiit Analytics.",
-      body: "[NUTZUNGSBEDINGUNGEN_TEXT]",
     },
     dpa: {
       nav: "Trattamento su mandato",
       title: "Contratto di trattamento dei dati su mandato",
       description: "Contratto di trattamento dei dati su mandato per smiit Analytics.",
-      body: "[AVV_TEXT]",
     },
   },
 
@@ -709,10 +723,12 @@ export const it: Dictionary = {
     IMG_STEP_1: "Creare il collegamento a bexio in smiit Analytics",
     IMG_STEP_2: "Panoramica dei report con i pacchetti Standard, Vendite, Finanze e Direzione, tutti pronti",
     IMG_STEP_3: "Un report viene adattato con il drag & drop",
-    VIDEO_DRAGDROP: "Un indicatore viene trascinato in un report",
+    VIDEO_DRAGDROP: "Un report viene composto con il drag & drop e con l'IA",
+    VIDEO_EXPORT: "Un report viene esportato e condiviso",
+    VIDEO_TEAM: "Vengono invitati membri del team e collegate più aziende bexio",
     IMG_MULTI_COMPANY:
       "Un solo login per la fiduciaria: elenco dei workspace con tutti i mandanti, un clic apre il report del mandante scelto",
-    VIDEO_AI_CHAT: "Domanda all'IA e risposta sotto forma di grafico",
+    VIDEO_AI_CHAT: "Domanda all'IA sul fatturato e la sua risposta direttamente nella dashboard",
     IMG_PERSONA_MANAGEMENT:
       "Smartphone con fatturato e fatture aperte, accanto avvisi automatici come sintesi settimanale e pagamento ricevuto",
     IMG_PERSONA_TRUSTEE: "Report di più mandanti sovrapposti, quello in primo piano con il pulsante Esporta",

@@ -154,11 +154,12 @@ export const en: Dictionary = {
       eyebrow: "Dashboard editor",
       title: "Your dashboard. *Exactly the way you want it.*",
       intro: "Simply drag KPIs and charts to where you want them. No coding, no Excel.",
+      tabsLabel: "Choose a feature",
       points: [
         {
           icon: "layout",
           title: "Create your own reports",
-          text: "Combine KPIs and analyses exactly as you need them – with drag and drop.",
+          text: "Combine KPIs and analyses exactly as you need them – with drag and drop or AI.",
         },
         {
           icon: "download",
@@ -334,9 +335,21 @@ export const en: Dictionary = {
       eyebrow: "Security & privacy",
       title: "Transparent about *where your data is stored.*",
       items: [
-        { icon: "server", title: "Hosting", text: "[HOSTING_STANDORT]" },
-        { icon: "shield", title: "Data protection", text: "[DATENSCHUTZ_DSG_DSGVO]" },
-        { icon: "key", title: "Access to bexio", text: "[BEXIO_ZUGRIFFSART]" },
+        {
+          icon: "server",
+          title: "Hosting",
+          text: "We store your bexio data and reports exclusively in Switzerland, on Microsoft Azure servers in Zurich, with backups in Geneva. The AI feature is optional: only once you switch it on does OpenAI process your requests in the USA.",
+        },
+        {
+          icon: "shield",
+          title: "Data protection",
+          text: "Only you and the people you authorise see your business data. Our staff cannot see it either – the database's access rules enforce this. We do not sell your data and only share what is needed to run the service and bill it.",
+        },
+        {
+          icon: "key",
+          title: "Access to bexio",
+          text: "You connect bexio through its official interface (OAuth 2.0 / OpenID Connect) and grant access directly in bexio – we never learn your bexio password. For a support request, you can give us temporary access, which you can revoke at any time.",
+        },
       ],
       privacyLink: "Read the privacy policy",
     },
@@ -588,6 +601,10 @@ export const en: Dictionary = {
   },
 
   legal: {
+    /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
+    contents: "Contents",
+    /** Shown above those texts in every language but German – they exist in German only. */
+    germanOnly: "This document is available in German only. The German version is legally binding.",
     /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
       nav: "Legal notice",
@@ -612,19 +629,16 @@ export const en: Dictionary = {
       nav: "Privacy",
       title: "Privacy policy",
       description: "Privacy policy of smiit Analytics.",
-      body: "[DATENSCHUTZ_TEXT]",
     },
     terms: {
       nav: "Terms of use",
       title: "Terms of use",
       description: "Terms of use of smiit Analytics.",
-      body: "[NUTZUNGSBEDINGUNGEN_TEXT]",
     },
     dpa: {
       nav: "DPA",
       title: "Data Processing Agreement (DPA)",
       description: "Data Processing Agreement (DPA) for smiit Analytics.",
-      body: "[AVV_TEXT]",
     },
   },
 
@@ -722,9 +736,11 @@ export const en: Dictionary = {
     IMG_STEP_1: "Connecting bexio in smiit Analytics",
     IMG_STEP_2: "Report overview with the Standard, Sales, Finance and Management packages, all ready",
     IMG_STEP_3: "A report being customised with drag and drop",
-    VIDEO_DRAGDROP: "A KPI is dragged into a report",
+    VIDEO_DRAGDROP: "A report is put together with drag and drop and with the AI",
+    VIDEO_EXPORT: "A report is exported and shared",
+    VIDEO_TEAM: "Team members are invited and several bexio companies connected",
     IMG_MULTI_COMPANY: "One login for the fiduciary firm: workspace list with all clients, one click opens the selected client's report",
-    VIDEO_AI_CHAT: "A question to the AI and the answer as a chart",
+    VIDEO_AI_CHAT: "A question to the AI about revenue and its answer right in the dashboard",
     IMG_PERSONA_MANAGEMENT:
       "Smartphone showing revenue and open invoices, alongside automatic notifications such as the weekly summary and payment received",
     IMG_PERSONA_TRUSTEE: "Reports of several clients stacked, the front one with an Export button",

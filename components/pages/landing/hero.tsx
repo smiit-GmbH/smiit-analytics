@@ -1,8 +1,8 @@
 import { ArrowRight, CirclePlay } from "lucide-react"
-import { BrowserFrame, Button, Container, DemoVideo, Media, Modal, ModalContent, ModalTrigger } from "@/components/ui"
+import { Button, Container, DemoVideo, Media, Modal, ModalContent, ModalTrigger } from "@/components/ui"
 import { CtaLink } from "@/components/cta-link"
 import { LINKS } from "@/lib/links"
-import { MEDIA, mediaPath } from "@/lib/media"
+import { DEMO_VIDEO_LANGS, MEDIA, mediaPath } from "@/lib/media"
 import { rich } from "@/lib/rich"
 import type { SectionProps } from "./types"
 
@@ -25,29 +25,32 @@ export function Hero({ lang, dict }: SectionProps) {
               {t.ctaPrimary}
               <ArrowRight aria-hidden="true" />
             </CtaLink>
-            <Modal>
-              <ModalTrigger asChild>
-                <Button variant="secondary" size="lg" track="hero_demo">
-                  <CirclePlay aria-hidden="true" />
-                  {t.ctaSecondary}
-                </Button>
-              </ModalTrigger>
-              <ModalContent title={t.demoTitle} hideTitle size="video" closeLabel={dict.common.close}>
-                <DemoVideo
-                  id="VIDEO_DEMO_FULL"
-                  src={mediaPath("VIDEO_DEMO_FULL", lang)}
-                  ratio={demo.ratio}
-                  spec={demo.spec}
-                  title={t.demoTitle}
-                />
-              </ModalContent>
-            </Modal>
+            {DEMO_VIDEO_LANGS.includes(lang) && (
+              <Modal>
+                <ModalTrigger asChild>
+                  <Button variant="secondary" size="lg" track="hero_demo">
+                    <CirclePlay aria-hidden="true" />
+                    {t.ctaSecondary}
+                  </Button>
+                </ModalTrigger>
+                <ModalContent title={t.demoTitle} hideTitle size="video" closeLabel={dict.common.close}>
+                  <DemoVideo
+                    id="VIDEO_DEMO_FULL"
+                    src={mediaPath("VIDEO_DEMO_FULL", lang)}
+                    ratio={demo.ratio}
+                    spec={demo.spec}
+                    title={t.demoTitle}
+                  />
+                </ModalContent>
+              </Modal>
+            )}
           </div>
         </div>
 
-        <BrowserFrame>
+        {/* The hero clip is shown edge to edge in a rounded tile — larger and calmer without the BrowserFrame chrome. */}
+        <div className="overflow-hidden rounded-tile shadow-frame">
           <Media lang={lang} id="VIDEO_HERO" alt={dict.media.VIDEO_HERO} />
-        </BrowserFrame>
+        </div>
       </Container>
     </section>
   )

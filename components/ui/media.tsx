@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { cn } from "@/lib/utils"
-import { MEDIA, mediaPath, mediaSrcSet, type MediaId } from "@/lib/media"
+import { MEDIA, mediaPath, mediaSrcSet, type MediaEntry, type MediaId } from "@/lib/media"
 import { useReducedMotion } from "@/lib/use-reduced-motion"
 
 /*
@@ -95,6 +95,33 @@ function usePosterLoaded(poster: string, enabled = true) {
   return loaded === poster
 }
 
+/**
+ * True once the page has loaded and the browser is idle (or after 2.5 s at the latest). Clips start then,
+ * so decoding video never competes with the first paint and hydration – the poster shows until then.
+ */
+function usePageIdle() {
+  const [idle, setIdle] = React.useState(false)
+  React.useEffect(() => {
+    // Safari has no requestIdleCallback: a short timeout after `load` instead.
+    const ric = typeof window.requestIdleCallback === "function"
+    let handle = 0
+    const ready = () => {
+      handle = ric ? window.requestIdleCallback(() => setIdle(true), { timeout: 2500 }) : window.setTimeout(() => setIdle(true), 200)
+    }
+    if (document.readyState === "complete") ready()
+    else window.addEventListener("load", ready, { once: true })
+    return () => {
+      window.removeEventListener("load", ready)
+      if (ric) window.cancelIdleCallback(handle)
+      else window.clearTimeout(handle)
+    }
+  }, [])
+  return idle
+}
+
+/** Phones get the small copy (<src>-sm.*, 960 px, 25 fps) of clips that have one. */
+const PHONE = "(max-width: 767px)"
+
 type VideoPlayerProps = {
   id: string
   /** Base path without extension. Expects <src>.webm, <src>.mp4 and <src>-poster.webp. */
@@ -103,18 +130,24 @@ type VideoPlayerProps = {
   spec?: string
   alt: string
   className?: string
+  /** Also <src>-sm.webm / -sm.mp4 for phones. */
+  phone?: boolean
 }
 
 /**
  * Silent looping product clip (autoplay muted loop playsinline).
- * Sources are only attached once the clip scrolls into view, it pauses when
- * it leaves, and with prefers-reduced-motion only the poster is shown.
+ * Sources are only attached once the clip is in view and the page is idle, it
+ * pauses when it leaves, and with prefers-reduced-motion only the poster is shown.
  */
-export function VideoPlayer({ id, src, ratio, spec, alt, className }: VideoPlayerProps) {
+export function VideoPlayer({ id, src, ratio, spec, alt, className, phone }: VideoPlayerProps) {
   const ref = React.useRef<HTMLVideoElement>(null)
   const [activated, setActivated] = React.useState(false)
   const [playing, setPlaying] = React.useState(false)
+  const [inView, setInView] = React.useState(false)
+  const idle = usePageIdle()
   const reduced = useReducedMotion()
+  // Sources are attached once (in view and page idle) and stay; set during render, not in an effect.
+  if (!activated && !reduced && inView && idle) setActivated(true)
   const poster = `${src}-poster.webp`
   const [near, setNear] = React.useState(false)
   const posterOk = usePosterLoaded(poster, near)
@@ -132,20 +165,17 @@ export function VideoPlayer({ id, src, ratio, spec, alt, className }: VideoPlaye
   React.useEffect(() => {
     const el = ref.current
     if (!el || reduced) return
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setActivated(true)
-          el.play().catch(() => {})
-        } else {
-          el.pause()
-        }
-      },
-      { rootMargin: "200px 0px" },
-    )
+    const io = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { rootMargin: "200px 0px" })
     io.observe(el)
     return () => io.disconnect()
   }, [reduced])
+
+  React.useEffect(() => {
+    const el = ref.current
+    if (!el || reduced) return
+    if (inView && idle) el.play().catch(() => {})
+    else el.pause()
+  }, [inView, idle, reduced])
 
   // <source> children are added after mount, so the element must re-read them.
   React.useEffect(() => {
@@ -184,6 +214,8 @@ export function VideoPlayer({ id, src, ratio, spec, alt, className }: VideoPlaye
           aria-hidden="true"
           onPlaying={() => setPlaying(true)}
         >
+          {activated && phone && <source media={PHONE} src={`${src}-sm.webm`} type="video/webm" />}
+          {activated && phone && <source media={PHONE} src={`${src}-sm.mp4`} type="video/mp4" />}
           {activated && <source src={`${src}.webm`} type="video/webm" />}
           {activated && <source src={`${src}.mp4`} type="video/mp4" />}
         </video>
@@ -232,10 +264,10 @@ type MediaProps = {
 
 /** Renders a registered media slot (lib/media.ts) as image or looping video. */
 export function Media({ id, lang, alt, ...rest }: MediaProps) {
-  const entry = MEDIA[id]
+  const entry: MediaEntry = MEDIA[id]
   const src = mediaPath(id, lang)
   if (entry.kind === "video") {
-    return <VideoPlayer id={id} src={src} ratio={entry.ratio} spec={entry.spec} alt={alt} className={rest.className} />
+    return <VideoPlayer id={id} src={src} ratio={entry.ratio} spec={entry.spec} alt={alt} className={rest.className} phone={entry.phone} />
   }
   return <MediaImage id={id} src={src} srcSet={mediaSrcSet(id, lang)} ratio={entry.ratio} spec={entry.spec} alt={alt} {...rest} />
 }

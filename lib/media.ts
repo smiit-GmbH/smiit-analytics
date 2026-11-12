@@ -4,6 +4,7 @@
  * listed name replaces the grey placeholder automatically.
  *
  * Videos expect three files: <file>.webm, <file>.mp4 and <file>-poster.webp.
+ * `phone: true` → also <file>-sm.webm / <file>-sm.mp4 (960 px wide, 25 fps), loaded below 768px.
  * Images expect one file: <file> (WebP, or PNG/SVG if you change the name here).
  * Alt texts are content and live in lib/dictionary/ under `media`.
  *
@@ -30,10 +31,12 @@ export type MediaEntry = {
   width?: number
   /** Images: widths of the generated smaller copies, for `srcset`. */
   widths?: readonly number[]
+  /** Videos: a small copy for phones exists (<file>-sm.webm / .mp4). */
+  phone?: boolean
 }
 
 export const MEDIA = {
-  VIDEO_HERO: { kind: "video", file: "/media/video_hero", ratio: "2560 / 1376", spec: "2560×1376 · 15–20 s · Loop" },
+  VIDEO_HERO: { kind: "video", file: "/media/video_hero", ratio: "2560 / 1376", spec: "2560×1376 · 15–20 s · Loop", phone: true },
   VIDEO_DEMO_FULL: { kind: "video", file: "/media/video_demo_full", ratio: "16 / 9", spec: "16:9 · ca. 2,5 min · mit Ton" },
 
   LOGO_1: { kind: "image", file: "/media/logo_1.webp", ratio: "3 / 1", spec: "3:1 · transparent" },
@@ -71,9 +74,9 @@ export const MEDIA = {
   },
 
   // The three tabs of the customize section ("Ihr Dashboard ganz nach Ihren Wünschen"), in tab order.
-  VIDEO_DRAGDROP: { kind: "video", file: "/media/video_dragdrop", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop" },
-  VIDEO_EXPORT: { kind: "video", file: "/media/video_export", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop" },
-  VIDEO_TEAM: { kind: "video", file: "/media/video_team", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop" },
+  VIDEO_DRAGDROP: { kind: "video", file: "/media/video_dragdrop", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop", phone: true },
+  VIDEO_EXPORT: { kind: "video", file: "/media/video_export", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop", phone: true },
+  VIDEO_TEAM: { kind: "video", file: "/media/video_team", ratio: "2560 / 1376", spec: "2560×1376 · 15–30 s · Loop", phone: true },
   IMG_MULTI_COMPANY: {
     kind: "image",
     file: "/media/img_multi_company.webp",
@@ -85,7 +88,7 @@ export const MEDIA = {
   },
 
   // Reuses the hero clip (its second half is a question to the AI and the answer); the browser loads it only once.
-  VIDEO_AI_CHAT: { kind: "video", file: "/media/video_hero", ratio: "2560 / 1376", spec: "2560×1376 · 15–20 s · Loop" },
+  VIDEO_AI_CHAT: { kind: "video", file: "/media/video_hero", ratio: "2560 / 1376", spec: "2560×1376 · 15–20 s · Loop", phone: true },
 
   IMG_PERSONA_MANAGEMENT: {
     kind: "image",

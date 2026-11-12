@@ -6,6 +6,8 @@ Alle Bilder und Videos der Website sind Platzhalter. Solange eine Datei fehlt, z
 
 **Sprachabhängige Medien** (in [`lib/media.ts`](lib/media.ts) mit `localized: true` markiert, aktuell alle Illustrationen) liegen einmal pro Sprache in `public/media/de/`, `public/media/en/`, `public/media/fr/` und `public/media/it/` – jeweils unter demselben Dateinamen. Soll ein Video pro Sprache geliefert werden (z. B. `VIDEO_DEMO_FULL` mit Ton), dort ebenfalls `localized: true` setzen und die Dateien in die vier Ordner legen.
 
+**Handy-Fassung der Loops:** Videos mit `phone: true` in [`lib/media.ts`](lib/media.ts) brauchen zusätzlich `<name>-sm.webm` und `<name>-sm.mp4` (960 px breit, 25 fps, ohne Ton). Bildschirme unter 768 px laden diese statt der grossen Datei. Alle Loops starten erst, wenn die Seite fertig geladen ist; bis dahin steht das Posterbild.
+
 Die technische Liste steht in [`lib/media.ts`](lib/media.ts). Die Alt-Texte stehen in [`lib/dictionary/`](lib/dictionary) unter `media`, für jede Sprache.
 
 ---

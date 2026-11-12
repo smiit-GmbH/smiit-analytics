@@ -126,7 +126,8 @@ function loadLegalDoc(route: TextRoute) {
   return parseLegalText(readFileSync(path.join(process.cwd(), "content", "legal", `${route}.txt`), "utf8"))
 }
 
-const linkClass = "text-brand underline-offset-4 [overflow-wrap:anywhere] hyphens-none hover:underline"
+// Always underlined: links inside running text must not rely on colour alone (axe link-in-text-block).
+const linkClass = "text-brand underline decoration-brand/40 underline-offset-4 [overflow-wrap:anywhere] hyphens-none hover:decoration-brand"
 
 /** Text with clickable URLs and e-mail addresses. */
 function Linked({ text }: { text: string }) {

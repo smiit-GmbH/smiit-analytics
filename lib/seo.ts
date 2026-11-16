@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import { getDictionary } from "@/lib/dictionary"
-import { HTML_LANG, OG_LOCALE, locales, defaultLocale, type Locale } from "@/lib/i18n"
+import { HTML_LANG, OG_LOCALE, defaultLocale, type Locale } from "@/lib/i18n"
 import { marketplaceReviews } from "@/lib/links"
 import { PRICING, type Billing } from "@/lib/pricing"
 import { plain } from "@/lib/rich"
-import { SECTIONS, routePath, type Route } from "@/lib/routes"
+import { SECTIONS, routeLocales, routePath, type Route } from "@/lib/routes"
 import { COMPANY, SITE, SITE_URL } from "@/lib/site"
 import { fill } from "@/lib/text"
 
@@ -19,13 +19,16 @@ type PageMetadataInput = {
   noindex?: boolean
 }
 
-/** Canonical + hreflang alternates of a route (x-default = default locale). */
+/** Canonical + hreflang alternates of a route — only the languages it exists in (x-default = default locale, or the
+ *  route's first language when it has no default-locale version). */
 export function alternates(lang: Locale, route: Route): Metadata["alternates"] {
+  const langs = routeLocales(route)
+  const fallback = langs.includes(defaultLocale) ? defaultLocale : langs[0]
   return {
     canonical: routePath(lang, route),
     languages: {
-      ...Object.fromEntries(locales.map((l) => [l, routePath(l, route)])),
-      "x-default": routePath(defaultLocale, route),
+      ...Object.fromEntries(langs.map((l) => [l, routePath(l, route)])),
+      "x-default": routePath(fallback, route),
     },
   }
 }
@@ -42,7 +45,9 @@ export function buildPageMetadata({ lang, route, title, description, noindex }: 
     openGraph: {
       type: "website",
       locale: OG_LOCALE[lang],
-      alternateLocale: locales.filter((l) => l !== lang).map((l) => OG_LOCALE[l]),
+      alternateLocale: routeLocales(route)
+        .filter((l) => l !== lang)
+        .map((l) => OG_LOCALE[l]),
       siteName: SITE.name,
       url,
       title,
@@ -154,6 +159,24 @@ export function buildFaqJsonLd(lang: Locale) {
 }
 
 type BreadcrumbItem = { name: string; route: Route }
+
+/** The demo video as a schema.org VideoObject (the /<lang>/demo/ page): lets search engines show it as a video result. */
+export function buildDemoVideoJsonLd(lang: Locale, video: { src: string; uploadDate: string; duration: string }) {
+  const t = getDictionary(lang).demoPage
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: t.title,
+    description: t.description,
+    thumbnailUrl: `${SITE_URL}${video.src}-poster.webp`,
+    contentUrl: `${SITE_URL}${video.src}.mp4`,
+    embedUrl: `${SITE_URL}${routePath(lang, "demo")}`,
+    uploadDate: video.uploadDate,
+    duration: video.duration,
+    inLanguage: HTML_LANG[lang],
+    publisher: { "@id": ORG_ID },
+  }
+}
 
 export function buildBreadcrumbJsonLd(lang: Locale, items: BreadcrumbItem[]) {
   const all = [{ name: getDictionary(lang).meta.home, route: "home" as Route }, ...items]

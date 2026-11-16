@@ -658,6 +658,15 @@ export const de = {
     imageAlt: "Zwei Personen sitzen auf Würfeln und arbeiten am Laptop",
   },
 
+  /** /de/demo/ — the full demo video on a page of its own (a link for the bexio Marketplace). German only, like the video. */
+  demoPage: {
+    eyebrow: "Demo-Video",
+    title: "smiit Analytics in 2 Minuten",
+    description:
+      "Sehen Sie in rund zwei Minuten, wie smiit Analytics aus Ihren bexio-Daten fertige Dashboards macht: Umsatz, Liquidität, Forderungen, Projekte und Fragen an die KI.",
+    intro: "So wird aus Ihren bexio-Daten ein fertiges Reporting: Dashboards, eigene Berichte und Antworten der KI auf Ihre Fragen.",
+  },
+
   error: {
     /** Shown when a page fails to render (app/[lang]/error.tsx). */
     title: "Etwas ist schiefgelaufen",

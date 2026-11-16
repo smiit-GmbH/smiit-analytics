@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest"
 import { isLocale, localeFromPath } from "@/lib/i18n"
 import { isExternal } from "@/lib/links"
 import { mediaPath, mediaSrcSet, variantPath } from "@/lib/media"
-import { routePath } from "@/lib/routes"
+import { routeLocales, routeOfSegment, routePath } from "@/lib/routes"
 
 describe("routePath", () => {
   it("builds trailing-slash paths below the locale", () => {
@@ -13,6 +13,19 @@ describe("routePath", () => {
 
   it("appends a section anchor", () => {
     expect(routePath("en", "home", "pricing")).toBe("/en/#pricing")
+  })
+})
+
+describe("routeLocales / routeOfSegment", () => {
+  it("limits the demo page to the languages of the demo video", () => {
+    expect(routeLocales("demo")).toEqual(["de"])
+    expect(routeLocales("privacy")).toEqual(["de", "en", "fr", "it"])
+  })
+
+  it("finds the route of a path segment", () => {
+    expect(routeOfSegment("demo")).toBe("demo")
+    expect(routeOfSegment("")).toBe("home")
+    expect(routeOfSegment("nope")).toBeNull()
   })
 })
 

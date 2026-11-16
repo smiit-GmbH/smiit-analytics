@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { Check, ChevronDown, Globe } from "lucide-react"
 import type { Dictionary } from "@/lib/dictionary"
 import { HTML_LANG, LANGUAGE_STORAGE_KEY, locales, type Locale } from "@/lib/i18n"
+import { routeLocales, routeOfSegment } from "@/lib/routes"
 import { fill } from "@/lib/text"
 import { cn } from "@/lib/utils"
 
@@ -18,9 +19,12 @@ type Props = {
   className?: string
 }
 
-/** Same page in another language: swaps the locale segment ("/de/privacy/" → "/fr/privacy/"). */
+/** Same page in another language: swaps the locale segment ("/de/privacy/" → "/fr/privacy/"). A page that does not
+ *  exist in the target language (the German-only demo video) links to that language's home page instead. */
 function pathFor(pathname: string, target: Locale, homeOnly?: boolean) {
   if (homeOnly) return `/${target}/`
+  const route = routeOfSegment(pathname.split("/")[2] ?? "")
+  if (route && !routeLocales(route).includes(target)) return `/${target}/`
   const rest = pathname.split("/").slice(2).join("/")
   return `/${target}/${rest}`
 }

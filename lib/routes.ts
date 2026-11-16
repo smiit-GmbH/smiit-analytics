@@ -1,5 +1,6 @@
 import type { Dictionary } from "@/lib/dictionary"
-import type { Locale } from "@/lib/i18n"
+import { locales, type Locale } from "@/lib/i18n"
+import { DEMO_VIDEO_LANGS } from "@/lib/media"
 
 /**
  * Every page of the site. Paths are English in all languages and sit below
@@ -11,13 +12,28 @@ export const ROUTES = {
   privacy: "privacy",
   terms: "terms",
   dpa: "dpa",
+  demo: "demo",
 } as const
 
 export type Route = keyof typeof ROUTES
 
+/** Pages that exist in some languages only — the demo video is spoken German. All others exist in every language. */
+const ROUTE_LOCALES: Partial<Record<Route, readonly Locale[]>> = { demo: DEMO_VIDEO_LANGS }
+
+/** The languages a route exists in (static params, sitemap, hreflang, language switcher). */
+export function routeLocales(route: Route): readonly Locale[] {
+  return ROUTE_LOCALES[route] ?? locales
+}
+
+/** The route a path segment belongs to ("privacy" → privacy, "" → home); null for an unknown segment. */
+export function routeOfSegment(segment: string): Route | null {
+  return (Object.keys(ROUTES) as Route[]).find((r) => ROUTES[r] === segment) ?? null
+}
+
 /** Pages in the sitemap. */
 export const PUBLIC_ROUTES: { route: Route; priority: number; changeFrequency: "monthly" | "yearly" }[] = [
   { route: "home", priority: 1, changeFrequency: "monthly" },
+  { route: "demo", priority: 0.6, changeFrequency: "monthly" },
   { route: "legalNotice", priority: 0.2, changeFrequency: "yearly" },
   { route: "privacy", priority: 0.2, changeFrequency: "yearly" },
   { route: "terms", priority: 0.2, changeFrequency: "yearly" },

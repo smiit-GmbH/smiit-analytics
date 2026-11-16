@@ -649,6 +649,14 @@ export const en: Dictionary = {
     imageAlt: "Two people sitting on cubes and working on a laptop",
   },
 
+  demoPage: {
+    eyebrow: "Demo video",
+    title: "smiit Analytics in 2 minutes",
+    description:
+      "See in about two minutes how smiit Analytics turns your bexio data into ready-made dashboards: revenue, liquidity, receivables, projects and questions to the AI.",
+    intro: "How your bexio data becomes ready-made reporting: dashboards, your own reports and AI answers to your questions.",
+  },
+
   error: {
     title: "Something went wrong",
     text: "An error occurred while loading this page. Please try again.",

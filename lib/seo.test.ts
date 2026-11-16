@@ -17,6 +17,10 @@ describe("alternates", () => {
       "x-default": "/de/privacy/",
     })
   })
+
+  it("names only the languages a page exists in (the German-only demo video)", () => {
+    expect(alternates("de", "demo")?.languages).toEqual({ de: "/de/demo/", "x-default": "/de/demo/" })
+  })
 })
 
 describe("buildPageMetadata", () => {

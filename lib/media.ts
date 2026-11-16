@@ -1,3 +1,5 @@
+import type { Locale } from "@/lib/i18n"
+
 /**
  * Registry of every media slot on the site. MEDIA.md documents the same list
  * for production. Files live in /public/media — dropping in a file with the
@@ -15,6 +17,7 @@
  * automatically from the main file before every `dev` / `build`
  * (scripts/build-media.mjs --variants). Only the main file needs to be supplied.
  */
+
 export type MediaKind = "video" | "image"
 
 export type MediaEntry = {
@@ -121,8 +124,9 @@ export const MEDIA = {
 
 export type MediaId = keyof typeof MEDIA
 
-/** Languages the full demo video (VIDEO_DEMO_FULL, spoken German) exists in; elsewhere the hero has no demo button. */
-export const DEMO_VIDEO_LANGS: readonly string[] = ["de"]
+/** Languages the full demo video (VIDEO_DEMO_FULL, spoken German) exists in: the hero's demo button and the
+ *  /<lang>/demo/ page exist there only. */
+export const DEMO_VIDEO_LANGS: readonly Locale[] = ["de"]
 
 /** Public path of a media file in a language ("/media/fr/img_step_1.webp" for localized slots). */
 export function mediaPath(id: MediaId, lang: string) {

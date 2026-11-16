@@ -225,7 +225,22 @@ export function VideoPlayer({ id, src, ratio, spec, alt, className, phone }: Vid
 }
 
 /** Full demo video with sound and controls, for the modal. Starts on open. */
-export function DemoVideo({ id, src, ratio, spec, title }: { id: string; src: string; ratio: string; spec?: string; title: string }) {
+export function DemoVideo({
+  id,
+  src,
+  ratio,
+  spec,
+  title,
+  autoPlay = true,
+}: {
+  id: string
+  src: string
+  ratio: string
+  spec?: string
+  title: string
+  /** The modal starts it on open; a page of its own leaves the start to the visitor. */
+  autoPlay?: boolean
+}) {
   const [ready, setReady] = React.useState(false)
   const poster = `${src}-poster.webp`
   const posterOk = usePosterLoaded(poster)
@@ -237,7 +252,7 @@ export function DemoVideo({ id, src, ratio, spec, title }: { id: string; src: st
       <video
         className={cn("absolute inset-0 size-full", !ready && !posterOk && "opacity-0")}
         controls
-        autoPlay
+        autoPlay={autoPlay}
         playsInline
         preload="metadata"
         poster={posterOk ? poster : undefined}

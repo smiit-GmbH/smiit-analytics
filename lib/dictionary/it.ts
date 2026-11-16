@@ -644,6 +644,15 @@ export const it: Dictionary = {
     imageAlt: "Due persone sedute su dei cubi lavorano al laptop",
   },
 
+  demoPage: {
+    eyebrow: "Video dimostrativo",
+    title: "smiit Analytics in 2 minuti",
+    description:
+      "Scoprite in circa due minuti come smiit Analytics trasforma i vostri dati bexio in dashboard pronte all'uso: fatturato, liquidità, crediti, progetti e domande all'IA.",
+    intro:
+      "Come i vostri dati bexio diventano un reporting pronto all'uso: dashboard, report personalizzati e risposte dell'IA alle vostre domande.",
+  },
+
   error: {
     title: "Qualcosa è andato storto",
     text: "Si è verificato un errore durante il caricamento di questa pagina. La preghiamo di riprovare.",

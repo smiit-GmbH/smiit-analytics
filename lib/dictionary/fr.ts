@@ -380,7 +380,7 @@ export const fr: Dictionary = {
         cancellation: {
           question: "Comment puis-je résilier ?",
           answer:
-            "Vous pouvez résilier à tout moment pour la fin de la période déjà payée. Avec l'abonnement mensuel, cela vaut pour chaque période mensuelle\u00A0: si vous vous êtes abonné le 10, vous pouvez résilier jusqu'au 9. L'abonnement annuel fonctionne de la même manière, par année. Détails dans les [[terms|conditions d'utilisation]].",
+            "Vous pouvez résilier l'abonnement mensuel à tout moment pour la fin du mois civil en cours\u00A0; il est facturé à la fin de chaque mois pour le mois écoulé. L'abonnement annuel dure douze mois et se renouvelle pour une année supplémentaire si vous ne le résiliez pas au plus tard le dernier jour de la période. Détails dans les [[terms|conditions d'utilisation]].",
         },
         companies: {
           question: "Puis-je connecter plusieurs entreprises bexio ?",

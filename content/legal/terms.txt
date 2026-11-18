@@ -3,7 +3,7 @@ NUTZUNGSBEDINGUNGEN FÜR smiit ANALYTICS
 Allgemeine Geschäftsbedingungen für die Überlassung von Software als Service
 ===============================================================================
 
-Fassung 1.0 — Stand: 01.11.2026
+Fassung 1.0 — Stand: 18.11.2026
 
 § 1 GELTUNGSBEREICH UND VERTRAGSPARTNER
 
@@ -29,6 +29,12 @@ Fassung 1.0 — Stand: 01.11.2026
     rechtliche Sondervermögen sowie an Unternehmen mit Sitz in der Schweiz, die
     den Vertrag zu geschäftlichen Zwecken schließen. Ein Vertragsschluss mit
     Verbrauchern erfolgt nicht.
+
+(2a) Unternehmen mit Sitz in der Schweiz oder in Liechtenstein können den
+    Vertrag nur schließen, wenn sie dort mehrwertsteuerpflichtig sind. Mit
+    der Registrierung bestätigt der Kunde, dass dies zutrifft. Trifft es
+    nicht zu, ersetzt der Kunde dem Anbieter den daraus entstehenden Schaden,
+    insbesondere nachzuentrichtende Steuern.
 
 (3) Abweichende, entgegenstehende oder ergänzende Geschäftsbedingungen des
     Kunden werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt
@@ -96,11 +102,11 @@ Fassung 1.0 — Stand: 01.11.2026
     annimmt. Ein kostenpflichtiges Abonnement schließt der Kunde ebenfalls in
     der Anwendung mit dem Anbieter ab.
 
-(1a) Rechnungsstellung und Zahlungseinzug für das Abonnement nimmt die
-    bexio AG für den Anbieter vor (§ 11 Absatz 8). Die Bedingungen des
-    Marketplace gelten nur für Rechnungsstellung, Zahlung und Mahnwesen; im
-    Übrigen regeln diese Nutzungsbedingungen das Vertragsverhältnis
-    abschließend.
+(1a) Der Marketplace dient ausschließlich dazu, auf die Anwendung hinzuweisen
+    und Kunden an den Anbieter zu vermitteln. Die bexio AG wird nicht
+    Vertragspartei und erbringt keine Leistungen aus diesem Vertrag.
+    Rechnungsstellung und Zahlungseinzug nimmt der Anbieter selbst vor (§ 11
+    Absatz 8).
 
 (2) Der Kunde hat bei der Registrierung wahrheitsgemäße und vollständige
     Angaben zu machen und diese bei Änderungen unverzüglich zu aktualisieren.
@@ -117,8 +123,7 @@ Fassung 1.0 — Stand: 01.11.2026
     b) Während der Testphase kann der Vertrag von beiden Seiten jederzeit ohne
        Einhaltung einer Frist gekündigt werden.
     c) Der Anbieter kann den Funktionsumfang in der Testphase beschränken.
-    d) Während der Testphase entstehen keine Kosten, und der Anbieter
-       übermittelt keine Angaben an die bexio AG.
+    d) Während der Testphase entstehen keine Kosten.
     e) Nach Ablauf der Testphase kann der Kunde die Anwendung nur weiter
        nutzen, wenn er in der Anwendung ein kostenpflichtiges Abonnement
        abschließt. Eine automatische Umwandlung in ein kostenpflichtiges
@@ -437,82 +442,105 @@ Fassung 1.0 — Stand: 01.11.2026
 
 (1) DATENSATZGEBÜHR. Die Vergütung bemisst sich nach der Anzahl der
     angebundenen Datensätze. Ein Datensatz ist eine mit der Anwendung
-    verbundene bexio-Firma. Je Datensatz und Kalendermonat:
+    verbundene bexio-Firma. Je Datensatz:
 
-        Monatstarif (§ 13 Absatz 1 Buchstabe a):   59,00 CHF
-        Jahrestarif (§ 13 Absatz 1 Buchstabe b):   49,00 CHF
+        Monatstarif (§ 13 Absatz 1 Buchstabe a):    59,00 CHF je Kalendermonat
+        Jahrestarif (§ 13 Absatz 1 Buchstabe b):   590,00 CHF je Vertragsjahr
 
 (2) NUTZERGEBÜHR. Der erste Nutzer je Tenant ist in der Datensatzgebühr
-    enthalten. Für jeden weiteren Nutzer beträgt die Vergütung 8,00 CHF je
-    Kalendermonat, in beiden Tarifvarianten gleichermaßen. Ein Nutzer wird je
-    Tenant nur einmal abgerechnet, unabhängig davon, auf wie viele Datensätze
-    desselben Tenants er Zugriff hat.
+    enthalten. Für jeden weiteren Nutzer beträgt die Vergütung:
+
+        Monatstarif (§ 13 Absatz 1 Buchstabe a):     8,00 CHF je Kalendermonat
+        Jahrestarif (§ 13 Absatz 1 Buchstabe b):    96,00 CHF je Vertragsjahr
+
+    Ein Nutzer wird je Tenant nur einmal abgerechnet, unabhängig davon, auf
+    wie viele Datensätze desselben Tenants er Zugriff hat.
 
 (3) TAGESGENAUE BERECHNUNG. Datensätze und Nutzer werden für jeden
     Kalendertag berechnet, an dem sie angebunden beziehungsweise eingerichtet
     waren; ein Kalendertag zählt, wenn der Datensatz oder Nutzer an diesem Tag
-    bestanden hat. Der Betrag je Datensatz oder Nutzer ergibt sich aus dem
-    Monatspreis nach Absatz 1 oder 2, multipliziert mit der Anzahl dieser
-    Tage und geteilt durch die Anzahl der Tage des Kalendermonats. Dies gilt
-    auch für den ersten Monat ab Abschluss des Abonnements. Der Gesamtbetrag
-    einer Rechnung wird kaufmännisch auf 0,01 CHF gerundet.
+    bestanden hat.
+
+    a) Im Monatstarif ergibt sich der Betrag je Datensatz oder Nutzer aus dem
+       Monatspreis nach Absatz 1 oder 2, multipliziert mit der Anzahl dieser
+       Tage und geteilt durch die Anzahl der Tage des Kalendermonats. Dies
+       gilt auch für den ersten Monat ab Abschluss des Abonnements.
+    b) Im Jahrestarif ergibt sich der Betrag für einen Datensatz oder Nutzer,
+       der während der Jahreslaufzeit hinzukommt, aus dem Jahrespreis nach
+       Absatz 1 oder 2, multipliziert mit der Anzahl der verbleibenden Tage
+       der Jahreslaufzeit und geteilt durch die Anzahl ihrer Tage.
+
+    Der Gesamtbetrag einer Rechnung wird kaufmännisch auf 0,01 CHF gerundet.
 
 (4) PREISVORSCHAU. Die Anwendung zeigt dem Kunden beim Abschluss des
-    Abonnements den voraussichtlichen Monatsbetrag auf Grundlage der
+    Abonnements den voraussichtlichen Betrag — im Monatstarif je
+    Kalendermonat, im Jahrestarif je Vertragsjahr — auf Grundlage der
     aktuellen Anzahl von Datensätzen und Nutzern an. Fügt der Kunde
     Datensätze oder Nutzer hinzu oder entfernt er sie, zeigt die Anwendung vor
-    der Änderung deren Auswirkung auf den Betrag des laufenden und der
-    folgenden Monate an. Die Vorschau ist unverbindlich; maßgeblich ist die
+    der Änderung deren Auswirkung auf die laufende und die folgenden
+    Abrechnungen an. Die Vorschau ist unverbindlich; maßgeblich ist die
     Berechnung nach Absatz 3.
 
 (5) Die Nutzung des KI-Analysten (§ 6) ist im Rahmen des nach § 9 Absatz 2
     enthaltenen Budgets ohne gesonderte Vergütung möglich.
 
-(6) Alle Preise verstehen sich netto zuzüglich der jeweils geltenden
-    gesetzlichen Umsatz- bzw. Mehrwertsteuer.
+(6) STEUERN. Alle Preise verstehen sich netto, ohne Umsatz- bzw.
+    Mehrwertsteuer. Der Anbieter ist ein Unternehmen mit Sitz in
+    Deutschland. Es gilt:
+
+    a) Kunden mit Sitz außerhalb Deutschlands, insbesondere in der Schweiz
+       und in Liechtenstein, stellt der Anbieter keine Umsatzsteuer in
+       Rechnung. Der Ort der Leistung liegt im Land des Kunden; eine dort
+       anfallende Steuer schuldet der Kunde selbst und führt sie in eigener
+       Verantwortung ab (Verlagerung der Steuerschuld, "Reverse Charge"; in
+       der Schweiz und in Liechtenstein Bezugsteuer, die der nach § 1
+       Absatz 2a mehrwertsteuerpflichtige Kunde abrechnet). Kunden mit Sitz
+       in einem anderen Mitgliedstaat der Europäischen Union teilen dem
+       Anbieter ihre Umsatzsteuer-Identifikationsnummer mit.
+    b) Kunden mit Sitz in Deutschland stellt der Anbieter die gesetzliche
+       Umsatzsteuer zusätzlich in Rechnung.
+    c) Ist der Anbieter nach dem Recht des Landes, in dem der Kunde seinen
+       Sitz hat, verpflichtet, die dortige Steuer selbst zu erheben, stellt
+       er sie zusätzlich in Rechnung.
+
+    Der Kunde teilt dem Anbieter seine UID bzw. Umsatzsteuer-
+    Identifikationsnummer mit, soweit vorhanden.
 
 (7) ABRECHNUNGSZEITPUNKT.
 
-    a) Im Monatstarif wird die Vergütung nachträglich zum Ende jedes
-       Kalendermonats abgerechnet.
-    b) Im Jahrestarif wird die Datensatzgebühr für die bei Beginn der
-       Jahreslaufzeit angebundenen Datensätze für zwölf Monate im Voraus
-       abgerechnet. Bindet der Kunde während der Jahreslaufzeit weitere
-       Datensätze an, werden diese zum Jahrestarif tagesgenau bis zum Ende der
-       laufenden Jahreslaufzeit berechnet und mit der nächsten
-       Monatsabrechnung in Rechnung gestellt; mit der Verlängerung werden alle
-       Datensätze gemeinsam für zwölf Monate abgerechnet. Entfernt der Kunde
-       während der Jahreslaufzeit Datensätze, wird die bereits abgerechnete
-       Datensatzgebühr nicht erstattet; die Datensätze entfallen mit der
-       nächsten Verlängerung.
-    c) Die Nutzergebühr wird in beiden Tarifvarianten nachträglich zum Ende
-       jedes Kalendermonats nach Absatz 3 abgerechnet.
+    a) Im Monatstarif werden Datensatz- und Nutzergebühr nachträglich zum
+       Ende jedes Kalendermonats abgerechnet.
+    b) Im Jahrestarif werden Datensatz- und Nutzergebühr für die bei Beginn
+       der Jahreslaufzeit angebundenen Datensätze und eingerichteten Nutzer
+       für zwölf Monate im Voraus abgerechnet. Kommen während der
+       Jahreslaufzeit Datensätze oder Nutzer hinzu, werden diese nach Absatz 3
+       Buchstabe b bis zum Ende der laufenden Jahreslaufzeit berechnet und zum
+       Ende des Kalendermonats, in dem sie hinzugekommen sind, in Rechnung
+       gestellt; mit der Verlängerung werden alle Datensätze und Nutzer
+       gemeinsam für zwölf Monate abgerechnet. Entfernt der Kunde während der
+       Jahreslaufzeit Datensätze oder Nutzer, wird die bereits abgerechnete
+       Vergütung nicht erstattet; sie entfallen mit der nächsten Verlängerung.
 
-(8) RECHNUNGSSTELLUNG ÜBER bexio. Der Anbieter ermittelt den jeweils
-    fälligen Betrag und übermittelt ihn der bexio AG als Betreiberin des
-    Marketplace. Die bexio AG stellt dem Kunden die Rechnung und zieht die
-    Vergütung für den Anbieter ein; Zahlungen leistet der Kunde mit
-    befreiender Wirkung ausschließlich an die bexio AG. Für Zahlungsmodalitäten,
-    Fälligkeit und Mahnwesen gelten ergänzend die Bedingungen des Marketplace.
+(8) RECHNUNGSSTELLUNG UND ZAHLUNG. Der Anbieter stellt dem Kunden die
+    Rechnung in Schweizer Franken und in elektronischer Form per E-Mail an
+    die vom Kunden angegebene Rechnungsadresse; Erstellung und Versand können
+    über den Rechnungsdienst von PayPal erfolgen. Rechnungen sind innerhalb
+    von 14 Tagen nach Rechnungsdatum ohne Abzug zu zahlen, durch Überweisung
+    auf das in der Rechnung angegebene Konto oder über die in der Rechnung
+    angebotenen Zahlungswege. Der Kunde gibt seine vollständige
+    Rechnungsanschrift an und hält sie aktuell.
 
     Die Rechnung weist die Datensatz- und Nutzergebühren getrennt aus,
     einschließlich der berechneten Tage je Datensatz und Nutzer. Dieselbe
     Aufschlüsselung stellt der Anbieter dem Kunden in der Anwendung bereit.
     Einwendungen gegen die Berechnung richtet der Kunde an den Anbieter.
 
-    Zur Abrechnung übermittelt der Anbieter der bexio AG das mit der Anwendung
-    verbundene bexio-Konto des Kunden, den gebuchten Tarif, den
-    Rechnungsbetrag mit Abrechnungstermin, die Anzahl der angebundenen
-    Datensätze und der Nutzer mit den berechneten Tagen sowie eine Kündigung
-    des Abonnements; Namen oder E-Mail-Adressen einzelner Nutzer werden nicht
-    übermittelt. Diese Angaben übermittelt der Anbieter mit jeder Abrechnung,
-    eine Kündigung unverzüglich. Während der Testphase (§ 3 Absatz 4) findet
-    keine Übermittlung statt.
-
-(9) Teilt die bexio AG dem Anbieter mit, dass eine Rechnung trotz Mahnung
-    offen bleibt, ist der Anbieter berechtigt, den Zugang zur Anwendung bis
-    zum Ausgleich der Rechnung zu sperren. Der Anbieter kündigt die Sperre
-    vorher in Textform an.
+(9) ZAHLUNGSVERZUG. Gleicht der Kunde eine fällige Rechnung trotz Mahnung
+    mit angemessener Fristsetzung nicht aus, ist der Anbieter berechtigt, den
+    Zugang zur Anwendung bis zum Ausgleich der offenen Beträge zu sperren.
+    Der Anbieter kündigt die Sperre vorher in Textform an. Die
+    Zahlungspflicht des Kunden bleibt während der Sperre bestehen;
+    weitergehende gesetzliche Rechte des Anbieters bleiben unberührt.
 
 
 § 12 PREISANPASSUNG
@@ -545,11 +573,12 @@ Fassung 1.0 — Stand: 01.11.2026
     a) MONATSTARIF: unbestimmte Laufzeit, Abrechnung monatlich nachträglich
        (§ 11 Absatz 7 Buchstabe a). Der Kunde kann zum Ende jedes
        Kalendermonats kündigen.
-    b) JAHRESTARIF: Laufzeit von zwölf Monaten ab Abschluss, zu einem
-       gegenüber dem Monatstarif ermäßigten Preis (§ 11 Absatz 1 und 7
-       Buchstabe b). Die Laufzeit verlängert sich jeweils um weitere zwölf
-       Monate, wenn der Kunde nicht bis zum letzten Tag der laufenden
-       Jahreslaufzeit kündigt.
+    b) JAHRESTARIF: Laufzeit von zwölf Monaten ab Abschluss, zu den Preisen
+       des Jahrestarifs (§ 11 Absatz 1 und 2), bei dem die Datensatzgebühr
+       gegenüber dem Monatstarif ermäßigt ist; Abrechnung jährlich im Voraus
+       (§ 11 Absatz 7 Buchstabe b). Die Laufzeit verlängert sich jeweils um
+       weitere zwölf Monate, wenn der Kunde nicht bis zum letzten Tag der
+       laufenden Jahreslaufzeit kündigt.
 
     Ein Wechsel vom Monatstarif in den Jahrestarif ist jederzeit möglich und
     wird zum Beginn des folgenden Kalendermonats wirksam. Ein Wechsel vom
@@ -562,9 +591,7 @@ Fassung 1.0 — Stand: 01.11.2026
 (2) Der Kunde kündigt über die hierfür vorgesehene Kündigungsfunktion in der
     Anwendung. Dies gilt auch für die Sonderkündigungsrechte nach diesen
     Nutzungsbedingungen und nach dem Auftragsverarbeitungsvertrag; diese kann
-    der Kunde alternativ in Textform gegenüber dem Anbieter erklären. Der
-    Anbieter teilt die Kündigung unverzüglich der bexio AG mit (§ 11
-    Absatz 8).
+    der Kunde alternativ in Textform gegenüber dem Anbieter erklären.
 
 (3) Nach einer Kündigung behält der Kunde bis zum Ende des Zeitraums, zu dem
     die Kündigung wirksam wird, Zugang zur Anwendung; mit dessen Ablauf endet
@@ -596,11 +623,11 @@ Fassung 1.0 — Stand: 01.11.2026
        namentlich die bexio-Schnittstelle — dauerhaft entfällt, mit einer Frist
        von einem Monat zum Monatsende.
 
-    Der Anbieter erklärt die Beendigung gegenüber dem Kunden in Textform und
-    teilt sie zugleich der bexio AG mit. Für den Zeitraum nach Wirksamwerden
-    der Beendigung bereits gezahlte Vergütungen werden dem Kunden
-    zeitanteilig erstattet. Eine darüber hinausgehende ordentliche Kündigung
-    des Anbieters während einer laufenden Jahreslaufzeit ist ausgeschlossen.
+    Der Anbieter erklärt die Beendigung gegenüber dem Kunden in Textform. Für
+    den Zeitraum nach Wirksamwerden der Beendigung bereits gezahlte
+    Vergütungen werden dem Kunden zeitanteilig erstattet. Eine darüber
+    hinausgehende ordentliche Kündigung des Anbieters während einer laufenden
+    Jahreslaufzeit ist ausgeschlossen.
 
 (6) Der Kunde ist zur Kündigung mit einer Frist von einem Monat zum Monatsende
     berechtigt, wenn eine wesentliche Funktion der Anwendung aus den in § 5

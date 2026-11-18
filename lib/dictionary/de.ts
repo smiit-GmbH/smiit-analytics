@@ -394,7 +394,7 @@ export const de = {
         cancellation: {
           question: "Wie kann ich kündigen?",
           answer:
-            "Sie können jederzeit zum Ende der bereits bezahlten Laufzeit kündigen. Beim Monatsabo gilt das für jeden Monatszeitraum: Haben Sie das Abo am 10. abgeschlossen, können Sie jeweils bis zum 9. kündigen. Beim Jahresabo gilt dasselbe, nur jährlich. Details finden Sie in den [[terms|Nutzungsbedingungen]].",
+            "Das Monatsabo können Sie jederzeit zum Ende des laufenden Kalendermonats kündigen; abgerechnet wird jeweils am Monatsende für den abgelaufenen Monat. Das Jahresabo läuft zwölf Monate und verlängert sich um ein weiteres Jahr, wenn Sie nicht bis zum letzten Tag der Laufzeit kündigen. Details finden Sie in den [[terms|Nutzungsbedingungen]].",
         },
         companies: {
           question: "Kann ich mehrere bexio-Firmen verbinden?",

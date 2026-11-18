@@ -387,7 +387,7 @@ export const en: Dictionary = {
         cancellation: {
           question: "How can I cancel?",
           answer:
-            "You can cancel at any time, effective at the end of the period you have already paid for. With the monthly plan this applies to each monthly period: if you subscribed on the 10th, you can cancel up to the 9th. The yearly plan works the same way, just per year. Details in the [[terms|terms of use]].",
+            "You can cancel the monthly plan at any time, effective at the end of the current calendar month; it is billed at the end of each month for the month just ended. The yearly plan runs for twelve months and renews for another year unless you cancel by the last day of the term. Details in the [[terms|terms of use]].",
         },
         companies: {
           question: "Can I connect several bexio companies?",

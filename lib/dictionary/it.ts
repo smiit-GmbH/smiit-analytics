@@ -380,7 +380,7 @@ export const it: Dictionary = {
         cancellation: {
           question: "Come posso disdire?",
           answer:
-            "Può disdire in qualsiasi momento per la fine del periodo già pagato. Con l'abbonamento mensile ciò vale per ogni periodo mensile: se si è abbonato il 10, può disdire fino al 9. L'abbonamento annuale funziona allo stesso modo, su base annua. Dettagli nelle [[terms|condizioni d'uso]].",
+            "Può disdire l'abbonamento mensile in qualsiasi momento per la fine del mese civile in corso; viene fatturato alla fine di ogni mese per il mese appena trascorso. L'abbonamento annuale dura dodici mesi e si rinnova per un altro anno se non viene disdetto entro l'ultimo giorno del periodo. Dettagli nelle [[terms|condizioni d'uso]].",
         },
         companies: {
           question: "Posso collegare più aziende bexio?",

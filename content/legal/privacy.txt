@@ -3,7 +3,7 @@ DATENSCHUTZERKLÄRUNG FÜR smiit ANALYTICS
 Informationen nach Artikel 13 und 14 DSGVO
 ===============================================================================
 
-Fassung 1.0 — Stand: 01.11.2026
+Fassung 1.0 — Stand: 18.11.2026
 
 1. VERANTWORTLICHER
 
@@ -404,46 +404,50 @@ vollständig protokolliert. Eine Anmeldung "als Nutzer" gibt es nicht.
 4.12 VERTRAGSABWICKLUNG UND ABRECHNUNG
 
 Das kostenpflichtige Abonnement schließen unsere Kunden in der Anwendung mit
-uns ab. Den jeweils fälligen Betrag berechnen wir und übermitteln ihn an die
-bexio AG, die über den bexio Marketplace die Rechnung stellt und die Zahlung
-einzieht; sie handelt dabei als eigener Verantwortlicher. Da unsere Kunden
-zugleich Kunden der bexio AG sind, liegen ihr deren Firmen-, Rechnungs- und
-Zahlungsdaten bereits vor. Während der kostenlosen Testphase übermitteln wir
-der bexio AG keine Angaben.
+uns ab. Die Rechnung stellen wir selbst und direkt an den Kunden; wir
+erstellen und versenden sie über den Rechnungsdienst von PayPal (Ziffer 5).
+Bezahlt wird per Überweisung oder über die in der Rechnung angebotenen
+Zahlungswege. Während der kostenlosen Testphase erstellen wir keine
+Rechnungen.
 
-Für die Abrechnung übermitteln wir der bexio AG ausschließlich:
+Für die Rechnungsstellung verarbeiten wir:
 
-  a) das bexio-Konto, das mit smiit Analytics verbunden ist, und damit die
-     Information, dass der Kunde smiit Analytics nutzt;
-  b) den abgeschlossenen Tarif (Monats- oder Jahresabonnement);
-  c) den Rechnungsbetrag und den Abrechnungstermin (monatlich bzw. jährlich);
+  a) den Firmennamen und die Rechnungsanschrift des Kunden sowie die
+     E-Mail-Adresse, an die wir die Rechnungen senden;
+  b) die UID bzw. Umsatzsteuer-Identifikationsnummer des Kunden, soweit
+     vorhanden;
+  c) den abgeschlossenen Tarif (Monats- oder Jahresabonnement);
   d) die für den Rechnungsbetrag maßgebliche Anzahl der angebundenen
      Datensätze und der Nutzer sowie die berechneten Tage je Datensatz und
      Nutzer für die Aufschlüsselung auf der Rechnung;
-  e) die Kündigung des Abonnements.
+  e) Rechnungsbeträge, Rechnungs- und Fälligkeitsdaten, Zahlungseingänge und
+     gegebenenfalls Mahnungen.
 
-Diese Angaben übermitteln wir mit jeder Abrechnung (monatlich, im
-Jahrestarif zusätzlich zu Beginn jeder Jahreslaufzeit), eine Kündigung
-unverzüglich. So werden Änderungen — etwa ein hinzugekommener Nutzer — in der
-nächsten Rechnung berücksichtigt. Namen oder E-Mail-Adressen einzelner Nutzer
-übermitteln wir dabei nicht.
+Zahlungseingänge ordnen wir anhand der Angaben auf dem Kontoauszug unserer
+Bank (Name des Zahlenden, IBAN, Betrag, Verwendungszweck) oder der
+Zahlungsbestätigung von PayPal zu. Kreditkartendaten erhalten wir nicht;
+bezahlt der Kunde über PayPal, verarbeitet PayPal die Zahlungsdaten in
+eigener Verantwortung. Namen oder E-Mail-Adressen einzelner Nutzer erscheinen
+auf der Rechnung nicht.
 
-  Daten:          Kennung des verbundenen bexio-Kontos, Firmenangaben des
-                  Kunden, gebuchter Tarif, Status des Abonnements,
-                  Rechnungsbetrag und Abrechnungstermin, Anzahl der
-                  angebundenen Datensätze und Nutzer mit den berechneten Tagen
-  Zweck:          Abwicklung des Vertrages, Abrechnung über den bexio
-                  Marketplace, Buchhaltung
+Der bexio Marketplace weist auf smiit Analytics hin; für vermittelte Kunden
+erhält die bexio AG eine Provision. Dafür teilen wir ihr nur zusammengefasste
+Zahlen mit: die Anzahl der vermittelten Kunden und den mit ihnen insgesamt
+erzielten Umsatz. Um welche Kunden es sich handelt und welchen Betrag ein
+einzelner Kunde zahlt, übermitteln wir nicht.
+
+  Daten:          Firmenname, Rechnungsanschrift und Rechnungs-E-Mail-Adresse
+                  des Kunden, UID bzw. Umsatzsteuer-Identifikationsnummer,
+                  gebuchter Tarif, Status des Abonnements, Anzahl der
+                  angebundenen Datensätze und Nutzer mit den berechneten
+                  Tagen, Rechnungen, Zahlungseingänge
+  Zweck:          Abwicklung des Vertrages, Rechnungsstellung, Buchhaltung
   Rechtsgrundlage: Artikel 6 Absatz 1 Buchstabe b und c DSGVO
-  Empfänger:      bexio AG (siehe Ziffer 5)
+  Empfänger:      PayPal für Erstellung und Versand der Rechnungen sowie für
+                  Zahlungen über PayPal; unser Kreditinstitut für den
+                  Zahlungseingang; Steuerberater (siehe Ziffer 5)
   Speicherdauer:  bis zum Ablauf der handels- und steuerrechtlichen
                   Aufbewahrungsfristen von bis zu zehn Jahren
-
-Zahlungsdaten wie Bank- oder Kreditkartenangaben erhalten wir im Regelfall
-nicht, da die Zahlung über die bexio AG abgewickelt wird. Nur ausnahmsweise
-und nur mit ausdrücklicher Zustimmung des Kunden — etwa bei einer im
-Einzelfall vereinbarten direkten Abrechnung — verarbeiten wir Zahlungsdaten
-selbst, und zwar ausschließlich zur Abwicklung dieser Zahlungen.
 
 
 5. EMPFÄNGER PERSONENBEZOGENER DATEN
@@ -496,12 +500,15 @@ geschlossen.
 
 Als eigenständig Verantwortliche erhalten Daten:
 
-  c) bexio AG
-     Alte Jonastrasse 24, 8640 Rapperswil, Schweiz
-     Leistung:   Betrieb des bexio Marketplace, Abrechnung und
-                 Zahlungsabwicklung der Abonnements (siehe Ziffer 4.12)
-     Standort:   Schweiz (Angemessenheitsbeschluss der Europäischen
-                 Kommission, siehe Ziffer 6)
+  c) PayPal (Europe) S.à r.l. et Cie, S.C.A.
+     22-24 Boulevard Royal, L-2449 Luxemburg
+     Leistung:   Erstellung und Versand unserer Rechnungen über den
+                 Rechnungsdienst von PayPal sowie Abwicklung von Zahlungen,
+                 die der Kunde über PayPal leistet (siehe Ziffer 4.12);
+                 Einzelheiten in der Datenschutzerklärung von PayPal unter
+                 https://www.paypal.com/de/legalhub/privacy-full
+     Standort:   Europäische Union (Luxemburg); zu Übermittlungen innerhalb
+                 der PayPal-Gruppe siehe Ziffer 6
 
   d) GitHub, Inc.
      88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA
@@ -514,7 +521,8 @@ Als eigenständig Verantwortliche erhalten Daten:
 
 Darüber hinaus können Daten an Steuerberater, Wirtschaftsprüfer, Rechtsanwälte
 sowie an Behörden und Gerichte übermittelt werden, soweit dies gesetzlich
-vorgeschrieben oder zur Rechtsverfolgung erforderlich ist.
+vorgeschrieben oder zur Rechtsverfolgung erforderlich ist. Zahlungen unserer
+Kunden gehen bei unserem Kreditinstitut ein (Ziffer 4.12).
 
 
 6. ÜBERMITTLUNG IN DRITTLÄNDER
@@ -524,8 +532,7 @@ Microsoft in der Schweiz. Die Schweiz ist aus Sicht der DSGVO ein Drittland,
 für das die Europäische Kommission einen Angemessenheitsbeschluss erlassen hat
 (Artikel 45 DSGVO). Zusätzliche Garantien wie Standardvertragsklauseln sind
 für die Verarbeitung in der Schweiz daher nicht erforderlich. Dasselbe gilt
-für den Versand von E-Mails und für den Austausch der Abrechnungsdaten mit der
-bexio AG (Ziffer 4.12).
+für den Versand von E-Mails.
 
 Soweit Microsoft im Rahmen von Azure Front Door oder Azure DevOps Daten
 außerhalb der Schweiz und des Europäischen Wirtschaftsraums verarbeitet,
@@ -542,6 +549,13 @@ Angemessenheitsbeschluss der Europäischen Kommission hierzu (Artikel 45
 DSGVO). Für Personen in der Schweiz gilt entsprechend das Swiss-U.S. Data
 Privacy Framework, das die Schweiz für zertifizierte Unternehmen als
 angemessen anerkannt hat.
+
+PayPal (Europe) S.à r.l. et Cie, S.C.A. hat ihren Sitz in Luxemburg und kann
+Daten an andere Gesellschaften der PayPal-Gruppe übermitteln, auch in
+Drittländer wie die Vereinigten Staaten von Amerika. PayPal stützt diese
+Übermittlungen auf verbindliche interne Datenschutzvorschriften (Binding
+Corporate Rules, Artikel 47 DSGVO); Einzelheiten in der Datenschutzerklärung
+von PayPal (Ziffer 5).
 
 Bei der KI-gestützten Analysefunktion (Ziffer 4.9) übermitteln wir die Inhalte
 einer Anfrage an unseren Auftragsverarbeiter OpenAI Ireland Limited mit Sitz in

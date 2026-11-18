@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs"
+import { existsSync, readFileSync } from "node:fs"
 import path from "node:path"
 import type { Metadata } from "next"
 import { Fragment } from "react"
@@ -9,9 +9,9 @@ import { JsonLd } from "@/components/seo/json-ld"
 import type { Dictionary } from "@/lib/dictionary"
 import { getDictionary } from "@/lib/dictionary"
 import { HTML_LANG, type Locale } from "@/lib/i18n"
-import { type LegalHeading, type LegalLine, legalIndents, linkParts, parseLegalText } from "@/lib/legal-text"
+import { ANNEX, type LegalHeading, type LegalLine, legalIndents, linkParts, parseLegalText } from "@/lib/legal-text"
 import { cn } from "@/lib/utils"
-import type { LEGAL_ROUTES } from "@/lib/routes"
+import { type LEGAL_ROUTES, routePath } from "@/lib/routes"
 import { buildBreadcrumbJsonLd, buildPageMetadata } from "@/lib/seo"
 import { COMPANY } from "@/lib/site"
 
@@ -39,6 +39,7 @@ function LegalShell({
   route,
   subtitle,
   meta,
+  textLang = lang,
   aside,
   children,
 }: {
@@ -48,6 +49,8 @@ function LegalShell({
   subtitle?: string
   /** "Fassung 1.0 — Stand: 01.11.2026" */
   meta?: string
+  /** Language of the text from content/legal (German where no translation exists). */
+  textLang?: Locale
   aside?: React.ReactNode
   children: React.ReactNode
 }) {
@@ -66,9 +69,16 @@ function LegalShell({
           <h1 lang={HTML_LANG[lang]} className="font-serif text-heading-lg tracking-tight [overflow-wrap:anywhere] hyphens-auto text-ink">
             {title}
           </h1>
-          {subtitle && <p className="mt-4 max-w-[60ch] text-lead text-ink-muted">{subtitle}</p>}
+          {subtitle && (
+            <p lang={HTML_LANG[textLang]} className="mt-4 max-w-[60ch] text-lead text-ink-muted">
+              {subtitle}
+            </p>
+          )}
           {meta && (
-            <p lang="de" className="mt-6 inline-flex rounded-full bg-white px-3.5 py-1.5 text-sm text-ink-muted ring-1 ring-black/5">
+            <p
+              lang={HTML_LANG[textLang]}
+              className="mt-6 inline-flex rounded-full bg-white px-3.5 py-1.5 text-sm text-ink-muted ring-1 ring-black/5"
+            >
               {meta}
             </p>
           )}
@@ -84,17 +94,21 @@ function LegalShell({
   )
 }
 
+/** Short form of the annex word in the table of contents: "Anl. 1", "Ann. 1", "All. 1". */
+const ANNEX_SHORT: Record<string, string> = { ANLAGE: "Anl.", ANNEX: "Ann.", ANNEXE: "Ann.", ALLEGATO: "All." }
+
 /** "§ 7 ORT DER …" → ["§ 7", "ORT DER …"]; "ANLAGE 1 — GEGENSTAND …" → ["Anl. 1", "GEGENSTAND …"]. */
 function splitNumber(text: string): [string | null, string] {
-  const m = /^(§ \d+|ANLAGE \d+|\d+(?:\.\d+)*\.?)\s+(?:—\s+)?(.*)$/.exec(text)
+  const m = /^(§ \d+|(?:ANLAGE|ANNEX|ANNEXE|ALLEGATO) \d+|\d+(?:\.\d+)*\.?)\s+(?:—\s+)?(.*)$/.exec(text)
   if (!m) return [null, text]
-  return [m[1].startsWith("ANLAGE") ? m[1].replace("ANLAGE", "Anl.") : m[1].replace(/\.$/, ""), m[2]]
+  const annex = ANNEX.exec(m[1])
+  return [annex ? m[1].replace(annex[1], ANNEX_SHORT[annex[1]]) : m[1].replace(/\.$/, ""), m[2]]
 }
 
 /** Table of contents: a collapsible box above the text; opened, the entries run down two or three columns. */
-function Toc({ label, headings }: { label: string; headings: LegalHeading[] }) {
+function Toc({ label, headings, lang }: { label: string; headings: LegalHeading[]; lang: Locale }) {
   return (
-    <details lang="de" className="group rounded-tile bg-white ring-1 ring-black/5">
+    <details lang={HTML_LANG[lang]} className="group rounded-tile bg-white ring-1 ring-black/5">
       <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-[0.7rem] font-semibold tracking-[0.22em] text-ink-muted uppercase sm:px-8">
         {label}
         <ChevronDown aria-hidden="true" className="size-4 transition-transform group-open:rotate-180" />
@@ -121,9 +135,16 @@ function Toc({ label, headings }: { label: string; headings: LegalHeading[] }) {
   )
 }
 
-/** Read at build time (static export); the texts are German only, for every locale. */
-function loadLegalDoc(route: TextRoute) {
-  return parseLegalText(readFileSync(path.join(process.cwd(), "content", "legal", `${route}.txt`), "utf8"))
+/**
+ * Read at build time (static export): content/legal/<lang>/<route>.txt, the German
+ * content/legal/<route>.txt where no translation exists. Only the German text is binding.
+ */
+function loadLegalDoc(lang: Locale, route: TextRoute): { textLang: Locale; doc: ReturnType<typeof parseLegalText> } {
+  const dir = path.join(process.cwd(), "content", "legal")
+  const translated = path.join(dir, lang, `${route}.txt`)
+  const textLang = lang !== "de" && existsSync(translated) ? lang : "de"
+  const file = textLang === "de" ? path.join(dir, `${route}.txt`) : translated
+  return { textLang, doc: parseLegalText(readFileSync(file, "utf8")) }
 }
 
 // Always underlined: links inside running text must not rely on colour alone (axe link-in-text-block).
@@ -196,18 +217,20 @@ const headingClass = {
 } as const
 
 /**
- * Privacy policy, terms, DPA: the text from content/legal/<route>.txt, parsed into
- * headings, clauses, lists and label rows (lib/legal-text.ts), with a table of
- * contents. The texts exist in German only; other locales show a note above.
+ * Privacy policy, terms, DPA: the text from content/legal/(<lang>/)<route>.txt, parsed into
+ * headings, clauses, lists and label rows (lib/legal-text.ts), with a table of contents.
+ * Translations (AI, not reviewed) carry a note that only the German text is binding, with a link to it.
  */
 export function LegalPage({ lang, dict, route }: { lang: Locale; dict: Dictionary; route: TextRoute }) {
-  const doc = loadLegalDoc(route)
+  const { textLang, doc } = loadLegalDoc(lang, route)
   const toc = doc.blocks.filter((b) => b.type === "heading" && b.level === 2) as LegalHeading[]
   const offsets = legalIndents(doc.blocks, MARKER_REM)
-  // The version line ("Fassung 1.0 — Stand: …") opens every text; it goes into the page header.
+  // The version line ("Fassung 1.0 — Stand: …", "Version 1.0 — …", "Versione 1.0 — …") opens every text; it goes into the page header.
   const first = doc.blocks[0]
   const meta =
-    first?.type === "lines" && first.lines.length === 1 && /^Fassung /.test(first.lines[0].text) ? first.lines[0].text : undefined
+    first?.type === "lines" && first.lines.length === 1 && /^(Fassung|Version|Versione) /.test(first.lines[0].text)
+      ? first.lines[0].text
+      : undefined
   const blocks = meta ? doc.blocks.slice(1) : doc.blocks
   return (
     <LegalShell
@@ -216,10 +239,24 @@ export function LegalPage({ lang, dict, route }: { lang: Locale; dict: Dictionar
       route={route}
       subtitle={doc.subtitle}
       meta={meta}
-      aside={toc.length > 2 ? <Toc label={dict.legal.contents} headings={toc} /> : undefined}
+      textLang={textLang}
+      aside={toc.length > 2 ? <Toc label={dict.legal.contents} headings={toc} lang={textLang} /> : undefined}
     >
-      {lang !== "de" && <p className="mb-8 rounded-tile bg-sand px-4 py-3 text-[0.95rem] text-ink">{dict.legal.germanOnly}</p>}
-      <div lang="de" className="text-[0.95rem] leading-relaxed hyphens-auto text-ink">
+      {lang !== "de" && (
+        <p className="mb-8 rounded-tile bg-sand px-4 py-3 text-[0.95rem] text-ink">
+          {textLang === "de" ? (
+            dict.legal.germanOnly
+          ) : (
+            <>
+              {dict.legal.translationNotice}{" "}
+              <a className={linkClass} href={routePath("de", route)} hrefLang="de">
+                {dict.legal.germanVersion}
+              </a>
+            </>
+          )}
+        </p>
+      )}
+      <div lang={HTML_LANG[textLang]} className="text-[0.95rem] leading-relaxed hyphens-auto text-ink">
         {blocks.map((b, i) => {
           if (b.type === "heading") {
             const H = `h${b.level}` as const

@@ -1,0 +1,804 @@
+===============================================================================
+TERMS OF USE FOR smiit ANALYTICS
+General Terms and Conditions for the Provision of Software as a Service
+===============================================================================
+
+Version 1.0 — Last updated: 18 November 2026
+
+§ 1 SCOPE AND CONTRACTING PARTIES
+
+(1) These Terms of Use apply to all contracts for the use of the
+    software-as-a-service application "smiit Analytics" (hereinafter the
+    "Application") between
+
+      smiit GmbH
+      Reiherweg 96
+      89584 Ehingen
+      Register court: Amtsgericht Ulm (Local Court of Ulm), HRB 741965
+      Represented by: Sebastian Grab, Noah Neßlauer
+      VAT ID No.: DE357299821
+
+    (hereinafter the "Provider" or "smiit") and the Customer.
+
+    The Customer is the business that concludes the contract with the
+    Provider. In the Application, the Customer is referred to as "Tenant";
+    both terms have the same meaning in these Terms of Use.
+
+(2) The Application is intended exclusively for entrepreneurs (Unternehmer)
+    within the meaning of § 14 of the German Civil Code (BGB), legal persons
+    under public law and special funds under public law, as well as for
+    businesses domiciled in Switzerland that conclude the contract for
+    business purposes. No contracts are concluded with consumers.
+
+(2a) Businesses domiciled in Switzerland or in Liechtenstein may only conclude
+    the contract if they are liable for VAT there. By registering, the
+    Customer confirms that this is the case. If this is not the case, the
+    Customer shall compensate the Provider for any resulting damage, in
+    particular for taxes that have to be paid subsequently.
+
+(3) Deviating, conflicting or supplementary general terms and conditions of
+    the Customer do not become part of the contract unless the Provider
+    expressly agrees to their validity in text form. This also applies if the
+    Provider performs its services without reservation in the knowledge of
+    such terms and conditions.
+
+(4) The Data Processing Agreement (annex to the contract, available at
+    https://www.smiit-analytics.com/de/dpa/) and the Provider's Privacy Policy
+    (available at https://www.smiit-analytics.com/de/privacy/) apply in
+    addition. The current version of these Terms of Use is available at
+    https://www.smiit-analytics.com/de/terms/. In the event of conflicts
+    between these Terms of Use and the Data Processing Agreement, the Data
+    Processing Agreement takes precedence in matters of data protection law.
+
+
+§ 2 SUBJECT MATTER OF THE CONTRACT AND DESCRIPTION OF SERVICES
+
+(1) For the term of the contract, the Provider makes the Application available
+    to the Customer for use via the internet. The Application serves to
+    analyse business data that the Customer transmits from its bexio company.
+
+(2) The scope of services essentially comprises:
+
+    a) the connection of one or more bexio companies of the Customer via the
+       official bexio interface after prior authorisation by the Customer;
+       each connected bexio company constitutes a "dataset" in the
+       Application;
+    b) the recurring retrieval and storage of the released data in the
+       Provider's data storage, which is segregated by client;
+    c) the preparation of this data into key figures, dimensions and facts;
+    d) the creation, storage and sharing of reports and dashboards;
+    e) an AI-supported analysis function in accordance with § 6;
+    f) the management of user accounts, roles and shares.
+
+(3) The Application is provided as standard software. There is no entitlement
+    to specific functions, to the implementation of individual requirements or
+    to the permanent availability of individual functions, unless expressly
+    agreed otherwise. The Provider is entitled to further develop and adapt
+    the Application; § 19 remains unaffected.
+
+(4) The Provider owes the provision of the Application at the point of
+    delivery. The point of delivery is the exit point of the data centre used
+    by the Provider. The Customer's internet connection and its end devices
+    and software are not part of the subject matter of the contract.
+
+(5) The Application requires a current version of a common web browser. The
+    Provider supports the current and the previous major version of the
+    browsers Chrome, Edge, Firefox and Safari.
+
+
+§ 3 CONCLUSION OF THE CONTRACT, REGISTRATION, TRIAL PERIOD
+
+(1) The Provider distributes the Application via the bexio Marketplace, which
+    is operated by bexio AG (hereinafter the "Marketplace"), and through
+    direct sales.
+
+    Irrespective of the sales channel, the contract for the use of the
+    Application is concluded exclusively between the Customer and the
+    Provider, namely upon completion of the registration in the Application,
+    during which the Customer accepts these Terms of Use and the Data
+    Processing Agreement. The Customer likewise concludes a paid subscription
+    with the Provider in the Application.
+
+(1a) The Marketplace serves exclusively to draw attention to the Application
+    and to refer customers to the Provider. bexio AG does not become a party
+    to the contract and does not provide any services under this contract. The
+    Provider itself handles invoicing and payment collection (§ 11(8)).
+
+(2) When registering, the Customer must provide truthful and complete
+    information and update it without undue delay in the event of changes. The
+    e-mail address provided during registration must be confirmed.
+
+(3) By registering, the Customer confirms that it has taken note of these
+    Terms of Use and that they apply, and confirms the conclusion of the Data
+    Processing Agreement. The Provider records the time and version of the
+    documents accepted in each case.
+
+(4) The Provider offers a free trial period. The following applies:
+
+    a) The trial period is 30 days from activation.
+    b) During the trial period, either party may terminate the contract at any
+       time without observing a notice period.
+    c) The Provider may restrict the range of functions during the trial
+       period.
+    d) No costs are incurred during the trial period.
+    e) After the trial period has expired, the Customer may only continue to
+       use the Application if it concludes a paid subscription in the
+       Application. There is no automatic conversion into a paid subscription.
+       If the Customer does not conclude a subscription, access is blocked
+       when the trial period expires; § 14 applies accordingly to the
+       Customer's data.
+    f) Warranty is excluded for the trial period; the Provider's liability is
+       governed by § 16(6).
+
+
+§ 4 WORKSPACE, USER ACCOUNTS AND ROLES
+
+(1) Use takes place within a work area ("workspace") assigned to the Customer
+    (Tenant). The Customer designates at least one person as the holder
+    ("Owner") of the workspace.
+
+(2) The Application has the roles "Owner", "Admin" and "Member" with graduated
+    permissions. The Customer is solely responsible for deciding to which
+    persons it grants access and which role it assigns to them. It ensures
+    that permissions comply with the principle of necessity and are withdrawn
+    without undue delay when persons leave.
+
+(3) User accounts are personal. Disclosing login credentials to third parties
+    and the shared use of one user account by several persons are not
+    permitted. The Customer must oblige its Users accordingly.
+
+(4) The Customer must keep login credentials secret and protect them against
+    access by third parties. If it is suspected that an unauthorised person
+    has obtained knowledge of them, the Customer must inform the Provider
+    without undue delay and change the login credentials concerned.
+
+(5) Sign-in requires two-factor authentication for all Users with a one-time
+    code sent by e-mail. A User can save a device as trusted for 30 days; on
+    this device, the one-time code is not required for that period.
+
+(6) Invitations to a workspace are sent by e-mail to the address provided by
+    the Customer. The Customer ensures that the addresses entered are correct.
+    The Provider points out that invitation links remain valid until they are
+    accepted or revoked by the Customer; the Customer must revoke invitations
+    that are no longer needed.
+
+
+§ 5 CONNECTION TO bexio
+
+(1) The connection to bexio is established exclusively at the Customer's
+    instigation by granting an authorisation via the bexio authorisation
+    procedure.
+
+(1a) The authorisation is granted uniformly for the entire scope used by the
+    Application. A selection of individual data areas is not provided for; the
+    Customer can only grant the connection as a whole or refrain from it as a
+    whole. The data areas this covers are set out in Annex 1, Section 5.2 of
+    the Data Processing Agreement. Whether individual areas can actually be
+    retrieved also depends on which modules and permissions exist in the
+    Customer's bexio company.
+
+(2) bexio is not a sub-processor of the Provider, but a service used by the
+    Customer within its own area of responsibility. The Customer's contractual
+    relationship with bexio remains unaffected by this contract.
+
+(3) The Provider retrieves data from the Customer's bexio company on a
+    read-only basis. There is no write access to the bexio company.
+
+(4) The Provider does not owe the availability, completeness or accuracy of
+    the data and interfaces provided by bexio. If bexio changes, restricts or
+    discontinues its interface, this may impair the range of functions of the
+    Application. The Provider will inform the Customer of this without undue
+    delay and endeavour to make an adjustment. If a function ceases to be
+    available permanently and to a significant extent for this reason, the
+    Customer has a special right of termination under § 13(6).
+
+(5) The Customer is obliged to maintain the authorisation for as long as it
+    wishes to use the Application. If the authorisation expires or is revoked,
+    no data is retrieved; the Provider informs the Customer by e-mail that the
+    connection needs to be re-established. In this case, the data already
+    stored is retained and is no longer updated; it is not deleted for this
+    reason alone.
+
+(6) If the Customer deletes a dataset or its entire workspace in the
+    Application, the Provider deletes the associated data automatically within
+    four hours. If the Customer wishes to have stored data removed without
+    terminating the contract, it must delete the dataset concerned; merely
+    revoking the bexio authorisation is not sufficient for this purpose. For
+    backup copies, § 14(3), second sentence, applies accordingly.
+
+
+§ 6 AI-SUPPORTED ANALYSIS FUNCTIONS
+
+(1) The Application contains an analysis function based on a large language
+    model ("AI Analyst"). Users can ask questions about their data in natural
+    language; for this purpose, the language model generates database queries,
+    evaluates their results and formulates an answer.
+
+(2) The Provider expressly points out that this is an AI system and that the
+    answers are generated by a language model. This notice is also displayed
+    to the User within the Application (transparency obligation under Art. 50
+    of Regulation (EU) 2024/1689 — AI Act).
+
+(3) To answer a question, the question, a descriptive model of the available
+    data structure and the results of the generated queries (key figures and
+    limited extracts of data rows) are transmitted to the language model. In
+    doing so, names and e-mail addresses of persons are pseudonymised by
+    default and free texts are not transmitted; personnel data is only
+    transmitted after separate approval. The Customer can lift the
+    pseudonymisation step by step via the levels "Names", "Names + texts" and
+    "Everything". Details are set out in the Data Processing Agreement.
+
+(4) The Provider uses models from OpenAI as the language model, which it uses
+    via OpenAI's European service; the requests are processed in the European
+    Economic Area and in Switzerland. Insofar as data is processed outside
+    these states in individual cases, this takes place on the basis of the
+    transfer mechanisms under Chapter V GDPR and Art. 16 FADP specified in the
+    Data Processing Agreement. The transmitted data is not used to train
+    models of the Provider or of the model providers.
+
+(5) The AI Analyst is switched off by default. It is switched on for the
+    entire workspace by an Owner after the Owner has confirmed a notice about
+    the data transmitted; the release of personnel data and each lifting of
+    the pseudonymisation each require a separate confirmation. The Customer
+    can switch the function off again at any time. As long as it is switched
+    off, no data is transmitted to the model provider.
+
+(6) Language models can produce inaccurate, incomplete or misleading results.
+    The Provider gives no warranty for the substantive accuracy, completeness
+    or suitability of the analyses generated by the AI Analyst. The Customer
+    is obliged to check results independently for plausibility before using
+    them — in particular before making economic, legal or personnel decisions.
+
+(7) The AI Analyst does not make any automated decisions within the meaning of
+    Art. 22 GDPR. The Customer undertakes not to use the Application as the
+    sole basis for decisions that produce legal effects concerning natural
+    persons or similarly significantly affect them, in particular not for
+    decisions on the recruitment, promotion, remuneration or termination of
+    employment relationships.
+
+(8) The Provider may change the language model used and its provider. If this
+    constitutes a change of sub-processor, the procedure is governed by the
+    Data Processing Agreement.
+
+
+§ 7 RIGHTS OF USE
+
+(1) For the term of the contract, the Provider grants the Customer the
+    non-exclusive, non-sublicensable and non-transferable right to use the
+    Application via the internet to the contractually agreed extent.
+
+(2) The software is not handed over to the Customer. The Customer has no claim
+    to the release of the program code.
+
+(3) The Customer may use the Application only for its own business purposes.
+    Use for third parties, in particular by way of data centre operation,
+    sub-letting or the analysis of third-party data for a fee, requires the
+    prior consent of the Provider in text form. The analysis of data of
+    affiliated companies within the meaning of §§ 15 et seq. of the German
+    Stock Corporation Act (AktG) is permitted.
+
+(4) The Customer is prohibited from reverse engineering, decompiling or
+    disassembling the Application, unless this is mandatorily permitted by
+    law, from circumventing security mechanisms and from querying the
+    Application automatically in a manner that goes beyond the intended use.
+
+(5) All rights to the Application, its structure, its data model and its
+    design remain with the Provider. All rights to the data contributed by the
+    Customer remain with the Customer.
+
+(6) The Provider processes the data retrieved via the bexio connection and all
+    content that the Customer and its Users enter in the Application (together
+    "Customer Data") exclusively for the provision of its services and not for
+    its own purposes.
+
+    This does not apply to the account and usage data of the Users (in
+    particular name, e-mail address and the type and time of the functions
+    used). The Provider processes this data as a Controller in its own right,
+    also for usage statistics, capacity planning and the improvement of the
+    Application; details are set out in the Privacy Policy. This data is not
+    sold or otherwise disclosed to third parties.
+
+
+§ 8 OBLIGATIONS AND DUTIES OF THE CUSTOMER
+
+(1) The Customer is responsible for the lawfulness of the data that it
+    contributes and that is transmitted via the bexio connection. It ensures
+    that it is entitled to have this data processed by the Provider.
+
+(2) The Customer acknowledges that, owing to the uniform scope of the
+    connection under § 5(1a), the Application also processes the following
+    data, insofar as its bexio company contains such data, and that it cannot
+    deselect these categories individually:
+
+    a) employee data, including absences, time and holiday balances and
+       recorded working hours;
+    b) information that may allow conclusions to be drawn about health data,
+       insofar as reasons for absence are recorded accordingly in bexio;
+    c) internal cost rates and charge-out rates relating to individual
+       employees.
+
+(3) As the Controller under data protection law, the Customer is obliged,
+    before granting the authorisation, to check whether there is a legal basis
+    for all data categories covered by paragraph 2 and to take the necessary
+    measures. These include in particular:
+
+    a) informing the data subjects in accordance with Art. 13 and 14 GDPR;
+    b) involving an existing employee representative body, insofar as the
+       analysis of working time or performance data is subject to
+       co-determination (in Germany, in particular § 87(1) no. 6 of the German
+       Works Constitution Act (BetrVG));
+    c) checking whether a data protection impact assessment must be carried
+       out under Art. 35 GDPR.
+
+    In this respect, the Provider does not owe any legal advice.
+
+(4) The Customer must not use the Application to process unlawful content or
+    to violate applicable law.
+
+(5) The Customer indemnifies the Provider against third-party claims based on
+    a culpably unlawful use of the Application by the Customer or by Users
+    attributable to it, including reasonable costs of legal defence. The
+    Provider will inform the Customer of the claim without undue delay and
+    give it the opportunity to comment.
+
+(6) The Customer must report defects without undue delay in text form,
+    describing the circumstances in which they occur as precisely as possible.
+
+(7) The Customer is responsible for backing up the data that it wishes to
+    continue using outside the Application. For this purpose, the Application
+    provides the following export functions: the export of the data of
+    individual report elements and of the results of the AI Analyst as a CSV
+    file, and the export of a User's own account data. A full export of a
+    workspace or a dataset is not provided for; the original data remains in
+    the Customer's bexio company.
+
+
+§ 9 USAGE LIMITS
+
+(1) The scope of the Application is in principle not limited in quantity. In
+    particular, the following are not limited:
+
+    a) the number of connected datasets — the remuneration is calculated per
+       dataset (§ 11(1));
+    b) the number of user accounts — the remuneration is calculated per User
+       beyond the first (§ 11(2));
+    c) the volume of the data analysed;
+    d) the frequency of data updates.
+
+(2) By way of derogation, the use of the AI Analyst (§ 6) is limited to a
+    monthly budget. The budget is included in the remuneration under § 11 and
+    is not charged separately; there is currently no option to extend it
+    against payment.
+
+    The budget amounts to USD 5 in model costs per workspace and calendar
+    month and is consumed regardless of which User makes the request. It
+    renews at the beginning of each calendar month, determined by the time
+    zone stored in the workspace settings; unused portions expire and are not
+    reimbursed. The Provider may set a different budget for individual
+    workspaces. Once the budget is exhausted, the AI Analyst is not available
+    until the beginning of the following month; the other functions of the
+    Application remain usable without restriction.
+
+    The Provider shows the scope of the budget and the current consumption in
+    the Application. As this is a free additional function, the Provider may
+    adjust its scope; § 2(3) applies accordingly.
+
+(3) The Provider reserves the right to adjust the contract in the event that
+    the use by an individual Customer causes disproportionate effort. Such a
+    case exists if the costs attributable to the Customer for data centre,
+    database and model services exceed, in three consecutive calendar months,
+    the net remuneration agreed for the same period.
+
+(4) If the case under paragraph 3 occurs, the Provider will notify the
+    Customer of this in text form, set out the attributable costs and submit
+    to the Customer an offer to adjust the contract. If no agreement is
+    reached within 30 calendar days of receipt of the notice, the Provider is
+    entitled to end the contract under § 13(5)(a) with effect from the end of
+    the following calendar month. Remuneration already paid is refunded pro
+    rata for the period after the termination takes effect.
+
+(5) The Provider is entitled to throttle or temporarily reject requests
+    insofar as this is necessary to prevent overload or misuse.
+
+
+§ 10 AVAILABILITY, MAINTENANCE AND SUPPORT
+
+(1) The Provider provides the Application with commercially reasonable
+    efforts. No specific availability rate is promised or owed.
+
+(2) The Provider is entitled to take the Application temporarily out of
+    operation for maintenance work. Where possible, the Provider announces
+    planned maintenance work that is expected to have a significant impact at
+    least 48 hours in advance by e-mail or within the Application and, where
+    possible, carries it out outside normal business hours.
+
+(3) The Provider may carry out urgent measures to avert security risks or to
+    maintain operational security at any time and without prior notice.
+
+(4) Periods during which the Application cannot be reached for reasons for
+    which the Provider is not responsible — in particular force majeure,
+    disruptions of the internet, failures of upstream suppliers or disruptions
+    at bexio — do not give rise to any claims by the Customer.
+
+(5) The Provider provides support by e-mail to kontakt@smiit.de during normal
+    business hours. Response times are not promised unless separately agreed.
+
+
+§ 11 REMUNERATION AND INVOICING
+
+(1) DATASET FEE. The remuneration is based on the number of connected
+    datasets. A dataset is a bexio company connected to the Application. Per
+    dataset:
+
+        Monthly plan (§ 13(1)(a)):    CHF 59.00 per calendar month
+        Annual plan (§ 13(1)(b)):    CHF 590.00 per contract year
+
+(2) USER FEE. The first User per Tenant is included in the dataset fee. For
+    each additional User, the remuneration is:
+
+        Monthly plan (§ 13(1)(a)):     CHF 8.00 per calendar month
+        Annual plan (§ 13(1)(b)):     CHF 96.00 per contract year
+
+    A User is charged only once per Tenant, regardless of how many datasets of
+    the same Tenant the User has access to.
+
+(3) CALCULATION BY THE DAY. Datasets and Users are charged for each calendar
+    day on which they were connected or set up, respectively; a calendar day
+    counts if the dataset or User existed on that day.
+
+    a) In the monthly plan, the amount per dataset or User is the monthly
+       price under paragraph 1 or 2, multiplied by the number of these days
+       and divided by the number of days in the calendar month. This also
+       applies to the first month from the conclusion of the subscription.
+    b) In the annual plan, the amount for a dataset or User added during the
+       annual term is the annual price under paragraph 1 or 2, multiplied by
+       the number of remaining days of the annual term and divided by the
+       number of its days.
+
+    The total amount of an invoice is rounded commercially to CHF 0.01.
+
+(4) PRICE PREVIEW. When the subscription is concluded, the Application shows
+    the Customer the expected amount — in the monthly plan per calendar month,
+    in the annual plan per contract year — on the basis of the current number
+    of datasets and Users. If the Customer adds or removes datasets or Users,
+    the Application shows, before the change, its effect on the current and
+    the subsequent invoices. The preview is non-binding; the calculation under
+    paragraph 3 is decisive.
+
+(5) The AI Analyst (§ 6) can be used without separate remuneration within the
+    budget included under § 9(2).
+
+(6) TAXES. All prices are net, excluding VAT (Umsatzsteuer or Mehrwertsteuer).
+    The Provider is a business domiciled in Germany. The following applies:
+
+    a) The Provider does not charge VAT to Customers domiciled outside
+       Germany, in particular in Switzerland and in Liechtenstein. The place
+       of supply is in the Customer's country; any tax arising there is owed
+       by the Customer itself, which pays it on its own responsibility (shift
+       of the tax liability, "reverse charge"; in Switzerland and in
+       Liechtenstein, the reverse-charge acquisition tax (Bezugsteuer), which
+       is accounted for by the Customer liable for VAT under § 1(2a)).
+       Customers domiciled in another member state of the European Union
+       notify the Provider of their VAT identification number.
+    b) The Provider additionally charges statutory VAT to Customers domiciled
+       in Germany.
+    c) If, under the law of the country in which the Customer is domiciled,
+       the Provider is obliged to levy the tax there itself, it charges that
+       tax additionally.
+
+    The Customer notifies the Provider of its UID or VAT identification
+    number, if any.
+
+(7) TIME OF INVOICING.
+
+    a) In the monthly plan, the dataset and user fees are invoiced in arrears
+       at the end of each calendar month.
+    b) In the annual plan, the dataset and user fees for the datasets
+       connected and the Users set up at the start of the annual term are
+       invoiced twelve months in advance. If datasets or Users are added
+       during the annual term, they are charged under paragraph 3(b) until the
+       end of the current annual term and invoiced at the end of the calendar
+       month in which they were added; upon renewal, all datasets and Users
+       are invoiced together for twelve months. If the Customer removes
+       datasets or Users during the annual term, the remuneration already
+       invoiced is not refunded; they are no longer charged from the next
+       renewal.
+
+(8) INVOICING AND PAYMENT. The Provider issues the invoice to the Customer in
+    Swiss francs and in electronic form by e-mail to the billing address
+    specified by the Customer; invoices may be created and sent via PayPal's
+    invoicing service. Invoices are payable without deduction within 14 days
+    of the invoice date, by bank transfer to the account stated in the invoice
+    or via the payment methods offered in the invoice. The Customer provides
+    its complete billing address and keeps it up to date.
+
+    The invoice shows the dataset and user fees separately, including the days
+    charged per dataset and User. The Provider makes the same breakdown
+    available to the Customer in the Application. The Customer addresses any
+    objections to the calculation to the Provider.
+
+(9) DEFAULT IN PAYMENT. If the Customer fails to settle a due invoice despite
+    a reminder setting a reasonable deadline, the Provider is entitled to
+    block access to the Application until the outstanding amounts have been
+    settled. The Provider announces the block in advance in text form. The
+    Customer's payment obligation continues during the block; further
+    statutory rights of the Provider remain unaffected.
+
+
+§ 12 PRICE ADJUSTMENT
+
+(1) The Provider is entitled to adjust the prices with effect for the future,
+    but no earlier than twelve months after the start of the contract and
+    thereafter no more than once per twelve-month period.
+
+(2) A price adjustment requires a change in the Provider's costs of providing
+    the services, in particular the costs of data centre services, model
+    providers, licences, personnel or charges imposed by law. Cost reductions
+    must be offset against cost increases. An increase must not serve to
+    increase profit beyond covering increased costs.
+
+(3) The Provider notifies the Customer of the adjustment in text form at least
+    eight weeks before it takes effect and in doing so points out the special
+    right of termination under paragraph 4.
+
+(4) If the increase exceeds five per cent of the previous remuneration, the
+    Customer may, until the adjustment takes effect, terminate the contract in
+    text form with effect from that date. If the Customer does not exercise
+    this right, the adjustment is deemed agreed.
+
+
+§ 13 TERM AND TERMINATION
+
+(1) The Provider offers the subscription in two plan variants:
+
+    a) MONTHLY PLAN: indefinite term, invoicing monthly in arrears (§
+       11(7)(a)). The Customer may terminate with effect from the end of each
+       calendar month.
+    b) ANNUAL PLAN: term of twelve months from conclusion, at the prices of
+       the annual plan (§ 11(1) and (2)), under which the dataset fee is
+       reduced compared with the monthly plan; invoicing annually in advance
+       (§ 11(7)(b)). The term is extended by a further twelve months in each
+       case unless the Customer terminates by the last day of the current
+       annual term.
+
+    A switch from the monthly plan to the annual plan is possible at any time
+    and takes effect at the beginning of the following calendar month. A
+    switch from the annual plan to the monthly plan takes effect at the end of
+    the current annual term.
+
+    The Provider may end the subscription only under paragraphs 4 and 5 and
+    under § 19(3).
+
+(2) The Customer terminates via the termination function provided for this
+    purpose in the Application. This also applies to the special rights of
+    termination under these Terms of Use and under the Data Processing
+    Agreement; the Customer may alternatively declare these to the Provider in
+    text form.
+
+(3) After termination, the Customer retains access to the Application until
+    the end of the period with effect from which the termination takes effect;
+    when that period expires, the contract for the use of the Application
+    ends. Datasets and Users are invoiced under § 11 until that date.
+
+(4) The right of both parties to extraordinary termination for good cause
+    under § 314 BGB remains unaffected. Good cause for the Provider exists in
+    particular if the Customer
+
+    a) seriously or repeatedly violates § 7(3) or (4) or § 8(4);
+    b) uses the Application in a manner that significantly impairs its
+       operation or its use by other customers, and continues to do so after a
+       warning.
+
+(5) In addition to extraordinary termination, the Provider is entitled to
+    bring about the end of the subscription for the following objective
+    reasons, which are listed exhaustively:
+
+    a) where a case under § 9(3) (disproportionate effort) exists, after the
+       period under § 9(4) has expired without success, with one month's
+       notice to the end of a month;
+    b) in the event of the complete discontinuation of the smiit Analytics
+       service, with three months' notice to the end of a month;
+    c) if the provision of the services becomes permanently impossible or
+       unreasonable for the Provider for legal or factual reasons, in
+       particular because an upstream service essential for operation — namely
+       the bexio interface — permanently ceases to be available, with one
+       month's notice to the end of a month.
+
+    The Provider declares the termination to the Customer in text form.
+    Remuneration already paid for the period after the termination takes
+    effect is refunded to the Customer pro rata. Any further ordinary
+    termination by the Provider during a current annual term is excluded.
+
+(6) The Customer is entitled to terminate with one month's notice to the end
+    of a month if an essential function of the Application permanently and
+    significantly ceases to be available for the reasons stated in § 5(4). The
+    special rights of termination under § 12(4), § 19(3) and § 20(4) remain
+    unaffected.
+
+
+§ 14 CONSEQUENCES OF THE TERMINATION OF THE CONTRACT
+
+(1) When the termination takes effect, the Customer's right of use ends.
+    Access to the Application is deactivated.
+
+(2) The Provider retains the Customer's data for a period of 30 calendar days
+    after the end of the contract for the purpose of export. For this period,
+    the Customer receives, upon request, access limited to the export
+    functions under § 8(7).
+
+(3) After the period under paragraph 2 has expired, the Provider deletes all
+    Customer Data. Backup copies are overwritten within the regular backup
+    cycle of 35 days; until then, the data remains blocked and is not
+    processed. Details and exceptions due to statutory retention obligations
+    are set out in the Data Processing Agreement.
+
+(4) At the request of the Customer, which must be made in text form before the
+    period under paragraph 2 expires, the Provider confirms the deletion in
+    text form.
+
+(5) The Provider is not obliged to retain data beyond the period under
+    paragraph 2. The Customer is responsible for exporting its data in good
+    time.
+
+
+§ 15 WARRANTY
+
+(1) The provision of the Application is governed by the law on lease (§§ 535
+    et seq. BGB). The Provider's strict liability, regardless of fault, for
+    defects that already existed when the contract was concluded under §
+    536a(1), first alternative, BGB is excluded.
+
+(2) The Provider warrants that the Application essentially corresponds to the
+    description of services under § 2 during the term of the contract.
+
+(3) Insignificant deviations from the agreed quality and impairments based on
+    circumstances under § 10(4) do not constitute a defect.
+
+(4) The Customer must give the Provider the opportunity to remedy defects
+    within a reasonable period. A reduction of the remuneration by way of
+    self-help is excluded; claims for reduction must be asserted against the
+    Provider.
+
+(5) Claims for defects become time-barred twelve months after the start of the
+    statutory limitation period. This does not apply to claims under § 16(1)
+    and (2) or to claims for fraudulently concealed defects.
+
+
+§ 16 LIABILITY
+
+(1) The Provider is liable without limitation for damage resulting from injury
+    to life, body or health based on a breach of duty by the Provider or one
+    of its legal representatives or vicarious agents, as well as for damage
+    based on intent or gross negligence.
+
+(2) The Provider is likewise liable without limitation within the scope of a
+    guarantee it has assumed and under the German Product Liability Act
+    (Produkthaftungsgesetz).
+
+(3) In the event of a slightly negligent breach of an essential contractual
+    obligation, the Provider's liability is limited in amount to the
+    foreseeable damage typical for the contract. Essential contractual
+    obligations are obligations whose fulfilment makes the proper performance
+    of the contract possible in the first place and on whose observance the
+    Customer may regularly rely.
+
+(4) Liability under paragraph 3 is limited in total to the amount of the net
+    remuneration owed for the use of the Application in the twelve months
+    preceding the event giving rise to the damage.
+
+(5) In all other respects, the Provider's liability is excluded.
+
+(6) For the free trial period under § 3(4), the Provider is liable only for
+    intent and gross negligence and under paragraphs 1 and 2.
+
+(7) For the loss of data, the Provider is liable, in accordance with the
+    preceding paragraphs, only up to the amount of the effort that would have
+    been required to restore the data if the Customer had backed up its data
+    properly and regularly.
+
+(8) The above limitations of liability also apply in favour of the Provider's
+    legal representatives, employees and vicarious agents.
+
+(9) The above provisions do not entail any change in the burden of proof to
+    the detriment of the Customer.
+
+(10) Liability under Art. 82 GDPR remains unaffected by the above provisions.
+
+
+§ 17 CONFIDENTIALITY
+
+(1) The parties undertake to keep secret all confidential information of the
+    other party that becomes known to them in the course of the contractual
+    relationship and to use it only for the performance of this contract.
+
+(2) Confidential information includes in particular the Customer's data,
+    pricing terms, technical information about the Application and all
+    information marked as confidential.
+
+(3) The obligation does not apply to information that is publicly known,
+    becomes publicly known without a breach of this obligation, was already
+    known to the receiving party or must be disclosed due to a statutory
+    obligation or an official order.
+
+(4) The obligation continues for a period of three years after the termination
+    of the contract. Obligations under data protection law continue to apply
+    without time limit.
+
+(5) The Provider may name the Customer as a reference customer only with the
+    Customer's prior consent in text form.
+
+
+§ 18 DATA PROTECTION
+
+(1) Insofar as the Provider processes personal data on behalf of the Customer,
+    the parties conclude the Data Processing Agreement under Art. 28 GDPR
+    attached as an annex. It forms an essential part of the contract.
+
+(2) Insofar as the Provider processes personal data for its own purposes — in
+    particular in the context of initiating the contract, performing the
+    contract and operating the user accounts — it is itself the Controller.
+    Details are set out in the Provider's Privacy Policy.
+
+(3) The Customer is obliged to inform the data subjects within its area of
+    responsibility about the processing by the Provider.
+
+
+§ 19 CHANGES TO THESE TERMS OF USE
+
+(1) The Provider is entitled to amend these Terms of Use with effect for the
+    future insofar as the amendment is necessary to adapt them to a change in
+    the legal situation, to a change in supreme court case law or to a change
+    in the range of functions, and the Customer is not unreasonably
+    disadvantaged as a result.
+
+(2) The Provider notifies the Customer of amendments in text form at least six
+    weeks before they take effect. The notification contains the amended
+    provisions, the date on which they take effect and a notice of the right
+    to object and its consequences.
+
+(3) If the Customer does not object in text form within six weeks of receipt
+    of the notification, the amendments are deemed accepted. If the Customer
+    objects in due time, the contract continues on the previous terms; in this
+    case, the Provider is entitled to terminate the contract with effect from
+    the date on which the amendment takes effect, but no earlier than with
+    effect from the end of a current annual term.
+
+(4) Amendments concerning the subject matter of the contract or the
+    remuneration cannot be made under this provision; § 12 or a separate
+    agreement applies to such amendments.
+
+
+§ 20 FINAL PROVISIONS
+
+(1) The law of the Federal Republic of Germany applies, excluding the UN
+    Convention on Contracts for the International Sale of Goods (CISG).
+
+(2) For Customers domiciled in Switzerland, the following applies: The choice
+    of German law does not affect mandatory provisions of Swiss law insofar as
+    these apply under Swiss private international law. With regard to data
+    protection, the provisions of the Data Processing Agreement on the Swiss
+    Federal Act on Data Protection (FADP) apply in addition.
+
+(3) The exclusive place of jurisdiction for all disputes arising from or in
+    connection with this contract is Ehingen, provided that the Customer is a
+    merchant (Kaufmann), a legal person under public law or a special fund
+    under public law, or has no general place of jurisdiction in Germany. The
+    Provider is also entitled to bring an action at the Customer's general
+    place of jurisdiction.
+
+(4) The Customer may transfer rights and obligations under this contract to
+    third parties only with the prior consent of the Provider in text form.
+    The Provider is entitled to transfer the contract in the context of a
+    universal succession or a sale of the business unit; in this case, the
+    Customer may terminate within four weeks of notification in text form.
+
+(5) Amendments and supplements to this contract require text form. This also
+    applies to any amendment of this text form requirement.
+
+(6) Should any provision of this contract be or become invalid, the validity
+    of the remaining provisions remains unaffected.
+
+
+===============================================================================
+END OF THE TERMS OF USE
+===============================================================================

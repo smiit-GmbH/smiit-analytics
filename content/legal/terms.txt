@@ -233,9 +233,10 @@ Fassung 1.0 — Stand: 18.11.2026
     "Alles" schrittweise aufheben. Einzelheiten regelt der
     Auftragsverarbeitungsvertrag.
 
-(4) Als Sprachmodell setzt der Anbieter Modelle der OpenAI ein. Die
-    Verarbeitung durch den Modellanbieter findet in den Vereinigten Staaten
-    von Amerika statt. Die Übermittlung erfolgt auf
+(4) Als Sprachmodell setzt der Anbieter Modelle der OpenAI ein, die er über den
+    europäischen Dienst von OpenAI nutzt; die Verarbeitung der Anfragen findet
+    im Europäischen Wirtschaftsraum und in der Schweiz statt. Soweit Daten im
+    Einzelfall außerhalb dieser Staaten verarbeitet werden, erfolgt dies auf
     Grundlage der im Auftragsverarbeitungsvertrag bezeichneten
     Übermittlungsmechanismen nach Kapitel V DSGVO und Artikel 16 revDSG. Eine
     Nutzung der übermittelten Daten zum Training von Modellen des Anbieters

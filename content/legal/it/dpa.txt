@@ -1,0 +1,1116 @@
+===============================================================================
+ACCORDO SUL TRATTAMENTO DEI DATI
+ai sensi dell'articolo 28 del Regolamento (UE) 2016/679 (GDPR)
+per l'utilizzo di smiit Analytics
+===============================================================================
+
+Versione 1.0 — Aggiornamento: 18 novembre 2026
+
+PARTI CONTRAENTI
+
+Il presente Accordo è concluso tra
+
+  il Cliente che ha concluso il Contratto principale per l'utilizzo di smiit
+  Analytics e al quale è assegnata la relativa area di lavoro — ossia l'impresa
+  indicata come controparte contrattuale al momento della configurazione
+  dell'area di lavoro; i relativi dati sono memorizzati e consultabili
+  nell'applicazione, nelle impostazioni dell'area di lavoro
+
+  — di seguito "Titolare del trattamento" o "Cliente" —
+
+e
+
+  smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Germania
+  Tribunale del registro: Amtsgericht Ulm, HRB 741965
+  Rappresentata da: Sebastian Grab, Noah Neßlauer
+  N. identificazione IVA: DE357299821
+
+  — di seguito "Responsabile del trattamento" o "Fornitore" —
+
+  — congiuntamente le "Parti" —
+
+Il presente Accordo non richiede una redazione individuale né una
+sottoscrizione autografa; per la sua conclusione si veda il § 1 cpv. da 1 a 3.
+
+
+PREMESSA
+
+Il Responsabile del trattamento fornisce prestazioni al Titolare del
+trattamento conformemente alle Condizioni d'uso di smiit Analytics (Contratto
+principale). Nel farlo, tratta dati personali per conto del Titolare del
+trattamento. Il presente Accordo specifica i diritti e gli obblighi delle Parti
+in materia di protezione dei dati ai sensi dell'art. 28 GDPR. Esso si applica a
+tutte le attività connesse al Contratto principale nelle quali dipendenti del
+Responsabile del trattamento o terzi da esso incaricati entrano in contatto con
+dati personali del Titolare del trattamento.
+
+Il Responsabile del trattamento fornisce la propria prestazione come servizio
+standardizzato per una pluralità di clienti a condizioni tecniche e
+organizzative uniformi. Il presente Accordo è pertanto concepito come documento
+unitario e si applica con contenuto identico a tutti i clienti. L'art. 28,
+par. 9 GDPR consente espressamente la conclusione in formato elettronico; non è
+necessaria una sottoscrizione autografa.
+
+
+§ 1 CONCLUSIONE, OGGETTO, DURATA E AMBITO DI APPLICAZIONE
+
+(1) Il presente Accordo si perfeziona con l'accettazione espressa da parte del
+    Titolare del trattamento nell'applicazione, al momento della configurazione
+    della propria area di lavoro o in un momento successivo. L'accettazione
+    avviene in formato elettronico ai sensi dell'art. 28, par. 9 GDPR. Non è
+    necessaria una sottoscrizione autografa.
+
+(2) L'accettazione è dichiarata da una persona autorizzata a rappresentare il
+    Titolare del trattamento. Con l'accettazione, la persona che agisce
+    dichiara di essere munita dei poteri necessari per concludere il presente
+    Accordo per conto del Titolare del trattamento.
+
+(3) Il Responsabile del trattamento documenta per ciascun Titolare del
+    trattamento il momento dell'accettazione e la versione accettata del
+    presente Accordo. Ogni versione è resa disponibile a un indirizzo
+    consultabile in modo permanente; la versione di volta in volta vigente è
+    consultabile all'indirizzo https://www.smiit-analytics.com/de/dpa/. Il
+    Titolare del trattamento può in qualsiasi momento richiamare
+    nell'applicazione la versione da esso accettata e salvarla come file.
+
+(4) L'oggetto, la natura e la finalità del trattamento, il tipo di dati
+    personali e le categorie di interessati risultano dall'Allegato 1 al
+    presente Accordo.
+
+(5) La durata del presente Accordo corrisponde alla durata del Contratto
+    principale. Gli obblighi di cui al § 12 (cancellazione e restituzione) e al
+    § 4 cpv. 1 (riservatezza) permangono anche dopo la cessazione dell'Accordo.
+
+(6) Il presente Accordo si applica ai trattamenti che rientrano nell'ambito di
+    applicazione territoriale e materiale del GDPR. Ai trattamenti soggetti
+    alla legge federale svizzera sulla protezione dei dati (nLPD) si applica
+    inoltre il § 15.
+
+(7) Nella misura in cui il Fornitore tratta dati personali per finalità
+    proprie, esso è a tale riguardo titolare autonomo del trattamento; il
+    presente Accordo non si applica a tali trattamenti. Ciò riguarda
+    a) i dati anagrafici del Cliente ai fini dell'esecuzione del contratto e
+       della fatturazione, nonché
+    b) i dati dell'account e di utilizzo degli Utenti dell'applicazione (in
+       particolare nome, indirizzo e-mail, dati di accesso nonché tipo e
+       momento delle funzioni utilizzate), che il Fornitore tratta per la
+       gestione degli account utente, per statistiche di utilizzo e per il
+       miglioramento dell'applicazione.
+    Tali dati non vengono venduti né comunicati in altro modo a terzi. I
+    dettagli sono disciplinati dall'Informativa sulla privacy del Fornitore.
+
+
+§ 2 POTERE DI ISTRUZIONE DEL TITOLARE DEL TRATTAMENTO
+
+(1) Il Responsabile del trattamento tratta i dati personali esclusivamente su
+    istruzione documentata del Titolare del trattamento. Ciò vale anche per il
+    trasferimento di dati personali verso un paese terzo o un'organizzazione
+    internazionale, salvo che lo richieda il diritto dell'Unione o degli Stati
+    membri cui è soggetto il Responsabile del trattamento. In tal caso, il
+    Responsabile del trattamento informa il Titolare del trattamento circa tale
+    obbligo giuridico prima del trattamento, a meno che il diritto in questione
+    vieti tale informazione per rilevanti motivi di interesse pubblico.
+
+(2) Le istruzioni sono stabilite in modo esaustivo nel presente Accordo,
+    compresi i suoi allegati, e nel Contratto principale. Le singole istruzioni
+    che se ne discostano richiedono la forma testuale.
+
+(3) Le istruzioni sono impartite dal Titolare del trattamento tramite le
+    persone da esso designate e autorizzate a impartire istruzioni. Il
+    Responsabile del trattamento designa un referente per le istruzioni. La
+    designazione avviene nell'Allegato 4.
+
+(4) La configurazione dell'applicazione da parte del Titolare del trattamento
+    nell'ambito delle funzioni a tal fine previste vale come istruzione. Ciò
+    riguarda in particolare il rilascio e la revoca dell'autorizzazione bexio,
+    l'assegnazione di ruoli e autorizzazioni, la creazione di condivisioni
+    nonché l'attivazione o la disattivazione della funzione di analisi basata
+    sull'IA.
+
+(5) Qualora il Responsabile del trattamento ritenga che un'istruzione violi
+    disposizioni in materia di protezione dei dati, ne informa senza
+    ingiustificato ritardo il Titolare del trattamento. Esso ha la facoltà di
+    sospendere l'esecuzione dell'istruzione in questione finché il Titolare del
+    trattamento non la confermi o la modifichi.
+
+
+§ 3 RESPONSABILITÀ DEL TITOLARE DEL TRATTAMENTO
+
+(1) Il Titolare del trattamento è l'unico responsabile della liceità del
+    trattamento e della tutela dei diritti degli interessati.
+
+(2) Il Titolare del trattamento è responsabile in particolare di
+
+    a) assicurare che il trattamento si fondi su una base giuridica, compresa
+       una base giuridica ai sensi dell'art. 9, par. 2 GDPR qualora siano
+       trattate categorie particolari di dati personali;
+    b) informare gli interessati ai sensi degli artt. 13 e 14 GDPR;
+    c) verificare se debba essere effettuata una valutazione d'impatto sulla
+       protezione dei dati ai sensi dell'art. 35 GDPR e, se del caso,
+       effettuarla;
+    d) coinvolgere l'eventuale rappresentanza dei lavoratori, nella misura in
+       cui ciò sia richiesto dal diritto nazionale, in particolare in caso di
+       analisi di dati relativi all'orario di lavoro e alle prestazioni (in
+       Germania segnatamente ai sensi del § 87 cpv. 1 n. 6 della legge tedesca
+       sull'ordinamento aziendale (BetrVG)).
+
+(3) L'autorizzazione dell'interfaccia bexio avviene in modo unitario per
+    l'intero perimetro descritto nell'Allegato 1, punto 5.2. Non è prevista la
+    selezione di singoli ambiti di dati: il Titolare del trattamento può
+    soltanto concedere il collegamento nel suo complesso oppure non concederlo
+    affatto. Se, all'interno di tale perimetro, singoli ambiti di dati possano
+    effettivamente essere acquisiti dipende inoltre dai moduli e dalle
+    autorizzazioni esistenti nell'azienda bexio del Titolare del trattamento;
+    gli ambiti non disponibili restano inutilizzati.
+
+(4) Il Titolare del trattamento è stato espressamente informato che il
+    collegamento comprende pertanto anche i dati del personale di cui
+    all'Allegato 1, punto 5.2, lett. h, compresi i motivi di assenza, che
+    possono consentire di trarre conclusioni su dati relativi alla salute ai
+    sensi dell'art. 9, par. 1 GDPR. Se il Titolare del trattamento intende
+    evitare tale trattamento, può soltanto non concedere il collegamento e non
+    utilizzare l'applicazione.
+
+(5) Con l'autorizzazione, il Titolare del trattamento impartisce l'istruzione
+    di trattare i dati nell'intero perimetro di cui all'Allegato 1, punto 5.2.
+    Prima di concederla, deve verificare che a tal fine sussista una base
+    giuridica per tutte le categorie di dati interessate.
+
+
+§ 4 OBBLIGHI GENERALI DEL RESPONSABILE DEL TRATTAMENTO
+
+(1) Il Responsabile del trattamento garantisce che le persone autorizzate al
+    trattamento dei dati personali si siano impegnate alla riservatezza o siano
+    soggette a un adeguato obbligo legale di riservatezza. L'impegno permane
+    anche dopo la cessazione dell'attività.
+
+(2) Il Responsabile del trattamento impiega per il trattamento soltanto persone
+    che siano state previamente rese edotte delle pertinenti disposizioni in
+    materia di protezione dei dati.
+
+(3) Il Responsabile del trattamento tratta i dati personali esclusivamente
+    nell'ambito di applicazione del presente Accordo ed esclusivamente per le
+    finalità indicate nell'Allegato 1. Non ha luogo alcun trattamento per
+    finalità proprie, in particolare per l'addestramento di modelli di
+    intelligenza artificiale.
+
+(4) Il Responsabile del trattamento attua le misure tecniche e organizzative di
+    cui al § 5 e le mantiene per tutta la durata dell'Accordo.
+
+(5) Il Responsabile del trattamento informa senza ingiustificato ritardo il
+    Titolare del trattamento qualora un'autorità di controllo adotti nei
+    confronti del Responsabile del trattamento misure che riguardano il
+    trattamento per conto del titolare.
+
+(6) Il Responsabile del trattamento non ha designato un responsabile della
+    protezione dei dati ai sensi degli artt. 37 ss. GDPR. Referente per le
+    questioni in materia di protezione dei dati è la persona indicata
+    nell'Allegato 4, punto 3. Il Responsabile del trattamento comunica al
+    Titolare del trattamento un'eventuale successiva designazione di un
+    responsabile della protezione dei dati, indicandone il nome e i dati di
+    contatto.
+
+(7) Il Responsabile del trattamento tiene un registro di tutte le categorie di
+    attività relative al trattamento svolte per conto del titolare ai sensi
+    dell'art. 30, par. 2 GDPR.
+
+
+§ 5 MISURE TECNICHE E ORGANIZZATIVE
+
+(1) Il Responsabile del trattamento adotta le misure tecniche e organizzative
+    richieste ai sensi dell'art. 32 GDPR. Lo stato di attuazione al momento
+    della conclusione dell'Accordo risulta dall'Allegato 2.
+
+(2) Le misure sono soggette al progresso tecnico. Il Responsabile del
+    trattamento ha la facoltà di adeguarle, purché il livello di protezione
+    dovuto ai sensi dell'art. 32 GDPR non venga ridotto. Le modifiche
+    sostanziali devono essere documentate.
+
+(3) Il Responsabile del trattamento dispone di una procedura per testare,
+    verificare e valutare regolarmente l'efficacia delle misure (art. 32,
+    par. 1, lett. d) GDPR). La verifica avviene quando se ne presenti
+    l'occasione nonché in caso di modifiche sostanziali del trattamento o della
+    tecnologia impiegata.
+
+
+§ 6 SUB-RESPONSABILI DEL TRATTAMENTO
+
+(1) Il Titolare del trattamento concede al Responsabile del trattamento
+    l'autorizzazione generale a ricorrere ad altri responsabili del trattamento
+    (sub-responsabili). I sub-responsabili impiegati al momento della
+    conclusione dell'Accordo risultano dall'Allegato 3 e si intendono
+    autorizzati.
+
+(2) Il Responsabile del trattamento informa il Titolare del trattamento in
+    forma testuale, almeno 30 giorni di calendario prima del previsto ricorso a
+    un nuovo sub-responsabile o della sostituzione di un sub-responsabile
+    esistente, indicandone nome, indirizzo, prestazione e luogo del
+    trattamento.
+
+(3) Il Titolare del trattamento può opporsi alla modifica in forma testuale,
+    per un motivo importante attinente alla protezione dei dati, entro 30
+    giorni di calendario dal ricevimento dell'informazione. L'opposizione deve
+    essere motivata.
+
+(4) In caso di opposizione motivata, le Parti cercheranno una soluzione
+    consensuale. Se non si raggiunge un accordo entro 30 giorni di calendario e
+    il Responsabile del trattamento non è in grado di fornire la prestazione a
+    condizioni ragionevoli senza il sub-responsabile in questione, ciascuna
+    Parte ha il diritto di disdire il Contratto principale con un preavviso di
+    un mese per la fine di un mese. I corrispettivi già pagati vengono
+    rimborsati pro rata temporis.
+
+(5) Il Responsabile del trattamento impone contrattualmente al sub-responsabile
+    obblighi in materia di protezione dei dati corrispondenti a quelli del
+    presente Accordo, in particolare garanzie sufficienti ai sensi
+    dell'art. 28, par. 4 GDPR.
+
+(6) Il Responsabile del trattamento risponde nei confronti del Titolare del
+    trattamento del rispetto, da parte del sub-responsabile, dei suoi obblighi
+    in materia di protezione dei dati.
+
+(7) Non costituiscono ricorso a sub-responsabili ai sensi della presente
+    disposizione le prestazioni accessorie di cui il Responsabile del
+    trattamento si avvale a supporto della propria attività commerciale e che,
+    secondo la loro destinazione, non comportano l'accesso a dati personali del
+    Titolare del trattamento, quali servizi di telecomunicazione, servizi
+    postali, pulizia o manutenzione. Neppure l'applicazione bexio, utilizzata
+    dal Titolare del trattamento stesso, è un sub-responsabile del Responsabile
+    del trattamento.
+
+
+§ 7 LUOGO DEL TRATTAMENTO, TRASFERIMENTI NEI RAPPORTI CON LA SVIZZERA E VERSO
+    PAESI TERZI
+
+(1) Il trattamento ha luogo in data center situati in Svizzera, salvo diversa
+    indicazione nell'Allegato 3. Per la Svizzera esiste una decisione di
+    adeguatezza della Commissione europea ai sensi dell'art. 45 GDPR; per i
+    Titolari del trattamento con sede nell'Unione europea o nello Spazio
+    economico europeo non sono pertanto necessarie garanzie aggiuntive.
+
+(2) I contenuti della funzione di analisi basata sull'IA (Allegato 1) vengono
+    trasferiti al sub-responsabile indicato nell'Allegato 3, OpenAI Ireland
+    Limited, con sede in Irlanda. A tal fine il Responsabile del trattamento
+    utilizza esclusivamente l'endpoint europeo https://eu.api.openai.com/v1 di
+    un progetto con regione di residenza dei dati Europa; OpenAI tratta le
+    richieste all'interno del SEE e della Svizzera. Per i log volti a
+    individuare abusi, che OpenAI conserva fino a 30 giorni, OpenAI non
+    garantisce alcun luogo di conservazione. Con il presente atto il Titolare
+    del trattamento istruisce il Responsabile del trattamento a effettuare tale
+    trasferimento, nella misura in cui la funzione di analisi basata sull'IA
+    sia attivata nella sua area di lavoro (§ 2 cpv. 4).
+
+    La base è costituita dall'OpenAI Data Processing Addendum nella versione di
+    volta in volta vigente (attualmente v.010126). Nella misura in cui OpenAI
+    Ireland Limited trasferisce dati soggetti al diritto in materia di
+    protezione dei dati del SEE o della Svizzera a società collegate o a terzi
+    al di fuori del SEE e della Svizzera, ad esempio i log suddetti, ciò
+    avviene sulla base di contratti con le clausole contrattuali tipo di cui
+    alla decisione di esecuzione (UE) 2021/914 o di una decisione di
+    adeguatezza ai sensi dell'art. 45 GDPR (punto 4.1 dell'Addendum). Non ci si
+    avvale di una certificazione ai sensi dell'EU-US Data Privacy Framework.
+    OpenAI Ireland Limited appartiene a un gruppo societario con sede negli
+    Stati Uniti d'America; una richiesta di consegna dei dati da parte delle
+    autorità statunitensi ai sensi del CLOUD Act (18 U.S.C. § 2713) non è
+    pertanto esclusa nonostante la residenza dei dati.
+
+    Il Responsabile del trattamento ha verificato e documentato il livello di
+    protezione prima di avviare tale impiego e mette tale documentazione a
+    disposizione del Titolare del trattamento su richiesta. Il fornitore del
+    modello non utilizza i contenuti trasferiti per l'addestramento di modelli.
+    La funzione di analisi basata sull'IA è disattivata per impostazione
+    predefinita; finché è disattivata, non ha luogo alcun trasferimento al
+    fornitore del modello. I nomi e gli indirizzi e-mail delle persone vengono
+    pseudonimizzati prima del trasferimento, salvo che il Titolare del
+    trattamento abbia revocato tale misura ai sensi dell'Allegato 1, punto 9.
+
+(3) Per i Titolari del trattamento con sede in Svizzera vale inoltre, a titolo
+    integrativo e di chiarimento, quanto segue:
+
+    a) L'ambiente di trattamento del Responsabile del trattamento si trova in
+       Svizzera (Allegato 3, punto 1). L'acquisizione dei dati dall'azienda
+       bexio del Titolare del trattamento, la loro memorizzazione, le copie di
+       backup e l'invio di messaggi di sistema non costituiscono pertanto una
+       comunicazione all'estero ai sensi dell'art. 16 nLPD.
+
+    b) La comunicazione a OpenAI di cui al cpv. 2 è ammessa poiché gli Stati
+       dell'Unione europea nonché la Norvegia, l'Islanda e il Liechtenstein
+       figurano nell'allegato 1 OPDa quali Stati con una protezione adeguata
+       dei dati (art. 16 cpv. 1 nLPD); nella misura in cui OpenAI tratta i dati
+       in Svizzera, non sussiste alcuna comunicazione all'estero. A un
+       ulteriore trasferimento al di fuori del SEE e della Svizzera si applica
+       il cpv. 2, secondo comma; l'OpenAI Data Processing Addendum comprende
+       espressamente anche i dati soggetti al diritto svizzero in materia di
+       protezione dei dati.
+
+    c) Nella misura in cui Microsoft, nell'ambito dei servizi Azure Front Door
+       o Azure DevOps indicati nell'Allegato 3, punto 1, tratta dati al di
+       fuori della Svizzera, si applicano per analogia i meccanismi di
+       trasferimento indicati nell'Allegato 3, punto 1.
+
+    d) Qualora una delle decisioni di adeguatezza menzionate al cpv. 1, al
+       cpv. 2 o alla lett. b venga meno oppure sia sospesa o limitata, il
+       Responsabile del trattamento ne informa senza ingiustificato ritardo il
+       Titolare del trattamento e passa a un meccanismo di trasferimento
+       ammesso.
+
+(4) Lo spostamento del trattamento verso un paese terzo per il quale non esiste
+    una decisione di adeguatezza è ammesso soltanto se sono soddisfatte le
+    condizioni del capo V del GDPR, in particolare mediante garanzie adeguate
+    ai sensi dell'art. 46 GDPR, e, nei rapporti con la Svizzera, anche le
+    condizioni dell'art. 16 cpv. 2 nLPD. Il Responsabile del trattamento
+    informa il Titolare del trattamento di tale spostamento conformemente al
+    § 6 cpv. 2 e fornisce la prova del relativo meccanismo di trasferimento.
+
+(5) Il Responsabile del trattamento documenta nell'Allegato 3, per ciascun
+    sub-responsabile stabilito in un paese terzo, il meccanismo di
+    trasferimento.
+
+
+§ 8 ASSISTENZA NELL'ESERCIZIO DEI DIRITTI DEGLI INTERESSATI
+
+(1) Il Responsabile del trattamento assiste il Titolare del trattamento con
+    misure tecniche e organizzative adeguate nell'adempimento del suo obbligo
+    di dare seguito alle richieste degli interessati ai sensi del capo III del
+    GDPR.
+
+(2) Qualora un interessato si rivolga direttamente al Responsabile del
+    trattamento, quest'ultimo inoltra senza ingiustificato ritardo la richiesta
+    al Titolare del trattamento e non vi risponde esso stesso.
+
+(3) Il Responsabile del trattamento rettifica o cancella i dati personali o ne
+    limita il trattamento soltanto su istruzione del Titolare del trattamento.
+    Nella misura in cui il Titolare del trattamento può provvedervi
+    autonomamente tramite le funzioni dell'applicazione, l'assistenza consiste
+    nella messa a disposizione di tali funzioni.
+
+(4) Per le prestazioni di assistenza che vanno oltre la messa a disposizione
+    delle funzioni dell'applicazione e che non derivano da una circostanza
+    imputabile al Responsabile del trattamento, quest'ultimo può richiedere un
+    compenso adeguato in base alle proprie tariffe di volta in volta vigenti.
+    Prima di fornire la prestazione, informa il Titolare del trattamento
+    dell'obbligo di compenso.
+
+
+§ 9 NOTIFICA DELLE VIOLAZIONI DEI DATI PERSONALI
+
+(1) Il Responsabile del trattamento notifica al Titolare del trattamento ogni
+    violazione dei dati personali di cui sia venuto a conoscenza, senza
+    ingiustificato ritardo dal momento in cui ne è venuto a conoscenza
+    (art. 33, par. 2 GDPR). Ciò vale anche per le violazioni presso un
+    sub-responsabile, non appena quest'ultimo le abbia notificate al
+    Responsabile del trattamento.
+
+(2) La notifica è effettuata in forma testuale agli indirizzi indicati
+    nell'Allegato 4, punto 2, e contiene, ove disponibili, le informazioni di
+    cui all'art. 33, par. 3 GDPR. Se non tutte le informazioni sono
+    immediatamente disponibili, viene effettuata una prima notifica con le
+    informazioni disponibili; le ulteriori informazioni vengono fornite
+    successivamente senza ingiustificato ritardo.
+
+(3) Il Responsabile del trattamento assiste il Titolare del trattamento
+    nell'adempimento dei suoi obblighi ai sensi degli artt. 33 e 34 GDPR e
+    adotta senza ingiustificato ritardo le misure necessarie per la messa in
+    sicurezza dei dati e per l'attenuazione delle possibili conseguenze
+    negative.
+
+(4) Le notifiche all'autorità di controllo o agli interessati sono effettuate
+    esclusivamente dal Titolare del trattamento.
+
+
+§ 10 ASSISTENZA NELLA VALUTAZIONE D'IMPATTO SULLA PROTEZIONE DEI DATI E NELLA
+     CONSULTAZIONE PREVENTIVA
+
+Il Responsabile del trattamento assiste il Titolare del trattamento, tenendo
+conto della natura del trattamento e delle informazioni a sua disposizione, in
+una valutazione d'impatto sulla protezione dei dati ai sensi dell'art. 35 GDPR
+nonché in una consultazione preventiva ai sensi dell'art. 36 GDPR. Il § 8
+cpv. 4 si applica per analogia.
+
+
+§ 11 DIMOSTRAZIONE DELLA CONFORMITÀ E DIRITTI DI CONTROLLO
+
+(1) Il Responsabile del trattamento mette a disposizione del Titolare del
+    trattamento tutte le informazioni necessarie per dimostrare il rispetto
+    degli obblighi di cui all'art. 28 GDPR.
+
+(2) La dimostrazione è fornita mediante il presente Accordo e i relativi
+    allegati, in particolare mediante l'Allegato 2 (misure tecniche e
+    organizzative) e l'Allegato 3 (sub-responsabili). Tali documenti sono messi
+    a disposizione del Titolare del trattamento con la conclusione
+    dell'Accordo; non è necessaria una specifica richiesta.
+
+    Il Responsabile del trattamento mette a disposizione in forma testuale, su
+    richiesta, ulteriori informazioni nella misura in cui siano necessarie ai
+    fini della dimostrazione ai sensi dell'art. 28, par. 3, lett. h) GDPR. Non
+    sussiste alcun obbligo di ottenere o mantenere certificazioni, attestazioni
+    o rapporti di audit; una certificazione ai sensi dell'art. 42 GDPR è
+    volontaria (art. 42, par. 3 GDPR).
+
+(3) Qualora, nel singolo caso, le prove di cui al cpv. 2 non siano sufficienti,
+    il Titolare del trattamento o un revisore da esso incaricato, vincolato
+    alla riservatezza e che non può essere un concorrente del Responsabile del
+    trattamento, può effettuare una verifica.
+
+    La verifica si svolge MEDIANTE ACCESSO REMOTO (audit da remoto),
+    segnatamente mediante videoconferenza, condivisione dello schermo,
+    dimostrazione di configurazioni e autorizzazioni nonché consultazione di
+    documenti. Il Responsabile del trattamento effettua il trattamento
+    interamente in un ambiente cloud e non gestisce né un proprio data center
+    né propri locali server; un'ispezione di impianti di trattamento presso la
+    sua sede non è pertanto possibile e non è necessaria per la verifica delle
+    misure di cui all'Allegato 2.
+
+    Una verifica nei locali commerciali del Responsabile del trattamento ha
+    luogo soltanto qualora sia dimostrato che l'oggetto della verifica non può
+    essere chiarito mediante accesso remoto, ed è limitata a tale oggetto.
+
+    L'infrastruttura fisica è gestita dal sub-responsabile di cui
+    all'Allegato 3, punto 1. Il Responsabile del trattamento non può concedere
+    l'accesso ai data center di quest'ultimo; la dimostrazione delle misure ivi
+    adottate avviene tramite le certificazioni di tale sub-responsabile.
+
+    Ogni verifica deve essere effettuata con un preavviso di almeno 14 giorni
+    di calendario, durante il normale orario lavorativo e senza perturbare
+    l'attività operativa, ed è limitata a un massimo di una verifica per anno
+    civile. In caso di violazione accertata dei dati personali, la limitazione
+    a una verifica per anno civile non si applica.
+
+(4) Il Responsabile del trattamento può richiedere un compenso adeguato per
+    l'onere di una verifica ai sensi del cpv. 3, salvo che la verifica sia
+    stata causata da una circostanza imputabile al Responsabile del
+    trattamento.
+
+(5) Restano impregiudicati i poteri di controllo delle autorità di controllo
+    competenti.
+
+
+§ 12 CANCELLAZIONE E RESTITUZIONE
+
+(1) Dopo la cessazione del Contratto principale, il Responsabile del
+    trattamento conserva i dati personali per un periodo di 30 giorni di
+    calendario ai fini della loro esportazione da parte del Titolare del
+    trattamento.
+
+(2) Decorso il termine di cui al cpv. 1, il Responsabile del trattamento
+    cancella tutti i dati personali del Titolare del trattamento. Le copie di
+    backup esistenti vengono sovrascritte nell'ambito del regolare ciclo di
+    backup; fino ad allora i dati sono bloccati per qualsiasi trattamento. Il
+    regolare ciclo di backup è di 35 giorni.
+
+(3) Fino alla scadenza del termine di cui al cpv. 1, il Titolare del
+    trattamento può richiedere in forma testuale la restituzione dei dati in un
+    formato strutturato, di uso comune e leggibile da dispositivo automatico.
+
+(4) La documentazione che serve a dimostrare il trattamento dei dati conforme
+    all'incarico e regolare, nonché i dati soggetti a obblighi legali di
+    conservazione, possono essere conservati dal Responsabile del trattamento
+    oltre la cessazione dell'Accordo conformemente ai rispettivi termini di
+    conservazione. Per la durata della conservazione, il trattamento di tali
+    dati è limitato.
+
+(5) Su richiesta, il Responsabile del trattamento conferma la cancellazione in
+    forma testuale.
+
+(6) Durante la vigenza del Contratto principale vale quanto segue:
+
+    a) Se il Titolare del trattamento cancella nell'applicazione un set di dati
+       (un'azienda bexio collegata) o l'intera propria area di lavoro, il
+       Responsabile del trattamento cancella automaticamente i relativi dati
+       personali entro quattro ore. La cancellazione vale come istruzione ai
+       sensi del § 2 cpv. 4.
+    b) Se l'autorizzazione bexio scade, non riesce o viene revocata, viene meno
+       soltanto l'ulteriore acquisizione di dati. I dati già memorizzati
+       restano conservati fino alla loro cancellazione ai sensi della lett. a o
+       del cpv. 2.
+    c) Alle copie di backup si applica per analogia il cpv. 2, secondo periodo.
+
+
+§ 13 ULTERIORI OBBLIGHI
+
+(1) Il Responsabile del trattamento informa senza ingiustificato ritardo il
+    Titolare del trattamento qualora venga a conoscenza di circostanze che
+    mettono a rischio la corretta esecuzione del presente Accordo.
+
+(2) Il Responsabile del trattamento garantisce la separazione dei dati dei
+    diversi Titolari del trattamento (separazione dei tenant) mediante le
+    misure descritte nell'Allegato 2.
+
+
+§ 14 RESPONSABILITÀ
+
+(1) Alla responsabilità delle Parti nei rapporti esterni si applica l'art. 82
+    GDPR.
+
+(2) Nei rapporti interni si applica la disciplina della responsabilità prevista
+    dal Contratto principale, nella misura in cui l'art. 82 GDPR non vi si
+    opponga.
+
+(3) Il Responsabile del trattamento non risponde dei danni derivanti dal
+    mancato adempimento, da parte del Titolare del trattamento, dei suoi
+    obblighi di cui al § 3.
+
+
+§ 15 DISPOSIZIONI INTEGRATIVE PER LA SVIZZERA
+
+(1) Nella misura in cui il trattamento è soggetto alla legge federale svizzera
+    sulla protezione dei dati del 25 settembre 2020 (nLPD), le disposizioni del
+    presente Accordo si applicano per analogia con le seguenti precisazioni:
+
+    a) Il termine "Titolare del trattamento" corrisponde al termine "titolare
+       del trattamento" ai sensi dell'art. 5 lett. j nLPD, il termine
+       "Responsabile del trattamento" al termine "responsabile del trattamento"
+       ai sensi dell'art. 5 lett. k nLPD.
+    b) Il termine "dati personali" comprende anche i dati personali ai sensi
+       dell'art. 5 lett. a nLPD, compresi i dati di persone giuridiche, nella
+       misura in cui la nLPD li protegga.
+    c) Il termine "categorie particolari di dati personali" comprende anche i
+       dati personali degni di particolare protezione ai sensi dell'art. 5
+       lett. c nLPD.
+
+(2) Il trattamento da parte del responsabile avviene ai sensi dell'art. 9 nLPD.
+    Il Responsabile del trattamento tratta i dati personali soltanto nel modo
+    in cui il Titolare del trattamento stesso avrebbe il diritto di farlo.
+
+(3) Il ricorso a sub-responsabili avviene ai sensi del § 6 del presente
+    Accordo; l'autorizzazione generale ivi disciplinata vale quale previa
+    autorizzazione ai sensi dell'art. 9 cpv. 3 nLPD.
+
+(4) Le notifiche di violazioni della sicurezza dei dati all'Incaricato federale
+    della protezione dei dati e della trasparenza ai sensi dell'art. 24 nLPD
+    sono effettuate dal Titolare del trattamento. Il § 9 si applica per
+    analogia, fermo restando che il Responsabile del trattamento informa il
+    Titolare del trattamento con un anticipo tale da consentirgli di adempiere
+    il proprio obbligo di notifica.
+
+(5) Una comunicazione di dati personali all'estero avviene soltanto alle
+    condizioni di cui agli artt. 16 e 17 nLPD. Al rapporto tra la Svizzera e
+    l'ambiente di trattamento del Responsabile del trattamento si applica il
+    § 7 cpv. 3: poiché l'ambiente di trattamento si trova in Svizzera, a tale
+    riguardo non ha luogo alcuna comunicazione all'estero. Alla comunicazione
+    al fornitore del modello si applica il § 7 cpv. 3 lett. b, alle
+    comunicazioni verso altri Stati il § 7 cpv. 3 lett. c e cpv. 4.
+
+
+§ 16 DISPOSIZIONI FINALI
+
+(1) In caso di contraddizioni su questioni in materia di protezione dei dati,
+    il presente Accordo prevale sul Contratto principale.
+
+(2) Le modifiche e integrazioni del presente Accordo richiedono la forma
+    testuale. Ciò vale anche per la modifica del presente requisito della forma
+    testuale. Resta impregiudicato l'adeguamento degli Allegati 2 e 3 ai sensi
+    del § 5 cpv. 2 e del § 6 cpv. 2.
+
+(3) Qualora una disposizione del presente Accordo sia o divenga invalida, la
+    validità delle restanti disposizioni resta impregiudicata. Le Parti
+    sostituiranno la disposizione invalida con una disposizione valida che si
+    avvicini il più possibile allo scopo economico perseguito.
+
+(4) Il presente Accordo è disciplinato dal diritto della Repubblica federale di
+    Germania. Restano impregiudicate le disposizioni imperative della nLPD.
+
+(5) Il presente Accordo si applica con contenuto identico a tutti i clienti del
+    Responsabile del trattamento. Qualora nel singolo caso le Parti abbiano
+    concluso in forma testuale un accordo divergente sul trattamento per conto
+    del titolare, quest'ultimo prevale sulle disposizioni del presente Accordo.
+
+(6) Il Responsabile del trattamento può modificare il presente Accordo nella
+    misura in cui la modifica sia necessaria per adeguarlo a un mutato quadro
+    giuridico, a prescrizioni o decisioni di un'autorità di controllo o a una
+    modifica delle funzionalità dell'applicazione, e il Titolare del
+    trattamento non ne risulti irragionevolmente svantaggiato. Alla procedura
+    si applica per analogia la disciplina delle modifiche prevista dal
+    Contratto principale. L'adeguamento degli Allegati 2 e 3 ai sensi del § 5
+    cpv. 2 e del § 6 cpv. 2 è disciplinato esclusivamente dalle disposizioni
+    ivi indicate.
+
+
+
+
+===============================================================================
+ALLEGATO 1 — OGGETTO, NATURA E FINALITÀ DEL TRATTAMENTO
+===============================================================================
+
+1. OGGETTO DEL TRATTAMENTO
+
+Messa a disposizione e gestione dell'applicazione Software-as-a-Service smiit
+Analytics per l'analisi aziendale di dati che il Titolare del trattamento rende
+disponibili dalla propria azienda bexio.
+
+
+2. NATURA DEL TRATTAMENTO
+
+  - Acquisizione dei dati resi disponibili tramite l'interfaccia bexio (in sola
+    lettura)
+  - Memorizzazione in un archivio di dati separato per tenant
+  - Strutturazione, elaborazione e collegamento in un modello di analisi
+  - Interrogazione e rappresentazione in report, dashboard ed esportazioni
+  - Analisi mediante una funzione di analisi basata sull'IA, se attivata dal
+    Titolare del trattamento
+  - Registrazione degli accessi e degli eventi rilevanti per la sicurezza
+  - Cancellazione conformemente al § 12 del presente Accordo
+
+
+3. FINALITÀ DEL TRATTAMENTO
+
+Fornitura delle prestazioni convenute nel Contratto principale, in particolare
+la messa a disposizione di analisi aziendali per il Titolare del trattamento. I
+dati provenienti dal collegamento a bexio, nonché tutti i contenuti che il
+Titolare del trattamento e i suoi Utenti registrano nell'applicazione, non sono
+trattati dal Responsabile del trattamento per finalità proprie. Ai dati
+dell'account e di utilizzo degli Utenti si applica il § 1 cpv. 7.
+
+
+4. CATEGORIE DI INTERESSATI
+
+  a) Utenti dell'applicazione (dipendenti e incaricati del Titolare del
+     trattamento)
+  b) dipendenti del Titolare del trattamento i cui dati provenienti da bexio
+     sono oggetto di analisi
+  c) clienti del Titolare del trattamento e relativi referenti
+  d) fornitori del Titolare del trattamento e relativi referenti
+  e) altri contatti commerciali del Titolare del trattamento registrati in
+     bexio
+
+
+5. TIPI DI DATI PERSONALI
+
+5.1 Dati degli Utenti dell'applicazione
+
+  - Contenuti delle richieste alla funzione di analisi basata sull'IA
+  - Log degli accessi ai dati del Cliente e delle modifiche apportate agli
+    stessi
+
+I dati dell'account e di utilizzo degli Utenti (nome, indirizzo e-mail,
+password sotto forma di valore hash, ruolo, impostazioni della lingua e del
+fuso orario, informazioni sull'autenticazione a due fattori e sui dispositivi
+attendibili, log di accesso nonché informazioni sull'utilizzo delle funzioni)
+sono trattati dal Responsabile del trattamento in qualità di titolare autonomo
+del trattamento; essi non sono oggetto del presente Accordo (§ 1 cpv. 7).
+
+5.2 Dati provenienti dal collegamento a bexio
+
+L'autorizzazione bexio viene concessa in modo unitario per l'intero perimetro
+descritto di seguito; non è prevista una selezione di singoli ambiti di dati da
+parte del Titolare del trattamento (§ 3 cpv. 3). Vengono effettivamente
+acquisite quelle tra tali categorie che sono disponibili nell'azienda bexio del
+Titolare del trattamento in base ai suoi moduli e alle sue autorizzazioni.
+
+  a) Dati di contatto
+     Nome, appellativo, titolo, indirizzo, dati di comunicazione, lingua,
+     paese, assegnazione a gruppi di contatti e settori
+
+  b) Dati dei documenti
+     Fatture, offerte, ordini, bollettini di consegna, posizioni, pagamenti,
+     solleciti, abbonamenti nonché le persone di volta in volta associate
+
+  c) Dati sugli acquisti
+     Fatture dei fornitori, spese, pagamenti in uscita, ordinazioni e le
+     persone di volta in volta associate
+
+  d) Dati contabili
+     Piano dei conti, registrazioni contabili, aliquote fiscali, esercizi
+     contabili e anni civili, periodi IVA
+
+  e) Dati bancari
+     Conti bancari incluso l'IBAN, pagamenti incluse le indicazioni sul
+     beneficiario e sul mittente
+
+  f) Dati sugli articoli e sul magazzino
+     Dati anagrafici degli articoli, prezzi, giacenze, ubicazioni di magazzino
+
+  g) Dati di progetto e sui tempi
+     Progetti, milestone, pacchetti di lavoro nonché ORE DI LAVORO REGISTRATE
+     PER PERSONA, incluse fatturabilità, attività e assegnazione ai progetti
+
+  h) Dati del personale (ambito "Payroll")
+     Dati anagrafici dei dipendenti, incluso l'indirizzo, saldi di ferie e di
+     ore a date di riferimento nonché ASSENZE, INCLUSO IL MOTIVO DELL'ASSENZA
+     REGISTRATO IN bexio
+
+  i) Altri dati
+     Utenti bexio, profilo aziendale, note e attività della gestione clienti
+     (contenuti di testo libero), valori di riferimento
+
+  j) Dati inseriti dal Titolare del trattamento stesso
+     nell'applicazione
+     costi interni e tariffe di fatturazione per persona o prestazione, budget,
+     ore di lavoro previste, definizioni di indicatori
+
+
+6. CATEGORIE PARTICOLARI DI DATI PERSONALI (ARTICOLO 9 GDPR)
+
+Il collegamento comprende l'ambito di dati "Payroll" e quindi i motivi di
+assenza di cui al punto 5.2, lett. h. Questi possono — a seconda di come il
+Titolare del trattamento li registra in bexio — consentire di trarre
+conclusioni sullo stato di salute di singoli dipendenti e costituire pertanto
+dati relativi alla salute ai sensi dell'art. 9, par. 1 GDPR.
+
+Poiché non è prevista una selezione di singoli ambiti di dati (§ 3 cpv. 3),
+tale trattamento non può essere escluso in caso di utilizzo dell'applicazione.
+Esso non ha luogo soltanto se il Titolare del trattamento non concede affatto
+l'autorizzazione bexio o se la sua azienda bexio non dispone dell'ambito
+"Payroll".
+
+Il Responsabile del trattamento tratta tali dati esclusivamente nell'ambito
+delle funzioni generali di analisi; non ha luogo alcuna analisi specifica in
+base a caratteristiche relative alla salute. Spetta al Titolare del trattamento
+assicurare la sussistenza di una base giuridica ai sensi dell'art. 9, par. 2
+GDPR (§ 3 cpv. 2 lett. a).
+
+
+7. DATI RELATIVI ALLA PRESTAZIONE LAVORATIVA E AL COMPORTAMENTO SUL LAVORO
+
+Le categorie di dati di cui al punto 5.2, lett. g e h nonché lett. j consentono
+analisi sull'orario di lavoro, sul grado di utilizzo e sulla fatturabilità di
+singoli dipendenti. Il Titolare del trattamento è stato informato che da ciò
+possono derivare diritti di codeterminazione di una rappresentanza dei
+lavoratori (§ 3 cpv. 2 lett. d).
+
+
+8. DURATA DEL TRATTAMENTO
+
+Per la durata del Contratto principale, più i termini di cui al § 12 del
+presente Accordo. Durante la vigenza del contratto si applicano i seguenti
+termini di cancellazione automatica:
+
+  - cronologie delle conversazioni della funzione di analisi basata sull'IA: 90
+    giorni dopo l'ultima attività
+  - dati grezzi non modificati provenienti dall'interfaccia bexio
+    (minimizzazione dei dati): dopo 30 giorni; i dati di analisi da essi
+    elaborati restano conservati per la durata del collegamento
+  - log delle esecuzioni di sincronizzazione: dopo 90 giorni
+
+
+9. FUNZIONE DI ANALISI BASATA SULL'IA: LIVELLI DI ABILITAZIONE
+
+La funzione di analisi basata sull'IA è disattivata per impostazione
+predefinita. Soltanto una persona con il ruolo "Owner" può attivarla, e ciò
+previa conferma di un avviso relativo ai dati trasferiti; tale conferma viene
+documentata con data e ora, persona e versione dell'avviso e vale come
+istruzione ai sensi del § 2 cpv. 4.
+
+Nell'impostazione di base ("Standard") i nomi e gli indirizzi e-mail delle
+persone vengono sostituiti da segnaposto prima del trasferimento al fornitore
+del modello, e i testi liberi non vengono trasferiti; i nomi delle aziende non
+vengono pseudonimizzati. Il Titolare del trattamento può revocare gradualmente
+tali limitazioni, ogni volta con una conferma separata:
+
+  a) "Nomi": nomi dei contatti (clienti, fornitori e relativi referenti) in
+     chiaro;
+  b) "Nomi + testi": in aggiunta i testi liberi (testi delle registrazioni
+     contabili, delle posizioni e delle registrazioni dei tempi, titoli dei
+     documenti, commenti);
+  c) "Tutto": nessuna pseudonimizzazione, nemmeno per dipendenti, utenti bexio,
+     membri dell'area di lavoro e indirizzi e-mail.
+
+I dati del personale di cui al punto 5.2, lett. h vengono trasferiti soltanto
+se il Titolare del trattamento li ha abilitati separatamente. La disattivazione
+della funzione azzera tutte le abilitazioni.
+
+
+===============================================================================
+ALLEGATO 2 — MISURE TECNICHE E ORGANIZZATIVE (ARTICOLO 32 GDPR)
+===============================================================================
+
+Aggiornamento: 18 novembre 2026
+
+
+1. RISERVATEZZA
+
+1.1 Controllo dell'accesso fisico
+    Il funzionamento avviene esclusivamente in data center del sub-responsabile
+    Microsoft (Microsoft Azure). Non vengono gestiti data center propri né
+    locali server propri. Le misure di sicurezza fisica risultano dalle
+    certificazioni del sub-responsabile (Allegato 3).
+
+1.2 Controllo dell'accesso ai sistemi
+    - accesso esclusivamente tramite account utente personali
+    - password con una lunghezza minima di dieci caratteri
+    - memorizzazione delle password esclusivamente come valore hash Argon2
+    - autenticazione a due fattori obbligatoria per tutti gli Utenti mediante
+      codice monouso via e-mail (validità 10 minuti, al massimo cinque
+      tentativi di inserimento); dispositivi attendibili per al massimo 30
+      giorni
+    - token di accesso di breve durata (15 minuti); le sessioni terminano al
+      più tardi 7 giorni dopo l'accesso, indipendentemente dall'attività;
+      panoramica delle sessioni attive e disconnessione da tutti i dispositivi
+      da parte dell'Utente
+    - blocco automatico dell'account per 15 minuti dopo cinque tentativi
+      falliti
+    - obbligo di confermare l'indirizzo e-mail prima del primo utilizzo
+    - cookie di sessione esclusivamente con gli attributi "Secure", "HttpOnly"
+      e prefisso "__Host"
+    - protezione contro i tentativi di accesso automatizzati mediante
+      limitazione della frequenza a livello del server web a monte
+    - gli account bloccati rispondono come in caso di password errata, in modo
+      che non sia possibile determinare l'esistenza di un account
+
+1.3 Controllo dell'accesso ai dati
+    - modello di autorizzazione basato sui ruoli, con i ruoli Owner, Admin e
+      Member
+    - separazione dei tenant a livello di database mediante policy di sicurezza
+      a livello di riga (Row Level Security) con applicazione forzata (FORCE
+      ROW LEVEL SECURITY)
+    - l'applicazione si connette al database esclusivamente con ruoli di
+      database privi di diritti di superuser, in modo che le policy di
+      sicurezza non possano essere aggirate
+    - ruoli di database separati in base al compito: un ruolo per il
+      funzionamento dell'applicazione, un ruolo in sola lettura per il livello
+      di analisi, un ruolo in sola lettura per la funzione di analisi basata
+      sull'IA
+    - la funzione di analisi basata sull'IA ha esclusivamente accesso in
+      lettura allo schema di analisi; un accesso a dati grezzi, credenziali di
+      accesso o tabelle di sistema è tecnicamente escluso
+    - verifica di ogni interrogazione del database generata dall'IA da parte di
+      un filtro delle interrogazioni a monte
+    - limitazione del tempo di esecuzione e della quantità di risultati delle
+      interrogazioni
+    - gli amministratori della piattaforma del Responsabile del trattamento non
+      hanno accesso a report, cronologie delle conversazioni della funzione di
+      analisi basata sull'IA o dati provenienti dal collegamento a bexio; ciò è
+      imposto tecnicamente dalle regole di accesso del database
+    - accesso del supporto a un'area di lavoro soltanto previo consenso di una
+      persona con il ruolo "Owner", limitato a un massimo di 30 giorni,
+      revocabile in qualsiasi momento e visibile nell'elenco dei membri; nessun
+      accesso "come Utente"
+    - accesso all'area di amministrazione soltanto con verifica a due fattori,
+      valida al massimo quattro ore
+    - registrazione di ogni azione degli amministratori della piattaforma nel
+      log di audit
+
+1.4 Controllo della separazione
+    - separazione logica dei tenant per tutti i dati sulla base di un
+      identificativo univoco del workspace
+    - applicazione della separazione a livello di database, non soltanto nella
+      logica applicativa
+    - test automatizzati a dimostrazione della separazione dei tenant
+
+1.5 Pseudonimizzazione e cifratura
+    - trasmissione esclusivamente tramite TLS (HTTPS); gli accessi non cifrati
+      vengono reindirizzati
+    - cifratura dei dati a riposo mediante la cifratura della piattaforma del
+      sub-responsabile
+    - cifratura dei token di accesso bexio a riposo con una chiave separata
+    - pseudonimizzazione di nomi e indirizzi e-mail prima del trasferimento al
+      fornitore del modello (Allegato 1, punto 9)
+    - rimozione delle credenziali e degli elementi di sicurezza dagli indirizzi
+      nei log del server; cancellazione dei log del server dopo 30 giorni
+    - nessuna memorizzazione di indirizzi IP nella telemetria (Application
+      Insights)
+
+
+2. INTEGRITÀ
+
+2.1 Controllo dell'immissione
+    - registrazione a prova di revisione, in sola aggiunta, delle operazioni
+      rilevanti per la sicurezza e di quelle che modificano i dati, con marca
+      temporale e identificativo utente
+
+2.2 Controllo della trasmissione
+    - nessuna trasmissione di supporti di dati
+    - trasmissione ai sub-responsabili esclusivamente tramite connessioni
+      cifrate
+    - policy restrittiva di sicurezza dei contenuti (Content Security Policy)
+      per impedire la fuoriuscita di contenuti tramite risorse incorporate
+    - neutralizzazione delle celle contenenti formule nell'esportazione dei
+      dati per impedire l'iniezione di formule
+
+
+3. DISPONIBILITÀ E RESILIENZA
+
+    - backup automatizzato del database da parte del sub-responsabile con un
+      periodo di conservazione di 35 giorni e possibilità di ripristino a un
+      determinato momento
+    - archiviazione georidondante delle copie di backup in una seconda regione
+      Azure svizzera (Switzerland West)
+    - protezione dalla cancellazione su database e gestione delle chiavi contro
+      la cancellazione accidentale
+    - monitoraggio della disponibilità operativa tramite endpoint di stato
+    - limitazione delle connessioni simultanee al database a protezione dal
+      sovraccarico
+    - limitazione della frequenza delle funzioni critiche per la sicurezza e ad
+      alto consumo di risorse
+    - ripresa delle esecuzioni di elaborazione interrotte senza perdita di dati
+
+
+4. PROCEDURA DI VERIFICA PERIODICA
+
+4.1 Verifica
+    - verifiche di sicurezza periodiche del codice sorgente e dell'architettura
+      di sistema con risultati documentati
+    - verifica automatizzata, nel processo di build, delle librerie di terze
+      parti utilizzate rispetto a vulnerabilità note
+    - definizione delle immagini di base dei container mediante checksum
+      crittografici
+    - test automatizzati a dimostrazione dell'efficacia della separazione dei
+      tenant e delle limitazioni di accesso
+
+4.2 Controllo degli incarichi
+    - accordi scritti con tutti i sub-responsabili
+    - impegno alla riservatezza di tutti i dipendenti
+    - procedura documentata per la notifica delle violazioni dei dati personali
+
+4.3 Impostazioni predefinite favorevoli alla protezione dei dati
+    - la funzione di analisi basata sull'IA è disattivata per impostazione
+      predefinita e viene attivata soltanto da un Owner; nomi e indirizzi
+      e-mail vengono pseudonimizzati per impostazione predefinita, i dati del
+      personale vengono trasferiti soltanto previa abilitazione separata
+      (Allegato 1, punto 9)
+    - il collegamento a bexio avviene esclusivamente in sola lettura; un
+      accesso in scrittura all'azienda bexio non è tecnicamente previsto
+    - il Titolare del trattamento può revocare in qualsiasi momento
+      l'autorizzazione bexio; l'acquisizione dei dati cessa di conseguenza
+    - il Titolare del trattamento può cancellare autonomamente singoli set di
+      dati o l'intera propria area di lavoro; i dati vengono cancellati
+      automaticamente entro quattro ore
+    - cancellazione automatica delle cronologie delle conversazioni della
+      funzione di analisi basata sull'IA 90 giorni dopo l'ultima attività
+
+    Nota: una selezione di singoli ambiti di dati bexio da parte del Titolare
+    del trattamento attualmente non è prevista (§ 3 cpv. 3).
+
+
+===============================================================================
+ALLEGATO 3 — SUB-RESPONSABILI DEL TRATTAMENTO
+===============================================================================
+
+Aggiornamento: 18 novembre 2026
+
+
+1. Microsoft Ireland Operations Limited
+   One Microsoft Place, South County Business Park, Leopardstown, Dublin 18,
+   Irlanda
+   Prestazione:     Gestione dell'applicazione e del database (Microsoft
+                    Azure), invio di messaggi di sistema via e-mail (Azure
+                    Communication Services), distribuzione e protezione
+                    dell'applicazione (Azure Front Door con firewall per
+                    applicazioni web), monitoraggio operativo (Application
+                    Insights, Log Analytics), gestione del feedback degli
+                    Utenti (Azure DevOps)
+   Dati trattati:   tutti i dati indicati nell'Allegato 1
+   Luogo del
+   trattamento:     Svizzera — regione Azure "Switzerland North" (Zurigo);
+                    copie di backup georidondanti del database nella regione
+                    "Switzerland West" (Ginevra); invio di e-mail con
+                    archiviazione dei dati in Svizzera. Azure Front Door riceve
+                    le richieste presso le sedi di Microsoft in tutto il
+                    mondo. Azure DevOps: regione "North Europe" (Irlanda).
+   Collegamento a
+   paesi terzi:     Svizzera (decisione di adeguatezza della Commissione
+                    europea ai sensi dell'art. 45 GDPR); Azure DevOps
+                    all'interno dell'Unione europea; per Azure Front Door anche
+                    sedi al di fuori della Svizzera e del SEE
+   Meccanismo di
+   trasferimento:   Svizzera: decisione di adeguatezza; per il resto clausole
+                    contrattuali tipo contenute nel Data Protection Addendum di
+                    Microsoft nonché certificazione di Microsoft Corporation ai
+                    sensi dell'EU-US Data Privacy Framework
+
+
+2. OpenAI Ireland Limited
+   1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
+   Dublin 1, D01 YC43, Irlanda
+   Altri sub-responsabili impiegati da OpenAI all'indirizzo
+   https://platform.openai.com/subprocessors
+   Base
+   contrattuale:    OpenAI Data Processing Addendum nella versione di volta in
+                    volta vigente (attualmente v.010126),
+                    https://openai.com/policies/data-processing-addendum/
+   Prestazione:     Elaborazione delle richieste della funzione di analisi
+                    basata sull'IA (modelli di OpenAI)
+   Dati trattati:   Domanda posta dall'Utente, cronologia della conversazione,
+                    descrizione della struttura dei dati nonché risultati delle
+                    interrogazioni generate (indicatori ed estratti limitati di
+                    righe di dati). I nomi e gli indirizzi e-mail delle persone
+                    vengono pseudonimizzati, i testi liberi e i dati del
+                    personale non vengono trasferiti, salvo che il Titolare del
+                    trattamento li abbia abilitati ai sensi dell'Allegato 1,
+                    punto 9.
+   Luogo del
+   trattamento:     SEE e Svizzera; controparte contrattuale in Irlanda,
+                    residenza europea dei dati (endpoint
+                    https://eu.api.openai.com/v1)
+   Collegamento a
+   paesi terzi:     per il trattamento delle richieste no; per i log volti a
+                    individuare abusi OpenAI non garantisce alcun luogo di
+                    conservazione (§ 7 cpv. 2)
+   Meccanismo di
+   trasferimento:   clausole contrattuali tipo di cui alla decisione di
+                    esecuzione (UE) 2021/914, che OpenAI Ireland Limited ha
+                    concordato con i destinatari al di fuori del SEE e della
+                    Svizzera (punto 4.1 dell'Addendum); si applicano anche ai
+                    dati soggetti al diritto svizzero in materia di protezione
+                    dei dati. Non ci si avvale dell'EU-US Data Privacy
+                    Framework.
+   Particolarità:   OpenAI tratta i dati soltanto per la fornitura dei servizi
+                    (punto 1.2 dell'Addendum); secondo le indicazioni di
+                    OpenAI, i dati provenienti dall'API non vengono utilizzati
+                    per l'addestramento di modelli. Le richieste vengono
+                    trasmesse in modo tale che OpenAI non memorizzi dati di
+                    richiesta o di risposta per un successivo riutilizzo.
+                    OpenAI conserva fino a 30 giorni i log volti a individuare
+                    abusi, che possono contenere richieste e risposte. OpenAI
+                    appartiene a un gruppo societario statunitense; una
+                    richiesta di consegna dei dati ai sensi del CLOUD Act non è
+                    esclusa (§ 7 cpv. 2).
+
+
+NOTA: bexio AG non è un sub-responsabile del Responsabile del trattamento.
+bexio è utilizzato dal Titolare del trattamento stesso; la trasmissione dei
+dati al Responsabile del trattamento avviene su iniziativa e previa
+autorizzazione del Titolare del trattamento.
+
+
+===============================================================================
+ALLEGATO 4 — REFERENTI
+===============================================================================
+
+Poiché il presente Accordo si applica con contenuto identico a tutti i clienti,
+i referenti non sono indicati nel testo contrattuale, bensì designati e
+aggiornati tramite l'applicazione. In questo modo restano aggiornati senza
+modifiche dell'Accordo.
+
+
+1. PERSONE DEL TITOLARE DEL TRATTAMENTO AUTORIZZATE A IMPARTIRE ISTRUZIONI
+
+Sono autorizzate a impartire istruzioni le persone alle quali il Titolare del
+trattamento ha assegnato nella propria area di lavoro il ruolo "Owner" o
+"Admin". Il Titolare del trattamento mantiene aggiornata tale assegnazione e
+revoca senza ingiustificato ritardo il ruolo qualora una persona non debba più
+essere autorizzata a impartire istruzioni.
+
+
+2. RECAPITO DEL TITOLARE DEL TRATTAMENTO PER LE NOTIFICHE DI CUI AL § 9
+
+Il Responsabile del trattamento invia le notifiche di cui al § 9 agli indirizzi
+e-mail di tutte le persone che ricoprono il ruolo "Owner" nell'area di lavoro
+del Titolare del trattamento. Il Titolare del trattamento garantisce che almeno
+una persona con tale ruolo sia in grado di ricevere e inoltrare le notifiche.
+
+
+3. REFERENTE DEL RESPONSABILE DEL TRATTAMENTO PER LA PROTEZIONE DEI DATI
+
+  Noah Neßlauer
+  Amministratore delegato di smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Germania
+  E-mail: noah.nesslauer@smiit.de
+
+  Questa persona è il referente per le questioni in materia di protezione dei
+  dati e non è responsabile della protezione dei dati ai sensi degli artt. 37
+  ss. GDPR (§ 4 cpv. 6).
+
+Il Responsabile del trattamento comunica una modifica di tali dati in forma
+testuale o mediante l'aggiornamento della versione memorizzata
+nell'applicazione; a tal fine non è necessaria una modifica dell'Accordo.
+
+
+===============================================================================
+FINE DELL'ACCORDO SUL TRATTAMENTO DEI DATI
+===============================================================================

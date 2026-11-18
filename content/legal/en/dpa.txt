@@ -1,0 +1,1011 @@
+===============================================================================
+DATA PROCESSING AGREEMENT
+pursuant to Article 28 of Regulation (EU) 2016/679 (GDPR)
+for the use of smiit Analytics
+===============================================================================
+
+Version 1.0 — Last updated: 18 November 2026
+
+CONTRACTING PARTIES
+
+This Agreement applies between
+
+  the Customer who has concluded the Main Agreement on the use of smiit
+  Analytics and to whom the workspace concerned is assigned — this is the
+  company that was specified as the contracting party when the workspace was
+  set up; the related details are stored in the application under the
+  workspace settings and can be retrieved there
+
+  — hereinafter the "Controller" or the "Customer" —
+
+and
+
+  smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Germany
+  Register court: Amtsgericht Ulm (Ulm Local Court), HRB 741965
+  Represented by: Sebastian Grab, Noah Neßlauer
+  VAT ID No.: DE357299821
+
+  — hereinafter the "Processor" or the "Provider" —
+
+  — together the "Parties" —
+
+This Agreement does not require an individually executed copy or a
+handwritten signature; for its conclusion, see § 1(1) to (3).
+
+
+PREAMBLE
+
+The Processor provides services to the Controller in accordance with the
+Terms of Use for smiit Analytics (Main Agreement). In doing so, it processes
+personal data on behalf of the Controller. This Agreement specifies the
+Parties' rights and obligations under data protection law pursuant to
+Art. 28 GDPR. It applies to all activities that are connected with the Main
+Agreement and in which employees of the Processor or third parties engaged by
+it come into contact with personal data of the Controller.
+
+The Processor provides its service as a standardised service for a large
+number of customers under uniform technical and organisational conditions.
+Accordingly, this Agreement is designed as a uniform document and applies
+with identical content to all customers. Art. 28(9) GDPR expressly permits
+conclusion in an electronic format; a handwritten signature is not required.
+
+
+§ 1 CONCLUSION, SUBJECT MATTER, DURATION AND SCOPE
+
+(1) This Agreement is concluded when the Controller expressly accepts it in
+    the application when setting up its workspace or at a later time. The
+    acceptance is made in electronic form within the meaning of Art. 28(9),
+    second sentence, GDPR. A handwritten signature is not required.
+
+(2) Acceptance is declared by a person who is authorised to represent the
+    Controller. By accepting, the acting person warrants that they are
+    authorised to conclude this Agreement on behalf of the Controller.
+
+(3) The Processor records, for each Controller, the time of acceptance and
+    the accepted version of this Agreement. Each version is kept available at
+    a permanently accessible address; the current version can be viewed at
+    https://www.smiit-analytics.com/de/dpa/. The Controller can retrieve the
+    version it has accepted in the application at any time and save it as a
+    file.
+
+(4) The subject matter, nature and purpose of the processing, the type of
+    personal data and the categories of data subjects are set out in Annex 1
+    to this Agreement.
+
+(5) The term of this Agreement corresponds to the term of the Main Agreement.
+    The obligations under § 12 (erasure and return) and under § 4(1)
+    (confidentiality) continue to apply after the end of the Agreement.
+
+(6) This Agreement applies to processing that falls within the territorial
+    and material scope of the GDPR. For processing that is subject to the
+    Swiss Federal Act on Data Protection (FADP), § 15 applies in addition.
+
+(7) Insofar as the Provider processes personal data for its own purposes, it
+    is itself a controller in that respect; this Agreement does not apply to
+    such processing. This concerns
+    a) the Customer's master data for contract handling and invoicing, and
+    b) the account and usage data of the Users of the application (in
+       particular name, e-mail address, login data and the type and time of
+       the functions used), which the Provider processes to operate the user
+       accounts, for usage statistics and to improve the application.
+    This data is not sold or otherwise disclosed to third parties. Details
+    are set out in the Provider's Privacy Policy.
+
+
+§ 2 THE CONTROLLER'S RIGHT TO ISSUE INSTRUCTIONS
+
+(1) The Processor processes personal data only on documented instructions
+    from the Controller. This also applies to transfers of personal data to a
+    third country or an international organisation, unless it is required to
+    do so by Union or Member State law to which it is subject. In such a
+    case, the Processor shall inform the Controller of that legal requirement
+    before processing, unless that law prohibits such information on
+    important grounds of public interest.
+
+(2) The instructions are conclusively set out in this Agreement, including
+    its annexes, and in the Main Agreement. Individual instructions that
+    deviate from these require text form.
+
+(3) The Controller issues instructions through the persons it has designated
+    as authorised to issue instructions. The Processor designates a contact
+    person for instructions. The designation is made in Annex 4.
+
+(4) Configuration of the application by the Controller within the functions
+    provided for this purpose is deemed to be an instruction. This applies in
+    particular to granting and revoking the bexio authorisation, assigning
+    roles and permissions, creating shares and activating or deactivating the
+    AI-assisted analysis function.
+
+(5) If the Processor is of the opinion that an instruction infringes data
+    protection provisions, it shall inform the Controller thereof without
+    undue delay. It is entitled to suspend the execution of the instruction
+    concerned until the Controller confirms or amends it.
+
+
+§ 3 RESPONSIBILITY OF THE CONTROLLER
+
+(1) The Controller is solely responsible for the lawfulness of the processing
+    and for safeguarding the rights of the data subjects.
+
+(2) The Controller is in particular responsible for
+
+    a) ensuring that there is a legal basis for the processing, including a
+       legal basis under Art. 9(2) GDPR where special categories of personal
+       data are processed;
+    b) informing the data subjects in accordance with Articles 13 and 14
+       GDPR;
+    c) examining whether a data protection impact assessment under Art. 35
+       GDPR must be carried out and, where applicable, carrying it out;
+    d) involving any existing employee representative body where required
+       under national law, in particular when analysing working time and
+       performance data (in Germany specifically under § 87(1) no. 6 of the
+       German Works Constitution Act (BetrVG)).
+
+(3) The bexio interface is authorised uniformly for the entire scope
+    described in Annex 1, Section 5.2. A selection of individual data areas
+    is not provided for: the Controller can only grant the connection as a
+    whole or refrain from granting it as a whole. Whether individual data
+    areas within this scope can actually be retrieved additionally depends on
+    which modules and permissions exist in the Controller's bexio company;
+    areas that are not available remain unused.
+
+(4) The Controller has been expressly informed that the connection therefore
+    also covers the personnel data under Annex 1, Section 5.2(h), including
+    the reasons for absence, which may allow conclusions to be drawn about
+    health data within the meaning of Art. 9(1) GDPR. If the Controller wishes
+    to avoid this processing, it can only refrain from granting the connection
+    and not use the application.
+
+(5) By granting the authorisation, the Controller issues the instruction to
+    process the data in the full scope under Annex 1, Section 5.2. Before
+    granting it, the Controller must verify whether there is a legal basis for
+    this for all data categories concerned.
+
+
+§ 4 GENERAL OBLIGATIONS OF THE PROCESSOR
+
+(1) The Processor ensures that the persons authorised to process the personal
+    data have committed themselves to confidentiality or are under an
+    appropriate statutory obligation of confidentiality. The obligation
+    continues to apply after the end of their activity.
+
+(2) The Processor only uses persons for the processing who have previously
+    been familiarised with the relevant data protection provisions.
+
+(3) The Processor processes the personal data exclusively within the scope of
+    this Agreement and exclusively for the purposes specified in Annex 1. No
+    processing for its own purposes takes place, in particular no training of
+    artificial intelligence models.
+
+(4) The Processor implements the technical and organisational measures under
+    § 5 and maintains them for the term of the Agreement.
+
+(5) The Processor informs the Controller without undue delay if a supervisory
+    authority takes measures at the Processor that concern the processing on
+    behalf of the Controller.
+
+(6) The Processor has not appointed a data protection officer within the
+    meaning of Art. 37 et seq. GDPR. The contact person for data protection
+    matters is the person named in Annex 4, Section 3. The Processor will
+    notify the Controller of any later appointment of a data protection
+    officer, stating their name and contact details.
+
+(7) The Processor maintains a record of all categories of processing
+    activities carried out on behalf of the Controller pursuant to Art. 30(2)
+    GDPR.
+
+
+§ 5 TECHNICAL AND ORGANISATIONAL MEASURES
+
+(1) The Processor takes the technical and organisational measures required
+    under Art. 32 GDPR. The status implemented at the time the Agreement is
+    concluded is set out in Annex 2.
+
+(2) The measures are subject to technical progress. The Processor is entitled
+    to adapt them, provided that the level of protection owed under Art. 32
+    GDPR is not reduced. Material changes must be documented.
+
+(3) The Processor has a procedure for regularly testing, assessing and
+    evaluating the effectiveness of the measures (Art. 32(1)(d) GDPR). The
+    review takes place as and when required and in the event of material
+    changes to the processing or to the technology used.
+
+
+§ 6 SUB-PROCESSORS
+
+(1) The Controller grants the Processor general authorisation to engage
+    other processors (sub-processors). The sub-processors engaged at the time
+    the Agreement is concluded are listed in Annex 3 and are deemed approved.
+
+(2) The Processor informs the Controller in text form at least 30 calendar
+    days before the intended engagement of a new sub-processor or the
+    replacement of an existing one, stating the name, address, service and
+    place of processing.
+
+(3) The Controller may object to the change in text form within 30 calendar
+    days of receipt of the information for an important reason relating to
+    data protection. Reasons must be given for the objection.
+
+(4) In the event of a justified objection, the Parties will seek an amicable
+    solution. If no agreement is reached within 30 calendar days and the
+    Processor cannot provide the service without the sub-processor concerned
+    on reasonable terms, either Party is entitled to terminate the Main
+    Agreement with one month's notice to the end of a month. Fees already paid
+    will be refunded pro rata temporis.
+
+(5) The Processor contractually binds the sub-processor to data protection
+    obligations that correspond to those of this Agreement, in particular to
+    sufficient guarantees under Art. 28(4) GDPR.
+
+(6) The Processor is liable to the Controller for the sub-processor's
+    compliance with its data protection obligations.
+
+(7) Ancillary services that the Processor uses to support its business
+    operations and in the course of which access to the Controller's personal
+    data is not intended, such as telecommunications services, postal
+    services, cleaning or maintenance, do not constitute sub-processing within
+    the meaning of this provision. Nor is the bexio application used by the
+    Controller itself a sub-processor of the Processor.
+
+
+§ 7 PLACE OF PROCESSING, TRANSFERS IN RELATION TO SWITZERLAND AND TO THIRD
+    COUNTRIES
+
+(1) Processing takes place in data centres in Switzerland unless otherwise
+    stated in Annex 3. There is an adequacy decision of the European
+    Commission for Switzerland under Art. 45 GDPR; additional safeguards are
+    therefore not required for Controllers established in the European Union
+    or the European Economic Area.
+
+(2) The content of the AI-assisted analysis function (Annex 1) is transferred
+    to the sub-processor named in Annex 3, OpenAI Ireland Limited, established
+    in Ireland. In doing so, the Processor exclusively uses the European
+    endpoint https://eu.api.openai.com/v1 of a project with the data residency
+    region Europe; OpenAI processes the requests within the EEA and
+    Switzerland. For logs used to detect abuse, which OpenAI retains for up to
+    30 days, OpenAI does not commit to a storage location. The Controller
+    hereby instructs the Processor to carry out this transfer insofar as the
+    AI-assisted analysis function is activated in its workspace (§ 2(4)).
+
+    The basis is the OpenAI Data Processing Addendum as amended from time to
+    time (currently v.010126). Insofar as OpenAI Ireland Limited transfers
+    data that is subject to the data protection law of the EEA or Switzerland
+    to affiliated companies or third parties outside the EEA and Switzerland,
+    such as the logs mentioned, this is done on the basis of contracts
+    containing the standard contractual clauses under Implementing Decision
+    (EU) 2021/914 or of an adequacy decision under Art. 45 GDPR (Section 4.1
+    of the Addendum). No certification under the EU-US Data Privacy Framework
+    is relied upon. OpenAI Ireland Limited belongs to a group of companies
+    headquartered in the United States of America; a demand for disclosure by
+    US authorities under the CLOUD Act (18 U.S.C. § 2713) therefore cannot be
+    ruled out despite the data residency.
+
+    Before commencing the use, the Processor examined it with regard to the
+    level of protection and documented this, and will provide the Controller
+    with this documentation on request. The model provider does not use the
+    transferred content to train models. The AI-assisted analysis function is
+    switched off by default; as long as it is switched off, no transfer to the
+    model provider takes place. Names and e-mail addresses of persons are
+    pseudonymised before the transfer unless the Controller has lifted this in
+    accordance with Annex 1, Section 9.
+
+(3) For Controllers established in Switzerland, the following applies in
+    addition and by way of clarification:
+
+    a) The Processor's processing environment is located in Switzerland
+       (Annex 3, Section 1). The retrieval of the data from the Controller's
+       bexio company, its storage, the backup copies and the sending of
+       system messages therefore do not constitute a disclosure abroad within
+       the meaning of Art. 16 FADP.
+
+    b) The disclosure to OpenAI under paragraph (2) is permitted because the
+       states of the European Union as well as Norway, Iceland and
+       Liechtenstein are listed in Annex 1 to the DPO as states with adequate
+       data protection (Art. 16(1) FADP); insofar as OpenAI processes the data
+       in Switzerland, there is no disclosure abroad. Onward transfers outside
+       the EEA and Switzerland are governed by paragraph (2), second
+       subparagraph; the OpenAI Data Processing Addendum expressly also covers
+       data that is subject to Swiss data protection law.
+
+    c) Insofar as Microsoft processes data outside Switzerland within the
+       scope of the services Azure Front Door or Azure DevOps named in
+       Annex 3, Section 1, the transfer mechanisms named in Annex 3, Section 1
+       apply accordingly.
+
+    d) If one of the adequacy decisions referred to in paragraph (1),
+       paragraph (2) or letter b ceases to apply or is suspended or
+       restricted, the Processor shall inform the Controller without undue
+       delay and switch to a permissible transfer mechanism.
+
+(4) Relocating the processing to a third country for which there is no
+    adequacy decision is only permitted if the requirements of Chapter V GDPR
+    are met, in particular through appropriate safeguards under Art. 46 GDPR,
+    and, in relation to Switzerland, additionally the requirements of
+    Art. 16(2) FADP. The Processor informs the Controller of any such
+    relocation in accordance with § 6(2) and provides evidence of the
+    respective transfer mechanism.
+
+(5) The Processor documents the transfer mechanism in Annex 3 for each
+    sub-processor established in a third country.
+
+
+§ 8 ASSISTANCE WITH THE RIGHTS OF DATA SUBJECTS
+
+(1) The Processor assists the Controller by appropriate technical and
+    organisational measures in fulfilling its obligation to respond to
+    requests from data subjects under Chapter III GDPR.
+
+(2) If a data subject contacts the Processor directly, the Processor forwards
+    the request to the Controller without undue delay and does not respond to
+    it itself.
+
+(3) The Processor rectifies or erases personal data or restricts their
+    processing only on the instructions of the Controller. Insofar as the
+    Controller can do this itself using the functions of the application,
+    assistance is provided by making these functions available.
+
+(4) For assistance services that go beyond providing the functions of the
+    application and are not based on a circumstance for which the Processor is
+    responsible, the Processor may charge a reasonable fee at its rates
+    applicable from time to time. It informs the Controller of the obligation
+    to pay before providing the service.
+
+
+§ 9 NOTIFICATION OF PERSONAL DATA BREACHES
+
+(1) The Processor notifies the Controller of any personal data breach that
+    has come to its knowledge without undue delay after becoming aware of it
+    (Art. 33(2) GDPR). This also applies to breaches at a sub-processor as
+    soon as the sub-processor has reported them to the Processor.
+
+(2) The notification is made in text form to the addresses specified in
+    Annex 4, Section 2 and contains, where available, the information referred
+    to in Art. 33(3) GDPR. If not all information is available immediately, an
+    initial notification is made with the information available; further
+    information is provided subsequently without undue delay.
+
+(3) The Processor assists the Controller in fulfilling its obligations under
+    Articles 33 and 34 GDPR and takes the necessary measures without undue
+    delay to secure the data and to mitigate adverse consequences.
+
+(4) Notifications to the supervisory authority or to data subjects are made
+    exclusively by the Controller.
+
+
+§ 10 ASSISTANCE WITH DATA PROTECTION IMPACT ASSESSMENTS AND PRIOR CONSULTATION
+
+Taking into account the nature of the processing and the information
+available to it, the Processor assists the Controller with a data protection
+impact assessment under Art. 35 GDPR and with a prior consultation under
+Art. 36 GDPR. § 8(4) applies accordingly.
+
+
+§ 11 EVIDENCE AND AUDIT RIGHTS
+
+(1) The Processor makes available to the Controller all information necessary
+    to demonstrate compliance with the obligations under Art. 28 GDPR.
+
+(2) Evidence is provided by this Agreement together with its annexes, in
+    particular Annex 2 (technical and organisational measures) and Annex 3
+    (sub-processors). These documents are made available to the Controller
+    upon conclusion of the Agreement; no separate request is required.
+
+    The Processor provides further information on request in text form,
+    insofar as it is necessary as evidence under Art. 28(3)(h) GDPR. There is
+    no obligation to obtain or maintain certifications, attestations or audit
+    reports; certification under Art. 42 GDPR is voluntary (Art. 42(3) GDPR).
+
+(3) If the evidence under paragraph (2) is not sufficient in an individual
+    case, the Controller or an auditor engaged by it who is bound to
+    confidentiality and who must not be a competitor of the Processor may
+    carry out an audit.
+
+    The audit is carried out by REMOTE ACCESS (remote audit), namely by video
+    conference, screen sharing, demonstration of configurations and
+    permissions and inspection of documents. The Processor performs the
+    processing entirely in a cloud environment and does not operate its own
+    data centre or its own server rooms; an inspection of processing
+    facilities at its registered office is therefore not possible and is not
+    necessary for auditing the measures under Annex 2.
+
+    An audit at the Processor's business premises only takes place insofar as
+    the subject of the audit demonstrably cannot be clarified by remote
+    access, and is limited to that subject.
+
+    The physical infrastructure is operated by the sub-processor under
+    Annex 3, Section 1. The Processor cannot grant access to its data centres;
+    evidence of the measures there is provided by way of the certifications of
+    this sub-processor.
+
+    Each audit must be carried out with at least 14 calendar days' advance
+    notice, during normal business hours and without disrupting operations,
+    and is limited to a maximum of one audit per calendar year. If a personal
+    data breach has been identified, the limitation to one audit per calendar
+    year does not apply.
+
+(4) The Processor may charge a reasonable fee for the effort involved in an
+    audit under paragraph (3), unless the audit is prompted by a circumstance
+    for which the Processor is responsible.
+
+(5) The audit rights of the competent supervisory authorities remain
+    unaffected.
+
+
+§ 12 ERASURE AND RETURN
+
+(1) After termination of the Main Agreement, the Processor keeps the personal
+    data available for a period of 30 calendar days for the purpose of export
+    by the Controller.
+
+(2) After expiry of the period under paragraph (1), the Processor erases all
+    personal data of the Controller. Existing backup copies are overwritten in
+    the course of the regular backup cycle; until then, the data is blocked
+    from processing. The regular backup cycle is 35 days.
+
+(3) Until expiry of the period under paragraph (1), the Controller may demand
+    in text form the return of the data in a structured, commonly used and
+    machine-readable format.
+
+(4) The Processor may retain documentation that serves as evidence that the
+    data processing was carried out properly and in accordance with the
+    instructions, as well as data subject to statutory retention obligations,
+    beyond the end of the Agreement in accordance with the respective
+    retention periods. The processing of this data is restricted for the
+    duration of the retention.
+
+(5) The Processor confirms the erasure in text form upon request.
+
+(6) During the term of the Main Agreement, the following applies:
+
+    a) If the Controller deletes a dataset (one connected bexio company) or
+       its entire workspace in the application, the Processor automatically
+       erases the related personal data within four hours. The deletion is
+       deemed an instruction within the meaning of § 2(4).
+    b) If the bexio authorisation expires, fails or is revoked, only further
+       data retrieval ceases. The data already stored is retained until it
+       is erased under letter a or under paragraph (2).
+    c) Paragraph (2), second sentence, applies accordingly to backup copies.
+
+
+§ 13 FURTHER OBLIGATIONS
+
+(1) The Processor will inform the Controller without undue delay if it becomes
+    aware of circumstances that jeopardise the proper performance of this
+    Agreement.
+
+(2) The Processor ensures the separation of the data of different controllers
+    (tenant separation) by the measures described in Annex 2.
+
+
+§ 14 LIABILITY
+
+(1) Art. 82 GDPR applies to the liability of the Parties towards third
+    parties.
+
+(2) As between the Parties, the liability provisions of the Main Agreement
+    apply, insofar as Art. 82 GDPR does not preclude this.
+
+(3) The Processor is not liable for damage resulting from the Controller's
+    failure to comply with its obligations under § 3.
+
+
+§ 15 SUPPLEMENTARY PROVISIONS FOR SWITZERLAND
+
+(1) Insofar as the processing is subject to the Swiss Federal Act on Data
+    Protection of 25 September 2020 (FADP), the provisions of this Agreement
+    apply accordingly, subject to the following:
+
+    a) The term "Controller" corresponds to the term "controller"
+       (Verantwortlicher) under Art. 5(j) FADP, and the term "Processor" to
+       the term "processor" (Auftragsbearbeiter) under Art. 5(k) FADP.
+    b) The term "personal data" also includes personal data (Personendaten)
+       within the meaning of Art. 5(a) FADP, including data of legal entities
+       insofar as the FADP protects them.
+    c) The term "special categories of personal data" also includes sensitive
+       personal data within the meaning of Art. 5(c) FADP.
+
+(2) The processing on behalf is carried out in accordance with Art. 9 FADP.
+    The Processor processes the personal data only in the way the Controller
+    itself would be permitted to do.
+
+(3) Sub-processors are engaged in accordance with § 6 of this Agreement; the
+    general authorisation provided for therein is deemed prior authorisation
+    within the meaning of Art. 9(3) FADP.
+
+(4) Notifications of data security breaches to the Federal Data Protection
+    and Information Commissioner under Art. 24 FADP are made by the
+    Controller. § 9 applies accordingly, with the proviso that the Processor
+    informs the Controller in such good time that the Controller can fulfil
+    its notification obligation.
+
+(5) Personal data is disclosed abroad only under the conditions of Articles 16
+    and 17 FADP. For the relationship between Switzerland and the Processor's
+    processing environment, § 7(3) applies: as the processing environment is
+    located in Switzerland, there is no disclosure abroad in this respect.
+    Disclosure to the model provider is governed by § 7(3)(b), and disclosures
+    to other states by § 7(3)(c) and § 7(4).
+
+
+§ 16 FINAL PROVISIONS
+
+(1) In the event of conflicts on data protection matters, this Agreement
+    takes precedence over the Main Agreement.
+
+(2) Amendments and additions to this Agreement require text form. This also
+    applies to any amendment of this text form requirement. The adaptation of
+    Annexes 2 and 3 in accordance with § 5(2) and § 6(2) remains unaffected.
+
+(3) Should any provision of this Agreement be or become invalid, the validity
+    of the remaining provisions remains unaffected. The Parties will replace
+    the invalid provision with a valid one that comes closest to its economic
+    purpose.
+
+(4) The law of the Federal Republic of Germany applies. Mandatory provisions
+    of the FADP remain unaffected.
+
+(5) This Agreement applies with identical content to all customers of the
+    Processor. If the Parties have, in an individual case, made a different
+    agreement on processing on behalf in text form, that agreement takes
+    precedence over the provisions of this Agreement.
+
+(6) The Processor may amend this Agreement insofar as the amendment is
+    necessary to adapt it to a change in the legal situation, to requirements
+    or decisions of a supervisory authority or to a change in the functional
+    scope of the application, and the Controller is not unreasonably
+    disadvantaged as a result. The amendment provisions of the Main Agreement
+    apply accordingly to the procedure. The adaptation of Annexes 2 and 3 in
+    accordance with § 5(2) and § 6(2) is governed exclusively by the
+    provisions referred to there.
+
+
+
+
+===============================================================================
+ANNEX 1 — SUBJECT MATTER, NATURE AND PURPOSE OF THE PROCESSING
+===============================================================================
+
+1. SUBJECT MATTER OF THE PROCESSING
+
+Provision and operation of the software-as-a-service application smiit
+Analytics for the business analysis of data that the Controller releases from
+its bexio company.
+
+
+2. NATURE OF THE PROCESSING
+
+  - Retrieval of the released data via the bexio interface (read-only)
+  - Storage in tenant-separated data storage
+  - Structuring, preparation and linking into an analysis model
+  - Querying and presentation in reports, dashboards and exports
+  - Analysis via an AI-assisted analysis function, if activated by the
+    Controller
+  - Logging of access and security-relevant events
+  - Erasure in accordance with § 12 of this Agreement
+
+
+3. PURPOSE OF THE PROCESSING
+
+Provision of the services agreed in the Main Agreement, in particular the
+provision of business analyses for the Controller. The Processor does not
+process for its own purposes the data from the bexio connection or any content
+that the Controller and its Users enter in the application. § 1(7) applies to
+the account and usage data of the Users.
+
+
+4. CATEGORIES OF DATA SUBJECTS
+
+  a) Users of the application (employees and agents of the Controller)
+  b) Employees of the Controller whose data from bexio is analysed
+  c) Customers of the Controller and their contact persons
+  d) Suppliers of the Controller and their contact persons
+  e) Other business contacts of the Controller recorded in bexio
+
+
+5. TYPES OF PERSONAL DATA
+
+5.1 Data of the Users of the application
+
+  - Content of requests to the AI-assisted analysis function
+  - Logs of access to and changes to Customer data
+
+The account and usage data of the Users (name, e-mail address, password as a
+hash value, role, language and time zone settings, details of two-factor
+authentication and of trusted devices, login logs and details of the use of
+the functions) is processed by the Processor as a controller in its own right;
+it is not the subject matter of this Agreement (§ 1(7)).
+
+5.2 Data from the bexio connection
+
+The bexio authorisation is granted uniformly for the entire scope described
+below; no selection of individual data areas by the Controller is provided for
+(§ 3(3)). The categories actually retrieved are those that are available in
+the Controller's bexio company according to its modules and permissions.
+
+  a) Contact data
+     Name, salutation, title, address, communication data, language, country,
+     assignment to contact groups and industries
+
+  b) Document data
+     Invoices, quotes, orders, delivery notes, line items, payments,
+     reminders, subscriptions and the persons assigned to each of them
+
+  c) Purchasing data
+     Supplier invoices, expenses, outgoing payments, purchase orders and the
+     persons assigned to each of them
+
+  d) Accounting data
+     Chart of accounts, journal entries, tax rates, financial and calendar
+     years, VAT periods
+
+  e) Bank data
+     Bank accounts including IBAN, payments including payee and payer
+     details
+
+  f) Item and inventory data
+     Item master data, prices, stock levels, storage locations
+
+  g) Project and time data
+     Projects, milestones, work packages and RECORDED WORKING HOURS PER
+     PERSON including billability, activity and project assignment
+
+  h) Personnel data ("Payroll" area)
+     Master data of the employees including address, holiday and hours
+     balances as at cut-off dates and ABSENCES INCLUDING THE REASON FOR
+     ABSENCE RECORDED IN bexio
+
+  i) Other data
+     bexio users, company profile, notes and tasks from customer management
+     (free-text content), lookup values
+
+  j) Data stored by the Controller itself in the
+     application
+     internal cost rates and billing rates per person or service, budgets,
+     target working hours, key figure definitions
+
+
+6. SPECIAL CATEGORIES OF PERSONAL DATA (ARTICLE 9 GDPR)
+
+The connection includes the "Payroll" data area and thus the reasons for
+absence under Section 5.2(h). Depending on how the Controller records them in
+bexio, these may allow conclusions to be drawn about the state of health of
+individual employees and thus constitute health data within the meaning of
+Art. 9(1) GDPR.
+
+As no selection of individual data areas is provided for (§ 3(3)), this
+processing cannot be deselected when using the application. It is omitted only
+if the Controller does not grant the bexio authorisation at all or if its
+bexio company does not include the "Payroll" area.
+
+The Processor processes this data exclusively within the scope of the general
+analysis functions; no separate analysis by health characteristics takes
+place. The Controller is responsible for the existence of a legal basis under
+Art. 9(2) GDPR (§ 3(2)(a)).
+
+
+7. DATA RELATING TO WORK PERFORMANCE AND WORK BEHAVIOUR
+
+The data categories under Section 5.2(g) and (h) as well as (j) enable
+analyses of the working time, the utilisation and the billability of
+individual employees. The Controller has been informed that this may give rise
+to co-determination rights of an employee representative body (§ 3(2)(d)).
+
+
+8. DURATION OF THE PROCESSING
+
+For the term of the Main Agreement plus the periods under § 12 of this
+Agreement. Within the term of the Agreement, the following automated erasure
+periods apply:
+
+  - Conversation histories of the AI-assisted analysis function: 90 days after
+    the last activity
+  - Unmodified raw data from the bexio interface (data minimisation): after
+    30 days; the analysis data prepared from it is retained for the duration
+    of the connection
+  - Logs of the synchronisation runs: after 90 days
+
+
+9. AI-ASSISTED ANALYSIS FUNCTION: SHARING LEVELS
+
+The AI-assisted analysis function is switched off by default. Only a person
+with the "Owner" role can switch it on, and only after confirming a notice on
+the data transferred; this confirmation is documented with the time, the
+person and the version of the notice and is deemed an instruction under
+§ 2(4).
+
+In the default setting ("Standard"), names and e-mail addresses of persons
+are replaced by placeholders before the transfer to the model provider, and
+free texts are not transferred; company names are not pseudonymised. The
+Controller can lift these restrictions step by step, each time with a separate
+confirmation:
+
+  a) "Names": names of contacts (customers, suppliers and their contact
+     persons) in plain text;
+  b) "Names + texts": additionally free texts (posting, line item and time
+     recording texts, document titles, comments);
+  c) "Everything": no pseudonymisation, not even for employees, bexio users,
+     members of the workspace and e-mail addresses.
+
+Personnel data under Section 5.2(h) is only transferred if the Controller has
+released it separately. Switching off the function resets all releases.
+
+
+===============================================================================
+ANNEX 2 — TECHNICAL AND ORGANISATIONAL MEASURES (ARTICLE 32 GDPR)
+===============================================================================
+
+Last updated: 18 November 2026
+
+
+1. CONFIDENTIALITY
+
+1.1 Physical access control
+    Operations take place exclusively in data centres of the sub-processor
+    Microsoft (Microsoft Azure). No own data centres or server rooms are
+    operated. The physical security measures are set out in the
+    certifications of the sub-processor (Annex 3).
+
+1.2 System access control
+    - Login exclusively via personal user accounts
+    - Passwords with a minimum length of ten characters
+    - Passwords stored exclusively as Argon2 hash values
+    - Mandatory two-factor authentication for all Users by one-time e-mail
+      code (valid for 10 minutes, a maximum of five attempts); trusted
+      devices for a maximum of 30 days
+    - Short-lived access tokens (15 minutes); sessions end no later than
+      7 days after login, regardless of activity; overview of the active
+      sessions and sign-out on all devices by the User
+    - Automatic account lockout for 15 minutes after five failed attempts
+    - Mandatory confirmation of the e-mail address before first use
+    - Session cookies exclusively with the attributes "Secure", "HttpOnly"
+      and the "__Host" prefix
+    - Protection against automated login attempts through rate limiting at the
+      level of the upstream web server
+    - Locked accounts respond as with an incorrect password, so that the
+      existence of an account cannot be determined
+
+1.3 Data access control
+    - Role-based authorisation concept with the roles Owner, Admin and
+      Member
+    - Tenant separation at database level through row-based security
+      policies (Row Level Security) with enforced application
+      (FORCE ROW LEVEL SECURITY)
+    - The application connects to the database exclusively with database
+      roles without superuser rights, so that the security policies cannot be
+      circumvented
+    - Separate database roles by task: one role for application operation, a
+      read-only role for the analysis layer, a read-only role for the
+      AI-assisted analysis function
+    - The AI-assisted analysis function only has read access to the analysis
+      schema; access to raw data, credentials or system tables is technically
+      excluded
+    - Every database query generated by the AI is checked by an upstream query
+      filter
+    - Limitation of the execution time and the result size of queries
+    - Platform administrators of the Processor have no access to reports,
+      conversation histories of the AI-assisted analysis function or data from
+      the bexio connection; this is technically enforced by the access rules
+      of the database
+    - Support access to a workspace only with the consent of a person with the
+      "Owner" role, limited to a maximum of 30 days, revocable at any time and
+      visible in the member list; no logging in "as a User"
+    - Access to the administration area only with two-factor verification
+      that is valid for a maximum of four hours
+    - Logging of every action of the platform administrators in the audit
+      log
+
+1.4 Separation control
+    - Logical tenant separation of all data holdings based on a unique
+      workspace identifier
+    - Enforcement of the separation at database level, not solely in the
+      application logic
+    - Automated tests demonstrating tenant separation
+
+1.5 Pseudonymisation and encryption
+    - Transmission exclusively via TLS (HTTPS); unencrypted access attempts
+      are redirected
+    - Encryption of data at rest by the platform encryption of the
+      sub-processor
+    - Encryption of the bexio access tokens at rest with a separate key
+    - Pseudonymisation of names and e-mail addresses before the transfer to
+      the model provider (Annex 1, Section 9)
+    - Removal of access and security credentials from the addresses in the
+      server logs; erasure of the server logs after 30 days
+    - No storage of IP addresses in the telemetry (Application Insights)
+
+
+2. INTEGRITY
+
+2.1 Input control
+    - Audit-proof, append-only logging of security-relevant and
+      data-modifying operations with timestamp and user ID
+
+2.2 Transfer control
+    - No transfer of data carriers
+    - Transfer to sub-processors exclusively via encrypted connections
+    - Restrictive Content Security Policy to prevent content from leaking via
+      embedded resources
+    - Neutralisation of formula cells in data exports to prevent formula
+      injection
+
+
+3. AVAILABILITY AND RESILIENCE
+
+    - Automated backup of the database by the sub-processor with a retention
+      period of 35 days and the option of restoring to a specific point in
+      time
+    - Geo-redundant storage of the backup copies in a second Swiss Azure
+      region (Switzerland West)
+    - Deletion protection on the database and the key management against
+      accidental deletion
+    - Monitoring of operational readiness via status endpoints
+    - Limitation of concurrent database connections to protect against
+      overload
+    - Rate limiting of security-critical and resource-intensive functions
+    - Resumption of interrupted processing runs without data loss
+
+
+4. PROCEDURE FOR REGULAR REVIEW
+
+4.1 Review
+    - Regular security reviews of the source code and system architecture with
+      documented results
+    - Automated checking of the third-party libraries used for known
+      vulnerabilities in the build process
+    - Pinning of the container base images by cryptographic checksums
+    - Automated tests as evidence of the effectiveness of tenant separation
+      and of the access restrictions
+
+4.2 Control of processing on instructions
+    - Written agreements with all sub-processors
+    - Commitment of all employees to confidentiality
+    - Documented procedure for reporting personal data breaches
+
+4.3 Data protection by default
+    - The AI-assisted analysis function is switched off by default and is
+      only switched on by an Owner; names and e-mail addresses are
+      pseudonymised by default, personnel data is only transferred after
+      separate release (Annex 1, Section 9)
+    - The bexio connection is exclusively read-only; write access to the bexio
+      company is not technically provided for
+    - The Controller can revoke the bexio authorisation at any time; data
+      retrieval then ceases
+    - The Controller can delete individual datasets or its entire workspace
+      itself; the data is automatically erased within four hours
+    - Automated erasure of the conversation histories of the AI-assisted
+      analysis function 90 days after the last activity
+
+    Note: A selection of individual bexio data areas by the Controller is
+    currently not provided for (§ 3(3)).
+
+
+===============================================================================
+ANNEX 3 — SUB-PROCESSORS
+===============================================================================
+
+Last updated: 18 November 2026
+
+
+1. Microsoft Ireland Operations Limited
+   One Microsoft Place, South County Business Park, Leopardstown,
+   Dublin 18, Ireland
+   Service:              Operation of the application and the database
+                         (Microsoft Azure), sending of system messages by
+                         e-mail (Azure Communication Services), delivery and
+                         protection of the application (Azure Front Door with
+                         a web application firewall), operational monitoring
+                         (Application Insights, Log Analytics), processing of
+                         user feedback (Azure DevOps)
+   Data processed:       all data listed in Annex 1
+   Place of processing:  Switzerland — Azure region "Switzerland North"
+                         (Zurich); geo-redundant backup copies of the database
+                         in the "Switzerland West" region (Geneva); e-mail
+                         sending with data storage in Switzerland. Azure Front
+                         Door receives requests at Microsoft's locations
+                         worldwide. Azure DevOps: "North Europe" region
+                         (Ireland).
+   Third-country link:   Switzerland (adequacy decision of the European
+                         Commission under Art. 45 GDPR); Azure DevOps within
+                         the European Union; for Azure Front Door also
+                         locations outside Switzerland and the EEA
+   Transfer mechanism:   Switzerland: adequacy decision; otherwise standard
+                         contractual clauses in Microsoft's Data Protection
+                         Addendum and certification of Microsoft Corporation
+                         under the EU-US Data Privacy Framework
+
+
+2. OpenAI Ireland Limited
+   1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
+   Dublin 1, D01 YC43, Ireland
+   Further sub-processors engaged by OpenAI at
+   https://platform.openai.com/subprocessors
+   Contractual basis:    OpenAI Data Processing Addendum as amended from time
+                         to time (currently v.010126),
+                         https://openai.com/policies/data-processing-addendum/
+   Service:              Processing of requests of the AI-assisted analysis
+                         function (OpenAI models)
+   Data processed:       The User's question, conversation history,
+                         description of the data structure and results of the
+                         generated queries (key figures and limited extracts
+                         of data rows). Names and e-mail addresses of persons
+                         are pseudonymised, free texts and personnel data are
+                         not transferred, unless the Controller has released
+                         this in accordance with Annex 1, Section 9.
+   Place of processing:  EEA and Switzerland; contracting party in Ireland,
+                         European data residency (endpoint
+                         https://eu.api.openai.com/v1)
+   Third-country link:   none for the processing of the requests; for logs
+                         used to detect abuse, OpenAI does not commit to a
+                         storage location (§ 7(2))
+   Transfer mechanism:   Standard contractual clauses under Implementing
+                         Decision (EU) 2021/914 that OpenAI Ireland Limited
+                         has agreed with the recipients outside the EEA and
+                         Switzerland (Section 4.1 of the Addendum); also
+                         applies to data that is subject to Swiss data
+                         protection law. The EU-US Data Privacy Framework is
+                         not relied upon.
+   Special features:     OpenAI processes the data only to provide the
+                         services (Section 1.2 of the Addendum); according to
+                         OpenAI, data from the API is not used to train
+                         models. The requests are transmitted in such a way
+                         that OpenAI does not store any request or response
+                         data for later reuse. OpenAI retains logs used to
+                         detect abuse, which may contain requests and
+                         responses, for up to 30 days. OpenAI belongs to a US
+                         group of companies; a demand for disclosure under the
+                         CLOUD Act cannot be ruled out (§ 7(2)).
+
+
+NOTE: bexio AG is not a sub-processor of the Processor. bexio is used by the
+Controller itself; the data is passed on to the Processor at the instigation
+of and after authorisation by the Controller.
+
+
+===============================================================================
+ANNEX 4 — CONTACT PERSONS
+===============================================================================
+
+As this Agreement applies with identical content to all customers, the
+contact persons are not named in the text of the Agreement but are designated
+and maintained via the application. They thus remain up to date without any
+amendment to the Agreement.
+
+
+1. PERSONS OF THE CONTROLLER AUTHORISED TO ISSUE INSTRUCTIONS
+
+The persons authorised to issue instructions are those to whom the Controller
+has assigned the "Owner" or "Admin" role in its workspace. The Controller
+keeps this assignment up to date and withdraws the role without undue delay if
+a person is no longer to be authorised to issue instructions.
+
+
+2. CONTACT ADDRESS OF THE CONTROLLER FOR NOTIFICATIONS UNDER § 9
+
+The Processor sends notifications under § 9 to the e-mail addresses of all
+persons who hold the "Owner" role in the Controller's workspace. The
+Controller ensures that at least one person with this role can receive and
+forward notifications.
+
+
+3. CONTACT PERSON OF THE PROCESSOR FOR DATA PROTECTION MATTERS
+
+  Noah Neßlauer
+  Managing Director of smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Germany
+  E-mail: noah.nesslauer@smiit.de
+
+  This person is the contact person for data protection matters, not a data
+  protection officer within the meaning of Art. 37 et seq. GDPR (§ 4(6)).
+
+The Processor notifies any change to these details in text form or by
+updating the version stored in the application; no amendment to the Agreement
+is required for this.
+
+
+===============================================================================
+END OF THE DATA PROCESSING AGREEMENT
+===============================================================================

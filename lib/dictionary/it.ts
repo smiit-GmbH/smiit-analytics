@@ -332,7 +332,7 @@ export const it: Dictionary = {
         {
           icon: "server",
           title: "Hosting",
-          text: "Salviamo i vostri dati bexio e i vostri report esclusivamente in Svizzera, su server Microsoft Azure a Zurigo, con copie di backup a Ginevra. La funzione di IA è facoltativa: solo quando la attivate, OpenAI elabora le vostre richieste negli Stati Uniti.",
+          text: "Salviamo i vostri dati bexio e i vostri report esclusivamente in Svizzera, su server Microsoft Azure a Zurigo, con copie di backup a Ginevra. La funzione di IA è facoltativa: solo quando la attivate, OpenAI elabora le vostre richieste, tramite il suo servizio europeo nello Spazio economico europeo e in Svizzera.",
         },
         {
           icon: "shield",
@@ -599,8 +599,13 @@ export const it: Dictionary = {
   legal: {
     /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
     contents: "Indice",
-    /** Shown above those texts in every language but German – they exist in German only. */
+    /** Shown above those texts in every language but German when no translation exists (content/legal/<lang>/). */
     germanOnly: "Questo documento è disponibile solo in tedesco. Fa fede la versione tedesca.",
+    /** Shown above a translated text (content/legal/<lang>/<route>.txt): only the German text is binding. */
+    translationNotice:
+      "Questa traduzione è stata realizzata con l'IA e non è stata verificata. Serve solo a scopo informativo e non è giuridicamente vincolante. Fa fede esclusivamente la versione tedesca, anche in caso di errori di traduzione.",
+    /** Link from a translation to the German text. */
+    germanVersion: "Leggi la versione tedesca",
     legalNotice: {
       nav: "Note legali",
       title: "Note legali",
@@ -632,8 +637,8 @@ export const it: Dictionary = {
     },
     dpa: {
       nav: "Trattamento su mandato",
-      title: "Contratto di trattamento dei dati su mandato",
-      description: "Contratto di trattamento dei dati su mandato per smiit Analytics.",
+      title: "Accordo sul trattamento dei dati",
+      description: "Accordo sul trattamento dei dati (trattamento su mandato) per smiit Analytics.",
     },
   },
 

@@ -313,8 +313,9 @@ statt.
                   im Auftrag des Kunden (siehe unten)
   Empfänger:      OpenAI als Auftragsverarbeiter (siehe Ziffer 5)
   Verarbeitungs-
-  ort:            Vertragspartner in Irland, Verarbeitung in den
-                  Vereinigten Staaten von Amerika (siehe Ziffer 6)
+  ort:            Europäischer Wirtschaftsraum und Schweiz; Vertragspartner in
+                  Irland, europäischer Endpunkt https://eu.api.openai.com/v1
+                  (siehe Ziffer 5 und 6)
   Speicherdauer:  Gesprächsverläufe werden bei uns 90 Tage nach der letzten
                   Aktivität automatisch gelöscht; zur Speicherdauer beim
                   Modellanbieter siehe Ziffer 5
@@ -337,9 +338,9 @@ die Inhaberin oder der Inhaber sie gesondert freigegeben hat.
 
 Die übermittelten Inhalte werden NICHT zum Training von Sprachmodellen
 verwendet. Der Modellanbieter speichert die Anfragen nicht zur späteren
-Wiederverwendung. Die Verarbeitung findet in den Vereinigten Staaten von
-Amerika statt; die Voraussetzungen dieser Übermittlung sind unter Ziffer 6
-beschrieben.
+Wiederverwendung. Die Verarbeitung findet im Europäischen Wirtschaftsraum
+und in der Schweiz statt; Einzelheiten, auch zu den Protokollen zur Erkennung
+von Missbrauch, sind unter Ziffer 6 beschrieben.
 
 Soweit die verarbeiteten Inhalte Daten aus dem bexio-Konto unseres Kunden
 betreffen, handeln wir als Auftragsverarbeiter dieses Kunden; verantwortlich
@@ -471,8 +472,8 @@ Als Auftragsverarbeiter setzen wir ein:
                  mit Datenhaltung in der Schweiz versandt. Azure Front Door
                  nimmt Anfragen an den weltweiten Standorten von Microsoft
                  entgegen, die dem Nutzer jeweils am nächsten liegen.
-                 Feedback (Azure DevOps) wird ebenfalls in der Region
-                 "Switzerland North" (Zürich) gespeichert.
+                 Feedback (Azure DevOps) wird in der Region "North Europe"
+                 (Irland) gespeichert, also innerhalb der Europäischen Union.
 
   b) OpenAI Ireland Limited
      1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
@@ -482,18 +483,29 @@ Als Auftragsverarbeiter setzen wir ein:
      Grundlage:  OpenAI Data Processing Addendum in der jeweils geltenden
                  Fassung (derzeit v.010126), abrufbar unter
                  https://openai.com/policies/data-processing-addendum/
-     Standort:   Vertragspartner mit Sitz in Irland; die Verarbeitung erfolgt
-                 durch die OpenAI OpCo, LLC, 1455 3rd Street, San Francisco,
-                 CA 94158, USA, in den Vereinigten Staaten von Amerika (siehe
-                 Ziffer 6). Weitere von OpenAI eingesetzte
-                 Unterauftragsverarbeiter: https://platform.openai.com/subprocessors
+     Standort:   Europäischer Wirtschaftsraum und Schweiz. Wir nutzen die
+                 europäische Datenresidenz von OpenAI ("Data Residency",
+                 Region Europa): Alle Anfragen gehen ausschließlich an den
+                 europäischen Endpunkt https://eu.api.openai.com/v1 eines
+                 Projekts, das bei OpenAI fest der Region Europa zugeordnet
+                 ist. OpenAI verarbeitet die Anfragen (Berechnung der
+                 Antworten durch das Sprachmodell) innerhalb dieser Region,
+                 also in den Staaten der Europäischen Union, in Norwegen,
+                 Island, Liechtenstein und der Schweiz (siehe Ziffer 6). Nicht
+                 von der Datenresidenz erfasst sind Verwaltungsdaten unseres
+                 eigenen Kontos bei OpenAI, etwa Abrechnungs- und
+                 Nutzungsstatistiken; sie enthalten keine Inhalte der
+                 Anfragen. Weitere von OpenAI eingesetzte
+                 Unterauftragsverarbeiter:
+                 https://platform.openai.com/subprocessors
      Speicher-
      dauer:      Wir übermitteln die Anfragen so, dass OpenAI keine
                  Anfrage- oder Antwortdaten zur späteren Wiederverwendung
                  speichert. OpenAI bewahrt Protokolle zur Erkennung von
                  Missbrauch, die Anfragen und Antworten enthalten können, bis
                  zu 30 Tage auf, sofern nicht eine längere Aufbewahrung
-                 gesetzlich vorgeschrieben ist.
+                 gesetzlich vorgeschrieben ist. Für diese Protokolle sagt
+                 OpenAI keinen Speicherort zu (siehe Ziffer 6).
 
 Mit allen Auftragsverarbeitern haben wir Verträge nach Artikel 28 DSGVO
 geschlossen.
@@ -534,13 +546,15 @@ für das die Europäische Kommission einen Angemessenheitsbeschluss erlassen hat
 für die Verarbeitung in der Schweiz daher nicht erforderlich. Dasselbe gilt
 für den Versand von E-Mails.
 
-Soweit Microsoft im Rahmen von Azure Front Door oder Azure DevOps Daten
-außerhalb der Schweiz und des Europäischen Wirtschaftsraums verarbeitet,
-stützt sich dies auf die Standardvertragsklauseln der Europäischen Kommission
-(Artikel 46 Absatz 2 Buchstabe c DSGVO), die Bestandteil der
-Datenschutzbestimmungen von Microsoft sind, sowie auf die Zertifizierung der
-Microsoft Corporation unter dem EU-US Data Privacy Framework (Artikel 45
-DSGVO).
+Feedback in Azure DevOps speichert Microsoft in der Region "North Europe"
+(Irland) und damit innerhalb der Europäischen Union; hierfür sind keine
+zusätzlichen Garantien erforderlich. Soweit Microsoft im Rahmen von Azure
+Front Door oder Azure DevOps Daten außerhalb der Schweiz und des Europäischen
+Wirtschaftsraums verarbeitet, stützt sich dies auf die Standardvertragsklauseln
+der Europäischen Kommission (Artikel 46 Absatz 2 Buchstabe c DSGVO), die
+Bestandteil der Datenschutzbestimmungen von Microsoft sind, sowie auf die
+Zertifizierung der Microsoft Corporation unter dem EU-US Data Privacy
+Framework (Artikel 45 DSGVO).
 
 Beim Aufruf unserer Website verarbeitet GitHub, Inc. Ihre IP-Adresse in den
 Vereinigten Staaten von Amerika (Ziffer 4.1). GitHub ist unter dem EU-US Data
@@ -559,17 +573,21 @@ von PayPal (Ziffer 5).
 
 Bei der KI-gestützten Analysefunktion (Ziffer 4.9) übermitteln wir die Inhalte
 einer Anfrage an unseren Auftragsverarbeiter OpenAI Ireland Limited mit Sitz in
-Irland, also innerhalb der Europäischen Union. OpenAI Ireland Limited lässt die
-Anfragen durch die OpenAI OpCo, LLC in den Vereinigten Staaten von Amerika
-verarbeiten. Diese Weiterübermittlung nimmt OpenAI auf Grundlage von
-Verträgen mit den Standardvertragsklauseln der Europäischen Kommission
-(Artikel 46 Absatz 2 Buchstabe c DSGVO, Durchführungsbeschluss (EU)
-2021/914) vor, soweit kein Angemessenheitsbeschluss nach Artikel 45 DSGVO
-besteht (Ziffer 4.1 des OpenAI Data Processing Addendum). Eine
-Zertifizierung von OpenAI unter dem EU-US Data Privacy Framework nehmen wir
-nicht in Anspruch.
+Irland. Wir nutzen ausschließlich den europäischen Endpunkt
+https://eu.api.openai.com/v1 mit der Datenresidenz-Region Europa (Ziffer 5).
+Die Anfragen werden damit innerhalb des Europäischen Wirtschaftsraums und der
+Schweiz verarbeitet. Eine Übermittlung in ein Drittland findet dabei nicht
+statt: Der Europäische Wirtschaftsraum unterliegt der DSGVO, und für die
+Schweiz besteht ein Angemessenheitsbeschluss der Europäischen Kommission
+(Artikel 45 DSGVO). Für die Protokolle zur Erkennung von Missbrauch, die
+OpenAI bis zu 30 Tage aufbewahrt, sagt OpenAI keinen Speicherort zu. Soweit
+OpenAI diese Protokolle oder im Einzelfall andere Daten außerhalb des
+Europäischen Wirtschaftsraums und der Schweiz verarbeitet, gelten die
+Standardvertragsklauseln der Europäischen Kommission (Artikel 46 Absatz 2
+Buchstabe c DSGVO, Durchführungsbeschluss (EU) 2021/914), die Bestandteil des
+OpenAI Data Processing Addendum sind (Ziffer 4.1 des Addendums).
 
-Die Übermittlung in die USA findet nur statt, wenn die KI-gestützte
+Die Übermittlung an OpenAI findet nur statt, wenn die KI-gestützte
 Analysefunktion im jeweiligen Arbeitsbereich eingeschaltet ist und genutzt
 wird. Namen und E-Mail-Adressen von Personen werden dabei standardmäßig
 pseudonymisiert (Ziffer 4.9). Die übermittelten Inhalte werden nicht zum
@@ -577,13 +595,34 @@ Training von Modellen verwendet.
 
 Für unsere Kundinnen und Kunden in der Schweiz gilt: Da unsere Anwendung und
 unsere Datenbank in der Schweiz betrieben werden, findet insoweit keine
-Bekanntgabe ins Ausland statt. Die Bekanntgabe an OpenAI Ireland Limited im
-Rahmen der KI-gestützten Analysefunktion ist zulässig, weil Irland in Anhang 1
-der Datenschutzverordnung als Staat mit angemessenem Datenschutz aufgeführt
-ist (Artikel 16 Absatz 1 revDSG). Für die Weiterübermittlung in die USA gilt
-das im vorstehenden Absatz Gesagte; das OpenAI Data Processing Addendum
-erfasst ausdrücklich auch Daten, die dem schweizerischen Datenschutzrecht
-unterliegen.
+Bekanntgabe ins Ausland statt. Die Bekanntgabe an OpenAI im Rahmen der
+KI-gestützten Analysefunktion ist zulässig, weil die Staaten der Europäischen
+Union sowie Norwegen, Island und Liechtenstein in Anhang 1 der
+Datenschutzverordnung als Staaten mit angemessenem Datenschutz aufgeführt
+sind (Artikel 16 Absatz 1 revDSG); soweit OpenAI die Daten in der Schweiz
+verarbeitet, liegt keine Bekanntgabe ins Ausland vor. Das OpenAI Data
+Processing Addendum erfasst ausdrücklich auch Daten, die dem schweizerischen
+Datenschutzrecht unterliegen.
+
+ZUGRIFF DURCH US-BEHÖRDEN. OpenAI Ireland Limited gehört zur
+OpenAI-Unternehmensgruppe mit Sitz in den Vereinigten Staaten von Amerika.
+Die Datenresidenz legt fest, wo die Daten verarbeitet und gespeichert werden;
+sie schließt nicht aus, dass US-Behörden auf Grundlage des US-amerikanischen
+CLOUD Act (Clarifying Lawful Overseas Use of Data Act, 18 U.S.C. § 2713) von
+einem US-Unternehmen die Herausgabe von Daten verlangen, die es kontrolliert,
+auch wenn diese außerhalb der USA gespeichert sind. Ein solches Verlangen
+setzt in der Regel einen richterlichen Beschluss oder eine vergleichbare
+Anordnung im Rahmen eines Strafverfahrens wegen schwerer Straftaten voraus,
+etwa bei Terrorismus, organisierter Kriminalität oder schwerem Betrug, und
+richtet sich gezielt gegen bestimmte Personen oder Konten; eine anlasslose
+Massenabfrage erlaubt der CLOUD Act nicht. Der Anbieter kann einer solchen
+Anordnung widersprechen, wenn sie mit dem Recht des Staates kollidiert, in dem
+die Daten liegen. Für die bei uns verarbeiteten betriebswirtschaftlichen Daten
+ist ein solcher Zugriff daher ein seltener Ausnahmefall. Wir haben zudem
+technisch dafür gesorgt, dass OpenAI möglichst wenige Daten erhält: Die
+Funktion ist standardmäßig ausgeschaltet, Namen und E-Mail-Adressen werden
+pseudonymisiert und Anfragen nicht zur Wiederverwendung gespeichert (Ziffer
+4.9).
 
 
 7. SPEICHERDAUER

@@ -338,7 +338,7 @@ export const en: Dictionary = {
         {
           icon: "server",
           title: "Hosting",
-          text: "We store your bexio data and reports exclusively in Switzerland, on Microsoft Azure servers in Zurich, with backups in Geneva. The AI feature is optional: only once you switch it on does OpenAI process your requests in the USA.",
+          text: "We store your bexio data and reports exclusively in Switzerland, on Microsoft Azure servers in Zurich, with backups in Geneva. The AI feature is optional: only once you switch it on does OpenAI process your requests, through its European service in the European Economic Area and Switzerland.",
         },
         {
           icon: "shield",
@@ -603,8 +603,13 @@ export const en: Dictionary = {
   legal: {
     /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
     contents: "Contents",
-    /** Shown above those texts in every language but German – they exist in German only. */
+    /** Shown above those texts in every language but German when no translation exists (content/legal/<lang>/). */
     germanOnly: "This document is available in German only. The German version is legally binding.",
+    /** Shown above a translated text (content/legal/<lang>/<route>.txt): only the German text is binding. */
+    translationNotice:
+      "This translation was produced with AI and has not been reviewed. It is provided for information only and is not legally binding. Only the German version is legally binding, including in the event of translation errors.",
+    /** Link from a translation to the German text. */
+    germanVersion: "Read the German version",
     /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
       nav: "Legal notice",

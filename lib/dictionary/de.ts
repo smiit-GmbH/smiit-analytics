@@ -342,7 +342,7 @@ export const de = {
         {
           icon: "server",
           title: "Hosting",
-          text: "Ihre bexio-Daten und Berichte speichern wir ausschliesslich in der Schweiz, auf Servern von Microsoft Azure in Zürich, Sicherungskopien in Genf. Die KI-Funktion ist optional: Erst wenn Sie sie einschalten, verarbeitet OpenAI Ihre Anfragen in den USA.",
+          text: "Ihre bexio-Daten und Berichte speichern wir ausschliesslich in der Schweiz, auf Servern von Microsoft Azure in Zürich, Sicherungskopien in Genf. Die KI-Funktion ist optional: Erst wenn Sie sie einschalten, verarbeitet OpenAI Ihre Anfragen, und zwar über seinen europäischen Dienst im Europäischen Wirtschaftsraum und in der Schweiz.",
         },
         {
           icon: "shield",
@@ -610,8 +610,13 @@ export const de = {
   legal: {
     /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
     contents: "Inhalt",
-    /** Shown above those texts in every language but German – they exist in German only. */
+    /** Shown above those texts in every language but German when no translation exists (content/legal/<lang>/). */
     germanOnly: "Dieses Dokument liegt nur auf Deutsch vor. Massgeblich ist die deutsche Fassung.",
+    /** Shown above a translated text (content/legal/<lang>/<route>.txt): only the German text is binding. */
+    translationNotice:
+      "Diese Übersetzung wurde mit KI erstellt und nicht geprüft. Sie dient nur zur Information und ist nicht rechtsverbindlich. Rechtsverbindlich ist allein die deutsche Fassung, auch bei Übersetzungsfehlern.",
+    /** Link from a translation to the German text. */
+    germanVersion: "Zur deutschen Fassung",
     /** `nav` = short label in the footer. `title` may contain soft hyphens (­) for long words. */
     legalNotice: {
       /** Company facts (address, register, VAT ID …) are in lib/site.ts (COMPANY). */

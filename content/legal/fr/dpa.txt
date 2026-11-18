@@ -1,0 +1,1127 @@
+===============================================================================
+ACCORD DE TRAITEMENT DES DONNÉES (CONTRAT DE SOUS-TRAITANCE)
+conformément à l'article 28 du règlement (UE) 2016/679 (RGPD)
+pour l'utilisation de smiit Analytics
+===============================================================================
+
+Version 1.0 — Mise à jour : 18 novembre 2026
+
+PARTIES AU CONTRAT
+
+Le présent contrat est conclu entre
+
+  le Client qui a conclu le contrat principal relatif à l'utilisation de
+  smiit Analytics et auquel l'espace de travail concerné est rattaché — à
+  savoir l'entreprise indiquée comme partie contractante lors de la création de
+  l'espace de travail ; les informations correspondantes sont enregistrées dans
+  l'application, dans les paramètres de l'espace de travail, et peuvent y être
+  consultées
+
+  — ci-après le « responsable du traitement » ou le « Client » —
+
+et
+
+  smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Allemagne
+  Tribunal du registre : Amtsgericht Ulm, HRB 741965
+  Représentée par : Sebastian Grab, Noah Neßlauer
+  N° TVA intracommunautaire : DE357299821
+
+  — ci-après le « sous-traitant » ou le « Prestataire » —
+
+  — ensemble les « Parties » —
+
+Le présent contrat ne nécessite ni exemplaire individuel ni signature
+manuscrite ; concernant sa conclusion, voir le § 1 al. 1 à 3.
+
+
+PRÉAMBULE
+
+Le sous-traitant fournit des prestations au responsable du traitement
+conformément aux conditions d'utilisation de smiit Analytics (contrat
+principal). Ce faisant, il traite des données à caractère personnel pour le
+compte du responsable du traitement. Le présent contrat précise les droits et
+obligations des Parties en matière de protection des données conformément à
+l'art. 28 RGPD. Il s'applique à toutes les activités qui sont liées au contrat
+principal et dans le cadre desquelles des employés du sous-traitant ou des
+tiers mandatés par celui-ci entrent en contact avec des données à caractère
+personnel du responsable du traitement.
+
+Le sous-traitant fournit sa prestation sous la forme d'un service standardisé
+destiné à un grand nombre de clients, selon des conditions techniques et
+organisationnelles uniformes. Le présent contrat est par conséquent conçu comme
+un document uniforme et s'applique avec un contenu identique à tous les
+clients. L'art. 28, par. 9 RGPD autorise expressément la conclusion sous forme
+électronique ; une signature manuscrite n'est pas nécessaire.
+
+
+§ 1 CONCLUSION, OBJET, DURÉE ET CHAMP D'APPLICATION
+
+(1) Le présent contrat est conclu du fait que le responsable du traitement
+    l'accepte expressément dans l'application, lors de la création de son
+    espace de travail ou à un moment ultérieur. L'acceptation intervient sous
+    forme électronique au sens de l'art. 28, par. 9 RGPD. Une signature
+    manuscrite n'est pas requise.
+
+(2) L'acceptation est déclarée par une personne habilitée à représenter le
+    responsable du traitement. Par l'acceptation, la personne qui agit garantit
+    être habilitée à conclure le présent contrat pour le compte du responsable
+    du traitement.
+
+(3) Le sous-traitant documente, pour chaque responsable du traitement, le
+    moment de l'acceptation et la version acceptée du présent contrat. Chaque
+    version est tenue à disposition à une adresse accessible de manière
+    permanente ; la version en vigueur peut être consultée à l'adresse
+    https://www.smiit-analytics.com/de/dpa/. Le responsable du traitement peut
+    à tout moment consulter dans l'application la version qu'il a acceptée et
+    l'enregistrer sous forme de fichier.
+
+(4) L'objet, la nature et la finalité du traitement, le type de données à
+    caractère personnel ainsi que les catégories de personnes concernées
+    figurent à l'annexe 1 du présent contrat.
+
+(5) La durée du présent contrat correspond à la durée du contrat principal. Les
+    obligations découlant du § 12 (effacement et restitution) ainsi que du
+    § 4 al. 1 (confidentialité) subsistent au-delà de la fin du contrat.
+
+(6) Le présent contrat s'applique aux traitements qui relèvent du champ
+    d'application territorial et matériel du RGPD. Pour les traitements soumis
+    à la loi fédérale suisse sur la protection des données (nLPD), le § 15
+    s'applique en complément.
+
+(7) Dans la mesure où le Prestataire traite des données à caractère personnel à
+    ses propres fins, il est lui-même responsable du traitement à cet égard ;
+    le présent contrat ne s'applique pas à ces traitements. Cela concerne
+    a) les données de base du Client aux fins de l'exécution du contrat et de
+       la facturation, ainsi que
+    b) les données de compte et d'utilisation des Utilisateurs de l'application
+       (notamment nom, adresse e-mail, données de connexion ainsi que nature et
+       moment des fonctions utilisées), que le Prestataire traite pour
+       l'exploitation des comptes utilisateurs, pour des statistiques
+       d'utilisation et pour l'amélioration de l'application.
+    Ces données ne sont ni vendues ni transmises d'une quelconque autre manière
+    à des tiers. Les détails sont réglés dans la politique de confidentialité
+    du Prestataire.
+
+
+§ 2 DROIT DU RESPONSABLE DU TRAITEMENT DE DONNER DES INSTRUCTIONS
+
+(1) Le sous-traitant traite les données à caractère personnel exclusivement sur
+    instruction documentée du responsable du traitement. Cela vaut également
+    pour les transferts de données à caractère personnel vers un pays tiers ou
+    à une organisation internationale, à moins qu'il ne soit tenu d'y procéder
+    en vertu du droit de l'Union ou du droit de l'État membre auquel il est
+    soumis. Dans ce cas, le sous-traitant informe le responsable du traitement
+    de cette obligation juridique avant le traitement, sauf si le droit
+    concerné interdit une telle information pour des motifs importants
+    d'intérêt public.
+
+(2) Les instructions sont fixées de manière exhaustive dans le présent contrat,
+    y compris ses annexes, et dans le contrat principal. Les instructions
+    individuelles qui s'en écartent requièrent la forme textuelle.
+
+(3) Le responsable du traitement donne ses instructions par l'intermédiaire des
+    personnes habilitées à donner des instructions qu'il a désignées. Le
+    sous-traitant désigne un interlocuteur pour les instructions. Cette
+    désignation figure à l'annexe 4.
+
+(4) La configuration de l'application par le responsable du traitement au moyen
+    des fonctions prévues à cet effet vaut instruction. Cela concerne notamment
+    l'octroi et la révocation de l'autorisation bexio, l'attribution de rôles
+    et de droits, la création de partages ainsi que l'activation ou la
+    désactivation de la fonction d'analyse assistée par l'IA.
+
+(5) Si le sous-traitant estime qu'une instruction enfreint des dispositions
+    relatives à la protection des données, il en informe sans délai le
+    responsable du traitement. Il est en droit de suspendre l'exécution de
+    l'instruction concernée jusqu'à ce que le responsable du traitement la
+    confirme ou la modifie.
+
+
+§ 3 RESPONSABILITÉ DU RESPONSABLE DU TRAITEMENT
+
+(1) Le responsable du traitement est seul responsable de la licéité du
+    traitement ainsi que du respect des droits des personnes concernées.
+
+(2) Il incombe notamment au responsable du traitement
+
+    a) de veiller à ce qu'il existe une base juridique pour le traitement, y
+       compris une base juridique au sens de l'art. 9, par. 2 RGPD dans la
+       mesure où des catégories particulières de données à caractère personnel
+       sont traitées ;
+    b) d'informer les personnes concernées conformément aux art. 13 et
+       14 RGPD ;
+    c) d'examiner si une analyse d'impact relative à la protection des données
+       doit être effectuée au sens de l'art. 35 RGPD et, le cas échéant, de
+       l'effectuer ;
+    d) d'associer une représentation du personnel existante dans la mesure où
+       le droit national l'exige, notamment lors de l'analyse de données
+       relatives au temps de travail et aux performances (en Allemagne,
+       notamment en vertu du § 87 al. 1 n° 6 de la loi allemande sur
+       l'organisation des entreprises, BetrVG).
+
+(3) L'autorisation de l'interface bexio est accordée de manière uniforme pour
+    l'ensemble du périmètre décrit à l'annexe 1, point 5.2. Une sélection de
+    domaines de données individuels n'est pas prévue : le responsable du
+    traitement ne peut accorder la connexion que dans son ensemble ou y
+    renoncer entièrement. La question de savoir si certains domaines de données
+    peuvent effectivement être récupérés au sein de ce périmètre dépend en
+    outre des modules et des droits existant dans l'entreprise bexio du
+    responsable du traitement ; les domaines non disponibles restent
+    inutilisés.
+
+(4) Le responsable du traitement a été expressément informé que la connexion
+    englobe ainsi également les données du personnel visées à l'annexe 1,
+    point 5.2, let. h, y compris les motifs d'absence, qui peuvent permettre de
+    tirer des conclusions sur des données concernant la santé au sens de
+    l'art. 9, par. 1 RGPD. Si le responsable du traitement souhaite éviter ce
+    traitement, il peut ne pas accorder la connexion et ne pas utiliser
+    l'application.
+
+(5) En accordant l'autorisation, le responsable du traitement donne
+    l'instruction de traiter les données dans l'ensemble du périmètre visé à
+    l'annexe 1, point 5.2. Avant de l'accorder, il doit vérifier s'il existe à
+    cet effet une base juridique pour toutes les catégories de données
+    concernées.
+
+
+§ 4 OBLIGATIONS GÉNÉRALES DU SOUS-TRAITANT
+
+(1) Le sous-traitant veille à ce que les personnes autorisées à traiter les
+    données à caractère personnel se soient engagées à respecter la
+    confidentialité ou soient soumises à une obligation légale appropriée de
+    confidentialité. Cet engagement subsiste également après la fin de leur
+    activité.
+
+(2) Le sous-traitant n'emploie pour le traitement que des personnes qui ont été
+    préalablement familiarisées avec les dispositions pertinentes en matière de
+    protection des données.
+
+(3) Le sous-traitant traite les données à caractère personnel exclusivement
+    dans le cadre du champ d'application du présent contrat et exclusivement
+    aux fins mentionnées à l'annexe 1. Aucun traitement n'a lieu à ses propres
+    fins, notamment pour l'entraînement de modèles d'intelligence artificielle.
+
+(4) Le sous-traitant met en œuvre les mesures techniques et organisationnelles
+    prévues au § 5 et les maintient pendant toute la durée du contrat.
+
+(5) Le sous-traitant informe sans délai le responsable du traitement lorsqu'une
+    autorité de contrôle prend, auprès du sous-traitant, des mesures qui
+    concernent le traitement effectué pour le compte du responsable du
+    traitement.
+
+(6) Le sous-traitant n'a pas désigné de délégué à la protection des données au
+    sens des art. 37 ss RGPD. L'interlocuteur pour les questions de protection
+    des données est la personne désignée à l'annexe 4, point 3. Le
+    sous-traitant communique au responsable du traitement toute désignation
+    ultérieure d'un délégué à la protection des données en indiquant son nom et
+    ses coordonnées.
+
+(7) Le sous-traitant tient un registre de toutes les catégories d'activités de
+    traitement effectuées pour le compte du responsable du traitement
+    conformément à l'art. 30, par. 2 RGPD.
+
+
+§ 5 MESURES TECHNIQUES ET ORGANISATIONNELLES
+
+(1) Le sous-traitant prend les mesures techniques et organisationnelles
+    requises par l'art. 32 RGPD. L'état des mesures mises en œuvre au moment de
+    la conclusion du contrat figure à l'annexe 2.
+
+(2) Les mesures sont soumises au progrès technique. Le sous-traitant est en
+    droit de les adapter, à condition que le niveau de protection dû en vertu
+    de l'art. 32 RGPD ne soit pas réduit. Les modifications importantes doivent
+    être documentées.
+
+(3) Le sous-traitant dispose d'une procédure visant à tester, à analyser et à
+    évaluer régulièrement l'efficacité des mesures (art. 32, par. 1,
+    let. d RGPD). Cette vérification a lieu lorsqu'un motif le justifie ainsi
+    qu'en cas de modifications importantes du traitement ou de la technique
+    utilisée.
+
+
+§ 6 SOUS-TRAITANTS ULTÉRIEURS
+
+(1) Le responsable du traitement accorde au sous-traitant l'autorisation
+    générale de faire appel à d'autres sous-traitants (sous-traitants
+    ultérieurs). Les sous-traitants ultérieurs auxquels il est fait appel au
+    moment de la conclusion du contrat figurent à l'annexe 3 et sont réputés
+    autorisés.
+
+(2) Le sous-traitant informe le responsable du traitement, sous forme
+    textuelle, au moins 30 jours civils avant l'engagement envisagé d'un
+    nouveau sous-traitant ultérieur ou le remplacement d'un sous-traitant
+    ultérieur existant, en indiquant son nom, son adresse, sa prestation et le
+    lieu de traitement.
+
+(3) Le responsable du traitement peut s'opposer au changement, sous forme
+    textuelle, dans un délai de 30 jours civils à compter de la réception de
+    l'information, pour un motif important lié à la protection des données.
+    L'opposition doit être motivée.
+
+(4) En cas d'opposition motivée, les Parties rechercheront une solution
+    amiable. Si aucun accord n'est trouvé dans un délai de 30 jours civils et
+    si le sous-traitant ne peut pas fournir la prestation à des conditions
+    raisonnables sans le sous-traitant ultérieur concerné, chaque Partie est en
+    droit de résilier le contrat principal moyennant un préavis d'un mois pour
+    la fin d'un mois. Les rémunérations déjà versées sont remboursées au
+    prorata temporis.
+
+(5) Le sous-traitant impose contractuellement au sous-traitant ultérieur des
+    obligations en matière de protection des données équivalentes à celles du
+    présent contrat, en particulier des garanties suffisantes au sens de
+    l'art. 28, par. 4 RGPD.
+
+(6) Le sous-traitant répond envers le responsable du traitement du respect, par
+    le sous-traitant ultérieur, de ses obligations en matière de protection des
+    données.
+
+(7) Ne constituent pas une sous-traitance ultérieure au sens de la présente
+    disposition les prestations accessoires auxquelles le sous-traitant a
+    recours pour soutenir son activité commerciale et qui n'impliquent pas,
+    selon leur destination, d'accès aux données à caractère personnel du
+    responsable du traitement, telles que les services de télécommunication,
+    les services postaux, le nettoyage ou la maintenance. L'application bexio
+    utilisée par le responsable du traitement lui-même n'est pas non plus un
+    sous-traitant ultérieur du sous-traitant.
+
+
+§ 7 LIEU DU TRAITEMENT, TRANSFERTS DANS LES RELATIONS AVEC LA SUISSE ET VERS
+    DES PAYS TIERS
+
+(1) Le traitement a lieu dans des centres de données situés en Suisse, sauf
+    indication contraire à l'annexe 3. La Suisse fait l'objet d'une décision
+    d'adéquation de la Commission européenne au sens de l'art. 45 RGPD ; des
+    garanties supplémentaires ne sont donc pas nécessaires pour les
+    responsables du traitement établis dans l'Union européenne ou dans l'Espace
+    économique européen.
+
+(2) Les contenus de la fonction d'analyse assistée par l'IA (annexe 1) sont
+    transférés au sous-traitant ultérieur OpenAI Ireland Limited, établi en
+    Irlande et mentionné à l'annexe 3. Le sous-traitant utilise à cet effet
+    exclusivement le point de terminaison européen https://eu.api.openai.com/v1
+    d'un projet doté de la région de résidence des données « Europe » ; OpenAI
+    traite les requêtes au sein de l'EEE et de la Suisse. Pour les journaux de
+    détection des abus, qu'OpenAI conserve jusqu'à 30 jours, OpenAI ne s'engage
+    sur aucun lieu de stockage. Le responsable du traitement donne par la
+    présente instruction au sous-traitant d'effectuer ce transfert, dans la
+    mesure où la fonction d'analyse assistée par l'IA est activée dans son
+    espace de travail (§ 2 al. 4).
+
+    Le transfert repose sur l'OpenAI Data Processing Addendum dans sa version
+    en vigueur (actuellement v.010126). Dans la mesure où OpenAI Ireland
+    Limited transfère des données soumises au droit de la protection des
+    données de l'EEE ou de la Suisse à des sociétés affiliées ou à des tiers
+    situés en dehors de l'EEE et de la Suisse, par exemple les journaux
+    mentionnés, ce transfert s'effectue sur la base de contrats comportant les
+    clauses contractuelles types prévues par la décision d'exécution
+    (UE) 2021/914 ou sur la base d'une décision d'adéquation au sens de
+    l'art. 45 RGPD (point 4.1 de l'Addendum). Il n'est pas fait usage d'une
+    certification au titre de l'EU-US Data Privacy Framework. OpenAI Ireland
+    Limited fait partie d'un groupe de sociétés dont le siège est aux
+    États-Unis d'Amérique ; une demande de remise de données émanant
+    d'autorités américaines en vertu du CLOUD Act (18 U.S.C. § 2713) n'est donc
+    pas exclue malgré la résidence des données.
+
+    Avant d'y recourir, le sous-traitant a examiné ce service quant au niveau
+    de protection, a documenté cet examen et met cette documentation à la
+    disposition du responsable du traitement sur demande. Le fournisseur du
+    modèle n'utilise pas les contenus transférés pour l'entraînement de
+    modèles. La fonction d'analyse assistée par l'IA est désactivée par
+    défaut ; tant qu'elle est désactivée, aucun transfert au fournisseur du
+    modèle n'a lieu. Les noms et adresses e-mail des personnes sont
+    pseudonymisés avant le transfert, sauf si le responsable du traitement a
+    levé cette pseudonymisation conformément à l'annexe 1, point 9.
+
+(3) Pour les responsables du traitement établis en Suisse, les dispositions
+    suivantes s'appliquent à titre complémentaire et à des fins de
+    clarification :
+
+    a) L'environnement de traitement du sous-traitant se trouve en Suisse
+       (annexe 3, point 1). La récupération des données depuis l'entreprise
+       bexio du responsable du traitement, leur stockage, les copies de
+       sauvegarde et l'envoi de messages système ne constituent donc pas une
+       communication à l'étranger au sens de l'art. 16 nLPD.
+
+    b) La communication à OpenAI visée à l'al. 2 est licite, car les États de
+       l'Union européenne ainsi que la Norvège, l'Islande et le Liechtenstein
+       figurent à l'annexe 1 OPDo en tant qu'États disposant d'un niveau de
+       protection des données adéquat (art. 16, al. 1 nLPD) ; dans la mesure où
+       OpenAI traite les données en Suisse, il n'y a pas de communication à
+       l'étranger. Un transfert ultérieur en dehors de l'EEE et de la Suisse
+       est régi par l'al. 2, deuxième sous-alinéa ; l'OpenAI Data Processing
+       Addendum couvre expressément aussi les données soumises au droit suisse
+       de la protection des données.
+
+    c) Dans la mesure où Microsoft traite des données en dehors de la Suisse
+       dans le cadre des services Azure Front Door ou Azure DevOps mentionnés à
+       l'annexe 3, point 1, les mécanismes de transfert indiqués à l'annexe 3,
+       point 1 s'appliquent par analogie.
+
+    d) Si l'une des décisions d'adéquation mentionnées à l'al. 1, à l'al. 2 ou
+       à la let. b est abrogée, suspendue ou restreinte, le sous-traitant en
+       informe sans délai le responsable du traitement et passe à un mécanisme
+       de transfert licite.
+
+(4) Une délocalisation du traitement vers un pays tiers pour lequel il n'existe
+    pas de décision d'adéquation n'est admise que si les conditions du
+    chapitre V du RGPD sont remplies, notamment au moyen de garanties
+    appropriées au sens de l'art. 46 RGPD, et, dans les relations avec la
+    Suisse, si les conditions de l'art. 16, al. 2 nLPD sont en outre remplies.
+    Le sous-traitant informe le responsable du traitement d'une telle
+    délocalisation conformément au § 6 al. 2 et apporte la preuve du mécanisme
+    de transfert applicable.
+
+(5) Pour chaque sous-traitant ultérieur établi dans un pays tiers, le
+    sous-traitant documente le mécanisme de transfert à l'annexe 3.
+
+
+§ 8 ASSISTANCE CONCERNANT LES DROITS DES PERSONNES CONCERNÉES
+
+(1) Le sous-traitant aide le responsable du traitement, par des mesures
+    techniques et organisationnelles appropriées, à s'acquitter de son
+    obligation de donner suite aux demandes des personnes concernées au titre
+    du chapitre III du RGPD.
+
+(2) Si une personne concernée s'adresse directement au sous-traitant, celui-ci
+    transmet sans délai la demande au responsable du traitement et n'y répond
+    pas lui-même.
+
+(3) Le sous-traitant ne rectifie ou n'efface des données à caractère personnel,
+    ou n'en limite le traitement, que sur instruction du responsable du
+    traitement. Dans la mesure où le responsable du traitement peut y procéder
+    lui-même au moyen des fonctions de l'application, l'assistance consiste à
+    mettre ces fonctions à disposition.
+
+(4) Pour les prestations d'assistance qui vont au-delà de la mise à disposition
+    des fonctions de l'application et qui ne résultent pas d'une circonstance
+    imputable au sous-traitant, celui-ci peut exiger une rémunération
+    appropriée selon ses tarifs en vigueur. Il informe le responsable du
+    traitement de l'obligation de rémunération avant de fournir la prestation.
+
+
+§ 9 NOTIFICATION DES VIOLATIONS DE DONNÉES À CARACTÈRE PERSONNEL
+
+(1) Le sous-traitant notifie au responsable du traitement toute violation de
+    données à caractère personnel dont il a connaissance, dans les meilleurs
+    délais après en avoir pris connaissance (art. 33, par. 2 RGPD). Cela vaut
+    également pour les violations survenues chez un sous-traitant ultérieur,
+    dès que celui-ci les a notifiées au sous-traitant.
+
+(2) La notification est effectuée sous forme textuelle aux adresses indiquées à
+    l'annexe 4, point 2, et contient, dans la mesure où elles sont disponibles,
+    les informations mentionnées à l'art. 33, par. 3 RGPD. Si toutes les
+    informations ne sont pas immédiatement disponibles, une première
+    notification est effectuée avec les informations disponibles ; les
+    informations complémentaires sont communiquées sans délai.
+
+(3) Le sous-traitant aide le responsable du traitement à remplir ses
+    obligations au titre des art. 33 et 34 RGPD et prend sans délai les mesures
+    nécessaires pour sécuriser les données et atténuer les conséquences
+    négatives.
+
+(4) Les notifications à l'autorité de contrôle ou aux personnes concernées sont
+    effectuées exclusivement par le responsable du traitement.
+
+
+§ 10 ASSISTANCE POUR L'ANALYSE D'IMPACT RELATIVE À LA PROTECTION DES DONNÉES
+     ET LA CONSULTATION PRÉALABLE
+
+Le sous-traitant aide le responsable du traitement, compte tenu de la nature du
+traitement et des informations à sa disposition, dans le cadre d'une analyse
+d'impact relative à la protection des données au sens de l'art. 35 RGPD ainsi
+que d'une consultation préalable au sens de l'art. 36 RGPD. Le § 8 al. 4
+s'applique par analogie.
+
+
+§ 11 PREUVES ET DROITS DE CONTRÔLE
+
+(1) Le sous-traitant met à la disposition du responsable du traitement toutes
+    les informations nécessaires pour démontrer le respect des obligations
+    prévues à l'art. 28 RGPD.
+
+(2) La preuve est apportée par le présent contrat et ses annexes, notamment par
+    l'annexe 2 (mesures techniques et organisationnelles) et l'annexe 3
+    (sous-traitants ultérieurs). Ces documents sont mis à la disposition du
+    responsable du traitement lors de la conclusion du contrat ; une demande
+    séparée n'est pas nécessaire.
+
+    Le sous-traitant fournit sur demande, sous forme textuelle, les
+    informations allant au-delà, dans la mesure où elles sont nécessaires à
+    titre de preuve conformément à l'art. 28, par. 3, let. h RGPD. Il n'existe
+    aucune obligation d'obtenir ou de maintenir des certifications,
+    attestations ou rapports d'audit ; une certification au sens de
+    l'art. 42 RGPD est volontaire (art. 42, par. 3 RGPD).
+
+(3) Si, dans un cas particulier, les preuves visées à l'al. 2 ne suffisent pas,
+    le responsable du traitement ou un auditeur mandaté par lui, tenu au secret
+    et qui ne doit pas être un concurrent du sous-traitant, peut procéder à un
+    contrôle.
+
+    Le contrôle s'effectue PAR ACCÈS À DISTANCE (audit à distance), notamment
+    par visioconférence, partage d'écran, présentation de configurations et de
+    droits d'accès ainsi que consultation de documents. Le sous-traitant
+    effectue l'intégralité du traitement dans un environnement cloud et
+    n'exploite ni centre de données ni salles de serveurs propres ; une
+    inspection sur place d'installations de traitement à son siège n'est donc
+    pas possible et n'est pas nécessaire pour vérifier les mesures prévues à
+    l'annexe 2.
+
+    Un contrôle dans les locaux commerciaux du sous-traitant n'a lieu que s'il
+    est établi que l'objet du contrôle ne peut pas être clarifié à distance, et
+    il est limité à cet objet.
+
+    L'infrastructure physique est exploitée par le sous-traitant ultérieur visé
+    à l'annexe 3, point 1. Le sous-traitant ne peut pas accorder l'accès aux
+    centres de données de celui-ci ; la preuve des mesures qui y sont
+    appliquées est apportée par les certifications de ce sous-traitant
+    ultérieur.
+
+    Tout contrôle doit être annoncé avec un préavis d'au moins 14 jours civils,
+    être effectué pendant les heures de bureau habituelles et sans perturber le
+    déroulement de l'exploitation, et il est limité à un contrôle au maximum
+    par année civile. En cas de violation constatée de données à caractère
+    personnel, la limitation à un contrôle par année civile ne s'applique pas.
+
+(4) Le sous-traitant peut exiger une rémunération appropriée pour les frais
+    d'un contrôle au sens de l'al. 3, à moins que le contrôle n'ait été
+    occasionné par une circonstance imputable au sous-traitant.
+
+(5) Les droits de contrôle des autorités de contrôle compétentes ne sont pas
+    affectés.
+
+
+§ 12 EFFACEMENT ET RESTITUTION
+
+(1) Après la fin du contrat principal, le sous-traitant conserve les données à
+    caractère personnel pendant une durée de 30 jours civils afin de permettre
+    leur exportation par le responsable du traitement.
+
+(2) À l'expiration du délai prévu à l'al. 1, le sous-traitant efface l'ensemble
+    des données à caractère personnel du responsable du traitement. Les copies
+    de sauvegarde existantes sont écrasées dans le cadre du cycle de sauvegarde
+    régulier ; jusque-là, les données sont bloquées pour tout traitement. Le
+    cycle de sauvegarde régulier est de 35 jours.
+
+(3) Jusqu'à l'expiration du délai prévu à l'al. 1, le responsable du traitement
+    peut exiger, sous forme textuelle, la restitution des données dans un
+    format structuré, couramment utilisé et lisible par machine.
+
+(4) Le sous-traitant peut conserver au-delà de la fin du contrat, conformément
+    aux délais de conservation applicables, les documents servant à prouver que
+    le traitement des données a été effectué conformément au mandat et en bonne
+    et due forme, ainsi que les données soumises à des obligations légales de
+    conservation. Le traitement de ces données est limité pendant la durée de
+    leur conservation.
+
+(5) Sur demande, le sous-traitant confirme l'effacement sous forme textuelle.
+
+(6) Pendant la durée du contrat principal, les règles suivantes s'appliquent :
+
+    a) Si le responsable du traitement supprime dans l'application un jeu de
+       données (une entreprise bexio connectée) ou l'ensemble de son espace de
+       travail, le sous-traitant efface automatiquement les données à caractère
+       personnel correspondantes dans un délai de quatre heures. L'effacement
+       vaut instruction au sens du § 2 al. 4.
+    b) Si l'autorisation bexio expire, échoue ou est révoquée, seule la
+       récupération ultérieure des données cesse. Les données déjà enregistrées
+       sont conservées jusqu'à leur effacement conformément à la let. a ou à
+       l'al. 2.
+    c) L'al. 2, deuxième phrase, s'applique par analogie aux copies de
+       sauvegarde.
+
+
+§ 13 AUTRES OBLIGATIONS
+
+(1) Le sous-traitant informe sans délai le responsable du traitement s'il a
+    connaissance de circonstances qui compromettent la bonne exécution du
+    présent contrat.
+
+(2) Le sous-traitant garantit la séparation des données des différents
+    responsables du traitement (séparation des mandants) au moyen des mesures
+    décrites à l'annexe 2.
+
+
+§ 14 RESPONSABILITÉ
+
+(1) La responsabilité des Parties envers les tiers est régie par
+    l'art. 82 RGPD.
+
+(2) Dans les relations entre les Parties, le régime de responsabilité du
+    contrat principal s'applique, dans la mesure où l'art. 82 RGPD ne s'y
+    oppose pas.
+
+(3) Le sous-traitant n'est pas responsable des dommages résultant du fait que
+    le responsable du traitement ne s'est pas acquitté de ses obligations au
+    titre du § 3.
+
+
+§ 15 DISPOSITIONS COMPLÉMENTAIRES POUR LA SUISSE
+
+(1) Dans la mesure où le traitement est soumis à la loi fédérale suisse du
+    25 septembre 2020 sur la protection des données (nLPD), les dispositions du
+    présent contrat s'appliquent par analogie, sous les réserves suivantes :
+
+    a) Le terme « responsable du traitement » correspond au terme « responsable
+       du traitement » au sens de l'art. 5, let. j nLPD, et le terme
+       « sous-traitant » au terme « sous-traitant » au sens de l'art. 5,
+       let. k nLPD.
+    b) Le terme « données à caractère personnel » englobe également les données
+       personnelles au sens de l'art. 5, let. a nLPD, y compris les données de
+       personnes morales dans la mesure où la nLPD les protège.
+    c) Le terme « catégories particulières de données à caractère personnel »
+       englobe également les données personnelles sensibles au sens de
+       l'art. 5, let. c nLPD.
+
+(2) La sous-traitance est régie par l'art. 9 nLPD. Le sous-traitant ne traite
+    les données personnelles que de la manière dont le responsable du
+    traitement serait lui-même en droit de le faire.
+
+(3) Le recours à des sous-traitants ultérieurs est régi par le § 6 du présent
+    contrat ; l'autorisation générale qui y est prévue vaut autorisation
+    préalable au sens de l'art. 9, al. 3 nLPD.
+
+(4) Les annonces de violations de la sécurité des données au Préposé fédéral à
+    la protection des données et à la transparence conformément à
+    l'art. 24 nLPD sont effectuées par le responsable du traitement. Le § 9
+    s'applique par analogie, étant entendu que le sous-traitant informe le
+    responsable du traitement suffisamment tôt pour que celui-ci puisse
+    s'acquitter de son obligation d'annonce.
+
+(5) Une communication de données personnelles à l'étranger n'a lieu qu'aux
+    conditions des art. 16 et 17 nLPD. Les relations entre la Suisse et
+    l'environnement de traitement du sous-traitant sont régies par le
+    § 7 al. 3 : l'environnement de traitement se trouvant en Suisse, il n'y a à
+    cet égard aucune communication à l'étranger. La communication au
+    fournisseur du modèle est régie par le § 7 al. 3, let. b, et les
+    communications vers d'autres États par le § 7 al. 3, let. c, et al. 4.
+
+
+§ 16 DISPOSITIONS FINALES
+
+(1) En cas de contradiction sur des questions de protection des données, le
+    présent contrat prévaut sur le contrat principal.
+
+(2) Les modifications et compléments du présent contrat requièrent la forme
+    textuelle. Cela vaut également pour la modification de la présente exigence
+    de forme textuelle. L'adaptation des annexes 2 et 3 conformément au
+    § 5 al. 2 et au § 6 al. 2 n'en est pas affectée.
+
+(3) Si une disposition du présent contrat est ou devient invalide, la validité
+    des autres dispositions n'en est pas affectée. Les Parties remplaceront la
+    disposition invalide par une disposition valide qui se rapproche le plus de
+    l'objectif économique poursuivi.
+
+(4) Le présent contrat est régi par le droit de la République fédérale
+    d'Allemagne. Les dispositions impératives de la nLPD ne sont pas affectées.
+
+(5) Le présent contrat s'applique avec un contenu identique à tous les clients
+    du sous-traitant. Si, dans un cas particulier, les Parties ont conclu sous
+    forme textuelle un accord de sous-traitance divergent, celui-ci prévaut sur
+    les dispositions du présent contrat.
+
+(6) Le sous-traitant peut modifier le présent contrat dans la mesure où la
+    modification est nécessaire pour l'adapter à une modification de la
+    situation juridique, à des exigences ou décisions d'une autorité de
+    contrôle ou à une modification des fonctionnalités de l'application, et
+    pour autant que le responsable du traitement n'en soit pas désavantagé de
+    manière inéquitable. La procédure est régie par analogie par la clause de
+    modification du contrat principal. L'adaptation des annexes 2 et 3
+    conformément au § 5 al. 2 et au § 6 al. 2 est régie exclusivement par les
+    dispositions qui y sont mentionnées.
+
+
+
+
+===============================================================================
+ANNEXE 1 — OBJET, NATURE ET FINALITÉ DU TRAITEMENT
+===============================================================================
+
+1. OBJET DU TRAITEMENT
+
+Mise à disposition et exploitation de l'application Software as a Service
+smiit Analytics destinée à l'analyse de gestion des données que le responsable
+du traitement partage depuis son entreprise bexio.
+
+
+2. NATURE DU TRAITEMENT
+
+  - Récupération des données partagées via l'interface bexio (lecture seule)
+  - Stockage dans un système de données séparé par mandant
+  - Structuration, préparation et mise en relation dans un modèle d'analyse
+  - Interrogation et présentation dans des rapports, des tableaux de bord et
+    des exports
+  - Analyse au moyen d'une fonction d'analyse assistée par l'IA, si le
+    responsable du traitement l'a activée
+  - Journalisation des accès et des événements pertinents pour la sécurité
+  - Effacement conformément au § 12 du présent contrat
+
+
+3. FINALITÉ DU TRAITEMENT
+
+Fourniture des prestations convenues dans le contrat principal, notamment la
+mise à disposition d'analyses de gestion pour le responsable du traitement. Le
+sous-traitant ne traite pas à ses propres fins les données issues de la
+connexion bexio ni les contenus que le responsable du traitement et ses
+Utilisateurs saisissent dans l'application. Le § 1 al. 7 s'applique aux données
+de compte et d'utilisation des Utilisateurs.
+
+
+4. CATÉGORIES DE PERSONNES CONCERNÉES
+
+  a) Utilisateurs de l'application (employés et mandataires du responsable du
+     traitement)
+  b) Employés du responsable du traitement dont les données issues de bexio
+     sont analysées
+  c) Clients du responsable du traitement ainsi que leurs interlocuteurs
+  d) Fournisseurs du responsable du traitement ainsi que leurs interlocuteurs
+  e) Autres contacts commerciaux du responsable du traitement enregistrés dans
+     bexio
+
+
+5. TYPES DE DONNÉES À CARACTÈRE PERSONNEL
+
+5.1 Données des Utilisateurs de l'application
+
+  - Contenus des requêtes adressées à la fonction d'analyse assistée par l'IA
+  - Journaux des accès aux données du Client et des modifications de celles-ci
+
+Les données de compte et d'utilisation des Utilisateurs (nom, adresse e-mail,
+mot de passe sous forme de valeur de hachage, rôle, paramètres de langue et de
+fuseau horaire, informations relatives à l'authentification à deux facteurs et
+aux appareils de confiance, journaux de connexion ainsi qu'informations
+relatives à l'utilisation des fonctions) sont traitées par le sous-traitant en
+tant que responsable du traitement à titre propre ; elles ne font pas l'objet
+du présent contrat (§ 1 al. 7).
+
+5.2 Données issues de la connexion bexio
+
+L'autorisation bexio est accordée de manière uniforme pour l'ensemble du
+périmètre décrit ci-après ; une sélection de domaines de données individuels
+par le responsable du traitement n'est pas prévue (§ 3 al. 3). Sont
+effectivement récupérées celles de ces catégories qui sont disponibles dans
+l'entreprise bexio du responsable du traitement en fonction de ses modules et
+de ses droits.
+
+  a) Données de contact
+     Nom, civilité, titre, adresse, données de communication, langue, pays,
+     rattachement à des groupes de contacts et à des secteurs d'activité
+
+  b) Données des documents commerciaux
+     Factures, offres, commandes, bulletins de livraison, positions, paiements,
+     rappels, abonnements ainsi que les personnes respectivement associées
+
+  c) Données d'achat
+     Factures fournisseurs, notes de frais, paiements sortants, commandes et
+     les personnes respectivement associées
+
+  d) Données comptables
+     Plan comptable, écritures de journal, taux d'imposition, exercices et
+     années civiles, périodes de TVA
+
+  e) Données bancaires
+     Comptes bancaires, y compris l'IBAN, paiements, y compris les indications
+     relatives au destinataire et à l'expéditeur
+
+  f) Données d'articles et de stock
+     Données de base des articles, prix, stocks, emplacements de stockage
+
+  g) Données de projets et de temps
+     Projets, jalons, lots de travail ainsi que TEMPS DE TRAVAIL SAISIS PAR
+     PERSONNE, y compris la facturabilité, l'activité et l'affectation aux
+     projets
+
+  h) Données du personnel (« Payroll »)
+     Données de base des employés, y compris l'adresse, soldes de vacances et
+     d'heures à des dates de référence ainsi que les ABSENCES, Y COMPRIS LE
+     MOTIF D'ABSENCE SAISI DANS bexio
+
+  i) Autres données
+     Utilisateurs bexio, profil de l'entreprise, notes et tâches issues de la
+     gestion des clients (contenus en texte libre), valeurs de référence
+
+  j) Données enregistrées par le responsable du traitement lui-même dans
+     l'application
+     Taux de coûts internes et taux de facturation par personne ou par
+     prestation, budgets, temps de travail théoriques, définitions
+     d'indicateurs clés
+
+
+6. CATÉGORIES PARTICULIÈRES DE DONNÉES À CARACTÈRE PERSONNEL (ARTICLE 9 RGPD)
+
+La connexion englobe le domaine de données « Payroll » et donc les motifs
+d'absence visés au point 5.2, let. h. Selon la manière dont le responsable du
+traitement les saisit dans bexio, ceux-ci peuvent permettre de tirer des
+conclusions sur l'état de santé de certains employés et constituer ainsi des
+données concernant la santé au sens de l'art. 9, par. 1 RGPD.
+
+Étant donné qu'une sélection de domaines de données individuels n'est pas
+prévue (§ 3 al. 3), ce traitement ne peut pas être désélectionné lors de
+l'utilisation de l'application. Il n'est exclu que si le responsable du
+traitement n'accorde pas du tout l'autorisation bexio ou si son entreprise
+bexio ne dispose pas du domaine « Payroll ».
+
+Le sous-traitant traite ces données exclusivement dans le cadre des fonctions
+d'analyse générales ; aucune analyse distincte selon des caractéristiques de
+santé n'est effectuée. Il incombe au responsable du traitement de s'assurer de
+l'existence d'une base juridique au sens de l'art. 9, par. 2 RGPD (§ 3 al. 2,
+let. a).
+
+
+7. DONNÉES RELATIVES À LA PRESTATION DE TRAVAIL ET AU COMPORTEMENT AU TRAVAIL
+
+Les catégories de données visées au point 5.2, let. g et h ainsi que let. j
+permettent des analyses relatives au temps de travail, au taux d'occupation et
+à la facturabilité de chacun des employés. Le responsable du traitement a été
+informé que des droits de codécision d'une représentation du personnel peuvent
+en découler (§ 3 al. 2, let. d).
+
+
+8. DURÉE DU TRAITEMENT
+
+Pendant la durée du contrat principal, augmentée des délais prévus au § 12 du
+présent contrat. Pendant la durée du contrat, les délais d'effacement
+automatique suivants s'appliquent :
+
+  - Historiques de conversation de la fonction d'analyse assistée par l'IA :
+    90 jours après la dernière activité
+  - Données brutes non modifiées issues de l'interface bexio (minimisation des
+    données) : après 30 jours ; les données d'analyse préparées à partir de
+    celles-ci sont conservées pendant toute la durée de la connexion
+  - Journaux des cycles de synchronisation : après 90 jours
+
+
+9. FONCTION D'ANALYSE ASSISTÉE PAR L'IA : NIVEAUX D'AUTORISATION
+
+La fonction d'analyse assistée par l'IA est désactivée par défaut. Seule une
+personne ayant le rôle « Owner » peut l'activer, et ce après avoir confirmé une
+information relative aux données transférées ; cette confirmation est
+documentée avec le moment, la personne et la version de l'information et vaut
+instruction au sens du § 2 al. 4.
+
+Dans le paramétrage de base (« Standard »), les noms et adresses e-mail des
+personnes sont remplacés par des espaces réservés avant leur transfert au
+fournisseur du modèle, et les textes libres ne sont pas transférés ; les noms
+d'entreprises ne sont pas pseudonymisés. Le responsable du traitement peut
+lever ces restrictions par paliers, chaque fois avec une confirmation
+distincte :
+
+  a) « Noms » : noms des contacts (clients, fournisseurs et leurs
+     interlocuteurs) en clair ;
+  b) « Noms + textes » : en outre les textes libres (textes d'écritures, de
+     positions et de saisie des temps, titres de documents, commentaires) ;
+  c) « Tout » : aucune pseudonymisation, y compris pour les employés, les
+     utilisateurs bexio, les membres de l'espace de travail et les adresses
+     e-mail.
+
+Les données du personnel visées au point 5.2, let. h ne sont transférées que si
+le responsable du traitement les a autorisées séparément. La désactivation de
+la fonction réinitialise toutes les autorisations.
+
+
+===============================================================================
+ANNEXE 2 — MESURES TECHNIQUES ET ORGANISATIONNELLES (ARTICLE 32 RGPD)
+===============================================================================
+
+Mise à jour : 18 novembre 2026
+
+
+1. CONFIDENTIALITÉ
+
+1.1 Contrôle de l'accès physique
+    L'exploitation a lieu exclusivement dans des centres de données du
+    sous-traitant ultérieur Microsoft (Microsoft Azure). Aucun centre de
+    données ni aucune salle de serveurs propres ne sont exploités. Les mesures
+    de sécurité physique découlent des certifications du sous-traitant
+    ultérieur (annexe 3).
+
+1.2 Contrôle de l'accès aux systèmes
+    - connexion exclusivement au moyen de comptes utilisateurs personnels
+    - mots de passe d'une longueur minimale de dix caractères
+    - stockage des mots de passe exclusivement sous forme de hachage Argon2
+    - authentification à deux facteurs obligatoire pour tous les Utilisateurs
+      au moyen d'un code à usage unique envoyé par e-mail (validité de
+      10 minutes, cinq tentatives de saisie au maximum) ; appareils de
+      confiance pour 30 jours au maximum
+    - jetons d'accès de courte durée (15 minutes) ; les sessions prennent fin
+      au plus tard 7 jours après la connexion, indépendamment de l'activité ;
+      aperçu des sessions actives et déconnexion sur tous les appareils par
+      l'Utilisateur
+    - verrouillage automatique du compte pendant 15 minutes après cinq
+      tentatives infructueuses
+    - obligation de confirmer l'adresse e-mail avant la première utilisation
+    - cookies de session exclusivement avec les attributs « Secure » et
+      « HttpOnly » et le préfixe « __Host »
+    - protection contre les tentatives de connexion automatisées par une
+      limitation du débit au niveau du serveur web placé en amont
+    - les comptes verrouillés répondent comme en cas de mot de passe erroné, de
+      sorte que l'existence d'un compte ne peut pas être déterminée
+
+1.3 Contrôle de l'accès aux données
+    - concept d'autorisation basé sur les rôles, avec les rôles Owner, Admin et
+      Member
+    - séparation des mandants au niveau de la base de données au moyen de
+      règles de sécurité au niveau des lignes (Row Level Security) dont
+      l'application est imposée (FORCE ROW LEVEL SECURITY)
+    - l'application se connecte à la base de données exclusivement avec des
+      rôles de base de données dépourvus de droits de superutilisateur, de
+      sorte que les règles de sécurité ne peuvent pas être contournées
+    - rôles de base de données distincts selon la tâche : un rôle pour
+      l'exploitation de l'application, un rôle en lecture seule pour la couche
+      d'analyse, un rôle en lecture seule pour la fonction d'analyse assistée
+      par l'IA
+    - la fonction d'analyse assistée par l'IA dispose exclusivement d'un accès
+      en lecture au schéma d'analyse ; tout accès aux données brutes, aux
+      identifiants d'accès ou aux tables système est techniquement exclu
+    - contrôle de chaque requête de base de données générée par l'IA par un
+      filtre de requêtes placé en amont
+    - limitation de la durée d'exécution et du volume de résultats des requêtes
+    - les administrateurs de plateforme du sous-traitant n'ont pas accès aux
+      rapports, aux historiques de conversation de la fonction d'analyse
+      assistée par l'IA ni aux données issues de la connexion bexio ; cela est
+      imposé techniquement par les règles d'accès de la base de données
+    - accès du support à un espace de travail uniquement avec l'accord d'une
+      personne ayant le rôle « Owner », limité à 30 jours au maximum, révocable
+      à tout moment et visible dans la liste des membres ; pas de connexion
+      « en tant qu'Utilisateur »
+    - accès à l'espace d'administration uniquement avec une preuve
+      d'authentification à deux facteurs valable au maximum quatre heures
+    - journalisation de chaque action des administrateurs de plateforme dans le
+      journal d'audit
+
+1.4 Contrôle de la séparation
+    - séparation logique des mandants pour l'ensemble des données au moyen d'un
+      identifiant unique d'espace de travail
+    - application de la séparation au niveau de la base de données, et non
+      uniquement dans la logique de l'application
+    - tests automatisés démontrant la séparation des mandants
+
+1.5 Pseudonymisation et chiffrement
+    - transmission exclusivement via TLS (HTTPS) ; les accès non chiffrés sont
+      redirigés
+    - chiffrement des données au repos par le chiffrement de plateforme du
+      sous-traitant ultérieur
+    - chiffrement des jetons d'accès bexio au repos avec une clé distincte
+    - pseudonymisation des noms et adresses e-mail avant leur transfert au
+      fournisseur du modèle (annexe 1, point 9)
+    - suppression des éléments d'accès et de sécurité contenus dans les
+      adresses figurant dans les journaux du serveur ; effacement des journaux
+      du serveur après 30 jours
+    - aucun enregistrement d'adresses IP dans la télémétrie (Application
+      Insights)
+
+
+2. INTÉGRITÉ
+
+2.1 Contrôle de la saisie
+    - journalisation à l'épreuve des audits, en mode ajout uniquement, des
+      opérations pertinentes pour la sécurité et modifiant des données, avec
+      horodatage et identifiant d'utilisateur
+
+2.2 Contrôle de la transmission
+    - aucune remise de supports de données
+    - transmission aux sous-traitants ultérieurs exclusivement via des
+      connexions chiffrées
+    - politique restrictive de sécurité du contenu (Content Security Policy)
+      afin d'empêcher la fuite de contenus via des ressources intégrées
+    - neutralisation des cellules de formule lors de l'exportation de données
+      afin d'empêcher les injections de formules
+
+
+3. DISPONIBILITÉ ET RÉSILIENCE
+
+    - sauvegarde automatisée de la base de données par le sous-traitant
+      ultérieur, avec une durée de conservation de 35 jours et la possibilité
+      d'une restauration à un instant donné
+    - stockage géoredondant des copies de sauvegarde dans une deuxième région
+      Azure suisse (Switzerland West)
+    - protection de la base de données et de la gestion des clés contre la
+      suppression accidentelle
+    - surveillance de la disponibilité opérationnelle au moyen de points de
+      terminaison d'état
+    - limitation des connexions simultanées à la base de données afin de
+      prévenir la surcharge
+    - limitation du débit des fonctions critiques pour la sécurité et
+      gourmandes en ressources
+    - reprise des cycles de traitement interrompus sans perte de données
+
+
+4. PROCÉDURE DE VÉRIFICATION RÉGULIÈRE
+
+4.1 Vérification
+    - contrôles de sécurité réguliers du code source et de l'architecture du
+      système, avec documentation des résultats
+    - vérification automatisée, dans le processus de build, des bibliothèques
+      tierces utilisées quant à des vulnérabilités connues
+    - fixation des images de base des conteneurs au moyen de sommes de contrôle
+      cryptographiques
+    - tests automatisés attestant l'efficacité de la séparation des mandants et
+      des restrictions d'accès
+
+4.2 Contrôle des mandats
+    - accords écrits avec tous les sous-traitants ultérieurs
+    - engagement de confidentialité de tous les employés
+    - procédure documentée de notification des violations de données à
+      caractère personnel
+
+4.3 Paramètres par défaut respectueux de la protection des données
+    - la fonction d'analyse assistée par l'IA est désactivée par défaut et
+      n'est activée que par un Owner ; les noms et adresses e-mail sont
+      pseudonymisés par défaut, et les données du personnel ne sont transférées
+      qu'après autorisation séparée (annexe 1, point 9)
+    - la connexion bexio s'effectue exclusivement en lecture ; un accès en
+      écriture à l'entreprise bexio n'est techniquement pas prévu
+    - le responsable du traitement peut révoquer à tout moment l'autorisation
+      bexio ; la récupération des données cesse alors
+    - le responsable du traitement peut supprimer lui-même certains jeux de
+      données ou l'ensemble de son espace de travail ; les données sont
+      effacées automatiquement dans un délai de quatre heures
+    - effacement automatisé des historiques de conversation de la fonction
+      d'analyse assistée par l'IA 90 jours après la dernière activité
+
+    Remarque : une sélection de domaines de données bexio individuels par le
+    responsable du traitement n'est actuellement pas prévue (§ 3 al. 3).
+
+
+===============================================================================
+ANNEXE 3 — SOUS-TRAITANTS ULTÉRIEURS
+===============================================================================
+
+Mise à jour : 18 novembre 2026
+
+
+1. Microsoft Ireland Operations Limited
+   One Microsoft Place, South County Business Park, Leopardstown,
+   Dublin 18, Irlande
+   Prestation :          Exploitation de l'application et de la base de données
+                         (Microsoft Azure), envoi de messages système par
+                         e-mail (Azure Communication Services), diffusion et
+                         protection de l'application (Azure Front Door avec
+                         pare-feu pour applications web), surveillance de
+                         l'exploitation (Application Insights, Log Analytics),
+                         traitement des retours des Utilisateurs (Azure DevOps)
+   Données traitées :    toutes les données mentionnées à l'annexe 1
+   Lieu de traitement :  Suisse — région Azure « Switzerland North » (Zurich) ;
+                         copies de sauvegarde géoredondantes de la base de
+                         données dans la région « Switzerland West » (Genève) ;
+                         envoi d'e-mails avec stockage des données en Suisse.
+                         Azure Front Door reçoit les requêtes sur les sites de
+                         Microsoft dans le monde entier. Azure DevOps : région
+                         « North Europe » (Irlande).
+   Pays tiers :          Suisse (décision d'adéquation de la Commission
+                         européenne au sens de l'art. 45 RGPD) ; Azure DevOps
+                         au sein de l'Union européenne ; pour Azure Front Door,
+                         également des sites situés en dehors de la Suisse et
+                         de l'EEE
+   Mécanisme de
+   transfert :           Suisse : décision d'adéquation ; pour le reste,
+                         clauses contractuelles types figurant dans le Data
+                         Protection Addendum de Microsoft ainsi que
+                         certification de Microsoft Corporation au titre de
+                         l'EU-US Data Privacy Framework
+
+
+2. OpenAI Ireland Limited
+   1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
+   Dublin 1, D01 YC43, Irlande
+   Autres sous-traitants ultérieurs auxquels OpenAI a recours, voir
+   https://platform.openai.com/subprocessors
+   Base contractuelle :  OpenAI Data Processing Addendum dans sa version en
+                         vigueur (actuellement v.010126),
+                         https://openai.com/policies/data-processing-addendum/
+   Prestation :          Traitement des requêtes de la fonction d'analyse
+                         assistée par l'IA (modèles d'OpenAI)
+   Données traitées :    Question de l'Utilisateur, historique de la
+                         conversation, description de la structure des données
+                         ainsi que résultats des requêtes générées (indicateurs
+                         et extraits limités de lignes de données). Les noms et
+                         adresses e-mail des personnes sont pseudonymisés ; les
+                         textes libres et les données du personnel ne sont pas
+                         transférés, sauf si le responsable du traitement les a
+                         autorisés conformément à l'annexe 1, point 9.
+   Lieu de traitement :  EEE et Suisse ; partenaire contractuel en Irlande,
+                         résidence des données en Europe (point de terminaison
+                         https://eu.api.openai.com/v1)
+   Pays tiers :          non pour le traitement des requêtes ; pour les
+                         journaux de détection des abus, OpenAI ne s'engage sur
+                         aucun lieu de stockage (§ 7 al. 2)
+   Mécanisme de
+   transfert :           Clauses contractuelles types prévues par la décision
+                         d'exécution (UE) 2021/914, qu'OpenAI Ireland Limited a
+                         conclues avec les destinataires situés en dehors de
+                         l'EEE et de la Suisse (point 4.1 de l'Addendum) ;
+                         s'applique également aux données soumises au droit
+                         suisse de la protection des données. Il n'est pas fait
+                         usage de l'EU-US Data Privacy Framework.
+   Particularités :      OpenAI traite les données uniquement aux fins de la
+                         fourniture des services (point 1.2 de l'Addendum) ;
+                         selon les indications d'OpenAI, les données issues de
+                         l'API ne sont pas utilisées pour l'entraînement de
+                         modèles. Les requêtes sont transmises de telle sorte
+                         qu'OpenAI ne conserve aucune donnée de requête ou de
+                         réponse en vue d'une réutilisation ultérieure. OpenAI
+                         conserve jusqu'à 30 jours les journaux de détection
+                         des abus, qui peuvent contenir des requêtes et des
+                         réponses. OpenAI fait partie d'un groupe de sociétés
+                         américain ; une demande de remise de données en vertu
+                         du CLOUD Act n'est pas exclue (§ 7 al. 2).
+
+
+REMARQUE : bexio AG n'est pas un sous-traitant ultérieur du sous-traitant.
+bexio est utilisé par le responsable du traitement lui-même ; la transmission
+des données au sous-traitant a lieu à l'initiative et après autorisation du
+responsable du traitement.
+
+
+===============================================================================
+ANNEXE 4 — PERSONNES DE CONTACT
+===============================================================================
+
+Le présent contrat s'appliquant avec un contenu identique à tous les clients,
+les personnes de contact ne sont pas désignées dans le texte du contrat, mais
+sont déterminées et tenues à jour dans l'application. Elles restent ainsi à
+jour sans modification du contrat.
+
+
+1. PERSONNES DU RESPONSABLE DU TRAITEMENT HABILITÉES À DONNER DES INSTRUCTIONS
+
+Sont habilitées à donner des instructions les personnes auxquelles le
+responsable du traitement a attribué le rôle « Owner » ou « Admin » dans son
+espace de travail. Le responsable du traitement tient cette attribution à jour
+et retire sans délai le rôle lorsqu'une personne ne doit plus être habilitée à
+donner des instructions.
+
+
+2. ADRESSE DE CONTACT DU RESPONSABLE DU TRAITEMENT POUR LES NOTIFICATIONS
+   SELON LE § 9
+
+Le sous-traitant adresse les notifications selon le § 9 aux adresses e-mail de
+toutes les personnes qui détiennent le rôle « Owner » dans l'espace de travail
+du responsable du traitement. Le responsable du traitement veille à ce qu'au
+moins une personne ayant ce rôle puisse recevoir et transmettre les
+notifications.
+
+
+3. INTERLOCUTEUR DU SOUS-TRAITANT POUR LES QUESTIONS DE PROTECTION DES DONNÉES
+
+  Noah Neßlauer
+  Gérant de smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Allemagne
+  E-mail : noah.nesslauer@smiit.de
+
+  Cette personne est l'interlocuteur pour les questions de protection des
+  données ; elle n'a pas la qualité de délégué à la protection des données au
+  sens des art. 37 ss RGPD (§ 4 al. 6).
+
+Le sous-traitant communique toute modification de ces informations sous forme
+textuelle ou par la mise à jour de la version enregistrée dans l'application ;
+une modification du contrat n'est pas nécessaire à cet effet.
+
+
+===============================================================================
+FIN DE L'ACCORD DE TRAITEMENT DES DONNÉES
+===============================================================================

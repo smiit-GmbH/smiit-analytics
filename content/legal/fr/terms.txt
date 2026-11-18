@@ -1,0 +1,881 @@
+===============================================================================
+CONDITIONS D'UTILISATION DE smiit ANALYTICS
+Conditions générales relatives à la fourniture de logiciels en tant que service
+===============================================================================
+
+Version 1.0 — Mise à jour : 18 novembre 2026
+
+§ 1 CHAMP D'APPLICATION ET PARTIES CONTRACTANTES
+
+(1) Les présentes conditions d'utilisation s'appliquent à tous les contrats
+    portant sur l'utilisation de l'application Software-as-a-Service «smiit
+    Analytics» (ci-après l'«Application») conclus entre
+
+      smiit GmbH
+      Reiherweg 96
+      89584 Ehingen
+      Tribunal du registre : Amtsgericht Ulm, HRB 741965
+      Représentée par : Sebastian Grab, Noah Neßlauer
+      N° d'identification TVA : DE357299821
+
+    (ci-après le «Prestataire» ou «smiit») et le Client.
+
+    Le Client est l'entreprise qui conclut le contrat avec le Prestataire.
+    Dans l'Application, le Client est désigné comme «Tenant» ; les deux termes
+    ont la même signification dans les présentes conditions d'utilisation.
+
+(2) L'Application s'adresse exclusivement aux entrepreneurs au sens du § 14 du
+    Code civil allemand (BGB), aux personnes morales de droit public et aux
+    patrimoines spéciaux de droit public, ainsi qu'aux entreprises ayant leur
+    siège en Suisse qui concluent le contrat à des fins professionnelles.
+    Aucun contrat n'est conclu avec des consommateurs.
+
+(2a) Les entreprises ayant leur siège en Suisse ou au Liechtenstein ne peuvent
+    conclure le contrat que si elles y sont assujetties à la TVA. En
+    s'inscrivant, le Client confirme que tel est le cas. Si tel n'est pas le
+    cas, le Client indemnise le Prestataire du dommage qui en résulte, en
+    particulier des impôts à acquitter ultérieurement.
+
+(3) Les conditions générales du Client divergentes, contraires ou
+    complémentaires ne font pas partie du contrat, à moins que le Prestataire
+    n'accepte expressément leur application sous forme textuelle. Cela vaut
+    également lorsque le Prestataire fournit la prestation sans réserve en
+    ayant connaissance de telles conditions.
+
+(4) S'appliquent en complément l'accord de traitement des données (contrat de
+    sous-traitance ; annexe au contrat, consultable à l'adresse
+    https://www.smiit-analytics.com/de/dpa/) et la politique de
+    confidentialité du Prestataire (consultable à l'adresse
+    https://www.smiit-analytics.com/de/privacy/). La version en vigueur des
+    présentes conditions d'utilisation est consultable à l'adresse
+    https://www.smiit-analytics.com/de/terms/. En cas de contradiction entre
+    les présentes conditions d'utilisation et l'accord de traitement des
+    données, ce dernier prévaut pour les questions relevant de la protection
+    des données.
+
+
+§ 2 OBJET DU CONTRAT ET DESCRIPTION DES PRESTATIONS
+
+(1) Le Prestataire met l'Application à la disposition du Client via Internet
+    pour la durée du contrat. L'Application sert à l'analyse de données de
+    gestion que le Client transmet depuis son entreprise bexio.
+
+(2) L'étendue des prestations comprend pour l'essentiel :
+
+    a) la connexion d'une ou de plusieurs entreprises bexio du Client via
+       l'interface officielle de bexio, après autorisation préalable du
+       Client ; chaque entreprise bexio connectée constitue un «jeu de
+       données» dans l'Application ;
+    b) la récupération périodique et l'enregistrement des données autorisées
+       dans un stockage de données du Prestataire cloisonné par client ;
+    c) le traitement de ces données sous forme d'indicateurs, de dimensions et
+       de faits ;
+    d) la création, l'enregistrement et le partage de rapports et de tableaux
+       de bord ;
+    e) une fonction d'analyse assistée par l'IA conformément au § 6 ;
+    f) la gestion des comptes utilisateurs, des rôles et des partages.
+
+(3) L'Application est fournie en tant que logiciel standard. Sauf convention
+    expresse contraire, il n'existe aucun droit à des fonctions déterminées, à
+    la mise en œuvre d'exigences individuelles ou à la disponibilité
+    permanente de fonctions particulières. Le Prestataire est en droit de
+    développer et d'adapter l'Application ; le § 19 demeure réservé.
+
+(4) Le Prestataire doit la mise à disposition de l'Application au point de
+    remise. Le point de remise est la sortie du centre de données utilisé par
+    le Prestataire. La connexion Internet du Client ainsi que ses terminaux et
+    logiciels ne font pas l'objet du contrat.
+
+(5) L'Application requiert une version à jour d'un navigateur Web courant. Le
+    Prestataire prend en charge la version principale actuelle et la version
+    principale précédente des navigateurs Chrome, Edge, Firefox et Safari.
+
+
+§ 3 CONCLUSION DU CONTRAT, INSCRIPTION, PÉRIODE D'ESSAI
+
+(1) Le Prestataire commercialise l'Application via le bexio Marketplace,
+    exploité par bexio AG (ci-après le «Marketplace»), ainsi qu'en vente
+    directe.
+
+    Quel que soit le canal de distribution, le contrat portant sur
+    l'utilisation de l'Application est conclu exclusivement entre le Client et
+    le Prestataire, et ce à l'achèvement de l'inscription dans l'Application,
+    lors de laquelle le Client accepte les présentes conditions d'utilisation
+    et l'accord de traitement des données. Le Client conclut également un
+    abonnement payant avec le Prestataire dans l'Application.
+
+(1a) Le Marketplace sert exclusivement à signaler l'Application et à mettre
+    des clients en relation avec le Prestataire. bexio AG ne devient pas
+    partie au contrat et ne fournit aucune prestation au titre du présent
+    contrat. La facturation et l'encaissement sont effectués par le
+    Prestataire lui-même (§ 11 al. 8).
+
+(2) Lors de l'inscription, le Client est tenu de fournir des indications
+    véridiques et complètes et de les mettre à jour sans délai en cas de
+    modification. L'adresse e-mail indiquée lors de l'inscription doit être
+    confirmée.
+
+(3) En s'inscrivant, le Client confirme avoir pris connaissance des présentes
+    conditions d'utilisation et en accepter l'application, ainsi que la
+    conclusion de l'accord de traitement des données. Le Prestataire documente
+    la date et l'heure ainsi que la version des documents acceptés.
+
+(4) Le Prestataire met à disposition une période d'essai gratuite. Les règles
+    suivantes s'appliquent :
+
+    a) La période d'essai est de 30 jours à compter de l'activation.
+    b) Pendant la période d'essai, le contrat peut être résilié à tout moment
+       par chacune des parties sans préavis.
+    c) Le Prestataire peut limiter l'étendue des fonctions pendant la période
+       d'essai.
+    d) La période d'essai n'occasionne aucun frais.
+    e) À l'expiration de la période d'essai, le Client ne peut continuer à
+       utiliser l'Application que s'il conclut un abonnement payant dans
+       l'Application. Aucune conversion automatique en abonnement payant n'a
+       lieu. Si le Client ne conclut pas d'abonnement, l'accès est bloqué à
+       l'expiration de la période d'essai ; le § 14 s'applique par analogie
+       aux données du Client.
+    f) Toute garantie est exclue pour la période d'essai ; la responsabilité
+       du Prestataire est régie par le § 16 al. 6.
+
+
+§ 4 WORKSPACE, COMPTES UTILISATEURS ET RÔLES
+
+(1) L'utilisation a lieu au sein d'un espace de travail («Workspace») attribué
+    au Client (Tenant). Le Client désigne au moins une personne comme
+    titulaire («Owner») du Workspace.
+
+(2) L'Application connaît les rôles «Owner», «Admin» et «Member», assortis
+    d'autorisations graduées. Le Client est seul responsable du choix des
+    personnes auxquelles il accorde l'accès et du rôle qu'il leur attribue. Il
+    veille à ce que les autorisations respectent le principe de nécessité et
+    soient retirées sans délai lorsque des personnes quittent l'entreprise.
+
+(3) Les comptes utilisateurs sont personnels. La communication des données
+    d'accès à des tiers ainsi que l'utilisation commune d'un compte par
+    plusieurs personnes sont interdites. Le Client doit obliger ses
+    Utilisateurs en conséquence.
+
+(4) Le Client doit garder secrètes les données d'accès et les protéger contre
+    l'accès de tiers. En cas de soupçon de prise de connaissance non
+    autorisée, le Client doit en informer le Prestataire sans délai et
+    modifier les données d'accès concernées.
+
+(5) La connexion requiert pour tous les Utilisateurs une authentification à
+    deux facteurs au moyen d'un code à usage unique envoyé par e-mail. Un
+    Utilisateur peut enregistrer un appareil comme appareil de confiance pour
+    30 jours ; sur cet appareil, le code à usage unique n'est pas requis
+    pendant cette période.
+
+(6) Les invitations à un Workspace sont envoyées par e-mail à l'adresse
+    indiquée par le Client. Le Client veille à ce que les adresses saisies
+    soient exactes. Le Prestataire attire l'attention sur le fait que les
+    liens d'invitation restent valables jusqu'à leur acceptation ou leur
+    révocation par le Client ; le Client doit révoquer les invitations qui ne
+    sont plus nécessaires.
+
+
+§ 5 CONNEXION À bexio
+
+(1) La connexion à bexio est établie exclusivement à l'initiative du Client,
+    par l'octroi d'une autorisation via la procédure d'autorisation de bexio.
+
+(1a) L'autorisation est octroyée de manière uniforme pour l'ensemble du
+    périmètre utilisé par l'Application. Une sélection de domaines de données
+    individuels n'est pas prévue ; le Client ne peut qu'octroyer la connexion
+    dans son ensemble ou y renoncer dans son ensemble. Les domaines de données
+    concernés résultent de l'annexe 1, point 5.2, de l'accord de traitement
+    des données. La possibilité de récupérer effectivement certains domaines
+    dépend en outre des modules et des autorisations existant dans
+    l'entreprise bexio du Client.
+
+(2) bexio n'est pas un sous-traitant du Prestataire, mais un service utilisé
+    par le Client dans son propre domaine de responsabilité. La relation
+    contractuelle entre le Client et bexio n'est pas affectée par le présent
+    contrat.
+
+(3) Le Prestataire récupère les données de l'entreprise bexio du Client
+    exclusivement en lecture. Aucun accès en écriture à l'entreprise bexio n'a
+    lieu.
+
+(4) Le Prestataire ne garantit pas la disponibilité, l'exhaustivité ou
+    l'exactitude des données et des interfaces fournies par bexio. Si bexio
+    modifie, restreint ou supprime son interface, cela peut affecter l'étendue
+    des fonctions de l'Application. Le Prestataire en informera le Client sans
+    délai et s'efforcera de procéder à une adaptation. Si une fonction
+    disparaît pour cette raison de manière durable et significative, le Client
+    dispose d'un droit de résiliation spécial conformément au § 13 al. 6.
+
+(5) Le Client est tenu de maintenir l'autorisation aussi longtemps qu'il
+    souhaite utiliser l'Application. Si l'autorisation expire ou est révoquée,
+    la récupération des données n'a plus lieu ; le Prestataire informe le
+    Client par e-mail de la nécessité de rétablir la connexion. Dans ce cas,
+    les données déjà enregistrées sont conservées et ne sont plus mises à
+    jour ; elles ne sont pas supprimées pour ce seul motif.
+
+(6) Si le Client supprime dans l'Application un jeu de données ou l'ensemble
+    de son Workspace, le Prestataire supprime automatiquement les données
+    correspondantes dans un délai de quatre heures. Si le Client souhaite
+    faire supprimer des données enregistrées sans mettre fin au contrat, il
+    doit supprimer le jeu de données concerné ; la simple révocation de
+    l'autorisation bexio ne suffit pas à cet effet. Le § 14 al. 3, 2e phrase,
+    s'applique par analogie aux copies de sauvegarde.
+
+
+§ 6 FONCTIONS D'ANALYSE ASSISTÉES PAR L'IA
+
+(1) L'Application comprend une fonction d'analyse reposant sur un grand modèle
+    de langage («Analyste IA»). Les Utilisateurs peuvent poser des questions
+    sur leurs données en langage naturel ; le modèle de langage génère à cet
+    effet des requêtes de base de données, en évalue les résultats et formule
+    une réponse.
+
+(2) Le Prestataire signale expressément qu'il s'agit d'un système d'IA et que
+    les réponses sont générées par un modèle de langage. Cette indication est
+    également affichée à l'Utilisateur dans l'Application (obligation de
+    transparence selon l'article 50 du règlement (UE) 2024/1689 — règlement
+    sur l'IA).
+
+(3) Pour répondre à une question, sont transmis au modèle de langage la
+    question posée, un modèle descriptif de la structure de données disponible
+    ainsi que les résultats des requêtes générées (indicateurs et extraits
+    limités de lignes de données). Les noms et adresses e-mail de personnes
+    sont alors pseudonymisés par défaut et les textes libres ne sont pas
+    transmis ; les données du personnel ne sont transmises qu'après une
+    autorisation distincte. Le Client peut lever progressivement la
+    pseudonymisation au moyen des niveaux «Noms», «Noms + textes» et «Tout».
+    Les détails sont réglés dans l'accord de traitement des données.
+
+(4) Le Prestataire utilise comme modèle de langage des modèles d'OpenAI,
+    auxquels il recourt via le service européen d'OpenAI ; le traitement des
+    requêtes a lieu dans l'Espace économique européen et en Suisse. Dans la
+    mesure où des données sont traitées, dans des cas particuliers, en dehors
+    de ces États, cela s'effectue sur la base des mécanismes de transfert
+    désignés dans l'accord de traitement des données conformément au
+    chapitre V RGPD et à l'art. 16 nLPD. Les données transmises ne sont pas
+    utilisées pour l'entraînement de modèles du Prestataire ou des
+    fournisseurs de modèles.
+
+(5) L'Analyste IA est désactivé par défaut. Il est activé pour l'ensemble du
+    Workspace par un Owner, après que celui-ci a confirmé une information
+    relative aux données transmises ; l'autorisation de transmettre des
+    données du personnel et toute levée de la pseudonymisation requièrent
+    chacune une confirmation distincte. Le Client peut désactiver la fonction
+    à tout moment. Tant qu'elle est désactivée, aucune transmission au
+    fournisseur du modèle n'a lieu.
+
+(6) Les modèles de langage peuvent générer des résultats inexacts, incomplets
+    ou trompeurs. Le Prestataire n'assume aucune garantie quant à l'exactitude
+    du contenu, à l'exhaustivité ou à l'adéquation des analyses générées par
+    l'Analyste IA. Le Client est tenu de vérifier lui-même la plausibilité des
+    résultats avant de les utiliser — en particulier avant de prendre des
+    décisions économiques, juridiques ou relatives au personnel.
+
+(7) L'Analyste IA ne prend aucune décision automatisée au sens de l'art. 22
+    RGPD. Le Client s'engage à ne pas utiliser l'Application comme fondement
+    unique de décisions produisant des effets juridiques à l'égard de
+    personnes physiques ou les affectant de manière significative de façon
+    similaire, en particulier pas pour des décisions relatives à l'embauche, à
+    la promotion, à la rémunération ou à la fin de rapports de travail.
+
+(8) Le Prestataire peut changer de modèle de langage et de fournisseur de
+    modèle. S'il s'agit d'un changement de sous-traitant ultérieur, la
+    procédure est régie par l'accord de traitement des données.
+
+
+§ 7 DROITS D'UTILISATION
+
+(1) Le Prestataire concède au Client, pour la durée du contrat, le droit non
+    exclusif, non sous-licenciable et non transférable d'utiliser
+    l'Application via Internet dans l'étendue convenue contractuellement.
+
+(2) Le logiciel n'est pas remis au Client. Le Client n'acquiert aucun droit à
+    la remise du code du programme.
+
+(3) Le Client ne peut utiliser l'Application qu'à ses propres fins
+    professionnelles. L'utilisation pour le compte de tiers, notamment sous
+    forme d'exploitation de centre de données, de sous-location ou d'analyse
+    rémunérée de données de tiers, requiert l'accord préalable du Prestataire
+    sous forme textuelle. L'analyse de données d'entreprises liées au sens des
+    §§ 15 et s. de la loi allemande sur les sociétés par actions (AktG) est
+    autorisée.
+
+(4) Il est interdit au Client de procéder à l'ingénierie inverse, de
+    décompiler ou de désassembler l'Application, sauf si la loi l'autorise
+    impérativement, de contourner des mécanismes de sécurité ou d'interroger
+    l'Application de manière automatisée d'une façon qui dépasse l'utilisation
+    prévue.
+
+(5) Tous les droits sur l'Application, sa structure, son modèle de données et
+    sa conception restent acquis au Prestataire. Tous les droits sur les
+    données apportées par le Client restent acquis au Client.
+
+(6) Le Prestataire traite les données récupérées via la connexion bexio ainsi
+    que tous les contenus saisis dans l'Application par le Client et ses
+    Utilisateurs (ensemble les «Données du Client») exclusivement pour fournir
+    ses prestations et non à ses propres fins.
+
+    En sont exceptées les données de compte et d'utilisation des Utilisateurs
+    (en particulier le nom, l'adresse e-mail ainsi que le type et le moment
+    des fonctions utilisées). Le Prestataire les traite en tant que
+    responsable du traitement indépendant, également à des fins de
+    statistiques d'utilisation, de planification des capacités et
+    d'amélioration de l'Application ; les détails sont réglés dans la
+    politique de confidentialité. Ces données ne sont ni vendues ni
+    communiquées d'une autre manière à des tiers.
+
+
+§ 8 OBLIGATIONS ET INCOMBANCES DU CLIENT
+
+(1) Le Client est responsable de la licéité des données qu'il apporte et qui
+    sont transmises via la connexion bexio. Il s'assure qu'il est en droit de
+    faire traiter ces données par le Prestataire.
+
+(2) Le Client prend acte du fait que, en raison du périmètre de connexion
+    uniforme visé au § 5 al. 1a, l'Application traite également les données
+    suivantes, dans la mesure où son entreprise bexio les contient, et qu'il
+    ne peut pas désélectionner ces catégories individuellement :
+
+    a) les données relatives aux employés, y compris les absences, les soldes
+       d'heures et de vacances ainsi que les temps de travail saisis ;
+    b) les indications susceptibles de permettre de déduire des données
+       concernant la santé, dans la mesure où des motifs d'absence sont saisis
+       en conséquence dans bexio ;
+    c) les taux de coûts internes et les taux de facturation interne se
+       rapportant à des employés individuels.
+
+(3) En tant que responsable du traitement au sens du droit de la protection
+    des données, le Client est tenu de vérifier, avant d'octroyer
+    l'autorisation, s'il existe une base juridique pour toutes les catégories
+    de données visées à l'alinéa 2, et de prendre les mesures nécessaires. En
+    font notamment partie :
+
+    a) l'information des personnes concernées conformément aux articles 13 et
+       14 RGPD ;
+    b) la participation d'une représentation du personnel existante, dans la
+       mesure où l'analyse de données relatives au temps de travail ou aux
+       performances est soumise à la codétermination (en Allemagne, notamment
+       le § 87 al. 1, ch. 6, de la loi allemande sur l'organisation des
+       entreprises (BetrVG)) ;
+    c) la vérification de la nécessité d'effectuer une analyse d'impact
+       relative à la protection des données conformément à l'article 35 RGPD.
+
+    Le Prestataire ne doit à cet égard aucun conseil juridique.
+
+(4) Le Client ne doit pas utiliser l'Application pour traiter des contenus
+    illicites ou pour enfreindre le droit applicable.
+
+(5) Le Client garantit le Prestataire contre les prétentions de tiers fondées
+    sur une utilisation fautive et illicite de l'Application par le Client ou
+    par des Utilisateurs qui lui sont imputables, y compris les frais
+    raisonnables de défense juridique. Le Prestataire informera le Client sans
+    délai de la mise en cause et lui donnera l'occasion de prendre position.
+
+(6) Le Client doit signaler les défauts sans délai sous forme textuelle et
+    décrire aussi précisément que possible les circonstances de leur
+    survenance.
+
+(7) Le Client est responsable de la sauvegarde des données qu'il souhaite
+    continuer à utiliser en dehors de l'Application. L'Application met à
+    disposition à cet effet les fonctions d'exportation suivantes :
+    l'exportation des données d'éléments de rapport individuels et des
+    résultats de l'Analyste IA sous forme de fichier CSV ainsi que
+    l'exportation des propres données de compte d'un Utilisateur. Une
+    exportation complète d'un Workspace ou d'un jeu de données n'est pas
+    prévue ; les données d'origine restent dans l'entreprise bexio du Client.
+
+
+§ 9 LIMITES D'UTILISATION
+
+(1) L'étendue de l'Application n'est en principe pas limitée quantitativement.
+    Ne sont notamment pas limités :
+
+    a) le nombre de jeux de données connectés — la rémunération est calculée
+       par jeu de données (§ 11 al. 1) ;
+    b) le nombre de comptes utilisateurs — la rémunération est calculée par
+       Utilisateur au-delà du premier (§ 11 al. 2) ;
+    c) le volume des données analysées ;
+    d) la fréquence de mise à jour des données.
+
+(2) Par dérogation, l'utilisation de l'Analyste IA (§ 6) est limitée à un
+    budget mensuel. Le budget est inclus dans la rémunération selon le § 11 et
+    n'est pas facturé séparément ; il n'existe actuellement aucune possibilité
+    de l'étendre contre rémunération.
+
+    Le budget s'élève à 5 dollars américains de coûts de modèle par Workspace
+    et par mois civil et est consommé indépendamment de l'Utilisateur qui
+    formule la requête. Il se renouvelle au début de chaque mois civil,
+    déterminé selon le fuseau horaire enregistré dans les paramètres du
+    Workspace ; les parts non consommées sont perdues et ne sont pas
+    remboursées. Le Prestataire peut fixer le budget de manière différente
+    pour certains Workspaces. Lorsque le budget est épuisé, l'Analyste IA
+    n'est plus disponible jusqu'au début du mois suivant ; les autres
+    fonctions de l'Application restent utilisables sans restriction.
+
+    Le Prestataire présente dans l'Application le montant du budget ainsi que
+    la consommation actuelle. S'agissant d'une fonction supplémentaire
+    gratuite, le Prestataire peut en adapter le montant ; le § 2 al. 3
+    s'applique par analogie.
+
+(3) Le Prestataire se réserve le droit d'adapter le contrat dans le cas où
+    l'utilisation par un Client donné occasionne une charge disproportionnée.
+    Un tel cas est réputé exister lorsque les coûts de centre de données, de
+    base de données et de modèle imputables au Client dépassent, pendant trois
+    mois civils consécutifs, la rémunération nette convenue pour la même
+    période.
+
+(4) Si le cas visé à l'alinéa 3 se présente, le Prestataire en avisera le
+    Client sous forme textuelle, exposera les coûts imputables et lui
+    soumettra une offre d'adaptation du contrat. Si aucun accord n'est trouvé
+    dans un délai de 30 jours civils à compter de la réception de l'avis, le
+    Prestataire est en droit de mettre fin au contrat conformément au § 13
+    al. 5, let. a, pour la fin du mois civil suivant. Les rémunérations déjà
+    payées pour la période postérieure à la prise d'effet de la résiliation
+    sont remboursées au prorata temporis.
+
+(5) Le Prestataire est en droit de limiter le débit des requêtes ou de les
+    refuser temporairement dans la mesure où cela est nécessaire pour prévenir
+    une surcharge ou un abus.
+
+
+§ 10 DISPONIBILITÉ, MAINTENANCE ET SUPPORT
+
+(1) Le Prestataire assure la mise à disposition de l'Application en déployant
+    des efforts économiquement raisonnables. Aucun taux de disponibilité
+    déterminé n'est promis ni dû.
+
+(2) Le Prestataire est en droit de mettre temporairement l'Application hors
+    service pour des travaux de maintenance. Dans la mesure du possible, le
+    Prestataire annonce les travaux de maintenance planifiés susceptibles
+    d'avoir un impact important au moins 48 heures à l'avance par e-mail ou
+    dans l'Application et les effectue, dans la mesure du possible, en dehors
+    des heures de bureau habituelles.
+
+(3) Le Prestataire peut prendre à tout moment et sans préavis des mesures
+    urgentes visant à prévenir des risques de sécurité ou à préserver la
+    sécurité d'exploitation.
+
+(4) Les périodes pendant lesquelles l'Application n'est pas accessible pour
+    des raisons dont le Prestataire n'est pas responsable — en particulier la
+    force majeure, les perturbations d'Internet, les défaillances de
+    fournisseurs en amont ou les perturbations chez bexio — ne fondent aucune
+    prétention du Client.
+
+(5) Le Prestataire fournit un support par e-mail à l'adresse kontakt@smiit.de
+    pendant les heures de bureau habituelles. Sauf convention séparée, aucun
+    délai de réaction n'est garanti.
+
+
+§ 11 RÉMUNÉRATION ET FACTURATION
+
+(1) FRAIS PAR JEU DE DONNÉES. La rémunération est calculée en fonction du
+    nombre de jeux de données connectés. Un jeu de données est une entreprise
+    bexio connectée à l'Application. Par jeu de données :
+
+        Tarif mensuel (§ 13 al. 1, let. a) :   59,00 CHF par mois civil
+        Tarif annuel (§ 13 al. 1, let. b) :   590,00 CHF par année de contrat
+
+(2) FRAIS PAR UTILISATEUR. Le premier Utilisateur par Tenant est inclus dans
+    les frais par jeu de données. Pour chaque Utilisateur supplémentaire, la
+    rémunération s'élève à :
+
+        Tarif mensuel (§ 13 al. 1, let. a) :    8,00 CHF par mois civil
+        Tarif annuel (§ 13 al. 1, let. b) :    96,00 CHF par année de contrat
+
+    Un Utilisateur n'est facturé qu'une seule fois par Tenant, quel que soit
+    le nombre de jeux de données de ce Tenant auxquels il a accès.
+
+(3) CALCUL AU JOUR PRÈS. Les jeux de données et les Utilisateurs sont facturés
+    pour chaque jour civil pendant lequel ils étaient connectés ou
+    configurés ; un jour civil est compté si le jeu de données ou
+    l'Utilisateur existait ce jour-là.
+
+    a) Dans le tarif mensuel, le montant par jeu de données ou par Utilisateur
+       correspond au prix mensuel selon l'alinéa 1 ou 2, multiplié par le
+       nombre de ces jours et divisé par le nombre de jours du mois civil.
+       Cela vaut également pour le premier mois à compter de la conclusion de
+       l'abonnement.
+    b) Dans le tarif annuel, le montant pour un jeu de données ou un
+       Utilisateur ajouté en cours de période annuelle correspond au prix
+       annuel selon l'alinéa 1 ou 2, multiplié par le nombre de jours restants
+       de la période annuelle et divisé par le nombre de jours de celle-ci.
+
+    Le montant total d'une facture est arrondi commercialement à 0,01 CHF.
+
+(4) APERÇU DU PRIX. Lors de la conclusion de l'abonnement, l'Application
+    affiche au Client le montant prévisionnel — par mois civil dans le tarif
+    mensuel, par année de contrat dans le tarif annuel — sur la base du nombre
+    actuel de jeux de données et d'Utilisateurs. Si le Client ajoute ou
+    supprime des jeux de données ou des Utilisateurs, l'Application affiche
+    avant la modification l'incidence de celle-ci sur la facturation en cours
+    et sur les facturations suivantes. L'aperçu est sans engagement ; seul le
+    calcul selon l'alinéa 3 fait foi.
+
+(5) L'utilisation de l'Analyste IA (§ 6) est possible sans rémunération
+    séparée dans les limites du budget inclus selon le § 9 al. 2.
+
+(6) IMPÔTS. Tous les prix s'entendent nets, hors taxe sur le chiffre
+    d'affaires ou taxe sur la valeur ajoutée. Le Prestataire est une
+    entreprise ayant son siège en Allemagne. Les règles suivantes
+    s'appliquent :
+
+    a) Le Prestataire ne facture pas de taxe sur le chiffre d'affaires aux
+       clients ayant leur siège hors d'Allemagne, en particulier en Suisse et
+       au Liechtenstein. Le lieu de la prestation se situe dans le pays du
+       Client ; le Client est lui-même redevable de l'impôt qui y est dû et
+       s'en acquitte sous sa propre responsabilité (autoliquidation, «reverse
+       charge» ; en Suisse et au Liechtenstein, impôt sur les acquisitions,
+       décompté par le Client assujetti à la TVA conformément au § 1 al. 2a).
+       Les clients ayant leur siège dans un autre État membre de l'Union
+       européenne communiquent au Prestataire leur numéro d'identification
+       TVA.
+    b) Le Prestataire facture en sus la taxe sur le chiffre d'affaires légale
+       aux clients ayant leur siège en Allemagne.
+    c) Si le Prestataire est tenu, selon le droit du pays dans lequel le
+       Client a son siège, de percevoir lui-même l'impôt de ce pays, il le
+       facture en sus.
+
+    Le Client communique au Prestataire son IDE ou son numéro d'identification
+    TVA, s'il en dispose.
+
+(7) DATE DE FACTURATION.
+
+    a) Dans le tarif mensuel, les frais par jeu de données et par Utilisateur
+       sont facturés à terme échu à la fin de chaque mois civil.
+    b) Dans le tarif annuel, les frais par jeu de données et par Utilisateur
+       sont facturés douze mois à l'avance pour les jeux de données connectés
+       et les Utilisateurs configurés au début de la période annuelle. Si des
+       jeux de données ou des Utilisateurs sont ajoutés en cours de période
+       annuelle, ils sont calculés conformément à l'alinéa 3, let. b, jusqu'à
+       la fin de la période annuelle en cours et facturés à la fin du mois
+       civil au cours duquel ils ont été ajoutés ; lors du renouvellement,
+       tous les jeux de données et Utilisateurs sont facturés ensemble pour
+       douze mois. Si le Client supprime des jeux de données ou des
+       Utilisateurs en cours de période annuelle, la rémunération déjà
+       facturée n'est pas remboursée ; ils ne sont plus pris en compte à
+       compter du renouvellement suivant.
+
+(8) ÉTABLISSEMENT DES FACTURES ET PAIEMENT. Le Prestataire adresse au Client
+    la facture en francs suisses et sous forme électronique par e-mail à
+    l'adresse de facturation indiquée par le Client ; l'établissement et
+    l'envoi peuvent être effectués via le service de facturation de PayPal.
+    Les factures sont payables sans déduction dans un délai de 14 jours à
+    compter de la date de facturation, par virement sur le compte indiqué dans
+    la facture ou par les moyens de paiement proposés dans la facture. Le
+    Client indique son adresse de facturation complète et la tient à jour.
+
+    La facture indique séparément les frais par jeu de données et les frais
+    par Utilisateur, y compris les jours facturés par jeu de données et par
+    Utilisateur. Le Prestataire met la même ventilation à la disposition du
+    Client dans l'Application. Le Client adresse au Prestataire ses
+    contestations relatives au calcul.
+
+(9) RETARD DE PAIEMENT. Si le Client ne règle pas une facture échue malgré un
+    rappel assorti d'un délai raisonnable, le Prestataire est en droit de
+    bloquer l'accès à l'Application jusqu'au règlement des montants impayés.
+    Le Prestataire annonce préalablement le blocage sous forme textuelle.
+    L'obligation de paiement du Client subsiste pendant le blocage ; les
+    autres droits légaux du Prestataire demeurent réservés.
+
+
+§ 12 ADAPTATION DES PRIX
+
+(1) Le Prestataire est en droit d'adapter les prix avec effet pour l'avenir,
+    mais au plus tôt douze mois après le début du contrat et ensuite au
+    maximum une fois par période de douze mois.
+
+(2) Une adaptation des prix suppose une variation des coûts supportés par le
+    Prestataire pour la fourniture des prestations, en particulier des coûts
+    des prestations de centre de données, des fournisseurs de modèles, des
+    licences, du personnel ou des contributions imposées par la loi. Les
+    baisses de coûts doivent alors être compensées avec les hausses de coûts.
+    Une augmentation ne peut pas servir à accroître le bénéfice au-delà de la
+    couverture des coûts accrus.
+
+(3) Le Prestataire communique l'adaptation au Client sous forme textuelle au
+    moins huit semaines avant sa prise d'effet et attire à cette occasion son
+    attention sur le droit de résiliation spécial selon l'alinéa 4.
+
+(4) Si l'augmentation dépasse cinq pour cent de la rémunération antérieure, le
+    Client peut résilier le contrat sous forme textuelle jusqu'à la prise
+    d'effet de l'adaptation, pour cette date. Si le Client ne fait pas usage
+    de ce droit, l'adaptation est réputée convenue.
+
+
+§ 13 DURÉE ET RÉSILIATION
+
+(1) Le Prestataire propose l'abonnement en deux variantes tarifaires :
+
+    a) TARIF MENSUEL : durée indéterminée, facturation mensuelle à terme échu
+       (§ 11 al. 7, let. a). Le Client peut résilier pour la fin de chaque
+       mois civil.
+    b) TARIF ANNUEL : durée de douze mois à compter de la conclusion, aux prix
+       du tarif annuel (§ 11 al. 1 et 2), pour lequel les frais par jeu de
+       données sont réduits par rapport au tarif mensuel ; facturation
+       annuelle à l'avance (§ 11 al. 7, let. b). La durée est prolongée à
+       chaque fois de douze mois supplémentaires si le Client ne résilie pas
+       au plus tard le dernier jour de la période annuelle en cours.
+
+    Le passage du tarif mensuel au tarif annuel est possible à tout moment et
+    prend effet au début du mois civil suivant. Le passage du tarif annuel au
+    tarif mensuel prend effet à la fin de la période annuelle en cours.
+
+    Le Prestataire ne peut mettre fin à l'abonnement que conformément aux
+    alinéas 4 et 5 ainsi qu'au § 19 al. 3.
+
+(2) Le Client résilie au moyen de la fonction de résiliation prévue à cet
+    effet dans l'Application. Cela vaut également pour les droits de
+    résiliation spéciaux prévus par les présentes conditions d'utilisation et
+    par l'accord de traitement des données ; le Client peut aussi les exercer
+    sous forme textuelle auprès du Prestataire.
+
+(3) Après une résiliation, le Client conserve l'accès à l'Application jusqu'à
+    la fin de la période pour laquelle la résiliation prend effet ; à
+    l'expiration de celle-ci, le contrat portant sur l'utilisation de
+    l'Application prend fin. Les jeux de données et les Utilisateurs sont
+    facturés conformément au § 11 jusqu'à cette date.
+
+(4) Le droit des deux parties contractantes de résilier le contrat de manière
+    extraordinaire pour juste motif conformément au § 314 BGB demeure réservé.
+    Il y a juste motif pour le Prestataire notamment lorsque le Client
+
+    a) enfreint gravement ou de manière répétée le § 7 al. 3 ou 4 ou le § 8
+       al. 4 ;
+    b) utilise l'Application d'une manière qui affecte considérablement son
+       exploitation ou son utilisation par d'autres clients, et persiste après
+       avertissement.
+
+(5) Outre la résiliation extraordinaire, le Prestataire est en droit de mettre
+    fin à l'abonnement pour les motifs objectifs suivants, énumérés de manière
+    exhaustive :
+
+    a) en présence d'un cas visé au § 9 al. 3 (charge disproportionnée), après
+       l'expiration sans résultat du délai prévu au § 9 al. 4, moyennant un
+       préavis d'un mois pour la fin d'un mois ;
+    b) en cas de cessation complète du service smiit Analytics, moyennant un
+       préavis de trois mois pour la fin d'un mois ;
+    c) lorsque la fourniture des prestations devient durablement impossible ou
+       ne peut plus raisonnablement être exigée du Prestataire pour des
+       raisons juridiques ou factuelles, notamment parce qu'une prestation en
+       amont essentielle à l'exploitation — à savoir l'interface bexio —
+       disparaît durablement, moyennant un préavis d'un mois pour la fin d'un
+       mois.
+
+    Le Prestataire déclare la fin de l'abonnement au Client sous forme
+    textuelle. Les rémunérations déjà payées pour la période postérieure à la
+    prise d'effet de la fin de l'abonnement sont remboursées au Client au
+    prorata temporis. Toute autre résiliation ordinaire par le Prestataire
+    pendant une période annuelle en cours est exclue.
+
+(6) Le Client est en droit de résilier moyennant un préavis d'un mois pour la
+    fin d'un mois lorsqu'une fonction essentielle de l'Application disparaît
+    de manière durable et significative pour les raisons mentionnées au § 5
+    al. 4. Les droits de résiliation spéciaux selon le § 12 al. 4, le § 19
+    al. 3 et le § 20 al. 4 demeurent réservés.
+
+
+§ 14 CONSÉQUENCES DE LA CESSATION DU CONTRAT
+
+(1) Le droit d'utilisation du Client prend fin à la prise d'effet de la
+    résiliation. L'accès à l'Application est désactivé.
+
+(2) Après la fin du contrat, le Prestataire conserve les données du Client
+    pendant une période de 30 jours civils aux fins d'exportation. Pendant
+    cette période, le Client obtient sur demande un accès limité aux fonctions
+    d'exportation selon le § 8 al. 7.
+
+(3) À l'expiration du délai selon l'alinéa 2, le Prestataire supprime
+    l'ensemble des Données du Client. Les copies de sauvegarde sont écrasées
+    dans le cadre du cycle de sauvegarde ordinaire de 35 jours ; jusque-là,
+    les données restent bloquées et ne sont pas traitées. Les détails et les
+    exceptions fondées sur des obligations légales de conservation sont réglés
+    dans l'accord de traitement des données.
+
+(4) À la demande du Client, à formuler sous forme textuelle avant l'expiration
+    du délai selon l'alinéa 2, le Prestataire confirme la suppression sous
+    forme textuelle.
+
+(5) Le Prestataire n'est pas tenu de conserver des données au-delà du délai
+    selon l'alinéa 2. Le Client est responsable de l'exportation en temps
+    utile.
+
+
+§ 15 GARANTIE
+
+(1) Le droit du bail s'applique à la mise à disposition de l'Application
+    (§§ 535 et s. BGB). La responsabilité sans faute du Prestataire pour les
+    défauts qui existaient déjà lors de la conclusion du contrat, selon le
+    § 536a al. 1, 1re alternative BGB, est exclue.
+
+(2) Le Prestataire garantit que l'Application correspond pour l'essentiel,
+    pendant la durée du contrat, à la description des prestations selon le
+    § 2.
+
+(3) Les écarts insignifiants par rapport aux caractéristiques dues ainsi que
+    les atteintes résultant de circonstances visées au § 10 al. 4 ne
+    constituent pas un défaut.
+
+(4) Le Client doit donner au Prestataire la possibilité de remédier au défaut
+    dans un délai raisonnable. Toute réduction du prix opérée par le Client de
+    son propre chef est exclue ; les prétentions en réduction du prix doivent
+    être exercées à l'encontre du Prestataire.
+
+(5) Les prétentions pour défauts se prescrivent par douze mois à compter du
+    début légal de la prescription. Cela ne s'applique pas aux prétentions
+    selon le § 16 al. 1 et 2 ni aux prétentions pour défauts dissimulés
+    dolosivement.
+
+
+§ 16 RESPONSABILITÉ
+
+(1) Le Prestataire répond de manière illimitée des dommages résultant d'une
+    atteinte à la vie, à l'intégrité corporelle ou à la santé qui reposent sur
+    un manquement du Prestataire ou de l'un de ses représentants légaux ou
+    auxiliaires d'exécution, ainsi que des dommages qui reposent sur une faute
+    intentionnelle ou une négligence grave.
+
+(2) Le Prestataire répond également de manière illimitée dans le cadre d'une
+    garantie assumée ainsi qu'en vertu de la loi allemande sur la
+    responsabilité du fait des produits (Produkthaftungsgesetz).
+
+(3) En cas de violation par négligence légère d'une obligation contractuelle
+    essentielle, la responsabilité du Prestataire est limitée quant à son
+    montant au dommage prévisible et typique du contrat. Les obligations
+    contractuelles essentielles sont celles dont l'exécution conditionne la
+    bonne exécution du contrat et au respect desquelles le Client peut
+    régulièrement se fier.
+
+(4) La responsabilité selon l'alinéa 3 est limitée au total au montant de la
+    rémunération nette due pour l'utilisation de l'Application au cours des
+    douze mois précédant l'événement dommageable.
+
+(5) Pour le surplus, la responsabilité du Prestataire est exclue.
+
+(6) Pour la période d'essai gratuite selon le § 3 al. 4, le Prestataire ne
+    répond que de la faute intentionnelle et de la négligence grave ainsi que
+    conformément aux alinéas 1 et 2.
+
+(7) En cas de perte de données, le Prestataire ne répond, dans les limites des
+    alinéas qui précèdent, qu'à hauteur des frais qui auraient été nécessaires
+    à la restauration si le Client avait procédé à une sauvegarde régulière et
+    conforme des données.
+
+(8) Les limitations de responsabilité qui précèdent s'appliquent également en
+    faveur des représentants légaux, des collaborateurs et des auxiliaires
+    d'exécution du Prestataire.
+
+(9) Les dispositions qui précèdent n'entraînent aucune modification du fardeau
+    de la preuve au détriment du Client.
+
+(10) La responsabilité selon l'art. 82 RGPD n'est pas affectée par les
+     dispositions qui précèdent.
+
+
+§ 17 CONFIDENTIALITÉ
+
+(1) Les parties contractantes s'engagent à garder secrètes toutes les
+    informations confidentielles de l'autre partie dont elles prennent
+    connaissance dans le cadre de la relation contractuelle et à ne les
+    utiliser que pour l'exécution du présent contrat.
+
+(2) Sont notamment des informations confidentielles les données du Client, les
+    conditions tarifaires, les informations techniques relatives à
+    l'Application ainsi que toutes les informations désignées comme
+    confidentielles.
+
+(3) L'obligation ne s'applique pas aux informations qui sont publiquement
+    connues, qui deviennent publiquement connues sans violation de cette
+    obligation, qui étaient déjà connues de la partie destinataire ou qui
+    doivent être divulguées en vertu d'une obligation légale ou d'une décision
+    des autorités.
+
+(4) L'obligation subsiste pendant trois ans après la fin du contrat. Les
+    obligations relevant de la protection des données subsistent sans
+    limitation de durée.
+
+(5) Le Prestataire ne peut citer le Client comme client de référence qu'avec
+    l'accord préalable de celui-ci sous forme textuelle.
+
+
+§ 18 PROTECTION DES DONNÉES
+
+(1) Dans la mesure où le Prestataire traite des données personnelles pour le
+    compte du Client, les parties concluent l'accord de traitement des données
+    selon l'art. 28 RGPD joint en annexe. Celui-ci fait partie intégrante du
+    contrat.
+
+(2) Dans la mesure où le Prestataire traite des données personnelles à ses
+    propres fins — en particulier dans le cadre de la préparation et de
+    l'exécution du contrat ainsi que de l'exploitation des comptes
+    utilisateurs —, il est lui-même responsable du traitement. Les détails
+    sont réglés dans la politique de confidentialité du Prestataire.
+
+(3) Le Client est tenu d'informer les personnes concernées relevant de son
+    domaine de responsabilité du traitement effectué par le Prestataire.
+
+
+§ 19 MODIFICATIONS DES PRÉSENTES CONDITIONS D'UTILISATION
+
+(1) Le Prestataire est en droit de modifier les présentes conditions
+    d'utilisation avec effet pour l'avenir, dans la mesure où la modification
+    est nécessaire pour les adapter à une modification de la situation
+    juridique, à une modification de la jurisprudence des juridictions
+    suprêmes ou à une modification de l'étendue des fonctions, et que le
+    Client n'est pas désavantagé de manière inappropriée.
+
+(2) Le Prestataire communique les modifications au Client sous forme textuelle
+    au moins six semaines avant leur prise d'effet. La communication contient
+    les dispositions modifiées, la date de prise d'effet ainsi qu'une
+    indication du droit d'opposition et de ses conséquences.
+
+(3) Si le Client ne s'oppose pas sous forme textuelle dans un délai de six
+    semaines à compter de la réception de la communication, les modifications
+    sont réputées acceptées. S'il s'y oppose dans le délai, le contrat se
+    poursuit aux conditions antérieures ; dans ce cas, le Prestataire est en
+    droit de résilier le contrat pour la date de prise d'effet de la
+    modification, mais au plus tôt pour la fin d'une période annuelle en
+    cours.
+
+(4) Les modifications concernant l'objet du contrat ou la rémunération ne
+    peuvent pas être effectuées en vertu de la présente disposition ; le § 12
+    ou une convention séparée s'appliquent à cet effet.
+
+
+§ 20 DISPOSITIONS FINALES
+
+(1) Le droit de la République fédérale d'Allemagne est applicable, à
+    l'exclusion de la Convention des Nations Unies sur les contrats de vente
+    internationale de marchandises (CVIM).
+
+(2) Pour les clients ayant leur siège en Suisse : le choix du droit allemand
+    ne porte pas atteinte aux dispositions impératives du droit suisse, dans
+    la mesure où celles-ci s'appliquent en vertu du droit international privé
+    suisse. En matière de protection des données, les dispositions de l'accord
+    de traitement des données relatives à la loi fédérale suisse sur la
+    protection des données s'appliquent en complément.
+
+(3) Le for exclusif pour tous les litiges découlant du présent contrat ou en
+    relation avec celui-ci est Ehingen, si le Client est commerçant, personne
+    morale de droit public ou patrimoine spécial de droit public, ou s'il n'a
+    pas de for général en Allemagne. Le Prestataire est en outre en droit
+    d'intenter une action au for général du Client.
+
+(4) Le Client ne peut transférer à des tiers les droits et obligations
+    découlant du présent contrat qu'avec l'accord préalable du Prestataire
+    sous forme textuelle. Le Prestataire est en droit de transférer le contrat
+    dans le cadre d'une succession universelle ou d'une cession de la branche
+    d'activité concernée ; dans ce cas, le Client peut résilier le contrat
+    sous forme textuelle dans un délai de quatre semaines à compter de la
+    communication.
+
+(5) Les modifications et compléments du présent contrat requièrent la forme
+    textuelle. Cela vaut également pour la modification de la présente
+    exigence de forme textuelle.
+
+(6) Si une disposition du présent contrat est ou devient invalide, la validité
+    des autres dispositions n'en est pas affectée.
+
+
+===============================================================================
+FIN DES CONDITIONS D'UTILISATION
+===============================================================================

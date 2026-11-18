@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs"
+import { existsSync, readFileSync } from "node:fs"
 import { describe, expect, it } from "vitest"
 import { type LegalBlock, type LegalLine, legalIndents, linkParts, parseLegalText } from "@/lib/legal-text"
 
@@ -76,6 +76,37 @@ describe("parseLegalText", () => {
   })
 })
 
+describe("parseLegalText in other languages", () => {
+  const doc = parseLegalText(
+    [
+      "ANNEXE 1 — DONNÉES À CARACTÈRE PERSONNEL",
+      "",
+      "1. CATÉGORIES DE DONNÉES",
+      "",
+      "  Finalité :       Un texte qui est assez long pour passer à la ligne suivante,",
+      "                   puis continue",
+      "",
+      "RESPONSABILITÀ DELL'INTERESSATO",
+      "",
+      "=====",
+      "FIN DE L'ACCORD",
+      "=====",
+    ].join("\n"),
+  )
+
+  it("reads accented headings, annexes, French labels and the end line", () => {
+    expect(headings(doc.blocks).map((h) => [h.level, h.id])).toEqual([
+      [2, "annexe-1-donnees-a-caractere-personnel"],
+      [3, "1-categories-de-donnees"],
+      [3, "responsabilita-dell-interessato"],
+    ])
+    expect(lines(doc.blocks)).toEqual([
+      { indent: 2, label: "Finalité", text: "Un texte qui est assez long pour passer à la ligne suivante, puis continue" },
+    ])
+    expect(JSON.stringify(doc)).not.toContain("FIN DE")
+  })
+})
+
 describe("legalIndents", () => {
   const doc = parseLegalText(
     [
@@ -133,6 +164,53 @@ describe.each(["privacy", "terms", "dpa"])("content/legal/%s.txt", (route) => {
     expect(lines(doc.blocks).filter((l) => / {3}/.test(l.text))).toEqual([])
   })
 })
+
+/** Structure of a text without the wording: headings (level, number), blocks, lines (offset, marker, label, kept breaks). */
+function shape(source: string) {
+  const doc = parseLegalText(source)
+  const offsets = legalIndents(doc.blocks)
+  const number = (text: string) =>
+    /^(§ \d+|\d+(?:\.\d+)*)/.exec(text)?.[1] ?? /^(?:ANLAGE|ANNEX|ANNEXE|ALLEGATO) (\d+)/.exec(text)?.[1] ?? "-"
+  return doc.blocks.map((b) =>
+    b.type === "heading"
+      ? `h${b.level} ${number(b.text)}`
+      : b.lines.map((l) => `${offsets.get(l)} ${l.marker ?? ""} ${l.label ? "label" : ""} ${l.text.split("\n").length}`),
+  )
+}
+const links = (source: string) =>
+  lines(parseLegalText(source).blocks)
+    .flatMap((l) => linkParts(l.text).flatMap((p) => (p.href ? [p.href] : [])))
+    .sort()
+
+// Translations (AI, not reviewed; the German text alone is binding) must keep the German structure and links.
+describe.each(["en", "fr", "it"].flatMap((lang) => ["privacy", "terms", "dpa"].map((route) => [lang, route])))(
+  "content/legal/%s/%s.txt",
+  (lang, route) => {
+    const file = `content/legal/${lang}/${route}.txt`
+    const german = readFileSync(`content/legal/${route}.txt`, "utf8")
+    const source = existsSync(file) ? readFileSync(file, "utf8") : ""
+
+    it("exists", () => expect(source).not.toBe(""))
+
+    it("has the structure and the links of the German text", () => {
+      expect(shape(source)).toEqual(shape(german))
+      expect(links(source)).toEqual(links(german))
+    })
+
+    it("opens with the version line and has unique anchors", () => {
+      const doc = parseLegalText(source)
+      const first = doc.blocks[0]
+      expect(first.type === "lines" && first.lines[0].text).toMatch(/^Versione? 1\.0 — /)
+      expect(doc.subtitle).toBeTruthy()
+      const ids = headings(doc.blocks).map((h) => h.id)
+      expect(new Set(ids).size).toBe(ids.length)
+      expect(JSON.stringify(doc)).not.toMatch(/={5}|-{5}/)
+      // The framed end line ("END OF …", "FIN DE …", "FINE DEL …") is dropped, not shown as text.
+      const texts = doc.blocks.flatMap((b) => (b.type === "heading" ? [b.text] : b.lines.map((l) => l.text)))
+      expect(texts.filter((s) => /^(END OF|FIN DE|FIN DU|FINE DE)/.test(s))).toEqual([])
+    })
+  },
+)
 
 describe("linkParts", () => {
   it("finds URLs (without trailing punctuation) and e-mail addresses", () => {

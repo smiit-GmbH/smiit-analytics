@@ -8,7 +8,7 @@
  * - `====` / `----` lines are frames; the first framed block is the title
  *   (its second and later lines become the subtitle), a framed "ENDE DER …"
  *   is dropped.
- * - Headings start at column 0: "§ 11 …", "ANLAGE 2 — …", "4.12 …", "1. …",
+ * - Headings start at column 0: "§ 11 …", "ANLAGE 2 — …" (ANNEX, ANNEXE, ALLEGATO), "4.12 …", "1. …",
  *   or a line in capitals ("PRÄAMBEL"). In the annexes "1." is one level
  *   lower than outside.
  * - Blocks are separated by blank lines. Inside a block a line continues the
@@ -43,13 +43,19 @@ const SHORT_LINE = 50
 
 const FRAME = /^(=+|-+)$/
 const MARKER = /^(\(\d+[a-z]?\)|[a-z]\)|-|\d+\.)\s+(.*)$/
-const LABEL = /^([A-ZÄÖÜ][^:]{0,50}?):(\s+)(\S.*)$/
+// The texts exist in German, English, French and Italian: capitals are any upper-case letter (É, À …),
+// and French may set a space before the colon of a label ("Finalité :   …").
+const LABEL = /^(\p{Lu}[^:]{0,50}?) ?:(\s+)(\S.*)$/u
 /** First half of a split label: "Berechtigtes", "Übermittlungs-", "Herkunft der". */
-const LABEL_HEAD = /^[A-ZÄÖÜ][a-zäöüß]+(-| [a-zäöü]+)?$/
+const LABEL_HEAD = /^\p{Lu}\p{Ll}+(-| \p{Ll}+)?$/u
 /** Second half of a split label: may start lower case ("mechanismus:"), the value is column-aligned. */
-const LABEL_TAIL = /^([A-Za-zÄÖÜäöü][^:]{0,30}?):(\s{2,})(\S.*)$/
-const NUMBERED = /^(§ \d+|ANLAGE \d+|\d+(?:\.\d+)*\.?)\s+(.*)$/
-const CAPITALS = /^[A-ZÄÖÜ][A-ZÄÖÜß0-9 ,.\-—()"]{3,}$/
+const LABEL_TAIL = /^(\p{L}[^:]{0,30}?) ?:(\s{2,})(\S.*)$/u
+/** Annex headings in the four languages: "ANLAGE 1", "ANNEX 1", "ANNEXE 1", "ALLEGATO 1". */
+export const ANNEX = /^(ANLAGE|ANNEX|ANNEXE|ALLEGATO) \d+/
+const NUMBERED = /^(§ \d+|(?:ANLAGE|ANNEX|ANNEXE|ALLEGATO) \d+|\d+(?:\.\d+)*\.?)\s+(.*)$/
+const CAPITALS = /^\p{Lu}[\p{Lu}ß0-9 ,.\-—()"'’]{3,}$/u
+/** The framed end line ("ENDE DER DATENSCHUTZERKLÄRUNG", "END OF …", "FIN DE LA …", "FINE DEL …") is dropped. */
+const END = /^(ENDE DE|END OF|FIN DE|FIN DU|FINE DE)/
 
 type Raw = { indent: number; text: string }
 
@@ -57,31 +63,36 @@ const chars = (s: string) => [...s].length
 const firstWord = (s: string) => s.split(/\s+/)[0] ?? ""
 /** Mostly capitals: "ANMELDUNG ÜBER MICROSOFT ODER bexio" still counts. */
 const isShouting = (s: string) => {
-  const letters = s.replace(/[^A-Za-zÄÖÜäöüß]/g, "")
-  return letters.length > 0 && letters.replace(/[^A-ZÄÖÜ]/g, "").length / letters.length > 0.7
+  const letters = s.replace(/\P{L}/gu, "")
+  return letters.length > 0 && letters.replace(/\P{Lu}/gu, "").length / letters.length > 0.7
 }
 
 export function slugify(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/ä/g, "ae")
-    .replace(/ö/g, "oe")
-    .replace(/ü/g, "ue")
-    .replace(/ß/g, "ss")
-    .replace(/§\s*/g, "p")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 60)
-    .replace(/-$/, "")
+  return (
+    text
+      .toLowerCase()
+      .replace(/ä/g, "ae")
+      .replace(/ö/g, "oe")
+      .replace(/ü/g, "ue")
+      .replace(/ß/g, "ss")
+      // "données" → "donnees", "responsabilità" → "responsabilita"
+      .normalize("NFD")
+      .replace(/\p{M}/gu, "")
+      .replace(/§\s*/g, "p")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "")
+      .slice(0, 60)
+      .replace(/-$/, "")
+  )
 }
 
 /** Heading level of a column-0 line, or null when it is not a heading. */
 function headingLevel(text: string, inAnnex: boolean, numbered: boolean): 2 | 3 | 4 | null {
-  if (/^ENDE DE/.test(text)) return null
+  if (END.test(text)) return null
   const m = NUMBERED.exec(text)
   if (m) {
     const [, num, rest] = m
-    if (num.startsWith("§") || num.startsWith("ANLAGE")) return 2
+    if (num.startsWith("§") || ANNEX.test(num)) return 2
     // "1. Microsoft Ireland Operations Limited" (annex 3) is a heading; a numbered sentence is not.
     if (!isShouting(rest) && (/[.,;:]$/.test(rest) || chars(rest) > 70)) return null
     const depth = num.replace(/\.$/, "").split(".").length
@@ -96,7 +107,7 @@ function headingLevel(text: string, inAnnex: boolean, numbered: boolean): 2 | 3 
 function joinText(prev: string, next: string) {
   // A hyphen at the end of a line is a real one ("öffentlich-" / "rechtliche", "Datenschutz-" /
   // "Folgenabschätzung"): the texts are not hyphenated by syllable.
-  return /[A-Za-zÄÖÜäöüß]-$/.test(prev) ? prev + next : `${prev} ${next}`
+  return /\p{L}-$/u.test(prev) ? prev + next : `${prev} ${next}`
 }
 
 /** A line being built: `col` is where its text starts, `oneSpace` marks "Hinweis: …" style labels. */
@@ -123,7 +134,7 @@ function toLines(raws: Raw[]): LegalLine[] {
     if (tail) {
       const head = raw.text
       const label = head.endsWith("-") ? head.slice(0, -1) + tail[1] : `${head} ${tail[1]}`
-      start({ indent: raw.indent, label, text: tail[3], col: raw.indent + chars(tail[1]) + 1 + tail[2].length })
+      start({ indent: raw.indent, label, text: tail[3], col: next.indent + chars(next.text) - chars(tail[3]) })
       prevRaw = next
       i++
       continue
@@ -140,7 +151,7 @@ function toLines(raws: Raw[]): LegalLine[] {
     const label = LABEL.exec(raw.text)
     const labelHere = label && (label[2].length >= 2 || (raw.indent > 0 && (!cur || raw.indent < cur.col)))
     if (label && labelHere) {
-      const col = raw.indent + chars(label[1]) + 1 + label[2].length
+      const col = raw.indent + chars(raw.text) - chars(label[3])
       start({ indent: raw.indent, label: label[1], text: label[3], col, oneSpace: label[2].length === 1 })
       prevRaw = raw
       continue
@@ -156,7 +167,7 @@ function toLines(raws: Raw[]): LegalLine[] {
         : raw.indent === cur.indent && (!(cur.marker || cur.label) || cur.oneSpace === true))
     // "Registergericht: …" below an address line, "Vertreten durch: …" below that: a new label row.
     if (continues && cur && label && raw.indent > 0 && raw.indent === cur.indent) {
-      const col = raw.indent + chars(label[1]) + 1 + label[2].length
+      const col = raw.indent + chars(raw.text) - chars(label[3])
       start({ indent: raw.indent, label: label[1], text: label[3], col, oneSpace: label[2].length === 1 })
       prevRaw = raw
       continue
@@ -246,13 +257,13 @@ export function parseLegalText(source: string): LegalDoc {
 
   for (const b of blocks) {
     const first = b[0]
-    if (first.indent === 0 && /^ENDE DE/.test(first.text)) continue
+    if (first.indent === 0 && END.test(first.text)) continue
     const level = first.indent === 0 ? headingLevel(first.text, inAnnex, numbered) : null
     if (level === null) {
       out.push({ type: "lines", lines: toLines(b) })
       continue
     }
-    if (/^ANLAGE /.test(first.text)) inAnnex = true
+    if (ANNEX.test(first.text)) inAnnex = true
     if (NUMBERED.test(first.text)) numbered = true
     // A heading may wrap onto indented lines in capitals ("§ 7 … UND IN" / "    DRITTLÄNDER").
     let n = 1

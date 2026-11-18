@@ -1,0 +1,704 @@
+===============================================================================
+PRIVACY POLICY FOR smiit ANALYTICS
+Information pursuant to Articles 13 and 14 GDPR
+===============================================================================
+
+Version 1.0 — Last updated: 18 November 2026
+
+1. CONTROLLER
+
+The Controller within the meaning of the GDPR is:
+
+  smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Germany
+
+  Phone:    +49 160 4073198
+  E-mail:   kontakt@smiit.de
+  Register court: Amtsgericht Ulm, HRB 741965
+  Represented by: Sebastian Grab, Noah Neßlauer
+
+
+2. DATA PROTECTION CONTACT
+
+We have not appointed a data protection officer within the meaning of Art. 37
+et seq. GDPR.
+
+Your contact person for all questions relating to data protection is:
+
+  Noah Neßlauer
+  Managing Director of smiit GmbH
+  Reiherweg 96, 89584 Ehingen, Germany
+  E-mail: noah.nesslauer@smiit.de
+
+3. TWO SEPARATE ROLES — PLEASE NOTE
+
+This privacy policy relates exclusively to the processing operations for which
+we ourselves are the Controller. These are essentially the operation of our
+website, the registration and management of user accounts and the performance
+of contracts with our Customers.
+
+This must be distinguished from the business data that our Customers analyse in
+smiit Analytics from their bexio company. The respective Customer alone is the
+Controller for these data; we process them exclusively on its behalf on the
+basis of a data processing agreement pursuant to Art. 28 GDPR.
+
+If you are an employee or business contact of one of our Customers and would
+like to know which data about you are analysed in smiit Analytics, please
+contact your employer or the company with which you have a business
+relationship. We are not permitted to provide you with any information on this
+and will forward your request to the respective Controller.
+
+
+4. PROCESSING OPERATIONS IN DETAIL
+
+4.1 ACCESSING THE WEBSITE AND THE APPLICATION (SERVER LOGS)
+
+WEBSITE. Our website www.smiit-analytics.com is provided via the GitHub Pages
+service of GitHub, Inc. The website does not set any cookies, does not embed
+any third-party content and does not use any analytics or tracking services.
+When the website is accessed, GitHub logs the IP address of visitors and stores
+it for security purposes.
+
+  Data:                 IP address, date and time of access, address requested
+                        and the technical information that your browser
+                        transmits when accessing the website
+  Purpose:              delivery of the website, security of the service
+  Legal basis:          Art. 6(1)(f) GDPR
+  Legitimate interest:  secure and reliable provision of our website
+  Recipients:           GitHub (see Section 5)
+  Retention period:     in accordance with GitHub's provisions; we ourselves do
+                        not receive or store these data
+
+APPLICATION. When our application is accessed, technically necessary data are
+processed. Requests reach our application via Microsoft's Azure Front Door
+network, which checks them for attacks with a web application firewall and
+forwards them to our web server.
+
+  Data:                 full IP address, date and time of access, address
+                        requested (without access and security credentials,
+                        which are removed before logging), status code, volume
+                        of data transferred, referring page, browser and
+                        operating system identifier, response time
+  Purpose:              delivery of the application, ensuring operational
+                        security, detection and prevention of attacks
+  Legal basis:          Art. 6(1)(f) GDPR
+  Legitimate interest:  secure and trouble-free operation of our systems
+  Retention period:     30 days, followed by automatic deletion
+
+To monitor errors and the performance of the application, we also collect
+technical operating data (telemetry) using Microsoft's Application Insights
+service. IP addresses are not stored in the process. The telemetry is likewise
+deleted after 30 days.
+
+
+4.2 COOKIES
+
+We use only technically necessary cookies. We do not use any analytics,
+tracking or advertising cookies, do not embed any external fonts and do not use
+any audience measurement services. For this reason, we do not require consent
+for the use of cookies and do not show you a consent banner.
+
+Specifically, we set the following:
+
+  a) Session cookies
+     Purpose:           keeping you signed in
+     Retention period:  access cookie 15 minutes; cookie for renewing the
+                        sign-in at most 7 days; both are deleted when you sign
+                        out
+
+  b) Cookie for protection against cross-site request forgery
+     Purpose:           security of the application
+     Retention period:  same as the cookie for renewing the sign-in, at most 7
+                        days
+
+  c) Cookie for trusted devices
+     Purpose:           recognition of a device so that two-factor
+                        authentication is not requested again at every sign-in
+     Retention period:  30 days
+
+  d) Cookie for securing the sign-in process with Microsoft or bexio
+     Purpose:           protection of the authorisation process against
+                        manipulation
+     Retention period:  a few minutes, only during the sign-in process
+
+  e) Cookie for the administration area (only for platform administrators of
+     smiit)
+     Purpose:           proof of two-factor authentication for access to the
+                        administration area
+     Retention period:  at most 4 hours; ends when you sign out
+
+  Legal basis:          § 25(2) No. 2 of the German Telecommunications Digital
+                        Services Data Protection Act (TDDDG) and Art. 6(1)(b)
+                        and (f) GDPR
+
+
+4.3 REGISTRATION AND USER ACCOUNT
+
+  Data:                 first name and surname, business e-mail address,
+                        password (stored exclusively as a hash value), company,
+                        language setting, time zone, number format, colour
+                        scheme, role in the workspace and, optionally, a
+                        profile picture
+  Purpose:              setting up and managing the user account, performance
+                        of the user agreement
+  Legal basis:          Art. 6(1)(b) GDPR
+  Retention period:     for as long as your user account exists; you can delete
+                        it at any time in the application under Profile ›
+                        Account (see Section 7)
+
+In addition, we document at what time and in which version you accepted the
+Terms of Use, this privacy policy and the data processing agreement.
+
+  Purpose:              proof of the conclusion of the contract and of
+                        acceptance
+  Legal basis:          Art. 6(1)(c) GDPR in conjunction with Art. 28(9) GDPR
+                        and Art. 6(1)(f) GDPR
+  Retention period:     as proof, also beyond the deletion of the user account;
+                        after the account has been deleted, without your name
+
+
+4.4 SIGN-IN VIA MICROSOFT OR bexio
+
+You can choose to sign in with a Microsoft account or a bexio login. If you
+choose this option, you will be redirected to the respective provider and sign
+in there.
+
+  Data:                 name, e-mail address and a login identifier that the
+                        respective provider transmits to us after you have
+                        signed in
+  Purpose:              sign-in without a separate password
+  Legal basis:          Art. 6(1)(b) GDPR
+  Retention period:     for the duration of the user relationship
+
+We never receive your password for the Microsoft account or bexio login. These
+providers are each themselves responsible for the processing carried out by
+them.
+
+
+4.5 SESSIONS AND TWO-FACTOR AUTHENTICATION
+
+Two-factor authentication is mandatory for all Users: when you sign in, we send
+you a one-time code by e-mail unless you have saved the device you are using as
+trusted.
+
+  Data:                 one-time codes for the second factor, identifiers of
+                        trusted devices, signed-in sessions with IP address and
+                        browser identifier, times of successful and failed
+                        sign-ins
+  Purpose:              protection of your account against unauthorised access,
+                        display of your active sessions and trusted devices
+  Legal basis:          Art. 6(1)(b) and (f) GDPR
+  Retention period:     trusted devices 30 days; ended sessions 30 days after
+                        they end; otherwise for as long as your user account
+                        exists
+
+
+4.6 SYSTEM MESSAGES AND NOTIFICATIONS
+
+We send e-mails containing one-time codes (registration, sign-in and
+confirmation of security-relevant actions), for resetting your password, for
+invitations to a workspace and for notifying you that you have been added to a
+workspace, as confirmation and as a security notice when a sign-in method
+(Microsoft or bexio) is linked, as well as notices when a bexio connection
+needs to be renewed. In addition, we show you notifications within the
+application.
+
+  Data:                 name, e-mail address, content of the message
+  Purpose:              performance of the user relationship
+  Legal basis:          Art. 6(1)(b) GDPR
+  Recipients:           Microsoft (Azure Communication Services) as Processor;
+                        data storage in Switzerland
+  Retention period:     dispatch logs 30 days; notifications in the application
+                        30 days after being read, unread ones 90 days
+
+
+4.7 INVITATIONS TO A WORKSPACE
+
+If a Customer invites a person to its workspace, we process that person's
+e-mail address in order to send the invitation.
+
+  Data:                 e-mail address of the invited person, time and status
+                        of the invitation
+  Purpose:              sending and managing the invitation
+  Legal basis:          Art. 6(1)(f) GDPR
+  Legitimate interest:  enabling the joint use of the application within the
+                        Customer's company
+  Source of data:       We receive the e-mail address from the Customer who
+                        issues the invitation (information pursuant to Art. 14
+                        GDPR).
+  Retention period:     until the invitation is accepted, declined or
+                        withdrawn; invitations do not expire automatically
+
+
+4.8 LOGGING AND USAGE STATISTICS
+
+We log security-relevant and data-modifying operations within the application
+(audit log), such as sign-ins, changes to memberships and settings, and all
+actions of our platform administrators.
+
+  Data:                 user identifier, time, type of operation, object
+                        concerned
+  Purpose:              traceability of changes, investigation of security
+                        incidents, fulfilment of our accountability obligation
+  Legal basis:          Art. 6(1)(c) GDPR in conjunction with Art. 5(2) and
+                        Art. 32 GDPR and Art. 6(1)(f) GDPR
+  Retention period:     1 year
+
+We also analyse the use of the application in order to compile usage
+statistics, to improve and further develop the application and to plan our
+capacities.
+
+  Data:                 name, e-mail address, user identifier, associated
+                        Customer and workspace, type and time of the functions
+                        used (such as page and report views, AI requests and
+                        their costs, data refreshes)
+  Purpose:              usage statistics, improvement and further development
+                        of the application, capacity planning
+  Legal basis:          Art. 6(1)(f) GDPR
+  Legitimate interest:  needs-based further development and economical
+                        operation of our service
+  Retention period:     individual usage events 90 days, then aggregated into
+                        daily statistics; personal daily statistics aggregated
+                        into totals without personal reference after 13 months;
+                        information on AI usage per request 1 year, thereafter
+                        only as monthly totals. When the account is deleted,
+                        the personal reference is removed immediately.
+
+In these statistics, our platform administrators see only totals per workspace
+and day, no names. Personal details are visible only to the owners and
+administrators of the respective workspace, unless the workspace has switched
+this off.
+
+We do not sell these data and do not pass them on to third parties. Any
+processing by our Processors (Section 5) takes place exclusively on our behalf
+and in accordance with our instructions.
+
+By contrast, the data that our Customers load into the application via the
+bexio connection or enter in the application itself are not processed by us for
+our own purposes, but exclusively on behalf of the respective Customer (see
+Section 3).
+
+Insofar as we provide these analyses for individual workspaces, we act to that
+extent as our Customer's Processor.
+
+
+4.9 AI-ASSISTED ANALYSIS FEATURE
+
+The application contains an analysis feature based on a large language model.
+You can ask questions about your data in natural language. You are informed in
+the application that the answers are generated by an AI system.
+
+The feature is switched off by default. Only an owner of the workspace can
+switch it on, and only after confirming a notice stating which data are
+transmitted to the provider of the language model. As long as it is switched
+off, no transmission takes place.
+
+  Data:                 your question, the conversation history, a description
+                        of the available data structure and the results of the
+                        database queries generated for this purpose (key
+                        figures and limited extracts of data rows)
+  Purpose:              answering your question
+  Legal basis:          Art. 6(1)(b) GDPR; insofar as data from the Customer's
+                        bexio company are concerned, we process them on behalf
+                        of the Customer (see below)
+  Recipients:           OpenAI as Processor (see Section 5)
+  Place of processing:  European Economic Area and Switzerland; contracting
+                        party in Ireland, European endpoint
+                        https://eu.api.openai.com/v1 (see Sections 5 and 6)
+  Retention period:     conversation histories are automatically deleted on our
+                        side 90 days after the last activity; for the retention
+                        period at the model provider, see Section 5
+
+PSEUDONYMISATION. Before transmission, we replace names and e-mail addresses of
+persons with placeholders (such as "Person-XXXXX"); free texts such as posting
+texts and line item texts are not transmitted. The owner of the workspace can
+lift these restrictions in stages, in each case after confirming a separate
+notice:
+
+  a) "Names": names of contacts (customers, suppliers and their contact
+     persons) are transmitted in plain text;
+  b) "Names + texts": free texts in addition;
+  c) "Everything": no pseudonymisation, not even for employees, bexio users,
+     members of the workspace and e-mail addresses.
+
+Company names are not pseudonymised. Personnel data (employees, absences,
+holiday and time balances) only reach the language model if the owner has
+specifically released them.
+
+The transmitted content is NOT used to train language models. The model
+provider does not store the requests for later reuse. The processing takes
+place in the European Economic Area and in Switzerland; details, including on
+the logs for detecting abuse, are described in Section 6.
+
+Insofar as the content processed concerns data from our Customer's bexio
+company, we act as that Customer's Processor; to that extent, the Customer is
+the Controller (see Section 3).
+
+
+4.10 CONTACT AND SUPPORT
+
+  Data:                 name, e-mail address, content of your enquiry and any
+                        further information that you provide to us voluntarily
+  Purpose:              handling your enquiry
+  Legal basis:          Art. 6(1)(b) GDPR for contract-related enquiries,
+                        otherwise Art. 6(1)(f) GDPR
+  Retention period:     until the enquiry has been dealt with conclusively,
+                        thereafter until the expiry of statutory retention
+                        periods
+
+FEEDBACK IN THE APPLICATION. You can send us feedback from within the
+application, if you wish with a screenshot or — when rating an AI answer — with
+a copy of the conversation concerned. We transfer the feedback to Microsoft's
+task management system Azure DevOps for processing.
+
+  Data:                 content of the feedback, screenshot, copy of the
+                        conversation (pseudonymised), user identifier, time
+  Purpose:              troubleshooting and improvement of the application
+  Legal basis:          Art. 6(1)(f) GDPR
+  Legitimate interest:  improvement of our service
+  Recipients:           Microsoft (Azure DevOps) as Processor
+  Retention period:     screenshots and copies of conversations 90 days; the
+                        feedback message itself 365 days
+
+
+4.11 PLATFORM OPERATION AND SUPPORT ACCESS
+
+For the secure operation of the application, our platform administrators
+maintain a user directory.
+
+  Data:                 e-mail address, name, account status (confirmed,
+                        blocked, deleted), language, sign-in method, time of
+                        last activity and the workspaces of which you are a
+                        member, with your role
+  Purpose:              answering support requests, blocking accounts used
+                        abusively, deleting accounts on request
+  Legal basis:          Art. 6(1)(b) and (f) GDPR
+  Retention period:     for as long as your user account exists
+
+Each access to an account and each action taken on it is recorded in the audit
+log with the name of the administrator (Section 4.8).
+
+Our platform administrators see neither reports nor conversations with the
+AI-assisted analysis feature nor the business data imported from bexio. This is
+technically enforced by the access rules of the database. If support needs
+insight into a workspace, the administrator submits a request stating the
+reason and a duration of no more than 30 days. Temporary access is only created
+once an owner of the workspace consents. It is visible in the member list, can
+be revoked at any time and is fully logged. There is no way to sign in "as a
+user".
+
+
+4.12 CONTRACT PERFORMANCE AND INVOICING
+
+Our Customers conclude the paid subscription with us in the application. We
+issue the invoice ourselves and directly to the Customer; we create and send it
+via PayPal's invoicing service (Section 5). Payment is made by bank transfer or
+via the payment methods offered in the invoice. We do not issue any invoices
+during the free trial period.
+
+For invoicing, we process:
+
+  a) the Customer's company name and billing address as well as the e-mail
+     address to which we send the invoices;
+  b) the Customer's UID or VAT identification number, where available;
+  c) the plan subscribed to (monthly or annual subscription);
+  d) the number of connected datasets and Users relevant to the invoice amount
+     and the days charged per dataset and User for the breakdown on the
+     invoice;
+  e) invoice amounts, invoice and due dates, incoming payments and, where
+     applicable, payment reminders.
+
+We allocate incoming payments on the basis of the details on our bank's account
+statement (name of the payer, IBAN, amount, payment reference) or PayPal's
+payment confirmation. We do not receive any credit card data; if the Customer
+pays via PayPal, PayPal processes the payment data under its own
+responsibility. Names or e-mail addresses of individual Users do not appear on
+the invoice.
+
+The bexio Marketplace refers to smiit Analytics; bexio AG receives a commission
+for referred Customers. For this purpose, we share only aggregated figures with
+it: the number of referred Customers and the total revenue generated with them.
+We do not disclose which Customers are concerned or what amount an individual
+Customer pays.
+
+  Data:                 company name, billing address and billing e-mail
+                        address of the Customer, UID or VAT identification
+                        number, plan booked, status of the subscription, number
+                        of connected datasets and Users with the days charged,
+                        invoices, incoming payments
+  Purpose:              performance of the contract, invoicing, accounting
+  Legal basis:          Art. 6(1)(b) and (c) GDPR
+  Recipients:           PayPal for creating and sending the invoices and for
+                        payments via PayPal; our bank for incoming payments;
+                        tax advisers (see Section 5)
+  Retention period:     until the expiry of the retention periods under
+                        commercial and tax law of up to ten years
+
+
+5. RECIPIENTS OF PERSONAL DATA
+
+We only pass on personal data insofar as this is necessary for the provision of
+our services or we are legally obliged to do so.
+
+We use the following Processors:
+
+  a) Microsoft Ireland Operations Limited
+     One Microsoft Place, South County Business Park, Leopardstown,
+     Dublin 18, Ireland
+     Service:    operation of our application and our database (Microsoft
+                 Azure), sending of e-mails (Azure Communication Services),
+                 delivery and protection of the application (Azure Front Door),
+                 operational monitoring (Application Insights) and processing
+                 of feedback (Azure DevOps)
+     Location:   Switzerland — "Switzerland North" region (Zurich); the
+                 database backups are additionally stored in the "Switzerland
+                 West" region (Geneva). E-mails are sent with data storage in
+                 Switzerland. Azure Front Door receives requests at those of
+                 Microsoft's worldwide locations that are closest to the
+                 respective User. Feedback (Azure DevOps) is stored in the
+                 "North Europe" region (Ireland), i.e. within the European
+                 Union.
+
+  b) OpenAI Ireland Limited
+     1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
+     Dublin 1, D01 YC43, Ireland
+     Service:    processing of requests to the AI-assisted analysis feature
+                 (Section 4.9)
+     Basis:      OpenAI Data Processing Addendum as amended from time to time
+                 (currently v.010126), available at
+                 https://openai.com/policies/data-processing-addendum/
+     Location:   European Economic Area and Switzerland. We use OpenAI's
+                 European data residency ("Data Residency", Europe region): all
+                 requests are sent exclusively to the European endpoint
+                 https://eu.api.openai.com/v1 of a project that is permanently
+                 assigned to the Europe region at OpenAI. OpenAI processes the
+                 requests (computation of the answers by the language model)
+                 within this region, i.e. in the member states of the European
+                 Union, in Norway, Iceland, Liechtenstein and Switzerland (see
+                 Section 6). Administrative data of our own account with
+                 OpenAI, such as billing and usage statistics, are not covered
+                 by data residency; they do not contain any content of the
+                 requests. Further sub-processors used by OpenAI:
+                 https://platform.openai.com/subprocessors
+     Retention:  We transmit the requests in such a way that OpenAI does not
+                 store any request or response data for later reuse. OpenAI
+                 retains logs for the detection of abuse, which may contain
+                 requests and responses, for up to 30 days, unless longer
+                 retention is required by law. OpenAI does not commit to a
+                 storage location for these logs (see Section 6).
+
+We have concluded contracts pursuant to Art. 28 GDPR with all Processors.
+
+The following receive data as independent Controllers:
+
+  c) PayPal (Europe) S.à r.l. et Cie, S.C.A.
+     22-24 Boulevard Royal, L-2449 Luxembourg
+     Service:    creation and sending of our invoices via PayPal's invoicing
+                 service and processing of payments that the Customer makes via
+                 PayPal (see Section 4.12); details in PayPal's privacy
+                 statement at https://www.paypal.com/de/legalhub/privacy-full
+     Location:   European Union (Luxembourg); for transfers within the PayPal
+                 group, see Section 6
+
+  d) GitHub, Inc.
+     88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA
+     Service:    provision of our website via GitHub Pages; GitHub logs the IP
+                 addresses of visitors for security purposes under its own
+                 responsibility (see Section 4.1); details in GitHub's privacy
+                 statement at
+                 https://docs.github.com/de/site-policy/privacy-policies/github-
+                 general-privacy-statement
+     Location:   United States of America (see Section 6)
+
+In addition, data may be transferred to tax advisers, auditors and lawyers as
+well as to authorities and courts insofar as this is required by law or
+necessary for the pursuit of legal claims. Payments from our Customers are
+received by our bank (Section 4.12).
+
+
+6. TRANSFERS TO THIRD COUNTRIES
+
+We operate our application and our database in Microsoft data centres in
+Switzerland. From the perspective of the GDPR, Switzerland is a third country
+for which the European Commission has adopted an adequacy decision (Art. 45
+GDPR). Additional safeguards such as standard contractual clauses (SCCs) are
+therefore not required for the processing in Switzerland. The same applies to
+the sending of e-mails.
+
+Microsoft stores feedback in Azure DevOps in the "North Europe" region
+(Ireland) and thus within the European Union; no additional safeguards are
+required for this. Insofar as Microsoft processes data outside Switzerland and
+the European Economic Area in connection with Azure Front Door or Azure
+DevOps, this is based on the standard contractual clauses of the European
+Commission (Art. 46(2)(c) GDPR), which form part of Microsoft's data protection
+terms, and on the certification of Microsoft Corporation under the EU-US Data
+Privacy Framework (Art. 45 GDPR).
+
+When our website is accessed, GitHub, Inc. processes your IP address in the
+United States of America (Section 4.1). GitHub is certified under the EU-US
+Data Privacy Framework; the transfer is based on the European Commission's
+adequacy decision in this respect (Art. 45 GDPR). For persons in Switzerland,
+the Swiss-U.S. Data Privacy Framework applies accordingly, which Switzerland
+has recognised as adequate for certified companies.
+
+PayPal (Europe) S.à r.l. et Cie, S.C.A. has its registered office in Luxembourg
+and may transfer data to other companies of the PayPal group, including to
+third countries such as the United States of America. PayPal bases these
+transfers on binding corporate rules (Binding Corporate Rules, Art. 47 GDPR);
+details in PayPal's privacy statement (Section 5).
+
+For the AI-assisted analysis feature (Section 4.9), we transmit the content of
+a request to our Processor OpenAI Ireland Limited, which has its registered
+office in Ireland. We use exclusively the European endpoint
+https://eu.api.openai.com/v1 with the data residency region Europe (Section 5).
+The requests are therefore processed within the European Economic Area and
+Switzerland. No transfer to a third country takes place in this respect: the
+European Economic Area is subject to the GDPR, and there is an adequacy
+decision of the European Commission for Switzerland (Art. 45 GDPR). OpenAI does
+not commit to a storage location for the logs for the detection of abuse, which
+OpenAI retains for up to 30 days. Insofar as OpenAI processes these logs or, in
+individual cases, other data outside the European Economic Area and
+Switzerland, the standard contractual clauses of the European Commission apply
+(Art. 46(2)(c) GDPR, Implementing Decision (EU) 2021/914), which form part of
+the OpenAI Data Processing Addendum (Section 4.1 of the Addendum).
+
+The transfer to OpenAI only takes place if the AI-assisted analysis feature is
+switched on and used in the respective workspace. Names and e-mail addresses of
+persons are pseudonymised by default (Section 4.9). The transmitted content is
+not used to train models.
+
+The following applies to our Customers in Switzerland: since our application
+and our database are operated in Switzerland, there is no disclosure abroad in
+this respect. The disclosure to OpenAI in the context of the AI-assisted
+analysis feature is permitted because the member states of the European Union
+as well as Norway, Iceland and Liechtenstein are listed in Annex 1 to the Data
+Protection Ordinance (DPO) as states with adequate data protection (Art. 16(1)
+of the Federal Act on Data Protection, FADP); insofar as OpenAI processes the
+data in Switzerland, there is no disclosure abroad. The OpenAI Data Processing
+Addendum expressly also covers data that are subject to Swiss data protection
+law.
+
+ACCESS BY US AUTHORITIES. OpenAI Ireland Limited belongs to the OpenAI group of
+companies headquartered in the United States of America. Data residency
+determines where the data are processed and stored; it does not rule out that
+US authorities, on the basis of the US CLOUD Act (Clarifying Lawful Overseas
+Use of Data Act, 18 U.S.C. § 2713), require a US company to hand over data that
+it controls, even if these data are stored outside the USA. Such a demand
+generally requires a court order or a comparable order in the context of
+criminal proceedings concerning serious crimes, such as terrorism, organised
+crime or serious fraud, and is targeted at specific persons or accounts; the
+CLOUD Act does not permit indiscriminate mass queries. The provider can
+challenge such an order if it conflicts with the law of the country in which
+the data are located. For the business data processed by us, such access is
+therefore a rare exception. In addition, we have taken technical measures to
+ensure that OpenAI receives as little data as possible: the feature is switched
+off by default, names and e-mail addresses are pseudonymised and requests are
+not stored for reuse (Section 4.9).
+
+
+7. RETENTION PERIOD
+
+We store personal data only for as long as this is necessary for the respective
+purposes or statutory retention periods require it. The specific periods are
+stated for the individual processing operations in Section 4.
+
+After termination of the contractual relationship, we keep our Customers' data
+available for export for 30 calendar days and then delete them. If a Customer
+deletes a dataset or its workspace during the term of the contract, the
+associated data are deleted within four hours. Backups are overwritten as part
+of the regular backup cycle of 35 days; until then, the data are blocked from
+further processing.
+
+If you delete your user account, your personal data are deleted. Entries in our
+logs are modified in such a way that they can no longer be related to a person.
+
+
+8. YOUR RIGHTS
+
+You have the following rights vis-à-vis us:
+
+  a) access to the data concerning you (Art. 15 GDPR)
+  b) rectification of inaccurate data (Art. 16 GDPR)
+  c) erasure (Art. 17 GDPR)
+  d) restriction of processing (Art. 18 GDPR)
+  e) data portability (Art. 20 GDPR)
+  f) withdrawal of any consent given, with effect for the future (Art. 7(3)
+     GDPR)
+
+RIGHT TO OBJECT PURSUANT TO ARTICLE 21 GDPR
+
+Insofar as we process data on the basis of a legitimate interest pursuant to
+Art. 6(1)(f) GDPR, you have the right to object to this processing at any time
+on grounds relating to your particular situation. We will then no longer
+process the data unless we can demonstrate compelling legitimate grounds that
+override your interests, rights and freedoms, or the processing serves the
+establishment, exercise or defence of legal claims.
+
+To exercise your rights, a message to the contact details given in Section 1 is
+sufficient. You can also exercise some of your rights yourself in the
+application: under Profile you can rectify your details and export your data as
+a file (access and data portability); under Profile › Account you can delete
+your user account.
+
+Please note Section 3: if your request concerns data that we process on behalf
+of one of our Customers, you must contact that Customer. In this case, we will
+forward your request without delay.
+
+
+9. RIGHT TO LODGE A COMPLAINT
+
+You have the right to lodge a complaint with a data protection supervisory
+authority about the processing of your personal data.
+
+The supervisory authority competent for us is:
+
+  The State Commissioner for Data Protection and Freedom of Information
+  Baden-Württemberg
+  Lautenschlagerstraße 20, 70173 Stuttgart
+
+Persons in Switzerland may also contact:
+
+  Federal Data Protection and Information Commissioner
+  (FDPIC)
+  Feldeggweg 1, 3003 Bern, Switzerland
+
+
+10. NO AUTOMATED DECISION-MAKING
+
+We do not use automated decision-making, including profiling, within the
+meaning of Art. 22 GDPR.
+
+The AI-assisted analysis feature described in Section 4.9 produces analyses at
+the request of a User. It does not make any decisions and does not give any
+recommendations concerning individual persons. Results must always be assessed
+by the User.
+
+
+11. INFORMATION FOR PERSONS IN SWITZERLAND
+
+If the processing is subject to the Swiss Federal Act on Data Protection
+(FADP), the above information applies accordingly. The references to the GDPR
+are then to be read as references to the corresponding provisions of the FADP,
+in particular to Art. 19 to 25 FADP.
+
+
+12. OBLIGATION TO PROVIDE DATA
+
+The provision of your personal data is required neither by law nor by contract.
+However, without the information required to set up a user account, we cannot
+provide you with the application.
+
+
+13. CHANGES TO THIS PRIVACY POLICY
+
+We adapt this privacy policy if the legal situation, our processing operations
+or the functional scope of the application change. The current version is
+available at https://www.smiit-analytics.com/de/privacy/. We will inform our
+Customers separately of any material changes.
+
+
+===============================================================================
+END OF THE PRIVACY POLICY
+===============================================================================

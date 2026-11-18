@@ -332,7 +332,7 @@ export const fr: Dictionary = {
         {
           icon: "server",
           title: "Hébergement",
-          text: "Nous stockons vos données bexio et vos rapports exclusivement en Suisse, sur des serveurs Microsoft Azure à Zurich, avec des sauvegardes à Genève. La fonction d'IA est facultative : ce n'est qu'une fois activée qu'OpenAI traite vos demandes aux États-Unis.",
+          text: "Nous stockons vos données bexio et vos rapports exclusivement en Suisse, sur des serveurs Microsoft Azure à Zurich, avec des sauvegardes à Genève. La fonction d'IA est facultative : ce n'est qu'une fois activée qu'OpenAI traite vos demandes, via son service européen dans l'Espace économique européen et en Suisse.",
         },
         {
           icon: "shield",
@@ -593,8 +593,13 @@ export const fr: Dictionary = {
   legal: {
     /** Table of contents above the privacy policy, terms and DPA (texts: content/legal/*.txt). */
     contents: "Sommaire",
-    /** Shown above those texts in every language but German – they exist in German only. */
+    /** Shown above those texts in every language but German when no translation exists (content/legal/<lang>/). */
     germanOnly: "Ce document n'existe qu'en allemand. Seule la version allemande fait foi.",
+    /** Shown above a translated text (content/legal/<lang>/<route>.txt): only the German text is binding. */
+    translationNotice:
+      "Cette traduction a été réalisée avec l'IA et n'a pas été vérifiée. Elle est fournie à titre d'information uniquement et n'a pas de valeur juridique. Seule la version allemande fait foi, y compris en cas d'erreur de traduction.",
+    /** Link from a translation to the German text. */
+    germanVersion: "Lire la version allemande",
     legalNotice: {
       nav: "Mentions légales",
       title: "Mentions légales",
@@ -627,8 +632,8 @@ export const fr: Dictionary = {
     },
     dpa: {
       nav: "Sous-traitance",
-      title: "Contrat de sous-traitance des données",
-      description: "Contrat de sous-traitance des données pour smiit Analytics.",
+      title: "Accord de traitement des données",
+      description: "Accord de traitement des données (contrat de sous-traitance) pour smiit Analytics.",
     },
   },
 

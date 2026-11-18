@@ -1,0 +1,772 @@
+===============================================================================
+INFORMATIVA SULLA PRIVACY PER smiit ANALYTICS
+Informazioni ai sensi degli articoli 13 e 14 del GDPR
+===============================================================================
+
+Versione 1.0 — Aggiornamento: 18 novembre 2026
+
+1. TITOLARE DEL TRATTAMENTO
+
+Titolare del trattamento ai sensi del GDPR è:
+
+  smiit GmbH
+  Reiherweg 96
+  89584 Ehingen
+  Germania
+
+  Telefono:  +49 160 4073198
+  E-mail:    kontakt@smiit.de
+  Tribunale del registro: Amtsgericht Ulm, HRB 741965
+  Rappresentata da: Sebastian Grab, Noah Neßlauer
+
+
+2. INTERLOCUTORE PER LA PROTEZIONE DEI DATI
+
+Non abbiamo nominato un responsabile della protezione dei dati ai sensi degli
+artt. 37 e segg. GDPR.
+
+La Sua persona di riferimento per tutte le domande in materia di protezione dei
+dati è:
+
+  Noah Neßlauer
+  Amministratore della smiit GmbH
+  Reiherweg 96, 89584 Ehingen, Germania
+  E-mail: noah.nesslauer@smiit.de
+
+3. DUE RUOLI DISTINTI — SI PREGA DI NOTARE
+
+La presente informativa sulla privacy riguarda esclusivamente i trattamenti per
+i quali siamo noi stessi Titolari del trattamento. Si tratta essenzialmente
+della gestione del nostro sito web, della registrazione e dell'amministrazione
+degli account utente nonché dell'esecuzione dei contratti con i nostri Clienti.
+
+Da ciò vanno distinti i dati aziendali che i nostri Clienti analizzano in smiit
+Analytics a partire dalla propria azienda bexio. Titolare del trattamento di
+tali dati è unicamente il rispettivo Cliente; noi li trattiamo esclusivamente
+per suo conto, sulla base di un accordo sul trattamento dei dati ai sensi
+dell'art. 28 GDPR.
+
+Se è collaboratrice, collaboratore o contatto commerciale di uno dei nostri
+Clienti e desidera sapere quali dati che La riguardano vengono analizzati in
+smiit Analytics, La preghiamo di rivolgersi al Suo datore di lavoro ovvero
+all'impresa con cui intrattiene rapporti commerciali. Non siamo autorizzati a
+fornirLe informazioni al riguardo e inoltriamo la Sua richiesta al rispettivo
+Titolare del trattamento.
+
+
+4. TRATTAMENTI IN DETTAGLIO
+
+4.1 CONSULTAZIONE DEL SITO WEB E DELL'APPLICAZIONE (LOG DEL SERVER)
+
+SITO WEB. Il nostro sito web www.smiit-analytics.com è fornito tramite il
+servizio GitHub Pages di GitHub, Inc. Il sito web non imposta cookie, non
+integra contenuti di terzi e non utilizza servizi di analisi o di tracciamento.
+In occasione della consultazione, GitHub registra l'indirizzo IP delle
+visitatrici e dei visitatori e lo conserva per finalità di sicurezza.
+
+  Dati:                 indirizzo IP, data e ora dell'accesso, indirizzo
+                        richiamato nonché i dati tecnici che il Suo browser
+                        trasmette in occasione della consultazione
+  Finalità:             fornitura del sito web, sicurezza del servizio
+  Base giuridica:       art. 6, par. 1, lett. f) GDPR
+  Interesse legittimo:  messa a disposizione sicura e affidabile del nostro
+                        sito web
+  Destinatari:          GitHub (cfr. punto 5)
+  Conservazione:        secondo le disposizioni di GitHub; noi stessi non
+                        riceviamo né conserviamo tali dati
+
+APPLICAZIONE. In occasione della consultazione della nostra applicazione
+vengono trattati i dati tecnicamente necessari. Le richieste raggiungono la
+nostra applicazione attraverso la rete Azure Front Door di Microsoft, che le
+esamina alla ricerca di attacchi mediante un firewall per applicazioni web e le
+inoltra al nostro server web.
+
+  Dati:                 indirizzo IP completo, data e ora dell'accesso,
+                        indirizzo richiamato (senza i dati di accesso e di
+                        sicurezza, che vengono rimossi prima della
+                        registrazione nei log), codice di stato, quantità di
+                        dati trasferita, pagina di provenienza, identificativo
+                        del browser e del sistema operativo, tempo di risposta
+  Finalità:             fornitura dell'applicazione, garanzia della sicurezza
+                        operativa, individuazione e difesa da attacchi
+  Base giuridica:       art. 6, par. 1, lett. f) GDPR
+  Interesse legittimo:  funzionamento sicuro e senza disservizi dei nostri
+                        sistemi
+  Conservazione:        30 giorni, successivamente cancellazione automatica
+
+Per monitorare errori e prestazioni dell'applicazione rileviamo inoltre dati
+tecnici di funzionamento (telemetria) con il servizio Application Insights di
+Microsoft. In tale contesto gli indirizzi IP non vengono memorizzati. Anche la
+telemetria viene cancellata dopo 30 giorni.
+
+
+4.2 COOKIE
+
+Utilizziamo esclusivamente cookie tecnicamente necessari. Non utilizziamo
+cookie di analisi, di tracciamento o pubblicitari, non integriamo caratteri
+tipografici esterni e non utilizziamo servizi di misurazione dell'audience. Per
+questo motivo non abbiamo bisogno di un consenso per l'utilizzo dei cookie e
+non Le mostriamo alcun banner per il consenso.
+
+In dettaglio utilizziamo:
+
+  a) Cookie di sessione
+     Finalità:       mantenimento dell'accesso
+     Conservazione:  cookie di accesso 15 minuti; cookie per il rinnovo
+                     dell'accesso al massimo 7 giorni; entrambi vengono
+                     cancellati al momento della disconnessione
+
+  b) Cookie per la protezione dalla falsificazione di richieste tra siti
+     Finalità:       sicurezza dell'applicazione
+     Conservazione:  come il cookie per il rinnovo dell'accesso, al massimo 7
+                     giorni
+
+  c) Cookie per dispositivi attendibili
+     Finalità:       riconoscimento di un dispositivo, affinché
+                     l'autenticazione a due fattori non venga richiesta
+                     nuovamente a ogni accesso
+     Conservazione:  30 giorni
+
+  d) Cookie per la protezione della procedura di accesso tramite Microsoft o
+     bexio
+     Finalità:       protezione della procedura di autorizzazione da
+                     manipolazioni
+     Conservazione:  pochi minuti, solo durante la procedura di accesso
+
+  e) Cookie per l'area di amministrazione (solo per gli amministratori della
+     piattaforma di smiit)
+     Finalità:       prova dell'autenticazione a due fattori per l'accesso
+                     all'area di amministrazione
+     Conservazione:  al massimo 4 ore; termina con la disconnessione
+
+  Base giuridica:  § 25 cpv. 2 n. 2 della legge tedesca sulla protezione dei
+                   dati nelle telecomunicazioni e nei servizi digitali (TDDDG)
+                   nonché art. 6, par. 1, lett. b) e f) GDPR
+
+
+4.3 REGISTRAZIONE E ACCOUNT UTENTE
+
+  Dati:                 nome e cognome, indirizzo e-mail di lavoro, password
+                        (memorizzata esclusivamente come valore hash), impresa,
+                        impostazione della lingua, fuso orario, formato
+                        numerico, schema di colori, ruolo nell'area di lavoro
+                        nonché, su base volontaria, un'immagine del profilo
+  Finalità:             creazione e gestione dell'account utente, esecuzione
+                        del contratto di utilizzo
+  Base giuridica:       art. 6, par. 1, lett. b) GDPR
+  Conservazione:        finché esiste il Suo account utente; può eliminarlo in
+                        qualsiasi momento nell'applicazione alla voce Profilo ›
+                        Account (cfr. punto 7)
+
+Inoltre documentiamo in quale momento e in quale versione Lei ha accettato le
+Condizioni d'uso, la presente informativa sulla privacy e l'Accordo sul
+trattamento dei dati.
+
+  Finalità:             prova della conclusione del contratto e
+                        dell'accettazione
+  Base giuridica:       art. 6, par. 1, lett. c) GDPR in combinato disposto con
+                        l'art. 28, par. 9 GDPR nonché art. 6, par. 1, lett. f)
+                        GDPR
+  Conservazione:        a titolo di prova anche oltre la cancellazione
+                        dell'account utente; dopo la cancellazione
+                        dell'account, senza il Suo nome
+
+
+4.4 ACCESSO TRAMITE MICROSOFT O bexio
+
+Può accedere, a Sua scelta, tramite un account Microsoft o un accesso bexio. Se
+sceglie questa opzione, viene reindirizzato al rispettivo fornitore, presso il
+quale effettua l'accesso.
+
+  Dati:                 nome, indirizzo e-mail e un identificativo utente che
+                        il rispettivo fornitore ci trasmette dopo il Suo
+                        accesso
+  Finalità:             accesso senza una password separata
+  Base giuridica:       art. 6, par. 1, lett. b) GDPR
+  Conservazione:        per la durata del rapporto di utilizzo
+
+Non riceviamo in alcun momento la password del Suo account Microsoft o del Suo
+accesso bexio. Ciascuno di tali fornitori è esso stesso responsabile del
+trattamento effettuato presso di sé.
+
+
+4.5 SESSIONI E AUTENTICAZIONE A DUE FATTORI
+
+L'autenticazione a due fattori è obbligatoria per tutti gli Utenti: al momento
+dell'accesso Le inviamo un codice monouso via e-mail, a meno che Lei non abbia
+memorizzato il dispositivo utilizzato come attendibile.
+
+  Dati:                 codici monouso per il secondo fattore, identificativo
+                        dei dispositivi attendibili, sessioni di accesso con
+                        indirizzo IP e identificativo del browser, momenti
+                        degli accessi riusciti e non riusciti
+  Finalità:             protezione del Suo account da accessi non autorizzati,
+                        visualizzazione delle Sue sessioni attive e dei Suoi
+                        dispositivi attendibili
+  Base giuridica:       art. 6, par. 1, lett. b) e f) GDPR
+  Conservazione:        dispositivi attendibili 30 giorni; sessioni terminate
+                        30 giorni dopo la loro fine; per il resto finché esiste
+                        il Suo account utente
+
+
+4.6 MESSAGGI DI SISTEMA E NOTIFICHE
+
+Inviamo e-mail con codici monouso (registrazione, accesso e conferma di azioni
+rilevanti per la sicurezza), per il ripristino della password, per gli inviti
+in un'area di lavoro e per comunicarLe che è stato aggiunto a un'area di
+lavoro, a titolo di conferma e di avviso di sicurezza in caso di collegamento
+di un metodo di accesso (Microsoft o bexio) nonché avvisi quando una
+connessione bexio deve essere rinnovata. Inoltre Le mostriamo notifiche
+all'interno dell'applicazione.
+
+  Dati:                 nome, indirizzo e-mail, contenuto del messaggio
+  Finalità:             esecuzione del rapporto di utilizzo
+  Base giuridica:       art. 6, par. 1, lett. b) GDPR
+  Destinatari:          Microsoft (Azure Communication Services) in qualità di
+                        Responsabile del trattamento; dati conservati in
+                        Svizzera
+  Conservazione:        log di invio 30 giorni; notifiche nell'applicazione 30
+                        giorni dopo la lettura, quelle non lette 90 giorni
+
+
+4.7 INVITI IN UN'AREA DI LAVORO
+
+Se un Cliente invita una persona nella propria area di lavoro, trattiamo
+l'indirizzo e-mail di tale persona per inviare l'invito.
+
+  Dati:                 indirizzo e-mail della persona invitata, momento e
+                        stato dell'invito
+  Finalità:             invio e gestione dell'invito
+  Base giuridica:       art. 6, par. 1, lett. f) GDPR
+  Interesse legittimo:  consentire l'utilizzo condiviso dell'applicazione
+                        all'interno dell'impresa del Cliente
+  Origine dei dati:     Riceviamo l'indirizzo e-mail dal Cliente che formula
+                        l'invito (informazione ai sensi dell'art. 14 GDPR).
+  Conservazione:        fino all'accettazione, al rifiuto o alla revoca
+                        dell'invito; gli inviti non hanno una data di scadenza
+                        automatica
+
+
+4.8 REGISTRI DI ATTIVITÀ E STATISTICHE DI UTILIZZO
+
+Registriamo le operazioni rilevanti per la sicurezza e quelle che modificano
+dati all'interno dell'applicazione (registro di audit), ad esempio accessi,
+modifiche alle appartenenze e alle impostazioni nonché tutte le azioni dei
+nostri amministratori della piattaforma.
+
+  Dati:                 identificativo utente, momento, tipo di operazione,
+                        oggetto interessato
+  Finalità:             tracciabilità delle modifiche, chiarimento di incidenti
+                        di sicurezza, adempimento del nostro obbligo di
+                        responsabilizzazione
+  Base giuridica:       art. 6, par. 1, lett. c) GDPR in combinato disposto con
+                        l'art. 5, par. 2 e l'art. 32 GDPR nonché art. 6, par.
+                        1, lett. f) GDPR
+  Conservazione:        1 anno
+
+Analizziamo inoltre l'utilizzo dell'applicazione per elaborare statistiche di
+utilizzo, migliorare e sviluppare ulteriormente l'applicazione e pianificare le
+nostre capacità.
+
+  Dati:                 nome, indirizzo e-mail, identificativo utente, Cliente
+                        e area di lavoro di appartenenza, tipo e momento delle
+                        funzioni utilizzate (ad esempio visualizzazioni di
+                        pagine e di report, richieste all'IA e relativi costi,
+                        aggiornamenti dei dati)
+  Finalità:             statistiche di utilizzo, miglioramento e sviluppo
+                        ulteriore dell'applicazione, pianificazione delle
+                        capacità
+  Base giuridica:       art. 6, par. 1, lett. f) GDPR
+  Interesse legittimo:  sviluppo del nostro servizio in funzione delle esigenze
+                        e sua gestione economica
+  Conservazione:        singoli eventi di utilizzo 90 giorni, successivamente
+                        aggregati in statistiche giornaliere; statistiche
+                        giornaliere riferite a persone aggregate dopo 13 mesi
+                        in totali privi di riferimento a persone; dati
+                        sull'utilizzo dell'IA per singola richiesta 1 anno,
+                        successivamente solo come totali mensili. In caso di
+                        eliminazione dell'account il riferimento alla persona
+                        viene rimosso immediatamente.
+
+In queste statistiche i nostri amministratori della piattaforma vedono
+esclusivamente totali per area di lavoro e per giorno, nessun nome. I dettagli
+riferiti a persone sono visibili solo ai proprietari e agli amministratori
+della rispettiva area di lavoro, salvo che l'area di lavoro abbia disattivato
+tale visualizzazione.
+
+Non vendiamo questi dati e non li trasmettiamo a terzi. Un trattamento da parte
+dei nostri Responsabili del trattamento (punto 5) avviene esclusivamente per
+nostro conto e secondo le nostre istruzioni.
+
+I dati che i nostri Clienti caricano nell'applicazione tramite il collegamento
+con bexio o che inseriscono nell'applicazione stessa non sono invece trattati
+da noi per finalità proprie, bensì esclusivamente per conto del rispettivo
+Cliente (cfr. punto 3).
+
+Nella misura in cui mettiamo a disposizione tali analisi per singole aree di
+lavoro, agiamo a tale riguardo in qualità di Responsabile del trattamento del
+nostro Cliente.
+
+
+4.9 FUNZIONE DI ANALISI BASATA SULL'IA
+
+L'applicazione comprende una funzione di analisi basata su un modello
+linguistico di grandi dimensioni. Può porre domande sui Suoi dati in linguaggio
+naturale. Nell'applicazione viene informato del fatto che le risposte sono
+generate da un sistema di IA.
+
+La funzione è disattivata per impostazione predefinita. Solo un proprietario o
+una proprietaria dell'area di lavoro può attivarla, e soltanto dopo aver
+confermato un avviso che indica quali dati vengono trasmessi al fornitore del
+modello linguistico. Finché la funzione è disattivata, non ha luogo alcuna
+trasmissione.
+
+  Dati:                 la Sua domanda, la cronologia della conversazione, una
+                        descrizione della struttura dei dati disponibile nonché
+                        i risultati delle interrogazioni del database generate
+                        a tal fine (indicatori chiave ed estratti limitati di
+                        righe di dati)
+  Finalità:             risposta alla Sua domanda
+  Base giuridica:       art. 6, par. 1, lett. b) GDPR; nella misura in cui sono
+                        interessati dati provenienti dall'azienda bexio del
+                        Cliente, li trattiamo per conto del Cliente (cfr.
+                        sotto)
+  Destinatari:          OpenAI in qualità di Responsabile del trattamento (cfr.
+                        punto 5)
+  Luogo del
+  trattamento:          Spazio economico europeo e Svizzera; controparte
+                        contrattuale in Irlanda, endpoint europeo
+                        https://eu.api.openai.com/v1 (cfr. punti 5 e 6)
+  Conservazione:        le cronologie delle conversazioni vengono cancellate
+                        automaticamente presso di noi 90 giorni dopo l'ultima
+                        attività; per la durata di conservazione presso il
+                        fornitore del modello cfr. punto 5
+
+PSEUDONIMIZZAZIONE. Prima della trasmissione sostituiamo nomi e indirizzi
+e-mail di persone con segnaposto (ad esempio "Person-XXXXX"); i testi liberi,
+come i testi delle registrazioni contabili e delle posizioni, non vengono
+trasmessi. Il proprietario o la proprietaria dell'area di lavoro può revocare
+gradualmente tali limitazioni, ogni volta previa conferma di un apposito
+avviso:
+
+  a) "Nomi": i nomi dei contatti (clienti, fornitori e relative persone di
+     riferimento) vengono trasmessi in chiaro;
+  b) "Nomi + testi": in aggiunta i testi liberi;
+  c) "Tutto": nessuna pseudonimizzazione, nemmeno per dipendenti, utenti bexio,
+     membri dell'area di lavoro e indirizzi e-mail.
+
+I nomi di imprese non vengono pseudonimizzati. I dati del personale
+(dipendenti, assenze, saldi di ferie e di ore) raggiungono il modello
+linguistico solo se il proprietario o la proprietaria li ha espressamente
+autorizzati.
+
+I contenuti trasmessi NON vengono utilizzati per l'addestramento di modelli
+linguistici. Il fornitore del modello non conserva le richieste per un
+successivo riutilizzo. Il trattamento ha luogo nello Spazio economico europeo e
+in Svizzera; i dettagli, anche in merito ai log per l'individuazione di abusi,
+sono descritti al punto 6.
+
+Nella misura in cui i contenuti trattati riguardano dati provenienti
+dall'azienda bexio del nostro Cliente, agiamo in qualità di Responsabile del
+trattamento di tale Cliente; Titolare del trattamento è, a tale riguardo, il
+Cliente (cfr. punto 3).
+
+
+4.10 PRESA DI CONTATTO E SUPPORTO
+
+  Dati:                 nome, indirizzo e-mail, contenuto della Sua richiesta
+                        nonché tutte le ulteriori informazioni che ci comunica
+                        volontariamente
+  Finalità:             trattamento della Sua richiesta
+  Base giuridica:       art. 6, par. 1, lett. b) GDPR per le richieste relative
+                        al contratto, per il resto art. 6, par. 1, lett. f)
+                        GDPR
+  Conservazione:        fino alla conclusione della pratica, successivamente
+                        fino alla scadenza dei termini di conservazione
+                        previsti dalla legge
+
+FEEDBACK NELL'APPLICAZIONE. Dall'interno dell'applicazione può inviarci un
+feedback, a richiesta con uno screenshot oppure — in caso di valutazione di una
+risposta dell'IA — con una copia della relativa conversazione. Trasferiamo il
+feedback, per la sua gestione, nel nostro sistema di gestione delle attività
+Azure DevOps di Microsoft.
+
+  Dati:                 contenuto del feedback, screenshot, copia della
+                        conversazione (pseudonimizzata), identificativo utente,
+                        momento
+  Finalità:             correzione di errori e miglioramento dell'applicazione
+  Base giuridica:       art. 6, par. 1, lett. f) GDPR
+  Interesse legittimo:  miglioramento del nostro servizio
+  Destinatari:          Microsoft (Azure DevOps) in qualità di Responsabile del
+                        trattamento
+  Conservazione:        screenshot e copie delle conversazioni 90 giorni; il
+                        messaggio di feedback stesso 365 giorni
+
+
+4.11 GESTIONE DELLA PIATTAFORMA E ACCESSO PER IL SUPPORTO
+
+Per la gestione sicura dell'applicazione i nostri amministratori della
+piattaforma tengono un elenco degli utenti.
+
+  Dati:                 indirizzo e-mail, nome, stato dell'account (confermato,
+                        bloccato, eliminato), lingua, tipo di accesso, momento
+                        dell'ultima attività nonché le aree di lavoro di cui è
+                        membro, con il Suo ruolo
+  Finalità:             risposta alle richieste di supporto, blocco di account
+                        utilizzati in modo abusivo, eliminazione di account su
+                        richiesta
+  Base giuridica:       art. 6, par. 1, lett. b) e f) GDPR
+  Conservazione:        finché esiste il Suo account utente
+
+Ogni consultazione di un account e ogni azione su di esso vengono registrate
+con il nome dell'amministratore nel registro di audit (punto 4.8).
+
+I nostri amministratori della piattaforma non vedono né i report, né le
+conversazioni con la funzione di analisi basata sull'IA, né i dati commerciali
+ripresi da bexio. Ciò è imposto tecnicamente dalle regole di accesso del
+database. Se il supporto necessita di visionare un'area di lavoro,
+l'amministratore presenta una richiesta indicando il motivo e una durata di al
+massimo 30 giorni. Solo quando un proprietario o una proprietaria dell'area di
+lavoro acconsente, viene creato un accesso temporaneo. Tale accesso è visibile
+nell'elenco dei membri, revocabile in qualsiasi momento e integralmente
+registrato. Non esiste la possibilità di accedere "come utente".
+
+
+4.12 ESECUZIONE DEL CONTRATTO E FATTURAZIONE
+
+I nostri Clienti sottoscrivono con noi l'abbonamento a pagamento all'interno
+dell'applicazione. Emettiamo la fattura noi stessi e direttamente al Cliente;
+la creiamo e la inviamo tramite il servizio di fatturazione di PayPal (punto
+5). Il pagamento avviene mediante bonifico o tramite le modalità di pagamento
+offerte nella fattura. Durante il periodo di prova gratuito non emettiamo
+fatture.
+
+Per la fatturazione trattiamo:
+
+  a) la ragione sociale e l'indirizzo di fatturazione del Cliente nonché
+     l'indirizzo e-mail al quale inviamo le fatture;
+  b) il numero IDI (UID) ovvero il numero di identificazione IVA del Cliente,
+     se disponibile;
+  c) il piano tariffario sottoscritto (abbonamento mensile o annuale);
+  d) il numero di set di dati collegati e di Utenti determinante per l'importo
+     della fattura nonché i giorni fatturati per ciascun set di dati e per
+     ciascun Utente, ai fini della ripartizione dettagliata nella fattura;
+  e) importi delle fatture, date delle fatture e di scadenza, pagamenti
+     ricevuti ed eventuali solleciti.
+
+Attribuiamo i pagamenti ricevuti sulla base delle informazioni riportate
+nell'estratto conto della nostra banca (nome del pagante, IBAN, importo,
+causale) o della conferma di pagamento di PayPal. Non riceviamo dati di carte
+di credito; se il Cliente paga tramite PayPal, PayPal tratta i dati di
+pagamento sotto la propria responsabilità. I nomi o gli indirizzi e-mail dei
+singoli Utenti non compaiono nella fattura.
+
+Il bexio Marketplace segnala smiit Analytics; per i Clienti segnalati, bexio AG
+riceve una provvigione. A tal fine le comunichiamo esclusivamente dati
+aggregati: il numero di Clienti segnalati e il fatturato complessivo realizzato
+con essi. Non comunichiamo di quali Clienti si tratti né quale importo paghi un
+singolo Cliente.
+
+  Dati:                 ragione sociale, indirizzo di fatturazione e indirizzo
+                        e-mail di fatturazione del Cliente, numero IDI (UID)
+                        ovvero numero di identificazione IVA, piano tariffario
+                        sottoscritto, stato dell'abbonamento, numero di set di
+                        dati collegati e di Utenti con i giorni fatturati,
+                        fatture, pagamenti ricevuti
+  Finalità:             esecuzione del contratto, fatturazione, contabilità
+  Base giuridica:       art. 6, par. 1, lett. b) e c) GDPR
+  Destinatari:          PayPal per la creazione e l'invio delle fatture nonché
+                        per i pagamenti tramite PayPal; il nostro istituto di
+                        credito per la ricezione dei pagamenti; consulenti
+                        fiscali (cfr. punto 5)
+  Conservazione:        fino alla scadenza dei termini di conservazione
+                        previsti dal diritto commerciale e tributario, fino a
+                        dieci anni
+
+
+5. DESTINATARI DEI DATI PERSONALI
+
+Trasmettiamo dati personali solo nella misura in cui ciò sia necessario per la
+fornitura delle nostre prestazioni o vi siamo obbligati per legge.
+
+In qualità di Responsabili del trattamento ci avvaliamo di:
+
+  a) Microsoft Ireland Operations Limited
+     One Microsoft Place, South County Business Park, Leopardstown,
+     Dublin 18, Irlanda
+     Prestazione:    gestione della nostra applicazione e del nostro database
+                     (Microsoft Azure), invio di e-mail (Azure Communication
+                     Services), fornitura e protezione dell'applicazione (Azure
+                     Front Door), monitoraggio operativo (Application Insights)
+                     nonché gestione del feedback (Azure DevOps)
+     Ubicazione:     Svizzera — regione "Switzerland North" (Zurigo); le copie
+                     di backup del database sono inoltre conservate nella
+                     regione "Switzerland West" (Ginevra). Le e-mail vengono
+                     inviate con conservazione dei dati in Svizzera. Azure
+                     Front Door riceve le richieste presso le sedi di Microsoft
+                     nel mondo di volta in volta più vicine all'Utente. Il
+                     feedback (Azure DevOps) viene conservato nella regione
+                     "North Europe" (Irlanda), quindi all'interno dell'Unione
+                     europea.
+
+  b) OpenAI Ireland Limited
+     1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
+     Dublin 1, D01 YC43, Irlanda
+     Prestazione:    trattamento delle richieste alla funzione di analisi
+                     basata sull'IA (punto 4.9)
+     Base:           OpenAI Data Processing Addendum nella versione di volta in
+                     volta vigente (attualmente v.010126), consultabile
+                     all'indirizzo
+                     https://openai.com/policies/data-processing-addendum/
+     Ubicazione:     Spazio economico europeo e Svizzera. Utilizziamo la
+                     residenza dei dati europea di OpenAI ("Data Residency",
+                     regione Europa): tutte le richieste sono inviate
+                     esclusivamente all'endpoint europeo
+                     https://eu.api.openai.com/v1 di un progetto che presso
+                     OpenAI è assegnato in modo permanente alla regione Europa.
+                     OpenAI tratta le richieste (calcolo delle risposte da
+                     parte del modello linguistico) all'interno di tale
+                     regione, ossia negli Stati dell'Unione europea, in
+                     Norvegia, Islanda, Liechtenstein e Svizzera (cfr. punto
+                     6). Non sono coperti dalla residenza dei dati i dati
+                     amministrativi del nostro account presso OpenAI, ad
+                     esempio le statistiche di fatturazione e di utilizzo; essi
+                     non contengono alcun contenuto delle richieste. Ulteriori
+                     sub-responsabili impiegati da OpenAI:
+                     https://platform.openai.com/subprocessors
+     Conservazione:  Trasmettiamo le richieste in modo tale che OpenAI non
+                     conservi dati di richieste o di risposte per un successivo
+                     riutilizzo. OpenAI conserva log per l'individuazione di
+                     abusi, che possono contenere richieste e risposte, fino a
+                     30 giorni, salvo che una conservazione più lunga sia
+                     prescritta dalla legge. Per tali log OpenAI non garantisce
+                     alcun luogo di conservazione (cfr. punto 6).
+
+Con tutti i Responsabili del trattamento abbiamo concluso contratti ai sensi
+dell'art. 28 GDPR.
+
+Ricevono dati in qualità di Titolari autonomi del trattamento:
+
+  c) PayPal (Europe) S.à r.l. et Cie, S.C.A.
+     22-24 Boulevard Royal, L-2449 Lussemburgo
+     Prestazione:    creazione e invio delle nostre fatture tramite il servizio
+                     di fatturazione di PayPal nonché gestione dei pagamenti
+                     che il Cliente effettua tramite PayPal (cfr. punto 4.12);
+                     dettagli nell'informativa sulla privacy di PayPal
+                     all'indirizzo
+                     https://www.paypal.com/de/legalhub/privacy-full
+     Ubicazione:     Unione europea (Lussemburgo); per i trasferimenti
+                     all'interno del gruppo PayPal cfr. punto 6
+
+  d) GitHub, Inc.
+     88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA
+     Prestazione:    fornitura del nostro sito web tramite GitHub Pages; GitHub
+                     registra gli indirizzi IP dei visitatori per finalità di
+                     sicurezza sotto la propria responsabilità (cfr. punto
+                     4.1); dettagli nell'informativa sulla privacy di GitHub
+                     all'indirizzo https://docs.github.com/de/site-
+                     policy/privacy-policies/github-general-privacy-statement
+     Ubicazione:     Stati Uniti d'America (cfr. punto 6)
+
+Inoltre i dati possono essere trasmessi a consulenti fiscali, revisori dei
+conti, avvocati nonché ad autorità e tribunali, nella misura in cui ciò sia
+prescritto dalla legge o necessario per la tutela giudiziaria dei diritti. I
+pagamenti dei nostri Clienti pervengono al nostro istituto di credito (punto
+4.12).
+
+
+6. TRASFERIMENTO VERSO PAESI TERZI
+
+Gestiamo la nostra applicazione e il nostro database in centri di calcolo di
+Microsoft in Svizzera. Dal punto di vista del GDPR la Svizzera è un paese terzo
+per il quale la Commissione europea ha adottato una decisione di adeguatezza
+(art. 45 GDPR). Garanzie supplementari quali le clausole contrattuali tipo non
+sono pertanto necessarie per il trattamento in Svizzera. Lo stesso vale per
+l'invio di e-mail.
+
+Microsoft conserva il feedback in Azure DevOps nella regione "North Europe"
+(Irlanda) e quindi all'interno dell'Unione europea; a tal fine non sono
+necessarie garanzie supplementari. Nella misura in cui Microsoft, nell'ambito
+di Azure Front Door o di Azure DevOps, tratta dati al di fuori della Svizzera e
+dello Spazio economico europeo, ciò si basa sulle clausole contrattuali tipo
+della Commissione europea (art. 46, par. 2, lett. c) GDPR), che costituiscono
+parte integrante delle disposizioni sulla protezione dei dati di Microsoft,
+nonché sulla certificazione di Microsoft Corporation ai sensi dell'EU-US Data
+Privacy Framework (art. 45 GDPR).
+
+In occasione della consultazione del nostro sito web, GitHub, Inc. tratta il
+Suo indirizzo IP negli Stati Uniti d'America (punto 4.1). GitHub è certificata
+ai sensi dell'EU-US Data Privacy Framework; il trasferimento si basa sulla
+relativa decisione di adeguatezza della Commissione europea (art. 45 GDPR). Per
+le persone in Svizzera si applica per analogia lo Swiss-U.S. Data Privacy
+Framework, che la Svizzera ha riconosciuto come adeguato per le imprese
+certificate.
+
+PayPal (Europe) S.à r.l. et Cie, S.C.A. ha sede in Lussemburgo e può
+trasmettere dati ad altre società del gruppo PayPal, anche in paesi terzi come
+gli Stati Uniti d'America. PayPal basa tali trasferimenti su norme vincolanti
+d'impresa (Binding Corporate Rules, art. 47 GDPR); dettagli nell'informativa
+sulla privacy di PayPal (punto 5).
+
+Nell'ambito della funzione di analisi basata sull'IA (punto 4.9) trasmettiamo i
+contenuti di una richiesta al nostro Responsabile del trattamento OpenAI
+Ireland Limited, con sede in Irlanda. Utilizziamo esclusivamente l'endpoint
+europeo https://eu.api.openai.com/v1 con la regione di residenza dei dati
+Europa (punto 5). Le richieste vengono quindi trattate all'interno dello Spazio
+economico europeo e della Svizzera. In tale contesto non ha luogo alcun
+trasferimento verso un paese terzo: lo Spazio economico europeo è soggetto al
+GDPR e per la Svizzera esiste una decisione di adeguatezza della Commissione
+europea (art. 45 GDPR). Per i log per l'individuazione di abusi, che OpenAI
+conserva fino a 30 giorni, OpenAI non garantisce alcun luogo di conservazione.
+Nella misura in cui OpenAI tratta tali log o, in singoli casi, altri dati al di
+fuori dello Spazio economico europeo e della Svizzera, si applicano le clausole
+contrattuali tipo della Commissione europea (art. 46, par. 2, lett. c) GDPR,
+decisione di esecuzione (UE) 2021/914), che costituiscono parte integrante
+dell'OpenAI Data Processing Addendum (punto 4.1 dell'Addendum).
+
+La trasmissione a OpenAI ha luogo solo se la funzione di analisi basata sull'IA
+è attivata e utilizzata nella rispettiva area di lavoro. In tale contesto nomi
+e indirizzi e-mail di persone vengono pseudonimizzati per impostazione
+predefinita (punto 4.9). I contenuti trasmessi non vengono utilizzati per
+l'addestramento di modelli.
+
+Per i nostri Clienti in Svizzera vale quanto segue: poiché la nostra
+applicazione e il nostro database sono gestiti in Svizzera, a tale riguardo non
+ha luogo alcuna comunicazione all'estero. La comunicazione a OpenAI nell'ambito
+della funzione di analisi basata sull'IA è ammessa, poiché gli Stati
+dell'Unione europea nonché la Norvegia, l'Islanda e il Liechtenstein figurano
+nell'allegato 1 dell'ordinanza sulla protezione dei dati (OPDa) quali Stati con
+una protezione adeguata dei dati (art. 16 cpv. 1 nLPD); nella misura in cui
+OpenAI tratta i dati in Svizzera, non si configura alcuna comunicazione
+all'estero. L'OpenAI Data Processing Addendum copre espressamente anche i dati
+soggetti al diritto svizzero in materia di protezione dei dati.
+
+ACCESSO DA PARTE DELLE AUTORITÀ STATUNITENSI. OpenAI Ireland Limited fa parte
+del gruppo OpenAI, con sede negli Stati Uniti d'America. La residenza dei dati
+stabilisce dove i dati vengono trattati e conservati; essa non esclude che
+autorità statunitensi, sulla base del CLOUD Act statunitense (Clarifying Lawful
+Overseas Use of Data Act, 18 U.S.C. § 2713), esigano da un'impresa statunitense
+la consegna di dati che essa controlla, anche se tali dati sono conservati al
+di fuori degli USA. Una simile richiesta presuppone di norma un provvedimento
+giudiziario o un ordine analogo nell'ambito di un procedimento penale per reati
+gravi, ad esempio in caso di terrorismo, criminalità organizzata o frode grave,
+ed è rivolta in modo mirato contro determinate persone o determinati account;
+il CLOUD Act non consente interrogazioni di massa prive di un motivo specifico.
+Il fornitore può opporsi a un simile ordine se esso è in conflitto con il
+diritto dello Stato in cui si trovano i dati. Per i dati aziendali da noi
+trattati un simile accesso costituisce pertanto un raro caso eccezionale.
+Abbiamo inoltre fatto in modo, sul piano tecnico, che OpenAI riceva il minor
+numero possibile di dati: la funzione è disattivata per impostazione
+predefinita, nomi e indirizzi e-mail vengono pseudonimizzati e le richieste non
+vengono conservate per il riutilizzo (punto 4.9).
+
+
+7. DURATA DI CONSERVAZIONE
+
+Conserviamo i dati personali solo per il tempo necessario alle rispettive
+finalità o richiesto dai termini di conservazione previsti dalla legge. I
+termini concreti sono indicati per i singoli trattamenti al punto 4.
+
+Dopo la cessazione del rapporto contrattuale conserviamo i dati dei nostri
+Clienti per 30 giorni di calendario ai fini dell'esportazione e successivamente
+li cancelliamo. Se un Cliente elimina, durante la durata del contratto, un set
+di dati o la propria area di lavoro, i relativi dati vengono cancellati entro
+quattro ore. Le copie di backup vengono sovrascritte nell'ambito del regolare
+ciclo di backup di 35 giorni; fino ad allora i dati sono bloccati per qualsiasi
+ulteriore trattamento.
+
+Se elimina il Suo account utente, i Suoi dati personali vengono cancellati. Le
+voci nei nostri log vengono in tal caso modificate in modo tale che non sia più
+possibile stabilire un riferimento alla persona.
+
+
+8. I SUOI DIRITTI
+
+Nei nostri confronti Lei dispone dei seguenti diritti:
+
+  a) accesso ai dati che La riguardano (art. 15 GDPR)
+  b) rettifica di dati inesatti (art. 16 GDPR)
+  c) cancellazione (art. 17 GDPR)
+  d) limitazione del trattamento (art. 18 GDPR)
+  e) portabilità dei dati (art. 20 GDPR)
+  f) revoca di un consenso prestato, con effetto per il futuro (art. 7, par. 3
+     GDPR)
+
+DIRITTO DI OPPOSIZIONE AI SENSI DELL'ART. 21 GDPR
+
+Nella misura in cui trattiamo dati sulla base di un interesse legittimo ai
+sensi dell'art. 6, par. 1, lett. f) GDPR, Lei ha il diritto di opporsi in
+qualsiasi momento a tale trattamento, per motivi connessi alla Sua situazione
+particolare. In tal caso non tratteremo più i dati, salvo che dimostriamo
+l'esistenza di motivi legittimi cogenti che prevalgono sui Suoi interessi,
+diritti e libertà, oppure che il trattamento serva all'accertamento,
+all'esercizio o alla difesa di un diritto in sede giudiziaria.
+
+Per l'esercizio dei Suoi diritti è sufficiente un messaggio ai recapiti
+indicati al punto 1. Alcuni dei Suoi diritti può inoltre esercitarli
+direttamente nell'applicazione: alla voce Profilo può rettificare i Suoi dati
+ed esportarli come file (accesso e portabilità dei dati); alla voce Profilo ›
+Account può eliminare il Suo account utente.
+
+La preghiamo di tenere presente il punto 3: se la Sua richiesta riguarda dati
+che trattiamo per conto di uno dei nostri Clienti, deve rivolgersi a tale
+Cliente. In tal caso inoltriamo senza indugio la Sua richiesta.
+
+
+9. DIRITTO DI RECLAMO
+
+Lei ha il diritto di proporre reclamo a un'autorità di controllo per la
+protezione dei dati in merito al trattamento dei Suoi dati personali.
+
+L'autorità di controllo competente per noi è:
+
+  Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit
+  Baden-Württemberg
+  Lautenschlagerstraße 20, 70173 Stuttgart
+
+Le persone in Svizzera possono inoltre rivolgersi a:
+
+  Incaricato federale della protezione dei dati e della trasparenza
+  (IFPDT)
+  Feldeggweg 1, 3003 Berna, Svizzera
+
+
+10. NESSUN PROCESSO DECISIONALE AUTOMATIZZATO
+
+Non utilizziamo processi decisionali automatizzati, compresa la profilazione,
+ai sensi dell'art. 22 GDPR.
+
+La funzione di analisi basata sull'IA descritta al punto 4.9 elabora analisi su
+richiesta di un Utente. Non prende decisioni e non formula raccomandazioni
+relative a singole persone. I risultati devono sempre essere valutati
+dall'Utente.
+
+
+11. AVVERTENZE PER LE PERSONE IN SVIZZERA
+
+Se il trattamento è soggetto alla legge federale svizzera sulla protezione dei
+dati (nLPD), le indicazioni che precedono si applicano per analogia. I
+riferimenti al GDPR vanno in tal caso intesi come riferimenti alle
+corrispondenti disposizioni della nLPD, in particolare agli articoli da 19 a 25
+nLPD.
+
+
+12. OBBLIGO DI FORNIRE I DATI
+
+La fornitura dei Suoi dati personali non è prescritta né dalla legge né dal
+contratto. Senza le informazioni necessarie per la creazione di un account
+utente non possiamo tuttavia mettere a Sua disposizione l'applicazione.
+
+
+13. MODIFICHE DELLA PRESENTE INFORMATIVA SULLA PRIVACY
+
+Adeguiamo la presente informativa sulla privacy quando cambiano la situazione
+giuridica, i nostri trattamenti o le funzionalità dell'applicazione. La
+versione di volta in volta aggiornata è consultabile all'indirizzo
+https://www.smiit-analytics.com/de/privacy/. In caso di modifiche sostanziali
+informiamo separatamente i nostri Clienti.
+
+
+===============================================================================
+FINE DELL'INFORMATIVA SULLA PRIVACY
+===============================================================================

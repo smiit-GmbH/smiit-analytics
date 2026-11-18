@@ -4,7 +4,7 @@ nach Artikel 28 der Verordnung (EU) 2016/679 (DSGVO)
 für die Nutzung von smiit Analytics
 ===============================================================================
 
-Fassung 1.0 — Stand: 01.11.2026
+Fassung 1.0 — Stand: 18.11.2026
 
 VERTRAGSPARTEIEN
 
@@ -61,7 +61,7 @@ ausdrücklich zu; eine handschriftliche Unterzeichnung ist nicht erforderlich.
 (1) Dieser Vertrag kommt dadurch zustande, dass der Verantwortliche ihn im
     Rahmen der Einrichtung seines Arbeitsbereichs oder zu einem späteren
     Zeitpunkt in der Anwendung ausdrücklich annimmt. Die Annahme erfolgt in
-    elektronischer Form im Sinne des Artikels 28 Absatz 9 Satz 2 DSGVO. Einer
+    elektronischer Form im Sinne des Artikels 28 Absatz 9 DSGVO. Einer
     handschriftlichen Unterzeichnung bedarf es nicht.
 
 (2) Die Annahme erklärt eine Person, die zur Vertretung des Verantwortlichen
@@ -281,28 +281,34 @@ ausdrücklich zu; eine handschriftliche Unterzeichnung ist nicht erforderlich.
     Europäischen Union oder im Europäischen Wirtschaftsraum daher nicht
     erforderlich.
 
-(2) Abweichend von Absatz 1 werden die Inhalte der KI-gestützten
-    Analysefunktion (Anlage 1) an den in Anlage 3 genannten
-    Unterauftragsverarbeiter OpenAI Ireland Limited mit Sitz in Irland
-    übermittelt. Dieser lässt sie durch die OpenAI OpCo, LLC in den
-    Vereinigten Staaten von Amerika verarbeiten. Der Verantwortliche weist den
-    Auftragsverarbeiter hiermit an, diese Übermittlung vorzunehmen, soweit die
-    KI-gestützte Analysefunktion in seinem Arbeitsbereich aktiviert ist
-    (§ 2 Absatz 4).
+(2) Die Inhalte der KI-gestützten Analysefunktion (Anlage 1) werden an den in
+    Anlage 3 genannten Unterauftragsverarbeiter OpenAI Ireland Limited mit
+    Sitz in Irland übermittelt. Der Auftragsverarbeiter nutzt dabei
+    ausschließlich den europäischen Endpunkt https://eu.api.openai.com/v1
+    eines Projekts mit der Datenresidenz-Region Europa; OpenAI verarbeitet die
+    Anfragen innerhalb des EWR und der Schweiz. Für Protokolle zur Erkennung
+    von Missbrauch, die OpenAI bis zu 30 Tage aufbewahrt, sagt OpenAI keinen
+    Speicherort zu. Der Verantwortliche weist den Auftragsverarbeiter hiermit
+    an, diese Übermittlung vorzunehmen, soweit die KI-gestützte
+    Analysefunktion in seinem Arbeitsbereich aktiviert ist (§ 2 Absatz 4).
 
     Grundlage ist das OpenAI Data Processing Addendum in der jeweils
-    geltenden Fassung (derzeit v.010126). Danach verarbeitet OpenAI Ireland
-    Limited Daten, die dem Datenschutzrecht des EWR oder der Schweiz
-    unterliegen, nach Maßgabe dieses Addendums und übermittelt sie an
-    verbundene Unternehmen oder Dritte außerhalb des EWR und der Schweiz auf
-    Grundlage von Verträgen mit den Standardvertragsklauseln nach dem
+    geltenden Fassung (derzeit v.010126). Soweit OpenAI Ireland Limited Daten,
+    die dem Datenschutzrecht des EWR oder der Schweiz unterliegen, an
+    verbundene Unternehmen oder Dritte außerhalb des EWR und der Schweiz
+    übermittelt, etwa die genannten Protokolle, geschieht dies auf Grundlage
+    von Verträgen mit den Standardvertragsklauseln nach dem
     Durchführungsbeschluss (EU) 2021/914 oder eines Angemessenheitsbeschlusses
     nach Artikel 45 DSGVO (Ziffer 4.1 des Addendums). Eine Zertifizierung
     unter dem EU-US Data Privacy Framework wird nicht in Anspruch genommen.
+    OpenAI Ireland Limited gehört zu einer Unternehmensgruppe mit Sitz in den
+    Vereinigten Staaten von Amerika; ein Herausgabeverlangen von US-Behörden
+    nach dem CLOUD Act (18 U.S.C. § 2713) ist daher trotz der Datenresidenz
+    nicht ausgeschlossen.
 
-    Der Auftragsverarbeiter hat die Übermittlung vor ihrer Aufnahme auf das
-    Schutzniveau im Empfängerland geprüft und dokumentiert und stellt dem
-    Verantwortlichen diese Dokumentation auf Anfrage zur Verfügung. Der
+    Der Auftragsverarbeiter hat den Einsatz vor seiner Aufnahme auf das
+    Schutzniveau geprüft und dokumentiert und stellt dem Verantwortlichen
+    diese Dokumentation auf Anfrage zur Verfügung. Der
     Modellanbieter verwendet die übermittelten Inhalte nicht zum Training von
     Modellen. Die KI-gestützte Analysefunktion ist standardmäßig
     ausgeschaltet; solange sie ausgeschaltet ist, findet keine Übermittlung an
@@ -319,12 +325,14 @@ ausdrücklich zu; eine handschriftliche Unterzeichnung ist nicht erforderlich.
        und der Versand von Systemnachrichten sind daher keine Bekanntgabe ins
        Ausland im Sinne des Artikels 16 revDSG.
 
-    b) Die Bekanntgabe an OpenAI Ireland Limited nach Absatz 2 ist zulässig,
-       weil Irland in Anhang 1 DSV als Staat mit angemessenem Datenschutz
-       aufgeführt ist (Artikel 16 Absatz 1 revDSG). Für die Weiterübermittlung
-       in die USA gilt Absatz 2 Unterabsatz 2; das OpenAI Data Processing
-       Addendum erfasst ausdrücklich auch Daten, die dem schweizerischen
-       Datenschutzrecht unterliegen.
+    b) Die Bekanntgabe an OpenAI nach Absatz 2 ist zulässig, weil die Staaten
+       der Europäischen Union sowie Norwegen, Island und Liechtenstein in
+       Anhang 1 DSV als Staaten mit angemessenem Datenschutz aufgeführt sind
+       (Artikel 16 Absatz 1 revDSG); soweit OpenAI die Daten in der Schweiz
+       verarbeitet, liegt keine Bekanntgabe ins Ausland vor. Für eine
+       Weiterübermittlung außerhalb des EWR und der Schweiz gilt Absatz 2
+       Unterabsatz 2; das OpenAI Data Processing Addendum erfasst ausdrücklich
+       auch Daten, die dem schweizerischen Datenschutzrecht unterliegen.
 
     c) Soweit Microsoft im Rahmen der in Anlage 3 Ziffer 1 genannten Dienste
        Azure Front Door oder Azure DevOps Daten außerhalb der Schweiz
@@ -559,8 +567,8 @@ entsprechend.
     der Schweiz und der Verarbeitungsumgebung des Auftragsverarbeiters gilt
     § 7 Absatz 3: Da die Verarbeitungsumgebung in der Schweiz liegt, findet
     insoweit keine Bekanntgabe ins Ausland statt. Für die Bekanntgabe an den
-    Modellanbieter in den USA gilt § 7 Absatz 3 Buchstabe b, für Bekanntgaben
-    in andere Staaten § 7 Absatz 3 Buchstabe c und Absatz 4.
+    Modellanbieter gilt § 7 Absatz 3 Buchstabe b, für Bekanntgaben in andere
+    Staaten § 7 Absatz 3 Buchstabe c und Absatz 4.
 
 
 § 16 SCHLUSSBESTIMMUNGEN
@@ -779,7 +787,7 @@ setzt alle Freigaben zurück.
 ANLAGE 2 — TECHNISCHE UND ORGANISATORISCHE MASSNAHMEN (ARTIKEL 32 DSGVO)
 ===============================================================================
 
-Stand: 01.11.2026
+Stand: 18.11.2026
 
 
 1. VERTRAULICHKEIT
@@ -940,7 +948,7 @@ Stand: 01.11.2026
 ANLAGE 3 — UNTERAUFTRAGSVERARBEITER
 ===============================================================================
 
-Stand: 01.11.2026
+Stand: 18.11.2026
 
 
 1. Microsoft Ireland Operations Limited
@@ -960,10 +968,11 @@ Stand: 01.11.2026
                     "Switzerland West" (Genf); E-Mail-Versand mit Datenhaltung
                     in der Schweiz. Azure Front Door nimmt Anfragen an den
                     weltweiten Standorten von Microsoft entgegen. Azure DevOps:
-                    ebenfalls Region "Switzerland North" (Zürich).
+                    Region "North Europe" (Irland).
    Drittlandbezug:  Schweiz (Angemessenheitsbeschluss der Europäischen
-                    Kommission nach Artikel 45 DSGVO); für Azure Front Door
-                    auch Standorte außerhalb der Schweiz und des EWR
+                    Kommission nach Artikel 45 DSGVO); Azure DevOps innerhalb
+                    der Europäischen Union; für Azure Front Door auch
+                    Standorte außerhalb der Schweiz und des EWR
    Übermittlungs-
    mechanismus:     Schweiz: Angemessenheitsbeschluss; im Übrigen
                     Standardvertragsklauseln im Data Protection Addendum von
@@ -974,9 +983,8 @@ Stand: 01.11.2026
 2. OpenAI Ireland Limited
    1st Floor, The Liffey Trust Centre, 117-126 Sheriff Street Upper,
    Dublin 1, D01 YC43, Irland
-   Weiterer Unterauftragsverarbeiter: OpenAI OpCo, LLC, 1455 3rd Street,
-   San Francisco, CA 94158, USA; weitere von OpenAI eingesetzte
-   Unterauftragsverarbeiter unter https://platform.openai.com/subprocessors
+   Weitere von OpenAI eingesetzte Unterauftragsverarbeiter unter
+   https://platform.openai.com/subprocessors
    Vertrags-
    grundlage:       OpenAI Data Processing Addendum in der jeweils geltenden
                     Fassung (derzeit v.010126),
@@ -991,10 +999,11 @@ Stand: 01.11.2026
                     Freitexte und Personaldaten nicht übermittelt, soweit der
                     Verantwortliche dies nicht nach Anlage 1 Ziffer 9
                     freigegeben hat.
-   Verarbeitungsort: Vertragspartner in Irland; Verarbeitung durch die OpenAI
-                    OpCo, LLC in den Vereinigten Staaten von Amerika
-   Drittlandbezug:  ja, Weiterübermittlung in die USA durch OpenAI
-                    (§ 7 Absatz 2)
+   Verarbeitungsort: EWR und Schweiz; Vertragspartner in Irland, europäische
+                    Datenresidenz (Endpunkt https://eu.api.openai.com/v1)
+   Drittlandbezug:  für die Verarbeitung der Anfragen nein; für Protokolle
+                    zur Erkennung von Missbrauch sagt OpenAI keinen
+                    Speicherort zu (§ 7 Absatz 2)
    Übermittlungs-
    mechanismus:     Standardvertragsklauseln nach dem Durchführungsbeschluss
                     (EU) 2021/914, die OpenAI Ireland Limited mit den
@@ -1009,7 +1018,9 @@ Stand: 01.11.2026
                     dass OpenAI keine Anfrage- oder Antwortdaten zur späteren
                     Wiederverwendung speichert. Protokolle zur Erkennung von
                     Missbrauch, die Anfragen und Antworten enthalten können,
-                    bewahrt OpenAI bis zu 30 Tage auf.
+                    bewahrt OpenAI bis zu 30 Tage auf. OpenAI gehört zu einer
+                    US-Unternehmensgruppe; ein Herausgabeverlangen nach dem
+                    CLOUD Act ist nicht ausgeschlossen (§ 7 Absatz 2).
 
 
 HINWEIS: bexio AG ist kein Unterauftragsverarbeiter des Auftragsverarbeiters.

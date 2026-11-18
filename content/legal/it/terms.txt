@@ -1,0 +1,853 @@
+===============================================================================
+CONDIZIONI D'USO DI smiit ANALYTICS
+Condizioni generali per la fornitura di software come servizio
+===============================================================================
+
+Versione 1.0 — Aggiornamento: 18 novembre 2026
+
+§ 1 AMBITO DI APPLICAZIONE E PARTI CONTRAENTI
+
+(1) Le presenti Condizioni d'uso si applicano a tutti i contratti relativi
+    all'utilizzo dell'applicazione Software-as-a-Service "smiit Analytics" (di
+    seguito "Applicazione") tra
+
+      smiit GmbH
+      Reiherweg 96
+      89584 Ehingen
+      Tribunale del registro: Amtsgericht Ulm, HRB 741965
+      Rappresentata da: Sebastian Grab, Noah Neßlauer
+      N. di identificazione IVA: DE357299821
+
+    (di seguito "Fornitore" o "smiit") e il Cliente.
+
+    È Cliente l'impresa che conclude il contratto con il Fornitore.
+    Nell'Applicazione il Cliente è denominato "Tenant"; nelle presenti
+    Condizioni d'uso i due termini sono equivalenti.
+
+(2) L'Applicazione è destinata esclusivamente a imprenditori ai sensi del § 14
+    del Codice civile tedesco (BGB), a persone giuridiche di diritto pubblico e
+    a patrimoni separati di diritto pubblico, nonché a imprese con sede in
+    Svizzera che concludono il contratto per scopi commerciali. Non si
+    concludono contratti con consumatori.
+
+(2a) Le imprese con sede in Svizzera o nel Liechtenstein possono concludere il
+    contratto solo se ivi assoggettate all'IVA. Con la registrazione il Cliente
+    conferma che tale condizione è soddisfatta. Qualora non lo sia, il Cliente
+    risarcisce al Fornitore il danno che ne deriva, in particolare le imposte
+    da versare a posteriori.
+
+(3) Le condizioni commerciali del Cliente divergenti, contrarie o integrative
+    non diventano parte del contratto, salvo che il Fornitore ne accetti
+    espressamente la validità in forma testuale. Ciò vale anche qualora il
+    Fornitore, essendo a conoscenza di tali condizioni, esegua la prestazione
+    senza riserve.
+
+(4) Si applicano inoltre l'Accordo sul trattamento dei dati (allegato al
+    contratto, consultabile all'indirizzo
+    https://www.smiit-analytics.com/de/dpa/) e l'Informativa sulla privacy del
+    Fornitore (consultabile all'indirizzo
+    https://www.smiit-analytics.com/de/privacy/). All'indirizzo
+    https://www.smiit-analytics.com/de/terms/ è consultabile la versione di
+    volta in volta vigente delle presenti Condizioni d'uso. In caso di
+    contrasto tra le presenti Condizioni d'uso e l'Accordo sul trattamento dei
+    dati, per le questioni in materia di protezione dei dati prevale l'Accordo
+    sul trattamento dei dati.
+
+
+§ 2 OGGETTO DEL CONTRATTO E DESCRIZIONE DEI SERVIZI
+
+(1) Il Fornitore mette a disposizione del Cliente l'Applicazione per l'utilizzo
+    tramite Internet per la durata del contratto. L'Applicazione serve
+    all'analisi di dati economico-aziendali che il Cliente trasmette dalla
+    propria azienda bexio.
+
+(2) La portata dei servizi comprende essenzialmente:
+
+    a) il collegamento di una o più aziende bexio del Cliente tramite
+       l'interfaccia ufficiale di bexio, previa autorizzazione da parte del
+       Cliente; ogni azienda bexio collegata costituisce nell'Applicazione un
+       "set di dati";
+    b) il recupero periodico e la memorizzazione dei dati autorizzati in un
+       archivio dati del Fornitore separato per singolo cliente;
+    c) l'elaborazione di tali dati in indicatori, dimensioni e fatti;
+    d) la creazione, la memorizzazione e la condivisione di report e dashboard;
+    e) una funzione di analisi basata sull'IA ai sensi del § 6;
+    f) la gestione di account utente, ruoli e condivisioni.
+
+(3) L'Applicazione è fornita come software standard. Non sussiste alcun diritto
+    a determinate funzioni, all'implementazione di requisiti individuali o alla
+    disponibilità permanente di singole funzioni, salvo diverso accordo
+    espresso. Il Fornitore ha il diritto di sviluppare ulteriormente e di
+    adattare l'Applicazione; resta salvo il § 19.
+
+(4) Il Fornitore è tenuto a mettere a disposizione l'Applicazione al punto di
+    consegna. Il punto di consegna è l'uscita del centro dati utilizzato dal
+    Fornitore. La connessione Internet del Cliente, nonché i suoi dispositivi e
+    il suo software, non sono oggetto del contratto.
+
+(5) L'Applicazione richiede una versione aggiornata di un browser web di uso
+    comune. Il Fornitore supporta la versione principale di volta in volta
+    attuale e quella precedente dei browser Chrome, Edge, Firefox e Safari.
+
+
+§ 3 CONCLUSIONE DEL CONTRATTO, REGISTRAZIONE, PERIODO DI PROVA
+
+(1) Il Fornitore distribuisce l'Applicazione tramite il bexio Marketplace,
+    gestito da bexio AG (di seguito "Marketplace"), nonché tramite vendita
+    diretta.
+
+    Indipendentemente dal canale di distribuzione, il contratto relativo
+    all'utilizzo dell'Applicazione si conclude esclusivamente tra il Cliente e
+    il Fornitore, e precisamente al completamento della registrazione
+    nell'Applicazione, in occasione della quale il Cliente accetta le presenti
+    Condizioni d'uso e l'Accordo sul trattamento dei dati. Anche un abbonamento
+    a pagamento è sottoscritto dal Cliente con il Fornitore all'interno
+    dell'Applicazione.
+
+(1a) Il Marketplace serve esclusivamente a segnalare l'Applicazione e a mettere
+    in contatto i clienti con il Fornitore. bexio AG non diventa parte
+    contraente e non fornisce alcuna prestazione in base al presente contratto.
+    La fatturazione e l'incasso dei pagamenti sono effettuati dal Fornitore
+    stesso (§ 11 cpv. 8).
+
+(2) In sede di registrazione il Cliente è tenuto a fornire dati veritieri e
+    completi e ad aggiornarli senza indugio in caso di modifiche. L'indirizzo
+    e-mail indicato in sede di registrazione deve essere confermato.
+
+(3) Con la registrazione il Cliente conferma di aver preso conoscenza delle
+    presenti Condizioni d'uso e di accettarne la validità, nonché di aver
+    concluso l'Accordo sul trattamento dei dati. Il Fornitore documenta il
+    momento dell'accettazione e la versione dei documenti di volta in volta
+    accettati.
+
+(4) Il Fornitore mette a disposizione un periodo di prova gratuito. Si applica
+    quanto segue:
+
+    a) Il periodo di prova dura 30 giorni dall'attivazione.
+    b) Durante il periodo di prova il contratto può essere disdetto da entrambe
+       le parti in qualsiasi momento senza preavviso.
+    c) Il Fornitore può limitare le funzionalità durante il periodo di prova.
+    d) Durante il periodo di prova non sorgono costi.
+    e) Alla scadenza del periodo di prova il Cliente può continuare a
+       utilizzare l'Applicazione solo se sottoscrive un abbonamento a pagamento
+       nell'Applicazione. Non avviene alcuna conversione automatica in un
+       abbonamento a pagamento. Se il Cliente non sottoscrive un abbonamento,
+       l'accesso viene bloccato alla scadenza del periodo di prova; ai dati del
+       Cliente si applica per analogia il § 14.
+    f) Per il periodo di prova è esclusa la garanzia; la responsabilità del
+       Fornitore è disciplinata dal § 16 cpv. 6.
+
+
+§ 4 WORKSPACE, ACCOUNT UTENTE E RUOLI
+
+(1) L'utilizzo avviene all'interno di un'area di lavoro ("Workspace") assegnata
+    al Cliente (Tenant). Il Cliente designa almeno una persona quale titolare
+    ("Owner") del Workspace.
+
+(2) L'Applicazione prevede i ruoli "Owner", "Admin" e "Member" con
+    autorizzazioni graduate. Il Cliente è l'unico responsabile della scelta
+    delle persone a cui concede l'accesso e del ruolo che assegna loro. Egli
+    garantisce che le autorizzazioni rispettino il principio di necessità e che
+    siano revocate senza indugio quando le persone interessate lasciano
+    l'impresa.
+
+(3) Gli account utente sono personali. La comunicazione dei dati di accesso a
+    terzi e l'utilizzo condiviso di un account da parte di più persone non sono
+    ammessi. Il Cliente è tenuto a obbligare i propri Utenti in tal senso.
+
+(4) Il Cliente è tenuto a mantenere segreti i dati di accesso e a proteggerli
+    dall'accesso di terzi. In caso di sospetto che terzi ne abbiano preso
+    conoscenza senza autorizzazione, il Cliente deve informare senza indugio il
+    Fornitore e modificare i dati di accesso interessati.
+
+(5) Il login richiede per tutti gli Utenti un'autenticazione a due fattori con
+    un codice monouso inviato per e-mail. Un Utente può memorizzare un
+    dispositivo come attendibile per 30 giorni; su tale dispositivo il codice
+    monouso non è richiesto per tale periodo.
+
+(6) Gli inviti a un Workspace sono inviati per e-mail all'indirizzo indicato
+    dal Cliente. Il Cliente garantisce che gli indirizzi inseriti siano
+    corretti. Il Fornitore fa presente che i link di invito restano validi fino
+    alla loro accettazione o alla loro revoca da parte del Cliente; il Cliente
+    è tenuto a revocare gli inviti non più necessari.
+
+
+§ 5 COLLEGAMENTO A bexio
+
+(1) Il collegamento a bexio avviene esclusivamente su iniziativa del Cliente
+    mediante il rilascio di un'autorizzazione tramite la procedura di
+    autorizzazione di bexio.
+
+(1a) L'autorizzazione è rilasciata in modo unitario per l'intero ambito
+    utilizzato dall'Applicazione. Non è prevista la selezione di singole aree
+    di dati; il Cliente può soltanto autorizzare il collegamento nel suo
+    complesso oppure rinunciarvi del tutto. Le aree di dati comprese risultano
+    dall'allegato 1, punto 5.2 dell'Accordo sul trattamento dei dati. La
+    possibilità di recuperare effettivamente singole aree dipende inoltre dai
+    moduli e dalle autorizzazioni esistenti nell'azienda bexio del Cliente.
+
+(2) bexio non è un sub-responsabile del trattamento del Fornitore, bensì un
+    servizio utilizzato dal Cliente nella propria sfera di responsabilità. Il
+    rapporto contrattuale del Cliente con bexio non è pregiudicato dal presente
+    contratto.
+
+(3) Il Fornitore recupera i dati dall'azienda bexio del Cliente esclusivamente
+    in sola lettura. Non avviene alcun accesso in scrittura all'azienda bexio.
+
+(4) Il Fornitore non è tenuto a garantire la disponibilità, la completezza o la
+    correttezza dei dati e delle interfacce messi a disposizione da bexio. Se
+    bexio modifica, limita o dismette la propria interfaccia, ciò può
+    compromettere le funzionalità dell'Applicazione. Il Fornitore ne informerà
+    il Cliente senza indugio e si adopererà per un adeguamento. Se per tale
+    motivo una funzione viene meno in modo permanente e rilevante, il Cliente
+    ha un diritto di disdetta speciale ai sensi del § 13 cpv. 6.
+
+(5) Il Cliente è tenuto a mantenere l'autorizzazione nella misura in cui
+    intende utilizzare l'Applicazione. Se l'autorizzazione scade o viene
+    revocata, il recupero dei dati non ha luogo; il Fornitore informa il
+    Cliente per e-mail della necessità di ristabilire la connessione. In tal
+    caso i dati già memorizzati restano conservati e non vengono più
+    aggiornati; per questo solo motivo non si procede alla loro cancellazione.
+
+(6) Se il Cliente cancella nell'Applicazione un set di dati o il suo intero
+    Workspace, il Fornitore cancella automaticamente i dati corrispondenti
+    entro quattro ore. Se il Cliente desidera far rimuovere i dati memorizzati
+    senza porre fine al contratto, deve cancellare il relativo set di dati; la
+    semplice revoca dell'autorizzazione bexio non è sufficiente a tal fine.
+    Alle copie di backup si applica per analogia il § 14 cpv. 3, secondo
+    periodo.
+
+
+§ 6 FUNZIONI DI ANALISI BASATE SULL'IA
+
+(1) L'Applicazione contiene una funzione di analisi basata su un modello
+    linguistico di grandi dimensioni ("Analista IA"). Gli Utenti possono porre
+    domande sui propri dati in linguaggio naturale; a tal fine il modello
+    linguistico genera interrogazioni di database, ne valuta i risultati e
+    formula una risposta.
+
+(2) Il Fornitore fa espressamente presente che si tratta di un sistema di IA e
+    che le risposte sono generate da un modello linguistico. Tale avvertenza
+    viene mostrata all'Utente anche all'interno dell'Applicazione (obbligo di
+    trasparenza ai sensi dell'art. 50 del regolamento (UE) 2024/1689 —
+    regolamento sull'IA).
+
+(3) Per rispondere a una domanda vengono trasmessi al modello linguistico la
+    domanda stessa, un modello descrittivo della struttura dei dati disponibile
+    e i risultati delle interrogazioni generate (indicatori ed estratti
+    limitati di righe di dati). In tale contesto, nomi e indirizzi e-mail di
+    persone sono pseudonimizzati per impostazione predefinita e i testi liberi
+    non vengono trasmessi; i dati del personale sono trasmessi solo previa
+    apposita abilitazione. Il Cliente può revocare gradualmente la
+    pseudonimizzazione attraverso i livelli "Nomi", "Nomi + testi" e "Tutto". I
+    dettagli sono disciplinati dall'Accordo sul trattamento dei dati.
+
+(4) Come modello linguistico il Fornitore utilizza modelli di OpenAI, di cui si
+    avvale tramite il servizio europeo di OpenAI; il trattamento delle
+    richieste avviene nello Spazio economico europeo e in Svizzera. Qualora in
+    singoli casi i dati siano trattati al di fuori di tali Stati, ciò avviene
+    sulla base dei meccanismi di trasferimento ai sensi del capo V GDPR e
+    dell'art. 16 nLPD indicati nell'Accordo sul trattamento dei dati. Non ha
+    luogo alcun utilizzo dei dati trasmessi per l'addestramento di modelli del
+    Fornitore o dei fornitori dei modelli.
+
+(5) L'Analista IA è disattivato per impostazione predefinita. Viene attivato
+    per l'intero Workspace da un Owner, dopo che questi ha confermato
+    un'avvertenza relativa ai dati trasmessi; l'abilitazione dei dati del
+    personale e ogni revoca della pseudonimizzazione richiedono ciascuna una
+    conferma separata. Il Cliente può disattivare nuovamente la funzione in
+    qualsiasi momento. Finché essa è disattivata, non ha luogo alcuna
+    trasmissione al fornitore del modello.
+
+(6) I modelli linguistici possono generare risultati inesatti, incompleti o
+    fuorvianti. Il Fornitore non fornisce alcuna garanzia circa la correttezza
+    del contenuto, la completezza o l'idoneità delle analisi generate
+    dall'Analista IA. Il Cliente è tenuto a verificare autonomamente la
+    plausibilità dei risultati prima del loro utilizzo — in particolare prima
+    di decisioni economiche, giuridiche o relative al personale.
+
+(7) L'Analista IA non adotta decisioni automatizzate ai sensi dell'art. 22
+    GDPR. Il Cliente si impegna a non utilizzare l'Applicazione come unica base
+    per decisioni che producono effetti giuridici nei confronti di persone
+    fisiche o che incidono in modo analogo significativamente su di esse, in
+    particolare non per decisioni relative all'assunzione, alla promozione,
+    alla retribuzione o alla cessazione di rapporti di lavoro.
+
+(8) Il Fornitore può cambiare il modello linguistico utilizzato e il relativo
+    fornitore. Qualora ciò comporti un cambio di sub-responsabile del
+    trattamento, la procedura è disciplinata dall'Accordo sul trattamento dei
+    dati.
+
+
+§ 7 DIRITTI DI UTILIZZO
+
+(1) Il Fornitore concede al Cliente, per la durata del contratto, il diritto
+    non esclusivo, non sublicenziabile e non trasferibile di utilizzare
+    l'Applicazione tramite Internet nella misura convenuta contrattualmente.
+
+(2) Non ha luogo alcuna consegna del software al Cliente. Il Cliente non
+    acquisisce alcun diritto alla consegna del codice del programma.
+
+(3) Il Cliente può utilizzare l'Applicazione solo per i propri scopi aziendali.
+    L'utilizzo per terzi, in particolare mediante attività di centro dati,
+    sublocazione o analisi a titolo oneroso di banche dati altrui, richiede il
+    previo consenso del Fornitore in forma testuale. È consentita l'analisi di
+    dati di imprese collegate ai sensi dei §§ 15 segg. della legge tedesca
+    sulle società per azioni (AktG).
+
+(4) È fatto divieto al Cliente di decodificare, decompilare o disassemblare
+    l'Applicazione, salvo che ciò sia consentito da norme di legge imperative,
+    di eludere meccanismi di sicurezza o di interrogare l'Applicazione in modo
+    automatizzato in una misura che vada oltre l'utilizzo previsto.
+
+(5) Tutti i diritti sull'Applicazione, sulla sua struttura, sul suo modello di
+    dati e sulla sua veste grafica restano in capo al Fornitore. Tutti i
+    diritti sui dati conferiti dal Cliente restano in capo al Cliente.
+
+(6) I dati recuperati tramite il collegamento bexio, nonché tutti i contenuti
+    che il Cliente e i suoi Utenti inseriscono nell'Applicazione
+    (congiuntamente "Dati del Cliente"), sono trattati dal Fornitore
+    esclusivamente per l'erogazione dei propri servizi e non per scopi propri.
+
+    Ne sono esclusi i dati dell'account e i dati di utilizzo degli Utenti (in
+    particolare nome, indirizzo e-mail nonché tipo e momento delle funzioni
+    utilizzate). Tali dati sono trattati dal Fornitore in qualità di autonomo
+    Titolare del trattamento anche per statistiche di utilizzo, per la
+    pianificazione della capacità e per il miglioramento dell'Applicazione; i
+    dettagli sono disciplinati dall'Informativa sulla privacy. Non ha luogo
+    alcuna vendita di tali dati né alcuna altra comunicazione a terzi.
+
+
+§ 8 OBBLIGHI E ONERI DEL CLIENTE
+
+(1) Il Cliente è responsabile della liceità dei dati da lui conferiti e
+    trasmessi tramite il collegamento bexio. Egli garantisce di essere
+    autorizzato a far trattare tali dati dal Fornitore.
+
+(2) Il Cliente prende atto che l'Applicazione, a causa dell'ambito di
+    collegamento unitario di cui al § 5 cpv. 1a, tratta anche i seguenti dati,
+    nella misura in cui la sua azienda bexio li contenga, e che egli non può
+    escludere singolarmente tali categorie:
+
+    a) dati dei dipendenti, compresi assenze, saldi di ore e di ferie nonché
+       orari di lavoro registrati;
+    b) informazioni che possono consentire di dedurre dati relativi alla
+       salute, nella misura in cui i motivi di assenza siano registrati in
+       bexio in tal senso;
+    c) tariffe di costo interne e tariffe di addebito riferite a singoli
+       dipendenti.
+
+(3) In qualità di Titolare del trattamento, il Cliente è tenuto a verificare,
+    prima del rilascio dell'autorizzazione, se sussista una base giuridica per
+    tutte le categorie di dati di cui al cpv. 2 e ad adottare le misure
+    necessarie. Tra queste rientrano in particolare:
+
+    a) l'informazione degli interessati ai sensi degli artt. 13 e 14 GDPR;
+    b) il coinvolgimento di una rappresentanza dei lavoratori esistente, nella
+       misura in cui l'analisi dei dati relativi all'orario di lavoro o alle
+       prestazioni sia soggetta a codeterminazione (in Germania in particolare
+       ai sensi del § 87 cpv. 1 n. 6 della legge tedesca sull'ordinamento
+       aziendale, BetrVG);
+    c) la verifica dell'eventuale obbligo di effettuare una valutazione
+       d'impatto sulla protezione dei dati ai sensi dell'art. 35 GDPR.
+
+    Il Fornitore non è tenuto a fornire alcuna consulenza legale al riguardo.
+
+(4) Il Cliente non deve utilizzare l'Applicazione per trattare contenuti
+    illeciti o per violare il diritto vigente.
+
+(5) Il Cliente tiene indenne il Fornitore da pretese di terzi derivanti da un
+    utilizzo illecito, doloso o colposo, dell'Applicazione da parte del Cliente
+    o di Utenti a lui imputabili, comprese le ragionevoli spese di difesa
+    legale. Il Fornitore informerà senza indugio il Cliente della pretesa
+    avanzata e gli darà l'opportunità di prendere posizione.
+
+(6) Il Cliente è tenuto a segnalare senza indugio i difetti in forma testuale,
+    descrivendo nel modo più preciso possibile le circostanze in cui si sono
+    manifestati.
+
+(7) Il Cliente è responsabile del salvataggio dei dati che intende continuare a
+    utilizzare al di fuori dell'Applicazione. A tal fine l'Applicazione mette a
+    disposizione le seguenti funzioni di esportazione: l'esportazione dei dati
+    di singoli elementi di report e dei risultati dell'Analista IA come file
+    CSV, nonché l'esportazione dei dati del proprio account da parte di un
+    Utente. Non è prevista un'esportazione completa di un Workspace o di un set
+    di dati; i dati originari restano nell'azienda bexio del Cliente.
+
+
+§ 9 LIMITI DI UTILIZZO
+
+(1) L'Applicazione non è in linea di principio soggetta a limiti quantitativi.
+    In particolare non sono limitati:
+
+    a) il numero dei set di dati collegati — il corrispettivo è calcolato per
+       set di dati (§ 11 cpv. 1);
+    b) il numero degli account utente — il corrispettivo è calcolato per
+       ciascun Utente oltre il primo (§ 11 cpv. 2);
+    c) il volume dei dati analizzati;
+    d) la frequenza dell'aggiornamento dei dati.
+
+(2) In deroga a quanto precede, l'utilizzo dell'Analista IA (§ 6) è limitato a
+    un budget mensile. Il budget è compreso nel corrispettivo di cui al § 11 e
+    non è addebitato separatamente; attualmente non è possibile ampliarlo a
+    pagamento.
+
+    Il budget ammonta a 5 dollari statunitensi di costi del modello per
+    Workspace e mese civile ed è consumato indipendentemente da quale Utente
+    effettui la richiesta. Si rinnova all'inizio di ogni mese civile,
+    determinato in base al fuso orario indicato nelle impostazioni del
+    Workspace; le quote non consumate decadono e non sono rimborsate. Il
+    Fornitore può stabilire un budget diverso per singoli Workspace. Una volta
+    esaurito il budget, l'Analista IA non è disponibile fino all'inizio del
+    mese successivo; le altre funzioni dell'Applicazione restano utilizzabili
+    senza limitazioni.
+
+    Il Fornitore indica nell'Applicazione l'entità del budget e il consumo
+    attuale. Trattandosi di una funzione aggiuntiva gratuita, il Fornitore può
+    modificarne l'entità; si applica per analogia il § 2 cpv. 3.
+
+(3) Il Fornitore si riserva di adeguare il contratto qualora l'utilizzo da
+    parte di un singolo Cliente causi un onere sproporzionato. Tale caso
+    ricorre quando i costi imputabili al Cliente per servizi di centro dati, di
+    database e del modello superano, in tre mesi civili consecutivi, il
+    corrispettivo netto convenuto per lo stesso periodo.
+
+(4) Qualora si verifichi il caso di cui al cpv. 3, il Fornitore lo segnalerà al
+    Cliente in forma testuale, illustrerà i costi imputabili e gli sottoporrà
+    un'offerta di adeguamento del contratto. Se non si raggiunge un accordo
+    entro 30 giorni di calendario dal ricevimento della segnalazione, il
+    Fornitore ha il diritto di porre fine al contratto ai sensi del § 13 cpv. 5
+    lett. a) con effetto alla fine del mese civile successivo. I corrispettivi
+    già pagati per il periodo successivo all'efficacia della disdetta sono
+    rimborsati pro rata temporis.
+
+(5) Il Fornitore ha il diritto di limitare o di respingere temporaneamente le
+    richieste, nella misura in cui ciò sia necessario per prevenire un
+    sovraccarico o un abuso.
+
+
+§ 10 DISPONIBILITÀ, MANUTENZIONE E ASSISTENZA
+
+(1) Il Fornitore mette a disposizione l'Applicazione con sforzi commercialmente
+    ragionevoli. Non viene promesso né è dovuto un determinato tasso di
+    disponibilità.
+
+(2) Il Fornitore ha il diritto di mettere temporaneamente fuori servizio
+    l'Applicazione per lavori di manutenzione. Il Fornitore annuncia, ove
+    possibile, i lavori di manutenzione programmati con un impatto
+    presumibilmente rilevante con almeno 48 ore di anticipo per e-mail o
+    all'interno dell'Applicazione e li esegue, ove possibile, al di fuori del
+    normale orario d'ufficio.
+
+(3) Il Fornitore può adottare in qualsiasi momento e senza preavviso misure
+    indifferibili per prevenire rischi per la sicurezza o per garantire la
+    sicurezza operativa.
+
+(4) I periodi in cui l'Applicazione non è raggiungibile per motivi non
+    imputabili al Fornitore — in particolare forza maggiore, disservizi di
+    Internet, guasti di fornitori di servizi a monte o disservizi presso bexio
+    — non fondano alcuna pretesa del Cliente.
+
+(5) Il Fornitore presta assistenza per e-mail all'indirizzo kontakt@smiit.de
+    durante il normale orario d'ufficio. Non vengono garantiti tempi di
+    risposta, salvo diverso accordo separato.
+
+
+§ 11 CORRISPETTIVO E FATTURAZIONE
+
+(1) CANONE PER SET DI DATI. Il corrispettivo è calcolato in base al numero dei
+    set di dati collegati. Un set di dati è un'azienda bexio collegata
+    all'Applicazione. Per ciascun set di dati:
+
+        Tariffa mensile (§ 13 cpv. 1 lett. a):   59,00 CHF per mese civile
+        Tariffa annuale (§ 13 cpv. 1 lett. b):  590,00 CHF per anno contrattuale
+
+(2) CANONE PER UTENTE. Il primo Utente per ciascun Tenant è compreso nel canone
+    per set di dati. Per ogni Utente aggiuntivo il corrispettivo ammonta a:
+
+        Tariffa mensile (§ 13 cpv. 1 lett. a):    8,00 CHF per mese civile
+        Tariffa annuale (§ 13 cpv. 1 lett. b):   96,00 CHF per anno contrattuale
+
+    Un Utente è fatturato una sola volta per Tenant, indipendentemente dal
+    numero di set di dati dello stesso Tenant a cui ha accesso.
+
+(3) CALCOLO GIORNALIERO. I set di dati e gli Utenti sono addebitati per ogni
+    giorno di calendario in cui erano rispettivamente collegati o configurati;
+    un giorno di calendario è conteggiato se il set di dati o l'Utente esisteva
+    in tale giorno.
+
+    a) Nella tariffa mensile, l'importo per set di dati o per Utente risulta
+       dal prezzo mensile di cui al cpv. 1 o 2, moltiplicato per il numero di
+       tali giorni e diviso per il numero di giorni del mese civile. Ciò vale
+       anche per il primo mese a decorrere dalla sottoscrizione
+       dell'abbonamento.
+    b) Nella tariffa annuale, l'importo per un set di dati o un Utente che si
+       aggiunge nel corso del periodo annuale risulta dal prezzo annuale di cui
+       al cpv. 1 o 2, moltiplicato per il numero dei giorni residui del periodo
+       annuale e diviso per il numero complessivo dei suoi giorni.
+
+    L'importo totale di una fattura è arrotondato commercialmente a 0,01 CHF.
+
+(4) ANTEPRIMA DEL PREZZO. Al momento della sottoscrizione dell'abbonamento,
+    l'Applicazione mostra al Cliente l'importo presumibile — nella tariffa
+    mensile per mese civile, nella tariffa annuale per anno contrattuale —
+    sulla base del numero attuale di set di dati e di Utenti. Se il Cliente
+    aggiunge o rimuove set di dati o Utenti, l'Applicazione mostra prima della
+    modifica il suo effetto sulla fatturazione in corso e su quelle successive.
+    L'anteprima non è vincolante; è determinante il calcolo di cui al cpv. 3.
+
+(5) L'utilizzo dell'Analista IA (§ 6) è possibile senza corrispettivo separato
+    nei limiti del budget compreso ai sensi del § 9 cpv. 2.
+
+(6) IMPOSTE. Tutti i prezzi si intendono netti, IVA esclusa. Il Fornitore è
+    un'impresa con sede in Germania. Si applica quanto segue:
+
+    a) Ai Clienti con sede al di fuori della Germania, in particolare in
+       Svizzera e nel Liechtenstein, il Fornitore non addebita l'IVA tedesca.
+       Il luogo della prestazione si trova nel Paese del Cliente; l'imposta ivi
+       eventualmente dovuta è a carico del Cliente stesso, che la versa sotto
+       la propria responsabilità (inversione contabile, "reverse charge"; in
+       Svizzera e nel Liechtenstein imposta sull'acquisto, conteggiata dal
+       Cliente assoggettato all'IVA ai sensi del § 1 cpv. 2a). I Clienti con
+       sede in un altro Stato membro dell'Unione europea comunicano al
+       Fornitore il proprio numero di identificazione IVA.
+    b) Ai Clienti con sede in Germania il Fornitore addebita in aggiunta l'IVA
+       tedesca prevista dalla legge.
+    c) Se, in base al diritto del Paese in cui il Cliente ha la propria sede,
+       il Fornitore è tenuto a riscuotere direttamente l'imposta ivi prevista,
+       la addebita in aggiunta.
+
+    Il Cliente comunica al Fornitore il proprio numero IDI o numero di
+    identificazione IVA, se disponibile.
+
+(7) MOMENTO DELLA FATTURAZIONE.
+
+    a) Nella tariffa mensile, il canone per set di dati e il canone per Utente
+       sono fatturati posticipatamente alla fine di ogni mese civile.
+    b) Nella tariffa annuale, il canone per set di dati e il canone per Utente
+       sono fatturati anticipatamente per dodici mesi per i set di dati
+       collegati e gli Utenti configurati all'inizio del periodo annuale. Se
+       nel corso del periodo annuale si aggiungono set di dati o Utenti, questi
+       sono addebitati ai sensi del cpv. 3 lett. b) fino alla fine del periodo
+       annuale in corso e fatturati alla fine del mese civile in cui si sono
+       aggiunti; con il rinnovo, tutti i set di dati e gli Utenti sono
+       fatturati insieme per dodici mesi. Se il Cliente rimuove set di dati o
+       Utenti nel corso del periodo annuale, il corrispettivo già fatturato non
+       è rimborsato; essi vengono meno con il rinnovo successivo.
+
+(8) FATTURAZIONE E PAGAMENTO. Il Fornitore emette la fattura al Cliente in
+    franchi svizzeri e in forma elettronica, inviandola per e-mail
+    all'indirizzo di fatturazione indicato dal Cliente; la creazione e l'invio
+    possono avvenire tramite il servizio di fatturazione di PayPal. Le fatture
+    devono essere pagate entro 14 giorni dalla data della fattura senza
+    deduzioni, mediante bonifico sul conto indicato nella fattura o tramite le
+    modalità di pagamento offerte nella fattura. Il Cliente indica il proprio
+    indirizzo di fatturazione completo e lo mantiene aggiornato.
+
+    La fattura indica separatamente i canoni per set di dati e per Utente,
+    compresi i giorni addebitati per ciascun set di dati e Utente. Il Fornitore
+    mette a disposizione del Cliente la stessa ripartizione nell'Applicazione.
+    Il Cliente indirizza al Fornitore eventuali contestazioni relative al
+    calcolo.
+
+(9) MORA NEL PAGAMENTO. Se il Cliente, nonostante un sollecito con fissazione
+    di un termine adeguato, non salda una fattura scaduta, il Fornitore ha il
+    diritto di bloccare l'accesso all'Applicazione fino al saldo degli importi
+    insoluti. Il Fornitore preannuncia il blocco in forma testuale. L'obbligo
+    di pagamento del Cliente permane durante il blocco; restano salvi gli
+    ulteriori diritti di legge del Fornitore.
+
+
+§ 12 ADEGUAMENTO DEI PREZZI
+
+(1) Il Fornitore ha il diritto di adeguare i prezzi con effetto per il futuro,
+    tuttavia non prima di dodici mesi dall'inizio del contratto e
+    successivamente al massimo una volta per ciascun periodo di dodici mesi.
+
+(2) Un adeguamento dei prezzi presuppone una variazione dei costi sostenuti dal
+    Fornitore per l'erogazione delle prestazioni, in particolare dei costi per
+    servizi di centro dati, fornitori di modelli, licenze, personale od oneri
+    imposti per legge. Le riduzioni dei costi devono essere compensate con gli
+    aumenti dei costi. Un aumento non può servire ad accrescere il profitto
+    oltre la copertura dei maggiori costi.
+
+(3) Il Fornitore comunica l'adeguamento al Cliente in forma testuale almeno
+    otto settimane prima della sua entrata in vigore, segnalando il diritto di
+    disdetta speciale di cui al cpv. 4.
+
+(4) Se l'aumento supera il cinque per cento del corrispettivo precedente, il
+    Cliente può disdire il contratto in forma testuale, fino all'entrata in
+    vigore dell'adeguamento, con effetto a tale data. Se il Cliente non si
+    avvale di tale diritto, l'adeguamento si considera concordato.
+
+
+§ 13 DURATA E DISDETTA
+
+(1) Il Fornitore offre l'abbonamento in due varianti tariffarie:
+
+    a) TARIFFA MENSILE: durata indeterminata, fatturazione mensile posticipata
+       (§ 11 cpv. 7 lett. a). Il Cliente può disdire con effetto alla fine di
+       ogni mese civile.
+    b) TARIFFA ANNUALE: durata di dodici mesi dalla sottoscrizione, ai prezzi
+       della tariffa annuale (§ 11 cpv. 1 e 2), nella quale il canone per set
+       di dati è ridotto rispetto alla tariffa mensile; fatturazione annuale
+       anticipata (§ 11 cpv. 7 lett. b). La durata si rinnova di volta in volta
+       per ulteriori dodici mesi se il Cliente non disdice entro l'ultimo
+       giorno del periodo annuale in corso.
+
+    Il passaggio dalla tariffa mensile alla tariffa annuale è possibile in
+    qualsiasi momento e ha effetto dall'inizio del mese civile successivo. Il
+    passaggio dalla tariffa annuale alla tariffa mensile ha effetto alla fine
+    del periodo annuale in corso.
+
+    Il Fornitore può porre fine all'abbonamento solo ai sensi dei cpv. 4 e 5
+    nonché del § 19 cpv. 3.
+
+(2) Il Cliente disdice tramite l'apposita funzione di disdetta
+    nell'Applicazione. Ciò vale anche per i diritti di disdetta speciale
+    previsti dalle presenti Condizioni d'uso e dall'Accordo sul trattamento dei
+    dati; questi possono in alternativa essere esercitati dal Cliente mediante
+    dichiarazione in forma testuale al Fornitore.
+
+(3) Dopo una disdetta il Cliente conserva l'accesso all'Applicazione fino alla
+    fine del periodo per il quale la disdetta ha effetto; alla sua scadenza
+    termina il contratto relativo all'utilizzo dell'Applicazione. I set di dati
+    e gli Utenti sono fatturati fino a tale momento ai sensi del § 11.
+
+(4) Resta salvo il diritto di entrambe le parti contraenti alla disdetta
+    straordinaria per giusta causa ai sensi del § 314 BGB. Per il Fornitore
+    sussiste una giusta causa in particolare se il Cliente
+
+    a) viola in modo grave o ripetuto il § 7 cpv. 3 o 4 oppure il § 8 cpv. 4;
+    b) utilizza l'Applicazione in un modo che ne pregiudica in misura rilevante
+       il funzionamento o l'utilizzo da parte di altri Clienti, e persiste in
+       tale condotta dopo una diffida.
+
+(5) Oltre alla disdetta straordinaria, il Fornitore ha il diritto di porre fine
+    all'abbonamento per i seguenti motivi oggettivi, elencati in modo
+    esaustivo:
+
+    a) in presenza di un caso di cui al § 9 cpv. 3 (onere sproporzionato), dopo
+       l'infruttuosa scadenza del termine di cui al § 9 cpv. 4, con un
+       preavviso di un mese per la fine del mese;
+    b) in caso di cessazione completa del servizio smiit Analytics, con un
+       preavviso di tre mesi per la fine del mese;
+    c) qualora l'erogazione delle prestazioni divenga per il Fornitore
+       permanentemente impossibile o inesigibile per motivi giuridici o di
+       fatto, in particolare perché una prestazione a monte essenziale per il
+       funzionamento — segnatamente l'interfaccia bexio — viene meno in modo
+       permanente, con un preavviso di un mese per la fine del mese.
+
+    Il Fornitore dichiara la cessazione al Cliente in forma testuale. I
+    corrispettivi già pagati per il periodo successivo all'efficacia della
+    cessazione sono rimborsati al Cliente pro rata temporis. È esclusa
+    qualsiasi ulteriore disdetta ordinaria da parte del Fornitore nel corso di
+    un periodo annuale in corso.
+
+(6) Il Cliente ha il diritto di disdire con un preavviso di un mese per la fine
+    del mese se una funzione essenziale dell'Applicazione viene meno in modo
+    permanente e rilevante per i motivi indicati al § 5 cpv. 4. Restano salvi i
+    diritti di disdetta speciale di cui al § 12 cpv. 4, al § 19 cpv. 3 e al
+    § 20 cpv. 4.
+
+
+§ 14 CONSEGUENZE DELLA CESSAZIONE DEL CONTRATTO
+
+(1) Con l'efficacia della disdetta cessa il diritto di utilizzo del Cliente.
+    L'accesso all'Applicazione viene disattivato.
+
+(2) Dopo la cessazione del contratto il Fornitore conserva i dati del Cliente
+    per un periodo di 30 giorni di calendario ai fini dell'esportazione. Per
+    tale periodo il Cliente riceve, su richiesta, un accesso limitato alle
+    funzioni di esportazione di cui al § 8 cpv. 7.
+
+(3) Alla scadenza del termine di cui al cpv. 2 il Fornitore cancella tutti i
+    Dati del Cliente. Le copie di backup sono sovrascritte nell'ambito del
+    regolare ciclo di backup di 35 giorni; fino ad allora i dati restano
+    bloccati e non vengono trattati. I dettagli e le eccezioni dovute a
+    obblighi legali di conservazione sono disciplinati dall'Accordo sul
+    trattamento dei dati.
+
+(4) Su richiesta del Cliente, da presentare in forma testuale prima della
+    scadenza del termine di cui al cpv. 2, il Fornitore conferma la
+    cancellazione in forma testuale.
+
+(5) Il Fornitore non è tenuto a conservare i dati oltre il termine di cui al
+    cpv. 2. Il Cliente è responsabile dell'esportazione tempestiva.
+
+
+§ 15 GARANZIA
+
+(1) Alla messa a disposizione dell'Applicazione si applica il diritto della
+    locazione (§§ 535 segg. BGB). È esclusa la responsabilità del Fornitore
+    indipendente dalla colpa per i difetti già presenti al momento della
+    conclusione del contratto ai sensi del § 536a cpv. 1, prima alternativa,
+    BGB.
+
+(2) Il Fornitore garantisce che l'Applicazione, per tutta la durata del
+    contratto, corrisponda sostanzialmente alla descrizione dei servizi di cui
+    al § 2.
+
+(3) Gli scostamenti irrilevanti dalle caratteristiche dovute, nonché le
+    compromissioni dovute a circostanze di cui al § 10 cpv. 4, non
+    costituiscono un difetto.
+
+(4) Il Cliente deve dare al Fornitore l'opportunità di eliminare il difetto
+    entro un termine adeguato. È esclusa la riduzione del corrispettivo
+    mediante autoriduzione; le pretese di riduzione devono essere fatte valere
+    nei confronti del Fornitore.
+
+(5) Le pretese per difetti si prescrivono in dodici mesi dall'inizio del
+    termine di prescrizione previsto dalla legge. Ciò non vale per le pretese
+    di cui al § 16 cpv. 1 e 2 né per le pretese relative a difetti taciuti con
+    dolo.
+
+
+§ 16 RESPONSABILITÀ
+
+(1) Il Fornitore risponde illimitatamente dei danni derivanti da lesione della
+    vita, dell'integrità fisica o della salute che siano riconducibili a una
+    violazione degli obblighi da parte del Fornitore o di uno dei suoi
+    rappresentanti legali o ausiliari nell'adempimento, nonché dei danni
+    riconducibili a dolo o colpa grave.
+
+(2) Il Fornitore risponde altresì illimitatamente nell'ambito di una garanzia
+    assunta nonché ai sensi della legge tedesca sulla responsabilità per danno
+    da prodotti difettosi (Produkthaftungsgesetz).
+
+(3) In caso di violazione per colpa lieve di un obbligo contrattuale
+    essenziale, la responsabilità del Fornitore è limitata nell'importo al
+    danno tipico del contratto e prevedibile. Sono obblighi contrattuali
+    essenziali quegli obblighi il cui adempimento rende possibile la corretta
+    esecuzione del contratto e sul cui rispetto il Cliente può regolarmente
+    fare affidamento.
+
+(4) La responsabilità di cui al cpv. 3 è complessivamente limitata all'importo
+    del corrispettivo netto dovuto per l'utilizzo dell'Applicazione nei dodici
+    mesi precedenti l'evento dannoso.
+
+(5) Per il resto la responsabilità del Fornitore è esclusa.
+
+(6) Per il periodo di prova gratuito di cui al § 3 cpv. 4 il Fornitore risponde
+    solo per dolo e colpa grave nonché ai sensi dei cpv. 1 e 2.
+
+(7) Per la perdita di dati il Fornitore risponde, nei limiti dei capoversi
+    precedenti, solo per l'importo dei costi che sarebbero stati necessari per
+    il ripristino in caso di regolare e periodico salvataggio dei dati da parte
+    del Cliente.
+
+(8) Le limitazioni di responsabilità che precedono valgono anche a favore dei
+    rappresentanti legali, dei collaboratori e degli ausiliari nell'adempimento
+    del Fornitore.
+
+(9) Le disposizioni che precedono non comportano alcuna modifica dell'onere
+    della prova a svantaggio del Cliente.
+
+(10) La responsabilità ai sensi dell'art. 82 GDPR non è pregiudicata dalle
+     disposizioni che precedono.
+
+
+§ 17 RISERVATEZZA
+
+(1) Le parti contraenti si impegnano a mantenere segrete tutte le informazioni
+    riservate dell'altra parte di cui vengano a conoscenza nell'ambito del
+    rapporto contrattuale e a utilizzarle esclusivamente ai fini
+    dell'esecuzione del presente contratto.
+
+(2) Sono informazioni riservate in particolare i dati del Cliente, le
+    condizioni di prezzo, le informazioni tecniche relative all'Applicazione
+    nonché tutte le informazioni contrassegnate come riservate.
+
+(3) L'obbligo non si applica alle informazioni che sono di pubblico dominio,
+    che diventano di pubblico dominio senza violazione del presente obbligo,
+    che erano già note alla parte ricevente o che devono essere divulgate in
+    virtù di un obbligo di legge o di un ordine dell'autorità.
+
+(4) L'obbligo permane per la durata di tre anni dopo la cessazione del
+    contratto. Gli obblighi in materia di protezione dei dati permangono senza
+    limiti di tempo.
+
+(5) Il Fornitore può indicare il Cliente come cliente di riferimento solo
+    previo consenso di quest'ultimo in forma testuale.
+
+
+§ 18 PROTEZIONE DEI DATI
+
+(1) Nella misura in cui il Fornitore tratta dati personali per conto del
+    Cliente, le parti concludono l'Accordo sul trattamento dei dati ai sensi
+    dell'art. 28 GDPR allegato al presente contratto. Esso costituisce parte
+    integrante essenziale del contratto.
+
+(2) Nella misura in cui il Fornitore tratta dati personali per scopi propri —
+    in particolare nell'ambito delle trattative precontrattuali,
+    dell'esecuzione del contratto e della gestione degli account utente — egli
+    stesso è Titolare del trattamento. I dettagli sono disciplinati
+    dall'Informativa sulla privacy del Fornitore.
+
+(3) Il Cliente è tenuto a informare gli interessati nella propria sfera di
+    responsabilità in merito al trattamento da parte del Fornitore.
+
+
+§ 19 MODIFICHE DELLE PRESENTI CONDIZIONI D'USO
+
+(1) Il Fornitore ha il diritto di modificare le presenti Condizioni d'uso con
+    effetto per il futuro, nella misura in cui la modifica sia necessaria per
+    adeguarle a una mutata situazione giuridica, a una mutata giurisprudenza
+    delle corti supreme o a una modifica delle funzionalità, e il Cliente non
+    ne risulti irragionevolmente svantaggiato.
+
+(2) Il Fornitore comunica le modifiche al Cliente in forma testuale almeno sei
+    settimane prima della loro entrata in vigore. La comunicazione contiene le
+    disposizioni modificate, la data di entrata in vigore nonché un'indicazione
+    del diritto di opposizione e delle relative conseguenze.
+
+(3) Se il Cliente non si oppone in forma testuale entro sei settimane dal
+    ricevimento della comunicazione, le modifiche si considerano accettate. Se
+    si oppone entro il termine, il contratto prosegue alle condizioni
+    precedenti; in tal caso il Fornitore ha il diritto di disdire il contratto
+    con effetto alla data di entrata in vigore della modifica, ma non prima
+    della fine di un periodo annuale in corso.
+
+(4) Le modifiche che riguardano l'oggetto del contratto o il corrispettivo non
+    possono essere apportate ai sensi della presente disposizione; a tal fine
+    si applica il § 12 ovvero un accordo separato.
+
+
+§ 20 DISPOSIZIONI FINALI
+
+(1) Si applica il diritto della Repubblica federale di Germania, con esclusione
+    della Convenzione delle Nazioni Unite sui contratti di compravendita
+    internazionale di merci.
+
+(2) Per i Clienti con sede in Svizzera vale quanto segue: la scelta del diritto
+    tedesco lascia impregiudicate le disposizioni imperative del diritto
+    svizzero, nella misura in cui queste trovino applicazione in base al
+    diritto internazionale privato svizzero. In materia di protezione dei dati
+    si applicano inoltre le disposizioni dell'Accordo sul trattamento dei dati
+    relative alla legge federale svizzera sulla protezione dei dati (LPD).
+
+(3) Il foro esclusivo per tutte le controversie derivanti dal presente
+    contratto o ad esso connesse è Ehingen, qualora il Cliente sia
+    commerciante, persona giuridica di diritto pubblico o patrimonio separato
+    di diritto pubblico oppure non abbia un foro generale in Germania. Il
+    Fornitore ha inoltre il diritto di agire in giudizio presso il foro
+    generale del Cliente.
+
+(4) Il Cliente può trasferire a terzi diritti e obblighi derivanti dal presente
+    contratto solo previo consenso del Fornitore in forma testuale. Il
+    Fornitore ha il diritto di trasferire il contratto nell'ambito di una
+    successione universale o di una cessione del ramo d'azienda; in tal caso il
+    Cliente può disdire il contratto entro quattro settimane dalla
+    comunicazione in forma testuale.
+
+(5) Le modifiche e le integrazioni del presente contratto richiedono la forma
+    testuale. Ciò vale anche per la modifica del presente requisito della forma
+    testuale.
+
+(6) Qualora una disposizione del presente contratto sia o divenga invalida, la
+    validità delle restanti disposizioni non ne è pregiudicata.
+
+
+===============================================================================
+FINE DELLE CONDIZIONI D'USO
+===============================================================================

@@ -502,8 +502,7 @@ Art. 36 GDPR. § 8(4) applies accordingly.
        (Verantwortlicher) under Art. 5(j) FADP, and the term "Processor" to
        the term "processor" (Auftragsbearbeiter) under Art. 5(k) FADP.
     b) The term "personal data" also includes personal data (Personendaten)
-       within the meaning of Art. 5(a) FADP, including data of legal entities
-       insofar as the FADP protects them.
+       within the meaning of Art. 5(a) FADP.
     c) The term "special categories of personal data" also includes sensitive
        personal data within the meaning of Art. 5(c) FADP.
 

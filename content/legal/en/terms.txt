@@ -655,9 +655,9 @@ Version 1.0 — Last updated: 18 November 2026
     circumstances under § 10(4) do not constitute a defect.
 
 (4) The Customer must give the Provider the opportunity to remedy defects
-    within a reasonable period. A reduction of the remuneration by way of
-    self-help is excluded; claims for reduction must be asserted against the
-    Provider.
+    within a reasonable period. The Customer is not entitled to unilaterally
+    reduce or withhold the remuneration on account of a defect; claims for
+    reduction must be asserted against the Provider.
 
 (5) Claims for defects become time-barred twelve months after the start of the
     statutory limitation period. This does not apply to claims under § 16(1)

@@ -542,8 +542,7 @@ entsprechend.
        "Auftragsverarbeiter" dem Begriff "Auftragsbearbeiter" nach Artikel 5
        Buchstabe k revDSG.
     b) Der Begriff "personenbezogene Daten" umfasst auch Personendaten im Sinne
-       des Artikels 5 Buchstabe a revDSG, einschließlich Daten juristischer
-       Personen, soweit das revDSG diese schützt.
+       des Artikels 5 Buchstabe a revDSG.
     c) Der Begriff "besondere Kategorien personenbezogener Daten" umfasst auch
        besonders schützenswerte Personendaten im Sinne des Artikels 5
        Buchstabe c revDSG.

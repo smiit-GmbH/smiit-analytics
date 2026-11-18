@@ -716,9 +716,10 @@ Version 1.0 — Mise à jour : 18 novembre 2026
     constituent pas un défaut.
 
 (4) Le Client doit donner au Prestataire la possibilité de remédier au défaut
-    dans un délai raisonnable. Toute réduction du prix opérée par le Client de
-    son propre chef est exclue ; les prétentions en réduction du prix doivent
-    être exercées à l'encontre du Prestataire.
+    dans un délai raisonnable. Le Client n'est pas en droit, en raison d'un
+    défaut, de réduire ou de retenir unilatéralement la rémunération ; les
+    prétentions en réduction du prix doivent être exercées à l'encontre du
+    Prestataire.
 
 (5) Les prétentions pour défauts se prescrivent par douze mois à compter du
     début légal de la prescription. Cela ne s'applique pas aux prétentions

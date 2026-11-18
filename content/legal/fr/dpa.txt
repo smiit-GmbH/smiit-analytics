@@ -569,8 +569,7 @@ s'applique par analogie.
        « sous-traitant » au terme « sous-traitant » au sens de l'art. 5,
        let. k nLPD.
     b) Le terme « données à caractère personnel » englobe également les données
-       personnelles au sens de l'art. 5, let. a nLPD, y compris les données de
-       personnes morales dans la mesure où la nLPD les protège.
+       personnelles au sens de l'art. 5, let. a nLPD.
     c) Le terme « catégories particulières de données à caractère personnel »
        englobe également les données personnelles sensibles au sens de
        l'art. 5, let. c nLPD.

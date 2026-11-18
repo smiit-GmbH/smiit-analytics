@@ -565,8 +565,7 @@ cpv. 4 si applica per analogia.
        "Responsabile del trattamento" al termine "responsabile del trattamento"
        ai sensi dell'art. 5 lett. k nLPD.
     b) Il termine "dati personali" comprende anche i dati personali ai sensi
-       dell'art. 5 lett. a nLPD, compresi i dati di persone giuridiche, nella
-       misura in cui la nLPD li protegga.
+       dell'art. 5 lett. a nLPD.
     c) Il termine "categorie particolari di dati personali" comprende anche i
        dati personali degni di particolare protezione ai sensi dell'art. 5
        lett. c nLPD.

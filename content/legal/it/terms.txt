@@ -693,9 +693,10 @@ Versione 1.0 — Aggiornamento: 18 novembre 2026
     costituiscono un difetto.
 
 (4) Il Cliente deve dare al Fornitore l'opportunità di eliminare il difetto
-    entro un termine adeguato. È esclusa la riduzione del corrispettivo
-    mediante autoriduzione; le pretese di riduzione devono essere fatte valere
-    nei confronti del Fornitore.
+    entro un termine adeguato. Il Cliente non ha diritto, a causa di un
+    difetto, di ridurre o trattenere unilateralmente il corrispettivo; le
+    pretese di riduzione devono essere fatte valere nei confronti del
+    Fornitore.
 
 (5) Le pretese per difetti si prescrivono in dodici mesi dall'inizio del
     termine di prescrizione previsto dalla legge. Ciò non vale per le pretese

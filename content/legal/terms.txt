@@ -676,9 +676,9 @@ Fassung 1.0 — Stand: 18.11.2026
     keinen Mangel dar.
 
 (4) Der Kunde hat dem Anbieter Gelegenheit zur Mangelbeseitigung innerhalb
-    angemessener Frist zu geben. Eine Minderung durch Selbstvornahme ist
-    ausgeschlossen; Minderungsansprüche sind gegenüber dem Anbieter geltend zu
-    machen.
+    angemessener Frist zu geben. Der Kunde ist nicht berechtigt, wegen eines
+    Mangels die Vergütung eigenmächtig zu kürzen oder einzubehalten;
+    Minderungsansprüche sind gegenüber dem Anbieter geltend zu machen.
 
 (5) Ansprüche wegen Mängeln verjähren in zwölf Monaten ab dem gesetzlichen
     Verjährungsbeginn. Dies gilt nicht für Ansprüche nach § 16 Absatz 1 und 2

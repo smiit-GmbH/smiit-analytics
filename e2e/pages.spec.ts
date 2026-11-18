@@ -23,13 +23,18 @@ for (const lang of LOCALES) {
   }
 }
 
-test("/de/demo/ shows the demo video and passes axe; other languages have no demo page", async ({ page }) => {
+test("/de/demo/ is the bare video for embedding and passes axe; other languages have no demo page", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" })
   await page.goto("/de/demo/")
   await expect(page.locator("h1")).toHaveText("smiit Analytics in 2 Minuten")
   await expect(page.locator("video source").first()).toHaveAttribute("src", "/media/video_demo_full.webm")
-  // The language switcher leads to the other languages' home pages — their demo page does not exist.
-  await expect(page.locator('a[hreflang="fr"]').first()).toHaveAttribute("href", "/fr/")
+  // Nothing above the video in an iframe: no site header, the video starts at the top and nothing scrolls.
+  await expect(page.locator("header")).toHaveCount(0)
+  expect((await page.locator("video").boundingBox())?.y).toBe(0)
+  expect(await page.evaluate(() => document.documentElement.scrollHeight - window.innerHeight)).toBeLessThanOrEqual(0)
+  // The legal notice and privacy policy stay one click away, in a new tab (out of the iframe).
+  await expect(page.getByRole("link", { name: "Impressum" })).toHaveAttribute("href", "/de/legal-notice/")
+  await expect(page.getByRole("link", { name: "Datenschutz" })).toHaveAttribute("target", "_blank")
   const { violations } = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze()
   expect(violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(" ")).join(", ")}`)).toEqual([])
 

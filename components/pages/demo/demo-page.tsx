@@ -1,13 +1,11 @@
 import type { Metadata } from "next"
-import { ArrowRight } from "lucide-react"
-import { Container, DemoVideo } from "@/components/ui"
-import { CtaLink } from "@/components/cta-link"
+import { DemoVideo } from "@/components/ui"
 import { JsonLd } from "@/components/seo/json-ld"
 import { getDictionary, type Dictionary } from "@/lib/dictionary"
 import type { Locale } from "@/lib/i18n"
-import { LINKS } from "@/lib/links"
 import { MEDIA, mediaPath } from "@/lib/media"
-import { buildBreadcrumbJsonLd, buildDemoVideoJsonLd, buildPageMetadata } from "@/lib/seo"
+import { routePath } from "@/lib/routes"
+import { buildDemoVideoJsonLd, buildPageMetadata } from "@/lib/seo"
 
 /** First published 2026-11-10, 2:26 min — the VideoObject's facts; update both with a new cut. */
 const VIDEO_FACTS = { uploadDate: "2026-11-10", duration: "PT2M26S" }
@@ -18,38 +16,36 @@ export function demoPageMetadata(lang: Locale): Metadata {
 }
 
 /**
- * The full demo video on a page of its own (/de/demo/) — a link to hand out, e.g. on the bexio Marketplace. The
- * hero's modal plays the same file. Calm text header like the legal pages, the video edge to edge in a rounded
- * tile, then the one action that follows a demo: the free trial.
+ * The full demo video for embedding (/de/demo/, e.g. in an iframe on the bexio Marketplace): nothing but the video,
+ * filling the frame on the brand navy — no header, no heading, nothing to scroll past. A thin line below keeps the
+ * legal notice and the privacy policy one click away (DDG § 5 / UWG Art. 3 s: easily reachable) and names the
+ * site; its links open in a new tab, out of the iframe. The hero's modal plays the same file.
  */
 export function DemoPage({ lang, dict }: { lang: Locale; dict: Dictionary }) {
   const t = dict.demoPage
   const video = MEDIA.VIDEO_DEMO_FULL
   const src = mediaPath("VIDEO_DEMO_FULL", lang)
+  const link = "underline-offset-4 hover:text-white hover:underline"
   return (
-    <article className="pb-section-sm md:pb-section">
-      <Container className="pt-12 pb-10 md:pt-20 md:pb-14">
-        <header className="max-w-3xl">
-          <p className="mb-4 text-[0.7rem] font-semibold tracking-[0.22em] text-brand uppercase">{t.eyebrow}</p>
-          <h1 className="font-serif text-heading-lg tracking-tight text-balance text-ink">{t.title}</h1>
-          <p className="mt-4 max-w-[60ch] text-lead text-ink-muted">{t.intro}</p>
-        </header>
-      </Container>
-
-      <Container>
-        <div className="overflow-hidden rounded-tile shadow-frame">
-          <DemoVideo id="VIDEO_DEMO_FULL" src={src} ratio={video.ratio} spec={video.spec} title={t.title} autoPlay={false} />
-        </div>
-        <div className="mt-9">
-          <CtaLink externalHint={dict.common.externalHint} href={LINKS.signup} track="demo_page_signup" size="lg">
-            {dict.home.hero.ctaPrimary}
-            <ArrowRight aria-hidden="true" />
-          </CtaLink>
-        </div>
-      </Container>
-
-      <JsonLd data={buildBreadcrumbJsonLd(lang, [{ name: t.title, route: "demo" }])} />
+    <main className="flex h-dvh flex-col bg-navy">
+      <h1 className="sr-only">{t.title}</h1>
+      <div className="relative min-h-0 flex-1">
+        <DemoVideo id="VIDEO_DEMO_FULL" src={src} ratio={video.ratio} spec={video.spec} title={t.title} autoPlay={false} fill />
+      </div>
+      <footer className="flex h-7 shrink-0 items-center justify-between gap-4 px-3 text-[0.7rem] text-white/75">
+        <a href={routePath(lang)} target="_blank" rel="noopener" className={link}>
+          smiit Analytics
+        </a>
+        <nav aria-label={dict.footer.legalTitle} className="flex gap-3">
+          <a href={routePath(lang, "legalNotice")} target="_blank" rel="noopener" className={link}>
+            {dict.legal.legalNotice.nav}
+          </a>
+          <a href={routePath(lang, "privacy")} target="_blank" rel="noopener" className={link}>
+            {dict.legal.privacy.nav}
+          </a>
+        </nav>
+      </footer>
       <JsonLd data={buildDemoVideoJsonLd(lang, { src, ...VIDEO_FACTS })} />
-    </article>
+    </main>
   )
 }

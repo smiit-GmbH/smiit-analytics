@@ -232,6 +232,7 @@ export function DemoVideo({
   spec,
   title,
   autoPlay = true,
+  fill = false,
 }: {
   id: string
   src: string
@@ -240,12 +241,14 @@ export function DemoVideo({
   title: string
   /** The modal starts it on open; a page of its own leaves the start to the visitor. */
   autoPlay?: boolean
+  /** Fill the positioned parent instead of keeping `ratio` (the embed page: the whole iframe, letterboxed). */
+  fill?: boolean
 }) {
   const [ready, setReady] = React.useState(false)
   const poster = `${src}-poster.webp`
   const posterOk = usePosterLoaded(poster)
   return (
-    <div className="relative w-full bg-navy" style={{ aspectRatio: ratio }}>
+    <div className={cn("bg-navy", fill ? "absolute inset-0" : "relative w-full")} style={fill ? undefined : { aspectRatio: ratio }}>
       {!ready && !posterOk && (
         <PlaceholderBox id={id} spec={spec} className="bg-navy-800 bg-none text-white/70 [&>span:first-child]:text-white" />
       )}
